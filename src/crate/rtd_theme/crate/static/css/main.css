@@ -56,6 +56,12 @@ h6 {
   color: #333333;
 }
 
+h1,
+.h1 {
+  font-size: 46px;
+  font-weight: normal;
+}
+
 a,
 a:visited {
   color: #333333;
@@ -111,12 +117,14 @@ span.pre {
 
 footer {
   position: relative;
+  bottom: 0;
   padding: 20px 20px 10px;
-  margin: 0 -15px;
+  margin: 40px -15px 0;
   font-size: 16px;
   line-height: 100%;
   color: #333333;
-  background: #ffcf3e;
+  background-color: #fff;
+  border-top: 2px solid #ffcf3e;
 }
 
 a#crate-logo {
@@ -138,7 +146,7 @@ a#crate-logo:hover {
 #sidebar-column {
   top: 0;
   height: 100%;
-  padding-top: 51px;
+  padding: 51px 0 20px 3px;
   background-color: #e8e8e8;
 }
 
@@ -146,20 +154,20 @@ a#crate-logo:hover {
   font-size: 100% !important;
   color: #000;
   text-decoration: none;
-  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-left: none;
 }
 
 #sidebar-column li.active > a {
-  border-right: none;
-  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  border-left: none;
 }
 
-#sidebar-column .prev {
-  margin-top: 15px;
-}
-
-#sidebar-column .next {
-  margin-bottom: 10px;
+#sidebar-column .h4 {
+  padding: 5px 10px;
+  font-size: 19px;
+  font-weight: bold;
+  color: #7a7a7a;
 }
 
 #content-column .section {
@@ -172,6 +180,7 @@ a#crate-logo:hover {
     top: 0;
     width: 258px;
     padding-bottom: 130px;
+    overflow-y: auto;
   }
   #content-column {
     width: 712px;
@@ -245,9 +254,13 @@ a#crate-logo:hover {
 
 /* Sidebar navigation */
 
+ul.localtoc {
+  padding: 0;
+  margin: 0;
+}
+
 ul.bs-sidenav {
   margin-top: 10px;
-  background-color: #fff;
   border-radius: 0;
 }
 
@@ -263,50 +276,50 @@ ul.bs-sidenav li > a {
 .bs-sidenav .nav > li.active:focus > a {
   font-weight: bold;
   color: #47494c;
-  background-color: #fff;
-  border-right: 1px solid #fff;
 }
 
 /* SIDEBAR
    -------------------------------------------------------- */
 
-.bs-sidenav ul,
-.bs-sidenav li {
-  padding-right: 0;
-  margin-right: 0;
-}
-
-.bs-sidenav ul.nav,
-.bs-sidenav li {
-  padding-right: 0;
-  margin-right: 0;
-}
-
-.bs-sidenav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav > li > a {
   padding-left: 20px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav .nav > li > a {
   padding-left: 35px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav .nav .nav > li > a {
   padding-left: 50px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav .nav .nav .nav > li > a {
   padding-left: 65px !important;
 }
 
-#sidebar-column {
+#sidebar-column .dropdown-menu {
+  border: 0 none;
+}
+
+#sidebar-column .dropdown-menu li a {
+  padding: 5px 20px;
+}
+
+#sidebar-column ul li {
   font-size: 17px;
 }
 
-#sidebar-column a {
+#sidebar-column ul li a {
+  padding-top: 4px;
+  padding-bottom: 4px;
   font-size: 100% !important;
   color: #000;
   text-decoration: none;
-  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+#sidebar-column .localtoc {
+  margin-top: 20px;
 }
 
 #sidebar-column .localtoc ul ul ul {
@@ -326,8 +339,7 @@ ul.bs-sidenav li > a {
 }
 
 #sidebar-column LI.active > A {
-  border-right: none;
-  border-left: 3px solid #000;
+  border-right: 3px solid #000;
 }
 
 #sidebar-column .prev {

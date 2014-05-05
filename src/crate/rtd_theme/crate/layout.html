@@ -14,7 +14,9 @@
     '_static/js/underscore-1.6.0.min.js',
     '_static/bootstrap-3.1.1/js/bootstrap.min.js',
     '_static/doctools.js',
-  ]
+    '_static/searchtools.js',
+    '_static/websupport.js',
+ ]
 %}
 
 {%- block doctype -%}
@@ -49,7 +51,9 @@
       </div>
       {% endblock %}
       <div class="col-md-9" id="content-column">
+        <div>
         {% block body %}{# comments #}{% endblock %}
+        </div>
         <footer class="footer">
           <div class="footer-container">
             <p class="pull-right">
@@ -87,6 +91,7 @@
 {%- block footer %}
 <script>
   $(function() {
+    $('.globaltoc ul').addClass('nav');
     $('.localtoc ul').addClass('nav');
     $('body').scrollspy({
      'target': '.localtoc',

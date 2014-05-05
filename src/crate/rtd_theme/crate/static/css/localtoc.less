@@ -1,45 +1,48 @@
 /* SIDEBAR
    -------------------------------------------------------- */
 
-.bs-sidenav ul,
-.bs-sidenav li {
-    margin-right: 0px;
-    padding-right: 0px;
-}
-
-.bs-sidenav ul.nav,
-.bs-sidenav li {
-    margin-right: 0px;
-    padding-right: 0px;
-}
-
-.bs-sidenav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav > li > a {
     padding-left: 20px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav .nav > li > a {
     padding-left: 35px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav .nav .nav > li > a {
     padding-left: 50px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav .nav .nav .nav > li > a {
     padding-left: 65px !important;
 }
 
-#sidebar-column {
+#sidebar-column .dropdown {
+}
+#sidebar-column .dropdown-menu {
+    border: 0px none;
+}
+
+#sidebar-column .dropdown-menu li a {
+    padding: 5px 20px;
+}
+
+#sidebar-column ul li {
     font-size: 17px;
 }
 
-#sidebar-column a {
+#sidebar-column ul li a {
     text-decoration: none;
     color: #000;
-    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
     font-size: 100% !important;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
+#sidebar-column .localtoc {
+    margin-top: 20px;
+}
 #sidebar-column .localtoc ul ul ul {
     display: none;
 }
@@ -58,8 +61,7 @@
 
 
 #sidebar-column LI.active > A {
-    border-right: none;
-    border-left: 3px solid #000;
+    border-right: 3px solid #000;
 }
 
 #sidebar-column .prev {
