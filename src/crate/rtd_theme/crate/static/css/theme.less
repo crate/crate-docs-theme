@@ -33,9 +33,6 @@ a, a:visited {
 a:hover, a:active {
     color: @crate-color-dark;
 }
-a.headerlink:before {
-    content: ' ';
-}
 a.headerlink {
     font-weight: normal;
     color: @crate-color-light;
@@ -97,6 +94,7 @@ a#crate-logo:hover {
 }
 
 #sidebar-column {
+    transition: width 0.5s;
     background-color: @crate-color-light;
     height: 100%;
     top: 0px;
@@ -121,9 +119,14 @@ a#crate-logo:hover {
 }
 
 #content-column {
+    transition: width 0.5s;
     .section {
         margin: 20px 0 40px;
     }
+}
+
+.container {
+    transition: width 0.5s;
 }
 
 @media (min-width: 992px) {
@@ -148,7 +151,11 @@ a#crate-logo:hover {
         width: 862px;
     }
 }
-
+@media (min-width: 1400px) {
+    .navbar .container {
+        width: 1380px;
+    }
+}
 .note, .warning {
     margin: 0 0 20px;
     p {
@@ -227,5 +234,24 @@ dl.docutils {
     dd {
         padding: 0 0 0 10px;
     }
+}
+
+blockquote {
+    border: 0px none;
+}
+
+#navbar-search-input {
+    width: 158px;
+    transition: width 0.5s;
+    border-radius: 4px 0 0 4px;
+    border-right: 0px none;
+    margin-right: -4px;
+}
+#navbar-search-input:focus {
+    width: 300px;
+}
+#navbar-search-submit {
+    border-radius: 0 4px 4px 0;
+    border-left: 0px none;
 }
 

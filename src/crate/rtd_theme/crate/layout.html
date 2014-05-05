@@ -59,11 +59,9 @@ http://docs.readthedocs.org/en/latest/canonical.html
     <div class="row" id="content-wrap">
       {%- block sidebar1 %}
       <div class="col-md-3" id="sidebar-column">
-        <div data-offset-bottom="200" data-offset-top="120">
           {%- for sidebartemplate in sidebars %}
           {%- include sidebartemplate %}
           {%- endfor %}
-        </div>
       </div>
       {% endblock %}
       <div class="col-md-9" id="content-column">

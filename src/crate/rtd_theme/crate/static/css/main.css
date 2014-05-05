@@ -72,10 +72,6 @@ a:active {
   color: #7a7a7a;
 }
 
-a.headerlink:before {
-  content: ' ';
-}
-
 a.headerlink {
   font-weight: normal;
   color: #e8e8e8;
@@ -152,6 +148,7 @@ a#crate-logo:hover {
   height: 100%;
   padding: 51px 0 20px 15px;
   background-color: #e8e8e8;
+  transition: width 0.5s;
 }
 
 #sidebar-column li > a {
@@ -174,8 +171,16 @@ a#crate-logo:hover {
   color: #7a7a7a;
 }
 
+#content-column {
+  transition: width 0.5s;
+}
+
 #content-column .section {
   margin: 20px 0 40px;
+}
+
+.container {
+  transition: width 0.5s;
 }
 
 @media (min-width: 992px) {
@@ -199,6 +204,12 @@ a#crate-logo:hover {
   #content-column {
     width: 862px;
     margin-left: 308px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar .container {
+    width: 1380px;
   }
 }
 
@@ -289,6 +300,27 @@ dl.docutils dt {
 
 dl.docutils dd {
   padding: 0 0 0 10px;
+}
+
+blockquote {
+  border: 0 none;
+}
+
+#navbar-search-input {
+  width: 158px;
+  margin-right: -4px;
+  border-right: 0 none;
+  border-radius: 4px 0 0 4px;
+  transition: width 0.5s;
+}
+
+#navbar-search-input:focus {
+  width: 300px;
+}
+
+#navbar-search-submit {
+  border-left: 0 none;
+  border-radius: 0 4px 4px 0;
 }
 
 ul.localtoc {
