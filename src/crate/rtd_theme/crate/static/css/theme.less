@@ -51,7 +51,7 @@ a.headerlink:hover {
     background: @crate-color-medium;
     border-color: @crate-color-medium;
 }
-code, kbd, pre, samp {
+code, kbd, pre, samp, .pre {
     font-family: SourceCodePro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 pre {
@@ -61,10 +61,13 @@ pre {
     color: inherit;
     display: block;
 }
-span.pre {
+.pre {
+    font-weight: bold;
     white-space: nowrap;
     color: @crate-color-black;
     font-size: 14px;
+    background-color: #fff;
+    padding: 5px;
 }
 footer {
     border-top: 2px solid @crate-color-yellow;
@@ -216,26 +219,13 @@ span.highlighted {
     }
 }
 
-/* Sidebar navigation */
-
-ul.localtoc {
-    margin: 0px;
-    padding: 0px;
-}
-
-ul.bs-sidenav {
-    margin-top: 10px;
-    border-radius: 0px;
-    li > a {
-        color: #47494c;
-        text-decoration: none;
-        text-shadow: none;
+dl.docutils {
+    padding: 0 20px;
+    dt {
+        font-size: 17px;
+    }
+    dd {
         padding: 0 0 0 10px;
     }
 }
-.bs-sidenav .nav > li.active > a,
-.bs-sidenav .nav > li.active:hover > a,
-.bs-sidenav .nav > li.active:focus > a {
-  font-weight: bold;
-  color: #47494c;
-}
+

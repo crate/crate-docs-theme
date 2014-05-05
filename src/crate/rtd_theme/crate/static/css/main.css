@@ -97,7 +97,8 @@ a.headerlink:hover {
 code,
 kbd,
 pre,
-samp {
+samp,
+.pre {
   font-family: SourceCodePro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
@@ -109,10 +110,13 @@ pre {
   border-radius: 0;
 }
 
-span.pre {
+.pre {
+  padding: 5px;
   font-size: 14px;
+  font-weight: bold;
   color: #333333;
   white-space: nowrap;
+  background-color: #fff;
 }
 
 footer {
@@ -275,7 +279,17 @@ span.highlighted {
   color: #e8e8e8;
 }
 
-/* Sidebar navigation */
+dl.docutils {
+  padding: 0 20px;
+}
+
+dl.docutils dt {
+  font-size: 17px;
+}
+
+dl.docutils dd {
+  padding: 0 0 0 10px;
+}
 
 ul.localtoc {
   padding: 0;
@@ -300,9 +314,6 @@ ul.bs-sidenav li > a {
   font-weight: bold;
   color: #47494c;
 }
-
-/* SIDEBAR
-   -------------------------------------------------------- */
 
 .bs-sidenav .nav .nav > li > a {
   padding-left: 20px !important;
@@ -339,10 +350,6 @@ ul.bs-sidenav li > a {
   color: #000;
   text-decoration: none;
   border-right: 3px solid transparent;
-}
-
-#sidebar-column .localtoc {
-  margin-top: 20px;
 }
 
 #sidebar-column .localtoc ul ul ul {
