@@ -24,7 +24,7 @@ from setuptools import setup, find_packages
 
 
 setup(name='crate-docs-theme',
-      version='0.1',
+      version='0.1.0',
       description='CRATE ReadTheDocs',
       long_description='A Sphinx theme for Crate\'s RTD-Documentation',
       classifiers=[
@@ -47,5 +47,3 @@ setup(name='crate-docs-theme',
           'sphinxcontrib-plantuml',
       ],
 )
-
-
