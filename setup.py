@@ -23,17 +23,17 @@
 from setuptools import setup, find_packages
 
 
-setup(name='crate-rtd',
+setup(name='crate-docs-theme',
       version='0.1',
-      description='CRATE Read The Docs',
-      long_description='A Sphinx theme for RTD-Documentation',
+      description='CRATE ReadTheDocs',
+      long_description='A Sphinx theme for Crate\'s RTD-Documentation',
       classifiers=[
           "Programming Language :: JavaScript",
           "Programming Language :: Python",
       ],
       author='CRATE Technology GmbH',
       author_email='office@crate.io',
-      url='https://github.com/crate/crate-rtd',
+      url='https://github.com/crate/crate-docs-theme',
       keywords='',
       license='Apache License 2.0',
       packages=find_packages('src'),
@@ -47,3 +47,5 @@ setup(name='crate-rtd',
           'sphinxcontrib-plantuml',
       ],
 )
+
+
