@@ -146,7 +146,7 @@ a#crate-logo:hover {
 #sidebar-column {
   top: 0;
   height: 100%;
-  padding: 51px 0 20px 3px;
+  padding: 51px 0 20px 15px;
   background-color: #e8e8e8;
 }
 
@@ -235,8 +235,31 @@ a#crate-logo:hover {
 }
 
 .table {
+  background-color: #fff;
   border: 0 none;
   border-collapse: collapse !important;
+}
+
+/* Search highlight */
+
+ul.search {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.search li {
+  margin: 20px 0;
+}
+
+ul.search li a {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+span.highlighted {
+  padding: 0 2px;
+  color: #000;
+  background-color: #ffe28b;
 }
 
 /* Top Navigation */

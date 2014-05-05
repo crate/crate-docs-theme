@@ -1,0 +1,11 @@
+{%- if current_version %}
+<li class="h4">Current Version</li>
+<li><a href="">{{ current_version }}</a></li>
+{%- endif %}
+
+{%- if versions %}
+<li class="h4">Other Versions</li>
+{% for slug, url in versions %}
+<li><a href="{{ url }}">{{ slug }}</a></li>
+{% endfor %}
+{%- endif %}

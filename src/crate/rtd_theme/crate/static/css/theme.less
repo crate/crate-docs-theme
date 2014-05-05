@@ -97,7 +97,7 @@ a#crate-logo:hover {
     background-color: @crate-color-light;
     height: 100%;
     top: 0px;
-    padding: 51px 0 20px 3px;
+    padding: 51px 0 20px 15px;
     li > a {
         font-size: 100% !important;
         color: #000;
@@ -178,8 +178,29 @@ a#crate-logo:hover {
 .table {
     border: 0px none;
     border-collapse: collapse !important;
+    background-color: #fff;
 }
 
+
+/* Search highlight */
+
+ul.search {
+    padding: 0px;
+    list-style-type: none;
+    li {
+        margin: 20px 0;
+    }
+    li a {
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
+
+span.highlighted {
+    background-color: lighten(@crate-color-yellow, 15%);
+    padding: 0px 2px;
+    color: #000;
+}
 
 /* Top Navigation */
 
