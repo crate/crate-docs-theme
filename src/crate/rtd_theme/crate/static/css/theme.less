@@ -18,6 +18,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
     color: @crate-color-black;
+    font-weight: bold;
 }
 
 a, a:visited {
@@ -26,7 +27,11 @@ a, a:visited {
 a:hover, a:active {
     color: @crate-color-dark;
 }
+a.headerlink:before {
+    content: ' ';
+}
 a.headerlink {
+    font-weight: normal;
     color: @crate-color-light;
 }
 a.headerlink:hover {
@@ -78,12 +83,6 @@ a#crate-logo {
 }
 a#crate-logo:hover {
     background: url("../img/logo-101x30.png") no-repeat scroll 0 -30px rgba(0, 0, 0, 0);
-}
-
-.localtoc {
-    li li li {
-        display: none;
-    }
 }
 
 #sidebar-column {
@@ -172,6 +171,21 @@ a#crate-logo:hover {
 }
 
 
+/* Top Navigation */
+
+.navbar-inverse .navbar-nav {
+    li > a {
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    li > a:hover {
+        color: @crate-color-light;
+    }
+}
+
+/* Sidebar navigation */
 
 ul.bs-sidenav {
     margin-top: 10px;
@@ -181,16 +195,12 @@ ul.bs-sidenav {
         color: #47494c;
         text-decoration: none;
         text-shadow: none;
-        padding: 0;
-        padding-top: 10px;
+        padding: 0 0 0 10px;
     }
 }
-
-/* First level of nav */
-
-.bs-sidebar .nav > .active > a,
-.bs-sidebar .nav > .active:hover > a,
-.bs-sidebar .nav > .active:focus > a {
+.bs-sidenav .nav > li.active > a,
+.bs-sidenav .nav > li.active:hover > a,
+.bs-sidenav .nav > li.active:focus > a {
   font-weight: bold;
   color: #47494c;
   background-color: #fff;

@@ -41,7 +41,7 @@
     <div class="row" id="content-wrap">
       {%- block sidebar1 %}
       <div class="col-md-3" id="sidebar-column">
-        <div data-offset-bottom="200" data-offset-top="120" data-spy="affix">
+        <div data-offset-bottom="200" data-offset-top="120">
           {%- for sidebartemplate in sidebars %}
           {%- include sidebartemplate %}
           {%- endfor %}
@@ -86,8 +86,12 @@
 
 {%- block footer %}
 <script>
-  $(document).ready(function() {
-    $('body').scrollspy({ 'target': '.localtoc' });
+  $(function() {
+    $('.localtoc ul').addClass('nav');
+    $('body').scrollspy({
+     'target': '.localtoc',
+     'offset': 51
+    });
   });
 </script>
 {%- endblock %}
