@@ -1,0 +1,23 @@
+{
+  "name": "crate-rtd",
+  "description": "",
+  "version": "0.0.2",
+  "author": "Crate Team",
+  "homepage": "https://github.com/crate/crate-rtd/",
+  "license": "Apache License, Version 2.0, http://www.apache.org/licenses/LICENSE-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/crate/crate-rtd.git"
+  },
+  "engines": {
+    "node": ">= 0.10.25"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-cli": "~0.1.13",
+    "grunt-recess": "~0.3.1",
+    "grunt-shell": "",
+    "matchdep": "~0.1.2"
+  }
+}
