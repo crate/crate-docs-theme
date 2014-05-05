@@ -145,8 +145,9 @@ a#crate-logo:hover {
 
 #sidebar-column {
   top: 0;
+  left: 0;
   height: 100%;
-  padding: 51px 0 20px 15px;
+  padding: 51px 0 0 0;
   background-color: #e8e8e8;
   transition: width 0.5s;
 }
@@ -171,6 +172,10 @@ a#crate-logo:hover {
   color: #7a7a7a;
 }
 
+#sidebar-column > .bs-docs-sidebar {
+  padding-left: 15px;
+}
+
 #content-column {
   transition: width 0.5s;
 }
@@ -188,8 +193,15 @@ a#crate-logo:hover {
     position: fixed;
     top: 0;
     width: 258px;
-    padding-bottom: 130px;
     overflow-y: auto;
+  }
+  #theme-options {
+    position: fixed;
+    bottom: 0;
+    width: 258px;
+  }
+  #sidebar-column > .bs-docs-sidebar {
+    padding-bottom: 100px;
   }
   #content-column {
     width: 712px;
@@ -199,6 +211,9 @@ a#crate-logo:hover {
 
 @media (min-width: 1200px) {
   #sidebar-column {
+    width: 308px;
+  }
+  #theme-options {
     width: 308px;
   }
   #content-column {
@@ -274,7 +289,7 @@ ul.search li a {
 span.highlighted {
   padding: 0 2px;
   color: #000;
-  background-color: #ffe28b;
+  background-color: #ffcf3e;
 }
 
 /* Top Navigation */
@@ -321,6 +336,15 @@ blockquote {
 #navbar-search-submit {
   border-left: 0 none;
   border-radius: 0 4px 4px 0;
+}
+
+#sidebar-column #theme-options {
+  background: #ffcf3e;
+  transition: width 0.5s;
+}
+
+#sidebar-column #theme-options ul li a {
+  padding: 5px 15px;
 }
 
 ul.localtoc {

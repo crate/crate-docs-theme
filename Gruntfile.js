@@ -21,7 +21,10 @@ module.exports = function (grunt) {
         tasks: ['recess']
       },
       sphinx: {
-        files: ['<%= theme_template_path %>/*.html'],
+        files: [
+          '<%= theme_template_path %>/*.html',
+          '<%= theme_template_path %>/*.conf'
+        ],
         tasks: ['shell']
       }
     },
