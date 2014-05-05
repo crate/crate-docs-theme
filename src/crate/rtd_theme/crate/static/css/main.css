@@ -1,0 +1,319 @@
+@font-face {
+  font-family: BlenderPro;
+  src: url('../fonts/BlenderPro/BlenderPro-ThinWeb.eot');
+  src: url('../fonts/BlenderPro/BlenderPro-ThinWeb.eot?#iefix') format('embedded-opentype'), url('../fonts/BlenderPro/BlenderPro-ThinWeb.woff') format('woff'), url('../fonts/BlenderPro/BlenderPro-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: BlenderPro;
+  font-weight: bold;
+  src: url('../fonts/BlenderPro/BlenderPro-BoldWeb.eot');
+  src: url('../fonts/BlenderPro/BlenderPro-BoldWeb.eot?#iefix') format('embedded-opentype'), url('../fonts/BlenderPro/BlenderPro-BoldWeb.woff') format('woff'), url('../fonts/BlenderPro/BlenderPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: SourceCodePro;
+  src: url('../fonts/SourceCodePro/SourceCodePro-Light.eot');
+  src: url('../fonts/SourceCodePro/SourceCodePro-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceCodePro/SourceCodePro-Light.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: SourceCodePro;
+  font-weight: bold;
+  src: url('../fonts/SourceCodePro/SourceCodePro-Regular.eot');
+  src: url('../fonts/SourceCodePro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceCodePro/SourceCodePro-Regular.otf.woff') format('woff');
+}
+
+body {
+  padding-top: 50px;
+  font-family: BlenderPro, Helvetica Neue Light, Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 135%;
+  color: #7a7a7a;
+  background-color: #FFFFFF;
+}
+
+.container {
+  margin-left: 0;
+}
+
+#page-wrap {
+  min-height: 100%;
+}
+
+#content-wrap {
+  padding-top: 1px;
+  background-color: #fcfcfc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+}
+
+a,
+a:visited {
+  color: #333333;
+}
+
+a:hover,
+a:active {
+  color: #7a7a7a;
+}
+
+a.headerlink {
+  color: #e8e8e8;
+}
+
+a.headerlink:hover {
+  color: #333333;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-inverse {
+  background: #6d6d6d;
+  border-color: #6d6d6d;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: SourceCodePro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+pre {
+  display: block;
+  color: inherit;
+  background: transparent none;
+  border: 0 none;
+  border-radius: 0;
+}
+
+span.pre {
+  font-size: 14px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+footer {
+  position: relative;
+  padding: 20px 20px 10px;
+  margin: 0 -15px;
+  font-size: 16px;
+  line-height: 100%;
+  color: #333333;
+  background: #ffcf3e;
+}
+
+a#crate-logo {
+  display: inline-block;
+  width: 101px;
+  height: 30px;
+  margin: 11px 0 0;
+  background: url("../img/logo-101x30.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+a#crate-logo span {
+  display: none;
+}
+
+a#crate-logo:hover {
+  background: url("../img/logo-101x30.png") no-repeat scroll 0 -30px rgba(0, 0, 0, 0);
+}
+
+.localtoc li li li {
+  display: none;
+}
+
+#sidebar-column {
+  top: 0;
+  height: 100%;
+  padding-top: 51px;
+  background-color: #e8e8e8;
+}
+
+#sidebar-column li > a {
+  font-size: 100% !important;
+  color: #000;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+
+#sidebar-column li.active > a {
+  border-right: none;
+  border-left: 3px solid #000;
+}
+
+#sidebar-column .prev {
+  margin-top: 15px;
+}
+
+#sidebar-column .next {
+  margin-bottom: 10px;
+}
+
+#content-column .section {
+  margin: 20px 0 40px;
+}
+
+@media (min-width: 992px) {
+  #sidebar-column {
+    position: fixed;
+    top: 0;
+    width: 258px;
+    padding-bottom: 130px;
+  }
+  #content-column {
+    width: 712px;
+    margin-left: 258px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #sidebar-column {
+    width: 308px;
+  }
+  #content-column {
+    width: 862px;
+    margin-left: 308px;
+  }
+}
+
+.note,
+.warning {
+  margin: 0 0 20px;
+}
+
+.note p,
+.warning p {
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.note .admonition-title,
+.warning .admonition-title {
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.note {
+  background-color: #ffefbe;
+}
+
+.note .admonition-title {
+  color: #333333;
+  background-color: #ffcf3e;
+}
+
+.warning {
+  background-color: #ffd1d1;
+}
+
+.warning .admonition-title {
+  color: #333333;
+  background-color: #ff5151;
+}
+
+.table {
+  border: 0 none;
+  border-collapse: collapse !important;
+}
+
+ul.bs-sidenav {
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+ul.bs-sidenav li > a {
+  padding: 0;
+  padding-top: 10px;
+  color: #47494c;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+/* First level of nav */
+
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+  font-weight: bold;
+  color: #47494c;
+  background-color: #fff;
+  border-right: 1px solid #fff;
+}
+
+/* SIDEBAR
+-------------------------------------------------------- */
+
+#sidebar A {
+  font-size: 100% !important;
+  color: #000;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+
+.bs-sidenav .nav .nav .nav > li > a {
+  padding-left: 20px !important;
+}
+
+.bs-sidenav .nav .nav .nav .nav > li > a {
+  padding-left: 35px !important;
+}
+
+.bs-sidenav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 50px !important;
+}
+
+.bs-sidenav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 65px !important;
+}
+
+#sidebar .localtoc UL UL UL {
+  display: none;
+}
+
+#sidebar .localtoc UL UL LI.active UL {
+  display: block;
+}
+
+#sidebar .localtoc UL UL UL UL {
+  display: none !important;
+}
+
+#sidebar .localtoc UL UL UL LI.active UL {
+  display: block !important;
+}
+
+#sidebar LI.active > A {
+  border-right: none;
+  border-left: 3px solid #000;
+}
+
+#sidebar .prev {
+  margin-top: 15px;
+}
+
+#sidebar .next {
+  margin-bottom: 10px;
+}
+
+#sidebar #form-search {
+  margin-bottom: 0;
+}
+
+#sidebar #form-search .form-control {
+  max-height: 40px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
