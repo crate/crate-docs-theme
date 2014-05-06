@@ -24,7 +24,7 @@ from setuptools import setup, find_packages
 
 
 setup(name='crate-docs-theme',
-      version='0.0.5',
+      version='0.0.6',
       description='CRATE ReadTheDocs Theme',
       long_description='A Sphinx theme for Crate\'s RTD-Documentation',
       classifiers=[
