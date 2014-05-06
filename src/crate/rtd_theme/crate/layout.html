@@ -1,9 +1,9 @@
-{% extends "basic/layout.html" %}
+{% extends "base.html" %}
 
 {% set css_files = [
-    '_static/bootstrap-3.1.1/css/bootstrap.min.css',
-    '_static/bootstrap-3.1.1/css/bootstrap-theme.min.css',
-    '_static/font-awesome-4.0.3/css/font-awesome.min.css',
+    '_static/bootstrap/css/bootstrap.min.css',
+    '_static/bootstrap/css/bootstrap-theme.min.css',
+    '_static/font-awesome/css/font-awesome.min.css',
     '_static/css/main.css',
   ]
 %}
@@ -12,7 +12,7 @@
     '_static/js/jquery-1.11.0.min.js',
     '_static/js/jquery-migrate.min.js',
     '_static/js/underscore-1.6.0.min.js',
-    '_static/bootstrap-3.1.1/js/bootstrap.min.js',
+    '_static/bootstrap/js/bootstrap.min.js',
     '_static/doctools.js',
     '_static/searchtools.js',
  ]
@@ -22,7 +22,7 @@
 <!DOCTYPE html>
 {%- endblock %}
 
-{%- block extrahead %}
+{%- block extra_head %}
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -34,7 +34,7 @@
 Always link to the latest version, as canonical.
 http://docs.readthedocs.org/en/latest/canonical.html
 -->
-  <link rel="canonical" href="{{ canonical_url }}{{ theme_cannonical_url_path }}{{ rtd_language }}/latest/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
+<link rel="canonical" href="{{ canonical_url }}{{ theme_cannonical_url_path }}stable/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
 {% endif %}
 
 {% endblock %}
@@ -52,14 +52,14 @@ http://docs.readthedocs.org/en/latest/canonical.html
     <div class="row" id="content-wrap">
       {%- block sidebar1 %}
       <div class="col-md-3" id="sidebar-column">
-          {%- for sidebartemplate in sidebars %}
+        {%- for sidebartemplate in sidebars %}
           {%- include sidebartemplate %}
-          {%- endfor %}
+        {%- endfor %}
       </div>
       {% endblock %}
       <div class="col-md-9" id="content-column">
         <div>
-        {% block body %}{# comments #}{% endblock %}
+        {% block body %}{% endblock %}
         </div>
         <footer class="footer">
           <div class="footer-container">
@@ -95,7 +95,7 @@ http://docs.readthedocs.org/en/latest/canonical.html
 </div>
 {%- endblock %}
 
-{%- block footer %}
+{%- block custom_footer %}
 <script type="text/javascript">
   var _gaq = _gaq || [];
 {% if analytics_code %}

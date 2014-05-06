@@ -38,7 +38,7 @@ echo "Fetching origin..."
 git fetch origin > /dev/null
 
 # get the version
-VERSION=`cat setup.py | grep version | cut -d = -f 2 | cut -d \' -f 2`
+VERSION=`cat package.json | grep version | cut -d : -f 2 | cut -d \" -f 2`
 echo "Found version $VERSION in setup.py"
 
 # check if tag to create has already been created

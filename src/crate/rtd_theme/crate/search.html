@@ -10,11 +10,10 @@
 {%- extends "layout.html" %}
 {% set title = _('Search') %}
 
-{% block extrahead %}
+{% block extra_head %}
   <script type="text/javascript">
     jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
   </script>
-  {{ super() }}
 {% endblock %}
 
 {% block body %}

@@ -1,35 +1,20 @@
+================
 crate-docs-theme
 ================
 
-This project provides a Sphinx theme support for ReadTheDocs for the Crate documentation.
+This project provides a Sphinx theme for Crate's documentation
+that is compatible with ReadTheDocs.
 
+Using the theme
+---------------
 
-Local Theme Development
------------------------
+In your docs ``conf.py`` import the settings from the theme::
 
-Run buildout::
+   from crate.rtd_theme.conf import *
 
- python bootstrap.py
- bin/buildout -N
+or if you want to use a specific configuration::
 
-Install Node packages::
+   from crate.rtd_theme.conf.crate_server import *
 
- bin/npm install
+That's all!
 
-
-Watchers
---------
-
-There are 2 watchers, one for LESS_ and one for the Sphinx_::
-
- bin/grunt watch:less
- bin/grunt watch:sphinx
-
-or simply watch::
-
- bin/grunt watch
-
-
-.. _Sphinx: http://sphinx-doc.org/
-
-.. _LESS: http://lesscss.org/

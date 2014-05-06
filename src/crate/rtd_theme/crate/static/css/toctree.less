@@ -1,56 +1,53 @@
-#sidebar-column {
-    background-color: @crate-color-light;
+/* TOC Tree */
 
+#sidebar-column {
     li > a {
-        color: #47494c;
+        color: @crate-color-dark;
         text-decoration: none;
         text-shadow: none;
         padding: 0 0 0 10px;
     }
 
     li.toctree-l1 {
-        background-color: @crate-color-light;
         a {
             padding-left: 20px !important;
         }
     }
 
     li.toctree-l2 {
-        background-color: lighten(@crate-color-light, 5%);
         a {
             padding-left: 35px !important;
         }
     }
 
     li.toctree-l3 {
-        background-color: lighten(@crate-color-light, 10%);
         a {
             padding-left: 50px !important;
         }
     }
 
+    .toctree {
+        padding: 10px 0;
+    }
+
     .toctree li a {
         text-decoration: none;
         color: @crate-color-black;
-        border-right: 3px solid transparent;
-        font-size: 100% !important;
-        padding-top: 4px;
-        padding-bottom: 4px;
     }
 
     .toctree li.current > a,
     .toctree li.active > a {
         font-weight: bold;
-        border-right: 3px solid #000;
     }
 
     .toctree li.current > a {
-        background-color: @crate-color-white;
-        color: @crate-color-dark;
+        color: @crate-color-black;
+        background-color: transparent;
     }
 
     .toctree li > a:hover {
-        background-color: @crate-color-white;
+        color: @crate-color-black;
+        background-color: transparent;
     }
 
     .toctree li.current > a,
@@ -58,6 +55,7 @@
     .toctree li:hover > a,
     .toctree li:active > a {
         font-weight: bold;
+        background-color: transparent;
     }
 
     .toctree ul ul {

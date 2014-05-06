@@ -19,11 +19,9 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
-# this is a namespace package
+from crate.rtd_theme.conf import *
 
-try:
-    import pkg_resources
-    pkg_resources.declare_namespace(__name__)
-except ImportError:
-    import pkgutil
-    __path__ = pkgutil.extend_path(__path__, __name__)
+project = u'Crate Python'
+html_theme_options.update({
+    'cannonical_url_path': 'docs/projects/crate-python/'
+})

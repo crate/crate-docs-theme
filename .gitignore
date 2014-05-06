@@ -2,9 +2,10 @@
 bin/
 parts/
 dist/
-_docs/
-_out/
+docs/
+out/
 .installed.cfg
 develop-eggs/
 node_modules/
 *.egg-info
+*.pyc
