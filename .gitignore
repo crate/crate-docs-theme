@@ -8,3 +8,4 @@ _out/
 develop-eggs/
 node_modules/
 *.egg-info
+*.pyc
