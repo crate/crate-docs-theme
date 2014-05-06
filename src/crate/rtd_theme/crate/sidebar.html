@@ -6,18 +6,22 @@
         <li><a href="{{ pathto(*link[1:]) }}">{{ link[0] }}</a></li>
       {%- endfor %}
     {% endif %}
+
     {% block navbartoc %}
       {% include "globaltoc.html" %}
       <li class="h4">Table of Contents</li>
       {% include "navbartoc.html" %}
     {% endblock %}
+
     {% if theme_navbar_sidebarrel %}
       {% block sidebarrel %}
         {% include "relations.html" %}
       {% endblock %}
     {% endif %}
+
     {% block navbarextra %}
     {% endblock %}
+
     {% if theme_source_link_position == "nav" %}
       <li>{% include "sourcelink.html" %}</li>
     {% endif %}

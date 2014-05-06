@@ -5,19 +5,18 @@
       <a href="{{ pathto(master_doc) }}" class="dropdown-toggle" id="options-menu" data-toggle="dropdown">
         <i class="fa fa-cog"></i> Versions
       </a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="options-menu">
-      <li role="presentation" class="dropdown-header">Current Version</li>
-      <li><a href="">0.36.3</a></li>
-      {%- if versions %}
-      <li role="presentation" class="divider"></li>
-      <li role="presentation" class="dropdown-header">Other Versions</li>
-      {% for slug, url in versions %}
-      <li><a href="{{ url }}">{{ slug }}</a></li>
-      {% endfor %}
-      {%- endif %}
-    </ul>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="options-menu">
+        <li role="presentation" class="dropdown-header">Current Version</li>
+        <li><a href="{{ pathto(master_doc) }}">{{ current_version }}</a></li>
+        {%- if versions %}
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="dropdown-header">Other Versions</li>
+        {% for slug, url in versions %}
+        <li><a href="{{ url }}">{{ slug }}</a></li>
+        {% endfor %}
+        {%- endif %}
+      </ul>
     </li>
-
   </ul>
 </div>
 {%- endif %}
