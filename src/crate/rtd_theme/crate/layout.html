@@ -34,7 +34,7 @@
 Always link to the latest version, as canonical.
 http://docs.readthedocs.org/en/latest/canonical.html
 -->
-  <link rel="canonical" href="{{ canonical_url }}{{ theme_cannonical_url_path }}{{ rtd_language }}/latest/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
+<link rel="canonical" href="{{ canonical_url }}{{ theme_cannonical_url_path }}{{ rtd_language }}/latest/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
 {% endif %}
 
 {% endblock %}
@@ -52,14 +52,14 @@ http://docs.readthedocs.org/en/latest/canonical.html
     <div class="row" id="content-wrap">
       {%- block sidebar1 %}
       <div class="col-md-3" id="sidebar-column">
-          {%- for sidebartemplate in sidebars %}
+        {%- for sidebartemplate in sidebars %}
           {%- include sidebartemplate %}
-          {%- endfor %}
+        {%- endfor %}
       </div>
       {% endblock %}
       <div class="col-md-9" id="content-column">
         <div>
-        {% block body %}{# comments #}{% endblock %}
+        {% block body %}{% endblock %}
         </div>
         <footer class="footer">
           <div class="footer-container">
@@ -95,7 +95,7 @@ http://docs.readthedocs.org/en/latest/canonical.html
 </div>
 {%- endblock %}
 
-{%- block footer %}
+{%- block custom_footer %}
 <script type="text/javascript">
   var _gaq = _gaq || [];
 {% if analytics_code %}
