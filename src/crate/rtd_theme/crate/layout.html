@@ -114,10 +114,10 @@ http://docs.readthedocs.org/en/latest/canonical.html
   $(function() {
     $('table').attr("border","0").addClass('table');
     $('.search').addClass('list-unstyled');
-    $('.globaltoc ul').addClass('nav');
+    $('.toctree ul').addClass('nav');
     $('.localtoc ul').addClass('nav');
     $('body').scrollspy({
-     'target': '.localtoc',
+     'target': '.toctree',
      'offset': 51
     });
   });

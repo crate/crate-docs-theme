@@ -41,13 +41,6 @@ a.headerlink:hover {
     color: @crate-color-black;
 }
 
-.navbar {
-    margin-bottom: 0px;
-}
-.navbar-inverse {
-    background: @crate-color-medium;
-    border-color: @crate-color-medium;
-}
 code, kbd, pre, samp, .pre {
     font-family: SourceCodePro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -100,6 +93,9 @@ a#crate-logo:hover {
     top: 0px;
     left: 0px;
     padding: 51px 0 0 0px;
+    ul li {
+        font-size: 17px;
+    }
     li > a {
         font-size: 100% !important;
         color: #000;
@@ -188,15 +184,30 @@ span.highlighted {
 
 /* Top Navigation */
 
-.navbar-inverse .navbar-nav {
-    li > a {
-        font-weight: bold;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 16px;
+.navbar {
+    margin-bottom: 0px;
+}
+.navbar-inverse {
+    background: @crate-color-medium;
+    border-color: @crate-color-medium;
+    li {
+        a {
+            font-weight: bold;
+            color: @crate-color-white;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        a:hover {
+            color: @crate-color-light;
+        }
     }
-    li > a:hover {
-        color: @crate-color-light;
+    .dropdown-menu {
+        a {
+            color: @crate-color-dark;
+        }
+        a:hover {
+            color: @crate-color-black;
+        }
     }
 }
 
@@ -240,6 +251,9 @@ blockquote {
 /* Responsive Elements */
 
 @media (max-width: 992px) {
+    #sidebar-column {
+        padding-top: 0px;
+    }
     .container {
         width: 100%;
     }

@@ -81,15 +81,6 @@ a.headerlink:hover {
   color: #333333;
 }
 
-.navbar {
-  margin-bottom: 0;
-}
-
-.navbar-inverse {
-  background: #6d6d6d;
-  border-color: #6d6d6d;
-}
-
 code,
 kbd,
 pre,
@@ -150,6 +141,10 @@ a#crate-logo:hover {
   padding: 51px 0 0 0;
   background-color: #e8e8e8;
   transition: width 0.5s;
+}
+
+#sidebar-column ul li {
+  font-size: 17px;
 }
 
 #sidebar-column li > a {
@@ -250,15 +245,32 @@ span.highlighted {
 
 /* Top Navigation */
 
-.navbar-inverse .navbar-nav li > a {
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-inverse {
+  background: #6d6d6d;
+  border-color: #6d6d6d;
+}
+
+.navbar-inverse li a {
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
-.navbar-inverse .navbar-nav li > a:hover {
+.navbar-inverse li a:hover {
   color: #e8e8e8;
+}
+
+.navbar-inverse .dropdown-menu a {
+  color: #7a7a7a;
+}
+
+.navbar-inverse .dropdown-menu a:hover {
+  color: #333333;
 }
 
 dl.docutils {
@@ -306,6 +318,9 @@ blockquote {
 /* Responsive Elements */
 
 @media (max-width: 992px) {
+  #sidebar-column {
+    padding-top: 0;
+  }
   .container {
     width: 100%;
   }
@@ -351,105 +366,85 @@ blockquote {
   }
 }
 
-ul.localtoc {
-  padding: 0;
-  margin: 0;
+#sidebar-column {
+  background-color: #e8e8e8;
 }
 
-ul.bs-sidenav {
-  margin-top: 10px;
-  border-radius: 0;
-}
-
-ul.bs-sidenav li > a {
+#sidebar-column li > a {
   padding: 0 0 0 10px;
   color: #47494c;
   text-decoration: none;
   text-shadow: none;
 }
 
-.bs-sidenav li > a:hover {
-  background-color: #fff;
+#sidebar-column li.toctree-l1 {
+  background-color: #e8e8e8;
 }
 
-.bs-sidenav .nav > li.active > a,
-.bs-sidenav .nav > li.active:hover > a,
-.bs-sidenav .nav > li.active:focus > a {
-  font-weight: bold;
-  color: #47494c;
+#sidebar-column li.toctree-l1 a {
+  padding-left: 20px !important;
 }
 
-.bs-sidenav .nav .nav > li > a {
+#sidebar-column li.toctree-l2 {
+  background-color: #f5f5f5;
+}
+
+#sidebar-column li.toctree-l2 a {
   padding-left: 35px !important;
 }
 
-.bs-sidenav .nav .nav .nav > li > a {
+#sidebar-column li.toctree-l3 {
+  background-color: #ffffff;
+}
+
+#sidebar-column li.toctree-l3 a {
   padding-left: 50px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav > li > a {
-  padding-left: 65px !important;
-}
-
-.bs-sidenav .nav .nav .nav .nav .nav > li > a {
-  padding-left: 80px !important;
-}
-
-#sidebar-column .dropdown-menu {
-  border: 0 none;
-}
-
-#sidebar-column .dropdown-menu li a {
-  padding: 5px 20px;
-}
-
-#sidebar-column ul li {
-  font-size: 17px;
-}
-
-#sidebar-column ul li a {
+#sidebar-column .toctree li a {
   padding-top: 4px;
   padding-bottom: 4px;
   font-size: 100% !important;
-  color: #000;
+  color: #333333;
   text-decoration: none;
   border-right: 3px solid transparent;
 }
 
-#sidebar-column .localtoc ul ul ul {
-  display: none;
-}
-
-#sidebar-column .localtoc UL UL LI.active UL {
-  display: block;
-}
-
-#sidebar-column .localtoc UL UL UL UL {
-  display: none !important;
-}
-
-#sidebar-column .localtoc UL UL UL LI.active UL {
-  display: block !important;
-}
-
-#sidebar-column LI.active > A {
+#sidebar-column .toctree li.current > a,
+#sidebar-column .toctree li.active > a {
+  font-weight: bold;
   border-right: 3px solid #000;
 }
 
-#sidebar-column .prev {
-  margin-top: 15px;
+#sidebar-column .toctree li.current > a {
+  color: #7a7a7a;
+  background-color: #ffffff;
 }
 
-#sidebar-column .next {
-  margin-bottom: 10px;
+#sidebar-column .toctree li > a:hover {
+  background-color: #ffffff;
 }
 
-#sidebar-column #form-search {
-  margin-bottom: 0;
+#sidebar-column .toctree li.current > a,
+#sidebar-column .toctree li:focus > a,
+#sidebar-column .toctree li:hover > a,
+#sidebar-column .toctree li:active > a {
+  font-weight: bold;
 }
 
-#sidebar-column #form-search .form-control {
-  max-height: 40px;
-  padding-top: 8px;
-  padding-bottom: 10px;
+#sidebar-column .toctree ul ul {
+  display: none;
+}
+
+#sidebar-column .toctree ul li.active ul {
+  display: block;
+}
+
+#sidebar-column .toctree ul ul ul {
+  display: none !important;
+}
+
+#sidebar-column .toctree li.current > ul,
+#sidebar-column .toctree ul ul li.active ul {
+  display: block !important;
 }

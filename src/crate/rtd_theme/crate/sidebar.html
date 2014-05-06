@@ -8,14 +8,11 @@
     {% endif %}
 
     {% block navbartoc %}
-      {% include "globaltoc.html" %}
-      <li class="h4">Table of Contents</li>
-      {% include "navbartoc.html" %}
+      {% include "sidebartoc.html" %}
     {% endblock %}
 
     {% if theme_navbar_sidebarrel %}
       {% block sidebarrel %}
-        {% include "relations.html" %}
       {% endblock %}
     {% endif %}
 
@@ -28,5 +25,3 @@
 
   </ul>
 </div>
-
-{% include "versions.html" %}
