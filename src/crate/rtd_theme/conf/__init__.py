@@ -2,9 +2,6 @@ import crate.rtd_theme
 
 copyright = u'2014, CRATE Technology GmbH'
 
-html_favicon = 'out/html/_static/img/favicon.ico'
-logo = 'img/logo_crate.png'
-
 # The suffix of source filenames.
 source_suffix = '.txt'
 exclude_patterns = ['requirements.txt']
@@ -30,4 +27,6 @@ html_theme_options = {
     'navbar_fixed_top': 'true',
 
     'globaltoc_includehidden': 'true',
+
+    'cannonical_url_path': '',
 }
