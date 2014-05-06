@@ -172,10 +172,6 @@ a#crate-logo:hover {
   color: #7a7a7a;
 }
 
-#sidebar-column > .bs-docs-sidebar {
-  padding-left: 15px;
-}
-
 #content-column {
   transition: width 0.5s;
 }
@@ -186,46 +182,6 @@ a#crate-logo:hover {
 
 .container {
   transition: width 0.5s;
-}
-
-@media (min-width: 992px) {
-  #sidebar-column {
-    position: fixed;
-    top: 0;
-    width: 258px;
-    overflow-y: auto;
-  }
-  #theme-options {
-    position: fixed;
-    bottom: 0;
-    width: 258px;
-  }
-  #sidebar-column > .bs-docs-sidebar {
-    padding-bottom: 100px;
-  }
-  #content-column {
-    width: 712px;
-    margin-left: 258px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #sidebar-column {
-    width: 308px;
-  }
-  #theme-options {
-    width: 308px;
-  }
-  #content-column {
-    width: 862px;
-    margin-left: 308px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .navbar .container {
-    width: 1380px;
-  }
 }
 
 .note,
@@ -347,6 +303,54 @@ blockquote {
   padding: 5px 15px;
 }
 
+/* Responsive Elements */
+
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  #sidebar-column {
+    position: fixed;
+    top: 0;
+    width: 258px;
+    overflow-y: auto;
+  }
+  #theme-options {
+    position: fixed;
+    bottom: 0;
+    width: 258px;
+  }
+  #sidebar-column > .bs-docs-sidebar {
+    padding-bottom: 100px;
+  }
+  #content-column {
+    width: 712px;
+    margin-left: 258px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #sidebar-column {
+    width: 308px;
+  }
+  #theme-options {
+    width: 308px;
+  }
+  #content-column {
+    width: 862px;
+    margin-left: 308px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar .container {
+    width: 1380px;
+  }
+}
+
 ul.localtoc {
   padding: 0;
   margin: 0;
@@ -364,6 +368,10 @@ ul.bs-sidenav li > a {
   text-shadow: none;
 }
 
+.bs-sidenav li > a:hover {
+  background-color: #fff;
+}
+
 .bs-sidenav .nav > li.active > a,
 .bs-sidenav .nav > li.active:hover > a,
 .bs-sidenav .nav > li.active:focus > a {
@@ -372,19 +380,19 @@ ul.bs-sidenav li > a {
 }
 
 .bs-sidenav .nav .nav > li > a {
-  padding-left: 20px !important;
-}
-
-.bs-sidenav .nav .nav .nav > li > a {
   padding-left: 35px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav .nav > li > a {
   padding-left: 50px !important;
 }
 
-.bs-sidenav .nav .nav .nav .nav .nav > li > a {
+.bs-sidenav .nav .nav .nav .nav > li > a {
   padding-left: 65px !important;
+}
+
+.bs-sidenav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 80px !important;
 }
 
 #sidebar-column .dropdown-menu {
