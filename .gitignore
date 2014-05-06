@@ -2,8 +2,8 @@
 bin/
 parts/
 dist/
-_docs/
-_out/
+docs/
+out/
 .installed.cfg
 develop-eggs/
 node_modules/
