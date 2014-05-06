@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     pkg: require('./package.json'),
     theme_template_path: 'src/crate/rtd_theme/crate',
     theme_static_path: 'src/crate/rtd_theme/crate/static',
-    out_static_path: '_out/docs/web/server/_static',
+    out_static_path: 'out/docs/_static',
     watch: {
       options: {
       },
