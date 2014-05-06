@@ -25,7 +25,7 @@ from setuptools import setup, find_packages
 
 setup(name='crate-docs-theme',
       version='0.0.3',
-      description='CRATE ReadTheDocs',
+      description='CRATE ReadTheDocs Theme',
       long_description='A Sphinx theme for Crate\'s RTD-Documentation',
       classifiers=[
           "Programming Language :: JavaScript",
@@ -34,7 +34,7 @@ setup(name='crate-docs-theme',
       author='CRATE Technology GmbH',
       author_email='office@crate.io',
       url='https://github.com/crate/crate-docs-theme',
-      keywords='',
+      keywords='crate docs sphinx readthedocs',
       license='Apache License 2.0',
       packages=find_packages('src'),
       package_dir={'':'src'},
