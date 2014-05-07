@@ -17,13 +17,13 @@ To build the app simply run ``npm`` in this crate-docs-theme folder::
 
     bin/npm install
 
-Copy your docs into ``_docs`` folder.
+To test the theme you need to copy your docs into the ``docs`` folder.
 
 Start the file watchers::
 
     bin/grunt watch
 
-To build the theme run::
+To build the documentation with the theme run::
 
     bin/sphinx
 
@@ -33,7 +33,7 @@ Distributing
 
 Before creating a new distribution, a new version and tag should be created:
 
- - Add a new version to ``setup.py`` and ``package.json``.
+ - Add a new version to ``setup.py``, ``package.json`` and ``src/crate/rtd_theme/__init__.py``.
 
  - Add a note for the new version at the ``CHANGES.txt`` file.
 
