@@ -29,11 +29,15 @@ version = imp.load_source('rtd_theme', filepath).__version__
 
 setup(name='crate-docs-theme',
       version=version,
-      description='CRATE ReadTheDocs Theme',
-      long_description='A Sphinx theme for Crate\'s RTD-Documentation',
+      description='Crate Sphinx Theme for ReadTheDocs',
+      long_description='A Sphinx theme for Crate\'s Documentation',
       classifiers=[
-          "Programming Language :: JavaScript",
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: Apache Software License",
+          "Operating System :: OS Indipendent",
           "Programming Language :: Python",
+          "Programming Language :: Python :: 2",
+          "Topic :: Software Development :: Documentation",
       ],
       author='CRATE Technology GmbH',
       author_email='office@crate.io',
