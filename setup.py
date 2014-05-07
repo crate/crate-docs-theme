@@ -34,7 +34,7 @@ setup(name='crate-docs-theme',
       classifiers=[
           "Intended Audience :: Developers",
           "License :: OSI Approved :: Apache Software License",
-          "Operating System :: OS Indipendent",
+          "Operating System :: OS Independent",
           "Programming Language :: Python",
           "Programming Language :: Python :: 2",
           "Topic :: Software Development :: Documentation",
