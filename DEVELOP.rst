@@ -33,7 +33,7 @@ Distributing
 
 Before creating a new distribution, a new version and tag should be created:
 
- - Add a new version to ``setup.py``, ``package.json`` and ``src/crate/rtd_theme/__init__.py``.
+ - Add a new version to ``src/crate/rtd_theme/__init__.py`` and ``package.json``.
 
  - Add a note for the new version at the ``CHANGES.txt`` file.
 
