@@ -4,4 +4,7 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+2014/05/07 0.1.0
+----------------
+
   - Initial theme
