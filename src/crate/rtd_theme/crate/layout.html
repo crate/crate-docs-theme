@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% set css_files = [
+    '_static/bootstrap/css/bootstrap.min.css',
+    '_static/bootstrap/css/bootstrap-theme.min.css',
+    '_static/font-awesome/css/font-awesome.min.css',
+    '_static/css/main.css',
+  ]
+%}
+
+{% set script_files = [
+    '_static/js/jquery-1.11.0.min.js',
+    '_static/js/jquery-migrate.min.js',
+    '_static/js/underscore-1.6.0.min.js',
+    '_static/bootstrap/js/bootstrap.min.js',
+    '_static/doctools.js',
+    '_static/searchtools.js',
+ ]
+%}
+
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+
+{%- block extra_head %}
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+{% set ending = "/" if builder == "readthedocsdirhtml" else ".html" %}
+{% set canonical_page = pagename + ending %}
+{% if canonical_url %}
+ <!--
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="{{ canonical_url }}{{ theme_cannonical_url_path }}stable/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
+{% endif %}
+
+{% endblock %}
+
+{# Silence the sidebar's, relbar's #}
+{% block header %}{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block sidebarsourcelink %}{% endblock %}
+
+{%- block content %}
+<div id="page-wrap">
+  {% include "navbar.html" %}
+  <div class="container">
+    <div class="row" id="content-wrap">
+      {%- block sidebar1 %}
+      <div class="col-md-3" id="sidebar-column">
+        {%- for sidebartemplate in sidebars %}
+          {%- include sidebartemplate %}
+        {%- endfor %}
+      </div>
+      {% endblock %}
+      <div class="col-md-9" id="content-column">
+        <div>
+        {% block body %}{% endblock %}
+        </div>
+        <footer class="footer">
+          <div class="footer-container">
+            <p class="pull-right">
+              <a href="#">Back to top</a>
+              {% if theme_source_link_position == "footer" %}
+              <br/>
+              {% include "sourcelink.html" %}
+              {% endif %}
+            </p>
+            <p>
+              {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+              {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}<br/>
+              {%- else %}
+              {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}<br/>
+              {%- endif %}
+              {%- endif %}
+              {%- if last_updated %}
+              {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
+              {%- endif %}
+              {%- if show_sphinx %}
+              {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}<br/>
+              {%- endif %}
+            </p>
+          </div>
+        </footer>
+      </div>
+      {% block sidebar2 %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
+{%- endblock %}
+
+{%- block custom_footer %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+{% if analytics_code %}
+  _gaq.push(['_setAccount', '{{ analytics_code }}']);
+  _gaq.push(['_trackPageview']);
+{% endif %}
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript">
+  $(function() {
+    $('table').attr("border","0").addClass('table');
+    $('.search').addClass('list-unstyled');
+    $('.toctree ul').addClass('nav');
+    $('.localtoc ul').addClass('nav');
+    $('body').scrollspy({
+     'target': '.toctree',
+     'offset': 51
+    });
+  });
+</script>
+{%- endblock %}

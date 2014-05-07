@@ -1,0 +1,7 @@
+CHANGES for Crate ReadTheDocs Theme
+====================================
+
+Unreleased
+==========
+
+  - Initial theme

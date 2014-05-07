@@ -1,0 +1,392 @@
+@font-face {
+  font-family: BlenderPro;
+  src: url('../fonts/BlenderPro/BlenderPro-ThinWeb.eot');
+  src: url('../fonts/BlenderPro/BlenderPro-ThinWeb.eot?#iefix') format('embedded-opentype'), url('../fonts/BlenderPro/BlenderPro-ThinWeb.woff') format('woff'), url('../fonts/BlenderPro/BlenderPro-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: BlenderPro;
+  font-weight: bold;
+  src: url('../fonts/BlenderPro/BlenderPro-BoldWeb.eot');
+  src: url('../fonts/BlenderPro/BlenderPro-BoldWeb.eot?#iefix') format('embedded-opentype'), url('../fonts/BlenderPro/BlenderPro-BoldWeb.woff') format('woff'), url('../fonts/BlenderPro/BlenderPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: SourceCodePro;
+  src: url('../fonts/SourceCodePro/SourceCodePro-Light.eot');
+  src: url('../fonts/SourceCodePro/SourceCodePro-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceCodePro/SourceCodePro-Light.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: SourceCodePro;
+  font-weight: bold;
+  src: url('../fonts/SourceCodePro/SourceCodePro-Regular.eot');
+  src: url('../fonts/SourceCodePro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceCodePro/SourceCodePro-Regular.otf.woff') format('woff');
+}
+
+/* General */
+
+body {
+  padding-top: 50px;
+  font-family: BlenderPro, Helvetica Neue Light, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 130%;
+  color: #7a7a7a;
+  background-color: #ffffff;
+}
+
+/* Layout Elements */
+
+.container {
+  margin-left: 0;
+  transition: width 0.5s;
+}
+
+#page-wrap {
+  min-height: 100%;
+}
+
+#content-wrap {
+  padding-top: 1px;
+  background-color: #fcfcfc;
+}
+
+#sidebar-column {
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 51px 0 0 0;
+  background-color: #e8e8e8;
+  transition: width 0.5s;
+}
+
+#content-column {
+  transition: width 0.5s;
+}
+
+#content-column .section {
+  margin: 20px 0 40px;
+}
+
+/* Headlines */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: #333333;
+}
+
+h1,
+.h1 {
+  font-size: 46px;
+  font-weight: normal;
+}
+
+/* Links */
+
+a,
+a:visited {
+  color: #333333;
+}
+
+a:hover,
+a:active {
+  color: #7a7a7a;
+}
+
+a.headerlink {
+  font-weight: normal;
+  color: #e8e8e8;
+}
+
+a.headerlink:hover {
+  color: #333333;
+}
+
+a#crate-logo {
+  display: inline-block;
+  width: 101px;
+  height: 30px;
+  margin: 11px 0 0;
+  background: url("../img/logo-101x30.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+a#crate-logo span {
+  display: none;
+}
+
+a#crate-logo:hover {
+  background: url("../img/logo-101x30.png") no-repeat scroll 0 -30px rgba(0, 0, 0, 0);
+}
+
+/* Code Style */
+
+code,
+kbd,
+pre,
+samp,
+.pre {
+  font-family: SourceCodePro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+pre {
+  display: block;
+  color: inherit;
+  background: transparent none;
+  border: 0 none;
+  border-radius: 0;
+}
+
+.pre {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  padding: 20px 20px 10px;
+  margin: 40px -15px 0;
+  font-size: 16px;
+  line-height: 100%;
+  color: #333333;
+  border-top: 2px solid #ffcf3e;
+}
+
+/* Notes */
+
+.note,
+.warning {
+  margin: 0 0 20px;
+}
+
+.note p,
+.warning p {
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.note .admonition-title,
+.warning .admonition-title {
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.note {
+  background-color: #ffefbe;
+}
+
+.note .admonition-title {
+  color: #333333;
+  background-color: #ffcf3e;
+}
+
+.warning {
+  background-color: #ffd1d1;
+}
+
+.warning .admonition-title {
+  color: #333333;
+  background-color: #ff5151;
+}
+
+/* Search highlight */
+
+ul.search {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.search li {
+  margin: 20px 0;
+}
+
+ul.search li a {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+span.highlighted {
+  padding: 0 2px;
+  color: #000;
+  background-color: #ffcf3e;
+}
+
+/* Top Navigation */
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-inverse {
+  background: #6d6d6d;
+  border-color: #6d6d6d;
+}
+
+.navbar-inverse li a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.navbar-inverse li a:hover {
+  color: #e8e8e8;
+}
+
+.navbar-inverse .dropdown-menu a {
+  color: #7a7a7a;
+}
+
+.navbar-inverse .dropdown-menu a:hover {
+  color: #333333;
+}
+
+/* Tables, Definitions, ... */
+
+.table {
+  background-color: #fff;
+  border: 0 none;
+  border-collapse: collapse !important;
+}
+
+dl.docutils {
+  padding: 0 20px;
+}
+
+dl.docutils dt {
+  font-size: 17px;
+}
+
+dl.docutils dd {
+  padding: 0 0 0 10px;
+}
+
+blockquote {
+  border: 0 none;
+}
+
+/* Search Box */
+
+#navbar-search-input {
+  width: 158px;
+  margin-right: -4px;
+  border-right: 0 none;
+  border-radius: 4px 0 0 4px;
+  transition: width 0.5s;
+}
+
+#navbar-search-input:focus {
+  width: 300px;
+}
+
+#navbar-search-submit {
+  border-left: 0 none;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Responsive Elements */
+
+@media (max-width: 992px) {
+  #sidebar-column {
+    padding-top: 0;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  #sidebar-column {
+    position: fixed;
+    top: 0;
+    width: 258px;
+    overflow-y: auto;
+  }
+  #content-column {
+    width: 712px;
+    margin-left: 258px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* TOC Tree */
+
+#sidebar-column li > a {
+  padding: 0 0 0 10px;
+  color: #7a7a7a;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+#sidebar-column li.toctree-l1 a {
+  padding-left: 20px !important;
+}
+
+#sidebar-column li.toctree-l2 a {
+  padding-left: 35px !important;
+}
+
+#sidebar-column li.toctree-l3 a {
+  padding-left: 50px !important;
+}
+
+#sidebar-column .toctree {
+  padding: 10px 0;
+}
+
+#sidebar-column .toctree li a {
+  color: #333333;
+  text-decoration: none;
+}
+
+#sidebar-column .toctree li.current > a,
+#sidebar-column .toctree li.active > a {
+  font-weight: bold;
+}
+
+#sidebar-column .toctree li.current > a {
+  color: #333333;
+  background-color: transparent;
+}
+
+#sidebar-column .toctree li > a:hover {
+  color: #333333;
+  background-color: transparent;
+}
+
+#sidebar-column .toctree li.current > a,
+#sidebar-column .toctree li:focus > a,
+#sidebar-column .toctree li:hover > a,
+#sidebar-column .toctree li:active > a {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+#sidebar-column .toctree ul ul {
+  display: none;
+}
+
+#sidebar-column .toctree ul li.active ul {
+  display: block;
+}
+
+#sidebar-column .toctree ul ul ul {
+  display: none !important;
+}
+
+#sidebar-column .toctree li.current > ul,
+#sidebar-column .toctree ul ul li.active ul {
+  display: block !important;
+}

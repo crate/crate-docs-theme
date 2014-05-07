@@ -1,0 +1,78 @@
+/* TOC Tree */
+
+#sidebar-column {
+    li > a {
+        color: @crate-color-dark;
+        text-decoration: none;
+        text-shadow: none;
+        padding: 0 0 0 10px;
+    }
+
+    li.toctree-l1 {
+        a {
+            padding-left: 20px !important;
+        }
+    }
+
+    li.toctree-l2 {
+        a {
+            padding-left: 35px !important;
+        }
+    }
+
+    li.toctree-l3 {
+        a {
+            padding-left: 50px !important;
+        }
+    }
+
+    .toctree {
+        padding: 10px 0;
+    }
+
+    .toctree li a {
+        text-decoration: none;
+        color: @crate-color-black;
+    }
+
+    .toctree li.current > a,
+    .toctree li.active > a {
+        font-weight: bold;
+    }
+
+    .toctree li.current > a {
+        color: @crate-color-black;
+        background-color: transparent;
+    }
+
+    .toctree li > a:hover {
+        color: @crate-color-black;
+        background-color: transparent;
+    }
+
+    .toctree li.current > a,
+    .toctree li:focus > a,
+    .toctree li:hover > a,
+    .toctree li:active > a {
+        font-weight: bold;
+        background-color: transparent;
+    }
+
+    .toctree ul ul {
+        display: none;
+    }
+
+    .toctree ul li.active ul {
+        display: block;
+    }
+
+    .toctree ul ul ul {
+        display: none !important;
+    }
+
+    .toctree li.current > ul,
+    .toctree ul ul li.active ul {
+        display: block !important;
+    }
+
+}
