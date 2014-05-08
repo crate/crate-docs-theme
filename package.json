@@ -1,7 +1,7 @@
 {
   "name": "crate-docs-theme",
   "description": "A Sphinx theme for CRATE Documentation",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Crate Team",
   "homepage": "https://github.com/crate/crate-docs-theme/",
   "license": "Apache License, Version 2.0, http://www.apache.org/licenses/LICENSE-2.0",
