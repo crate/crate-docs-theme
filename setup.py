@@ -24,8 +24,8 @@ import imp
 from setuptools import setup, find_packages
 
 pwd = os.path.join(os.path.dirname(__file__))
-filepath = os.path.join(pwd, 'src', 'crate', 'rtd_theme', '__init__.py')
-version = imp.load_source('rtd_theme', filepath).__version__
+filepath = os.path.join(pwd, 'src', 'crate', 'theme', 'rtd', '__init__.py')
+version = imp.load_source('theme', filepath).__version__
 
 setup(name='crate-docs-theme',
       version=version,

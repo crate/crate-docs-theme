@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+ - changed package structure to crate.theme.rtd
+
 2014/05/07 0.1.0
 ----------------
 
