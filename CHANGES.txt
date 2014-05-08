@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+ - make urls in version dropdown absolute
+
 2014/05/08 0.2.0
 ----------------
 
