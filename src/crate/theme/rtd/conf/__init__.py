@@ -19,7 +19,7 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
-import crate.rtd_theme
+from crate.theme import rtd as theme
 
 copyright = u'2014, CRATE Technology GmbH'
 
@@ -34,7 +34,7 @@ extensions = ['sphinx.ext.autodoc']
 
 # Configure the theme
 html_theme = 'crate'
-html_theme_path = crate.rtd_theme.get_html_theme_path()
+html_theme_path = theme.get_html_theme_path()
 nitpicky = True
 html_show_sourcelink = False
 html_sidebars = {'**': ['sidebar.html', 'sourcelink.html']}
