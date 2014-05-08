@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+ - fixed crash config
+
 2014/05/08 0.2.1
 ----------------
 

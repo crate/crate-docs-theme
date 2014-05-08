@@ -19,7 +19,7 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
-from crate.rtd_theme.conf import *
+from crate.theme.rtd.conf import *
 
 project = u'Crate Shell'
 html_theme_options.update({
