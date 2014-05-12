@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+ - added conf for java client
+
 2014/05/08 0.2.2
 ----------------
 
