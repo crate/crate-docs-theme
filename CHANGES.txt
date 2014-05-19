@@ -6,6 +6,11 @@ Unreleased
 
  - added conf for crate jdbc driver
 
+2014/05/19 0.2.4
+----------------
+
+ - fix: linebreaks in code blocks
+
 2014/05/12 0.2.3
 ----------------
 
