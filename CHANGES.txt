@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+ - fix: linebreaks in code blocks
+
 2014/05/12 0.2.3
 ----------------
 
