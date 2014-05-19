@@ -131,6 +131,8 @@ pre,
 samp,
 .pre {
   font-family: SourceCodePro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  word-break: normal;
+  word-wrap: normal;
 }
 
 pre {
