@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Crate JDBC Driver'
+project = u'Crate Data JDBC Driver'
 html_theme_options.update({
     'cannonical_url_path': 'docs/projects/crate-jdbc/'
 })

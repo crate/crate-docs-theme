@@ -4,6 +4,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+2014/05/20 0.2.5
+----------------
+
  - added conf for crate jdbc driver
 
 2014/05/19 0.2.4
