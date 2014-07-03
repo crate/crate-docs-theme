@@ -45,3 +45,19 @@ place your rst files into the ``docs/`` folder
 and use the ``build`` task to build the docs with the theme::
 
     bin/grunt build
+
+Distribute
+----------
+
+Change the version number in ``package.json`` and
+``src/crate/theme/rtd/__init__.py``.
+
+Create new section in ``CHANGES.txt`` with version number
+and release date.
+
+Commit to master with message ``prepare release x.x.x``.
+
+Run ``./devtools/crate_tag.sh`` to create a new tag.
+
+
+
