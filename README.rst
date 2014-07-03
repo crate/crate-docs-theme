@@ -18,3 +18,30 @@ or if you want to use a specific configuration::
 
 That's all!
 
+Development
+-----------
+
+The project uses buildout to bootstrap::
+
+    python bootstrap.py
+
+    bin/buildout -N
+
+This will install ``NodeJs`` and the required modules.
+
+There is a watcher that compiles ``.less`` files into ``.css``::
+
+    bin/grunt watch
+
+or compile on demand with the ``recess`` command::
+
+    bin/grunt recess
+
+That will compile the ``.less`` files into
+``src/crate/theme/rtd/crate/static/css/main.css``
+
+In order to build a documentation for testing purposes,
+place your rst files into the ``docs/`` folder
+and use the ``build`` task to build the docs with the theme::
+
+    bin/grunt build
