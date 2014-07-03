@@ -3,6 +3,8 @@ CHANGES for Crate ReadTheDocs Theme
 
 Unreleased
 ==========
+ 
+ - do not break table header lines and code literals in tables
 
 2014/05/20 0.2.5
 ----------------
