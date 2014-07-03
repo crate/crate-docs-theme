@@ -258,7 +258,7 @@ span.highlighted {
   border-collapse: collapse !important;
 }
 
-.table td tt.listeral > pre {
+.table .literal .pre {
   white-space: nowrap;
 }
 

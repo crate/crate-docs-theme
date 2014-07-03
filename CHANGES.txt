@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+ - fixed css selector for code literals in tables
+
 2014/07/03 0.2.6
 ----------------
  
