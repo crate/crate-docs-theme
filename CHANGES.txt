@@ -6,6 +6,8 @@ Unreleased
 
 - added support for tracking via trak.io and mixpanel.com
 
+- upgraded to google universal analytics tracking code
+
 2014/07/03 0.2.7
 ----------------
 
