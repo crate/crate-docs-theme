@@ -4,14 +4,16 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+- added support for tracking via trak.io and mixpanel.com
+
 2014/07/03 0.2.7
 ----------------
- 
+
  - fixed css selector for code literals in tables
 
 2014/07/03 0.2.6
 ----------------
- 
+
  - do not break table header lines and code literals in tables
 
 2014/05/20 0.2.5
