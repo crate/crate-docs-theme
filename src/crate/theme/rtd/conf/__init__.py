@@ -54,5 +54,5 @@ html_theme_options = {
     'cannonical_url_path': '',
 
     # segment.io tracking configuration
-    'tracking_segment_io': 'ldw6qflva3',
+    'tracking_segment_io': 'vd4x4hv637',
 }
