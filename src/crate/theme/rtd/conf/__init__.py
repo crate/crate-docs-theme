@@ -52,4 +52,7 @@ html_theme_options = {
     # The URL path is required because RTD does only allow
     # root as a cannonical url.
     'cannonical_url_path': '',
+
+    # segment.io tracking configuration
+    'tracking_segment_io_id': 'vd4x4hv637',
 }
