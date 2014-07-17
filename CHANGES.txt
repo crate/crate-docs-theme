@@ -4,7 +4,7 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
-- added support for tracking via trak.io and mixpanel.com
+- added support for tracking via segment.io
 
 - upgraded to google universal analytics tracking code
 

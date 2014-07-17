@@ -53,7 +53,6 @@ html_theme_options = {
     # root as a cannonical url.
     'cannonical_url_path': '',
 
-    # Tracking configuration
-    'tracking_mixpanel_id': '8eb6390c386bdfb50121e9d680c3290e',
-    'tracking_trak_io_id': '5fd638e3473d3d1b798cac1ed8fd12beccb0f800',
+    # segment.io tracking configuration
+    'tracking_segment_io': 'ldw6qflva3',
 }
