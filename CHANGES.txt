@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+- load Google font from https or http depending on doc URL
+
 2014/07/28 0.3.0
 ----------------
 
