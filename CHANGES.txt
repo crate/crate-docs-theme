@@ -4,6 +4,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+- fixed internal page links so section headline is visible
+  when selecting from left hand navigation
+
+- decreased font size in version list
+
 2014/07/29 0.3.1
 ----------------
 

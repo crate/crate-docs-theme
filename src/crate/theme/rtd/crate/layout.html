@@ -13,6 +13,7 @@
     '_static/js/jquery-migrate.min.js',
     '_static/js/underscore-1.6.0.min.js',
     '_static/bootstrap/js/bootstrap.min.js',
+    '_static/js/theme.js',
     '_static/doctools.js',
     '_static/searchtools.js',
  ]
@@ -107,16 +108,4 @@ ga('send', 'pageview');
 {% endif %}
 </script>
 
-<script type="text/javascript">
-  $(function() {
-    $('table').attr("border","0").addClass('table');
-    $('.search').addClass('list-unstyled');
-    $('.toctree ul').addClass('nav');
-    $('.localtoc ul').addClass('nav');
-    $('body').scrollspy({
-     'target': '.toctree',
-     'offset': 51
-    });
-  });
-</script>
 {%- endblock %}
