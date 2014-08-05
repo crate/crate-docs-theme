@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+- added segment.io analytics
+
 2014/07/31 0.3.2
 ----------------
 
