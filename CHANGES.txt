@@ -4,6 +4,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+2014/08/07 0.3.4
+----------------
+
 - hardcoded canonical url to make documentation public on
   read the docs
 
