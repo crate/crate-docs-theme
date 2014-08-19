@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+- added styles for 'seealso' and 'todo' colour boxes
+
 - added docutils.conf to specify max length of field names
 
 2014/08/07 0.3.4
