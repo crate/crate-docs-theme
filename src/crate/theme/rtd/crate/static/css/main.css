@@ -179,41 +179,72 @@ footer {
 
 /* Notes */
 
+.todo,
+.seealso,
 .note,
 .warning {
   margin: 0 0 20px;
+  color: #000000;
 }
 
+.todo ul,
+.seealso ul,
+.note ul,
+.warning ul,
+.todo ol,
+.seealso ol,
+.note ol,
+.warning ol {
+  padding: 10px 20px 10px 40px;
+}
+
+.todo p,
+.seealso p,
 .note p,
 .warning p {
   padding: 10px 20px;
   margin: 0;
 }
 
+.todo .admonition-title,
+.seealso .admonition-title,
 .note .admonition-title,
 .warning .admonition-title {
   padding: 5px 20px;
   font-weight: bold;
+  color: #000000;
 }
 
 .note {
-  color: #000000;
   background-color: #FFD6A1;
 }
 
 .note .admonition-title {
-  color: #000000;
   background-color: #ff9000;
 }
 
 .warning {
-  color: #000000;
   background-color: #E6AEAE;
 }
 
 .warning .admonition-title {
-  color: #000000;
   background-color: #E66363;
+}
+
+.todo {
+  background-color: #FBD0D3;
+}
+
+.todo .admonition-title {
+  background-color: #EA6573;
+}
+
+.seealso {
+  background-color: #D4E3E9;
+}
+
+.seealso .admonition-title {
+  background-color: #84A8B7;
 }
 
 /* Search highlight */

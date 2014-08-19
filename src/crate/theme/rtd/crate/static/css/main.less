@@ -161,41 +161,52 @@ footer {
 
 /* Notes */
 
+.todo,
+.seealso,
 .note,
 .warning {
+  color: #000000;
   margin: 0 0 20px;
-}
-
-.note p,
-.warning p {
-  padding: 10px 20px;
-  margin: 0;
-}
-
-.note .admonition-title,
-.warning .admonition-title {
-  padding: 5px 20px;
-  font-weight: bold;
+  ul, ol {
+    padding: 10px 20px 10px 40px;
+  }
+  p {
+    margin: 0;
+    padding: 10px 20px;
+  }
+  .admonition-title {
+    color: #000000;
+    padding: 5px 20px;
+    font-weight: bold;
+  }
 }
 
 .note {
-  color: #000000;
   background-color: #FFD6A1;
-}
-
-.note .admonition-title {
-  color: #000000;
-  background-color: #ff9000;
+  .admonition-title {
+    background-color: #ff9000;
+  }
 }
 
 .warning {
-  color: #000000;
   background-color: #E6AEAE;
+  .admonition-title {
+    background-color: #E66363;
+  }
 }
 
-.warning .admonition-title {
-  color: #000000;
-  background-color: #E66363;
+.todo {
+  background-color: #FBD0D3;
+  .admonition-title {
+    background-color: #EA6573;
+  }
+}
+
+.seealso {
+  background-color: #D4E3E9;
+  .admonition-title {
+    background-color: #84A8B7;
+  }
 }
 
 /* Search highlight */
