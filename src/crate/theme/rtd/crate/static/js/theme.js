@@ -22,7 +22,7 @@ $(function() {
 
   $('body').scrollspy({
     'target': '.toctree',
-    'offset': 51
+    'offset': 101
   });
 
   (function(){

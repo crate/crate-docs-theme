@@ -16,6 +16,7 @@
 /* General */
 
 body {
+  height: 100%;
   padding-top: 50px;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;

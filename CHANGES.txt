@@ -4,6 +4,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+- make navigation highlightling follow page scrolling correctly
+
 2014/08/19 0.3.5
 ----------------
 
