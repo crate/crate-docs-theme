@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Crate Data'
+project = u'Crate'
 html_theme_options.update({
     'cannonical_url_path': 'docs/'
 })
