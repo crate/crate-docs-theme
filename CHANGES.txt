@@ -1,8 +1,12 @@
+===================================
 CHANGES for Crate ReadTheDocs Theme
-====================================
+===================================
 
 Unreleased
 ==========
+
+- renamed 'Crate Data' to 'Crate'
+  and 'Crate Data JDBC Driver' to 'Crate JDBC Driver'
 
 2014/09/05 0.3.6
 ----------------
