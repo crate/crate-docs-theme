@@ -23,5 +23,5 @@ from crate.theme.rtd.conf import *
 
 project = u'Crate Shell'
 html_theme_options.update({
-    'cannonical_url_path': 'docs/projects/crash/'
+    'canonical_url_path': 'docs/projects/crash/'
 })
