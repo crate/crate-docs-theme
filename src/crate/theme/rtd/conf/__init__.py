@@ -55,4 +55,7 @@ html_theme_options = {
 
     # segment.io tracking configuration
     'tracking_segment_io_id': 'vd4x4hv637',
+
+    # LeadLander tracking code
+    'tracking_leadlander_id': '27658',
 }
