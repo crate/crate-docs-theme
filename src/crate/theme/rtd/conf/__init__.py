@@ -50,9 +50,12 @@ html_theme_options = {
     'globaltoc_includehidden': 'true',
 
     # The URL path is required because RTD does only allow
-    # root as a cannonical url.
-    'cannonical_url_path': '',
+    # root as a canonical url.
+    'canonical_url_path': '',
 
     # segment.io tracking configuration
     'tracking_segment_io_id': 'vd4x4hv637',
+
+    # LeadLander tracking code
+    'tracking_leadlander_id': '27658',
 }

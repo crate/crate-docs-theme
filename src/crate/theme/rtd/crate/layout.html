@@ -36,7 +36,7 @@
 Always link to the latest version, as canonical.
 http://docs.readthedocs.org/en/latest/canonical.html
 -->
-<link rel="canonical" href="https://crate.io/{{ theme_cannonical_url_path }}stable/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
+<link rel="canonical" href="https://crate.io/{{ theme_canonical_url_path }}stable/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
 {% endif %}
 {% endblock %}
 
@@ -116,4 +116,16 @@ var a=document.createElement(s); a.type="text/javascript", a.id='crate-utils', a
 var n=document.getElementsByTagName(s)[0]; n.parentNode.insertBefore(a,n);
 })(window, document, 'script', '//cdn.crate.io/libs/crate/utils.js');
 </script>
+
+<!-- LeadLander -->
+<script type="text/javascript" language="javascript">
+  var sf14gv = {{ theme_tracking_leadlander_id }};
+  (function() {
+  var sf14g = document.createElement('script'); sf14g.type = 'text/javascript'; sf14g.async = true;
+  sf14g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 't.sf14g.com/sf14g.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sf14g, s);
+  })();
+</script>
+<!-- @end LeadLander -->
+
 {%- endblock %}
