@@ -5,6 +5,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ==========
 
+- added support for LeadLander analytics
+
 2014/12/03 0.3.8
 ----------------
 
