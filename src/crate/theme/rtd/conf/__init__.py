@@ -21,7 +21,7 @@
 
 from crate.theme import rtd as theme
 
-copyright = u'2014, CRATE Technology GmbH'
+copyright = u'2015, CRATE Technology GmbH'
 
 # The suffix of source filenames.
 source_suffix = '.txt'
@@ -45,7 +45,7 @@ html_theme_options = {
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    'navbar_fixed_top': 'true',
+    'navbar_fixed_top': 'false',
 
     'globaltoc_includehidden': 'true',
 
@@ -55,7 +55,4 @@ html_theme_options = {
 
     # segment.io tracking configuration
     'tracking_segment_io_id': 'vd4x4hv637',
-
-    # LeadLander tracking code
-    'tracking_leadlander_id': '27658',
 }
