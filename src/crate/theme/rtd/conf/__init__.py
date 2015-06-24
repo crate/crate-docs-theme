@@ -21,7 +21,7 @@
 
 from crate.theme import rtd as theme
 
-copyright = u'2014, CRATE Technology GmbH'
+copyright = u'2015, CRATE Technology GmbH'
 
 # The suffix of source filenames.
 source_suffix = '.txt'

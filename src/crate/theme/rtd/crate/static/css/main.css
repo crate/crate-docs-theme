@@ -58,17 +58,17 @@ body {
   margin: 20px 0 40px;
 }
 
-li.toctree-l1 {
+/*
+li.toctree-l1{
   margin: 4px 0 !important;
 }
-
-li.toctree-l2 {
+li.toctree-l2{
   margin: 4px 0 !important;
 }
-
-li.toctree-l3 {
+li.toctree-l3{
   margin: 4px 0 !important;
 }
+*/
 
 /* Headlines */
 
@@ -444,4 +444,308 @@ blockquote {
 #sidebar-column .toctree li.current > ul,
 #sidebar-column .toctree ul ul li.active ul {
   display: block !important;
+}
+
+/* ------------------------------------- */
+
+/* ------------   Redesign ------------- */
+
+/* ------------------------------------- */
+
+/* Blender font */
+
+@font-face {
+  font-family: BlenderPro;
+  font-weight: normal;
+  src: url('../fonts/BlenderPro/BlenderPro-ThinWeb.eot');
+  src: url('../fonts/BlenderPro/BlenderPro-ThinWeb.eot?#iefix') format('embedded-opentype'), url('../fonts/BlenderPro/BlenderPro-ThinWeb.woff') format('woff'), url('../fonts/BlenderPro/BlenderPro-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: BlenderPro;
+  font-weight: bold;
+  src: url('../fonts/BlenderPro/BlenderPro-BoldWeb.eot');
+  src: url('../fonts/BlenderPro/BlenderPro-BoldWeb.eot?#iefix') format('embedded-opentype'), url('../fonts/BlenderPro/BlenderPro-BoldWeb.woff') format('woff'), url('../fonts/BlenderPro/BlenderPro-Bold.ttf') format('truetype');
+}
+
+.blender {
+  font-family: BlenderPro;
+}
+
+/* General */
+
+body {
+  padding-top: 120px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+a,
+a:visited {
+  color: #30a6c5;
+}
+
+a:hover,
+a:focus {
+  color: #30a6c5;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+a.headerlink {
+  font-weight: normal;
+  color: #e8e8e8;
+}
+
+#sidebar-column li.toctree-l1,
+#sidebar-column li.toctree-l2,
+#sidebar-column li.toctree-l3 {
+  margin: 10px 0;
+}
+
+#sidebar-column .toctree li > a:hover {
+  color: #333333;
+  background-color: transparent;
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: black;
+}
+
+#sidebar-column ul {
+  list-style-type: none;
+}
+
+h1 {
+  padding-bottom: 32px;
+  font-family: Blenderpro, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-family: Blenderpro, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+/* Notes & Warnings */
+
+.todo .admonition-title,
+.seealso .admonition-title,
+.note .admonition-title,
+.warning .admonition-title {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.warning {
+  background-color: #ffcdc9;
+  border-left: 5px solid #ff5b4d;
+}
+
+.note {
+  background-color: #ccf2fc;
+  border-left: 5px solid #55d4f5;
+}
+
+.seealso,
+.todo {
+  background-color: #e7e7e7;
+  border-left: 5px solid #888888;
+}
+
+.note .admonition-title {
+  padding-bottom: 0;
+  background-color: #ccf2fc;
+}
+
+.warning .admonition-title {
+  padding-bottom: 0;
+  background-color: #ffcdc9;
+}
+
+.seealso .admonition-title,
+.todo .admonition-title {
+  padding-bottom: 0;
+  background-color: #e7e7e7;
+}
+
+/* Navbar */
+
+a#crate-logo {
+  display: inline-block;
+  width: 165px;
+  height: 36px;
+  margin: 11px 0 0;
+  background: url("../img/logo_2x.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background-size: 165px 36px;
+}
+
+a#crate-logo:hover {
+  background: url("../img/logo_2x.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background-size: 165px 36px;
+}
+
+.navbar-inverse {
+  height: 76px;
+  background: #ffffff;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#navbar-search-input {
+  width: 158px;
+  margin-right: -4px;
+  border-right: 0 none;
+  border-radius: 0;
+  transition: width 0.5s;
+}
+
+#navbar-search-submit {
+  background-image: none;
+  border-left: 1px solid #CCC;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#navbar .container {
+  padding-top: 10px;
+  padding-bottom: 16px;
+  border-bottom: 44px solid #55d4f5;
+}
+
+/* Wrapper */
+
+.container {
+  margin-left: auto;
+}
+
+#content-wrap {
+  background-color: #FFFFFF;
+}
+
+#sidebar-column {
+  top: 0;
+  left: initial;
+  height: 100%;
+  padding: 130px 0 0 0;
+  background-color: #ffffff;
+  transition: width 0.5s;
+}
+
+@media (max-width: 992px) {
+  #sidebar-column {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #sidebar-column {
+    position: fixed;
+    top: 0;
+    width: 258px;
+    overflow-y: auto;
+  }
+  #content-column {
+    width: 712px;
+    margin-left: 258px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+    padding-right: 64px;
+    padding-left: 64px;
+  }
+  #page-wrap > .container {
+    border-right: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+  }
+}
+
+/* Spanky fixes */
+
+.navbar-inverse li a {
+  text-transform: none;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  text-shadow: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #000;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #000;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+a#crate-logo {
+  margin-left: 16px;
+}
+
+.navbar-form {
+  margin-right: 16px;
+}
+
+#navbar-search-input {
+  width: 170px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #777777;
+  background-color: transparent;
+}
+
+.footer .container {
+  padding-top: 32px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.footer {
+  position: relative;
+  z-index: 0;
+  padding-bottom: 32px;
+  font-size: 16px;
+  color: #000;
+}
+
+.footer h4 {
+  font-size: 16px;
+}
+
+.footer a {
+  color: #000;
 }
