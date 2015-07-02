@@ -15,6 +15,15 @@
       <nav class="collapse navbar-collapse nav-collapse" role="navigation">
         <ul class="nav navbar-nav navbar-right">
 
+          <li><a href="https://crate.io/overview.html">
+              Overview</a></li>
+          <li><a href="https://crate.io/install/index.html">
+              Install</a></li>
+          <li><a href="https://crate.io/docs/index.html">
+              <strong>Documentation</strong></a></li>
+          <li><a href="/blog.html">
+              Blog</a></li>
+
           {% include "navbarsearchbox.html" %}
 
           {%- if current_version %}
@@ -34,6 +43,18 @@
           {%- endif %}
 
         </ul>
+      </nav>
+    </div>
+    <div class="container subnav">
+      <nav class="breadcrumb-container">
+        <ol class="nav navbar-nav navbar-subnav">
+          <li class=""><a href="https://crate.io/docs/">Overview</a></li>
+          <li class=""><a href="https://crate.io/install/">Installation</a></li>
+          <li class=""><a href="https://crate.io/docs/stable/">Server</a></li>
+          <li class=""><a href="https://crate.io/docs/clients/">Clients</a></li>
+          <li class=""><a href="https://crate.io/docs/faq/">FAQ</a></li>
+          <li class=""><a href="https://github.com/crate/crate"><i class="fa fa-github"></i> Source</a></li>
+        </ol>
       </nav>
     </div>
   </div>
