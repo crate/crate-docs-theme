@@ -50,6 +50,7 @@ body {
 }
 
 #content-column {
+  margin-left: 278px;
   transition: width 0.5s;
 }
 
@@ -358,7 +359,8 @@ blockquote {
 
 @media (min-width: 992px) {
   #sidebar-column {
-    top: 0;
+    position: fixed;
+    top: 121px;
     overflow-y: auto;
   }
 }
