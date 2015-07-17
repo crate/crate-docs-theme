@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2015/07/17 0.4.1
+----------------
+
 - fixed broken links in page header
 
 - removed support for Google Analytics tracking
