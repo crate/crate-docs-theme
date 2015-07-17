@@ -44,7 +44,7 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  padding: 51px 0 0 0;
+  padding: 17px 0 0 0;
   background-color: #D4D8DB;
   transition: width 0.5s;
 }
@@ -712,6 +712,13 @@ a#crate-logo {
   background-color: transparent;
 }
 
+.navbar-subnav.navbar-nav > li > a:hover,
+.navbar-subnav.navbar-nav > li > a:focus {
+  color: #000;
+  background-color: transparent;
+  opacity: 0.5;
+}
+
 .footer .container {
   padding-top: 32px;
   border-top: 1px solid #e7e7e7;
@@ -742,7 +749,7 @@ a#crate-logo {
 }
 
 .navbar-subnav > li {
-  margin-right: 32px;
+  margin-right: 10px;
 }
 
 .navbar-nav > li > a {
@@ -770,4 +777,12 @@ a#crate-logo {
 
 .fa-github::before {
   content: "";
+}
+
+html body div#page-wrap div#navbar.navbar.navbar-inverse.navbar-default div.container nav.collapse.navbar-collapse.nav-collapse ul.nav.navbar-nav.navbar-right li {
+  padding-top: 9px;
+}
+
+.footer .table > tbody > tr > td {
+  padding: 7px;
 }
