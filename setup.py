@@ -1,6 +1,6 @@
 # -*- coding: utf-8; -*-
 #
-# Licensed to CRATE Technology GmbH ("Crate") under one or more contributor
+# Licensed to Crate (https://crate.io) under one or more contributor
 # license agreements.  See the NOTICE file distributed with this work for
 # additional information regarding copyright ownership.  Crate licenses
 # this file to you under the Apache License, Version 2.0 (the "License");
@@ -39,7 +39,7 @@ setup(name='crate-docs-theme',
           "Programming Language :: Python :: 2",
           "Topic :: Software Development :: Documentation",
       ],
-      author='CRATE Technology GmbH',
+      author='Crate.IO GmbH',
       author_email='office@crate.io',
       url='https://github.com/crate/crate-docs-theme',
       keywords='crate docs sphinx readthedocs',

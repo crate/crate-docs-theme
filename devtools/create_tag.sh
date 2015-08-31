@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-# Licensed to CRATE Technology GmbH ("Crate") under one or more contributor
+# Licensed to Crate (https://crate.io) under one or more contributor
 # license agreements.  See the NOTICE file distributed with this work for
 # additional information regarding copyright ownership.  Crate licenses
 # this file to you under the Apache License, Version 2.0 (the "License");
@@ -19,6 +18,7 @@
 # However, if you have executed another commercial license agreement
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
+
 
 # Info: Be aware from where you are invoking this script due to relative paths.
 #       For example, 'gradlew' has to be in the same directory as where you are
