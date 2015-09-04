@@ -5,6 +5,16 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- New section Use Cases
+
+- updated Segment analytics snippet
+
+- send events separate ID with extended attributes
+
+- IP is now owned by Crate.IO GmbH
+
+- signup for newsletter added
+
 2015/07/17 0.4.1
 ----------------
 

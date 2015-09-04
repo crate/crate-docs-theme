@@ -78,10 +78,13 @@ http://docs.readthedocs.org/en/latest/canonical.html
 <!-- Segment -->
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on","setAnonymousId"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
-    analytics.load("{{ theme_tracking_segment_io_id }}");
+    analytics.load("{{ theme_tracking_segment_id }}");
     analytics.setAnonymousId($.cookie('uid'));
     analytics.page();
-    analytics.track('visited_section_docs');
+    analytics.track('visited_section_docs', {
+      project: '{{ theme_tracking_project }}',
+      version: '{{ current_version }}'
+    });
   }}();
 </script>
 <!-- @end Segment -->

@@ -54,6 +54,7 @@ html_theme_options = {
     # root as a canonical url.
     'canonical_url_path': '',
 
-    # segment.io tracking configuration
-    'tracking_segment_io_id': 'vd4x4hv637',
+    # segment analytics configuration
+    'tracking_segment_id': 'FToR4cE5lXyQziQirvt0kSnFQj0rAgu9',
+    'tracking_project': '',
 }

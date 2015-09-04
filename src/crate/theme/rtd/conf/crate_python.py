@@ -23,5 +23,6 @@ from crate.theme.rtd.conf import *
 
 project = u'Crate Python'
 html_theme_options.update({
-    'canonical_url_path': 'docs/projects/crate-python/'
+    'canonical_url_path': 'docs/projects/crate-python/',
+    'tracking_project': 'crate-python',
 })
