@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2015/09/05 0.4.2
+----------------
+
 - New section Use Cases
 
 - updated Segment analytics snippet
