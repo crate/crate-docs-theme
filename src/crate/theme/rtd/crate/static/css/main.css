@@ -336,10 +336,6 @@ blockquote {
   transition: width 0.5s;
 }
 
-#navbar-search-input:focus {
-  width: 300px;
-}
-
 #navbar-search-submit {
   border-left: 0 none;
   border-radius: 0 4px 4px 0;
