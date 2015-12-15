@@ -5,6 +5,13 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2015/12/15 0.4.3
+----------------
+
+- Removed two links in the top nav as quick fix for new website.
+
+- Fixed the links in the footer section for the new urls.
+
 2015/09/05 0.4.2
 ----------------
 
