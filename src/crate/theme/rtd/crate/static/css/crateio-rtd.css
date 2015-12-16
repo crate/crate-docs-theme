@@ -1,0 +1,26 @@
+.wrapper-content-right .section {
+	margin-top: 32px;
+}
+
+.wrapper-content-right > .section {
+	margin-top: 0px;
+}
+
+.toctree {
+    padding-left: 0;
+    list-style: none;
+}
+
+.toctree li {
+	list-style: none;
+	margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+a.current, a.current-active {
+	font-weight: bold;
+}
+
+.highlight {
+	font-size: 14px;
+}

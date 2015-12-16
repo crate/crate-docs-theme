@@ -1,22 +1,15 @@
 {% extends "base.html" %}
 
 {% set css_files = [
-    '_static/bootstrap/css/bootstrap.min.css',
-    '_static/bootstrap/css/bootstrap-theme.min.css',
-    '_static/font-awesome/css/font-awesome.min.css',
-    '_static/css/main.css',
+    '_static/css/normalize.css',
+    '_static/css/webflow.css',
+    '_static/css/crateio.css',
+    '_static/css/crateio-rtd.css',
   ]
 %}
 
 {% set script_files = [
-    '_static/js/jquery-1.11.0.min.js',
-    '_static/js/jquery-migrate.min.js',
-    '_static/js/underscore-1.6.0.min.js',
-    '_static/bootstrap/js/bootstrap.min.js',
-    '_static/js/jquery.cookie.js',
-    '_static/js/theme.js',
-    '_static/doctools.js',
-    '_static/searchtools.js',
+    '_static/js/modernizr.js',
  ]
 %}
 
@@ -47,30 +40,23 @@ http://docs.readthedocs.org/en/latest/canonical.html
 {% block sidebarsourcelink %}{% endblock %}
 
 {%- block content %}
-<div id="page-wrap">
   {% include "navbar.html" %}
 
-  <div class="container">
-    <div class="row" id="content-wrap">
+  <div class="w-section section">
+    <div class="w-container container">
+      <div class="w-hidden-medium w-hidden-small w-hidden-tiny wrapper-navleft">
       {%- block sidebar1 %}
-      <div class="col-md-3" id="sidebar-column">
         {%- for sidebartemplate in sidebars %}
           {%- include sidebartemplate %}
         {%- endfor %}
-      </div>
       {% endblock %}
-      <div class="col-md-9" id="content-column">
-        <div>
-        {% block body %}{% endblock %}
-        </div>
-
       </div>
-      {% block sidebar2 %}
-      {% endblock %}
+      <div class="wrapper-content-right">
+      {% block body %}{% endblock %}
+      </div>
     </div>
   </div>
   {%- include "footer.html" %}
-</div>
 
 {%- endblock %}
 
