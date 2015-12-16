@@ -47,6 +47,8 @@ Before creating a new distribution, a new version and tag should be created:
  - Create a tag using the ``create_tag.sh`` script
    (run ``./devtools/create_tag.sh``).
 
+ - Build and upload to PyPi: ``bin/py setup.py sdist upload``
+
 
 .. _Sphinx: http://sphinx-doc.org/
 
