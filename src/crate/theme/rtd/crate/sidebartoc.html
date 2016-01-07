@@ -1,47 +1,71 @@
 <ul class="toctree nav nav-list">
-
-
   <li class="navleft-item"><a href="/docs/introduction/">Introduction</a></li>
   <li class="navleft-item"><a href="/docs/getting-started/">Getting Started</a></li>
   <li class="navleft-item"><a href="/docs/performance/">Performance</a></li>
   <li class="navleft-item"><a href="/docs/search/">Search</a></li>
   <li class="navleft-item"><a href="https://github.com/crate/crate-sample-apps">Sample Applications</a></li>
-  <li class="navleft-item"><a href="/docs/reference/">Reference</a>
+  <li class="navleft-item"><a href="/docs/reference/">Reference</a></li>
+  {% if project == 'Crate' %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="current"><a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">{{ project|e }}</a></li>
+    {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+  </ul>
+  {% else %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="navleft-item"><a href="#">Crate</a></li>
+  </ul>
+  {% endif %}
+  {% if project == 'Crate Shell' %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="current"><a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">{{ project|e }}</a></li>
+    {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+  </ul>
+  {% else %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="navleft-item"><a href="#">Crate Shell</a></li>
+  </ul>
+  {% endif %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="navleft-item"><span>Clients</span></li>
+  </ul>
+  {% if project == 'Crate Python' %}
+  <ul class="w-list-unstyled navleft-list-level">
     <ul class="w-list-unstyled navleft-list-level">
-        <ul class="w-list-unstyled navleft-list-level">
-          <li class="current"><a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">{{ project|e }}</a></li>
-          {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-        </ul>
-      </li>
-      <li class="navleft-item"><a href="#">Crash</a>
-        <ul class="w-list-unstyled navleft-list-level">
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-        </ul>
-      </li>
-      <li class="navleft-item"><span>Clients</span>
-        <ul class="w-list-unstyled navleft-list-level">
-          <li class="navleft-item"><a href="#">Java</a></li>
-          <li class="navleft-item"><a href="#">Python</a></li>
-          <li class="navleft-item"><a href="#">PHP</a></li>
-          <li class="navleft-item"><a href="#">REST API</a></li>
-        </ul>
-      </li>
-      <li class="navleft-item">
-        <span>Item</span>
-        <ul class="w-list-unstyled navleft-list-level">
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-          <li class="navleft-item"><a href="#">Sub Item</a></li>
-        </ul>
-      </li>
+      <li class="current"><a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">{{ project|e }}</a></li>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </ul>
-  </li>
+  </ul>
+  {% else %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="navleft-item"><a href="#">Python</a></li>
+  </ul>
+  {% endif %}
+  {% if project == 'Crate Java Client' %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <ul class="w-list-unstyled navleft-list-level">
+      <li class="current"><a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">{{ project|e }}</a></li>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </ul>
+  </ul>
+  {% else %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="navleft-item"><a href="#">Java</a></li>
+  </ul>
+  {% endif %}
+  {% if project == 'Crate PHP' %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <ul class="w-list-unstyled navleft-list-level">
+      <li class="current"><a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">{{ project|e }}</a></li>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </ul>
+  </ul>
+  {% else %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="navleft-item"><a href="#">PHP</a></li>
+  </ul>
+  {% endif %}
+  <ul class="w-list-unstyled navleft-list-level">
+    <li class="navleft-item"><a href="#">REST API</a></li>
+  </ul>
   <li class="navleft-item"><a href="/docs/support/">Support</a></li>
-
-
 </ul>
