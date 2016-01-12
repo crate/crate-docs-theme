@@ -52,6 +52,18 @@
     <li class="navleft-item"><a href="#">Java</a></li>
   </ul>
   {% endif %}
+    {% if project == 'Crate JDBC Client' %}
+    <ul class="w-list-unstyled navleft-list-level">
+      <ul class="w-list-unstyled navleft-list-level">
+        <li class="current"><a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">{{ project|e }}</a></li>
+        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      </ul>
+    </ul>
+    {% else %}
+    <ul class="w-list-unstyled navleft-list-level">
+      <li class="navleft-item"><a href="#">JDBC</a></li>
+    </ul>
+    {% endif %}
   {% if project == 'Crate PHP' %}
   <ul class="w-list-unstyled navleft-list-level">
     <ul class="w-list-unstyled navleft-list-level">
