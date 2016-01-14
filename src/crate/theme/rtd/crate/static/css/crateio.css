@@ -72,6 +72,9 @@ a:hover {
 ul {
   margin-top: 0px;
   margin-bottom: 10px;
+}
+
+.wrapper-navleft ul {
   padding-left: 0em;
 }
 
