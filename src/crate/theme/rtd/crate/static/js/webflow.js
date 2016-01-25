@@ -547,11 +547,11 @@
 
 	Webflow.define('dropdown', module.exports = function($, _) {
 	  var api = {};
-	  var tram = $.tram;
 	  var $doc = $(document);
 	  var $dropdowns;
 	  var designer;
 	  var inApp = Webflow.env();
+	  var touch = Webflow.env.touch;
 	  var namespace = '.w-dropdown';
 	  var stateOpen = 'w--open';
 	  var closeEvent = 'w-close' + namespace;
@@ -584,6 +584,7 @@
 	    data.links = data.list.children('.w-dropdown-link');
 	    data.outside = outside(data);
 	    data.complete = complete(data);
+	    data.leave = leave(data);
 
 	    // Remove old events
 	    $el.off(namespace);
@@ -601,6 +602,9 @@
 	      $el.on('setting' + namespace, handler(data));
 	    } else {
 	      data.toggle.on('tap' + namespace, toggle(data));
+	      if (data.config.hover) {
+	        data.toggle.on('mouseenter' + namespace, enter(data));
+	      }
 	      $el.on(closeEvent, handler(data));
 	      // Close in preview mode
 	      inApp && close(data);
@@ -609,8 +613,8 @@
 
 	  function configure(data) {
 	    data.config = {
-	      hover: +data.el.attr('data-hover'),
-	      delay: +data.el.attr('data-delay') || 0
+	      hover: Boolean(data.el.attr('data-hover')) && !touch,
+	      delay: Number(data.el.attr('data-delay')) || 0
 	    };
 	  }
 
@@ -632,12 +636,12 @@
 	  }
 
 	  function toggle(data) {
-	    return _.debounce(function(evt) {
+	    return _.debounce(function() {
 	      data.open ? close(data) : open(data);
 	    });
 	  }
 
-	  function open(data, immediate) {
+	  function open(data) {
 	    if (data.open) return;
 	    closeOthers(data);
 	    data.open = true;
@@ -648,6 +652,7 @@
 
 	    // Listen for tap outside events
 	    if (!designer) $doc.on('tap' + namespace, data.outside);
+	    if (data.hovering) data.el.on('mouseleave' + namespace, data.leave);
 
 	    // Clear previous delay
 	    window.clearTimeout(data.delayId);
@@ -655,12 +660,17 @@
 
 	  function close(data, immediate) {
 	    if (!data.open) return;
+
+	    // Do not close hover-based menus if currently hovering
+	    if (data.config.hover && data.hovering) return;
+
 	    data.open = false;
 	    var config = data.config;
 	    ix.outro(0, data.el[0]);
 
 	    // Stop listening for tap outside events
 	    $doc.off('tap' + namespace, data.outside);
+	    data.el.off('mouseleave' + namespace, data.leave);
 
 	    // Clear previous delay
 	    window.clearTimeout(data.delayId);
@@ -700,6 +710,20 @@
 	    return function() {
 	      data.list.removeClass(stateOpen);
 	      data.toggle.removeClass(stateOpen);
+	    };
+	  }
+
+	  function enter(data) {
+	    return function() {
+	      data.hovering = true;
+	      open(data);
+	    };
+	  }
+
+	  function leave(data) {
+	    return function() {
+	      data.hovering = false;
+	      close(data);
 	    };
 	  }
 
