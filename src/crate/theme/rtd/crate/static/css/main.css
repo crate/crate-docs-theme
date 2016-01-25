@@ -59,13 +59,13 @@ body {
 
 /*
 li.toctree-l1{
-  margin: 4px 0 !important;
+margin: 4px 0 !important;
 }
 li.toctree-l2{
-  margin: 4px 0 !important;
+margin: 4px 0 !important;
 }
 li.toctree-l3{
-  margin: 4px 0 !important;
+margin: 4px 0 !important;
 }
 */
 
@@ -94,9 +94,19 @@ h2,
 }
 
 h3,
-.h3 {
+.h3,
+dt {
   font-size: 1.6em;
   font-weight: normal;
+}
+
+h3 code,
+.h3 code,
+dt code {
+  font-family: inherit;
+  font-weight: 700;
+  color: black;
+  background: none;
 }
 
 h4,

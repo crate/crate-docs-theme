@@ -22,6 +22,8 @@
 from crate.theme.rtd.conf import *
 
 project = u'Crate Java Client'
+primary_domain = 'Crate.Java'
+
 html_theme_options.update({
     'canonical_url_path': 'docs/projects/crate-java/',
     'tracking_project': 'crate-java',
