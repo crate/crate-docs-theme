@@ -46,13 +46,13 @@ body {
 }
 /*
 li.toctree-l1{
-  margin: 4px 0 !important;
+margin: 4px 0 !important;
 }
 li.toctree-l2{
-  margin: 4px 0 !important;
+margin: 4px 0 !important;
 }
 li.toctree-l3{
-  margin: 4px 0 !important;
+margin: 4px 0 !important;
 }
 */
 /* Headlines */
@@ -77,9 +77,15 @@ h2, .h2 {
   font-weight: normal;
 }
 
-h3, .h3 {
+h3, .h3, dt {
   font-size: 1.6em;
   font-weight: normal;
+  code {
+    font-family: inherit;
+    background: none;
+    color: black;
+    font-weight: 700;
+  }
 }
 
 h4, .h4 {
@@ -409,8 +415,8 @@ blockquote {
   font-family: BlenderPro;
   src: url('../fonts/BlenderPro/BlenderPro-ThinWeb.eot');
   src: url('../fonts/BlenderPro/BlenderPro-ThinWeb.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/BlenderPro/BlenderPro-ThinWeb.woff') format('woff'),
-    url('../fonts/BlenderPro/BlenderPro-Thin.ttf') format('truetype');
+  url('../fonts/BlenderPro/BlenderPro-ThinWeb.woff') format('woff'),
+  url('../fonts/BlenderPro/BlenderPro-Thin.ttf') format('truetype');
   font-weight: normal;
   /*font-weight: 300;*/
 }
@@ -419,14 +425,14 @@ blockquote {
   font-family: BlenderPro;
   src: url('../fonts/BlenderPro/BlenderPro-BoldWeb.eot');
   src: url('../fonts/BlenderPro/BlenderPro-BoldWeb.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/BlenderPro/BlenderPro-BoldWeb.woff') format('woff'),
-    url('../fonts/BlenderPro/BlenderPro-Bold.ttf') format('truetype');
+  url('../fonts/BlenderPro/BlenderPro-BoldWeb.woff') format('woff'),
+  url('../fonts/BlenderPro/BlenderPro-Bold.ttf') format('truetype');
   font-weight: bold;
   /*font-weight: 800;*/
 }
 
 .blender {
-    font-family: BlenderPro;
+  font-family: BlenderPro;
 }
 
 /* General */
@@ -569,7 +575,7 @@ a#crate-logo:hover {
   background-image: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  
+
 }
 
 #navbar .container{
@@ -615,7 +621,7 @@ a#crate-logo:hover {
     padding-left: 64px;
     padding-right: 64px;
   }
-  
+
   #page-wrap > .container{
     border-right: 1px solid #e7e7e7;
     border-left: 1px solid #e7e7e7;
@@ -624,19 +630,19 @@ a#crate-logo:hover {
 
 /* Spanky fixes */
 .navbar-inverse li a {
-    text-transform: none;
+  text-transform: none;
 }
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
-    text-shadow: none;
+  text-shadow: none;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #000;
+  color: #000;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #000;
+  color: #000;
 }
 
 body {
@@ -662,9 +668,9 @@ a#crate-logo {
 }
 
 .navbar-subnav.navbar-nav > li > a:hover, .navbar-subnav.navbar-nav > li > a:focus {
-    background-color: transparent;
-    opacity: 0.5;
-    color: #000;
+  background-color: transparent;
+  opacity: 0.5;
+  color: #000;
 }
 
 .footer .container {
@@ -675,17 +681,17 @@ a#crate-logo {
 .footer {
   padding-bottom: 32px;
   position: relative;
-  z-index: 0;  
+  z-index: 0;
   font-size: 16px;
   color: #000;
-}  
+}
 
 .footer h4 {
   font-size: 16px;
 }
 
 .footer a {
-  color: #000;  
+  color: #000;
 }
 
 #navbar .subnav {
@@ -697,7 +703,7 @@ a#crate-logo {
 }
 
 .navbar-subnav > li {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .navbar-nav > li > a {
@@ -706,25 +712,25 @@ a#crate-logo {
 }
 
 .fa {
-    -moz-osx-font-smoothing: grayscale;
-    display: inline-block;
-    font-family: FontAwesome;
-    font-feature-settings: normal;
-    font-kerning: auto;
-    font-language-override: normal;
-    font-size: inherit;
-    font-size-adjust: none;
-    font-stretch: normal;
-    font-style: normal;
-    font-synthesis: weight style;
-    font-variant: normal;
-    font-weight: normal;
-    line-height: 1;
-    text-rendering: auto;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-language-override: normal;
+  font-size: inherit;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: auto;
 }
 
 .fa-github::before {
-    content: "";
+  content: "";
 }
 
 html body div#page-wrap div#navbar.navbar.navbar-inverse.navbar-default div.container nav.collapse.navbar-collapse.nav-collapse ul.nav.navbar-nav.navbar-right li {

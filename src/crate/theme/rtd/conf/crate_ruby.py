@@ -22,6 +22,8 @@
 from crate.theme.rtd.conf import *
 
 project = u'Crate Ruby Driver'
+primary_domain = 'Crate.Python'
+
 html_theme_options.update({
     'canonical_url_path': 'docs/projects/crate-ruby/',
     'tracking_project': 'crate-ruby',
