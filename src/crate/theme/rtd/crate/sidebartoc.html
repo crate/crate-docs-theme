@@ -61,14 +61,6 @@
     {% else %}
       <li class="navleft-item"><a href="#">PHP PDO</a></li>
     {% endif %}
-    {% if project == 'Crate Ruby Driver' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">{{ project|e }}</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
-    {% else %}
-      <li class="navleft-item"><a href="#">Ruby</a></li>
-    {% endif %}
     <li class="navleft-item"><a href="#">REST API</a></li>
   </ul>
   <li class="navleft-item"><a href="/docs/support/">Support</a></li>
