@@ -19,7 +19,7 @@
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
       </li>
     {% else %}
-      <li class="navleft-item"><a href="#">Crate Shell</a></li>
+      <li class="navleft-item"><a href="/docs/reference/crash">Crate Shell</a></li>
     {% endif %}
     {% if project == 'Crate Python' %}
       <li class="current">
@@ -27,7 +27,7 @@
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
       </li>
     {% else %}
-      <li class="navleft-item"><a href="#">Python</a></li>
+      <li class="navleft-item"><a href="/docs/reference/python">Python</a></li>
     {% endif %}
     {% if project == 'Crate Java Client' %}
       <li class="current">
@@ -35,7 +35,7 @@
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
       </li>
     {% else %}
-      <li class="navleft-item"><a href="#">Java</a></li>
+      <li class="navleft-item"><a href="/docs/reference/java">Java</a></li>
     {% endif %}
     {% if project == 'Crate JDBC Client' %}
       <li class="current">
@@ -43,7 +43,7 @@
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
       </li>
     {% else %}
-      <li class="navleft-item"><a href="#">JDBC</a></li>
+      <li class="navleft-item"><a href="/docs/reference/jdbc">JDBC</a></li>
     {% endif %}
     {% if project == 'Crate DBAL' %}
       <li class="current">
@@ -51,7 +51,7 @@
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
       </li>
     {% else %}
-      <li class="navleft-item"><a href="#">PHP DBAL</a></li>
+      <li class="navleft-item"><a href="/docs/reference/dbal">PHP DBAL</a></li>
     {% endif %}
     {% if project == 'Crate PDO' %}
       <li class="current">
@@ -59,9 +59,8 @@
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
       </li>
     {% else %}
-      <li class="navleft-item"><a href="#">PHP PDO</a></li>
+      <li class="navleft-item"><a href="/docs/reference/pdo">PHP PDO</a></li>
     {% endif %}
-    <li class="navleft-item"><a href="#">REST API</a></li>
   </ul>
   <li class="navleft-item"><a href="/docs/support/">Support</a></li>
 </ul>
