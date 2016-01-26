@@ -3,7 +3,7 @@
   <li class="navleft-item"><a href="/docs/performance/">Performance</a></li>
   <li class="navleft-item"><a href="/docs/search/">Search</a></li>
   <li class="navleft-item"><a href="https://github.com/crate/crate-sample-apps">Sample Applications</a></li>
-  <li class="navleft-item"><a href="/docs/reference/">Reference</a></li>
+  <li class="navleft-item"><a href="/docs/reference/overview">Reference</a></li>
   <ul>
     {% if project == 'Crate' %}
       <li class="current">
@@ -11,7 +11,7 @@
         {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
       </li>
     {% else %}
-      <li class="navleft-item"><a href="https://crate.io/docs/reference/">Crate</a></li>
+      <li class="navleft-item"><a href="/docs/reference/">Crate</a></li>
     {% endif %}
     {% if project == 'Crate Shell' %}
       <li class="current">
