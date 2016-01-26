@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/01/26 0.5.0
+----------------
+
+- set up new layout
+
 - Added new project configurations for crate-pdo, crate-dbal, and crate-ruby
 
 2015/12/15 0.4.3
