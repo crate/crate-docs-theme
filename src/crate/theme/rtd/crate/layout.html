@@ -48,10 +48,12 @@ http://docs.readthedocs.org/en/latest/canonical.html
 
   <div class="w-section section border-top">
     <div class="w-container w-hidden-main margin-bottom-32">
-      <a href="#" id="mobile-menu-toggler" class="w-button">Show Menu</a>
+      <div class="section" style="margin: 0px">
+        <a href="#" id="mobile-menu-toggler" class="w-button">Toggle Doc Menu</a>
+      </div>
     </div>
     <div class="w-container container">
-      <div class="w-hidden-medium w-hidden-small w-hidden-tiny wrapper-navleft">
+      <div class="wrapper-navleft">
       {%- block sidebar1 %}
         {%- for sidebartemplate in sidebars %}
           {%- include sidebartemplate %}
@@ -87,20 +89,27 @@ http://docs.readthedocs.org/en/latest/canonical.html
 {%- block custom_footer %}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script>
-  var $navAffix = $('#nav-affix');
-  $navAffix.width($navAffix.outerWidth(true)-32);
-  $navAffix.affix({
-    offset: {
-      top: $navAffix.position().top - 20,
-      bottom: $('footer').outerHeight(true) + 40
-    }
-  });
-  if($('.wrapper-content-right').outerHeight(true) < $navAffix.outerHeight(true))
-    $('.wrapper-content-right').height($navAffix.outerHeight(true));
-  $('body').scrollspy();
-  $('mobile-menu-toggler').click(function() {
-    $('.wrapper-navleft').toggle();
-  })
+  if(!$('#mobile-menu-toggler').is(':visible')) {
+    var $navAffix = $('#nav-affix');
+    $navAffix.width($navAffix.outerWidth(true)-32);
+    $(window).on('resize', function() {
+      $navAffix.width($navAffix.outerWidth(true)-32);
+    });
+    $navAffix.affix({
+      offset: {
+        top: $navAffix.position().top - 20,
+        bottom: $('footer').outerHeight(true) + 40
+      }
+    });
+    if($('.wrapper-content-right').outerHeight(true) < $navAffix.outerHeight(true))
+      $('.wrapper-content-right').height($navAffix.outerHeight(true));
+    $('body').scrollspy();    
+  } else {
+    $('.wrapper-navleft').hide();
+    $('#mobile-menu-toggler').click(function() {
+      $('.wrapper-navleft').toggle();
+    })    
+  }
 </script>
 <script src=""
 <!-- Segment -->

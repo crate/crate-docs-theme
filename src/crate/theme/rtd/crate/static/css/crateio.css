@@ -1081,7 +1081,6 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
     line-height: 32px;
   }
   .wrapper-navleft {
-    display: none;
     width: 100%;
     float: none;
   }
