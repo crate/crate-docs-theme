@@ -1,58 +1,17 @@
-  <div id="navbar" class="{{ theme_navbar_class }} navbar-default {% if theme_navbar_fixed_top == 'true' -%} navbar-fixed-top{%- endif -%}">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="https://crate.io" id="crate-logo" title="https://crate.io">
-          <span>crate.io</span>
+<header class="w-section">
+  <div class="w-container">
+    <div data-collapse="small" data-animation="default" data-duration="400" data-contain="1" class="w-nav navbar">
+      <div class="w-container">
+        <a href="/" class="w-nav-brand brand"><img width="217" src="{{ pathto('_static/images/logo-crate.png', 1) }}">
         </a>
+        <nav role="navigation" class="w-nav-menu"><a href="/blog" class="w-nav-link navlink">Blog</a><a href="/use-cases" class="w-nav-link navlink">Use Cases</a><a href="/docs/getting-started" class="w-nav-link navlink">Documentation</a><a href="/docs/getting-started/" class="w-nav-link navlink">Download</a><a href="https://github.com/crate/crate/" class="w-nav-link navlink">Github</a>
+          <a href="/search" id="image-search" class="w-clearfix w-inline-block navlink search"><img width="18" src="{{ pathto('_static/images/icon-search@2x.png', 1) }}" class="image search">
+          </a>
+        </nav>
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
       </div>
-
-      <nav class="collapse navbar-collapse nav-collapse" role="navigation">
-        <ul class="nav navbar-nav navbar-right">
-
-          <li><a href="https://crate.io/use-cases/">
-              Use Cases</a></li>
-          <li><a href="https://crate.io/install/">
-              Install</a></li>
-          <li><a href="https://crate.io/docs/">
-              <strong>Documentation</strong></a></li>
-          <li><a href="/blog/">
-              Blog</a></li>
-
-          {% include "navbarsearchbox.html" %}
-
-          {%- if current_version %}
-          <li class="dropdown">
-            <a href="{{ pathto(master_doc) }}" class="dropdown-toggle" data-toggle="dropdown">v:{{ current_version }} <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="{{ pathto(master_doc) }}">{{ current_version }}</a></li>
-              {%- if versions %}
-              <li class="divider"></li>
-              <li class="dropdown-header">Other Versions</li>
-              {% for slug, url in versions %}
-              <li><a href="https://crate.io/{{ theme_canonical_url_path }}{{ rtd_language }}/{{ slug }}/">{{ slug }}</a></li>
-              {% endfor %}
-              {%- endif %}
-            </ul>
-          </li>
-          {%- endif %}
-
-        </ul>
-      </nav>
-    </div>
-    <div class="container subnav">
-      <nav class="breadcrumb-container">
-        <ol class="nav navbar-nav navbar-subnav">
-          <li class=""><a href="https://crate.io/docs/">Overview</a></li>
-          <li class=""><a href="https://crate.io/install/">Installation</a></li>
-          <li class=""><a href="https://crate.io/docs/stable/">Server</a></li>
-          <li class=""><a href="https://github.com/crate/crate"><i class="fa fa-github"></i> Source</a></li>
-        </ol>
-      </nav>
     </div>
   </div>
+</header>

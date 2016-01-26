@@ -1,0 +1,140 @@
+.wrapper-content-right .section {
+	margin-top: 32px;
+}
+
+.wrapper-content-right > .section {
+	margin-top: 0px;
+}
+
+.toctree {
+    padding-left: 0;
+    list-style: none;
+}
+
+.toctree li {
+	list-style: none;
+}
+
+a.current, a.current-active {
+	font-weight: bold;
+}
+
+.highlight {
+	font-size: 14px;
+}
+
+.highlight pre {
+  padding: 2px 10px;
+}
+
+blockquote {
+	font-size: 20px;
+	border-left: 0px;
+	padding: 0px 0px;
+}
+
+/** NOTES, etc **/
+
+.todo .admonition-title,
+.seealso .admonition-title,
+.note .admonition-title,
+.warning .admonition-title {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.warning {
+  background-color: #ffcdc9;
+  border-left: 5px solid #ff5b4d;
+}
+
+.note {
+  background-color: #ccf2fc;
+  border-left: 5px solid #55d4f5;
+}
+
+.seealso,
+.todo {
+  background-color: #e7e7e7;
+  border-left: 5px solid #888888;
+}
+
+.note .admonition-title {
+  padding-bottom: 0;
+  background-color: #ccf2fc;
+}
+
+.warning .admonition-title {
+  padding-bottom: 0;
+  background-color: #ffcdc9;
+}
+
+.seealso .admonition-title,
+.todo .admonition-title {
+  padding-bottom: 0;
+  background-color: #e7e7e7;
+}
+.todo p, .seealso p, .note p, .warning p {
+    padding: 10px 20px;
+    margin: 0;
+}
+.bs-docs-sidenav > li {
+	display: none;
+}
+
+
+/** MENUE **/
+
+.bs-docs-sidenav .toctree li {
+  padding: 3px 0px;
+  line-height: 16px;
+}
+.bs-docs-sidenav .toctree li a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: black;
+}
+
+.bs-docs-sidenav .toctree li.current > a,
+.bs-docs-sidenav .toctree li.active > a {
+  font-weight: bold;
+}
+.bs-docs-sidenav ul {
+  margin-bottom: 0px;
+}
+.bs-docs-sidenav .toctree ul ul ul {
+  display: none;
+}
+
+.bs-docs-sidenav .toctree ul li.active ul {
+  display: block;
+}
+
+.bs-docs-sidenav .toctree li.current > ul,
+.bs-docs-sidenav .toctree ul li.active > ul {
+  display: block !important;
+}
+.bs-docs-sidenav {
+  padding-left: 0px;
+}
+.bs-docs-sidebar {
+  padding: 8px 16px;
+}
+
+.affix {
+  position: fixed !important;
+  top: 20px;
+}
+.wrapper-navleft {
+  padding: 0px;
+  border: 0px;
+}
+.wrapper-navleft .bs-docs-sidebar {
+  border: 1px solid #e7e7e7;
+}
+.wrapper-content-right li {
+    font-size: 16px;
+    line-height: 1.5em;
+}

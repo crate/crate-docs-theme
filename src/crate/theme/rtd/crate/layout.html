@@ -1,22 +1,19 @@
 {% extends "base.html" %}
 
 {% set css_files = [
-    '_static/bootstrap/css/bootstrap.min.css',
-    '_static/bootstrap/css/bootstrap-theme.min.css',
-    '_static/font-awesome/css/font-awesome.min.css',
-    '_static/css/main.css',
+    '_static/css/normalize.css',
+    '_static/css/webflow.css',
+    '_static/css/crateio.css',
+    '_static/css/crateio-rtd.css',
   ]
 %}
 
 {% set script_files = [
-    '_static/js/jquery-1.11.0.min.js',
-    '_static/js/jquery-migrate.min.js',
-    '_static/js/underscore-1.6.0.min.js',
-    '_static/bootstrap/js/bootstrap.min.js',
-    '_static/js/jquery.cookie.js',
-    '_static/js/theme.js',
+    '_static/js/modernizr.js',
+    '_static/js/underscore.min.js',
     '_static/doctools.js',
     '_static/searchtools.js',
+    '_static/js/webflow.js'
  ]
 %}
 
@@ -47,34 +44,74 @@ http://docs.readthedocs.org/en/latest/canonical.html
 {% block sidebarsourcelink %}{% endblock %}
 
 {%- block content %}
-<div id="page-wrap">
   {% include "navbar.html" %}
 
-  <div class="container">
-    <div class="row" id="content-wrap">
+  <div class="w-section section border-top">
+    <div class="w-container w-hidden-main margin-bottom-32">
+      <div class="section" style="margin: 0px">
+        <a href="#" id="mobile-menu-toggler" class="w-button">Toggle Doc Menu</a>
+      </div>
+    </div>
+    <div class="w-container container">
+      <div class="wrapper-navleft">
       {%- block sidebar1 %}
-      <div class="col-md-3" id="sidebar-column">
         {%- for sidebartemplate in sidebars %}
           {%- include sidebartemplate %}
         {%- endfor %}
-      </div>
       {% endblock %}
-      <div class="col-md-9" id="content-column">
-        <div>
-        {% block body %}{% endblock %}
+      </div>
+      <div class="wrapper-content-right">
+        {%- if current_version %}
+        <div class="version-select-container">
+          <div data-delay="0" class="w-dropdown">
+            <div class="w-dropdown-toggle toggle">
+              <div><a href="{{ pathto(master_doc) }}">v:{{ current_version }}</a></div>
+              <div class="w-icon-dropdown-toggle toggle-icon"></div>
+            </div>
+            {%- if versions %}
+            <nav class="w-dropdown-list dropdown-list">
+              {% for slug, url in versions %}
+                <a href="https://crate.io/{{ theme_canonical_url_path }}{{ rtd_language }}/{{ slug }}/" class="w-dropdown-link">{{ slug }}</a>
+              {% endfor %}
+            </nav>
+            {%- endif %}
+          </div>
         </div>
-
+        {%- endif %}
+      {% block body %}{% endblock %}
       </div>
-      {% block sidebar2 %}
-      {% endblock %}
     </div>
   </div>
   {%- include "footer.html" %}
-</div>
 
 {%- endblock %}
 
 {%- block custom_footer %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+  if(!$('#mobile-menu-toggler').is(':visible')) {
+    var $navAffix = $('#nav-affix');
+    $navAffix.width($navAffix.outerWidth(true)-32);
+    $(window).on('resize', function() {
+      $navAffix.width($navAffix.outerWidth(true)-32);
+    });
+    $navAffix.affix({
+      offset: {
+        top: $navAffix.position().top - 20,
+        bottom: $('footer').outerHeight(true) + 40
+      }
+    });
+    if($('.wrapper-content-right').outerHeight(true) < $navAffix.outerHeight(true))
+      $('.wrapper-content-right').height($navAffix.outerHeight(true));
+    $('body').scrollspy();    
+  } else {
+    $('.wrapper-navleft').hide();
+    $('#mobile-menu-toggler').click(function() {
+      $('.wrapper-navleft').toggle();
+    })    
+  }
+</script>
+<script src=""
 <!-- Segment -->
 <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on","setAnonymousId"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
@@ -85,13 +122,9 @@ http://docs.readthedocs.org/en/latest/canonical.html
       project: '{{ theme_tracking_project }}',
       version: '{{ current_version }}'
     });
+    var mc_newsletter_form = document.getElementById('mc-newsletter-form');
+    analytics.trackForm(mc_newsletter_form, 'subscribe_newsletter');
   }}();
-</script>
-<!-- @end Segment -->
-<!-- @start mc_newsletter_form -->
-<script>
-  var mc_newsletter_form = document.getElementById('mc-newsletter-form');
-  analytics.trackForm(mc_newsletter_form, 'subscribe_newsletter');
 </script>
 <!-- @end mc_newsletter_form -->
 {%- endblock %}
