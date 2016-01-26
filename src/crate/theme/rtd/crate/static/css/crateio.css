@@ -466,9 +466,8 @@ blockquote {
 
 .wrapper-content-right {
   width: 70%;
-  float: left;
-  font-size: 16px;
-  line-height: 1.5em;
+  float: right;
+  font-size: 20px;
 }
 
 .link-inline {
