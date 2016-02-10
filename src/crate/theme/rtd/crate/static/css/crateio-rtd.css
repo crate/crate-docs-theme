@@ -111,10 +111,6 @@ blockquote {
 	display: none;
 }
 
-.bs-docs-sidenav .toctree ul li.active ul {
-	display: block;
-}
-
 .bs-docs-sidenav .toctree li.current > ul,
 .bs-docs-sidenav .toctree ul li.active > ul {
 	display: block !important;

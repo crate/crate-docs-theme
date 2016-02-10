@@ -1,49 +1,49 @@
 {% extends "base.html" %}
 
 {% set css_files = [
-    '_static/css/normalize.css',
-    '_static/css/webflow.css',
-    '_static/css/crateio.css',
-    '_static/css/crateio-rtd.css',
+  '_static/css/normalize.css',
+  '_static/css/webflow.css',
+  '_static/css/crateio.css',
+  '_static/css/crateio-rtd.css',
   ]
-%}
+  %}
 
-{% set script_files = [
+  {% set script_files = [
     '_static/js/modernizr.js',
     '_static/js/underscore.min.js',
     '_static/doctools.js',
     '_static/searchtools.js',
     '_static/js/webflow.js'
- ]
-%}
+    ]
+    %}
 
-{%- block doctype -%}
-<!DOCTYPE html>
-{%- endblock %}
+    {%- block doctype -%}
+    <!DOCTYPE html>
+    {%- endblock %}
 
-{%- block extra_head %}
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-{% set ending = "/" if builder == "readthedocsdirhtml" else ".html" %}
-{% set canonical_page = pagename + ending %}
-{% if canonical_url %}
- <!--
-Always link to the latest version, as canonical.
-http://docs.readthedocs.org/en/latest/canonical.html
--->
-<link rel="canonical" href="https://crate.io/{{ theme_canonical_url_path }}stable/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
-{% endif %}
-{% endblock %}
+    {%- block extra_head %}
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    {% set ending = "/" if builder == "readthedocsdirhtml" else ".html" %}
+    {% set canonical_page = pagename + ending %}
+    {% if canonical_url %}
+    <!--
+    Always link to the latest version, as canonical.
+    http://docs.readthedocs.org/en/latest/canonical.html
+  -->
+  <link rel="canonical" href="https://crate.io/{{ theme_canonical_url_path }}stable/{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
+  {% endif %}
+  {% endblock %}
 
-{# Silence the sidebar's, relbar's #}
-{% block header %}{% endblock %}
-{% block relbar1 %}{% endblock %}
-{% block relbar2 %}{% endblock %}
-{% block sidebarsourcelink %}{% endblock %}
+  {# Silence the sidebar's, relbar's #}
+  {% block header %}{% endblock %}
+  {% block relbar1 %}{% endblock %}
+  {% block relbar2 %}{% endblock %}
+  {% block sidebarsourcelink %}{% endblock %}
 
-{%- block content %}
+  {%- block content %}
   {% include "navbar.html" %}
 
   <div class="w-section section border-top">
@@ -54,11 +54,11 @@ http://docs.readthedocs.org/en/latest/canonical.html
     </div>
     <div class="w-container container">
       <div class="wrapper-navleft">
-      {%- block sidebar1 %}
+        {%- block sidebar1 %}
         {%- for sidebartemplate in sidebars %}
-          {%- include sidebartemplate %}
+        {%- include sidebartemplate %}
         {%- endfor %}
-      {% endblock %}
+        {% endblock %}
       </div>
       <div class="wrapper-content-right">
         {%- if current_version %}
@@ -71,24 +71,24 @@ http://docs.readthedocs.org/en/latest/canonical.html
             {%- if versions %}
             <nav class="w-dropdown-list dropdown-list">
               {% for slug, url in versions %}
-                <a href="https://crate.io/{{ theme_canonical_url_path }}{{ rtd_language }}/{{ slug }}/" class="w-dropdown-link">{{ slug }}</a>
+              <a href="https://crate.io/{{ theme_canonical_url_path }}{{ rtd_language }}/{{ slug }}/" class="w-dropdown-link">{{ slug }}</a>
               {% endfor %}
             </nav>
             {%- endif %}
           </div>
         </div>
         {%- endif %}
-      {% block body %}{% endblock %}
+        {% block body %}{% endblock %}
       </div>
     </div>
   </div>
   {%- include "footer.html" %}
 
-{%- endblock %}
+  {%- endblock %}
 
-{%- block custom_footer %}
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script>
+  {%- block custom_footer %}
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script>
   if(!$('#mobile-menu-toggler').is(':visible')) {
     var $navAffix = $('#nav-affix');
     $navAffix.width($navAffix.outerWidth(true)-32);
@@ -102,29 +102,29 @@ http://docs.readthedocs.org/en/latest/canonical.html
       }
     });
     if($('.wrapper-content-right').outerHeight(true) < $navAffix.outerHeight(true))
-      $('.wrapper-content-right').height($navAffix.outerHeight(true));
-    $('body').scrollspy();    
+    $('.wrapper-content-right').height($navAffix.outerHeight(true));
+    $('body').scrollspy();
   } else {
     $('.wrapper-navleft').hide();
     $('#mobile-menu-toggler').click(function() {
       $('.wrapper-navleft').toggle();
-    })    
+    })
   }
-</script>
-<script src=""
-<!-- Segment -->
-<script>
+  </script>
+  <script src=""
+  <!-- Segment -->
+  <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on","setAnonymousId"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
-    analytics.load("{{ theme_tracking_segment_id }}");
-    analytics.setAnonymousId($.cookie('uid'));
-    analytics.page();
-    analytics.track('visited_section_docs', {
-      project: '{{ theme_tracking_project }}',
-      version: '{{ current_version }}'
-    });
-    var mc_newsletter_form = document.getElementById('mc-newsletter-form');
-    analytics.trackForm(mc_newsletter_form, 'subscribe_newsletter');
-  }}();
+  analytics.load("{{ theme_tracking_segment_id }}");
+  analytics.setAnonymousId($.cookie('uid'));
+  analytics.page();
+  analytics.track('visited_section_docs', {
+    project: '{{ theme_tracking_project }}',
+    version: '{{ current_version }}'
+  });
+  var mc_newsletter_form = document.getElementById('mc-newsletter-form');
+  analytics.trackForm(mc_newsletter_form, 'subscribe_newsletter');
+}}();
 </script>
 <!-- @end mc_newsletter_form -->
 {%- endblock %}
