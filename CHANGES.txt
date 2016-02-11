@@ -5,12 +5,20 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/02/11 0.5.3
+----------------
+
+- Fixed menu expansion issue
+
+- Changed font size 
+
+
 2016/01/26 0.5.2
 ----------------
 
 - Code highlighting improved
 
-- Changed menue titles
+- Changed menu titles
 
 2016/01/26 0.5.1
 ----------------
