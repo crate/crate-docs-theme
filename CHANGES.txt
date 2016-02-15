@@ -5,6 +5,12 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/02/15 0.5.4
+----------------
+
+- Changed Links to Downloads and Docs
+
+
 2016/02/11 0.5.3
 ----------------
 
