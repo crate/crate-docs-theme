@@ -762,9 +762,16 @@
 	  var hashchange = 'hashchange';
 	  var loaded;
 	  var loadEditor = options.load || load;
+	  var hasLocalStorage = false;
 
-	  // Check localStorage for editor data
-	  if (localStorage && localStorage.getItem && localStorage.getItem('WebflowEditor')) {
+	  try {
+	    // Check localStorage for editor data
+	    hasLocalStorage = localStorage && localStorage.getItem && localStorage.getItem('WebflowEditor');
+	  } catch (e) {
+	    // SecurityError: browser storage has been disabled
+	  }
+
+	  if (hasLocalStorage) {
 	    loadEditor();
 
 	  } else if (location.search) {
@@ -4350,5 +4357,6 @@
  */
 Webflow.require('ix').init([
   {"slug":"featured-hover-effect","name":"featured hover effect","value":{"style":{},"triggers":[{"type":"hover","selector":".awards-logo-bw","descend":true,"stepsA":[{"display":"none"}],"stepsB":[{"display":"block"}]},{"type":"hover","selector":".awards-logo","descend":true,"stepsA":[{"display":"block"}],"stepsB":[{"display":"none"}]}]}},
-  {"slug":"hide-color-logo","name":"Hide color logo","value":{"style":{"display":"none"},"triggers":[]}}
+  {"slug":"hide-color-logo","name":"Hide color logo","value":{"style":{"display":"none"},"triggers":[]}},
+  {"slug":"show-leftnav","name":"Show leftnav","value":{"style":{},"triggers":[{"type":"click","selector":".wrapper-navleft-mobile","stepsA":[{"display":"block"}],"stepsB":[{"display":"none"}]}]}}
 ]);
