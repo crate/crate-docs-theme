@@ -1,65 +1,67 @@
 <ul class="toctree nav nav-list">
-  <li class="navleft-item"><a href="/docs/">Getting Started</a></li>
-  <li class="navleft-item"><a href="/docs/performance/">Performance</a></li>
-  <li class="navleft-item"><a href="/docs/search/">Search</a></li>
-  <li class="navleft-item"><a href="https://github.com/crate/crate-sample-apps">Sample Applications</a></li>
+  <li class="navleft-item"><a href="/docs/install/">Install</a></li>
+  <li class="navleft-item"><a href="/docs/connect/">Connect to Cluster</a></li>
+  <li class="navleft-item"><a href="/docs/import/">Import Data</a></li>
+  <li class="navleft-item"><a href="/docs/clients/">Client Libraries</a></li>
+  <li class="navleft-item"><a href="/docs/scale/">Scale a Cluster</a></li>
+  <li class="navleft-item border-top"><a href="https://github.com/crate/crate-sample-apps">Sample Applications</a></li>
   <li class="navleft-item"><a href="/docs/reference/overview">Reference</a></li>
   <ul>
     {% if project == 'Crate' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Crate</a>
-        {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Crate</a>
+      {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
     {% else %}
-      <li class="navleft-item"><a href="/docs/reference/">Crate</a></li>
+    <li class="navleft-item"><a href="/docs/reference/">Crate</a></li>
     {% endif %}
     {% if project == 'Crate Shell' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Crate Shell</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Crate Shell</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
     {% else %}
-      <li class="navleft-item"><a href="/docs/reference/crash">Crate Shell</a></li>
+    <li class="navleft-item"><a href="/docs/reference/crash">Crate Shell</a></li>
     {% endif %}
     {% if project == 'Crate Python' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Python</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Python</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
     {% else %}
-      <li class="navleft-item"><a href="/docs/reference/python">Python</a></li>
+    <li class="navleft-item"><a href="/docs/reference/python">Python</a></li>
     {% endif %}
     {% if project == 'Crate Java Client' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Java</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Java</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
     {% else %}
-      <li class="navleft-item"><a href="/docs/reference/java">Java</a></li>
+    <li class="navleft-item"><a href="/docs/reference/java">Java</a></li>
     {% endif %}
     {% if project == 'Crate JDBC Driver' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">JDBC</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">JDBC</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
     {% else %}
-      <li class="navleft-item"><a href="/docs/reference/jdbc">JDBC</a></li>
+    <li class="navleft-item"><a href="/docs/reference/jdbc">JDBC</a></li>
     {% endif %}
     {% if project == 'Crate DBAL' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">PHP DBAL</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">PHP DBAL</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
     {% else %}
-      <li class="navleft-item"><a href="/docs/reference/dbal">PHP DBAL</a></li>
+    <li class="navleft-item"><a href="/docs/reference/dbal">PHP DBAL</a></li>
     {% endif %}
     {% if project == 'Crate PDO' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">PHP PDO</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">PHP PDO</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
     {% else %}
-      <li class="navleft-item"><a href="/docs/reference/pdo">PHP PDO</a></li>
+    <li class="navleft-item"><a href="/docs/reference/pdo">PHP PDO</a></li>
     {% endif %}
   </ul>
   <li class="navleft-item"><a href="/docs/support/">Support</a></li>
