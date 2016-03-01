@@ -5,6 +5,12 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/03/01 0.5.5
+----------------
+
+- Changed docs menu to allow for new structure and 'scale' section
+
+
 2016/02/15 0.5.4
 ----------------
 
@@ -16,7 +22,7 @@ Unreleased
 
 - Fixed menu expansion issue
 
-- Changed font size 
+- Changed font size
 
 
 2016/01/26 0.5.2
