@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/03/16 0.5.6
+----------------
+
 - Host ``searchtools.js`` in local theme since RTD has overrided the integrated
   search of Sphinx.
 
