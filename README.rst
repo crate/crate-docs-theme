@@ -42,9 +42,9 @@ That will compile the ``.less`` files into
 
 In order to build a documentation for testing purposes,
 place your rst files into the ``docs/`` folder
-and use the ``build`` task to build the docs with the theme::
+and use ``sphinx`` to build the docs with the theme::
 
-    bin/grunt build
+    bin/sphinx
 
 Distribute
 ----------
