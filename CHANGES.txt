@@ -5,6 +5,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Fixed layout issue that caused a layout overlapping of results on search page.
+
 2016/03/16 0.5.6
 ----------------
 

@@ -103,7 +103,7 @@
         }
       });
       if($('.wrapper-content-right').outerHeight(true) < $navAffix.outerHeight(true))
-      $('.wrapper-content-right').height($navAffix.outerHeight(true));
+      $('.wrapper-content-right').css("minHeight", $navAffix.outerHeight(true) + "px");
       $('body').scrollspy();
     }
   } else {
