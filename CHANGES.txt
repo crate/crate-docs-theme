@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/03/30 0.5.8
+----------------
+
+- fixed links in footer to exclude .html also updated facebook link
+
 2016/03/17 0.5.7
 ----------------
 
