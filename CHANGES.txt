@@ -4,6 +4,9 @@ CHANGES for Crate ReadTheDocs Theme
 
 Unreleased
 ----------
+2016/04/05 0.5.9
+----------------
+- Added padding to stop system scroll bars obscuring code.
 
 2016/03/30 0.5.8
 ----------------
