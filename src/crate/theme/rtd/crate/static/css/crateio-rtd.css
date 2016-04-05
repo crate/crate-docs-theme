@@ -24,7 +24,7 @@ a.current, a.current-active {
 }
 
 .highlight pre {
-	padding: 5px 10px;
+	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 2px;
 	background: #f0f0f0 none repeat scroll 0 0;
