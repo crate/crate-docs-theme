@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/04/26 0.5.11
+-----------------
+
+- Made h4 tag style more consistent
+
 2016/04/08 0.5.10
 -----------------
 
