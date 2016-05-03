@@ -88,9 +88,15 @@
 
   {%- block custom_footer %}
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
   <script>
+  function setMenu() {
+    $navAffix.height($( window ).height() + 20);
+  }
+
   if(!$('#mobile-menu-toggler').is(':visible')) {
     var $navAffix = $('#nav-affix');
+
     if($navAffix.length) {
       $navAffix.width($navAffix.outerWidth(true)-32);
       $(window).on('resize', function() {
@@ -99,12 +105,16 @@
       $navAffix.affix({
         offset: {
           top: $navAffix.position().top - 20,
-          bottom: $('footer').outerHeight(true) + 40
+          bottom: $('footer').outerHeight(true) + 200
         }
       });
       if($('.wrapper-content-right').outerHeight(true) < $navAffix.outerHeight(true))
       $('.wrapper-content-right').css("minHeight", $navAffix.outerHeight(true) + "px");
       $('body').scrollspy();
+      setMenu();
+      $(window).resize(function() {
+        setMenu();
+      });
     }
   } else {
     $('.wrapper-navleft').hide();
@@ -116,6 +126,7 @@
     window.setTimeout(function() {$('body').append('<a href="https://crate.io/docs/support/slackin/" style="position: fixed; bottom: 20px; right: ' + ($('#intercom-launcher').is(':visible') ? '90' : '20') + 'px; box-shadow: 0 6px 13px 0 rgba(0, 0, 0, .23)"><img src="/static/images/slack.png?adsfadsf" id="slack-container" /></a>'); }, 2000);
   });
   </script>
+
   <script src=""
   <!-- Segment -->
   <script>

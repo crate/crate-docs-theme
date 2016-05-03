@@ -9,6 +9,7 @@
 .toctree {
 	padding-left: 0;
 	list-style: none;
+	padding-bottom: 60px;
 }
 
 .toctree li {
@@ -133,6 +134,11 @@ blockquote {
 	position: fixed !important;
 	top: 20px;
 }
+
+#nav-affix {
+	overflow-y: auto;
+}
+
 .wrapper-navleft {
 	padding: 0px;
 	border: 0px;
