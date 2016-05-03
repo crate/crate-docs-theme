@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/05/03 0.5.12
+-----------------
+
+- Fixing menu scroll for long menus
+
 2016/04/26 0.5.11
 -----------------
 
