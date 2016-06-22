@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/06/22 0.5.14
+-----------------
+
+- Added menu item for mesos-framework docs
+
 2016/05/17 0.5.13
 -----------------
 
