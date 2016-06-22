@@ -63,6 +63,14 @@
     {% else %}
     <li class="navleft-item"><a href="/docs/reference/pdo">PHP PDO</a></li>
     {% endif %}
+    {% if project == 'Crate Mesos Framework' %}
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Crate Mesos Framework</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
+    {% else %}
+    <li class="navleft-item"><a href="/docs/reference/mesos-framework">Crate Mesos Framework</a></li>
+    {% endif %}
   </ul>
   <li class="navleft-item"><a href="/docs/support/">Support</a></li>
 </ul>
