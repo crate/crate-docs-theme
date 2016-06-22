@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2016/06/22 0.5.15
+-----------------
+
+- Conf file for mesos was missing
+
 2016/06/22 0.5.14
 -----------------
 
