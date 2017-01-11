@@ -29,6 +29,8 @@ The project uses buildout to bootstrap::
 
 This will install ``NodeJs`` and the required modules.
 
+*Note*: if you get an error running ``bin/buildout``, try running ``python bin/buildout`` instead.
+
 There is a watcher that compiles ``.less`` files into ``.css``::
 
     bin/grunt watch
