@@ -39,9 +39,10 @@ blockquote {
 
 /** NOTES, etc **/
 
+.caution .admonition-title,
+.note .admonition-title,
 .todo .admonition-title,
 .seealso .admonition-title,
-.note .admonition-title,
 .warning .admonition-title {
 	padding: 10px 20px;
 	font-weight: bold;
@@ -51,6 +52,11 @@ blockquote {
 .warning {
 	background-color: #ffcdc9;
 	border-left: 5px solid #ff5b4d;
+}
+
+.caution {
+	background-color: #ffedcc;
+	border-left: 5px solid #f0b37e;
 }
 
 .note {
@@ -64,14 +70,19 @@ blockquote {
 	border-left: 5px solid #888888;
 }
 
-.note .admonition-title {
-	padding-bottom: 0;
-	background-color: #ccf2fc;
-}
-
 .warning .admonition-title {
 	padding-bottom: 0;
 	background-color: #ffcdc9;
+}
+
+.caution .admonition-title {
+	padding-bottom: 0;
+	background-color: #ffedcc;
+}
+
+.note .admonition-title {
+	padding-bottom: 0;
+	background-color: #ccf2fc;
 }
 
 .seealso .admonition-title,
@@ -79,10 +90,12 @@ blockquote {
 	padding-bottom: 0;
 	background-color: #e7e7e7;
 }
+
 .todo p, .seealso p, .note p, .warning p {
 	padding: 10px 20px;
 	margin: 0;
 }
+
 .bs-docs-sidenav > li {
 	display: none;
 }
