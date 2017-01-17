@@ -1,12 +1,10 @@
-===========
-DEVELOPMENT
+Development
 ===========
 
 Prerequisites
 =============
 
-This project uses buildout to manage its dependencies.
-Be sure have a working ``python 2.7`` installed.
+Be sure have Python 2.7 installed.
 
 Set up from source
 ==================
@@ -16,40 +14,53 @@ This project uses buildout to set up all requirements::
     python bootstrap.py
     bin/buildout -N
 
-To build the app simply run ``npm`` in this crate-docs-theme folder::
+*Note*: if you get an error running ``bin/buildout``, try running ``python bin/buildout`` instead.
+
+To build the app, run::
 
     bin/npm install
 
-To test the theme you need to copy your docs into the ``docs`` folder.
-
-Start the file watchers for LESS_ and Sphinx_::
+Start the file watchers for LESS and Sphinx like so::
 
     bin/grunt watch
 
-To build a documentation with the theme run::
+Or, compile on demand like so::
+
+    bin/grunt recess
+
+That will compile the ``.less`` files into
+``src/crate/theme/rtd/crate/static/css/main.css``.
+
+*Note*: this project no longer uses LESS files and these instructions are out of date.
+
+To test the theme, copy some Sphinx docs into the ``docs`` directory.
+
+Once your docs are in place, run:
 
     bin/sphinx
-
 
 Distributing
 ============
 
-Before creating a new distribution, a new version and tag should be created:
+To create a release, you must:
 
- - Add a new version to ``src/crate/theme/rtd/__init__.py`` and ``package.json``.
+ - Update the version in ``src/crate/theme/rtd/__init__.py``
+ - Update the version in ``package.json``
+ - Add section to the ``CHANGES.txt`` file
+ - Commit your changes with a message like "prepare release x.x.x"
+ - Push to origin on the master branch
+ - Run ``./devtools/create_tag.sh``
+ - Run ``bin/py setup.py sdist upload``
 
- - Add a note for the new version at the ``CHANGES.txt`` file.
+This last command builds the package and uploads it to PyPI. For that to work you will need to have a PyPI account, and you'll need to be added as a project admin.
 
- - Commit e.g. using message 'prepare release x.x.x'.
+You'll also need to create the `~/.pypirc` file like so::
 
- - Push to origin on the master branch.
+    [distutils]
+    index-servers =
+      pypi
 
- - Create a tag using the ``create_tag.sh`` script
-   (run ``./devtools/create_tag.sh``).
-
- - Build and upload to PyPi: ``bin/py setup.py sdist upload``
-
-
-.. _Sphinx: http://sphinx-doc.org/
-
-.. _LESS: http://lesscss.org/
+    [pypi]
+    repository=https://pypi.python.org/pypi
+    username=your_username
+    password=your_password
