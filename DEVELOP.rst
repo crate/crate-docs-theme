@@ -6,7 +6,7 @@ Prerequisites
 
 Be sure have Python 2.7 installed.
 
-Set up from source
+Set Up From Source
 ==================
 
 This project uses buildout to set up all requirements::
@@ -50,7 +50,7 @@ To create a release, you must:
 - Commit your changes with a message like "prepare release x.x.x"
 - Push to origin on the master branch
 - Run ``./devtools/create_tag.sh``
-- Run ``bin/py setup.py sdist upload``
+- Run ``bin/twine upload dist/*``
 
 This last command builds the package and uploads it to PyPI. For that to work you will need to have a PyPI account, and you'll need to be added as a project admin.
 
