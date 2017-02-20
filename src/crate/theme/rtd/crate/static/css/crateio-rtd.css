@@ -41,6 +41,7 @@ blockquote {
 
 .caution .admonition-title,
 .note .admonition-title,
+.tip .admonition-title,
 .todo .admonition-title,
 .seealso .admonition-title,
 .warning .admonition-title {
@@ -49,17 +50,13 @@ blockquote {
 	color: #000000;
 }
 
-.warning {
-	background-color: #ffcdc9;
-	border-left: 5px solid #ff5b4d;
-}
-
 .caution {
 	background-color: #ffedcc;
 	border-left: 5px solid #f0b37e;
 }
 
-.note {
+.note,
+.tip {
 	background-color: #ccf2fc;
 	border-left: 5px solid #55d4f5;
 }
@@ -70,9 +67,9 @@ blockquote {
 	border-left: 5px solid #888888;
 }
 
-.warning .admonition-title {
-	padding-bottom: 0;
+.warning {
 	background-color: #ffcdc9;
+	border-left: 5px solid #ff5b4d;
 }
 
 .caution .admonition-title {
@@ -80,7 +77,8 @@ blockquote {
 	background-color: #ffedcc;
 }
 
-.note .admonition-title {
+.note .admonition-title,
+.tip .admonition-title {
 	padding-bottom: 0;
 	background-color: #ccf2fc;
 }
@@ -91,7 +89,17 @@ blockquote {
 	background-color: #e7e7e7;
 }
 
-.todo p, .seealso p, .note p, .warning p {
+.warning .admonition-title {
+	padding-bottom: 0;
+	background-color: #ffcdc9;
+}
+
+.todo p,
+.seealso p,
+.note p,
+.tip p,
+.warning p,
+.caution p {
 	padding: 10px 20px;
 	margin: 0;
 }
