@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/02/20 0.5.18
+-----------------
+
 - Fixed issue that caused the search result links to be broken.
 
 2017/02/20 0.5.17
