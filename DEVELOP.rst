@@ -1,61 +1,62 @@
-Development
------------
+===============
+Developer Guide
+===============
 
-Prerequisites
-=============
+Setup
+=====
 
-Be sure have Python 2.7 installed.
+This project uses buildout_ to set up the development environment.
 
-Set Up From Source
-==================
+To start things off, run::
 
-This project uses buildout to set up all requirements::
+    $ python bootstrap.py
 
-    python bootstrap.py
-    bin/buildout -N
+Then, run::
 
-*Note*: if you get an error running ``bin/buildout``, try running ``python bin/buildout`` instead.
+    $ ./bin/buildout -N
 
-To build the app, run::
+*Note*: this project no longer uses Grunt_, but some Grunt files remain for the time being. These files can be safely ignored.
 
-    bin/npm install
+Testing
+=======
 
-Start the file watchers for LESS and Sphinx like so::
+To test the theme, copy some docs into the ``docs`` directory.
 
-    bin/grunt watch
+Once your docs are in place, run this::
 
-Or, compile on demand like so::
+    $ bin/sphinx
 
-    bin/grunt recess
+Preparing a Release
+===================
 
-That will compile the ``.less`` files into
-``src/crate/theme/rtd/crate/static/css/main.css``.
+To create a new release, you must:
 
-*Note*: this project no longer uses LESS files and these instructions are out of date.
+- Update ``__version__`` in ``src/crate/theme/rtd/__init__.py``
 
-To test the theme, copy some Sphinx docs into the ``docs`` directory.
-
-Once your docs are in place, run::
-
-    bin/sphinx
-
-Distributing
-============
-
-To create a release, you must:
-
-- Update the version in ``src/crate/theme/rtd/__init__.py``
 - Update the version in ``package.json``
-- Add section to the ``CHANGES.txt`` file
-- Commit your changes with a message like "prepare release x.x.x"
-- Push to origin on the master branch
-- Run ``./devtools/create_tag.sh``
-- Run ``bin/py setup.py sdist``
-- Run ``bin/twine upload dist/*``
 
-This last command builds the package and uploads it to PyPI. For that to work you will need to have a PyPI account, and you'll need to be added as a project admin.
+- Add a section for the new version in the ``CHANGES.txt`` file
 
-You'll also need to create the ``~/.pypirc`` file like so::
+- Commit your changes with a message like "prepare release x.y.z"
+
+- Push to origin
+
+- Create a tag by running ``./devtools/create_tag.sh``
+
+PyPI Deployment
+===============
+
+To create the package use::
+
+    $ bin/py setup.py sdist bdist_wheel
+
+Then, use twine_ to upload the package to PyPI_::
+
+    $ bin/twine upload dist/*
+
+For this to work, you will need a personal PyPI account that is set up as a project admin.
+
+You'll also need to create a ``~/.pypirc`` file, like so::
 
     [distutils]
     index-servers =
@@ -63,5 +64,16 @@ You'll also need to create the ``~/.pypirc`` file like so::
 
     [pypi]
     repository=https://pypi.python.org/pypi
-    username=your_username
-    password=your_password
+    username=<USERNAME>
+    password=<PASSWORD>
+
+Here, ``<USERNAME>`` and ``<PASSWORD>`` should be replaced with your username and password, respectively.
+
+If you want to check the PyPI description before uploading, run this::
+
+    $ bin/py setup.py check --strict --restructuredtext
+
+.. _buildout: https://pypi.python.org/pypi/zc.buildout
+.. _Grunt: https://gruntjs.com/
+.. _PyPI: https://pypi.python.org/pypi
+.. _twine: https://pypi.python.org/pypi/twine
