@@ -46,17 +46,15 @@ To create a new release, you must:
 PyPI Deployment
 ===============
 
-To create the packages, run this::
+To create the package use::
 
     $ bin/py setup.py sdist bdist_wheel
 
-Then, use twine_ to upload the packages::
+Then, use twine_ to upload the package to PyPI_::
 
     $ bin/twine upload dist/*
 
-This last command builds the package and uploads it to PyPI_.
-
-For that to work you will need a personal PyPI account that is set up as a project admin.
+For this to work, you will need a personal PyPI account that is set up as a project admin.
 
 You'll also need to create a ``~/.pypirc`` file, like so::
 
