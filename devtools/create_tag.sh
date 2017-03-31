@@ -38,8 +38,8 @@ echo "Fetching origin..."
 git fetch origin > /dev/null
 
 # get the version
-VERSION=`cat package.json | grep version | cut -d : -f 2 | cut -d \" -f 2`
-echo "Found version $VERSION in package.json"
+VERSION=`python setup.py --version`
+echo "Found package version $VERSION"
 
 # check if tag to create has already been created
 EXISTS=`git tag | grep $VERSION`

@@ -4,9 +4,9 @@ parts/
 dist/
 docs/
 out/
+env/
 .installed.cfg
 develop-eggs/
-node_modules/
 *.egg-info
 *.pyc
 eggs

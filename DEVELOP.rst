@@ -2,20 +2,24 @@
 Developer Guide
 ===============
 
+Prerequisites
+=============
+
+This project requires Python 3.4 or greater for development.
+
 Setup
 =====
 
-This project uses buildout_ to set up the development environment.
+To setup the project for local development use virtualenv.
 
 To start things off, run::
 
-    $ python bootstrap.py
+    $ python -m venv env
+    $ source env/bin/activate
 
 Then, run::
 
-    $ ./bin/buildout -N
-
-*Note*: this project no longer uses Grunt_, but some Grunt files remain for the time being. These files can be safely ignored.
+    $ pip install -e .
 
 Testing
 =======
@@ -24,7 +28,12 @@ To test the theme, copy some docs into the ``docs`` directory.
 
 Once your docs are in place, run this::
 
-    $ bin/sphinx
+    $ sphinx-build -n -W -b html -E `pwd`/docs `pwd`/out/html
+
+If you want to build the documentation of CrateDB you will need to install
+the ``sphinx-csv-filter`` package upfront::
+
+    $ pip install sphinx-csv-filter
 
 Preparing a Release
 ===================
@@ -32,8 +41,6 @@ Preparing a Release
 To create a new release, you must:
 
 - Update ``__version__`` in ``src/crate/theme/rtd/__init__.py``
-
-- Update the version in ``package.json``
 
 - Add a section for the new version in the ``CHANGES.txt`` file
 
