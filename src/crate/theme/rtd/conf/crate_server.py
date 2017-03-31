@@ -21,8 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Crate'
-primary_domain = 'Crate.Crate'
+project = u'CrateDB'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/',
