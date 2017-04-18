@@ -7,10 +7,6 @@ Prerequisites
 
 This project requires Python 3.4 or greater for development.
 
-To make releases, will need `wheel` installed::
-
-    $ pip install wheel
-
 Setup
 =====
 
@@ -28,16 +24,30 @@ Then, run::
 Testing
 =======
 
-To test the theme, copy some docs into the ``docs`` directory.
+Mirror the documentation from `the CrateDB repository`_::
 
-Once your docs are in place, run this::
+    $ ln -s ../crate/sql
+    $ ln -s ../crate/blackbox
 
-    $ sphinx-build -n -W -b html -E `pwd`/docs `pwd`/out/html
+These commands assume that your clone of the CrateDB repository is located at
+``../crate``, relative to your clone of the docs theme repository. If this
+isn't true, adjust the paths.
 
-If you want to build the documentation of CrateDB you will need to install
-the ``sphinx-csv-filter`` package upfront::
+Now, fake an install of the ``sphinx-csv-filter`` package::
 
-    $ pip install sphinx-csv-filter
+    $ ln -s ../../../sphinx_csv_filter/src/crate/sphinx src/crate/sphinx
+
+These command assume that your clone of the `Sphinx CSV Filter`_ repository is
+located at ``../sphinx_csv_filter``, relative to your clone of the docs theme
+repository. If this isn't true, clone the repository, or adjust the paths.
+
+To build the docs, run::
+
+    $ sphinx-build -n -b html -E `pwd`/blackbox/docs `pwd`/out/html
+
+You should now be able to view the built docs, like so::
+
+    $ open out/html/index.html
 
 Preparing a Release
 ===================
@@ -57,17 +67,21 @@ To create a new release, you must:
 PyPI Deployment
 ===============
 
-First, clean the ``dist`` directory::
+To make releases, will need `wheel` installed::
+
+    $ pip install wheel
+
+Clean the ``dist`` directory::
 
     $ rm dist/*
 
 To create the package use::
 
-    $ bin/py setup.py sdist bdist_wheel
+    $ python setup.py sdist bdist_wheel
 
 Then, use twine_ to upload the package to PyPI_::
 
-    $ bin/twine upload dist/*
+    $ twine upload dist/*
 
 For this to work, you will need a personal PyPI account that is set up as a project admin.
 
@@ -88,7 +102,39 @@ If you want to check the PyPI description before uploading, run this::
 
     $ bin/py setup.py check --strict --restructuredtext
 
+Rebuilding the CrateDB Docs
+===========================
+
+After releasing the new version of the ``crate-docs-theme`` package, per the
+instructions above, you will need to manually wipe and rebuild each version of
+the hosted docs you wish to update.
+
+Before continuing, you will need a ReadTheDocs_ (RTD) account, and you will need
+to be added as an admin for the `CrateDB RTD project`_.
+
+Firstly, go to the Versions_ page. Find the version you want to rebuild, and
+select the *Wipe* action, then confirm on the next screen. This wipes the build
+environment for that version, allowing RTD to pick up the newest theme.
+
+Once done, go to the Builds_ page, the select the version you want to rebuild
+from the drop-down menu, and select *Build Version*.
+
+Once the docs have been rebuilt (you can refresh this page to get the current
+status) you can switch back to the Versions_ page and click on the version to
+view the docs as they appear on RTD.
+
+The Crate.io website sits behind Fastly, which aggressively caches all content.
+So it may be some time before the docs (as they are linked to from the main
+site) update.
+
 .. _buildout: https://pypi.python.org/pypi/zc.buildout
+.. _Builds: https://readthedocs.org/projects/crate/builds/
+.. _CrateDB RTD project: https://readthedocs.org/projects/crate/
+.. _Fastly: https://www.fastly.com/
 .. _Grunt: https://gruntjs.com/
 .. _PyPI: https://pypi.python.org/pypi
+.. _ReadTheDocs: https://readthedocs.org/
+.. _Sphinx CSV Filter: https://github.com/crate/sphinx_csv_filter
+.. _the CrateDB repository: https://github.com/crate/crate
 .. _twine: https://pypi.python.org/pypi/twine
+.. _Versions: https://readthedocs.org/projects/crate/versions/

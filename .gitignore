@@ -4,6 +4,10 @@ build/
 parts/
 dist/
 docs/
+blackbox/docs
+sql/
+node_modules/
+src/crate/sphinx
 out/
 env/
 .installed.cfg
