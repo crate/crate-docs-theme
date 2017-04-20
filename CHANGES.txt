@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/04/20 0.5.19
+-----------------
+
+- Updated header and footer to match main website
+
 2017/02/20 0.5.18
 -----------------
 
