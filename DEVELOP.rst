@@ -7,6 +7,10 @@ Prerequisites
 
 This project requires Python 3.4 or greater for development.
 
+To make releases, will need `wheel` installed::
+
+    $ pip install wheel
+
 Setup
 =====
 
@@ -52,6 +56,10 @@ To create a new release, you must:
 
 PyPI Deployment
 ===============
+
+First, clean the ``dist`` directory::
+
+    $ rm dist/*
 
 To create the package use::
 
