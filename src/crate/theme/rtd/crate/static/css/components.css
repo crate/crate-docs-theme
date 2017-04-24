@@ -75,6 +75,51 @@ html.w-mod-touch * {
 .w-hidden {
   display: none;
 }
+
+.mktoAsterix {  
+    display: none !important;
+    }
+    
+.mktoField {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    }
+
+.mktoFormCol {
+    margin-bottom: 0 !important;
+    }
+
+.mktoFieldDescriptor, .mktoForm, .mktoFieldWrap, textarea.mktoField, .mktoButtonRow {
+    width: 100% !important;
+    
+    }
+
+.mktoButtonWrap {
+    margin-left: 0px !important;
+    width: 100% !important;
+    }
+    
+    .mktoOffset {
+        height: 2px !important;
+        }
+
+.mktoButton {
+    margin-top: 20px !important;
+  font-size: 16px !important;
+  display: inline-block !important;
+  padding: 12px 15px !important;
+  background-color: #000 !important;
+  color: white !important;
+  border: 0 !important;
+  line-height: inherit !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  border-radius: 0 !important;
+  background-image: none !important;
+  width: 100% !important;
+
+  
+    }
 .w-button {
   display: inline-block;
   padding: 9px 15px;
@@ -85,6 +130,7 @@ html.w-mod-touch * {
   text-decoration: none;
   cursor: pointer;
   border-radius: 0;
+  
 }
 input.w-button {
   -webkit-appearance: button;
@@ -217,7 +263,23 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
 }
-.w-input,
+
+.mktoTextField, .mktoEmailField {
+display: block !important;
+  width: 100% !important;
+  height: 38px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 10px !important;
+  font-size: 14px !important;
+  line-height: 1.428571429 !important;
+  color: #333333 !important;
+  vertical-align: middle !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc !important;  
+    
+    }
+
+.w-input, 
 .w-select {
   display: block;
   width: 100%;
@@ -273,6 +335,18 @@ textarea.w-select {
 .w-select[multiple] {
   height: auto;
 }
+
+.mktoLabel {
+    display: inline-block !important;
+  cursor: pointer !important;
+  font-weight: normal !important;
+  margin-bottom: 0px !important;  
+  padding-bottom: 3px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 16px;
+  color: #333 !important;
+  font-weight: normal !important;
+    }
 .w-form-label {
   display: inline-block;
   cursor: pointer;
@@ -384,109 +458,14 @@ textarea.w-select {
 .w-col-12 {
   width: 100%;
 }
-.w-col-push-1 {
-  left: 8.33333333%;
-}
-.w-col-push-2 {
-  left: 16.66666667%;
-}
-.w-col-push-3 {
-  left: 25%;
-}
-.w-col-push-4 {
-  left: 33.33333333%;
-}
-.w-col-push-5 {
-  left: 41.66666667%;
-}
-.w-col-push-6 {
-  left: 50%;
-}
-.w-col-push-7 {
-  left: 58.33333333%;
-}
-.w-col-push-8 {
-  left: 66.66666667%;
-}
-.w-col-push-9 {
-  left: 75%;
-}
-.w-col-push-10 {
-  left: 83.33333333%;
-}
-.w-col-push-11 {
-  left: 91.66666667%;
-}
-.w-col-pull-1 {
-  right: 8.33333333%;
-}
-.w-col-pull-2 {
-  right: 16.66666667%;
-}
-.w-col-pull-3 {
-  right: 25%;
-}
-.w-col-pull-4 {
-  right: 33.33333333%;
-}
-.w-col-pull-5 {
-  right: 41.66666667%;
-}
-.w-col-pull-6 {
-  right: 50%;
-}
-.w-col-pull-7 {
-  right: 58.33333333%;
-}
-.w-col-pull-8 {
-  right: 66.66666667%;
-}
-.w-col-pull-9 {
-  right: 75%;
-}
-.w-col-pull-10 {
-  right: 83.33333333%;
-}
-.w-col-pull-11 {
-  right: 91.66666667%;
-}
-.w-col-offset-1 {
-  margin-left: 8.33333333%;
-}
-.w-col-offset-2 {
-  margin-left: 16.66666667%;
-}
-.w-col-offset-3 {
-  margin-left: 25%;
-}
-.w-col-offset-4 {
-  margin-left: 33.33333333%;
-}
-.w-col-offset-5 {
-  margin-left: 41.66666667%;
-}
-.w-col-offset-6 {
-  margin-left: 50%;
-}
-.w-col-offset-7 {
-  margin-left: 58.33333333%;
-}
-.w-col-offset-8 {
-  margin-left: 66.66666667%;
-}
-.w-col-offset-9 {
-  margin-left: 75%;
-}
-.w-col-offset-10 {
-  margin-left: 83.33333333%;
-}
-.w-col-offset-11 {
-  margin-left: 91.66666667%;
-}
 .w-hidden-main {
   display: none !important;
 }
 @media screen and (max-width: 991px) {
+    
+  #notification {
+    display: none !important;
+      }
   .w-container {
     max-width: 728px;
   }
@@ -531,105 +510,6 @@ textarea.w-select {
   }
   .w-col-medium-12 {
     width: 100%;
-  }
-  .w-col-medium-push-1 {
-    left: 8.33333333%;
-  }
-  .w-col-medium-push-2 {
-    left: 16.66666667%;
-  }
-  .w-col-medium-push-3 {
-    left: 25%;
-  }
-  .w-col-medium-push-4 {
-    left: 33.33333333%;
-  }
-  .w-col-medium-push-5 {
-    left: 41.66666667%;
-  }
-  .w-col-medium-push-6 {
-    left: 50%;
-  }
-  .w-col-medium-push-7 {
-    left: 58.33333333%;
-  }
-  .w-col-medium-push-8 {
-    left: 66.66666667%;
-  }
-  .w-col-medium-push-9 {
-    left: 75%;
-  }
-  .w-col-medium-push-10 {
-    left: 83.33333333%;
-  }
-  .w-col-medium-push-11 {
-    left: 91.66666667%;
-  }
-  .w-col-medium-pull-1 {
-    right: 8.33333333%;
-  }
-  .w-col-medium-pull-2 {
-    right: 16.66666667%;
-  }
-  .w-col-medium-pull-3 {
-    right: 25%;
-  }
-  .w-col-medium-pull-4 {
-    right: 33.33333333%;
-  }
-  .w-col-medium-pull-5 {
-    right: 41.66666667%;
-  }
-  .w-col-medium-pull-6 {
-    right: 50%;
-  }
-  .w-col-medium-pull-7 {
-    right: 58.33333333%;
-  }
-  .w-col-medium-pull-8 {
-    right: 66.66666667%;
-  }
-  .w-col-medium-pull-9 {
-    right: 75%;
-  }
-  .w-col-medium-pull-10 {
-    right: 83.33333333%;
-  }
-  .w-col-medium-pull-11 {
-    right: 91.66666667%;
-  }
-  .w-col-medium-offset-1 {
-    margin-left: 8.33333333%;
-  }
-  .w-col-medium-offset-2 {
-    margin-left: 16.66666667%;
-  }
-  .w-col-medium-offset-3 {
-    margin-left: 25%;
-  }
-  .w-col-medium-offset-4 {
-    margin-left: 33.33333333%;
-  }
-  .w-col-medium-offset-5 {
-    margin-left: 41.66666667%;
-  }
-  .w-col-medium-offset-6 {
-    margin-left: 50%;
-  }
-  .w-col-medium-offset-7 {
-    margin-left: 58.33333333%;
-  }
-  .w-col-medium-offset-8 {
-    margin-left: 66.66666667%;
-  }
-  .w-col-medium-offset-9 {
-    margin-left: 75%;
-  }
-  .w-col-medium-offset-10 {
-    margin-left: 83.33333333%;
-  }
-  .w-col-medium-offset-11 {
-    margin-left: 91.66666667%;
   }
   .w-col-stack {
     width: 100%;
@@ -693,105 +573,6 @@ textarea.w-select {
   .w-col-small-12 {
     width: 100%;
   }
-  .w-col-small-push-1 {
-    left: 8.33333333%;
-  }
-  .w-col-small-push-2 {
-    left: 16.66666667%;
-  }
-  .w-col-small-push-3 {
-    left: 25%;
-  }
-  .w-col-small-push-4 {
-    left: 33.33333333%;
-  }
-  .w-col-small-push-5 {
-    left: 41.66666667%;
-  }
-  .w-col-small-push-6 {
-    left: 50%;
-  }
-  .w-col-small-push-7 {
-    left: 58.33333333%;
-  }
-  .w-col-small-push-8 {
-    left: 66.66666667%;
-  }
-  .w-col-small-push-9 {
-    left: 75%;
-  }
-  .w-col-small-push-10 {
-    left: 83.33333333%;
-  }
-  .w-col-small-push-11 {
-    left: 91.66666667%;
-  }
-  .w-col-small-pull-1 {
-    right: 8.33333333%;
-  }
-  .w-col-small-pull-2 {
-    right: 16.66666667%;
-  }
-  .w-col-small-pull-3 {
-    right: 25%;
-  }
-  .w-col-small-pull-4 {
-    right: 33.33333333%;
-  }
-  .w-col-small-pull-5 {
-    right: 41.66666667%;
-  }
-  .w-col-small-pull-6 {
-    right: 50%;
-  }
-  .w-col-small-pull-7 {
-    right: 58.33333333%;
-  }
-  .w-col-small-pull-8 {
-    right: 66.66666667%;
-  }
-  .w-col-small-pull-9 {
-    right: 75%;
-  }
-  .w-col-small-pull-10 {
-    right: 83.33333333%;
-  }
-  .w-col-small-pull-11 {
-    right: 91.66666667%;
-  }
-  .w-col-small-offset-1 {
-    margin-left: 8.33333333%;
-  }
-  .w-col-small-offset-2 {
-    margin-left: 16.66666667%;
-  }
-  .w-col-small-offset-3 {
-    margin-left: 25%;
-  }
-  .w-col-small-offset-4 {
-    margin-left: 33.33333333%;
-  }
-  .w-col-small-offset-5 {
-    margin-left: 41.66666667%;
-  }
-  .w-col-small-offset-6 {
-    margin-left: 50%;
-  }
-  .w-col-small-offset-7 {
-    margin-left: 58.33333333%;
-  }
-  .w-col-small-offset-8 {
-    margin-left: 66.66666667%;
-  }
-  .w-col-small-offset-9 {
-    margin-left: 75%;
-  }
-  .w-col-small-offset-10 {
-    margin-left: 83.33333333%;
-  }
-  .w-col-small-offset-11 {
-    margin-left: 91.66666667%;
-  }
 }
 @media screen and (max-width: 479px) {
   .w-container {
@@ -847,105 +628,6 @@ textarea.w-select {
   }
   .w-col-tiny-12 {
     width: 100%;
-  }
-  .w-col-tiny-push-1 {
-    left: 8.33333333%;
-  }
-  .w-col-tiny-push-2 {
-    left: 16.66666667%;
-  }
-  .w-col-tiny-push-3 {
-    left: 25%;
-  }
-  .w-col-tiny-push-4 {
-    left: 33.33333333%;
-  }
-  .w-col-tiny-push-5 {
-    left: 41.66666667%;
-  }
-  .w-col-tiny-push-6 {
-    left: 50%;
-  }
-  .w-col-tiny-push-7 {
-    left: 58.33333333%;
-  }
-  .w-col-tiny-push-8 {
-    left: 66.66666667%;
-  }
-  .w-col-tiny-push-9 {
-    left: 75%;
-  }
-  .w-col-tiny-push-10 {
-    left: 83.33333333%;
-  }
-  .w-col-tiny-push-11 {
-    left: 91.66666667%;
-  }
-  .w-col-tiny-pull-1 {
-    right: 8.33333333%;
-  }
-  .w-col-tiny-pull-2 {
-    right: 16.66666667%;
-  }
-  .w-col-tiny-pull-3 {
-    right: 25%;
-  }
-  .w-col-tiny-pull-4 {
-    right: 33.33333333%;
-  }
-  .w-col-tiny-pull-5 {
-    right: 41.66666667%;
-  }
-  .w-col-tiny-pull-6 {
-    right: 50%;
-  }
-  .w-col-tiny-pull-7 {
-    right: 58.33333333%;
-  }
-  .w-col-tiny-pull-8 {
-    right: 66.66666667%;
-  }
-  .w-col-tiny-pull-9 {
-    right: 75%;
-  }
-  .w-col-tiny-pull-10 {
-    right: 83.33333333%;
-  }
-  .w-col-tiny-pull-11 {
-    right: 91.66666667%;
-  }
-  .w-col-tiny-offset-1 {
-    margin-left: 8.33333333%;
-  }
-  .w-col-tiny-offset-2 {
-    margin-left: 16.66666667%;
-  }
-  .w-col-tiny-offset-3 {
-    margin-left: 25%;
-  }
-  .w-col-tiny-offset-4 {
-    margin-left: 33.33333333%;
-  }
-  .w-col-tiny-offset-5 {
-    margin-left: 41.66666667%;
-  }
-  .w-col-tiny-offset-6 {
-    margin-left: 50%;
-  }
-  .w-col-tiny-offset-7 {
-    margin-left: 58.33333333%;
-  }
-  .w-col-tiny-offset-8 {
-    margin-left: 66.66666667%;
-  }
-  .w-col-tiny-offset-9 {
-    margin-left: 75%;
-  }
-  .w-col-tiny-offset-10 {
-    margin-left: 83.33333333%;
-  }
-  .w-col-tiny-offset-11 {
-    margin-left: 91.66666667%;
   }
 }
 .w-widget {
@@ -1096,6 +778,25 @@ textarea.w-select {
 .w-widget-gplus {
   overflow: hidden;
 }
+.w-background-video {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  color: white;
+}
+.w-background-video > video {
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  right: -100%;
+  bottom: -100%;
+  top: -100%;
+  left: -100%;
+  margin: auto;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+}
 .w-slider {
   position: relative;
   height: 300px;
@@ -1139,12 +840,7 @@ textarea.w-select {
   tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .w-slider-nav.w-round > div {
-  -webkit-border-radius: 100%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 100%;
-  -moz-background-clip: padding;
   border-radius: 100%;
-  background-clip: padding-box;
 }
 .w-slider-nav.w-num > div {
   width: auto;
@@ -1154,8 +850,6 @@ textarea.w-select {
   line-height: inherit;
 }
 .w-slider-nav.w-shadow > div {
-  -webkit-box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
-  -moz-box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
   box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
 }
 .w-slider-nav-invert {
@@ -1175,9 +869,6 @@ textarea.w-select {
   background-color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   margin: 0 3px 0.5em;
-  -webkit-transition: background-color 100ms, color 100ms;
-  -moz-transition: background-color 100ms, color 100ms;
-  -o-transition: background-color 100ms, color 100ms;
   transition: background-color 100ms, color 100ms;
 }
 .w-slider-dot.w-active {
@@ -1730,6 +1421,8 @@ textarea.w-select {
   text-align: center;
   clear: both;
   display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 .w-richtext figure.w-richtext-align-fullwidth > div {
   display: inline-block;
@@ -1750,21 +1443,6 @@ textarea.w-select {
   float: right;
   margin-left: 15px;
   clear: none;
-}
-/* The video overlay (prevents interacting with (ie: playing) the video)
-   should only be present when the rich text node can be edited in that context with the RTE.
-   1. In the designer canvas - when not previewing the site
-   2. In the editor canvas for rich text dyn collection fields
-   3. In the editor canvas for static rich text fields made editable (ie: blobs)
-   4. In the data managers (see both RichTextInput.less files) as this file is not used there
-*/
-.wf-design-mode figure[data-rt-type="video"] > div:before,
-.w-editor-mount .w-dyn-list figure[data-rt-type="video"] > div:before,
-.w-editor-mount .w-rte-editable figure[data-rt-type="video"] > div:before {
-  display: block;
-}
-.w-editor-mount .w-rte-editable {
-  cursor: text;
 }
 .w-nav {
   position: relative;
@@ -1946,14 +1624,6 @@ textarea.w-select {
 }
 .w-ix-emptyfix:after {
   content: "";
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
 }
 @keyframes spin {
   0% {
