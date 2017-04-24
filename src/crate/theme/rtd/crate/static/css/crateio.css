@@ -22,7 +22,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     }
-
+    
 .sub-menu li a {
     display:block;
     padding-top: 12px;
@@ -36,11 +36,11 @@
 .menu-item-has-children .sub-menu {
     display: none;
     }
-
+    
 .menu-item-has-children:hover .sub-menu{
     display: block;
-
-    }
+    
+    }    
 
 body {
   margin-bottom: 0px;
@@ -51,7 +51,7 @@ body {
   letter-spacing: 0.3px;
 }
 
-h1 {
+h1 {    
   margin-top: 0px;
   margin-bottom: 16px;
   font-family: 'Blender Pro', sans-serif;
@@ -127,11 +127,11 @@ blockquote {
   line-height: 1.5em;
 }
 
-#sidebarMenu {
+#sidebarMenu, #menu-solution-child-menu {
     list-style-type: none;
     padding-left: 0;
     }
-#sidebarMenu li {
+#sidebarMenu li, #menu-solution-child-menu li {
     padding-top: 1px;
     padding-bottom: 1px;
     }
@@ -144,7 +144,7 @@ blockquote {
 #menu-overview-child-page-menu li {
     padding-top: 1px;
     padding-bottom: 1px;
-
+    
     }
 
 .navbar {
@@ -264,9 +264,9 @@ header .brand {
     display: inline-block;
     width: 10px;
     line-height: 1.5;
-
+    
     }
-
+    
 .section {
   margin-top: 64px;
   margin-bottom: 64px;
@@ -390,7 +390,7 @@ header .brand {
 }
 
 .bg-jobs {
-   background-image: url('../../../uploads/2017/01/snowsprint.jpg');
+   background-image: url('../../../uploads/2017/01/snowsprint.jpg'); 
     }
 
 .section.hero.bg-jobs {
@@ -403,7 +403,7 @@ header .brand {
 
 .section.hero.bg-hero-home {
   min-height: 400px;
-  background-image: url('../../../uploads/2016/11/hero-data-mountains-optimized.jpg');
+  background-image: url('/wp-content/uploads/2017/04/hero-data-mountains-optimized-v2.jpg');
   background-position: 50% 0px;
   background-size: cover;
 }
@@ -1007,7 +1007,7 @@ pre code {
 a.learn-more-link, .wrapper-teaser-img p {
     color: #000 !important;
     }
-
+    
 
 
 .awards-logo-bw {
@@ -1522,9 +1522,9 @@ a.learn-more-link, .wrapper-teaser-img p {
     background-size: 200px;
     background-position: 50% 100%;
     }
-
+    
 .customer-callout-drawer {
-  background: url('/wp-content/uploads/2017/04/hero-wire-mountains.png') no-repeat center center fixed;
+  background: url('/wp-content/uploads/2017/04/hero-wire-mountains-optimized-v2.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1543,11 +1543,11 @@ a.learn-more-link, .wrapper-teaser-img p {
 .customer-callout-drawer .job-title {
     margin-bottom: 0;
     }
-
+    
 .customer-callout-drawer .quote {
     padding-top: 15px;
-    }
-
+    }    
+    
 .section.customer-logo-drawer {
     margin-bottom: 0;
     }
@@ -1556,7 +1556,7 @@ a.learn-more-link, .wrapper-teaser-img p {
     position: relative;
     left: 29%;
     width:50px;
-
+    
     }
 .bg-lightblue {
   background-color: #e6f9fe;
@@ -1625,7 +1625,7 @@ a.learn-more-link, .wrapper-teaser-img p {
 .home-values-text-wrapper a {
     font-size: 16px;
     }
-
+    
 .home-values-text-wrapper .icon-link {
     margin-top: 9px;
     }
@@ -1684,39 +1684,40 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
  padding-top: 20px;
  vertical-align: middle;
 
-}
-.header-row td { background-color: #55d4f5 !important; }
-.pricing-table>tbody>tr:nth-of-type(even) td { background-color: #f9f9f9;}
+ 
+} 
+.header-row td,{ background-color: #55d4f5 !important; }
+.pricing-table>tbody>tr:nth-of-type(even) td, .blog-table { background-color: #f9f9f9;}
 .align-left { padding-left: 12px !important; font-weight: bold; font-size: 15px !important; }
 
 .pricing-table tr.header-row {
-
+    
     }
 
-
+    
 .pricing-table tr.header-row td{
     vertical-align: bottom;
     padding-top: 8px;
     padding-bottom: 0 !important;
 
     }
-
+    
 .pricing-table tr td {
     padding-top: 15px;
     padding-bottom: 15px;
     }
-
-
+    
+        
 .pricing-table tr td p {
     font-size: 15px;
     }
-
+    
  .pricing-table tr.header-row h2 {
      font-size: 16px;
      margin-bottom:4px;
      color: #fff;
-     }
-
+     }   
+     
 .pricing-table tr {
   border-bottom: 1px solid #e7e7e7;
 }
@@ -1743,7 +1744,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 .cr-department {
 	display: table-cell;
 	min-width: 50%;
-	margin-bottom:10px;
+	margin-bottom:10px; 
 }
 
 .cr-department-title{
@@ -1827,11 +1828,11 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 .download-half {
     padding-right: 25px;
     }
-
+    
 .footer-listitem-new {
     display: block;
     }
-
+    
 .footer-listitem-new a{
     color: #000;
     }
@@ -1840,26 +1841,26 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
     list-style-type: none;
     padding-left: 0;
     }
-
+    
 .menu-Label {
     font-weight: bold;
     }
-
+    
 .press-releases p {
     color: #000;
     }
-
+    
     .ppc.bg-hero-landing-page.hero.section {
        	  background-image: url('/wp-content/uploads/2016/12/bg-lp-kanisfluh.jpg');
           background-position: 0px 0px;
           background-size: cover;
-          background-repeat: no-repeat;
+          background-repeat: no-repeat; 
       }
       .ppc .image-content {
           width: 210px;
           display: inline-block;
          vertical-align: top;
-
+        
       }
       .ppc .content {
         display: inline-block;
@@ -1867,25 +1868,25 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
       }
       .ppc .content h4 {
         color: #000;
-
+        
       }
       .ppc .content h3 {
         margin-bottom: 4px;
         color: #55d4f5;
-
+        
       }
       .ppc .content {
         background-image:url('/wp-content/uploads/2016/12/keyword-1.jpg');
         background-size: 210px;
         background-repeat: no-repeat;
         padding-bottom: 25px;
-
+        
       }
       .ppc .three-columns, .gatedAsset .three-columns {
         padding-right: 15px;
-
+        
       }
-
+      
       .ppc .three-columns ul.learn, .gatedAsset .three-columns ul.learn, ul.learn {
         list-style-type: none;
         padding-left: 0;
@@ -1895,19 +1896,19 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
         background-repeat: no-repeat;
         padding-left: 35px;
         padding-bottom: 10px;
-
+        
       }
       .ppc .three-columns.blue, .gatedAsset .three-columns.blue {
         border: 4px solid #55d4f5;
         padding-bottom: 20px;
     	padding-top: 20pX;
-
+        
       }
       .gatedAsset.bg-hero-landing-page.hero.section {
        	  background-image: url('/wp-content/uploads/2016/12/bg-lp-kanisfluh.jpg');
           background-position: 0px 0px;
           background-size: cover;
-          background-repeat: no-repeat;
+          background-repeat: no-repeat; 
       }
       .gatedAsset .content {
         display: inline-block;
@@ -1915,18 +1916,18 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
       }
       .gatedAsset .content h4 {
         color: #000;
-
+        
       }
       .gatedAsset .content h3 {
         margin-bottom: 4px;
         color: #ff5b4d;
-
+        
       }
       .gatedAsset .content {
         background-image:url('/wp-content/uploads/2016/12/ebook.png');
         background-size: 210px;
         background-repeat: no-repeat;
-
+        
       }
       .eBook {
         background-image:url('/wp-content/uploads/2016/12/eBook.jpg');
@@ -1959,9 +1960,9 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
     	color: #fff;
     	margin-top: 35px;
     	display: inline-block;
-      }
+      }  
       .resources {
-        width: 100%;
+        width: 30%;
         background-color: #55d4f5;
         color: #fff;
         display: inline-block;
@@ -1970,13 +1971,13 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
         padding-bottom: 15px;
         margin-top: 46px;
       }
-      .resources:hover {
+      .resources:hover { 
         color: #fff !important;
       }
-
+    
      .gatedAsset.form {
         padding-left: 15px;
-
+         
          }
       .thanksText p{
         font-size: 18px;
@@ -1985,21 +1986,21 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 
 @media (max-width: 991px) {
 
-
+    
        .ppc .content {
           background-image: none !important;
           padding-left: 0;
           text-align: center;
         }
         .ppc .container.w-container {
-            text-align: center;
+            text-align: center; 
         }
     .mobileHoriztonalMenu {
         margin-top: 10px;
         }
     .mobileHoriztonalMenu li {
         display: inline-block !important;
-
+        
         }
     .mobileAlign {
         text-align: center;
@@ -2107,7 +2108,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
     .customer-callout-drawer, .indicator-tab {
         display: none; !important;
         }
-
+        
     .indicator-div a img {
         display: block;
         margin-left: auto;
@@ -2280,11 +2281,11 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
     .mobileHoriztonalMenu {
         margin-top: 10px;
         }
-
+        
     .mobileAlign {
         text-align: center;
         }
-
+    
   .button.big-button {
     padding-right: 64px;
     padding-left: 64px;
@@ -2388,7 +2389,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
   }
 }
 @media screen and (max-width: 991px) {
-
+    
   #notification {
     display: none !important;
       }
