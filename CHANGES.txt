@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/04/25 0.5.22
+-----------------
+
 - Fix CSS filename and HTML indentation
 
 2017/04/24 0.5.21
