@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/05/02 0.5.23
+-----------------
+
 - Fix issue that caused the doc navigation to not be displayed.
 
 2017/04/25 0.5.22
