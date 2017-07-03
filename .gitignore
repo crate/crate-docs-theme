@@ -3,7 +3,7 @@
 *.egg-info
 *.pyc
 bin/
-blackbox/docs
+blackbox
 build/
 develop-eggs/
 dist/
@@ -14,5 +14,5 @@ env/
 node_modules/
 out/
 parts/
-sql/
+sql
 src/crate/sphinx
