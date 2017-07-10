@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/07/10 0.5.25
+-----------------
+
+- Update navigation for docs reorganisation
+
 2017/07/03 0.5.24
 -----------------
 
