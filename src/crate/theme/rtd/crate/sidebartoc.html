@@ -36,14 +36,6 @@
     {% else %}
     <li class="navleft-item"><a href="/docs/clients/python">Python</a></li>
     {% endif %}
-    {% if project == 'Crate Java Client' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Java</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-    {% else %}
-    <li class="navleft-item"><a href="/docs/clients/java">Java</a></li>
-    {% endif %}
     {% if project == 'Crate JDBC Driver' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">JDBC</a>
