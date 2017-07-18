@@ -5,7 +5,7 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
-2017/07/10 0.5.26
+2017/07/17 0.5.26
 -----------------
 
 - Drop Mesos docs from navigation
@@ -23,7 +23,7 @@ Unreleased
 2017/05/02 0.5.23
 -----------------
 
-- Fix issue that caused the doc navigation to not be displayed.
+- Fix issue that caused the doc navigation to not be displayed
 
 2017/04/25 0.5.22
 -----------------
@@ -48,7 +48,7 @@ Unreleased
 2017/02/20 0.5.18
 -----------------
 
-- Fixed issue that caused the search result links to be broken.
+- Fixed issue that caused the search result links to be broken
 
 2017/02/20 0.5.17
 -----------------
@@ -92,7 +92,7 @@ Unreleased
 
 2016/04/05 0.5.9
 ----------------
-- Added padding to stop system scroll bars obscuring code.
+- Added padding to stop system scroll bars obscuring code
 
 2016/03/30 0.5.8
 ----------------
@@ -102,7 +102,7 @@ Unreleased
 2016/03/17 0.5.7
 ----------------
 
-- Fixed layout issue that caused a layout overlapping of results on search page.
+- Fixed layout issue that caused a layout overlapping of results on search page
 
 2016/03/16 0.5.6
 ----------------
@@ -152,9 +152,9 @@ Unreleased
 2015/12/15 0.4.3
 ----------------
 
-- Removed two links in the top nav as quick fix for new website.
+- Removed two links in the top nav as quick fix for new website
 
-- Fixed the links in the footer section for the new urls.
+- Fixed the links in the footer section for the new urls
 
 2015/09/05 0.4.2
 ----------------
@@ -247,44 +247,44 @@ Unreleased
 2014/07/03 0.2.7
 ----------------
 
- - fixed css selector for code literals in tables
+- fixed css selector for code literals in tables
 
 2014/07/03 0.2.6
 ----------------
 
- - do not break table header lines and code literals in tables
+- do not break table header lines and code literals in tables
 
 2014/05/20 0.2.5
 ----------------
 
- - added conf for crate jdbc driver
+- added conf for crate jdbc driver
 
 2014/05/19 0.2.4
 ----------------
 
- - fix: linebreaks in code blocks
+- fix: linebreaks in code blocks
 
 2014/05/12 0.2.3
 ----------------
 
- - added conf for java client
+- added conf for java client
 
 2014/05/08 0.2.2
 ----------------
 
- - fixed crash config
+- fixed crash config
 
 2014/05/08 0.2.1
 ----------------
 
- - make urls in version dropdown absolute
+- make urls in version dropdown absolute
 
 2014/05/08 0.2.0
 ----------------
 
- - changed package structure to crate.theme.rtd
+- changed package structure to crate.theme.rtd
 
 2014/05/07 0.1.0
 ----------------
 
-  - Initial theme
+- Initial theme
