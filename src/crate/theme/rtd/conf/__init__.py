@@ -38,7 +38,6 @@ html_theme_path = theme.get_html_theme_path()
 nitpicky = True
 html_show_sourcelink = False
 html_sidebars = {'**': ['sidebar.html', 'sourcelink.html']}
-html_favicon = "favicon.ico"
 html_theme_options = {
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
