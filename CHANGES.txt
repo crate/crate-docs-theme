@@ -5,6 +5,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Dropped favicon config
+
 2017/07/18 0.5.28
 -----------------
 
