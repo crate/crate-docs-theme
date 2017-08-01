@@ -31,9 +31,6 @@
   {% if canonical_url %}
     <!-- CANONICAL URL AS SET BY CRATE THEME -->
     <link rel="canonical" href="https://crate.io/{{ theme_canonical_url_path }}{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
-    <!-- canonical_url = {{ canonical_url }} -->
-    {%- set canonical_url = "https://crate.io/" + theme_canonical_url_path %}
-    <!-- canonical_url = {{ canonical_url }} -->
   {% endif %}
   {% endblock %}
 
@@ -42,8 +39,6 @@
   {% block relbar1 %}{% endblock %}
   {% block relbar2 %}{% endblock %}
   {% block sidebarsourcelink %}{% endblock %}
-
-  <!-- canonical_url = {{ canonical_url }} -->
 
   {%- block content %}
   {% include "navbar.html" %}
