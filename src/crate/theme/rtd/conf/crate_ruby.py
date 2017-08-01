@@ -25,6 +25,6 @@ project = u'Crate Ruby Driver'
 primary_domain = 'Crate.Ruby'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/projects/crate-ruby/',
+    'canonical_url_path': 'docs/clients/ruby/',
     'tracking_project': 'crate-ruby',
 })
