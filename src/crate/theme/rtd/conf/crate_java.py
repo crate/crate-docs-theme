@@ -25,6 +25,6 @@ project = u'Crate Java Client'
 primary_domain = 'Crate.Java'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/projects/crate-java/',
+    'canonical_url_path': 'docs/clients/java/',
     'tracking_project': 'crate-java',
 })

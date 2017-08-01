@@ -25,6 +25,6 @@ project = u'Crate DBAL'
 primary_domain = 'Crate.DBAL'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/projects/crate-dbal/',
+    'canonical_url_path': 'docs/clients/dbal/',
     'tracking_project': 'crate-dbal',
 })
