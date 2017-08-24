@@ -17,6 +17,9 @@ To start things off, run::
     $ python3 -m venv env
     $ source env/bin/activate
 
+*NOTE: you must run these two commands every time you want to build the docs.
+If you don't, the ``sphinx-build`` command will fail.*
+
 Then, run::
 
     $ pip install -e .
