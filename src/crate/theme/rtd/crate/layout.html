@@ -28,6 +28,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   {% set ending = "/" if builder == "readthedocsdirhtml" else ".html" %}
   {% set canonical_page = pagename + ending %}
+  <!-- {{ canonical_url }} -->
   {% if canonical_url %}
     <!-- CANONICAL URL AS SET BY CRATE THEME -->
     <link rel="canonical" href="https://crate.io/{{ theme_canonical_url_path }}{{ canonical_page.replace("index.html", "").replace("index/", "") }}" />
