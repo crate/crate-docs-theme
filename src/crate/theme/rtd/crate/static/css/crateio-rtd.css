@@ -158,6 +158,7 @@ blockquote {
 
 #nav-affix {
 	overflow-y: auto;
+	width: 240px;
 }
 
 .wrapper-navleft {
