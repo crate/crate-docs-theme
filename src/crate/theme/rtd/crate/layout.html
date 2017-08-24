@@ -2,6 +2,7 @@
 
   {% set css_files = [
     '_static/css/normalize.css',
+    '_static/css/bootstrap.css',
     '_static/css/components.css',
     '_static/css/crateio.css',
     '_static/css/crateio-rtd.css',
@@ -13,7 +14,8 @@
     '_static/js/underscore.min.js',
     '_static/doctools.js',
     '_static/js/searchtools.js',
-    '_static/js/webflow.js'
+    '_static/js/webflow.js',
+    '_static/js/bootstrap.js'
     ]
   %}
 
@@ -85,41 +87,37 @@
   {%- endblock %}
 
   {%- block custom_footer %}
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   <script>
-  function setMenu() {
-    $navAffix.height($( window ).height() + 20);
-  }
+  var $navAffix = $('#nav-affix');
+  // Desktop only
+  if( !$('#mobile-menu-toggler').is(':visible') ) {
 
-  if(!$('#mobile-menu-toggler').is(':visible')) {
-    var $navAffix = $('#nav-affix');
-
-    if($navAffix.length) {
-      $navAffix.width($navAffix.outerWidth(true)-32);
-      $(window).on('resize', function() {
-        $navAffix.width($navAffix.outerWidth(true)-32);
-      });
-      $navAffix.affix({
-        offset: {
-          top: $navAffix.position().top - 20,
-          bottom: $('footer').outerHeight(true) + 200
+    // Init
+    $navAffix.affix({
+      offset: {
+        top: 100,
+        bottom: function () {
+          return (this.bottom = $('footer').outerHeight(true) + 200)
         }
-      });
-      if($('.wrapper-content-right').outerHeight(true) < $navAffix.outerHeight(true))
-      $('.wrapper-content-right').css("minHeight", $navAffix.outerHeight(true) + "px");
-      $('body').scrollspy();
-      setMenu();
-      $(window).resize(function() {
-        setMenu();
-      });
-    }
+      }
+    });
+    // Recalculate the sidebar
+    $(window).resize(function() {
+      $navAffix.affix('checkPosition');
+    });
+
+    $('body').scrollspy();
+
   } else {
+
     $('.wrapper-navleft').hide();
     $('#mobile-menu-toggler').click(function() {
       $('.wrapper-navleft').toggle();
-    })
+    });
+
   }
+
   $(document).ready(function() {
     window.setTimeout(function() {$('body').append('<a href="https://crate.io/docs/support/slackin/" style="position: fixed; bottom: 20px; right: ' + ($('#intercom-launcher').is(':visible') ? '90' : '20') + 'px; box-shadow: 0 6px 13px 0 rgba(0, 0, 0, .23)"><img src="{{ pathto('_static', 1) }}/images/slack.png" id="slack-container" /></a>'); }, 2000);
   });
