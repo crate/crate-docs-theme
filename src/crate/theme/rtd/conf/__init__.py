@@ -52,6 +52,7 @@ html_theme_options = {
     # The URL path is required because RTD does only allow
     # root as a canonical url.
     'canonical_url_path': '',
+    'canonical_url': 'https://crate.io/docs/',
 
     # segment analytics configuration
     'tracking_segment_id': 'FToR4cE5lXyQziQirvt0kSnFQj0rAgu9',
