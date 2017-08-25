@@ -262,3 +262,27 @@ body .main-nav .sub-menu li a {
     display: block;
   }
 }
+
+/**
+* General
+*/
+.bs-docs-sidenav .toctree li {
+  margin-bottom: 3px;
+}
+
+.wrapper-navleft,
+.wrapper-content-right,
+#nav-affix {
+  width: 100%;
+  margin: 0;
+}
+
+.wrapper-navleft,
+#nav-affix {
+  max-width: 260px;
+}
+
+.wrapper-navleft,
+.wrapper-content-right {
+  margin: 0;
+}
