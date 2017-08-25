@@ -54,33 +54,39 @@
         <a href="#" id="mobile-menu-toggler" class="w-button">Toggle Doc Menu</a>
       </div>
     </div>
-    <div class="w-container container">
-      <div class="wrapper-navleft">
-        {%- block sidebar1 %}
-        {%- for sidebartemplate in sidebars %}
-        {%- include sidebartemplate %}
-        {%- endfor %}
-        {% endblock %}
-      </div>
-      <div class="wrapper-content-right">
-        {%- if current_version %}
-        <div class="version-select-container">
-          <div data-delay="0" class="w-dropdown">
-            <div class="w-dropdown-toggle toggle">
-              <div><a href="{{ pathto(master_doc) }}">v:{{ current_version }}</a></div>
-              <div class="w-icon-dropdown-toggle toggle-icon"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-3">
+          <aside class="wrapper-navleft">
+            {%- block sidebar1 %}
+            {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+            {%- endfor %}
+            {% endblock %}
+          </aside>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <div class="wrapper-content-right">
+            {%- if current_version %}
+            <div class="version-select-container">
+              <div data-delay="0" class="w-dropdown">
+                <div class="w-dropdown-toggle toggle">
+                  <div><a href="{{ pathto(master_doc) }}">v:{{ current_version }}</a></div>
+                  <div class="w-icon-dropdown-toggle toggle-icon"></div>
+                </div>
+                {%- if versions %}
+                <nav class="w-dropdown-list dropdown-list">
+                  {% for slug, url in versions %}
+                  <a href="https://crate.io/{{ theme_canonical_url_path }}{{ rtd_language }}/{{ slug }}/" class="w-dropdown-link">{{ slug }}</a>
+                  {% endfor %}
+                </nav>
+                {%- endif %}
+              </div>
             </div>
-            {%- if versions %}
-            <nav class="w-dropdown-list dropdown-list">
-              {% for slug, url in versions %}
-              <a href="https://crate.io/{{ theme_canonical_url_path }}{{ rtd_language }}/{{ slug }}/" class="w-dropdown-link">{{ slug }}</a>
-              {% endfor %}
-            </nav>
             {%- endif %}
+            {% block body %}{% endblock %}
           </div>
         </div>
-        {%- endif %}
-        {% block body %}{% endblock %}
       </div>
     </div>
   </div>
