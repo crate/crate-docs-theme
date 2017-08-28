@@ -98,22 +98,27 @@
 
   <script>
   var $navAffix = $('#nav-affix');
+  var $contentEl = $('.wrapper-content-right');
   // Desktop only
   if( !$('#mobile-menu-toggler').is(':visible') ) {
 
-    // Init
-    $navAffix.affix({
-      offset: {
-        top: 100,
-        bottom: function () {
-          return (this.bottom = $('footer').outerHeight(true) + 200)
+    // Only if the content is taller than the sidebar,
+    // to avoid scroll jerk
+    if ( $contentEl.height() > $navAffix.height() ) {
+      // Init
+      $navAffix.affix({
+        offset: {
+          top: 100,
+          bottom: function () {
+            return (this.bottom = $('footer').outerHeight(true) + 200)
+          }
         }
-      }
-    });
-    // Recalculate the sidebar
-    $(window).resize(function() {
-      $navAffix.affix('checkPosition');
-    });
+      });
+      // Recalculate the sidebar
+      $(window).resize(function() {
+        $navAffix.affix('checkPosition');
+      });
+    }
 
     $('body').scrollspy();
 
