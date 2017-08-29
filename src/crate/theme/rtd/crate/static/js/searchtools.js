@@ -302,7 +302,8 @@ var Search = {
     this.status = $('<p style="display: none"></p>').appendTo(this.out);
     this.output = $('<ul class="search"/>').appendTo(this.out);
 
-    $('#search-progress').text(_('Preparing search...'));
+    // Is this really needed?
+    // $('#search-progress').text(_('Preparing search...'));
     this.startPulse();
 
     // index already loaded, the browser was quick!
