@@ -33,9 +33,9 @@
   </p>
 
   <form class="form-search" action="" method="get">
-    <input type="text" name="q" class="input-medium search-query">
-    <button type="submit" class="btn">{{ _('search') }}</button>
-    <span id="search-progress" style="padding-left: 10px"></span>
+    <input type="text" name="q" class="input-medium search-query" placeholder="Search documentation...">
+    <button type="submit" class="btn btn-primary">{{ _('search') }}</button>
+    <!-- <span id="search-progress" style="padding-left: 10px"></span> -->
   </form>
 
   {% if search_performed %}
@@ -48,8 +48,11 @@
   {% if search_results %}
     <ul>
     {% for href, caption, context in search_results %}
-      <li><a href="{{ pathto(item.href) }}">{{ caption }}</a>
-        <div class="context">{{ context|e }}</div>
+      <li class="card">
+        <div class="card-block">
+          <h3 class="card-title"><a href="{{ pathto(item.href) }}">{{ caption }}</a></h3>
+          <div class="context">{{ context|e }}</div>
+        </div>
       </li>
     {% endfor %}
     </ul>
