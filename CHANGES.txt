@@ -5,6 +5,16 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/09/01 0.5.36
+-----------------
+
+- Fixed the scroll jerk issue on the sidebar
+- Updated the navbar to match the newer version on the website
+- Expanded container layout to match newer design
+- Added search documentation button to sidebar
+- Improved styling of search results page
+- Added custom.js and custom.css for easy front-end changes
+
 2017/08/24 0.5.35
 -----------------
 
