@@ -27,10 +27,13 @@
 {%- endif %}
 <div id="search-results">
   {%- if search_results %}
-  <ul class="search">
+  <ul>
     {% for href, caption, context in search_results %}
-    <li><a href="{{ docroot }}{{ href }}/?highlight={{ q }}">{{ caption }}</a>
-      <div class="context">{{ context|e }}</div>
+    <li class="card">
+      <div class="card-block">
+        <h3 class="card-title"><a href="{{ docroot }}{{ href }}/?highlight={{ q }}">{{ caption }}</a></h3>
+        <div class="context">{{ context|e }}</div>
+      </div>
     </li>
     {% endfor %}
   </ul>
