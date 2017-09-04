@@ -300,7 +300,7 @@ var Search = {
     this.title = $('<h2>' + _('Searching') + '</h2>').appendTo(this.out);
     this.dots = $('<span></span>').appendTo(this.title);
     this.status = $('<p style="display: none"></p>').appendTo(this.out);
-    this.output = $('<ul class="search"/>').appendTo(this.out);
+    this.output = $('<ul />').appendTo(this.out);
 
     // Is this really needed?
     // $('#search-progress').text(_('Preparing search...'));
