@@ -5,6 +5,12 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/09/04 0.5.37
+-----------------
+
+- Correct HTML structure for search results
+- Minor style changes
+
 2017/09/01 0.5.36
 -----------------
 
