@@ -186,3 +186,7 @@ a code {
     border: 0;
     font-weight: normal;
 }
+
+div.topic {
+    border: 0;
+}
