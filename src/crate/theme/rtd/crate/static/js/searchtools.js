@@ -413,7 +413,9 @@ var Search = {
         var item = results.pop();
         var file_name = item[0];
         var item_path = file_name.substr(0, file_name.lastIndexOf('.')) || file_name;
-        var listItem = $('<li style="display:none"></li>');
+        var listItem = $('<li class="card" style="display:none"></li>');
+        listItem.append('<div class="card-block"></div>');
+        var listItemContent = listItem.children('.card-block');
         if (DOCUMENTATION_OPTIONS.FILE_SUFFIX === '') {
           // dirhtml builder
           var dirname = item_path + '/';
@@ -422,16 +424,16 @@ var Search = {
           } else if (dirname == 'index/') {
             dirname = '';
           }
-          listItem.append($('<a/>').attr('href',
+          listItemContent.append($('<a/>').attr('href',
             DOCUMENTATION_OPTIONS.URL_ROOT + dirname +
             highlightstring + item[2]).html(item[1]));
         } else {
           // normal html builders
-          listItem.append($('<a/>').attr('href',
+          listItemContent.append($('<a/>').attr('href',
             item_path + DOCUMENTATION_OPTIONS.FILE_SUFFIX + highlightstring + item[2]).html(item[1]));
         }
         if (item[3]) {
-          listItem.append($('<span> (' + item[3] + ')</span>'));
+          listItemContent.append($('<span> (' + item[3] + ')</span>'));
           Search.output.append(listItem);
           listItem.slideDown(5, function() {
             displayNextItem();
@@ -442,7 +444,7 @@ var Search = {
                   complete: function(jqxhr, textstatus) {
                     var data = jqxhr.responseText;
                     if (data !== '' && data !== undefined) {
-                      listItem.append(Search.makeSearchSummary(data, searchterms, hlterms));
+                      listItemContent.append(Search.makeSearchSummary(data, searchterms, hlterms));
                     }
                     Search.output.append(listItem);
                     listItem.slideDown(5, function() {
