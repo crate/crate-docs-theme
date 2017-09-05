@@ -5,6 +5,7 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Remove topic div border
 
 2017/09/05 0.5.38
 -----------------
