@@ -5,6 +5,12 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+
+2017/09/05 0.5.38
+-----------------
+
+- Add search results structure to jQuery function
+
 2017/09/04 0.5.37
 -----------------
 
