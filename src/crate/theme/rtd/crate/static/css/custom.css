@@ -106,6 +106,10 @@ a:focus {
   padding: 8px 16px !important;
 }
 
+header.header-nav {
+  background-color: white;
+}
+
 .main-nav ul.menu {
   padding-left: 0;
   margin-bottom: 0;
@@ -236,6 +240,46 @@ body .main-nav .sub-menu li a {
   margin-left: -13px;
 }
 
+.fa.mobile-nav-button,
+.fa.mobile-nav-button:focus {
+  color: black;
+  font-size: 24px;
+}
+
+.offcanvas-menu {
+  margin-top: 46px !important;
+}
+
+body .mm-menu {
+  background-color: rgba(255,255,255,1);
+  border-left: 2px solid #55d4f5;
+  outline: none;
+}
+
+body .mm-menu .mm-listview > li:not(.mm-divider):after {
+  display: none;
+}
+
+body .mm-menu li a,
+body .mm-menu li > span {
+  padding: 10px;
+  display: block;
+  font-size: 16px;
+  color: black;
+}
+
+body .mm-menu .navbar-nav {
+  list-style: none;
+  padding: 10px;
+  margin-top: 43px;
+}
+
+#mobile-nav .sub-menu {
+  position: static;
+  background-color: transparent;
+  box-shadow: none;
+}
+
 @media screen and (max-width: 991px) {
   .main-nav ul.menu > li.menu-item > a {
     padding: 5px;
@@ -260,6 +304,57 @@ body .main-nav .sub-menu li a {
 
   body .fa.mobile-nav-button {
     display: block;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+
+  header.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    z-index: 10;
+  }
+
+  div.section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  body .wrapper-navleft,
+  body #nav-affix {
+    max-width: none;
+  }
+
+  .brand.w-nav-brand {
+    padding-left: 0;
+  }
+
+  html.w-mod-touch * {
+    word-break: break-word;
+  }
+
+  .wrapper-content-right {
+    font-size: 14px;
+  }
+
+  code, kbd, pre, samp {
+    font-size: 12px;
+  }
+
+  #mobile-menu-toggler {
+    margin-left: 15px;
+  }
+
+  footer.footer .footer-menu {
+    display: none;
+  }
+
+  footer.footer .footer-brand {
+    display: none;
   }
 }
 
@@ -292,6 +387,21 @@ body .main-nav .sub-menu li a {
   max-width: 100%;
   width: 100%;
   padding: 12px;
+}
+
+/**
+* Mobile refinements
+*/
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 38px;
+    line-height: 1;
+  }
+  .section.w-section {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 32px;
+  }
 }
 
 /**
