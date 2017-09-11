@@ -3,6 +3,7 @@
   {% set css_files = [
     '_static/css/normalize.css',
     '_static/css/bootstrap.css',
+    '_static/css/mmenu.all.css',
     '_static/css/components.css',
     '_static/css/crateio.css',
     '_static/css/crateio-rtd.css',
@@ -17,6 +18,8 @@
     '_static/js/searchtools.js',
     '_static/js/webflow.js',
     '_static/js/bootstrap.js',
+    '_static/js/mmenu.all.min.js',
+    '_static/js/fontawesome.js',
     '_static/js/custom.js'
     ]
   %}
@@ -132,7 +135,7 @@
   }
 
   $(document).ready(function() {
-    window.setTimeout(function() {$('body').append('<a href="https://crate.io/docs/support/slackin/" style="position: fixed; bottom: 20px; right: ' + ($('#intercom-launcher').is(':visible') ? '90' : '20') + 'px; box-shadow: 0 6px 13px 0 rgba(0, 0, 0, .23)"><img src="{{ pathto('_static', 1) }}/images/slack.png" id="slack-container" /></a>'); }, 2000);
+    window.setTimeout(function() {$('body').append('<a href="https://crate.io/docs/support/slackin/" style="z-index: 10; position: fixed; bottom: 20px; right: ' + ($('#intercom-launcher').is(':visible') ? '90' : '20') + 'px; box-shadow: 0 6px 13px 0 rgba(0, 0, 0, .23)"><img src="{{ pathto('_static', 1) }}/images/slack.png" id="slack-container" /></a>'); }, 2000);
   });
   </script>
 
