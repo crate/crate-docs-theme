@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/09/12 0.5.41
+-----------------
+
+- Hide mobile nav toggle on desktop viewport
+
 2017/09/11 0.5.40
 -----------------
 
