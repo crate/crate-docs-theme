@@ -105,39 +105,9 @@ If you want to check the PyPI description before uploading, run this::
 
     $ bin/py setup.py check --strict --restructuredtext
 
-Rebuilding the CrateDB Docs
-===========================
-
-After releasing the new version of the ``crate-docs-theme`` package, per the
-instructions above, you will need to manually wipe and rebuild each version of
-the hosted docs you wish to update.
-
-Before continuing, you will need a ReadTheDocs_ (RTD) account, and you will need
-to be added as an admin for the `CrateDB RTD project`_.
-
-Firstly, go to the Versions_ page. Find the version you want to rebuild, and
-select the *Wipe* action, then confirm on the next screen. This wipes the build
-environment for that version, allowing RTD to pick up the newest theme.
-
-Once done, go to the Builds_ page, the select the version you want to rebuild
-from the drop-down menu, and select *Build Version*.
-
-Once the docs have been rebuilt (you can refresh this page to get the current
-status) you can switch back to the Versions_ page and click on the version to
-view the docs as they appear on RTD.
-
-The Crate.io website sits behind Fastly, which aggressively caches all content.
-So it may be some time before the docs (as they are linked to from the main
-site) update.
-
 .. _buildout: https://pypi.python.org/pypi/zc.buildout
-.. _Builds: https://readthedocs.org/projects/crate/builds/
-.. _CrateDB RTD project: https://readthedocs.org/projects/crate/
-.. _Fastly: https://www.fastly.com/
 .. _Grunt: https://gruntjs.com/
 .. _PyPI: https://pypi.python.org/pypi
-.. _ReadTheDocs: https://readthedocs.org/
 .. _Sphinx CSV Filter: https://github.com/crate/sphinx_csv_filter
 .. _the CrateDB repository: https://github.com/crate/crate
 .. _twine: https://pypi.python.org/pypi/twine
-.. _Versions: https://readthedocs.org/projects/crate/versions/
