@@ -240,6 +240,10 @@ body .main-nav .sub-menu li a {
   margin-left: -13px;
 }
 
+body .fa.mobile-nav-button {
+  display: none;
+}
+
 .fa.mobile-nav-button,
 .fa.mobile-nav-button:focus {
   color: black;
