@@ -5,6 +5,14 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/10/09 0.5.42
+-----------------
+
+- Limit sidebar height and scroll the overflow
+- Remove link styling from content headings
+- Style admonition links to be more visible
+- Add some bottom margin to the tables for spacing
+
 2017/09/12 0.5.41
 -----------------
 
