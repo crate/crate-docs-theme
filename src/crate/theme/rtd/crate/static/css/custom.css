@@ -393,6 +393,10 @@ body .mm-menu .navbar-nav {
   padding: 12px;
 }
 
+.bs-docs-sidebar {
+  overflow-y: scroll;
+}
+
 /**
 * Mobile refinements
 */

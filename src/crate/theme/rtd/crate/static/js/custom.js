@@ -6,7 +6,7 @@
 
   var $body = $('body');
 
-	$(document).ready(function() {
+  $(document).ready(function() {
 
     /**
     * Dropdown menu
@@ -60,17 +60,22 @@
 
     // Mobile slide out menus
     $('#mobile-nav').mmenu({
-			slidingSubmenus: false,
-			offCanvas: {
-				position: 'right'
-			}
-		});
-		var MobileNavAPI = $('#mobile-nav').data('mmenu');
-		$('#mobile-close-button').click(function() {
-			MobileNavAPI.close();
-		});
+      slidingSubmenus: false,
+      offCanvas: {
+        position: 'right'
+      }
+    });
+    var MobileNavAPI = $('#mobile-nav').data('mmenu');
+    $('#mobile-close-button').click(function() {
+      MobileNavAPI.close();
+    });
 
-
+    /**
+    * Set height on sidebar
+    */
+    var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    var $sidebar = $('.bs-docs-sidebar');
+    $sidebar.css('max-height', `${viewportHeight - 40}px`);
   });
 
 })(jQuery);
