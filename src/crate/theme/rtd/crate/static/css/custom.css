@@ -412,6 +412,11 @@ h2 .headerlink {
   margin-left: 10px;
 }
 
+.admonition a {
+  color: black;
+  text-decoration: underline;
+}
+
 /**
 * Mobile refinements
 */
