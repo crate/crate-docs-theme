@@ -393,6 +393,34 @@ body .mm-menu .navbar-nav {
   padding: 12px;
 }
 
+.bs-docs-sidebar {
+  overflow-y: scroll;
+}
+
+h2 .toc-backref {
+  color: black;
+}
+
+h2 .toc-backref:hover {
+  opacity: 1;
+}
+
+h2 .headerlink {
+  font-size: 80%;
+  position: relative;
+  bottom: 5px;
+  margin-left: 10px;
+}
+
+.admonition a {
+  color: black;
+  text-decoration: underline;
+}
+
+table.docutils {
+  margin-bottom: 16px;
+}
+
 /**
 * Mobile refinements
 */
