@@ -417,6 +417,10 @@ h2 .headerlink {
   text-decoration: underline;
 }
 
+table.docutils {
+  margin-bottom: 16px;
+}
+
 /**
 * Mobile refinements
 */
