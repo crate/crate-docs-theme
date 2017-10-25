@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/10/25 0.5.44
+-----------------
+
+- Update canonical URLs to use "en/latest"
+
 2017/10/25 0.5.43
 -----------------
 
