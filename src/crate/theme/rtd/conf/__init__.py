@@ -70,10 +70,12 @@ def setup(app):
     in `conf.py` as an extension.
     """
     def force_canonical_url(app_inited):
-        canonical_url = app_inited.builder.theme_options['canonical_url']
-        canonical_url_path = app_inited.builder.theme_options['canonical_url_path']
-        canonical_url = canonical_url + canonical_url_path
-        app_inited.env.config.html_context['canonical_url'] = canonical_url
-        app_inited.builder.config.html_context['canonical_url'] = canonical_url
+        from sphinx.builders.html import StandaloneHTMLBuilder
+        if isinstance(app_inited.builder, StandaloneHTMLBuilder):
+            canonical_url = app_inited.builder.theme_options['canonical_url']
+            canonical_url_path = app_inited.builder.theme_options['canonical_url_path']
+            canonical_url = canonical_url + canonical_url_path
+            app_inited.env.config.html_context['canonical_url'] = canonical_url
+            app_inited.builder.config.html_context['canonical_url'] = canonical_url
 
     app.connect('builder-inited', force_canonical_url)
