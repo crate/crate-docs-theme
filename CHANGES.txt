@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/10/25 0.5.43
+-----------------
+
+- Force canonical URL override on RTD
+
 2017/10/09 0.5.42
 -----------------
 
