@@ -52,9 +52,28 @@ html_theme_options = {
     # The URL path is required because RTD does only allow
     # root as a canonical url.
     'canonical_url_path': '',
-    'canonical_url': 'https://crate.io/docs/',
+    'canonical_url': 'https://crate.io/',
 
     # segment analytics configuration
     'tracking_segment_id': 'FToR4cE5lXyQziQirvt0kSnFQj0rAgu9',
     'tracking_project': '',
 }
+
+def setup(app):
+    """Force the canonical URL in multiple ways
+
+    This gets around several points where the canonical_url override might be
+    disregarded or performed out of order.
+
+    This module should be star imported into `create_*.py`, and thus star
+    imported into the base `conf.py`. Sphinx will automatically use a `setup()`
+    in `conf.py` as an extension.
+    """
+    def force_canonical_url(app_inited):
+        canonical_url = app_inited.builder.theme_options['canonical_url']
+        canonical_url_path = app_inited.builder.theme_options['canonical_url_path']
+        canonical_url = canonical_url + canonical_url_path
+        app_inited.env.config.html_context['canonical_url'] = canonical_url
+        app_inited.builder.config.html_context['canonical_url'] = canonical_url
+
+    app.connect('builder-inited', force_canonical_url)
