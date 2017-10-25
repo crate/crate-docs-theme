@@ -25,6 +25,6 @@ project = u'Crate Mesos Framework'
 primary_domain = 'Crate.Mesos'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/clients/mesos-framework/',
+    'canonical_url_path': 'docs/clients/mesos-framework/en/latest/',
     'tracking_project': 'crate-mesos-framework',
 })

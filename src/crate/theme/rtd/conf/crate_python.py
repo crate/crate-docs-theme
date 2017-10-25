@@ -25,6 +25,6 @@ project = u'Crate Python'
 primary_domain = 'Crate.Python'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/clients/python/',
+    'canonical_url_path': 'docs/clients/python/en/latest/',
     'tracking_project': 'crate-python',
 })
