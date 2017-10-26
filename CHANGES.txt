@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/10/26 0.5.45
+-----------------
+
+- Conditionally apply canonical url patch based on builder type
+
 2017/10/25 0.5.44
 -----------------
 
