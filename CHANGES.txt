@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/11/03 0.5.46
+-----------------
+
+- chop off en/latest when building alt version links
+
 2017/10/26 0.5.45
 -----------------
 
