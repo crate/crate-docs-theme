@@ -71,9 +71,14 @@ def setup(app):
     """
     def force_canonical_url(app_inited):
         from sphinx.builders.html import StandaloneHTMLBuilder
-        if isinstance(app_inited.builder, StandaloneHTMLBuilder):
-            canonical_url = app_inited.builder.theme_options['canonical_url']
-            canonical_url_path = app_inited.builder.theme_options['canonical_url_path']
+        from sphinx.builders.epub3 import Epub3Builder
+        if (isinstance(app_inited.builder, StandaloneHTMLBuilder)
+                and not isinstance(app_inited.builder, Epub3Builder)):
+            try:
+                canonical_url = app_inited.builder.theme_options['canonical_url']
+                canonical_url_path = app_inited.builder.theme_options['canonical_url_path']
+            except KeyError:
+                return
             canonical_url = canonical_url + canonical_url_path
             app_inited.env.config.html_context['canonical_url'] = canonical_url
             app_inited.builder.config.html_context['canonical_url'] = canonical_url
