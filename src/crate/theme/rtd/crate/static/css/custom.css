@@ -421,6 +421,10 @@ table.docutils {
   margin-bottom: 16px;
 }
 
+.wrapper-content-right .section img {
+  margin-bottom: 16px;
+}
+
 /**
 * Mobile refinements
 */
