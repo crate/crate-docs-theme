@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2017/11/21 0.5.50
+-----------------
+
+- Correct nested list margin
+
 2017/11/20 0.5.49
 -----------------
 
