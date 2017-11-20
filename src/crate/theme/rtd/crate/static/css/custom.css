@@ -433,6 +433,11 @@ table.docutils {
   margin-bottom: 16px;
 }
 
+div.sidebar {
+  border: 1px solid #e7e7e7;
+  background-color: white;
+}
+
 /**
 * Mobile refinements
 */
