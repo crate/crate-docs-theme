@@ -397,19 +397,27 @@ body .mm-menu .navbar-nav {
   overflow-y: scroll;
 }
 
-h2 .toc-backref {
+h2 .toc-backref,
+h3 .toc-backref {
   color: black;
 }
 
-h2 .toc-backref:hover {
+h2 .toc-backref:hover,
+h3 .toc-backref:hover {
   opacity: 1;
+  color: #1cc8f3;
 }
 
-h2 .headerlink {
+h2 .headerlink,
+h3 .headerlink {
   font-size: 80%;
   position: relative;
   bottom: 5px;
   margin-left: 10px;
+}
+
+h3 .headerlink {
+  bottom: 4px;
 }
 
 .admonition a {
