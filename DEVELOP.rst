@@ -95,7 +95,6 @@ You'll also need to create a ``~/.pypirc`` file, like so::
       pypi
 
     [pypi]
-    repository=https://pypi.python.org/pypi
     username=<USERNAME>
     password=<PASSWORD>
 
