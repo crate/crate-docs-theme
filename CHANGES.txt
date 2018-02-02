@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Added dependency to sphinx_sitemap
+
+
 2018/02/01 0.5.51
 -----------------
 

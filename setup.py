@@ -53,5 +53,6 @@ setup(name='crate-docs-theme',
           'setuptools',
           'Sphinx',
           'sphinxcontrib-plantuml',
+          'sphinx_sitemap',
       ],
 )
