@@ -5,18 +5,17 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Added new docs project for Admin UI
 
 2018/02/02 0.5.52
 -----------------
 
 - Added dependency to sphinx_sitemap
 
-
 2018/02/01 0.5.51
 -----------------
 
 - Added new menu
-
 
 2017/11/21 0.5.50
 -----------------
