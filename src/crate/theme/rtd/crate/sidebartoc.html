@@ -28,6 +28,12 @@
   </ul>
   <li class="navleft-item">CrateDB Clients</li>
   <ul>
+    {% if project == 'Crate Admin' %}
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">The CrateDB Admin UI</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
+    {% else %}
     {% if project == 'Crate Shell' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">The CrateDB Shell</a>
