@@ -34,6 +34,8 @@
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
+    <li class="navleft-item"><a href="/docs/clients/admin-ui">The CrateDB Admin UI</a></li>
+    {% endif %}
     {% if project == 'Crate Shell' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">The CrateDB Shell</a>
