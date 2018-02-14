@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2018/02/14 0.5.55
+-----------------
+
 - Add trailing slash to links
 
 2018/02/13 0.5.54
