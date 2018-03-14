@@ -22,6 +22,7 @@ If you don't, the* ``sphinx-build`` *command will fail.*
 
 Then, run::
 
+    $ pip install -U setuptools
     $ pip install -e .
 
 Testing
