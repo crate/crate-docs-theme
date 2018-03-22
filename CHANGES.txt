@@ -5,6 +5,10 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2018/03/22 0.5.57
+-----------------
+
+- Add step to update setuptools to DEVELOP.rst
 - Fixed an issue that caused the search to contain HTML in the preview
 
 2018/03/01 0.5.56
