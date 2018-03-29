@@ -1,22 +1,3 @@
-Crate Sphinx Theme for Read-The-Docs
-
-Copyright 2013-2015 Crate.io GmbH
-Lobeckstraße 36-40, 10969 Berlin, Germany
-(referred to in this notice as "Crate")
-
-
-Licensed to Crate under one or more contributor license agreements.
-See the NOTICE file distributed with this work for additional information
-regarding copyright ownership.
-
-Crate licenses this software to you under the Apache License, Version 2.0.
-However, if you have executed another commercial license agreement with
-Crate these terms will supersede the license and you may use the software
-solely pursuant to the terms of the relevant commercial agreement.
-
-
-=========================================================================
-
 
                                  Apache License
                            Version 2.0, January 2004
@@ -208,3 +189,153 @@ solely pursuant to the terms of the relevant commercial agreement.
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+
+================================================================================
+
+For the `src/crate/theme/rtd/crate/static/css/bootstrap.css` file:
+
+Bootstrap v3.3.7 <http://getbootstrap.com>
+
+Copyright (c) 2011-2016 Twitter, Inc.
+
+Licensed under the MIT license.
+
+The MIT License
+===============
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+================================================================================
+
+For the `src/crate/theme/rtd/crate/static/css/normalize.css` file:
+
+normalize.css v3.0.3 <https://github.com/necolas/normalize.css/>
+
+Copyright © Nicolas Gallagher and Jonathan Neal
+
+Licensed under the MIT license (see above for full license text).
+
+
+================================================================================
+
+For the `src/crate/theme/rtd/crate/static/fonts` directory:
+
+Blender Pro by Binnenland <http://binnenland.ch>
+
+Published by Die Gestalten Verlag GmbH & Co. KG, 2008
+
+Copyright © by Binnenland and re-p.org, 2008.
+
+Licensed to CRATE Technology GmbH under an "Extended Business End User
+Licence Agreement and Webfont End User Licence Agreement".
+
+This is a non-transferable license. Modification of these files is prohibited.
+You may use not copy, distribute, or use these files for any other purposes than
+viewing or preparing changes for Crate.io documentation projects. You may not
+use this theme, with these files included, as a theme for any documentation
+project that is not operated by Crate.io.
+
+
+================================================================================
+
+For the `src/crate/theme/rtd/crate/static/js/bootstrap.js` file:
+
+Bootstrap v3.3.7 <http://getbootstrap.com>
+
+Copyright 2011-2016 Twitter, Inc.
+
+Licensed under the MIT license (see above for full license text).
+
+
+================================================================================
+
+For the `src/crate/theme/rtd/crate/static/js/modernizr.js` file:
+
+Modernizr 2.7.1 (Custom Build) <http://modernizr.com/>
+
+Dual-licensed under the BSD and MIT licenses.
+
+Note: The project does not specify which varient of the BSD license is meant.
+In more recent versions of this software, they have dropped the BSD license
+entirely and now only use the the MIT license (see above for full license
+text).
+
+
+================================================================================
+
+For the `src/crate/theme/rtd/crate/static/js/searchtools.js` file:
+
+Sphinx JavaScript utilities for the full-text search.
+
+Licensed under the Sphinx BSD license.
+
+The Sphinx BSD License
+======================
+
+Copyright (c) 2007-2018 by the Sphinx team (see AUTHORS file).
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+* Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+================================================================================
+
+For the `src/crate/theme/rtd/crate/static/js/underscore.min.js` file:
+
+Underscore.js 1.8.3 <http://underscorejs.org>
+
+(c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters &
+Editors
+
+Underscore may be freely distributed under the MIT license (see above for full
+license text).
+
+
+================================================================================
+
+For the `src/crate/theme/rtd/crate/static/js/webflow.js` file:
+
+Webflow: Front-end site library <https://github.com/webflow/js-webflow-api>
+
+Copyright (c) 2016 Webflow, Inc
+
+Licensed under the MIT license (see above for full license text).
