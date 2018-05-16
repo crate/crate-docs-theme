@@ -37,77 +37,92 @@ blockquote {
     padding: 0px 0px;
 }
 
-/** NOTES, etc **/
+/** admonitions **/
 
-.caution .admonition-title,
+div.admonition p {
+    padding: 10px 0;
+    margin: 0;
+}
+
+div.admonition {
+    padding: 0 0 0 105px;
+    margin: 20px 0;
+    border-left: 0;
+}
+
+div.note {
+    background: url(../images/admonition/note.png) no-repeat top left;
+}
+
+div.seealso {
+    background: url(../images/admonition/seealso.png) no-repeat top left;
+}
+
+div.tip {
+    background: url(../images/admonition/tip.png) no-repeat top left;
+}
+
+div.caution {
+    background: url(../images/admonition/caution.png) no-repeat top left;
+}
+
+div.warning {
+    background: url(../images/admonition/warning.png) no-repeat top left;
+}
+
+div.danger {
+    background: url(../images/admonition/danger.png) no-repeat top left;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+    div.note {
+        background-image: url(../images/admonition/note@2x.png);
+        background-size: 90px 78px;
+    }
+
+    div.seealso {
+        background-image: url(../images/admonition/seealso@2x.png);
+        background-size: 90px 78px;
+    }
+
+    div.tip {
+        background-image: url(../images/admonition/tip@2x.png);
+        background-size: 90px 78px;
+    }
+
+    div.caution {
+        background-image: url(../images/admonition/caution@2x.png);
+        background-size: 90px 78px;
+    }
+
+    div.warning {
+        background-image: url(../images/admonition/warning@2x.png);
+        background-size: 90px 78px;
+    }
+
+    div.danger {
+        background-image: url(../images/admonition/danger@2x.png);
+        background-size: 90px 78px;
+    }
+
+}
+
 .note .admonition-title,
-.tip .admonition-title,
-.todo .admonition-title,
 .seealso .admonition-title,
-.warning .admonition-title {
-    padding: 10px 20px;
+.tip .admonition-title,
+.caution .admonition-title,
+.warning .admonition-title,
+.danger .admonition-title {
+    padding: 10px 0 0 0;
     font-weight: bold;
     color: #000000;
-}
-
-.caution {
-    background-color: #ffedcc;
-    border-left: 5px solid #f0b37e;
-}
-
-.note,
-.tip {
-    background-color: #ccf2fc;
-    border-left: 5px solid #55d4f5;
-}
-
-.seealso,
-.todo {
-    background-color: #e7e7e7;
-    border-left: 5px solid #888888;
-}
-
-.warning {
-    background-color: #ffcdc9;
-    border-left: 5px solid #ff5b4d;
-}
-
-.caution .admonition-title {
-    padding-bottom: 0;
-    background-color: #ffedcc;
-}
-
-.note .admonition-title,
-.tip .admonition-title {
-    padding-bottom: 0;
-    background-color: #ccf2fc;
-}
-
-.seealso .admonition-title,
-.todo .admonition-title {
-    padding-bottom: 0;
-    background-color: #e7e7e7;
-}
-
-.warning .admonition-title {
-    padding-bottom: 0;
-    background-color: #ffcdc9;
-}
-
-.todo p,
-.seealso p,
-.note p,
-.tip p,
-.warning p,
-.caution p {
-    padding: 10px 20px;
-    margin: 0;
+    text-transform: capitalize
 }
 
 .bs-docs-sidenav > li {
     display: none;
 }
-
 
 /** MENUE **/
 
