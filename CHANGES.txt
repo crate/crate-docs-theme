@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2018/05/30 0.5.58
+-----------------
+
+- Add admonition graphics and change admonition styles
+
 2018/03/22 0.5.57
 -----------------
 
