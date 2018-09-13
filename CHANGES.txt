@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2018/09/13 0.5.59
+-----------------
+
+- Add SQL-99 docs project (hidden for now)
+
 2018/05/30 0.5.58
 -----------------
 
