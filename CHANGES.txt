@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2018/09/18 0.5.60
+-----------------
+
+- Increase SQL-99 TOC level in the side navigation
+
 2018/09/13 0.5.59
 -----------------
 
