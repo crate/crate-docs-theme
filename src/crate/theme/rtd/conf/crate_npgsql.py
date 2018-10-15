@@ -22,7 +22,6 @@
 from crate.theme.rtd.conf import *
 
 project = u'Crate Npgsql'
-primary_domain = 'Crate.Npgsql'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/clients/npgsql/en/latest/',
