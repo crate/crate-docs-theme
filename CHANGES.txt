@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2018/10/15 0.5.63
+-----------------
+
+- Retitle Npgsql navigation link
+
 2018/10/15 0.5.62
 -----------------
 
