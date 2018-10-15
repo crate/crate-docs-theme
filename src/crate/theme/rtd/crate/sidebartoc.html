@@ -78,11 +78,11 @@
     {% endif %}
     {% if project == 'Crate Npgsql' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">.NET</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">.NET Npgsql</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
-    <li class="navleft-item"><a href="/docs/clients/npgsql/">.NET</a></li>
+    <li class="navleft-item"><a href="/docs/clients/npgsql/">.NET Npgsql</a></li>
     {% endif %}
   </ul>
 
