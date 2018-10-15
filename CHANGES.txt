@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2018/10/15 0.5.61
+-----------------
+
+- Add .NET client and fix navigation
+
 2018/09/18 0.5.60
 -----------------
 
