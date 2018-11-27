@@ -87,7 +87,8 @@ Then, use twine_ to upload the package to PyPI_::
 
     $ twine upload dist/*
 
-For this to work, you will need a personal PyPI account that is set up as a project admin.
+For this to work, you will need a personal PyPI account that is set up as a
+project admin.
 
 You'll also need to create a ``~/.pypirc`` file, like so::
 
@@ -99,7 +100,8 @@ You'll also need to create a ``~/.pypirc`` file, like so::
     username=<USERNAME>
     password=<PASSWORD>
 
-Here, ``<USERNAME>`` and ``<PASSWORD>`` should be replaced with your username and password, respectively.
+Here, ``<USERNAME>`` and ``<PASSWORD>`` should be replaced with your username
+and password, respectively.
 
 If you want to check the PyPI description before uploading, run this::
 
