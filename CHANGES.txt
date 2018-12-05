@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Add CrateDB Cloud to navigation
+- Fix support link
+
 2018/11/27 0.5.64
 -----------------
 
