@@ -25,5 +25,4 @@ project = u'Crate Npgsql'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/clients/npgsql/en/latest/',
-    'tracking_project': 'crate-npgsql',
 })

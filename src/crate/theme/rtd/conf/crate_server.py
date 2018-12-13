@@ -25,5 +25,4 @@ project = u'CrateDB'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/crate/reference/en/latest/',
-    'tracking_project': 'crate',
 })

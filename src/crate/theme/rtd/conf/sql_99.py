@@ -25,5 +25,4 @@ project = u'SQL 99'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/sql-99/en/latest/',
-    'tracking_project': 'sql-99',
 })
