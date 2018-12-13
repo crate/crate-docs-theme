@@ -25,5 +25,4 @@ project = u'Getting Started'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/crate/getting-started/en/latest/',
-    'tracking_project': 'getting-started',
 })
