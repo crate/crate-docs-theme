@@ -5,6 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2019/01/22 0.5.68
+-----------------
+
+- Add Croud docs
+
 2018/12/10 0.5.67
 -----------------
 
