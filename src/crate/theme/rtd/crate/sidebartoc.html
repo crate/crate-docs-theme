@@ -27,14 +27,25 @@
     {% endif %}
   </ul>
 
-  {% if project == 'Cloud' %}
-  <li class="current">
-    <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">CrateDB Cloud</a>
-    {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-  </li>
-  {% else %}
-  <li class="navleft-item"><a href="/docs/cloud/">CrateDB Cloud</a></li>
-  {% endif %}
+  <li class="navleft-item">CrateDB Cloud</li>
+  <ul>
+    {% if project == 'Cloud' %}
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Console</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
+    {% else %}
+    <li class="navleft-item"><a href="/docs/cloud/">Console</a></li>
+    {% endif %}
+    {% if project == 'Croud' %}
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Croud CLI</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
+    {% else %}
+    <li class="navleft-item"><a href="/docs/croud/">Croud CLI</a></li>
+    {% endif %}
+  </ul>
 
   <li class="navleft-item">CrateDB Clients</li>
   <ul>
