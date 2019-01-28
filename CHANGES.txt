@@ -5,6 +5,8 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Update project URLs
+
 2019/01/22 0.5.68
 -----------------
 
