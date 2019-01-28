@@ -21,8 +21,8 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Croud'
+project = u'Croud CLI'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/croud/en/latest/',
+    'canonical_url_path': 'docs/cloud/cli/en/latest/',
 })
