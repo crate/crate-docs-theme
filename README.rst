@@ -1,7 +1,7 @@
 CrateDB Docs Theme
 ==================
 
-A Sphinx_ theme for `the CrateDB documentation`_.
+A Sphinx_ theme for the `CrateDB documentation`_.
 
 Prerequisites
 =============
@@ -47,17 +47,13 @@ Help
 
 Looking for more help?
 
-- Check `StackOverflow`_ for common problems
-- Chat with us on `Slack`_
-- Get `paid support`_
+- Check out our `support channels`_
 
-.. _reference site: https://crate.io/docs/reference/
 .. _contribution docs: CONTRIBUTING.rst
 .. _Crate.io: https://crate.io
+.. _CrateDB documentation: https://crate.io/docs/reference/
 .. _developer docs: DEVELOP.rst
-.. _paid support: https://crate.io/pricing/
 .. _pip: https://pypi.python.org/pypi/pip
-.. _Slack: https://crate.io/docs/support/slackin/
+.. _reference site: https://crate.io/docs/reference/
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
-.. _StackOverflow: https://stackoverflow.com/tags/crate
-.. _the CrateDB documentation: https://crate.io/docs/reference/
+.. _support channels: https://crate.io/support/
