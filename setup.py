@@ -50,9 +50,9 @@ setup(name='crate-docs-theme',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
-          'Sphinx',
-          'sphinxcontrib-plantuml',
-          'sphinx_sitemap',
+          'setuptools==40.6.3',
+          'Sphinx==1.7.4',
+          'sphinxcontrib-plantuml==0.14',
+          'sphinx_sitemap==0.3.1',
       ],
 )
