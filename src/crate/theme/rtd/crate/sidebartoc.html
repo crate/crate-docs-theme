@@ -40,7 +40,7 @@
     {% if project == 'Croud CLI' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Croud CLI</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
     <li class="navleft-item"><a href="/docs/cloud/cli/">Croud CLI</a></li>
