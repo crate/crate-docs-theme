@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Allow per-project additional script files by specifying ``script_files`` in
+  the project's ``html_context`` (in ``conf.py``).
+
 - Allow per-project additional css files by specifying ``css_files`` in
   the project's ``html_context`` (in ``conf.py``).
 
