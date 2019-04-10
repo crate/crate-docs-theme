@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2019/04/10 0.5.73
+-----------------
+
 - Change depth of toc tree of Cloud CLI project to 2.
 
 - Allow per-project additional script files by specifying ``script_files`` in
