@@ -4,16 +4,20 @@ Crate Docs Theme
 
 |build-status|
 
-A Sphinx_ theme for the `Crate documentation`_.
+A `Sphinx`_ theme for the `Crate documentation`_.
+
+*Note: This theme is not intended for general use. You may want to use this
+theme as an inspiration if you are building your own theme. However, this theme
+is designed for Crate projects with documentation that is tightly integrated
+into the Crate.io` website.*
 
 
 Installation
 ============
 
-The Crate docs theme is available as a Python package on `PyPI`_.
-
-There is no need to install it manually. Crate projects that use the theme
-install it automatically as a part of the build process.
+The Crate docs theme is available as a package on `PyPI`_. However, there is no
+need to install it yourself. Crate projects that use the theme should install
+it automatically.
 
 
 Configuration
