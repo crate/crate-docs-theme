@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2019/04/26 0.5.74
+-----------------
+
 - Change the ``html_context`` keys for custom js/css scripts from
   ``script_files`` to ``extra_script_files`` and from ``css_files`` to
   ``extra_css_files``.
