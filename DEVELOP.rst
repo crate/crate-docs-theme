@@ -108,7 +108,6 @@ If you want to check the PyPI description before uploading, run this::
     $ bin/py setup.py check --strict --restructuredtext
 
 .. _buildout: https://pypi.python.org/pypi/zc.buildout
-.. _Grunt: https://gruntjs.com/
 .. _PyPI: https://pypi.python.org/pypi
 .. _Sphinx CSV Filter: https://github.com/crate/sphinx_csv_filter
 .. _the CrateDB repository: https://github.com/crate/crate
