@@ -5,9 +5,6 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
-2019/05/08 0.5.75
------------------
-
 - Added new CrateDB Cloud IoT Data Platform docs project. This includes a new
   template config module and a change to the HTML navigation menu.
 
