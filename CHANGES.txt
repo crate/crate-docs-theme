@@ -5,9 +5,11 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2019/05/15 0.5.77
+-----------------
+
 - Link to the IoT Data Platform docs is hidden unless you are currently viewing
   those docs.
-
 
 2019/05/13 0.5.76
 -----------------
