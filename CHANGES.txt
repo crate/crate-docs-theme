@@ -5,6 +5,9 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+2019/05/27 0.5.78
+-----------------
+
 - Removed Python 2 in favour of Python 3.
 
 - Removed setuptools requirement.
