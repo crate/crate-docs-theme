@@ -6,7 +6,7 @@ A Sphinx_ theme for the `CrateDB documentation`_.
 Prerequisites
 =============
 
-You will need Python 2.7.
+You will need Python 3.
 
 Installation
 ============
