@@ -58,18 +58,6 @@
       trigger.addEventListener('mouseleave', handleLeave)
     );
 
-    // Mobile slide out menus
-    $('#mobile-nav').mmenu({
-      slidingSubmenus: false,
-      offCanvas: {
-        position: 'right'
-      }
-    });
-    var MobileNavAPI = $('#mobile-nav').data('mmenu');
-    $('#mobile-close-button').click(function() {
-      MobileNavAPI.close();
-    });
-
     /**
     * Set height on sidebar
     */
