@@ -5,6 +5,10 @@ CHANGES for Crate ReadTheDocs Theme
 Unreleased
 ----------
 
+- Removed mmenu.all.min.js library.
+
+- Updated LICENSE and NOTICE.
+
 2019/05/27 0.5.78
 -----------------
 
