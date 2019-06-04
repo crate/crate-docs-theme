@@ -1,5 +1,6 @@
-CrateDB Docs Theme
-==================
+============================
+Crate.io Documentation Theme
+============================
 
 A Sphinx_ theme for the `CrateDB documentation`_.
 

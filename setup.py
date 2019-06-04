@@ -29,8 +29,8 @@ version = imp.load_source('theme', filepath).__version__
 
 setup(name='crate-docs-theme',
       version=version,
-      description='Crate Sphinx Theme for ReadTheDocs',
-      long_description='A Sphinx theme for Crate\'s Documentation',
+      description='Crate.io Documentation Theme',
+      long_description='A Sphinx theme for Crate.io\'s Documentation',
       classifiers=[
           "Intended Audience :: Developers",
           "License :: OSI Approved :: Apache Software License",
