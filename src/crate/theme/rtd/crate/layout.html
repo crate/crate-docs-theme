@@ -20,7 +20,8 @@
     '_static/js/bootstrap.js',
     
     '_static/js/fontawesome.js',
-    '_static/js/custom.js'
+    '_static/js/custom.js',
+    '_static/js/sticky-sidebar.min.js'
     ]
   %}
 
@@ -50,10 +51,10 @@
         <a href="#" id="mobile-menu-toggler" class="w-button">Toggle Doc Menu</a>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
+    <div class="container" >
+      <div class="row" id="main-content">
         <div class="col-md-4 col-lg-3">
-          <aside class="wrapper-navleft">
+          <aside class="wrapper-navleft" id="sidebar">
             {%- block sidebar1 %}
             {%- for sidebartemplate in sidebars %}
             {%- include sidebartemplate %}
@@ -95,28 +96,17 @@
   <script>
   var $navAffix = $('#nav-affix');
   var $contentEl = $('.wrapper-content-right');
+
+  var sidebar = new StickySidebar('#sidebar', {
+      containerSelector: '#main-content',
+      innerWrapperSelector: '.sidebar__inner',
+      topSpacing: 20,
+      bottomSpacing: 20
+  });
+
+
   // Desktop only
   if( !$('#mobile-menu-toggler').is(':visible') ) {
-
-    // Only if the content is taller than the sidebar,
-    // to avoid scroll jerk
-    if ( $contentEl.height() > $navAffix.height() ) {
-      // Init
-      $navAffix.affix({
-        offset: {
-          top: 100,
-          bottom: function () {
-            return (this.bottom = $('footer').outerHeight(true) + 200)
-          }
-        }
-      });
-      // Recalculate the sidebar
-      $(window).resize(function() {
-        $navAffix.affix('checkPosition');
-      });
-    }
-
-    $('body').scrollspy();
 
   } else {
 

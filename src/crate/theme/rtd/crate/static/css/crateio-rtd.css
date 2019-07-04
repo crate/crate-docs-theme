@@ -151,7 +151,9 @@ div.danger {
 }
 
 .bs-docs-sidenav .toctree li.current > a,
-.bs-docs-sidenav .toctree li.active > a {
+.bs-docs-sidenav .toctree li.active > a,
+.bs-docs-sidenav .toctree li.current > code,
+.bs-docs-sidenav .toctree li.active > code {
     font-weight: bold;
 }
 .bs-docs-sidenav ul {
