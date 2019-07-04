@@ -5,7 +5,7 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
-2019/05/27 0.5.79
+2019/07/04 0.5.79
 -----------------
 
 - Improved navigation menu scroll behaviour.
