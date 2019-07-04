@@ -20,12 +20,13 @@
 # software solely pursuant to the terms of the relevant commercial agreement.
 
 import os
-import imp
+from importlib import machinery
 from setuptools import setup, find_packages
 
 pwd = os.path.join(os.path.dirname(__file__))
 filepath = os.path.join(pwd, 'src', 'crate', 'theme', 'rtd', '__init__.py')
-version = imp.load_source('theme', filepath).__version__
+version = machinery.SourceFileLoader(
+    'theme', filepath).load_module().__version__
 
 setup(name='crate-docs-theme',
       version=version,
