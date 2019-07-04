@@ -5,15 +5,18 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
-- Removed mmenu.all.min.js library.
+2019/05/27 0.5.79
+-----------------
 
+- Improved navigation menu scroll behaviour.
+- Fixed style of <code> titles in navigation menu.
+- Removed mmenu.all.min.js library.
 - Updated LICENSE and NOTICE.
 
 2019/05/27 0.5.78
 -----------------
 
 - Removed Python 2 in favour of Python 3.
-
 - Removed setuptools requirement.
 
 2019/05/15 0.5.77
