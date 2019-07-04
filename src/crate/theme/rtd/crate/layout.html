@@ -53,8 +53,8 @@
     </div>
     <div class="container" >
       <div class="row" id="main-content">
-        <div class="col-md-4 col-lg-3">
-          <aside class="wrapper-navleft" id="sidebar">
+        <div class="col-md-4 col-lg-3" id="sidebar">
+          <aside class="wrapper-navleft  sidebar__inner" >
             {%- block sidebar1 %}
             {%- for sidebartemplate in sidebars %}
             {%- include sidebartemplate %}
@@ -94,16 +94,13 @@
   {%- block custom_footer %}
 
   <script>
-  var $navAffix = $('#nav-affix');
-  var $contentEl = $('.wrapper-content-right');
 
   var sidebar = new StickySidebar('#sidebar', {
       containerSelector: '#main-content',
       innerWrapperSelector: '.sidebar__inner',
       topSpacing: 20,
-      bottomSpacing: 20
+      bottomSpacing: 20,
   });
-
 
   // Desktop only
   if( !$('#mobile-menu-toggler').is(':visible') ) {

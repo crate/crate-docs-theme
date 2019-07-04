@@ -395,7 +395,8 @@ body .mm-menu .navbar-nav {
 }
 
 .bs-docs-sidebar {
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
+  max-height: initial !important;
 }
 
 h2 .toc-backref,
@@ -727,3 +728,22 @@ header.header-nav {
   }
 }
 
+
+
+
+
+
+#sidebar .sidebar__inner{
+  position: relative;
+  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: position, transform;
+}
+
+#sidebar{
+  will-change: min-height;
+}
+
+.is-affixed .sidebar__inner {
+  left: initial !important;
+}
