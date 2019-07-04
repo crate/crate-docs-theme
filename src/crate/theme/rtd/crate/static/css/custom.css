@@ -656,6 +656,10 @@ header.header-nav {
     transform: translate3d(-440px,0,0);
   }
 
+  #mobile-nav-new:checked ~ .footer  {
+    transform: translate3d(-440px,0,0);
+  }
+
   .menu-item-has-children {
     padding-right: 50px !important;
     background-color: #F4F4F4 !important;
