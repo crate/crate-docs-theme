@@ -34,8 +34,6 @@ matrix:
 
     - <<: *code
       <<: *linux
-    - <<: *code
-      <<: *osx
 
     - <<: *docs
       <<: *linux
