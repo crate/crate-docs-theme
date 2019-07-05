@@ -1,47 +1,43 @@
-============================
-Crate.io Documentation Theme
-============================
+================
+Crate Docs Theme
+================
 
-A Sphinx_ theme for the `CrateDB documentation`_.
+|build-status|
 
-Prerequisites
-=============
+A Sphinx_ theme for the `Crate documentation`_.
 
-You will need Python 3.
 
 Installation
 ============
 
-The CrateDB docs theme is available as a pip_ package.
+The Crate docs theme is available as a Python package on `PyPI`_.
 
-To install, run::
+There is no need to install it manually. Crate projects that use the theme
+install it automatically as a part of the build process.
 
-    $ pip install crate-docs-theme
-
-To update, run::
-
-    $ pip install -U crate-docs-theme
 
 Configuration
 =============
 
-The CrateDB `reference site`_ is composed of multiple documentation bases, seemlessly interlinked via the CrateDB docs theme navigation. The CrateDB docs theme includes one configuration module per project that can be listed in the navigation.
+The Crate documentation is composed of multiple separate documentation
+projects, seemlessly interlinked via the Crate docs theme.
 
-In your Sphinx ``conf.py``, import all of these modules like so::
+To use the theme, add this line to your Sphinx ``conf.py`` file::
 
-   from crate.theme.rtd.conf import *
+   from crate.theme.rtd.conf.foo import *
 
-Or, if you only want to use a specific module, do this::
+Here, replace ``foo`` with the appropriate module for your documentation
+project.
 
-   from crate.theme.rtd.conf.crate_server import *
 
 Contributing
 ============
 
-This project is primarily maintained by Crate.io_, but we welcome community
+This project is primarily maintained by `Crate.io`_, but we welcome community
 contributions!
 
 See the `developer docs`_ and the `contribution docs`_ for more information.
+
 
 Help
 ====
@@ -50,11 +46,15 @@ Looking for more help?
 
 - Check out our `support channels`_
 
+
 .. _contribution docs: CONTRIBUTING.rst
 .. _Crate.io: https://crate.io
-.. _CrateDB documentation: https://crate.io/docs/reference/
+.. _Crate documentation: https://crate.io/docs/
 .. _developer docs: DEVELOP.rst
-.. _pip: https://pypi.python.org/pypi/pip
-.. _reference site: https://crate.io/docs/reference/
+.. _PyPI: https://pypi.python.org/
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
 .. _support channels: https://crate.io/support/
+
+.. |build-status| image:: https://img.shields.io/travis/crate/crate-docs-theme.svg?style=flat
+    :alt: Build status
+    :target: https://travis-ci.org/crate/crate-docs-theme

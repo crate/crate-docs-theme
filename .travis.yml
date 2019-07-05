@@ -1,0 +1,44 @@
+notifications:
+  email: false
+
+linux: &linux
+  name: "Python 3.7"
+  language: generic
+  dist: xenial
+  addons:
+    apt:
+      sources:
+        - deadsnakes
+      packages:
+        - python3.7-dev
+        - python3.7-venv
+
+osx: &osx
+  name: "Python 3.7"
+  language: generic
+  os: osx
+  osx_image: xcode10.2
+
+code: &code
+  stage: "Code"
+  script:
+    - make build
+
+docs: &docs
+  stage: "Documentation"
+  script:
+    - cd docs && make check
+
+matrix:
+  include:
+
+    - <<: *code
+      <<: *linux
+    - <<: *code
+      <<: *osx
+
+    - <<: *docs
+      <<: *linux
+    - <<: *docs
+      <<: *osx
+

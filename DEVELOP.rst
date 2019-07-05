@@ -2,56 +2,45 @@
 Developer Guide
 ===============
 
+
 Prerequisites
 =============
 
-This project requires Python 3.4 or greater for development.
+You must have Python 3.7 installed.
 
-Setup
-=====
 
-To setup the project for local development use virtualenv.
+Development
+===========
 
-To start things off, run::
+The best way to test the theme is to build the docs for this project. The docs
+build system installs the crate-docs-theme package from your local files
+(instead of fetching a previously released version from PyPI).
 
-    $ python3 -m venv env
-    $ source env/bin/activate
+Change into the `docs` directory:
 
-*NOTE: you must run these two commands every time you want to build the docs.
-If you don't, the* ``sphinx-build`` *command will fail.*
+.. code:: console
 
-Then, run::
+    $ cd docs
 
-    $ pip install -U setuptools
-    $ pip install -e .
+Build and run the docs using this command:
 
-Testing
-=======
+.. code:: console
 
-Mirror the documentation from `the CrateDB repository`_::
+    $ make dev
 
-    $ ln -s ../crate/sql
-    $ ln -s ../crate/blackbox
+Afterwards, visit ``127.0.0.1:8000`` in your browser.
 
-These commands assume that your clone of the CrateDB repository is located at
-``../crate``, relative to your clone of the docs theme repository. If this
-isn't true, adjust the paths.
+Because the Python virtual environment is then cached, if you want the docs
+build system to pick up changes you have made to the theme, you will have to
+reset it each time, like so::
 
-Now, fake an install of the ``sphinx-csv-filter`` package::
+    $ make reset
 
-    $ ln -s ../../../sphinx_csv_filter/src/crate/sphinx src/crate/sphinx
+To see a list of other docs build options, run:
 
-These command assume that your clone of the `Sphinx CSV Filter`_ repository is
-located at ``../sphinx_csv_filter``, relative to your clone of the docs theme
-repository. If this isn't true, clone the repository, or adjust the paths.
+.. code:: console
 
-To build the docs, run::
-
-    $ sphinx-build -n -b html -E `pwd`/blackbox/docs `pwd`/out/html
-
-You should now be able to view the built docs, like so::
-
-    $ open out/html/index.html
+    $ make
 
 Preparing a Release
 ===================
@@ -68,27 +57,22 @@ To create a new release, you must:
 
 - Create a tag by running ``./devtools/create_tag.sh``
 
+
 PyPI Deployment
 ===============
 
-To make releases, will need `wheel` installed::
+You must switch to the project root directory for the following commands.
 
-    $ pip install wheel
+Build the package:
 
-Clean the ``dist`` directory::
+    $ make build
 
-    $ rm dist/*
+Upload the package to PyPI_::
 
-To create the package use::
+    $ make upload
 
-    $ python setup.py sdist bdist_wheel
-
-Then, use twine_ to upload the package to PyPI_::
-
-    $ twine upload dist/*
-
-For this to work, you will need a personal PyPI account that is set up as a
-project admin.
+For this to work, you will need a personal PyPI account that is set up as as an
+admin for this project on PyPI.
 
 You'll also need to create a ``~/.pypirc`` file, like so::
 
@@ -100,15 +84,13 @@ You'll also need to create a ``~/.pypirc`` file, like so::
     username=<USERNAME>
     password=<PASSWORD>
 
-Here, ``<USERNAME>`` and ``<PASSWORD>`` should be replaced with your username
-and password, respectively.
+Here, ``<USERNAME>`` and ``<PASSWORD>`` should be replaced with your PyPI
+username and password, respectively.
 
-If you want to check the PyPI description before uploading, run this::
+To see a list of other build options, run:
 
-    $ bin/py setup.py check --strict --restructuredtext
+.. code:: console
 
-.. _buildout: https://pypi.python.org/pypi/zc.buildout
+    $ make
+
 .. _PyPI: https://pypi.python.org/pypi
-.. _Sphinx CSV Filter: https://github.com/crate/sphinx_csv_filter
-.. _the CrateDB repository: https://github.com/crate/crate
-.. _twine: https://pypi.python.org/pypi/twine

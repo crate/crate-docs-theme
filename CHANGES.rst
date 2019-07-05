@@ -5,6 +5,16 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Add stub documentation project for testing the theme
+- Add new standalone config module for documentation projects that don't appear
+  in the navigation menu
+- Revamp package build system
+- Removed unused `docutils.conf` file
+- Update package description
+- Bump required Python version to 3.7
+- Tidy up `.gitignore`
+- Tidy up top-level documentation
+
 2019/07/04 0.5.79
 -----------------
 
@@ -502,7 +512,7 @@ Unreleased
 2014/08/19 0.3.5
 ----------------
 
-- added styles for 'seealso' and 'todo' colour boxes
+- added styles for 'seealso' and 'todo' color boxes
 
 - added docutils.conf to specify max length of field names
 

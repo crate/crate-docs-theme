@@ -30,8 +30,8 @@ version = machinery.SourceFileLoader(
 
 setup(name='crate-docs-theme',
       version=version,
-      description='Crate.io Documentation Theme',
-      long_description='A Sphinx theme for Crate.io\'s Documentation',
+      description='Crate Docs Theme',
+      long_description='A Sphinx theme for the Crate Documentation',
       classifiers=[
           "Intended Audience :: Developers",
           "License :: OSI Approved :: Apache Software License",
@@ -57,5 +57,5 @@ setup(name='crate-docs-theme',
           'sphinxcontrib-plantuml==0.14',
           'sphinx_sitemap==0.3.1',
       ],
-      python_requires=">=3.6",
+      python_requires=">=3.7",
 )
