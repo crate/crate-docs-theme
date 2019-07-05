@@ -71,6 +71,7 @@ help:
 $(SPHINXBUILD) $(SPHINXAUTOBUILD):
 	$(PYTHON) -m venv $(ENV_DIR)
 	$(PIP) install --upgrade pip
+	$(PIP) install -r $(ROOT_RST_DIR)
 	$(PIP) install -r requirements.txt
 
 ifeq ($(UNAME),Linux)
