@@ -2,7 +2,7 @@
 Crate Docs Theme
 ================
 
-|build-status|
+|pypi| |travis| |rtd|
 
 A `Sphinx`_ theme for the `Crate documentation`_.
 
@@ -59,6 +59,15 @@ Looking for more help?
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
 .. _support channels: https://crate.io/support/
 
-.. |build-status| image:: https://img.shields.io/travis/crate/crate-docs-theme.svg?style=flat
-    :alt: Build status
+
+.. |pypi| image:: https://badge.fury.io/py/crate-docs-theme.svg
+    :alt: PyPI version
+    :target: https://badge.fury.io/py/crate-docs-theme
+
+.. |travis| image:: https://img.shields.io/travis/crate/crate-docs-theme.svg?style=flat
+    :alt: Travis CI status
     :target: https://travis-ci.org/crate/crate-docs-theme
+
+.. |rtd| image:: https://readthedocs.org/projects/crate-docs-theme/badge/
+    :alt: Read the Docs status
+    :target: https://readthedocs.org/projects/crate-docs-theme/
