@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+2019/07/05 0.5.80
+-----------------
+
 - Add stub documentation project for testing the theme
 - Add new standalone config module for documentation projects that don't appear
   in the navigation menu
