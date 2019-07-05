@@ -27,8 +27,10 @@
 
 .EXPORT_ALL_VARIABLES:
 
-# `ROOT_RST_DIR` is where to look for RST files
-ROOT_RST_DIR    := ..
+# `ROOT_DIR` is the root of the repository
+ROOT_DIR        := ..
+# `THIS_DIR` is the path to the parent directory of this file from `ROOT_DIR`
+THIS_DIR        := docs
 ENV_DIR         := .env
 ENV_BIN         := $(ENV_DIR)/bin
 ACTIVATE        := $(ENV_BIN)/activate
@@ -43,10 +45,9 @@ SPHINX_OPTS     := -W -n
 STYLE_REPO      := https://github.com/crate/crate-docs-style.git
 STYLE_VERSION   := 0.1.5
 STYLE_DIR       := .style
-# `STYLE_DIR_ROOT` is the path to `STYLE_DIR` from `ROOT_RST_DIR`
-STYLE_DIR_ROOT  := docs/$(STYLE_DIR)
+STYLE_DIR_ROOT  := $(THIS_DIR)/$(STYLE_DIR)
 STYLE_RULES     := $(STYLE_DIR_ROOT)/utils/rules.mk
-STYLE_MAKE      := $(MAKE) -C $(ROOT_RST_DIR) -f $(STYLE_RULES)
+STYLE_MAKE      := $(MAKE) -C $(ROOT_DIR) -f $(STYLE_RULES)
 FSWATCH         := fswatch
 
 # Default target
@@ -71,8 +72,9 @@ help:
 $(SPHINXBUILD) $(SPHINXAUTOBUILD):
 	$(PYTHON) -m venv $(ENV_DIR)
 	$(PIP) install --upgrade pip
-	$(PIP) install -r $(ROOT_RST_DIR)
-	$(PIP) install -r requirements.txt
+	@ # Change to `ROOT_DIR` to mimic how Read the Docs does it
+	cd $(ROOT_DIR) && \
+	    $(THIS_DIR)/$(PIP) install -r $(THIS_DIR)/requirements.txt
 
 ifeq ($(UNAME),Linux)
 $(VALE):
