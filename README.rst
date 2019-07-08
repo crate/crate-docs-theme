@@ -64,6 +64,10 @@ Looking for more help?
     :alt: PyPI version
     :target: https://badge.fury.io/py/crate-docs-theme
 
+.. |style| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Fstyle.json
+    :alt: Style version
+    :target: https://github.com/crate/crate-docs-style
+
 .. |travis| image:: https://img.shields.io/travis/crate/crate-docs-theme.svg?style=flat
     :alt: Travis CI status
     :target: https://travis-ci.org/crate/crate-docs-theme

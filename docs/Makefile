@@ -27,27 +27,35 @@
 
 .EXPORT_ALL_VARIABLES:
 
-# `ROOT_DIR` is the root of the repository
-ROOT_DIR        := ..
-# `THIS_DIR` is the path to the parent directory of this file from `ROOT_DIR`
-THIS_DIR        := docs
+# By default, we run commands from the the `docs` directory so that the
+# commands output by `make` can be run if you copy and paste them. However, we
+# must jump up to the top-level directory of the repository for two specific
+# commands (see below).
+#
+# Because of this, we specify `TOP_DIR` and `DOCS_DIR` so that Make can find
+# its way around.
+
+# `TOP_DIR` is the top-level directory of the repository
+TOP_DIR         := ..
+# `DOCS_DIR` is the path to `docs` from `TOP_DIR`
+DOCS_DIR        := docs
 ENV_DIR         := .env
-ENV_BIN         := $(ENV_DIR)/bin
-ACTIVATE        := $(ENV_BIN)/activate
+ACTIVATE        := $(ENV_DIR)/bin/activate
 PYTHON          := python3.7
-PIP             := $(ENV_BIN)/pip3.7
-SPHINXBUILD     := $(ENV_BIN)/sphinx-build
-SPHINXAUTOBUILD := $(ENV_BIN)/sphinx-autobuild
-AUTOBUILD_OPTS  := --ignore '.*' --ignore '*.lint'
+PIP             := $(PYTHON) -m pip
+SPHINXBUILD     := sphinx-build
+SPHINXAUTOBUILD := sphinx-autobuild
+AUTOBUILD_OPTS  := --re-ignore '^(?!.+\.rst$$)'
 BUILD_DIR       := .build
 SPHINX_ARGS     := . $(BUILD_DIR)
 SPHINX_OPTS     := -W -n
+STYLE_JSON      := style.json
 STYLE_REPO      := https://github.com/crate/crate-docs-style.git
-STYLE_VERSION   := 0.1.5
 STYLE_DIR       := .style
-STYLE_DIR_ROOT  := $(THIS_DIR)/$(STYLE_DIR)
+STYLE_DIR_ROOT  := $(DOCS_DIR)/$(STYLE_DIR)
 STYLE_RULES     := $(STYLE_DIR_ROOT)/utils/rules.mk
-STYLE_MAKE      := $(MAKE) -C $(ROOT_DIR) -f $(STYLE_RULES)
+# Change to `TOP_DIR` so we can process all RST files in the repository
+STYLE_MAKE      := $(MAKE) -C $(TOP_DIR) -f $(STYLE_RULES)
 FSWATCH         := fswatch
 
 # Default target
@@ -69,12 +77,13 @@ help:
 	@ echo
 	@ printf '\033[36m  reset  \033[00m Reset the source\n'
 
-$(SPHINXBUILD) $(SPHINXAUTOBUILD):
+$(ACTIVATE):
 	$(PYTHON) -m venv $(ENV_DIR)
-	$(PIP) install --upgrade pip
-	@ # Change to `ROOT_DIR` to mimic how Read the Docs does it
-	cd $(ROOT_DIR) && \
-	    $(THIS_DIR)/$(PIP) install -r $(THIS_DIR)/requirements.txt
+	. $(ACTIVATE) && \
+	    $(PIP) install --upgrade pip
+	@ # Change to `TOP_DIR` to mimic how Read the Docs does it
+	. $(ACTIVATE) && cd $(TOP_DIR) && \
+	    $(PIP) install -r $(DOCS_DIR)/requirements.txt
 
 ifeq ($(UNAME),Linux)
 $(VALE):
@@ -90,17 +99,20 @@ $(VALE):
 	cd $(TOOLS_DIR) && tar -xzf $(VALE_MACOS)
 endif
 
+# Parse JSON file for version
+STYLE_VERSION = $(shell cat $(STYLE_JSON) | \
+    python -c 'import json, sys; print(json.load(sys.stdin)["message"])')
+
 ifeq ($(STYLE_VERSION),)
+$(error No version specified in $(STYLE_JSON))
+endif
+
+ifeq ($(wildcard $(TOP_DIR)/utils/rules.mk),)
 # The documentation for the crate-docs-style project fakes an install of its
 # own code so that it can test itself
 $(STYLE_DIR):
-	@ if test ! -d ../utils; then\
-	    printf '\033[31mYou must set `STYLE_VERSION` to lint the '; \
-	    printf 'documentation.\033[00m\n'; \
-	    exit 1; \
-	fi
 	mkdir -p $@
-	cp -R ../utils $@/utils
+	cp -R $(TOP_DIR)/utils $@/utils
 else
 # The documentation for all other projects must install a versioned copy of the
 # crate-docs-style project
@@ -110,7 +122,7 @@ $(STYLE_DIR):
 endif
 
 .PHONY: autobuild
-autobuild: $(SPHINXAUTOBUILD)
+autobuild: $(ACTIVATE)
 	. $(ACTIVATE) && \
 	    $(SPHINXAUTOBUILD) $(SPHINX_ARGS) $(SPHINX_OPTS) $(AUTOBUILD_OPTS) $(O)
 
@@ -125,7 +137,7 @@ lint-watch: $(STYLE_DIR)
 	done || true
 
 .PHONY: dev
-dev: $(SPHINXAUTOBUILD) $(STYLE_DIR)
+dev: lint
 	@ if test ! -x "`which $(FSWATCH)`"; then \
 	    printf '\033[31mYou must have fswatch installed.\033[00m\n'; \
 	    exit 1; \
@@ -140,7 +152,7 @@ check: html linkcheck lint
 Makefile:
 
 # Route unknown targets to `sphinx-build`
-%: $(SPHINXBUILD)
+%: $(ACTIVATE)
 	. $(ACTIVATE) && \
 	    $(SPHINXBUILD) -M $@ $(SPHINX_ARGS) $(SPHINX_OPTS) $(O)
 
