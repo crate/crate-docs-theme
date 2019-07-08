@@ -2,7 +2,7 @@
 Crate Docs Theme
 ================
 
-|pypi| |travis| |rtd|
+|pypi| |style| |travis| |rtd|
 
 A `Sphinx`_ theme for the `Crate documentation`_.
 
