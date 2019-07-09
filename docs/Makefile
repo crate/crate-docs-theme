@@ -108,17 +108,17 @@ $(error No version specified in $(STYLE_JSON))
 endif
 
 ifeq ($(wildcard $(TOP_DIR)/utils/rules.mk),)
-# The documentation for the crate-docs-style project fakes an install of its
-# own code so that it can test itself
-$(STYLE_DIR):
-	mkdir -p $@
-	cp -R $(TOP_DIR)/utils $@/utils
-else
 # The documentation for all other projects must install a versioned copy of the
 # crate-docs-style project
 $(STYLE_DIR):
 	git clone --depth=1 -c advice.detachedHead=false \
 	    --branch=$(STYLE_VERSION) $(STYLE_REPO) $(STYLE_DIR)
+else
+# The documentation for the crate-docs-style project fakes an install of its
+# own code so that it can test itself
+$(STYLE_DIR):
+	mkdir -p $@
+	cp -R $(TOP_DIR)/utils $@/utils
 endif
 
 .PHONY: autobuild
