@@ -152,13 +152,15 @@ div.danger {
 
 .bs-docs-sidenav .toctree li.current > a,
 .bs-docs-sidenav .toctree li.active > a,
-.bs-docs-sidenav .toctree li.current > code,
-.bs-docs-sidenav .toctree li.active > code {
+.bs-docs-sidenav .toctree li.current > a code,
+.bs-docs-sidenav .toctree li.active > a code {
     font-weight: bold;
 }
+
 .bs-docs-sidenav ul {
     margin-bottom: 0px;
 }
+
 .bs-docs-sidenav .toctree ul ul ul {
     display: none;
 }
