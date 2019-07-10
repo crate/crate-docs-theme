@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+2019/07/10 0.5.82
+-----------------
+
 - Fix bolding of literals in left-hand navigation menu
 
 2019/07/09 0.5.81
