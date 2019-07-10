@@ -9,6 +9,8 @@ Unreleased
 -----------------
 
 - Upgrade to docs style 0.1.10
+- Improve left-hand navigation menu scrolling
+- Fix bolding of literals in left-hand navigation menu
 
 2019/07/05 0.5.80
 -----------------
