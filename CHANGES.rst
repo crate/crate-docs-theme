@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Add Cloud Getting Started project
+
 2019/07/10 0.5.82
 -----------------
 
