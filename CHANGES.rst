@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Upgrade docs utils to 0.1.10
+
 2019/07/24 0.5.83
 -----------------
 
