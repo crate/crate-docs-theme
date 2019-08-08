@@ -30,9 +30,9 @@ For help, run:
 
 .. code-block:: console
 
-    $ make help
+    $ make
 
-    Crate Documentation Build System
+    Crate Docs Utils
 
     Run `make <TARGET>`, where <TARGET> is one of:
 
