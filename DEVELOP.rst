@@ -55,8 +55,8 @@ Continuous integration and deployment
 
 |utils| |travis| |rtd|
 
-Travis CI is is `configured`_ to run ``make check`` from the ``docs``
-directory. Please do not merge pull requests until the tests pass.
+Travis CI is `configured`_ to run ``make check`` from the ``docs`` directory.
+Please do not merge pull requests until the tests pass.
 
 `Read the Docs`_ automatically deploys the documentation whenever a configured
 branch is updated.
