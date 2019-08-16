@@ -5,6 +5,7 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Remove title attribute from navigation links
 - Upgrade docs utils to 0.1.11
 
 2019/07/24 0.5.83

@@ -3,7 +3,7 @@
   <ul>
     {% if project == 'Getting Started' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Getting Started</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Getting Started</a>
       {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -11,7 +11,7 @@
     {% endif %}
     {% if project == 'CrateDB' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Reference</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Reference</a>
       {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -19,7 +19,7 @@
     {% endif %}
     {% if project == 'Crate Guide' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Guide</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Guide</a>
       {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -31,13 +31,13 @@
   <ul>
     {% if project == 'Cloud Getting Started' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Getting Started</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Getting Started</a>
       {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% endif %}
     {% if project == 'Cloud Console' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Console</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Console</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -45,7 +45,7 @@
     {% endif %}
     {% if project == 'Croud CLI' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Croud CLI</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Croud CLI</a>
       {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -53,7 +53,7 @@
     {% endif %}
     {% if project == 'IoT Data Platform' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">IoT Data Platform</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">IoT Data Platform</a>
       {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% endif %}
@@ -63,7 +63,7 @@
   <ul>
     {% if project == 'Crate Admin' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">CrateDB Admin UI</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Admin UI</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -71,7 +71,7 @@
     {% endif %}
     {% if project == 'Crate Shell' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">CrateDB Shell</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Shell</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -79,7 +79,7 @@
     {% endif %}
     {% if project == 'Crate JDBC Driver' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">JDBC</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">JDBC</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -87,7 +87,7 @@
     {% endif %}
     {% if project == 'Crate DBAL' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">PHP DBAL</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">PHP DBAL</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -95,7 +95,7 @@
     {% endif %}
     {% if project == 'Crate PDO' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">PHP PDO</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">PHP PDO</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -103,7 +103,7 @@
     {% endif %}
     {% if project == 'Crate Python' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">Python</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Python</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -111,7 +111,7 @@
     {% endif %}
     {% if project == 'Crate Npgsql' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">.NET Npgsql</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">.NET Npgsql</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
     {% else %}
@@ -123,7 +123,7 @@
 
   {% if project == 'SQL 99' %}
   <li class="current">
-    <a class="current-active" href="{{ pathto(master_doc) }}" title="{{ project|e|striptags }}">SQL-99 Complete, Really</a>
+    <a class="current-active" href="{{ pathto(master_doc) }}">SQL-99 Complete, Really</a>
     {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
   </li>
   {% endif %}
