@@ -5,6 +5,10 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+2019/09/23 0.5.85
+-----------------
+- Display Cloud Getting Started link
+
 2019/08/16 0.5.84
 -----------------
 
