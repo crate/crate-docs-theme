@@ -34,6 +34,8 @@
       <a class="current-active" href="{{ pathto(master_doc) }}">Getting Started</a>
       {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
+    {% else %}
+    <li class="navleft-item"><a href="/docs/cloud/getting-started/">Getting Started</a></li>
     {% endif %}
     {% if project == 'Cloud Console' %}
     <li class="current">
