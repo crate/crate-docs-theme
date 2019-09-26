@@ -1320,6 +1320,16 @@ a.learn-more-link, .wrapper-teaser-img p {
   float: right;
   text-align: right;
 }
+.view-on-github{
+  display: block;
+  float: right;
+  padding: 8px 15px;
+  border: 1px solid #e7e7e7;
+  border-left: none;
+}
+.view-on-github .fa-github:before{
+  font-size: 24px;
+}
 
 .toggle {
   padding-top: 10px;
