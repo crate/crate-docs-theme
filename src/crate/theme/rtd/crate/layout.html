@@ -3,7 +3,7 @@
   {% set css_files = [
     '_static/css/normalize.css',
     '_static/css/bootstrap.css',
-    
+
     '_static/css/components.css',
     '_static/css/crateio.css',
     '_static/css/crateio-rtd.css',
@@ -18,12 +18,18 @@
     '_static/js/searchtools.js',
     '_static/js/webflow.js',
     '_static/js/bootstrap.js',
-    
+
     '_static/js/fontawesome.js',
     '_static/js/custom.js',
     '_static/js/sticky-sidebar.min.js'
     ]
   %}
+
+  {% if page_source_suffix %}
+  {% set suffix = page_source_suffix %}
+  {% else %}
+  {% set suffix = source_suffix %}
+  {% endif %}
 
   {%- block doctype -%}
   <!DOCTYPE html>
@@ -64,6 +70,16 @@
         </div>
         <div class="col-md-8 col-lg-9">
           <div class="wrapper-content-right">
+            {% if display_github %}
+              <div class="view-on-github">
+              {% if check_meta and 'github_url' in meta %}
+                <!-- User defined GitHub URL -->
+                <a href="{{ meta['github_url'] }}" class="fa fa-github"></a>
+              {% else %}
+                <a href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" class="fa fa-github"></a>
+              {% endif %}
+              </div>
+            {% endif %}
             {%- if current_version %}
             <div class="version-select-container">
               <div data-delay="0" class="w-dropdown">
@@ -92,6 +108,20 @@
   {%- endblock %}
 
   {%- block custom_footer %}
+
+  {% if display_github %}
+  <script>
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'e' && event.ctrlKey) {
+        {% if check_meta and 'github_url' in meta %}
+          location.href = "{{ meta['github_url'] }}";
+        {% else %}
+          location.href = "https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}";
+        {% endif %}
+      }
+    });
+  </script>
+  {% endif %}
 
   <script>
 
