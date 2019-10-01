@@ -101,7 +101,7 @@ Build the package:
 
     $ make build
 
-Upload the package to PyPI_::
+Upload the package to `PyPI`_::
 
     $ make upload
 
