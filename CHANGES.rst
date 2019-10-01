@@ -5,8 +5,11 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
-- Added a "view on GitHub" button
-- Added a key Shortcut ctrl + e to open the GitHub page.
+2019/10/01 0.6.0
+----------------
+
+- Add a "view on GitHub" button
+- Add a key shortcut Ctrl + e to open the GitHub page.
 
 2019/09/23 0.5.85
 -----------------
