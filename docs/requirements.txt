@@ -1,16 +1,3 @@
-# Standard packages needed for the docs
-###############################################################################
-
-sphinx-autobuild
-
-# These versions should match the Read The Docs environment (please update if
-# you notice this is not the case)
-alabaster>=0.7,<0.8,!=0.7.5
-setuptools<41
-sphinx==1.7.4
-
-# Project specific packages
-###############################################################################
-
-# This points to the parent directory, because `pip` is run from there
+# Install the local crate-docs-theme package by specifying parent directory,
+# because `pip` is run from there.
 .

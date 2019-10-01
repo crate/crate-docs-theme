@@ -33,7 +33,7 @@ export DOCS_DIR := docs
 UTILS_JSON := utils.json
 UTILS_REPO := https://github.com/crate/crate-docs-utils.git
 UTILS_DIR  := .utils
-UTILS_MAKE := $(MAKE) -f $(UTILS_DIR)/utils/rules.mk
+UTILS_MAKE := $(MAKE) -f $(UTILS_DIR)/src/rules.mk
 
 # Parse the JSON file
 UTILS_VERSION = $(shell cat $(UTILS_JSON) | \
@@ -48,12 +48,12 @@ endif
 help: $(UTILS_DIR)
 	@ $(UTILS_MAKE) $@
 
-ifneq ($(wildcard $(TOP_DIR)/utils/rules.mk),)
+ifneq ($(wildcard $(TOP_DIR)/src/rules.mk),)
 # The utils project detects itself and fakes an install of its own code so that
 # it can test itself
 $(UTILS_DIR):
 	mkdir -p $@
-	cp -R $(TOP_DIR)/utils $@
+	cp -R $(TOP_DIR)/src $@
 else
 # All other projects install a versioned copy of the utils
 $(UTILS_DIR):

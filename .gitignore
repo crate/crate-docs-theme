@@ -7,6 +7,7 @@
 *.egg-info
 *.lint
 *.pyc
+.utils
 blackbox
 develop-eggs/
 eggs
