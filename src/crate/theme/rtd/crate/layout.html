@@ -112,7 +112,7 @@
   {% if display_github %}
   <script>
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'e' && event.ctrlKey) {
+      if (event.key === 'g' && event.ctrlKey) {
         {% if check_meta and 'github_url' in meta %}
           location.href = "{{ meta['github_url'] }}";
         {% else %}
