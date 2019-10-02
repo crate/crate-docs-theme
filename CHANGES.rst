@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Update GitHub shortcut Ctrl + e
+
 2019/10/01 0.6.0
 ----------------
 
