@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+2019/10/30 0.7.0
+----------------
+
 - Update GitHub shortcut Ctrl + e
 - Add (hidden) CrateDB Tutorials project
 - Update Python conf module names to reflect current docs structure
