@@ -19,32 +19,10 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
-"""Crate Sphix Theme for ReadTheDocs"""
+from crate.theme.rtd.conf import *
 
-import os
+project = u'CrateDB Tutorials'
 
-VERSION = (0, 7, 0)
-
-__version__ = ".".join(str(v) for v in VERSION)
-__version_full__ = __version__
-
-def current_dir():
-    return os.path.abspath(os.path.dirname(__file__))
-
-def get_html_theme_path():
-    """Return list of HTML theme paths."""
-    return [current_dir()]
-
-def get_html_static_path():
-    """Return list of HTML static paths."""
-    current_dir = current_dir()
-    return [
-        os.path.join(current_dir, 'crate', 'static'),
-    ]
-
-def get_html_template_path():
-    """Return list of HTML template paths."""
-    current_dir = current_dir()
-    return [
-        os.path.join(current_dir, 'crate'),
-    ]
+html_theme_options.update({
+    'canonical_url_path': 'docs/crate/tutorials/en/latest/',
+})
