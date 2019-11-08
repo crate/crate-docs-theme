@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Removed Getting Started navigation link
+- Made Tutorials link un-hidden
+
 2019/10/30 0.7.0
 ----------------
 
