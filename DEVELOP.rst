@@ -66,7 +66,7 @@ Development
 ===========
 
 The best way to test the theme is to build the docs for this project. The docs
-build system installs the crate-docs-theme package from your local files
+build system installs the ``crate-docs-theme`` package from your local files
 (instead of fetching a previously released version from PyPI).
 
 Because the Python virtual environment is then cached, if you want the docs
