@@ -5,7 +5,10 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
-- Updated top nav and bottom nav
+2019/11/08 0.7.1
+----------------
+
+- Updated top nav and bottom nav to match site
 - Removed Getting Started navigation link
 - Made Tutorials link un-hidden
 
