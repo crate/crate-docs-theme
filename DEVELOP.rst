@@ -119,7 +119,7 @@ Upload to PyPI
 
 You must switch to the project root directory for the following commands.
 
-Build the package:
+Build the package::
 
     $ make build
 
