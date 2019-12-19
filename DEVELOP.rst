@@ -153,11 +153,11 @@ To see a list of other build options, run:
 Rebuild the docs
 ----------------
 
-See the internal documentation for how to `rebuild the docs`.
+See the internal documentation for how to `rebuild the docs`_.
 
 
 .. _configured: https://github.com/crate/crate-docs-theme/blob/master/.travis.yml
-.. _rebuild the doc: https://github.com/crate/distribute
+.. _rebuild the doc: https://github.com/crate/distribute/blob/master/REBUILD_DOCS.rst
 .. _fswatch: https://github.com/emcrisostomo/fswatch
 .. _PyPI: https://pypi.python.org/pypi
 .. _Read the Docs: http://readthedocs.org
