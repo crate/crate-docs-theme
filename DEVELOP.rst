@@ -82,7 +82,7 @@ If you have made changes to the Crate.io website and want to see those
 changes reflected in the docs, you must make the same changes to this
 theme.
 
-To make changes to this them, follow this process:
+To make changes to this theme, follow this process:
 
 1. `Make changes`_
 2. `Prepare a release`_
