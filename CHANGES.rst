@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+2019/12/19 0.7.2
+----------------
+
 - Aligned docs nav bar to the website and in regard to the latest
   product addition
 - Added CrateDB Cloud on Azure
