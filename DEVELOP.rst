@@ -53,7 +53,7 @@ You must install `fswatch`_ to use the ``dev`` target.
 Continuous integration and deployment
 -------------------------------------
 
-|utils| |travis| |rtd|
+|pypi| |style| |travis| |rtd|
 
 Travis CI is `configured`_ to run ``make check`` from the ``docs`` directory.
 Please do not merge pull requests until the tests pass.
@@ -75,11 +75,33 @@ reset it each time, like so::
 
     $ make reset
 
+Making changes
+==============
 
-Preparing a Release
-===================
+If you have made changes to the Crate.io website and want to see those
+changes reflected in the docs, you must make the same changes to this
+theme.
 
-To create a new release, you must:
+To make changes to this theme, follow this process:
+
+1. `Make changes`_
+2. `Prepare a release`_
+3. `Upload to PyPI`_
+4. `Rebuild the docs`_
+
+Make changes
+------------
+
+Prepare your changes on a branch. Be sure to update the ``CHANGES.rst``
+file with a description of what you changed.
+
+When you're ready, create a new pull request. Once the pull request has
+been approved by an appropriate reviewer, merge to the `master` branch.
+
+Prepare a release
+-----------------
+
+To create a new release:
 
 - Update ``__version__`` in ``src/crate/theme/rtd/__init__.py``
 
@@ -92,12 +114,12 @@ To create a new release, you must:
 - Create a tag by running ``./devtools/create_tag.sh``
 
 
-PyPI Deployment
-===============
+Upload to PyPI
+--------------
 
 You must switch to the project root directory for the following commands.
 
-Build the package:
+Build the package::
 
     $ make build
 
@@ -127,22 +149,33 @@ To see a list of other build options, run:
 
     $ make
 
+
+Rebuild the docs
+----------------
+
+See the internal documentation for how to `rebuild the docs`_.
+
+
 .. _configured: https://github.com/crate/crate-docs-theme/blob/master/.travis.yml
 .. _fswatch: https://github.com/emcrisostomo/fswatch
 .. _PyPI: https://pypi.python.org/pypi
 .. _Read the Docs: http://readthedocs.org
+.. _rebuild the docs: https://github.com/crate/distribute/blob/master/REBUILD_DOCS.rst
 .. _ReStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Sphinx: http://sphinx-doc.org/
 
+.. |pypi| image:: https://badge.fury.io/py/crate-docs-theme.svg
+    :alt: PyPI version
+    :target: https://badge.fury.io/py/crate-docs-theme
 
-.. |utils| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Futils.json
-    :alt: Utils version
-    :target: https://github.com/crate/crate-docs-theme/blob/master/docs/utils.json
+.. |style| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Fstyle.json
+    :alt: Style version
+    :target: https://github.com/crate/crate-docs-style
 
 .. |travis| image:: https://img.shields.io/travis/crate/crate-docs-theme.svg?style=flat
     :alt: Travis CI status
     :target: https://travis-ci.org/crate/crate-docs-theme
 
-.. |rtd| image:: https://readthedocs.org/projects/crate-docs-theme/badge/?version=latest
-    :alt: Read The Docs status
-    :target: https://readthedocs.org/projects/crate-docs-theme
+.. |rtd| image:: https://readthedocs.org/projects/crate-docs-theme/badge/
+    :alt: Read the Docs status
+    :target: https://readthedocs.org/projects/crate-docs-theme/
