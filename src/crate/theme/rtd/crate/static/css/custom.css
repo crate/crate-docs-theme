@@ -617,7 +617,8 @@ header.header-nav {
     z-index: -1;
     top: 65px;
     right: 0;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     display: block !important;
     transform: translateX(100%);
     transition: transform .3s ease-in-out;
