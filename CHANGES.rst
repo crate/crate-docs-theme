@@ -5,6 +5,12 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+2020/01/09 0.7.3
+----------------
+
+- Changed width to 100% and max-width to 400px on .main-nav for tablet/mobile to prevent overflow on smaller devices in custom.css
+- Added minWidth: 992 for sticky-sidebar to layout.html to fix scroll issues on mobile devices
+
 2019/12/19 0.7.2
 ----------------
 
