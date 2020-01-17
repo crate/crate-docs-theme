@@ -7,6 +7,8 @@ Unreleased
 
 - Changed width to 100% and max-width to 400px on .main-nav for tablet/mobile to prevent overflow on smaller devices in custom.css
 - Added minWidth: 992 for sticky-sidebar to layout.html to fix scroll issues on mobile devices
+- removed 60px padding in .toctree to get rid of the whitespace
+- added 20px margin below to .bs-docs-sidebar so the h1 won't overlap
 
 2019/12/19 0.7.2
 ----------------
