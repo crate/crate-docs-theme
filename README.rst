@@ -2,6 +2,8 @@
 Crate Docs Theme
 ================
 
+|pypi|
+
 A `Sphinx`_ theme for the `Crate documentation`_.
 
 *Note: This theme is tightly integrated into the Crate.io website and is
@@ -59,3 +61,8 @@ Looking for more help?
 .. _PyPI: https://pypi.python.org/
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
 .. _support channels: https://crate.io/support/
+
+
+.. |pypi| image:: https://badge.fury.io/py/crate-docs-theme.svg
+    :alt: PyPI version
+    :target: https://badge.fury.io/py/crate-docs-theme
