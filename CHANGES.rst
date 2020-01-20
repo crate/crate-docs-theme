@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+2020/01/20 0.7.3
+----------------
+
 - Changed ``width`` to ``100%`` and ``max-width`` to ``400px`` on
   ``.main-nav`` for tablet and mobile to prevent overflow on smaller
   devices in ``custom.css``.
