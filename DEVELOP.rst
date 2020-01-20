@@ -3,16 +3,129 @@ Developer Guide
 ===============
 
 
-Prerequisites
-=============
+Making changes to the theme
+===========================
 
-You must have Python 3.7 installed.
+To make changes to this theme, follow this process:
+
+1. `Make changes`_
+2. `Prepare a release`_
+3. `Upload to PyPI`_
+4. `Rebuild all Crate docs`_
+
+*Note*: If you have made changes to the Crate.io website and want to see those
+changes reflected in the docs, you must make the same changes to this
+theme.
+
+Make changes
+------------
+
+Create a branch for your changes.
+
+Once you have a branch, the basic workflow goes like this:
+
+1. Modify the theme files
+2. Build the project docs to test what the theme looks like
+3. If you need to make additional changes, reset the build environment
+   and go back to step one
+
+The best way to test your changes is to build the sample docs for this
+project. See the `Documentation`_ section below for details. The command
+to use for this is ``make dev``.
+
+Once the webserver is running, you can view your local copy of the docs
+by visiting http://127.0.0.1:8000 in a web browser.
+
+For all other Crate projects, ``make dev`` fetches a released version of
+the theme from `PyPI`_. However, this project is different. When you run
+``make dev``, the build system creates a mock release of the theme using
+your local files and installs it into the Python virtual environment
+used by the build system. This trick allows you to preview what the theme
+would look like if it were released.
+
+The Python virtual environment caches packages, including the mock one
+you use for testing. Accordingly, you must reset the cache every time
+you make a change to the theme that you want to preview. You can do that
+like so::
+
+    $ make reset
+
+When you're ready, create a pull request.
+
+*Note*: Be sure to update the ``CHANGES.rst`` file with a description of
+what you changed. (Be sure to add your change items to the *Unreleased*
+section.)
+
+Once an appropriate reviewer has approved the pull request, merge your
+changes to the ``master`` branch.
+
+A project admin should be asked to complete the remaining steps.
+
+
+Prepare a release
+-----------------
+
+To create a new release from the ``master`` branch:
+
+- Update ``__version__`` in ``src/crate/theme/rtd/__init__.py``
+
+- Add a section for the new version in the ``CHANGES.rst`` file
+
+- Commit your changes with a message like "Prepare release x.y.z"
+
+- Push to origin
+
+- Create a tag by running ``./devtools/create_tag.sh``
+
+
+Upload to PyPI
+--------------
+
+You must switch to the project root directory for the following commands.
+
+Build the package::
+
+    $ make build
+
+Upload the package to `PyPI`_::
+
+    $ make upload
+
+For this to work, you will need a personal PyPI account and that account
+must be an admin for this project on PyPI.
+
+You'll also need to create a ``~/.pypirc`` file, like so::
+
+    [distutils]
+    index-servers =
+      pypi
+
+    [pypi]
+    username=<USERNAME>
+    password=<PASSWORD>
+
+Here, ``<USERNAME>`` and ``<PASSWORD>`` should be replaced with your PyPI
+username and password, respectively.
+
+To see a list of other build options, run:
+
+.. code:: console
+
+    $ make
+
+
+Rebuild all Crate docs
+----------------------
+
+Once the theme is released, you must rebuild all of the Crate docs so
+that they pick up the changes. Consult the internal documentation for
+help `rebuilding the docs`_.
 
 
 Documentation
 =============
 
-The documentation is written using `Sphinx`_ and `ReStructuredText`_.
+We write the documentation with `Sphinx`_ and `ReStructuredText`_.
 
 
 Working on the documentation
@@ -53,122 +166,24 @@ You must install `fswatch`_ to use the ``dev`` target.
 Continuous integration and deployment
 -------------------------------------
 
-|pypi| |style| |travis| |rtd|
+|style| |travis| |rtd|
 
-Travis CI is `configured`_ to run ``make check`` from the ``docs`` directory.
-Please do not merge pull requests until the tests pass.
+We have `configured`_ Travis CI to run ``make check`` from the ``docs``
+directory. Please do not merge pull requests until the Travis CI tests pass.
 
-`Read the Docs`_ automatically deploys the documentation whenever a configured
-branch is updated.
-
-
-Development
-===========
-
-The best way to test the theme is to build the docs for this project. The docs
-build system installs the ``crate-docs-theme`` package from your local files
-(instead of fetching a previously released version from PyPI).
-
-Because the Python virtual environment is then cached, if you want the docs
-build system to pick up changes you have made to the theme, you will have to
-reset it each time, like so::
-
-    $ make reset
-
-Making changes
-==============
-
-If you have made changes to the Crate.io website and want to see those
-changes reflected in the docs, you must make the same changes to this
-theme.
-
-To make changes to this theme, follow this process:
-
-1. `Make changes`_
-2. `Prepare a release`_
-3. `Upload to PyPI`_
-4. `Rebuild the docs`_
-
-Make changes
-------------
-
-Prepare your changes on a branch. Be sure to update the ``CHANGES.rst``
-file with a description of what you changed.
-
-When you're ready, create a new pull request. Once the pull request has
-been approved by an appropriate reviewer, merge to the `master` branch.
-
-Prepare a release
------------------
-
-To create a new release:
-
-- Update ``__version__`` in ``src/crate/theme/rtd/__init__.py``
-
-- Add a section for the new version in the ``CHANGES.rst`` file
-
-- Commit your changes with a message like "Prepare release x.y.z"
-
-- Push to origin
-
-- Create a tag by running ``./devtools/create_tag.sh``
-
-
-Upload to PyPI
---------------
-
-You must switch to the project root directory for the following commands.
-
-Build the package::
-
-    $ make build
-
-Upload the package to `PyPI`_::
-
-    $ make upload
-
-For this to work, you will need a personal PyPI account that is set up as as an
-admin for this project on PyPI.
-
-You'll also need to create a ``~/.pypirc`` file, like so::
-
-    [distutils]
-    index-servers =
-      pypi
-
-    [pypi]
-    username=<USERNAME>
-    password=<PASSWORD>
-
-Here, ``<USERNAME>`` and ``<PASSWORD>`` should be replaced with your PyPI
-username and password, respectively.
-
-To see a list of other build options, run:
-
-.. code:: console
-
-    $ make
-
-
-Rebuild the docs
-----------------
-
-See the internal documentation for how to `rebuild the docs`_.
-
+`Read the Docs`_ automatically rebuilds the documentation whenever an
+active docs branch is updated.
 
 .. _configured: https://github.com/crate/crate-docs-theme/blob/master/.travis.yml
 .. _fswatch: https://github.com/emcrisostomo/fswatch
 .. _PyPI: https://pypi.python.org/pypi
 .. _Read the Docs: http://readthedocs.org
-.. _rebuild the docs: https://github.com/crate/distribute/blob/master/REBUILD_DOCS.rst
+.. _rebuilding the docs: https://github.com/crate/distribute/blob/master/REBUILD_DOCS.rst
 .. _ReStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Sphinx: http://sphinx-doc.org/
 
-.. |pypi| image:: https://badge.fury.io/py/crate-docs-theme.svg
-    :alt: PyPI version
-    :target: https://badge.fury.io/py/crate-docs-theme
 
-.. |style| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Fstyle.json
+.. |style| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Futils.json
     :alt: Style version
     :target: https://github.com/crate/crate-docs-style
 
