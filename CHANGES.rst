@@ -19,7 +19,6 @@ Unreleased
 - Added ``20px`` margin below to ``.bs-docs-sidebar`` so the ``h1`` won't
   overlap.
 
-
 2019/12/19 0.7.2
 ----------------
 
