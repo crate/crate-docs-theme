@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+2020/01/21 0.7.4
+----------------
+
 - Removed a function that hides the toggled docs menu on mobile.
 
 2020/01/20 0.7.3
