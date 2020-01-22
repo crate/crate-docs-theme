@@ -167,11 +167,11 @@ Testing on mobile
 -----------------
 
 If you want to test the theme on a mobile device, you can run the dev server on
-`0.0.0.0:8000` instead of `127.0.01:8000`. When you bind to `0.0.0.0`, devices
-on your local network can access the dev server by connecting to your machine's
-IP address on port `8000`.
+``0.0.0.0:8000`` instead of ``127.0.01:8000``. When you bind to ``0.0.0.0``,
+devices on your local network can access the dev server by connecting to your
+machine's IP address on port ``8000``.
 
-Bind the dev server to `0.0.0.0` like this::
+Bind the dev server to ``0.0.0.0`` like this::
 
     $ make SPHINX_OPTS='-W -n --host 0.0.0.0' dev
 
