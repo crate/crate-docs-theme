@@ -139,7 +139,8 @@
   } else {
 
     $('#mobile-menu-toggler').click(function() {
-      $('.wrapper-navleft').toggle();
+      $('#mobile-menu-toggler').toggleClass('w-active');
+      $('.wrapper-navleft').toggleClass('shownav');
     });
 
   }
