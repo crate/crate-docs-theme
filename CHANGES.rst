@@ -5,6 +5,10 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Edited a function that shows/hides the toggled docs menu on mobile.
+- Changed ``z-index`` of ``header.header-nav`` so ``version-select-container``
+  won't overlap on mobile
+
 2020/01/21 0.7.4
 ----------------
 
