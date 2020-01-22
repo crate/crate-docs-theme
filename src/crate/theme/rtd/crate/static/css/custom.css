@@ -321,7 +321,7 @@ body .mm-menu .navbar-nav {
     left: 0;
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, .1) !important;
-    z-index: 10;
+    z-index: 990;
   }
 
   div.section {
@@ -747,4 +747,17 @@ header.header-nav {
 
 .is-affixed .sidebar__inner {
   left: initial !important;
+}
+
+.wrapper-navleft.shownav {
+  display: block !important;
+}
+
+#mobile-menu-toggler.w-button:focus {
+  color: white;
+}
+
+#mobile-menu-toggler.w-button.w-active {
+  color: #0ec1ef;
+  opacity: 0.7;
 }
