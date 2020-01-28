@@ -187,6 +187,11 @@ directory. Please do not merge pull requests until the Travis CI tests pass.
 `Read the Docs`_ automatically rebuilds the documentation whenever an
 active docs branch is updated.
 
+To make changes to the RTD configuration (e.g., to activate or deactivate a
+release version), please contact the `@crate/docs`_ team.
+
+
+.. _@crate/docs: https://github.com/orgs/crate/teams/docs
 .. _configured: https://github.com/crate/crate-docs-theme/blob/master/.travis.yml
 .. _fswatch: https://github.com/emcrisostomo/fswatch
 .. _PyPI: https://pypi.python.org/pypi
