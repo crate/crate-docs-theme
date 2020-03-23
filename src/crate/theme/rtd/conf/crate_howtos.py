@@ -21,8 +21,8 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Cloud Getting Started'
+project = u'CrateDB How-To Guides'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/cloud/getting-started/en/latest/',
+    'canonical_url_path': 'docs/crate/howtos/en/latest/',
 })

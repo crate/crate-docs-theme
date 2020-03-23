@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'CrateDB'
+project = u'CrateDB Reference'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/crate/reference/en/latest/',

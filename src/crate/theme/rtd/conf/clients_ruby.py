@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Crate Ruby Driver'
+project = u'CrateDB Ruby Driver'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/clients/ruby/en/latest/',

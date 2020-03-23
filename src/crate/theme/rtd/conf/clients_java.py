@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Crate Java Client'
+project = u'CrateDB Java'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/clients/java/en/latest/',
