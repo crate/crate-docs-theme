@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Crate Python'
+project = u'CrateDB Python'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/clients/python/en/latest/',

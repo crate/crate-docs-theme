@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Crate PDO'
+project = u'CrateDB PDO'
 
 html_theme_options.update({
     'canonical_url_path': 'docs/clients/pdo/en/latest/',

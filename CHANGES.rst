@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Updates for docs reshuffle, including nav bar update and module name changes.
+
 2020/01/22 0.7.5
 ----------------
 

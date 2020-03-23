@@ -21,8 +21,8 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Crate Mesos Framework'
+project = u'Cloud Reference'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/clients/mesos-framework/en/latest/',
+    'canonical_url_path': 'docs/cloud/reference/en/latest/',
 })
