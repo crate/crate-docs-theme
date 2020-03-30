@@ -25,6 +25,22 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/crate/reference/">Reference</a></li>
     {% endif %}
+    {% if project == 'Crate Admin' %}
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}">Admin UI</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
+    {% else %}
+    <li class="navleft-item"><a href="/docs/crate/admin-ui/">Admin UI</a></li>
+    {% endif %}
+    {% if project == 'Crate Shell' %}
+    <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}">Crash CLI</a>
+      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
+    {% else %}
+    <li class="navleft-item"><a href="/docs/crate/crash/">Crash CLI</a></li>
+    {% endif %}
   </ul>
 
   <li class="navleft-item">CrateDB Cloud</li>
@@ -63,24 +79,8 @@
     {% endif %}
   </ul>
 
-  <li class="navleft-item">CrateDB Clients</li>
+  <li class="navleft-item">Clients</li>
   <ul>
-    {% if project == 'Crate Admin' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Admin UI</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-    {% else %}
-    <li class="navleft-item"><a href="/docs/clients/admin-ui/">CrateDB Admin UI</a></li>
-    {% endif %}
-    {% if project == 'Crate Shell' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Shell</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-    {% else %}
-    <li class="navleft-item"><a href="/docs/clients/crash/">CrateDB Shell</a></li>
-    {% endif %}
     {% if project == 'Crate JDBC Driver' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">JDBC</a>

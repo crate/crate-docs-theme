@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Move Admin UI and Crash into the CrateDB section.
+
 
 2020/03/30 0.8.0
 ----------------
