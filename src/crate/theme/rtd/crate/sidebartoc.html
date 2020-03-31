@@ -9,7 +9,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/crate/tutorials/">Tutorials</a></li>
     {% endif %}
-    {% if project == 'Crate How-To Guides' %}
+    {% if project == 'CrateDB How-To Guides' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">How-To Guides</a>
         {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -25,7 +25,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/crate/reference/">Reference</a></li>
     {% endif %}
-    {% if project == 'Crate Admin' %}
+    {% if project == 'CrateDB Admin UI' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">Admin UI</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -33,7 +33,7 @@
     {% else %}
     <li class="navleft-item"><a href="/docs/crate/admin-ui/">Admin UI</a></li>
     {% endif %}
-    {% if project == 'Crate Shell' %}
+    {% if project == 'CrateDB Crash' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">Crash CLI</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -81,7 +81,7 @@
 
   <li class="navleft-item">Clients</li>
   <ul>
-    {% if project == 'Crate JDBC Driver' %}
+    {% if project == 'CrateDB JDBC' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">JDBC</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -89,7 +89,7 @@
     {% else %}
     <li class="navleft-item"><a href="/docs/clients/jdbc/">JDBC</a></li>
     {% endif %}
-    {% if project == 'Crate DBAL' %}
+    {% if project == 'CrateDB DBAL' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">PHP DBAL</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -97,7 +97,7 @@
     {% else %}
     <li class="navleft-item"><a href="/docs/clients/dbal/">PHP DBAL</a></li>
     {% endif %}
-    {% if project == 'Crate PDO' %}
+    {% if project == 'CrateDB PDO' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">PHP PDO</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -105,7 +105,7 @@
     {% else %}
     <li class="navleft-item"><a href="/docs/clients/pdo/">PHP PDO</a></li>
     {% endif %}
-    {% if project == 'Crate Python' %}
+    {% if project == 'CrateDB Python' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">Python</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -113,7 +113,7 @@
     {% else %}
     <li class="navleft-item"><a href="/docs/clients/python/">Python</a></li>
     {% endif %}
-    {% if project == 'Crate Npgsql' %}
+    {% if project == 'CrateDB Npgsql' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">.NET Npgsql</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
