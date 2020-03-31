@@ -4,10 +4,11 @@
 .env
 .installed.cfg
 .style
+.utils
 *.egg-info
 *.lint
 *.pyc
-.utils
 blackbox
-develop-eggs/
+build
+develop-eggs
 eggs
