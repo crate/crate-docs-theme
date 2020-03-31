@@ -5,6 +5,10 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+
+2020/03/31 0.8.2
+----------------
+
 - Delete unused modules
 - Fix template logic
 
