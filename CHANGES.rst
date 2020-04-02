@@ -8,6 +8,7 @@ Unreleased
 - Edited a function that shows/hides the toggled docs menu on mobile.
 - Changed ``z-index`` of ``header.header-nav`` so ``version-select-container``
   won't overlap on mobile
+- Changed ``Edit on GitHub`` link from ``blob`` to ``edit`` in ``layout.html``
 
 2020/01/20 0.7.3
 ----------------
