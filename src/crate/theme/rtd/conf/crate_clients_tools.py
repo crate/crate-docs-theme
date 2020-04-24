@@ -21,8 +21,9 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'CrateDB DBAL'
+project = u'CrateDB Clients and Tools'
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/clients/dbal/en/latest/',
+    'canonical_url_path': 'docs/crate/client-tools/en/latest/',
 })
+
