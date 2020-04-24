@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Add new Clients and Tools project
+
 
 2020/03/31 0.8.2
 ----------------
