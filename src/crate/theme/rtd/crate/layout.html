@@ -95,7 +95,7 @@
               <!-- User defined GitHub URL -->
               <a href="{{ meta['github_url'] }}" class="fa fa-github"><span class="edit-on-github-link"> Edit on GitHub</span></a>
             {% else %}
-
+              <!--
               <div id="cr-docs-feedback" class="cr-docs-feedback-container">
                   <div class="cr-docs-feedback-header">
                       <div class="cr-docs-feedback-headline">
@@ -110,10 +110,10 @@
                   <div id="cr-feedback-content"></div>
 
                   <div class="cr-docs-feedback-footer">
-                      <a id="docs-feedback-open-github" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="Open on GitHub">Open on GitHub</a>
+                      <a id="docs-feedback-open-github" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="View on GitHub">View on GitHub</a>
                   </div>
               </div>
-
+              -->
             {% endif %}
             </div>
           {% endif %}
@@ -178,7 +178,8 @@
 
   <!-- GitHub feedback section -->
   <script>
-    if( $("#cr-docs-feedback").length ){
+      if( $("#cr-remove-to-activate").length ){
+    //if( $("#cr-docs-feedback").length ){
       var feedbackLoaded = false;
       $(window).scroll(function () {
           if (!feedbackLoaded ){
