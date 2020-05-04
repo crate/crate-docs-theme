@@ -66,4 +66,5 @@
     $sidebar.css('max-height', `${viewportHeight - 40}px`);
   });
 
+
 })(jQuery);
