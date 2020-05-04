@@ -5,7 +5,11 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
-- Added GitHub Feedback Section
+2020/05/04 0.9.1
+----------------
+
+- Added GitHub Feedback section
+
 
 2020/04/29 0.9.0
 ----------------
