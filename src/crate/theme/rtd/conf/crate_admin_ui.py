@@ -22,7 +22,13 @@
 from crate.theme.rtd.conf import *
 
 project = u'CrateDB Admin UI'
+html_title = project
+
+url_path = 'docs/crate/admin-u/en/latest/'
+
+# For sitemap extension
+site_url = 'https://crate.io/%s' % url_path
 
 html_theme_options.update({
-    'canonical_url_path': 'docs/clients/admin-ui/en/latest/',
+    'canonical_url_path': url_path, # For rel="canonical" links
 })

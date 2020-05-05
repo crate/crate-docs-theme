@@ -21,8 +21,14 @@
 
 from crate.theme.rtd.conf import *
 
-project = u''
+project = u'CrateDB Fake Docs'
+html_title = project
+
+url_path = 'docs/fake/en/latest/'
+
+# For sitemap extension
+site_url = 'https://crate.io/%s' % url_path
 
 html_theme_options.update({
-    'canonical_url_path': '',
+    'canonical_url_path': url_path, # For rel="canonical" links
 })
