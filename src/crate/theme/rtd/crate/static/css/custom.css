@@ -931,3 +931,7 @@ header.header-nav {
 .cr-docs-feedback-pr {
   margin: 0 5px 0 0;
 }
+
+.cr-docs-feedback-details {
+    font-size: 13px;
+}

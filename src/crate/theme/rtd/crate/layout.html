@@ -101,7 +101,7 @@
                           <h3>Feedback</h3>
                       </div>
                       <div class="cr-docs-feedback-meta">
-                          <a id="docs-feedback-open-issue" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=documentation,triage&template=docs.md" target="_blank" title="New issue">New issue</a>
+                          <a id="docs-feedback-open-issue" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=documentation,triage&template=docs_feedback.md" target="_blank" title="New issue">New issue</a>
                           <a id="docs-feedback-edit-document" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("edit") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="Edit on GitHub">Edit on GitHub</a>
                       </div>
                   </div>
@@ -178,7 +178,7 @@
   <script>
     var feedbackLoaded = false;
         // check if feedback section is in viewport
-        var isInViewport = function (elem) {
+        function isInViewport(elem) {
           var bounding = elem.getBoundingClientRect();
           return (
             bounding.top >= 0 &&
@@ -248,7 +248,7 @@
                       html += `<div class='cr-docs-feedback-comments'><a href='${issue.html_url}' title='View issue on GitHub' target='blank'><svg viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z'><title>Comment</title></path></svg> ${issue.comments}</a></div>`;
                     }
                     // show issue number + link to it
-                    html += `</div><a href='${issue.html_url}' title='View issue on GitHub' target='blank'>#${issue.number}</a> `;
+                    html += `</div><div class='cr-docs-feedback-details'><a href='${issue.html_url}' title='View issue on GitHub' target='blank'>#${issue.number}</a> `;
 
                     var date = new Date(issue.created_at);
 
@@ -259,7 +259,7 @@
 
                     html += `opened on ${formatted_date} by <a href='${issue.user.html_url}' title='View ${issue.user.login} on GitHub' `;
                     html += ` target='blank'>${issue.user.login}</a></br>`;
-                    html += "</li>";
+                    html += "</div></li>";
                   });
               }
 
