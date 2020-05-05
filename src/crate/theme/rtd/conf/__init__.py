@@ -19,18 +19,17 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
+import hashlib
 from crate.theme import rtd as theme
 
-copyright = u'2015, Crate.IO GmbH'
+source_suffix = '.rst'
 
-# The suffix of source filenames.
-source_suffix = '.txt'
-exclude_patterns = ['requirements.txt']
-
-# The master toctree document.
 master_doc = 'index'
+
+exclude_patterns = ['.*', '*.lint', 'README.rst', 'requirements.txt']
 exclude_trees = ['pyenv', 'tmp', 'out', 'parts', 'clients', 'eggs']
-extensions = ['sphinx.ext.autodoc']
+
+extensions = ['sphinx_sitemap']
 
 # Configure the theme
 html_theme = 'crate'
@@ -49,8 +48,8 @@ html_theme_options = {
 
     'globaltoc_includehidden': 'true',
 
-    # The URL path is required because RTD does only allow
-    # root as a canonical url.
+    # The URL path is required because RTD does only allow root as a canonical
+    # url
     'canonical_url_path': '',
     'canonical_url': 'https://crate.io/',
 
@@ -60,15 +59,14 @@ html_theme_options = {
 }
 
 def setup(app):
-    """Force the canonical URL in multiple ways
-
-    This gets around several points where the canonical_url override might be
-    disregarded or performed out of order.
-
-    This module should be star imported into `create_*.py`, and thus star
-    imported into the base `conf.py`. Sphinx will automatically use a `setup()`
-    in `conf.py` as an extension.
-    """
+    # Force the canonical URL in multiple ways
+    #
+    # This gets around several points where the canonical_url override might be
+    # disregarded or performed out of order.
+    #
+    # This module should be star imported into `create_*.py`, and thus star
+    # imported into the base `conf.py`. Sphinx will automatically use a `setup()`
+    # in `conf.py` as an extension.
     def force_canonical_url(app_inited):
         from sphinx.builders.html import StandaloneHTMLBuilder
         from sphinx.builders.epub3 import Epub3Builder
@@ -82,5 +80,17 @@ def setup(app):
             canonical_url = canonical_url + canonical_url_path
             app_inited.env.config.html_context['canonical_url'] = canonical_url
             app_inited.builder.config.html_context['canonical_url'] = canonical_url
-
     app.connect('builder-inited', force_canonical_url)
+    # Register custom Jinja filters
+    def docid(pagename):
+        # MD5 the pagename (i.e., the URL subcomponent corresponding to the
+        # current page) and return the first 8 characters.
+        #
+        # This (opaque, but short) document ID can then be used when tagging
+        # new GitHub issues. Subsequently, issues can be filtered by tag when
+        # populating the *Feedback* section at the bottom of each page.
+        return hashlib.md5(pagename.encode('utf8')).hexdigest()[:8]
+    def add_jinja_filters(app):
+        app.builder.templates.environment.filters['docid'] = docid
+    app.connect("builder-inited", add_jinja_filters)
+
