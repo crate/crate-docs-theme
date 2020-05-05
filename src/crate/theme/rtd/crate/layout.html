@@ -95,7 +95,6 @@
               <!-- User defined GitHub URL -->
               <a href="{{ meta['github_url'] }}" class="fa fa-github"><span class="edit-on-github-link"> Edit on GitHub</span></a>
             {% else %}
-              <!--
               <div id="cr-docs-feedback" class="cr-docs-feedback-container">
                   <div class="cr-docs-feedback-header">
                       <div class="cr-docs-feedback-headline">
@@ -113,7 +112,6 @@
                       <a id="docs-feedback-open-github" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="View on GitHub">View on GitHub</a>
                   </div>
               </div>
-              -->
             {% endif %}
             </div>
           {% endif %}
@@ -178,8 +176,7 @@
 
   <!-- GitHub feedback section -->
   <script>
-      if( $("#cr-remove-to-activate").length ){
-    //if( $("#cr-docs-feedback").length ){
+    if( $("#cr-docs-feedback").length ){
       var feedbackLoaded = false;
       $(window).scroll(function () {
           if (!feedbackLoaded ){
@@ -262,8 +259,8 @@
               const content = document.getElementById('cr-feedback-content');
               content.innerHTML = '<p>Loading data...</p>';
               Promise.all([
-                  fetchIssues('https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/issues?state=open&labels=documentation'),
-                  fetchIssues('https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/issues?state=closed&labels=documentation')
+                  fetchIssues('https://api.{{ github_host|default("github.com") }}/repos/{{ github_user }}/{{ github_repo }}/issues?state=open&labels=documentation'),
+                  fetchIssues('https://api.{{ github_host|default("github.com") }}/repos/{{ github_user }}/{{ github_repo }}/issues?state=closed&labels=documentation')
               ]).then(function ([openIssues, closedIssues]) {
                   var html = makeIssueHeader(openIssues, closedIssues);
                   html += listIssues(openIssues);
