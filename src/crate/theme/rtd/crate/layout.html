@@ -80,7 +80,7 @@
                 {%- if versions %}
                 <nav class="w-dropdown-list dropdown-list">
                   {% for slug, url in versions %}
-                  <a href="https://crate.io/{{ theme_canonical_url_path|replace("en/latest/", "") }}{{ rtd_language }}/{{ slug }}/" class="w-dropdown-link">{{ slug }}</a>
+                  <a href="https://crate.io/{{ theme_canonical_url_path|replace('en/latest/', '') }}{{ rtd_language }}/{{ slug }}/" class="w-dropdown-link">{{ slug }}</a>
                   {% endfor %}
                 </nav>
                 {%- endif %}
@@ -101,15 +101,35 @@
                           <h3>Feedback</h3>
                       </div>
                       <div class="cr-docs-feedback-meta">
-                          <a id="docs-feedback-open-issue" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=documentation,triage&template=docs_feedback.md" target="_blank" title="New issue">New issue</a>
-                          <a id="docs-feedback-edit-document" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("edit") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="Edit on GitHub">Edit on GitHub</a>
+                          <a id="docs-feedback-open-issue" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=documentation,triage&body={{
+                              '###  Documentation feedback'|urlencode }}{{ '%0A'
+                            }}{{ '%0A'
+                            }}{{
+                              '<!--Please do not edit or remove the following information -->'|urlencode }}{{ '%0A '
+                            }}{{ '%0A'
+                            }}{{
+                              '- Page title: '|urlencode }}{{ title|striptags|urlencode }}{{ '%0A'
+                            }}{{
+                              '- Page URL: https://crate.io/'|urlencode }}{{ theme_canonical_url_path|urlencode }}{{ pagename|urlencode }}{{ suffix|urlencode }}{{ '%0A'
+                            }}{{
+                              '- Source file: https://'|urlencode }}{{ github_host|default('github.com')|urlencode }}/{{ github_user|urlencode }}/{{ github_repo|urlencode }}/{{ theme_vcs_pageview_mode|default('blob')|urlencode }}/{{ github_version|urlencode }}{{ conf_py_path|urlencode }}{{ pagename|urlencode }}{{ suffix|urlencode }}{{ '%0A'
+                            }}{{
+                              '- DocID: '|urlencode }}{{ pagename|docid|urlencode }}{{ '%0A'
+                            }}{{ '%0A'
+                            }}---{{ '%0A'
+                            }}{{ '%0A'
+                            }}{{
+                              '<!-- Please add your comments here -->'|urlencode }}{{ '%0A'
+                            }}{{ '%0A'
+                            }}" target="_blank" title="New issue">New issue</a>
+                          <a id="docs-feedback-edit-document" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('edit') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="Edit on GitHub">Edit on GitHub</a>
                       </div>
                   </div>
 
                   <div id="cr-feedback-content"></div>
 
                   <div class="cr-docs-feedback-footer">
-                      <a id="docs-feedback-open-github" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("blob") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="View on GitHub">View on GitHub</a>
+                      <a id="docs-feedback-open-github" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="View on GitHub">View on GitHub</a>
                   </div>
               </div>
             {% endif %}
@@ -132,7 +152,7 @@
         {% if check_meta and 'github_url' in meta %}
           location.href = "{{ meta['github_url'] }}";
         {% else %}
-          location.href = "https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default("edit") }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}";
+          location.href = "https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('edit') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}";
         {% endif %}
       }
     });
@@ -275,8 +295,8 @@
             const content = document.getElementById('cr-feedback-content');
             content.innerHTML = '<p>Loading data...</p>';
             Promise.all([
-              fetchIssues('https://api.{{ github_host|default("github.com") }}/repos/{{ github_user }}/{{ github_repo }}/issues?state=open&labels=documentation'),
-              fetchIssues('https://api.{{ github_host|default("github.com") }}/repos/{{ github_user }}/{{ github_repo }}/issues?state=closed&labels=documentation')
+              fetchIssues("https://api.{{ github_host|default('github.com') }}/repos/{{ github_user }}/{{ github_repo }}/issues?q=is%3Aissue+is%3Aopen+6a992d55"),
+              fetchIssues("https://api.{{ github_host|default('github.com') }}/repos/{{ github_user }}/{{ github_repo }}/issues?state=closed&labels=documentation")
               ]).then(function ([openIssues, closedIssues]) {
                 var html = makeIssueHeader(openIssues, closedIssues);
                 html += listIssues(openIssues);
