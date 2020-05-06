@@ -6,6 +6,13 @@ Unreleased
 ----------
 
 
+2020/05/06 0.9.4
+----------------
+
+- Fix search string
+- Fix use of HTML suffix
+
+
 2020/05/06 0.9.3
 ----------------
 
