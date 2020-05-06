@@ -110,9 +110,9 @@
                             }}{{
                               '- Page title: '|urlencode }}{{ title|striptags|urlencode }}{{ '%0A'
                             }}{{
-                              '- Page URL: https://crate.io/'|urlencode }}{{ theme_canonical_url_path|urlencode }}{{ pagename|urlencode }}{{ suffix|urlencode }}{{ '%0A'
+                              '- Page URL: https://crate.io/'|urlencode }}{{ theme_canonical_url_path|urlencode }}{{ pagename|urlencode }}{{ suffix }}{{ '%0A'
                             }}{{
-                              '- Source file: https://'|urlencode }}{{ github_host|default('github.com')|urlencode }}/{{ github_user|urlencode }}/{{ github_repo|urlencode }}/{{ theme_vcs_pageview_mode|default('blob')|urlencode }}/{{ github_version|urlencode }}{{ conf_py_path|urlencode }}{{ pagename|urlencode }}{{ suffix|urlencode }}{{ '%0A'
+                              '- Source file: https://'|urlencode }}{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path|urlencode }}{{ pagename|urlencode }}{{ suffix }}{{ '%0A'
                             }}{{
                               '- DocID: '|urlencode }}{{ pagename|docid|urlencode }}{{ '%0A'
                             }}{{ '%0A'
@@ -295,12 +295,12 @@
             const content = document.getElementById('cr-feedback-content');
             content.innerHTML = '<p>Loading data...</p>';
             Promise.all([
-              fetchIssues("https://api.{{ github_host|default('github.com') }}/repos/{{ github_user }}/{{ github_repo }}/issues?q=is%3Aissue+is%3Aopen+6a992d55"),
-              fetchIssues("https://api.{{ github_host|default('github.com') }}/repos/{{ github_user }}/{{ github_repo }}/issues?state=closed&labels=documentation")
+              fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+state:open+{{ pagename|docid|urlencode }}"),
+              fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+state:closed+{{ pagename|docid|urlencode }}")
               ]).then(function ([openIssues, closedIssues]) {
                 var html = makeIssueHeader(openIssues, closedIssues);
-                html += listIssues(openIssues);
-                html += listIssues(closedIssues, true);
+                html += listIssues(openIssues['items']);
+                html += listIssues(closedIssues['items'], true);
                 content.innerHTML = html;
                 const openButton = document.getElementById('issues-open');
                 const closedButton = document.getElementById('issues-closed');
