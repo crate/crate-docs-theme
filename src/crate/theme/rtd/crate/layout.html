@@ -112,7 +112,7 @@
                             }}{{
                               '- Page URL: https://crate.io/'|urlencode }}{{ theme_canonical_url_path|urlencode }}{{ pagename|urlencode }}{{ suffix }}{{ '%0A'
                             }}{{
-                              '- Source: https://'|urlencode }}{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path|urlencode }}{{ pagename|urlencode }}{{ suffix }}{{ '%0A'
+                              '- Source: https://'|urlencode }}{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path|urlencode }}{{ pagename|urlencode }}.html{{ '%0A'
                             }}{{ '%0A'
                             }}---{{ '%0A'
                             }}{{ '%0A'
@@ -293,8 +293,8 @@
             const content = document.getElementById('cr-feedback-content');
             content.innerHTML = '<p>Loading data...</p>';
             Promise.all([
-              fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+is:open+{{ pagename|urlencode }}"),
-              fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+is:closed+{{ pagename|urlencode }}")
+              fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+label:documentation+is:open+{{ pagename|urlencode }}.html"),
+              fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+label:documentation+is:closed+{{ pagename|urlencode }}.html")
               ]).then(function ([openIssues, closedIssues]) {
                 var html = makeIssueHeader(openIssues['items'], closedIssues['items']);
                 html += listIssues(openIssues['items']);
