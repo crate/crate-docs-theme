@@ -86,9 +86,12 @@ def setup(app):
         # MD5 the pagename (i.e., the URL subcomponent corresponding to the
         # current page) and return the first 8 characters.
         #
-        # This (opaque, but short) document ID can then be used when tagging
-        # new GitHub issues. Subsequently, issues can be filtered by tag when
+        # This (opaque, but short) document ID can then be used when creating
+        # new GitHub issues. Subsequently, issues can be filtered by ID when
         # populating the *Feedback* section at the bottom of each page.
+        #
+        # End result: we only show GitHub issues that pertain to the current
+        # page.
         return hashlib.md5(pagename.encode('utf8')).hexdigest()[:8]
     def add_jinja_filters(app):
         app.builder.templates.environment.filters['docid'] = docid
