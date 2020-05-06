@@ -5,6 +5,10 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+
+2020/05/06 0.9.3
+----------------
+
 - New issues now come with pre-filled template text
 - Feedback section now only shows issues that relate to the current page
 - Reenable GitHub Feedback section
