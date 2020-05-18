@@ -1,7 +1,7 @@
 <ul class="toctree nav nav-list">
   <li class="navleft-item">CrateDB</li>
   <ul>
-    {% if project == 'CrateDB Tutorials' %}
+    {% if project == 'CrateDB: Tutorials' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">Tutorials</a>
         {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -9,7 +9,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/crate/tutorials/">Tutorials</a></li>
     {% endif %}
-    {% if project == 'CrateDB How-To Guides' %}
+    {% if project == 'CrateDB: How-To Guides' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">How-To Guides</a>
         {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -17,7 +17,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/crate/howtos/">How-To Guides</a></li>
     {% endif %}
-    {% if project == 'CrateDB Reference' %}
+    {% if project == 'CrateDB: Reference' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">Reference</a>
         {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -25,7 +25,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/crate/reference/">Reference</a></li>
     {% endif %}
-    {% if project == 'CrateDB Clients and Tools' %}
+    {% if project == 'CrateDB: Clients and Tools' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">Clients and Tools</a>
         {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -34,7 +34,7 @@
       <li class="navleft-item"><a href="/docs/crate/clients-tools/">Clients and Tools</a></li>
     {% endif %}
 
-    {% if project == 'CrateDB Admin UI' %}
+    {% if project == 'CrateDB: Admin UI' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">Admin UI</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -42,7 +42,7 @@
     {% else %}
     <li class="navleft-item"><a href="/docs/crate/admin-ui/">Admin UI</a></li>
     {% endif %}
-    {% if project == 'CrateDB Crash' %}
+    {% if project == 'CrateDB: Crash CLI' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">Crash CLI</a>
       {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -54,7 +54,7 @@
 
   <li class="navleft-item">CrateDB Cloud</li>
   <ul>
-    {% if project == 'Cloud Tutorials' %}
+    {% if project == 'CrateDB Cloud: Tutorials' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">Tutorials</a>
         {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -62,7 +62,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/cloud/tutorials/">Tutorials</a></li>
     {% endif %}
-    {% if project == 'Cloud How-To Guides' %}
+    {% if project == 'CrateDB Cloud: How-To Guides' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">How-To Guides</a>
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -70,7 +70,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/cloud/howtos/">How-To Guides</a></li>
     {% endif %}
-    {% if project == 'Cloud Reference' %}
+    {% if project == 'CrateDB Cloud: Reference' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">Reference</a>
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -78,7 +78,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/cloud/reference/">Reference</a></li>
     {% endif %}
-    {% if project == 'Croud CLI' %}
+    {% if project == 'CrateDB Cloud: Croud CLI' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">Croud CLI</a>
         {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -88,7 +88,7 @@
     {% endif %}
   </ul>
 
-  {% if project == 'JDBC' %}
+  {% if project == 'CrateDB JDBC' %}
   <li class="current border-top">
     <a class="current-active" href="{{ pathto(master_doc) }}">JDBC</a>
     {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -96,7 +96,7 @@
   {% else %}
   <li class="navleft-item border-top"><a href="/docs/jdbc/">JDBC</a></li>
   {% endif %}
-  {% if project == 'DBAL' %}
+  {% if project == 'CrateDB DBAL' %}
   <li class="current">
     <a class="current-active" href="{{ pathto(master_doc) }}">PHP DBAL</a>
     {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -104,7 +104,7 @@
   {% else %}
   <li class="navleft-item"><a href="/docs/dbal/">PHP DBAL</a></li>
   {% endif %}
-  {% if project == 'PDO' %}
+  {% if project == 'CrateDB PDO' %}
   <li class="current">
     <a class="current-active" href="{{ pathto(master_doc) }}">PHP PDO</a>
     {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -112,7 +112,7 @@
   {% else %}
   <li class="navleft-item"><a href="/docs/pdo/">PHP PDO</a></li>
   {% endif %}
-  {% if project == 'Python' %}
+  {% if project == 'CrateDB Python' %}
   <li class="current">
     <a class="current-active" href="{{ pathto(master_doc) }}">Python</a>
     {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -120,7 +120,7 @@
   {% else %}
   <li class="navleft-item"><a href="/docs/python/">Python</a></li>
   {% endif %}
-  {% if project == 'Npgsql' %}
+  {% if project == 'CrateDB Npgsql' %}
   <li class="current">
     <a class="current-active" href="{{ pathto(master_doc) }}">.NET Npgsql</a>
     {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}

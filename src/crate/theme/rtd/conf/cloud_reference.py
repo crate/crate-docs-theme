@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'CrateDB Cloud Reference'
+project = u'CrateDB Cloud: Reference'
 html_title = project
 
 url_path = 'docs/cloud/reference/en/latest/'

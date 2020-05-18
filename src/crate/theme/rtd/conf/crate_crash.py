@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'CrateDB Crash'
+project = u'CrateDB: Crash CLI'
 html_title = project
 
 url_path = 'docs/crate/crash/en/latest/'

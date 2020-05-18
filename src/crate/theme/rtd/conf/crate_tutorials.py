@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'CrateDB Tutorials'
+project = u'CrateDB: Tutorials'
 html_title = project
 
 url_path = 'docs/crate/tutorials/en/latest/'

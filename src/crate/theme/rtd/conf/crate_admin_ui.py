@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'CrateDB Admin UI'
+project = u'CrateDB: Admin UI'
 html_title = project
 
 url_path = 'docs/crate/admin-u/en/latest/'
