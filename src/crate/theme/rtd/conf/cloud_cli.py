@@ -21,7 +21,7 @@
 
 from crate.theme.rtd.conf import *
 
-project = u'Croud CLI'
+project = u'CrateDB Cloud: Croud CLI'
 html_title = project
 
 url_path = 'docs/cloud/cli/en/latest/'
