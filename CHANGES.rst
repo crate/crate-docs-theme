@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Added a snippet in ``custom.js`` to open all external links in a new window 
+  by default
 
 2020/05/18 0.9.5
 ----------------
