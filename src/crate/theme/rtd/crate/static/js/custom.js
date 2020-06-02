@@ -64,7 +64,10 @@
     var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     var $sidebar = $('.bs-docs-sidebar');
     $sidebar.css('max-height', `${viewportHeight - 40}px`);
-  });
 
+    // open all external links in new window
+    jQuery(document.links) .filter(function() { 
+    return this.hostname != window.location.hostname; }) .attr('target', '_blank');
+  });
 
 })(jQuery);
