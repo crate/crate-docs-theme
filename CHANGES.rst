@@ -5,6 +5,7 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Improved Feedback section (one fetch instead of two) and updated tracking
 
 2020/05/18 0.9.5
 ----------------
