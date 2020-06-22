@@ -2,8 +2,8 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
-Unreleased
-----------
+2020/06/22 0.10.0
+-----------------
 
 - Removed hardcoded segment tracking id. Instead, this is now settable in the
   project's conf.py, or by exporting the ``TRACKING_SEGMENT_ID`` environment
