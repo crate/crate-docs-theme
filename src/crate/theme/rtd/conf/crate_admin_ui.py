@@ -24,7 +24,7 @@ from crate.theme.rtd.conf import *
 project = u'CrateDB: Admin UI'
 html_title = project
 
-url_path = 'docs/crate/admin-u/en/latest/'
+url_path = 'docs/crate/admin-ui/en/latest/'
 
 # For sitemap extension
 site_url = 'https://crate.io/%s' % url_path
