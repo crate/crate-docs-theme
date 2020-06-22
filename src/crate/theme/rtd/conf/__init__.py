@@ -19,8 +19,8 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
-import hashlib
 from crate.theme import rtd as theme
+from os import environ
 
 source_suffix = '.rst'
 
@@ -54,7 +54,7 @@ html_theme_options = {
     'canonical_url': 'https://crate.io/',
 
     # segment analytics configuration
-    'tracking_segment_id': 'FToR4cE5lXyQziQirvt0kSnFQj0rAgu9',
+    'tracking_segment_id': environ.get('TRACKING_SEGMENT_ID', ''),
     'tracking_project': '',
 }
 
