@@ -96,7 +96,7 @@ must be an admin for this project on PyPI.
 
 You'll also need to create a ``~/.pypirc`` file, like so::
 
-    [distutils]
+    [distbuild]
     index-servers =
       pypi
 
@@ -145,7 +145,7 @@ For help, run:
 
     $ make
 
-    Crate Docs Utils
+    Crate Docs Build
 
     Run `make <TARGET>`, where <TARGET> is one of:
 
@@ -188,10 +188,10 @@ directory. Please do not merge pull requests until the Travis CI tests pass.
 active docs branch is updated.
 
 To make changes to the RTD configuration (e.g., to activate or deactivate a
-release version), please contact the `@crate/docs`_ team.
+release version), please contact the `@crate/tech-writing`_ team.
 
 
-.. _@crate/docs: https://github.com/orgs/crate/teams/docs
+.. _@crate/tech-writing: https://github.com/orgs/crate/teams/tech-writing
 .. _configured: https://github.com/crate/crate-docs-theme/blob/master/.travis.yml
 .. _fswatch: https://github.com/emcrisostomo/fswatch
 .. _PyPI: https://pypi.python.org/pypi
@@ -201,9 +201,9 @@ release version), please contact the `@crate/docs`_ team.
 .. _Sphinx: http://sphinx-doc.org/
 
 
-.. |style| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Futils.json
-    :alt: Style version
-    :target: https://github.com/crate/crate-docs-style
+.. |build| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Fbuild.json
+    :alt: Build version
+    :target: https://github.com/crate/crate-docs-theme/blob/master/docs/build.json
 
 .. |travis| image:: https://img.shields.io/travis/crate/crate-docs-theme.svg?style=flat
     :alt: Travis CI status

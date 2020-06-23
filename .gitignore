@@ -5,6 +5,7 @@
 .installed.cfg
 .style
 .utils
+.clone
 *.egg-info
 *.lint
 *.pyc
