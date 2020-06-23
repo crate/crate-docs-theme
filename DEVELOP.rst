@@ -179,7 +179,7 @@ Bind the dev server to ``0.0.0.0`` like this::
 Continuous integration and deployment
 -------------------------------------
 
-|style| |travis| |rtd|
+|build| |travis| |rtd|
 
 We have `configured`_ Travis CI to run ``make check`` from the ``docs``
 directory. Please do not merge pull requests until the Travis CI tests pass.
