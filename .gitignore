@@ -1,11 +1,12 @@
 .build
+.clone
+.crate-docs-build
 .dist
 .DS_Store
 .env
 .installed.cfg
 .style
 .utils
-.clone
 *.egg-info
 *.lint
 *.pyc
