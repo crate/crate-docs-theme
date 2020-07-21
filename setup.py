@@ -53,7 +53,7 @@ setup(name='crate-docs-theme',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'Sphinx==3.1.2',
+          'Sphinx==1.8.5',
           'sphinxcontrib-plantuml==0.14',
           'sphinx_sitemap==0.3.1',
       ],
