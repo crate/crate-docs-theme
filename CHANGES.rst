@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Downgraded Sphinx dependency to 1.8.5 (matches new RTD default)
+
+
 2020/07/20 0.10.1
 -----------------
 
