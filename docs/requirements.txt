@@ -1,3 +1,4 @@
 # Install the local crate-docs-theme package by specifying parent directory,
 # because `pip` is run from there.
 .
+Sphinx>=3
