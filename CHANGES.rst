@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Updated navbar and footer to match main website
+
 
 2020/07/22 0.10.2
 -----------------
