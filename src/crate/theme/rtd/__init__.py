@@ -23,7 +23,7 @@
 
 import os
 
-VERSION = (0, 10, 2)
+VERSION = (0, 10, 3)
 
 __version__ = ".".join(str(v) for v in VERSION)
 __version_full__ = __version__
