@@ -101,7 +101,7 @@
                           <h3>Feedback</h3>
                       </div>
                       <div class="cr-docs-feedback-meta">
-                          <a id="docs-feedback-open-issue" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=documentation,triage&body={{
+                          <a id="docs-feedback-open-issue" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=area:%20docs,triage&body={{
                               '###  Documentation feedback'|urlencode }}{{ '%0A'
                             }}{{ '%0A'
                             }}{{
@@ -293,7 +293,7 @@
 
             const content = document.getElementById('cr-feedback-content');
             content.innerHTML = '<p>Loading data...</p>';
-            fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+label:documentation+{{ pagename|urlencode }}.html")
+            fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+label%3A\"area%3A+docs\"+{{ pagename|urlencode }}.html")
                 .then(function (issues) {
                   const openIssues = issues.items.filter(x => x.state == 'open');
                   const closedIssues = issues.items.filter(x => x.state == 'closed');
