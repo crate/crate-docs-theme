@@ -5,6 +5,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Update GitHub label to "area: docs"
+
 
 2020/07/23 0.10.3
 -----------------
