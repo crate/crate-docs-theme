@@ -38,7 +38,7 @@ echo "Fetching origin..."
 git fetch origin > /dev/null
 
 # get the version
-VERSION=`python setup.py --version`
+VERSION=`python3 setup.py --version`
 echo "Found package version $VERSION"
 
 # check if tag to create has already been created
