@@ -2,10 +2,13 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
-Unreleased
-----------
+2020/08/04 0.10.4
+-----------------
 
-- Update GitHub label to "area: docs"
+- Updated GitHub label to "area: docs"
+- Added comparison page
+- Rearranged partner page
+- Removed comparison from footer
 
 
 2020/07/23 0.10.3
@@ -37,21 +40,21 @@ Unreleased
 2020/06/04 0.9.6
 ----------------
 
-- Fix links in pre-filled text in docs issue template
+- Fixed links in pre-filled text in docs issue template
 - Improved Feedback section (one fetch instead of two) and updated tracking
 
 
 2020/05/18 0.9.5
 ----------------
 
-- Fix project titles
+- Fixed project titles
 
 
 2020/05/06 0.9.4
 ----------------
 
-- Fix search string
-- Fix use of HTML suffix
+- Fixed search string
+- Fixed use of HTML suffix
 
 
 2020/05/06 0.9.3
@@ -59,13 +62,13 @@ Unreleased
 
 - New issues now come with pre-filled template text
 - Feedback section now only shows issues that relate to the current page
-- Reenable GitHub Feedback section
+- Re-enable GitHub Feedback section
 
 
 2020/05/04 0.9.2
 ----------------
 
-- Disable GitHub Feedback section for more testing
+- Disabled GitHub Feedback section for more testing
 
 
 2020/05/04 0.9.1
@@ -77,21 +80,21 @@ Unreleased
 2020/04/29 0.9.0
 ----------------
 
-- Add new Clients and Tools project to CrateDB section
+- Added new Clients and Tools project to CrateDB section
 - Split off links to client library docs projects and drop "Clients" menu item
 
 
 2020/03/31 0.8.2
 ----------------
 
-- Delete unused modules
-- Fix template logic
+- Deleted unused modules
+- Fixed template logic
 
 
 2020/03/30 0.8.1
 ----------------
 
-- Move Admin UI and Crash into the CrateDB section.
+- Moved Admin UI and Crash into the CrateDB section.
 
 
 2020/03/30 0.8.0
