@@ -2,6 +2,12 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+2020/08/04 0.10.5
+-----------------
+
+- update sphinx-sitemap to latest version
+
+
 2020/08/04 0.10.4
 -----------------
 
