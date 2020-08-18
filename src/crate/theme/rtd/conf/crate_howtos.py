@@ -27,8 +27,10 @@ html_title = project
 url_path = 'docs/crate/howtos/en/latest/'
 
 # For sitemap extension
-site_url = 'https://crate.io/%s' % url_path
+html_baseurl = 'https://crate.io/%s' % url_path
 
 html_theme_options.update({
     'canonical_url_path': url_path, # For rel="canonical" links
 })
+
+html_extra_path = ['robots.txt']

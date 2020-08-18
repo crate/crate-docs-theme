@@ -55,7 +55,7 @@ setup(name='crate-docs-theme',
       install_requires=[
           'Sphinx==1.8.5',
           'sphinxcontrib-plantuml==0.14',
-          'sphinx_sitemap==0.3.1',
+          'sphinx_sitemap==2.2.0',
       ],
       python_requires=">=3.7",
 )
