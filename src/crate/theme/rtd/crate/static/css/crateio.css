@@ -104,7 +104,7 @@ p {
 }
 
 a {
-  color: #1cc8f3;
+  color: #00a6d1;
   text-decoration: none;
 }
 
@@ -599,7 +599,7 @@ header .brand {
 .text-link {
   display: block;
   margin-top: 16px;
-  color: #1cc8f3;
+  color: #00a6d1;
 }
 
 .teaser-img {
@@ -693,7 +693,7 @@ header .brand {
 }
 
 .link-inline {
-  color: #1cc8f3;
+  color: #00a6d1;
 }
 
 code {
@@ -870,7 +870,7 @@ pre code {
 }
 
 .small-blue {
-  color: #1cc8f3;
+  color: #00a6d1;
   font-size: 12px;
   line-height: 16px;
 }
@@ -944,7 +944,7 @@ pre code {
 }
 
 .event-date.text-blue {
-  color: #1cc8f3;
+  color: #00a6d1;
 }
 
 .event-heading {
