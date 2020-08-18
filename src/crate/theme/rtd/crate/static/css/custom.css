@@ -762,6 +762,11 @@ header.header-nav {
   opacity: 0.7;
 }
 
+/* fix current menu padding */
+.current ul {
+  padding-top: 3px;
+}
+
 /* feedback section */
 .view-on-github {
     clear: both;
