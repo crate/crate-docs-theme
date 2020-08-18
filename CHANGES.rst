@@ -2,6 +2,10 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+- Added padding-top to the current menu item
+- Changed link color to fit the new one on crate.io
+- Added external link indicator
+
 2020/08/18 0.10.6
 -----------------
 
