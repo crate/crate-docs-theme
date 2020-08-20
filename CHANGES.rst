@@ -2,6 +2,12 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+2020/08/20 0.10.7
+----------------
+
+- add config to implement custom robots.txt
+
+
 2020/08/18 0.10.6
 -----------------
 
