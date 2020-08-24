@@ -2,14 +2,20 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+2020/08/25 0.10.9
+-----------------
+
+- add configuration to change sitemap name 
+
+
 2020/08/24 0.10.8
-----------------
+-----------------
 
 - remove html_extra_path for crate-howtos.py
 
 
 2020/08/20 0.10.7
-----------------
+-----------------
 
 - add config to implement custom robots.txt
 
