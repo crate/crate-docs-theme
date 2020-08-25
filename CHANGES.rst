@@ -19,31 +19,31 @@ Unreleased
 2020/08/24 0.10.9
 -----------------
 
-- add configuration to change sitemap name
+- Add configuration to change sitemap name
 
 
 2020/08/24 0.10.8
 -----------------
 
-- remove html_extra_path for crate-howtos.py
+- Remove html_extra_path for crate-howtos.py
 
 
 2020/08/20 0.10.7
 -----------------
 
-- add config to implement custom robots.txt
+- Add config to implement custom robots.txt
 
 
 2020/08/18 0.10.6
 -----------------
 
-- update docs projects config files to match sphinx-sitemap upgrade
+- Update docs projects config files to match sphinx-sitemap upgrade
 
 
 2020/08/18 0.10.5
 -----------------
 
-- update sphinx-sitemap to latest version
+- Update sphinx-sitemap to latest version
 
 
 2020/08/04 0.10.4
