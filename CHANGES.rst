@@ -2,6 +2,12 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+Unreleased
+---------
+
+- Changed sitemap name to `crate.xml` to see if that works with RTD
+
+
 2020/08/25 0.10.10
 ------------------
 
@@ -13,7 +19,7 @@ CHANGES for Crate.io Documentation Theme
 2020/08/24 0.10.9
 -----------------
 
-- add configuration to change sitemap name 
+- add configuration to change sitemap name
 
 
 2020/08/24 0.10.8
