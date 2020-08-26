@@ -399,27 +399,13 @@ body .mm-menu .navbar-nav {
   max-height: initial !important;
 }
 
-h2 .toc-backref,
-h3 .toc-backref {
-  color: black;
+.toc-backref {
+  color: black !important;
+  opacity: 1 !important;
 }
 
-h2 .toc-backref:hover,
-h3 .toc-backref:hover {
-  opacity: 1;
-  color: #1cc8f3;
-}
-
-h2 .headerlink,
-h3 .headerlink {
-  font-size: 80%;
-  position: relative;
-  bottom: 5px;
-  margin-left: 10px;
-}
-
-h3 .headerlink {
-  bottom: 4px;
+.headerlink {
+  margin-left: 0.3em;
 }
 
 .admonition a {
@@ -613,7 +599,7 @@ header.header-nav {
 /* MOBILE */
 @media all and (max-width: 1023px) {
   .main-nav {
-    position: fixed; 
+    position: fixed;
     z-index: -1;
     top: 65px;
     right: 0;
@@ -671,7 +657,7 @@ header.header-nav {
   .menu-item-has-children > a {
     background-color: white;
   }
-  
+
   .menu-item-has-children:after {
     content: '';
     border: 2px solid transparent;
@@ -682,13 +668,13 @@ header.header-nav {
     position: absolute;
     top: 12px;
     bottom: 0;
-  
+
     transform: rotate(-45deg);
-  
+
     border-top: none;
     border-left: none;
     right: 23px;
-  
+
     border-color: rgba(0,0,0,.3);
   }
 
