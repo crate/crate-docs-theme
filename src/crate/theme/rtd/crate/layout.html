@@ -293,7 +293,7 @@
 
             const content = document.getElementById('cr-feedback-content');
             content.innerHTML = '<p>Loading data...</p>';
-            fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+label%3A\"area%3A+docs\"+{{ pagename|urlencode }}.html")
+            fetchIssues("https://api.{{ github_host|default('github.com') }}/search/issues?q=repo:{{ github_user }}/{{ github_repo }}+label%3A\"area%3A+docs\"+\"{{ title|striptags|urlencode }}\"+\"{{ pagename|urlencode }}.html\"")
                 .then(function (issues) {
                   const openIssues = issues.items.filter(x => x.state == 'open');
                   const closedIssues = issues.items.filter(x => x.state == 'closed');

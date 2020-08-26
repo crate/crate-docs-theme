@@ -5,6 +5,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ---------
 
+- Added page title to issue search to filter out false positives for root
+  index.html page (and potentially other scenarios)
+
 
 2020/08/25 0.10.11
 ------------------
