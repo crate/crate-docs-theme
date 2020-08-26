@@ -7,6 +7,7 @@ Unreleased
 
 - Added page title to issue search to filter out false positives for root
   index.html page (and potentially other scenarios)
+- Switch default issue label from "area: docs" to "team: tech writing"
 
 
 2020/08/25 0.10.11
