@@ -2,10 +2,11 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
-Unreleased
----------
+2020/08/27 0.10.12
+------------------
 
-- Added page title to issue search to filter out false positives for root
+- Change sitemap name to `site.xml`
+- Add page title to issue search to filter out false positives for root
   index.html page (and potentially other scenarios)
 - Switch default issue label from "area: docs" to "team: tech writing"
 - Fix subheading link styles so they are consistent with <h1> elements
@@ -14,15 +15,15 @@ Unreleased
 2020/08/25 0.10.11
 ------------------
 
-- Changed sitemap name to `crate.xml` to see if that works with RTD
+- Change sitemap name to `crate.xml` to see if that works with RTD
 
 
 2020/08/25 0.10.10
 ------------------
 
-- Added padding-top to the current menu item
-- Changed link color to fit the new one on crate.io
-- Added external link indicator
+- Add padding-top to the current menu item
+- Change link color to fit the new one on crate.io
+- Add external link indicator
 
 
 2020/08/24 0.10.9
