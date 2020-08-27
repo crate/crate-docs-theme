@@ -58,7 +58,7 @@ html_theme_options = {
     'tracking_project': '',
 }
 html_extra_path = ["_extra"]
-sitemap_filename = "crate.xml"
+sitemap_filename = "site.xml"
 
 def setup(app):
     # Force the canonical URL in multiple ways
