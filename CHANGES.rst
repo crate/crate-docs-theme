@@ -5,6 +5,10 @@ CHANGES for Crate.io Documentation Theme
 UNRELEASED
 ----------
 
+
+2020/08/31 0.10.13
+------------------
+
 - The sitemap_url_scheme setting is now manually configured so that sitemap
   links work correctly when built locally and on Read The Docs.
 
