@@ -2,6 +2,8 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+- Added class to exclude feedback box links from external link indicator
+
 2020/08/27 0.10.12
 ------------------
 
