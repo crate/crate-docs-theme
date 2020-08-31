@@ -59,6 +59,10 @@ html_theme_options = {
 }
 html_extra_path = ["_extra"]
 sitemap_filename = "site.xml"
+# These variables are overridden by Read The Docs
+language = "en"
+version = "latest"
+sitemap_url_scheme = "{lang}{version}{link}"
 
 def setup(app):
     # Force the canonical URL in multiple ways
