@@ -928,7 +928,7 @@ header.header-nav {
 }
 
 /* external links indicator */
-#main-content .col-md-8 [href^="http"]:not([href*="https://crate.io"]):not([href*="go.cratedb.com"]):not([href*="cdn.crate.io"]):not([href*="wpengine.com"]):not([href^="#"]):not([href^="/"]):not(.cr-fb-link):not(.btn):not(.cr-box-imgLink):not(.cr-feature-imgLink):not(.cr-press-title):not(.cr-img-single) {
+#main-content .col-md-8 [href^="http"]:not([href*="https://crate.io"]):not([href*="go.cratedb.com"]):not([href*="cdn.crate.io"]):not([href*="wpengine.com"]):not([href^="#"]):not([href^="/"]):not(.cr-fb-link):not(.btn):not(.cr-box-imgLink):not(.cr-feature-imgLink):not(.cr-press-title):not(.cr-img-single):not(.cr-docs-link) {
   background: url(https://crate.io/wp-content/themes/crate/img/icon_link_external.svg) center left no-repeat;
   padding-left: 20px;
   margin-left: 2px;
