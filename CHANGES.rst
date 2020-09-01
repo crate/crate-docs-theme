@@ -2,7 +2,19 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+
+UNRELEASED
+------------------  
+
 - Added class to exclude feedback box links from external link indicator
+
+
+2020/08/31 0.10.13
+------------------
+
+- The sitemap_url_scheme setting is now manually configured so that sitemap
+  links work correctly when built locally and on Read The Docs.
+
 
 2020/08/27 0.10.12
 ------------------

@@ -24,11 +24,12 @@ from crate.theme.rtd.conf import *
 project = u'CrateDB DBAL'
 html_title = project
 
-url_path = 'docs/dbal/en/latest/'
+url_path = 'docs/dbal'
 
 # For sitemap extension
-html_baseurl = 'https://crate.io/%s' % url_path
+html_baseurl = 'https://crate.io/%s/' % url_path
 
+# For rel="canonical" links
 html_theme_options.update({
-    'canonical_url_path': url_path, # For rel="canonical" links
+    'canonical_url_path': '%s/en/latest/' % url_path,
 })
