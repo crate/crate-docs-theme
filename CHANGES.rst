@@ -2,6 +2,12 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+2020/09/02 0.10.15
+------------------
+
+- Fix typo in URL for Clients & Tools
+
+
 2020/09/01 0.10.14
 ------------------  
 

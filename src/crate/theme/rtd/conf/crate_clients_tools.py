@@ -24,7 +24,7 @@ from crate.theme.rtd.conf import *
 project = u'CrateDB: Clients and Tools'
 html_title = project
 
-url_path = 'docs/crate/client-tools'
+url_path = 'docs/crate/clients-tools'
 
 # For sitemap extension
 html_baseurl = 'https://crate.io/%s/' % url_path
