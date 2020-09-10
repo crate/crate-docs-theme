@@ -8,6 +8,7 @@ Unreleased
 
 - Dropped unnecessary versioned sphinx requirement specified by docs project
 - Changed url for `Try CrateDB` to the CrateDB Cloud anchor
+- Excluded images from external link indicator
 
 
 2020/09/02 0.10.15
