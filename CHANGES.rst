@@ -5,8 +5,7 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
-- Drop explicit version from Sphinx dependency to match sphinx_rtd_theme
-  package
+- Change sphinx dependency to specify `<2` to match the RTD build environment
 
 
 2020/09/02 0.10.15
