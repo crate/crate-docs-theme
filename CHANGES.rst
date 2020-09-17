@@ -6,6 +6,10 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+
+2020/09/17 0.10.16
+------------------
+
 - Dropped unnecessary versioned sphinx requirement specified by docs project
 - Changed url for `Try CrateDB` to the CrateDB Cloud anchor
 - Excluded images from external link indicator
