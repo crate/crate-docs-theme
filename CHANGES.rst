@@ -2,6 +2,13 @@
 CHANGES for Crate.io Documentation Theme
 ========================================
 
+Unreleased
+----------
+
+- Drop explicit version from Sphinx dependency to match sphinx_rtd_theme
+  package
+
+
 2020/09/02 0.10.15
 ------------------
 
@@ -9,7 +16,7 @@ CHANGES for Crate.io Documentation Theme
 
 
 2020/09/01 0.10.14
-------------------  
+------------------
 
 - Add class to exclude feedback box links from external link indicator
 
