@@ -6,6 +6,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Added WordPress navi as edge side include via Varnish
+
 2020/10/06 0.10.17
 ------------------
 
