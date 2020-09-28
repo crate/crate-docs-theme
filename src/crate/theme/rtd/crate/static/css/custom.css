@@ -11,6 +11,7 @@ a:focus {
   text-decoration: none;
 }
 
+.cr-menu-btn,
 .btn,
 .btn-link a {
   border-radius: 0;
@@ -26,6 +27,7 @@ a:focus {
   padding: 16px 28px;
 }
 
+.cr-menu-btn a,
 .btn-primary,
 .btn-link a {
   border: 2px solid #55D4F5;
@@ -35,6 +37,7 @@ a:focus {
   text-decoration: none;
 }
 
+.cr-menu-btn a:hover,
 .btn-primary:hover,
 .btn-link a:hover {
   color: #1CC8F3;
@@ -88,6 +91,11 @@ a:focus {
   align-items: center;
 }
 
+#menu-main-navigation li > ul li.w-nav-link {
+    padding: 0;
+    display: block;
+}
+
 .brand.w-nav-brand {
   margin-right: auto;
 }
@@ -102,6 +110,7 @@ a:focus {
   text-decoration: none;
 }
 
+.cr-menu-btn a,
 .main-nav .btn-link a {
   padding: 8px 16px !important;
 }
@@ -360,6 +369,14 @@ body .mm-menu .navbar-nav {
 
   footer.footer .footer-brand {
     display: none;
+  }
+
+  .footer-list li {
+    display: inline;
+  }
+
+  .footer-listitem.link-list {
+    display: block;
   }
 }
 
@@ -932,4 +949,24 @@ header.header-nav {
   background: url(https://crate.io/wp-content/themes/crate/img/icon_link_external.svg) center left no-repeat;
   padding-left: 20px;
   margin-left: 2px;
+}
+
+/* hide menuitem in docs */
+.cr-menu-hide {
+  display: none !important;
+}
+
+footer .menu-item a {
+  color: #000;
+}
+
+.w-cr-footer .vertical-menu li:first-child {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.w-cr-footer .vertical-menu li:first-child a:hover {
+    cursor: default;
+    color: #000;
+    opacity: 1;
 }
