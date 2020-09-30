@@ -45,9 +45,10 @@ div.admonition p {
 }
 
 div.admonition {
-    padding: 0 0 0 105px;
+    padding: 15px 15px 15px 95px;
     margin: 20px 0;
     border-left: 0;
+    background-position: top 25px left 25px !important;
 }
 
 div.admonition ul {
@@ -57,61 +58,39 @@ div.admonition ul {
 }
 
 div.note {
-    background: url(../images/admonition/note.png) no-repeat top left;
+    background: url(../images/admonition/icon-docs-note.svg) no-repeat;
+    background-color: #eefafe;
+    border-left: 4px solid #55d4f5;
 }
 
 div.seealso {
-    background: url(../images/admonition/seealso.png) no-repeat top left;
+    background: url(../images/admonition/icon-docs-seealso.svg) no-repeat;
+    background-color: #f4f4f4;
+    border-left: 4px solid #999999;
 }
 
 div.tip {
-    background: url(../images/admonition/tip.png) no-repeat top left;
+    background: url(../images/admonition/icon-docs-tip.svg) no-repeat;
+    background-color: #eefafe;
+    border-left: 4px solid #55d4f5;
 }
 
 div.caution {
-    background: url(../images/admonition/caution.png) no-repeat top left;
+    background: url(../images/admonition/icon-docs-caution.svg) no-repeat;
+    background-color: #fff2ed;
+    border-left: 4px solid #ff814d;
 }
 
 div.warning {
-    background: url(../images/admonition/warning.png) no-repeat top left;
+    background: url(../images/admonition/icon-docs-warning.svg) no-repeat;
+    background-color: #fdeeee;
+    border-left: 4px solid #ec4d4d;
 }
 
 div.danger {
-    background: url(../images/admonition/danger.png) no-repeat top left;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-
-    div.note {
-        background-image: url(../images/admonition/note@2x.png);
-        background-size: 90px 78px;
-    }
-
-    div.seealso {
-        background-image: url(../images/admonition/seealso@2x.png);
-        background-size: 90px 78px;
-    }
-
-    div.tip {
-        background-image: url(../images/admonition/tip@2x.png);
-        background-size: 90px 78px;
-    }
-
-    div.caution {
-        background-image: url(../images/admonition/caution@2x.png);
-        background-size: 90px 78px;
-    }
-
-    div.warning {
-        background-image: url(../images/admonition/warning@2x.png);
-        background-size: 90px 78px;
-    }
-
-    div.danger {
-        background-image: url(../images/admonition/danger@2x.png);
-        background-size: 90px 78px;
-    }
-
+    background: url(../images/admonition/icon-docs-danger.svg) no-repeat;
+    background-color: #fdeeee;
+    border-left: 4px solid #ec4d4d;
 }
 
 .note .admonition-title,

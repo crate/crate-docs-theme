@@ -6,6 +6,7 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- New icons and colors for admonitions
 
 2020/09/17 0.10.16
 ------------------
