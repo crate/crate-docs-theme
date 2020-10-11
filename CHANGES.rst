@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Added WordPress navi as edge side include via Varnish
+- Added bottom margin to code highlights
 
 2020/10/06 0.10.17
 ------------------
