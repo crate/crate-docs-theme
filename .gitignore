@@ -1,6 +1,6 @@
 .build
 .clone
-.crate-docs-build
+.crate-docs
 .dist
 .DS_Store
 .env

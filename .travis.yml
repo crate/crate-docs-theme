@@ -24,19 +24,11 @@ code: &code
   script:
     - make build
 
-docs: &docs
-  stage: "Documentation"
-  script:
-    - cd docs && make check
-
 matrix:
   include:
 
     - <<: *code
       <<: *linux
-
-    - <<: *docs
-      <<: *linux
-    - <<: *docs
+    - <<: *code
       <<: *osx
 
