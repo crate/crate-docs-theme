@@ -6,9 +6,13 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
-- Permit installation with more recent versions of Sphinx
-  by relaxing strict dependency on ``Sphinx==1.8.5``.
-- Update to ``sphinxcontrib-plantuml==0.19``.
+
+2020/12/01 0.12.0
+-----------------
+
+- Permit installation with more recent versions of Sphinx by relaxing strict
+  dependency on ``Sphinx==1.8.5``
+- Update to ``sphinxcontrib-plantuml==0.19``
 
 
 2020/10/22 0.11.0
