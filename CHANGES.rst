@@ -6,6 +6,9 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Add left-margin to all lists
+- Fix paragraph margins for lists using the "open" class
+
 
 2020/12/01 0.12.0
 -----------------
