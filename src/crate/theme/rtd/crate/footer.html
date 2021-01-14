@@ -59,19 +59,18 @@
             </ul>
           </div>
           <div class="w-col w-col-2">
-            <ul class="footer-list w-list-unstyled" style="margin-top: 0; padding-left: 0;">
-              <div class="mobileHoriztonalMenu">
+            <div class="mobileHoriztonalMenu">
+              <ul class="footer-list w-list-unstyled" style="margin-top: 0; padding-left: 0;">
                 <li class="footer-listitem-new"><a href="https://crate.io/legal/">Legal</a></li>
                 <li class="footer-listitem-new"><a href="https://crate.io/legal/privacy-policy/">Privacy Policy</a></li>
                 <li class="footer-listitem-new"><a href="https://crate.io/legal/imprint/">Imprint</a></li>
-                
-              </div>
-              <li class="footer-listitem link-list">
-                <a class="footer-link-eu w-inline-block" href="/erdf/">
-                  <img class="logo-eu" sizes="100px" src="{{ pathto('_static', 1) }}/images/logo-eu-optimized-1.jpg" width="101">
-                </a>
-              </li>
-            </ul>
+                <li class="footer-listitem link-list">
+                  <a class="footer-link-eu w-inline-block" href="/erdf/" title="European Regional Development Funds">
+                    <img class="logo-eu" sizes="100px" src="{{ pathto('_static', 1) }}/images/logo-eu-optimized-1.jpg" alt="European Regional Development Funds Logo" width="100" height="28">
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </esi:remove>
         <!--esi
@@ -79,8 +78,8 @@
           -->
       </div>
       <div class="w-row">
-        <a class="brand footer-brand w-inline-block" href="/">
-          <img src="{{ pathto('_static', 1) }}/images/logo-crate.png" width="217">
+        <a class="brand footer-brand w-inline-block" href="/" title="crate.io">
+          <img src="{{ pathto('_static', 1) }}/images/logo-crate.png" alt="crate.io Logo" width="217" height="36">
         </a>
       </div>
     </div>
