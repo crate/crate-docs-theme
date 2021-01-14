@@ -3,15 +3,15 @@
 <header class="header-nav">
   <div class="container">
     <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
-      <a class="brand w-nav-brand" href="https://crate.io">
-        <img src="{{ pathto('_static', 1) }}/images/logo-crate.png" width="217">
+      <a class="brand w-nav-brand" href="https://crate.io" title="crate.io">
+        <img src="{{ pathto('_static', 1) }}/images/logo-crate.png" alt="crate.io Logo" width="217" height="36">
       </a>
       <nav class="w-nav-menu main-nav" role="navigation">
         <div class="dropdownBackground">
           <span class="arrow"></span>
         </div>
-        <ul id="menu-top-navigation" class="menu">
           <esi:remove>
+          <ul id="menu-top-navigation" class="menu">
             <li class="navlink w-nav-link menu-item menu-item-has-children">
               <a href="https://crate.io/products/">Products</a>
               <ul class="sub-menu">
@@ -50,11 +50,11 @@
             </li>
             <li class="navlink w-nav-link menu-item"><a href="https://crate.io/blog/">Blog</a></li>
             <li class="btn-link w-nav-link menu-item"><a href="https://crate.io/download/#cratedb-cloud">Try CrateDB</a></li>
+          </ul>
           </esi:remove>
           <!--esi
             <esi:include src="https://crate.io/navi-header.php" />
             -->
-        </ul>
       </nav>
 
       <label for="mobile-nav-new" class="fa fa-bars mobile-nav-button"></label>

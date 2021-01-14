@@ -95,30 +95,35 @@
       };
     </script>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+    <link rel="dns-prefetch" href="https://ajax.googleapis.com/">
+    <link rel="preconnect" href="https://cdn.crate.io/" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.crate.io/">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
     <script type="text/javascript" src="https://cdn.crate.io/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
     {%- for scriptfile in script_files %}
-    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}?ver=1.1"></script>
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}?ver=1.2"></script>
     {%- endfor %}
     {%- for scriptfile in extra_script_files %}
-    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}?ver=1.1"></script>
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}?ver=1.2"></script>
     {%- endfor %}
 {%- endmacro %}
 
 {%- macro css() %}
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}?ver=1.1" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}?ver=1.1" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}?ver=1.2" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}?ver=1.2" type="text/css" />
     {%- for cssfile in css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}?ver=1.1" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}?ver=1.2" type="text/css" />
     {%- endfor %}
     {%- for cssfile in extra_css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}?ver=1.1" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}?ver=1.2" type="text/css" />
     {%- endfor %}
 {%- endmacro %}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
     {{ metatags }}
@@ -133,9 +138,9 @@
           title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
           href="{{ pathto('_static/opensearch.xml', 1) }}"/>
     {%- endif %}
-    {%- if favicon %}
-    <link rel="shortcut icon" href="{{ pathto('_static/images/' + favicon, 1) }}"/>
-    {%- endif %}
+
+    <link rel="shortcut icon" href="{{ pathto('_static', 1) }}/images/favicon.ico"/>
+    <link rel="preload" href="{{ pathto('_static', 1) }}/fonts/BlenderPro-Bold.ttf" as="font" type="font/ttf" crossorigin>
     {%- endif %}
 {%- block linktags %}
     {%- if hasdoc('about') %}

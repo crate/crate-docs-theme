@@ -6,6 +6,23 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- SEO: Added `rel="noopener"` to Github links 
+  (Links to cross-origin destinations are unsafe)
+- Updated/removed Bootstrap and jQuery packages (9 vulnerabilities detected)
+- SEO: Added `height: auto;` to the logo css (lighthouse cought a wrong AR)
+- SEO: Added alt & title tags to logos in header and footer
+- Moved esi to the correct position
+- SEO: Added dns-prefech/preconnect to googleapis.com and cdn.crate.io
+- Updated version tag for css/js in `base.html` for cleaner caches
+- SEO: Added language `xml:lang="en" lang="en"`
+- Added Favicon
+- SEO: Preloading Font
+- SEO: Minified/Combined static js/css files (except custom and doctools)
+- SEO: Removed `maximum-scale=1` from meta viewport to allow zooming
+- Added new rating feature below the feedbackbox
+- SEO: Changed h3 to h2 for feedbackbox and new rating
+- Fixed a minor css error in `crateio.css` and added `font-display: swap;`
+- Fixed colors of the `Toggle Doc Menu` (mobile)
 
 2020/12/01 0.12.0
 -----------------

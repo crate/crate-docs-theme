@@ -67,4 +67,19 @@
   });
 
 
+  $(document).ready(function() {
+      $("form#ratingForm").submit(function(e) 
+      {
+          e.preventDefault(); // prevent the default click action from being performed
+          if ($("#ratingForm :radio:checked").length == 0) {
+              $('#ratingStatus').html("Select rating");
+              return false;
+          } else {
+              $('#ratingStatus').html( 'Thank you for your feedback!');
+              $('#ratingVote').prop('disabled', true);
+              analytics.track('Stars Rating: ' + $('input:radio[name=rating]:checked').val() );
+          }
+      });
+  });
+
 })(jQuery);

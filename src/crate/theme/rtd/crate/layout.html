@@ -1,27 +1,15 @@
 {% extends "base.html" %}
 
   {% set css_files = [
-    '_static/css/normalize.css',
-    '_static/css/bootstrap.css',
-
-    '_static/css/components.css',
-    '_static/css/crateio.css',
-    '_static/css/crateio-rtd.css',
+    '_static/css/style.min.css',
     '_static/css/custom.css',
     ]
   %}
 
   {% set script_files = [
-    '_static/js/modernizr.js',
-    '_static/js/underscore.min.js',
+    '_static/js/script.min.js',
     '_static/doctools.js',
-    '_static/js/searchtools.js',
-    '_static/js/webflow.js',
-    '_static/js/bootstrap.js',
-
-    '_static/js/fontawesome.js',
-    '_static/js/custom.js',
-    '_static/js/sticky-sidebar.min.js'
+    '_static/js/custom.js'
     ]
   %}
 
@@ -38,7 +26,7 @@
   {%- block extra_head %}
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name="apple-mobile-web-app-capable" content="yes">
   {% endblock %}
 
@@ -93,15 +81,15 @@
             <div class="view-on-github">
             {% if check_meta and 'github_url' in meta %}
               <!-- User defined GitHub URL -->
-              <a href="{{ meta['github_url'] }}" class="fa fa-github"><span class="edit-on-github-link"> Edit on GitHub</span></a>
+              <a href="{{ meta['github_url'] }}" rel="noopener" class="fa fa-github"><span class="edit-on-github-link"> Edit on GitHub</span></a>
             {% else %}
               <div id="cr-docs-feedback" class="cr-docs-feedback-container">
                   <div class="cr-docs-feedback-header">
                       <div class="cr-docs-feedback-headline">
-                          <h3>Feedback</h3>
+                          <h2>Feedback</h2>
                       </div>
                       <div class="cr-docs-feedback-meta">
-                          <a id="docs-feedback-open-issue" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=team:%20tech%20writing,triage&body={{
+                          <a id="docs-feedback-open-issue" rel="noopener" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=team:%20tech%20writing,triage&body={{
                               '###  Documentation feedback'|urlencode }}{{ '%0A'
                             }}{{ '%0A'
                             }}{{
@@ -120,16 +108,40 @@
                               '<!-- Please add your comments here -->'|urlencode }}{{ '%0A'
                             }}{{ '%0A'
                             }}" target="_blank" title="New issue">New issue</a>
-                          <a id="docs-feedback-edit-document" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('edit') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="Edit on GitHub">Edit on GitHub</a>
+                          <a id="docs-feedback-edit-document" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('edit') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" rel="noopener" target="_blank" title="Edit on GitHub">Edit on GitHub</a>
                       </div>
                   </div>
 
                   <div id="cr-feedback-content"></div>
 
                   <div class="cr-docs-feedback-footer">
-                      <a id="docs-feedback-open-github" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" target="_blank" title="View on GitHub">View on GitHub</a>
+                      <a id="docs-feedback-open-github" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" rel="noopener" target="_blank" title="View on GitHub">View on GitHub</a>
                   </div>
               </div>
+
+              <div id="cr-docs-rating" class="cr-docs-rating-container">
+                <div class="cr-docs-rating-headline">
+                        <h2>Rate this page</h2>
+                    </div>
+                    <div class="cr-rating-content">
+                        <div class="cr-rating">
+                          <form id="ratingForm">
+                            <span class="cr-ratingtext">How helpful was this page?</span>
+                            <fieldset class="rating">
+                              <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Great!">5 stars</label>
+                              <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                              <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                              <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Bad">2 stars</label>
+                              <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Ugh...">1 star</label>
+                            </fieldset>
+                            <button id="ratingVote" class="submit">Submit</button>
+                            <div id="ratingStatus"></div>
+                          </form>
+                      </div>
+                    </div>
+                </div>
+            </div>
+              
             {% endif %}
             </div>
           {% endif %}
@@ -256,7 +268,7 @@
 
               else {
                 issues.forEach((issue) => {
-                  html += `<li><div class='cr-docs-feedback-entry'><div class='cr-docs-feedback-title'><strong><a href='${issue.html_url}' class='cr-docs-link' title='View issue on GitHub' target='blank'>${issue.title}</a></strong></div>`;
+                  html += `<li><div class='cr-docs-feedback-entry'><div class='cr-docs-feedback-title'><strong><a href='${issue.html_url}' rel='noopener' class='cr-docs-link' title='View issue on GitHub' target='blank'>${issue.title}</a></strong></div>`;
 
                     // show PR if applicable
                     if (issue.pull_request != undefined) {
@@ -264,10 +276,10 @@
                     }
                     // show # of comments
                     if (issue.comments != 0) {
-                      html += `<div class='cr-docs-feedback-comments'><a href='${issue.html_url}' class='cr-docs-link' title='View issue on GitHub' target='blank'><svg viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z'><title>Comment</title></path></svg> ${issue.comments}</a></div>`;
+                      html += `<div class='cr-docs-feedback-comments'><a href='${issue.html_url}' rel='noopener' class='cr-docs-link' title='View issue on GitHub' target='blank'><svg viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z'><title>Comment</title></path></svg> ${issue.comments}</a></div>`;
                     }
                     // show issue number + link to it
-                    html += `</div><div class='cr-docs-feedback-details'><a href='${issue.html_url}' class='cr-docs-link' title='View issue on GitHub' target='blank'>#${issue.number}</a> `;
+                    html += `</div><div class='cr-docs-feedback-details'><a href='${issue.html_url}' rel='noopener' class='cr-docs-link' title='View issue on GitHub' target='blank'>#${issue.number}</a> `;
 
                     var date = new Date(issue.created_at);
 
@@ -276,7 +288,7 @@
                     + months[date.getMonth()] + " "
                     + date.getFullYear();
 
-                    html += `opened on ${formatted_date} by <a href='${issue.user.html_url}' class='cr-docs-link' title='View ${issue.user.login} on GitHub' `;
+                    html += `opened on ${formatted_date} by <a href='${issue.user.html_url}' rel='noopener' class='cr-docs-link' title='View ${issue.user.login} on GitHub' `;
                     html += ` target='blank'>${issue.user.login}</a></br>`;
                     html += "</div></li>";
                   });
