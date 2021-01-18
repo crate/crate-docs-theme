@@ -1018,6 +1018,12 @@ div.sidebar {
   background: #00a6d1;
 }
 
+.cr-docs-feedback-headline,
+.cr-docs-feedback-header,
+.cr-docs-rating-headline {
+  margin-bottom: 10px;
+}
+
 .cr-docs-feedback-container h2,
 .cr-docs-rating-headline h2 {
   color: #000;
@@ -1025,6 +1031,7 @@ div.sidebar {
   line-height: 30px;
   font-weight: 700;
   letter-spacing: 0px;
+  margin-bottom: 0;
 }
 
 .cr-docs-feedback-header {
@@ -1181,7 +1188,6 @@ div.sidebar {
 .cr-ratingtext {
     margin-right: 10px;
     font-size: 15px;
-    margin-bottom: 4px;
     min-width: 200px;
 }
 
@@ -1236,9 +1242,23 @@ div.sidebar {
   }
 
   #cr-docs-rating button {
-    margin: 0 auto;
+    margin: 0 auto 5px;
   }
+
+  .cr-ratingtext {
+      margin-bottom: 5px;
+  }
+
 }
+
+@media all and (max-width: 540px) {
+
+  .cr-docs-feedback-header {
+    flex-direction: column;
+  }
+
+}
+
 
 /* external links indicator */
 #main-content .col-md-8 [href^="http"]:not([href*="https://crate.io"]):not([href*="go.cratedb.com"]):not([href*="cdn.crate.io"]):not([href*="wpengine.com"]):not([href^="#"]):not([href^="/"]):not(.image-reference):not(.cr-docs-link) {
