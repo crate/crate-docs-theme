@@ -28,6 +28,9 @@ VERSION = (0, 12, 0)
 __version__ = ".".join(str(v) for v in VERSION)
 __version_full__ = __version__
 
+def get_version():
+    return __version__
+
 def current_dir():
     return os.path.abspath(os.path.dirname(__file__))
 

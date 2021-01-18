@@ -56,6 +56,9 @@ html_theme_options = {
     # segment analytics configuration
     'tracking_segment_id': environ.get('TRACKING_SEGMENT_ID', ''),
     'tracking_project': '',
+
+    # Can be used the query string of a resource URL for HTTP cache busting
+    "ver": theme.get_version(),
 }
 html_extra_path = ["_extra"]
 sitemap_filename = "site.xml"
