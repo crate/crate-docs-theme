@@ -1019,13 +1019,11 @@ div.sidebar {
 }
 
 .cr-docs-feedback-headline,
-.cr-docs-feedback-header,
-.cr-docs-rating-headline {
+.cr-docs-feedback-header {
   margin-bottom: 10px;
 }
 
-.cr-docs-feedback-container h2,
-.cr-docs-rating-headline h2 {
+.cr-docs-feedback-container h2 {
   color: #000;
   font-size: 24px;
   line-height: 30px;
@@ -1040,20 +1038,15 @@ div.sidebar {
   justify-content: space-between;
 }
 
-.cr-docs-feedback-footer {
+.cr-docs-feedback-meta {
   text-align: right;
 }
 
-.cr-docs-feedback-meta {
-  align-self: center;
-}
-
 .cr-docs-feedback-meta a {
-  margin-left: 15px;
+  margin-left: 20px !important;
 }
 
-#cr-feedback-content,
-.cr-rating-content {
+#cr-feedback-content {
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }
@@ -1128,7 +1121,13 @@ div.sidebar {
 
 /* rating form */
 .cr-rating-content {
-    padding: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.rating label {
+  margin-bottom: 0;
 }
 
 #ratingForm {
@@ -1215,7 +1214,7 @@ div.sidebar {
 #ratingStatus {
   font-size: 15px;
   margin-left: 15px;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 
 .rating {
@@ -1239,6 +1238,11 @@ div.sidebar {
 
   #ratingStatus {
     margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .rating {
+    min-width: auto;
   }
 
   #cr-docs-rating button {
