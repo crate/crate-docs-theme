@@ -120,7 +120,7 @@ ul {
 }
 
 blockquote {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   padding: 10px 20px;
   border-left-color: #000;
   font-size: 24px;
@@ -1300,8 +1300,8 @@ a.learn-more-link, .wrapper-teaser-img p {
 }
 
 .admonition {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
   padding: 7px;
 }
 
