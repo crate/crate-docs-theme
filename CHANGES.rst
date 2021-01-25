@@ -23,6 +23,8 @@ Unreleased
 - SEO: Changed h3 to h2 for feedbackbox and new rating
 - Fixed a minor css error in `crateio.css` and added `font-display: swap;`
 - Fixed colors of the `Toggle Doc Menu` (mobile)
+- Add left-margin to all lists
+- Fix paragraph margins for lists using the "open" class
 
 2020/12/01 0.12.0
 -----------------

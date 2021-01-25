@@ -601,6 +601,12 @@ div.sidebar {
   margin-bottom: 0;
 }
 
+.wrapper-content-right ul, 
+.wrapper-content-right ol {
+  margin-bottom: 16px;
+  margin-left: 16px;
+}
+
 /**
 * Mobile refinements
 */
@@ -1290,3 +1296,4 @@ footer .menu-item a {
     color: #000;
     opacity: 1;
 }
+
