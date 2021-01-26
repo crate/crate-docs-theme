@@ -6,9 +6,13 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
-- SEO: Added `rel="noopener"` to Github links 
-  (Links to cross-origin destinations are unsafe)
-- Updated/removed Bootstrap and jQuery packages (9 vulnerabilities detected)
+
+2021/01/26 0.13.0
+-----------------
+
+- SEO: Added `rel="noopener"` to Github links (links to cross-origin
+  destinations are unsafe)
+- Updated/removed Bootstrap and jQuery packages (nine vulnerabilities detected)
 - SEO: Added `height: auto;` to the logo css (lighthouse cought a wrong AR)
 - SEO: Added alt & title tags to logos in header and footer
 - Moved esi to the correct position
@@ -25,6 +29,7 @@ Unreleased
 - Fixed colors of the `Toggle Doc Menu` (mobile)
 - Add left-margin to all lists
 - Fix paragraph margins for lists using the "open" class
+
 
 2020/12/01 0.12.0
 -----------------
