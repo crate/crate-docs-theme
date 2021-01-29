@@ -13,6 +13,7 @@ Unreleased
 - Changed menu from fontawesome bars to spans
 - Fixed minor regressions from last update (borders, indents)
 - Excluded internal links from external link icon
+- Removed fontawesome.js
 
 
 2021/01/26 0.13.0
