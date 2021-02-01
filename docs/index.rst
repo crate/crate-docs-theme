@@ -4,6 +4,11 @@
 Crate Docs Theme
 ================
 
+.. meta::
+    :description lang=en:
+        This is the meta description, it should be between 150-300 characters.
+        Meta descriptions are used for display but not for ranking.
+
 This documentation is a stub.
 
 .. NOTE::
