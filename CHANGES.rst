@@ -6,6 +6,10 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+
+2021/02/03 0.13.1
+-----------------
+
 - Added meta description to index.rst for testing
 - Properly aligned footer container with the others
 - Changed crate.io logo from png to svg
