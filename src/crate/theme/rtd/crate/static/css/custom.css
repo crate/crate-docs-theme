@@ -608,7 +608,7 @@ div.sidebar {
   margin-bottom: 0;
 }
 
-.wrapper-content-right ul, 
+.wrapper-content-right ul,
 .wrapper-content-right ol {
   margin-bottom: 16px;
   margin-left: 16px;
@@ -1195,7 +1195,7 @@ div.sidebar {
 }
 
 /* preload image */
-#ratingForm { 
+#ratingForm {
   background: url('../images/cr-star-full.svg') no-repeat -9999px -9999px;
 }
 
@@ -1256,7 +1256,7 @@ div.sidebar {
   min-width: 170px;
 }
 
-#ratingVote:disabled, 
+#ratingVote:disabled,
 #ratingVote[disabled] {
   color: #ccc;
   display: none;
@@ -1383,4 +1383,12 @@ footer .footer-listitem-new:first-child a {
     margin: 8px 0;
   }
 
+}
+
+div.admonition ul.simple p {
+    padding: 0;
+}
+
+div.admonition ul.open p {
+    padding: 0 0 10px 0;
 }
