@@ -6,6 +6,8 @@ CHANGES for Crate.io Documentation Theme
 Unreleased
 ----------
 
+- Preloading the full star of the rating system to prevent empty stars
+- Added a note about ``custom.css`` and ``custom.js``
 
 2021/02/03 0.13.1
 -----------------
