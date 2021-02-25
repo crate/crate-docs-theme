@@ -29,6 +29,10 @@ Once you have a branch, the basic workflow goes like this:
 3. If you need to make additional changes, reset the build environment
    and go back to step one
 
+*Note*: Add new CSS and JavaScript to ``custom.css`` and ``custom.js``
+respectively. Those two files aren't part of the minify process which
+has to be done when any other css/js file gets updated.
+
 The best way to test your changes is to build the sample docs for this
 project. See the `Documentation`_ section below for details. The command
 to use for this is ``make dev``.

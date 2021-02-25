@@ -1194,6 +1194,11 @@ div.sidebar {
   background-image: url('../images/cr-star-full.svg');
 }
 
+/* preload image */
+#ratingForm { 
+  background: url('../images/cr-star-full.svg') no-repeat -9999px -9999px;
+}
+
 .rating > input:checked + label:hover,
 .rating > input:checked + label:hover ~ label,
 .rating > input:checked ~ label:hover,
