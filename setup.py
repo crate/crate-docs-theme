@@ -24,38 +24,38 @@ from importlib import machinery
 from setuptools import setup, find_packages
 
 pwd = os.path.join(os.path.dirname(__file__))
-filepath = os.path.join(pwd, 'src', 'crate', 'theme', 'rtd', '__init__.py')
-version = machinery.SourceFileLoader(
-    'theme', filepath).load_module().__version__
+filepath = os.path.join(pwd, "src", "crate", "theme", "rtd", "__init__.py")
+version = machinery.SourceFileLoader("theme", filepath).load_module().__version__
 
-setup(name='crate-docs-theme',
-      version=version,
-      description='Crate Docs Theme',
-      long_description='A Sphinx theme for the Crate Documentation',
-      classifiers=[
-          "Intended Audience :: Developers",
-          "License :: OSI Approved :: Apache Software License",
-          "Operating System :: OS Independent",
-          "Programming Language :: Python",
-          "Programming Language :: Python :: 3",
-          "Programming Language :: Python :: 3.6",
-          "Programming Language :: Python :: 3.7",
-          "Topic :: Software Development :: Documentation",
-      ],
-      author='Crate.IO GmbH',
-      author_email='office@crate.io',
-      url='https://github.com/crate/crate-docs-theme',
-      keywords='crate docs sphinx readthedocs',
-      license='Apache License 2.0',
-      packages=find_packages('src'),
-      package_dir={'':'src'},
-      namespace_packages=['crate'],
-      include_package_data=True,
-      zip_safe=False,
-      install_requires=[
-          'Sphinx>=1.8.5,<4',
-          'sphinxcontrib-plantuml==0.19',
-          'sphinx_sitemap==2.2.0',
-      ],
-      python_requires=">=3.7",
+setup(
+    name="crate-docs-theme",
+    version=version,
+    description="Crate Docs Theme",
+    long_description="A Sphinx theme for the Crate Documentation",
+    classifiers=[
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Topic :: Software Development :: Documentation",
+    ],
+    author="Crate.IO GmbH",
+    author_email="office@crate.io",
+    url="https://github.com/crate/crate-docs-theme",
+    keywords="crate docs sphinx readthedocs",
+    license="Apache License 2.0",
+    packages=find_packages("src"),
+    package_dir={"": "src"},
+    namespace_packages=["crate"],
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=[
+        "Sphinx>=1.8.5,<4",
+        "sphinxcontrib-plantuml==0.19",
+        "sphinx_sitemap==2.2.0",
+    ],
+    python_requires=">=3.7",
 )

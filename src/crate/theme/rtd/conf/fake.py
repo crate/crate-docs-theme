@@ -19,18 +19,23 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
+
 from crate.theme.rtd.conf import *
 
-project = u'CrateDB Fake Docs'
+# You can change the `project` value to anything you want because
+# `src/crate/theme/rtd/crate/sidebartoc.html` does not have a menu item for
+# this project.
+project = u"CrateDB Fake Docs"
 html_title = project
 
-url_path = 'docs/fake'
+url_path = "docs/fake"
 
 # For sitemap extension
-html_baseurl = 'https://crate.io/%s/' % url_path
+html_baseurl = "https://crate.io/%s/" % url_path
 
 # For rel="canonical" links
-html_theme_options.update({
-    'canonical_url_path': '%s/en/latest/' % url_path,
-})
-
+html_theme_options.update(
+    {
+        "canonical_url_path": "%s/en/latest/" % url_path,
+    }
+)

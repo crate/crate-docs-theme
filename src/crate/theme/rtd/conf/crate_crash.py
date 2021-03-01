@@ -19,17 +19,23 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
+
 from crate.theme.rtd.conf import *
 
-project = u'CrateDB: Crash CLI'
+# If you update the `project` value here, you must update it in the
+# `src/crate/theme/rtd/crate/sidebartoc.html` file or else Sphinx will not
+# expand the sidebar TOC for this project.
+project = u"CrateDB: Crash CLI"
 html_title = project
 
-url_path = 'docs/crate/crash'
+url_path = "docs/crate/crash"
 
 # For sitemap extension
-html_baseurl = 'https://crate.io/%s/' % url_path
+html_baseurl = "https://crate.io/%s/" % url_path
 
 # For rel="canonical" links
-html_theme_options.update({
-    'canonical_url_path': '%s/en/latest/' % url_path,
-})
+html_theme_options.update(
+    {
+        "canonical_url_path": "%s/en/latest/" % url_path,
+    }
+)
