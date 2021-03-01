@@ -22,41 +22,36 @@
 from crate.theme import rtd as theme
 from os import environ
 
-source_suffix = '.rst'
+source_suffix = ".rst"
 
-master_doc = 'index'
+master_doc = "index"
 
-exclude_patterns = ['.*', '*.lint', 'README.rst', 'requirements.txt']
-exclude_trees = ['pyenv', 'tmp', 'out', 'parts', 'clients', 'eggs']
+exclude_patterns = [".*", "*.lint", "README.rst", "requirements.txt"]
+exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
-extensions = ['sphinx_sitemap']
+extensions = ["sphinx_sitemap"]
 
 # Configure the theme
-html_theme = 'crate'
+html_theme = "crate"
 html_theme_path = theme.get_html_theme_path()
 nitpicky = True
 html_show_sourcelink = False
-html_sidebars = {'**': ['sidebar.html', 'sourcelink.html']}
+html_sidebars = {"**": ["sidebar.html", "sourcelink.html"]}
 html_theme_options = {
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': 'navbar navbar-inverse',
-
+    "navbar_class": "navbar navbar-inverse",
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    'navbar_fixed_top': 'false',
-
-    'globaltoc_includehidden': 'true',
-
+    "navbar_fixed_top": "false",
+    "globaltoc_includehidden": "true",
     # The URL path is required because RTD does only allow root as a canonical
     # url
-    'canonical_url_path': '',
-    'canonical_url': 'https://crate.io/',
-
+    "canonical_url_path": "",
+    "canonical_url": "https://crate.io/",
     # segment analytics configuration
-    'tracking_segment_id': environ.get('TRACKING_SEGMENT_ID', ''),
-    'tracking_project': '',
-
+    "tracking_segment_id": environ.get("TRACKING_SEGMENT_ID", ""),
+    "tracking_project": "",
     # Can be used the query string of a resource URL for HTTP cache busting
     "ver": theme.get_version(),
 }
@@ -66,6 +61,7 @@ sitemap_filename = "site.xml"
 language = "en"
 version = "latest"
 sitemap_url_scheme = "{lang}{version}{link}"
+
 
 def setup(app):
     # Force the canonical URL in multiple ways
@@ -79,15 +75,19 @@ def setup(app):
     def force_canonical_url(app_inited):
         from sphinx.builders.html import StandaloneHTMLBuilder
         from sphinx.builders.epub3 import Epub3Builder
-        if (isinstance(app_inited.builder, StandaloneHTMLBuilder)
-                and not isinstance(app_inited.builder, Epub3Builder)):
+
+        if isinstance(app_inited.builder, StandaloneHTMLBuilder) and not isinstance(
+            app_inited.builder, Epub3Builder
+        ):
             try:
-                canonical_url = app_inited.builder.theme_options['canonical_url']
-                canonical_url_path = app_inited.builder.theme_options['canonical_url_path']
+                canonical_url = app_inited.builder.theme_options["canonical_url"]
+                canonical_url_path = app_inited.builder.theme_options[
+                    "canonical_url_path"
+                ]
             except KeyError:
                 return
             canonical_url = canonical_url + canonical_url_path
-            app_inited.env.config.html_context['canonical_url'] = canonical_url
-            app_inited.builder.config.html_context['canonical_url'] = canonical_url
-    app.connect('builder-inited', force_canonical_url)
+            app_inited.env.config.html_context["canonical_url"] = canonical_url
+            app_inited.builder.config.html_context["canonical_url"] = canonical_url
 
+    app.connect("builder-inited", force_canonical_url)

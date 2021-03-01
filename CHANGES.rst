@@ -1,6 +1,6 @@
-========================================
-CHANGES for Crate.io Documentation Theme
-========================================
+=======
+CHANGES
+=======
 
 
 Unreleased
@@ -8,6 +8,9 @@ Unreleased
 
 - Preloading the full star of the rating system to prevent empty stars
 - Added a note about ``custom.css`` and ``custom.js``
+- Fix sidebar TOC . Previously, Sphinx was not expanding the sidebar TOC for
+  both how-to projects.
+
 
 2021/02/03 0.13.1
 -----------------

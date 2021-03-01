@@ -9,7 +9,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/crate/tutorials/">Tutorials</a></li>
     {% endif %}
-    {% if project == 'CrateDB: How-To Guides' %}
+    {% if project == 'CrateDB: How-Tos' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">How-To Guides</a>
         {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
@@ -62,7 +62,7 @@
     {% else %}
       <li class="navleft-item"><a href="/docs/cloud/tutorials/">Tutorials</a></li>
     {% endif %}
-    {% if project == 'CrateDB Cloud: How-To Guides' %}
+    {% if project == 'CrateDB Cloud: How-Tos' %}
       <li class="current">
         <a class="current-active" href="{{ pathto(master_doc) }}">How-To Guides</a>
         {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
