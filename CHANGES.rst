@@ -6,6 +6,9 @@ CHANGES
 Unreleased
 ----------
 
+- Fix a typo (character case) in `sidebartoc.html` causing the TOC to not
+  display for the Cloud How-Tos project
+
 
 2021/03/15 0.13.2
 -----------------

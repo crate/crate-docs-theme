@@ -25,7 +25,7 @@ from crate.theme.rtd.conf import *
 # If you update the `project` value here, you must update it in the
 # `src/crate/theme/rtd/crate/sidebartoc.html` file or else Sphinx will not
 # expand the sidebar TOC for this project.
-project = u"CrateDB Cloud: How-tos"
+project = u"CrateDB Cloud: How-Tos"
 html_title = project
 
 url_path = "docs/cloud/howtos"
