@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Fix list styling in admonition blocks
+
 
 2021/03/15 0.13.3
 -----------------
