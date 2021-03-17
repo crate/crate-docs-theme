@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Fix list styling in admonition blocks
+- Glossary links are now styled black with a dotted underline
 
 
 2021/03/15 0.13.3
