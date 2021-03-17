@@ -1315,6 +1315,13 @@ div.sidebar {
   margin-left: 2px;
 }
 
+/* glossary links indicator */
+a[href*="glossary.html#"].internal {
+  /* workaround as text-decoration cannot be overridden on child elements */
+  border-bottom: 1px dotted;
+  color: black;
+}
+
 /* hide menuitem in docs */
 .cr-menu-hide {
   display: none !important;
