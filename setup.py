@@ -27,11 +27,14 @@ pwd = os.path.join(os.path.dirname(__file__))
 filepath = os.path.join(pwd, "src", "crate", "theme", "rtd", "__init__.py")
 version = machinery.SourceFileLoader("theme", filepath).load_module().__version__
 
+README = open(os.path.join(pwd, 'README.rst')).read()
+
 setup(
     name="crate-docs-theme",
     version=version,
     description="Crate Docs Theme",
-    long_description="A Sphinx theme for the Crate Documentation",
+    long_description=README,
+    long_description_content_type="text/x-rst",
     classifiers=[
         "Intended Audience :: Developers",
         "License :: OSI Approved :: Apache Software License",
