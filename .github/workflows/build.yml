@@ -1,4 +1,4 @@
-name: docs
+name: build
 on:
   pull_request: ~
   push:
@@ -7,9 +7,9 @@ on:
 
 jobs:
 
-  documentation:
+  package:
 
-    name: Build docs on ${{ matrix.os }}
+    name: Build package on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -24,6 +24,6 @@ jobs:
         with:
           python-version: 3.7
 
-      - name: Build docs
+      - name: Build package
         run: |
-          cd docs && make check
+          make build

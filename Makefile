@@ -30,8 +30,8 @@
 ENV_DIR  := .env
 ENV_BIN  := $(ENV_DIR)/bin
 ACTIVATE := $(ENV_BIN)/activate
-PYTHON   := python3.7
-PIP      := $(ENV_BIN)/pip3.7
+PYTHON   := python3
+PIP      := $(ENV_BIN)/pip3
 TWINE    := $(ENV_BIN)/twine
 DIST_DIR := .dist
 PYPIRC   := ~/.pypirc
