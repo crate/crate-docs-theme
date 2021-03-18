@@ -125,5 +125,5 @@ Fifth-level heading
 This is the deepest heading level we support.
 
 
-.. _developer guide: https://github.com/crate/crate-docs-theme/blob/master/DEVELOP.rst#make-changes
+.. _developer guide: https://github.com/crate/crate-docs-theme/blob/master/DEVELOP.rst#user-content-make-changes
 .. _report an issue: https://github.com/crate/crate-docs/issues/new
