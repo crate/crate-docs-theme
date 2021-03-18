@@ -1316,7 +1316,7 @@ div.sidebar {
 }
 
 /* glossary links indicator */
-a[href*="glossary.html#"].internal {
+a[href*="#gloss-"].internal {
   /* workaround as text-decoration cannot be overridden on child elements */
   border-bottom: 1px dotted;
   color: black;

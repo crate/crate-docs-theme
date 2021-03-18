@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Minor CSS fixup for glossary link
+
 
 2021/03/18 0.14.0
 -----------------
