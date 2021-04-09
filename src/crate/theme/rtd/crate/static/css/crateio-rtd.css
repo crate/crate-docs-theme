@@ -1,11 +1,3 @@
-.wrapper-content-right .section {
-    margin-top: 32px;
-}
-
-.wrapper-content-right > .section {
-    margin-top: 0px;
-}
-
 .toctree {
     padding-left: 0;
     list-style: none;

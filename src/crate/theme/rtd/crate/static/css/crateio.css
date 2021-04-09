@@ -1593,7 +1593,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 
 @font-face {
   font-family: 'Blender Pro';
-  src:  url('../fonts/BlenderPro-Bold.ttf') format('truetype'), 
+  src:  url('../fonts/BlenderPro-Bold.ttf') format('truetype'),
         url('../fonts/BlenderPro-Thin.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;

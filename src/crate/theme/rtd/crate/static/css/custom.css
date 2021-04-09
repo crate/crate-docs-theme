@@ -3,6 +3,11 @@
 * ...so as to avoid breaking anything unexpectedly
 */
 
+.w-canvas {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
 /**
 * Bootstrap components (removed bootstrap)
 */
@@ -622,7 +627,7 @@ div.sidebar {
     font-size: 38px;
     line-height: 1;
   }
-  .section.w-section {
+  .w-canvas {
     padding-left: 0;
     padding-right: 0;
   }
@@ -766,7 +771,7 @@ div.sidebar {
 */
 
 
-.w-section {
+.w-canvas {
   transition: transform .3s ease-in-out;
 }
 
@@ -823,7 +828,7 @@ div.sidebar {
     transform: translateX(0);
   }
 
-  #mobile-nav-new:checked ~ .w-section  {
+  #mobile-nav-new:checked ~ .w-canvas  {
     transform: translate3d(-440px,0,0);
   }
 
