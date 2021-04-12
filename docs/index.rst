@@ -117,6 +117,7 @@ Fourth-level heading
     subpage
 
     glossary
+    links
 
 This paragraph contains a link to the :ref:`foo <gloss-foo>` glossary entry
 that should be styled black with a dotted underline to make it less prominent

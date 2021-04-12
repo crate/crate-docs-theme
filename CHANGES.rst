@@ -9,6 +9,8 @@ Unreleased
 - Minor CSS fixup for glossary link
 - Upgrade to crate-docs 2.0.0
 - Permit installation on Sphinx 4
+- Add intersphinx mapping for cross referencing documentation across different
+  repositories
 
 
 2021/03/18 0.14.0
