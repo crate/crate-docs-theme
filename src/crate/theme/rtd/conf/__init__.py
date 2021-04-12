@@ -29,7 +29,10 @@ master_doc = "index"
 exclude_patterns = [".*", "*.lint", "README.rst", "requirements.txt"]
 exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
-extensions = ["sphinx_sitemap"]
+extensions = [
+    "sphinx_sitemap",
+    "sphinx.ext.intersphinx",
+]
 
 # Configure the theme
 html_theme = "crate"
@@ -61,6 +64,38 @@ sitemap_filename = "site.xml"
 language = "en"
 version = "latest"
 sitemap_url_scheme = "{lang}{version}{link}"
+
+# Configure intersphinx mapping
+intersphinx_mapping = {
+
+    # CrateDB core
+    'crate-reference': ('https://crate.io/docs/crate/reference/en/latest/', None),
+    'crate-tutorials': ('https://crate.io/docs/crate/tutorials/en/latest/', None),
+    'crate-howtos': ('https://crate.io/docs/crate/howtos/en/latest/', None),
+
+    # CrateDB clients
+    'crate-admin-ui': ('https://crate.io/docs/crate/admin-ui/en/latest/', None),
+    'crate-crash': ('https://crate.io/docs/crate/crash/en/latest/', None),
+    'crate-clients-tools': ('https://crate.io/docs/crate/clients-tools/en/latest/', None),
+    'crate-jdbc': ('https://crate.io/docs/clients/jdbc/en/latest/', None),
+    'crate-npgsql': ('https://crate.io/docs/clients/npgsql/en/latest/', None),
+    'crate-dbal': ('https://crate.io/docs/clients/dbal/en/latest/', None),
+    'crate-pdo': ('https://crate.io/docs/clients/pdo/en/latest/', None),
+    'crate-python': ('https://crate.io/docs/clients/python/en/latest/', None),
+
+    # CrateDB Cloud
+    'cloud-reference': ('https://crate.io/docs/cloud/reference/en/latest/', None),
+    'cloud-tutorials': ('https://crate.io/docs/cloud/tutorials/en/latest/', None),
+    'cloud-howtos': ('https://crate.io/docs/cloud/howtos/en/latest/', None),
+    'cloud-cli': ('https://crate.io/docs/cloud/cli/en/latest/', None),
+
+    # Misc
+    'sql-99': ('https://crate.io/docs/sql-99/en/latest/', None),
+
+    # CrateDB Docs
+    'crate-docs': ('https://crate-docs.readthedocs.io/en/latest/', None),
+    'crate-docs-theme': ('https://crate-docs-theme.readthedocs.io/en/latest/', None),
+}
 
 
 def setup(app):
