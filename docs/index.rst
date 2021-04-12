@@ -49,8 +49,8 @@ Top-level heading
     This is the first paragraph of a note admonition. The admonition is
     visually set off from the rest of the content and has a colored background.
 
-    This is a second paragraph. There is an icon to the left of both paragraphs
-    that represents the concept of a "note".
+    This is a second paragraph. To the left of both paragraphs, there is an
+    icon that represents the concept of a "note".
 
 
 .. _second-level-heading:
