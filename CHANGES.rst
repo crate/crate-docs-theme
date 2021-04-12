@@ -8,6 +8,7 @@ Unreleased
 
 - Minor CSS fixup for glossary link
 - Upgrade to crate-docs 2.0.0
+- Permit installation on Sphinx 4
 
 
 2021/03/18 0.14.0
