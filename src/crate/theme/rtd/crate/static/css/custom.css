@@ -454,7 +454,7 @@ body .mm-menu .navbar-nav {
     font-size: 16px;
   }
 
-  .w-canvas {
+  .section {
     margin-top: 30px;
   }
   .mobileAlign {
@@ -500,6 +500,11 @@ body .mm-menu .navbar-nav {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, .1) !important;
     z-index: 990;
+  }
+
+  div.section {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   body .wrapper-navleft,
@@ -594,7 +599,7 @@ table.docutils {
   margin-bottom: 16px;
 }
 
-.wrapper-content-right .w-canvas img {
+.wrapper-content-right .section img {
   margin-bottom: 16px;
 }
 
