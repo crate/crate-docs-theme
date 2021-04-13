@@ -146,6 +146,23 @@ endif
 .PHONY: Makefile
 Makefile:
 
+.PHONY: bundle-assets
+bundle-assets:
+	cd .. && yarn install
+	cd .. && npx webpack --mode=development
+
+.PHONY: dev
+dev: $(CLONE_DIR)
+	@ $(MAKE) version-warn
+	@ $(MAKE) bundle-assets
+	@ $(SRC_MAKE) $@
+
+.PHONY: html
+html: $(CLONE_DIR)
+	@ $(MAKE) version-warn
+	@ $(MAKE) bundle-assets
+	@ $(SRC_MAKE) $@
+
 # By default, pass targets through to the core build rules
 .PHONY:
 %: $(CLONE_DIR)

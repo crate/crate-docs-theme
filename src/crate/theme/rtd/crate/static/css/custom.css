@@ -456,7 +456,7 @@ body .mm-menu .navbar-nav {
     text-align: left;
   }
 
-  .mobileHoriztonalMenu {
+  .mobileHorizontalMenu {
     margin-top: 0;
   }
 }
@@ -1346,7 +1346,7 @@ footer .footer-list a {
 }
 
 /* fallback fix when esi is not loaded */
-footer .footer-listitem-new a, {
+footer .footer-listitem-new a {
   padding: .5rem 0;
   display: block;
   font-size: 15px;

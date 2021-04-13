@@ -1285,10 +1285,10 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 
 @media (max-width: 991px) {
 
-    .mobileHoriztonalMenu {
+    .mobileHorizontalMenu {
         margin-top: 10px;
         }
-    .mobileHoriztonalMenu li {
+    .mobileHorizontalMenu li {
         display: inline-block !important;
 
         }
@@ -1369,7 +1369,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
         width: 55%;
         margin-right: 2%;
     }
-    .mobileHoriztonalMenu {
+    .mobileHorizontalMenu {
         margin-top: 10px;
     }
     .mobileAlign {
@@ -1506,7 +1506,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 }
 
 @media (max-width: 479px) {
-    .mobileHoriztonalMenu {
+    .mobileHorizontalMenu {
         margin-top: 10px;
         }
 
