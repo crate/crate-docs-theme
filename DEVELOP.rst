@@ -3,8 +3,8 @@ Developer Guide
 ===============
 
 
-Making changes to the theme
-===========================
+Introduction
+============
 
 To make changes to this theme, follow this process:
 
@@ -17,8 +17,12 @@ To make changes to this theme, follow this process:
 changes reflected in the docs, you must make the same changes to this
 theme.
 
-Make changes
-------------
+
+Making changes to the theme
+===========================
+
+HTML templates
+--------------
 
 Create a branch for your changes.
 
@@ -28,10 +32,6 @@ Once you have a branch, the basic workflow goes like this:
 2. Build the project docs to test what the theme looks like
 3. If you need to make additional changes, reset the build environment
    and go back to step one
-
-*Note*: Add new CSS and JavaScript to ``custom.css`` and ``custom.js``
-respectively. Those two files aren't part of the minify process which
-has to be done when any other css/js file gets updated.
 
 The best way to test your changes is to build the sample docs for this
 project. See the `Documentation`_ section below for details. The command
@@ -65,6 +65,20 @@ changes to the ``master`` branch.
 
 A project admin should be asked to complete the remaining steps.
 
+
+JavaScript, CSS and asset files
+-------------------------------
+
+Add new JavaScript and CSS to ``custom.css`` and ``custom.js`` respectively.
+In order to run the bundling process, invoke those commands::
+
+    yarn install
+    npx webpack --mode=development
+
+
+
+Release
+=======
 
 Prepare a release
 -----------------
@@ -135,7 +149,7 @@ We write the documentation with `Sphinx`_ and `ReStructuredText`_.
 Working on the documentation
 ----------------------------
 
-Python 3.7 is required.
+Python >= 3.7 is required.
 
 Change into the ``docs`` directory:
 
@@ -162,14 +176,12 @@ For help, run:
 
       reset   Reset the build cache
 
-You must install `fswatch`_ to use the ``dev`` target.
-
 
 Testing on mobile
 -----------------
 
 If you want to test the theme on a mobile device, you can run the dev server on
-``0.0.0.0:8000`` instead of ``127.0.01:8000``. When you bind to ``0.0.0.0``,
+``0.0.0.0:8000`` instead of ``127.0.0.1:8000``. When you bind to ``0.0.0.0``,
 devices on your local network can access the dev server by connecting to your
 machine's IP address on port ``8000``.
 
@@ -179,14 +191,12 @@ Bind the dev server to ``0.0.0.0`` like this::
 
 
 Continuous integration and deployment
--------------------------------------
+=====================================
 
-|build| |travis| |rtd|
+This project uses GitHub Actions to run ``make check`` from the ``docs``
+directory.
 
-We have `configured`_ Travis CI to run ``make check`` from the ``docs``
-directory. Please do not merge pull requests until the Travis CI tests pass.
-
-`Read the Docs`_ automatically rebuilds the documentation whenever an
+Also, `Read the Docs`_ automatically rebuilds the documentation whenever an
 active docs branch is updated.
 
 To make changes to the RTD configuration (e.g., to activate or deactivate a
@@ -194,23 +204,8 @@ release version), please contact the `@crate/tech-writing`_ team.
 
 
 .. _@crate/tech-writing: https://github.com/orgs/crate/teams/tech-writing
-.. _configured: https://github.com/crate/crate-docs-theme/blob/master/.travis.yml
-.. _fswatch: https://github.com/emcrisostomo/fswatch
 .. _PyPI: https://pypi.python.org/pypi
 .. _Read the Docs: http://readthedocs.org
 .. _rebuilding the docs: https://github.com/crate/distribute/blob/master/REBUILD_DOCS.rst
 .. _ReStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Sphinx: http://sphinx-doc.org/
-
-
-.. |build| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Fbuild.json
-    :alt: Build version
-    :target: https://github.com/crate/crate-docs-theme/blob/master/docs/build.json
-
-.. |travis| image:: https://img.shields.io/travis/crate/crate-docs-theme.svg?style=flat
-    :alt: Travis CI status
-    :target: https://travis-ci.org/crate/crate-docs-theme
-
-.. |rtd| image:: https://readthedocs.org/projects/crate-docs-theme/badge/
-    :alt: Read the Docs status
-    :target: https://readthedocs.org/projects/crate-docs-theme/

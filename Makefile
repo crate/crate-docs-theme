@@ -58,12 +58,18 @@ $(TWINE):
 .PHONY: build
 build: $(TWINE)
 	@ $(MAKE) clean
+	@ $(MAKE) bundle-assets
 	. $(ACTIVATE) && \
 	    $(PYTHON) setup.py sdist --dist-dir $(DIST_DIR)
 	. $(ACTIVATE) && \
 	    $(PYTHON) setup.py bdist_wheel --dist-dir $(DIST_DIR)
 	. $(ACTIVATE) && \
 	    $(TWINE) check $(DIST_DIR)/*
+
+.PHONY: bundle-assets
+bundle-assets:
+	yarn install
+	npx webpack --mode=production
 
 .PHONY: upload
 upload: $(TWINE)

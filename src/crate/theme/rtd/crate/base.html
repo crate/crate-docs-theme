@@ -86,6 +86,7 @@
 
 {%- macro script() %}
     <script type="text/javascript">
+      /*
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '{{ url_root }}',
         VERSION:     '{{ release|e }}',
@@ -93,6 +94,7 @@
         FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
         HAS_SOURCE:  {{ has_source|lower }}
       };
+      */
     </script>
 
     <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
@@ -100,9 +102,8 @@
     <link rel="preconnect" href="https://cdn.crate.io/" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.crate.io/">
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-    <script type="text/javascript" src="https://cdn.crate.io/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script id="documentation_options" data-url_root="{{ url_root }}" src="{{ pathto('_static/documentation_options.js', 1) }}?ver={{ theme_ver }}"></script>
+    <script src="{{ pathto('_static/bundle/main.js', 1) }}?ver={{ theme_ver }}"></script>
 
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}?ver={{ theme_ver }}"></script>

@@ -4,8 +4,6 @@
 */
 (function($) {
 
-  var $body = $('body');
-
   $(document).ready(function() {
 
     /**

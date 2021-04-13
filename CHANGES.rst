@@ -11,6 +11,7 @@ Unreleased
 - Permit installation on Sphinx 4
 - Add intersphinx mapping for cross referencing documentation across different
   repositories
+- Improve bundling of custom JavaScript and CSS assets
 
 
 2021/03/18 0.14.0
@@ -423,7 +424,7 @@ Unreleased
 - Change the ``html_context`` keys for custom js/css scripts from
   ``script_files`` to ``extra_script_files`` and from ``css_files`` to
   ``extra_css_files``.
-  This change fixes a regression that was introduces in ``0.5.73`` which
+  This change fixes a regression that was introduced in ``0.5.73`` which
   allowed the build process on RTD to "inject" their css/js using the
   ``script_files``/``css_files`` keys of the html context.
 
