@@ -1310,7 +1310,7 @@ div.sidebar {
 
 /* external links indicator */
 #main-content .col-md-8 [href^="http"]:not([href*="https://crate.io"]):not([href*="go.cratedb.com"]):not([href*="cdn.crate.io"]):not([href*="wpengine.com"]):not([href^="#"]):not([href^="/"]):not(.image-reference):not(.cr-docs-link):not(.internal) {
-  background: url(https://crate.io/wp-content/themes/crate/img/icon_link_external.svg) center left no-repeat;
+  background: url(../images/icon_link_external.svg) center left no-repeat;
   padding-left: 20px;
   margin-left: 2px;
 }
