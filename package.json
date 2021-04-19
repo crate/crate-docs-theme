@@ -2,7 +2,6 @@
   "devDependencies": {
     "css-loader": "^5.2.1",
     "expose-loader": "^2.0.0",
-    "fontawesome": "4",
     "jquery": "^3.6.0",
     "jquery.cookie": "^1.4.1",
     "normalize.css": "^8.0.1",
