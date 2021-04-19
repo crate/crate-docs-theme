@@ -1399,3 +1399,8 @@ div.admonition ul.simple p {
 div.admonition ul.open p {
     padding: 0 0 10px 0;
 }
+
+h4 {
+    color: #000;
+    font-weight: bold;
+}
