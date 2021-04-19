@@ -75,6 +75,13 @@ In order to run the bundling process, invoke those commands::
     yarn install
     npx webpack --mode=development
 
+Those commands might need some prerequisites installed on your machine. In
+order to run the setup on, e.g., Linux, invoke those commands - YMMV::
+
+    sudo apt update
+    curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+    sudo apt-get install -y nodejs
+    sudo npm install --global yarn
 
 
 Release
