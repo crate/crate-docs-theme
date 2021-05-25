@@ -46,6 +46,7 @@ How to improve this documentation:
     links
     images
     diagrams
+    codesnippets
 
     subpage
     glossary

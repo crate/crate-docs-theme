@@ -17,6 +17,7 @@ Unreleased
 - Improve margins and rename section class to ``w-canvas`` for proper tagging
 - Add extension "sphinxcontrib.plantuml"
 - Add extension "sphinxext.opengraph"
+- Add "sphinx-copybutton" extension
 
 
 2021/03/18 0.14.0
