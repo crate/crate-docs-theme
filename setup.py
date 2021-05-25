@@ -58,7 +58,7 @@ setup(
     zip_safe=False,
     install_requires=[
         "Sphinx>=1.8.5,<5",
-        "sphinxcontrib-plantuml==0.19",
+        "sphinxcontrib-plantuml==0.21",
         "sphinx_sitemap==2.2.0",
     ],
     python_requires=">=3.7",
