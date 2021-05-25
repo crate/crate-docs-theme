@@ -44,6 +44,7 @@ How to improve this documentation:
     admonitions
     lists
     links
+    images
 
     subpage
     glossary
