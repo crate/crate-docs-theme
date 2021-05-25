@@ -2,8 +2,14 @@
 Different kinds of lists
 ========================
 
+.. contents::
+   :local:
+
+Bullet lists
+============
+
 Basics
-======
+------
 
 .. _closed-list:
 
@@ -30,7 +36,7 @@ This is a regular paragraph and not a list item.
 
 
 With admonition
-===============
+---------------
 
 These are lists within admonitions.
 
@@ -52,3 +58,18 @@ These are lists within admonitions.
 
      - The list items are separated as if they were separate paragraphs
 
+
+Enumerated lists
+================
+
+This demonstrates an auto-enumerated list with a nested bullet-list.
+
+#. Item 1
+
+    - Sub item 1
+    - Sub item 2
+
+#. Item 2
+
+    - Sub item 1
+    - Sub item 2
