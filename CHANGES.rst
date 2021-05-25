@@ -12,6 +12,9 @@ Unreleased
 - Add intersphinx mapping for cross referencing documentation across different
   repositories
 - Improve bundling of custom JavaScript and CSS assets
+- Fix the docs title for Segment.io / GA tracking
+- Add ESI snippets for a dynamic promotion header and newsletter footer
+- Improve margins and rename section class to ``w-canvas`` for proper tagging
 
 
 2021/03/18 0.14.0
