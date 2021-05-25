@@ -1,6 +1,6 @@
-============
-Test subpage
-============
+=========
+A subpage
+=========
 
 This is a subpage.
 
