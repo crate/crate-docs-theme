@@ -15,6 +15,7 @@ Unreleased
 - Fix the docs title for Segment.io / GA tracking
 - Add ESI snippets for a dynamic promotion header and newsletter footer
 - Improve margins and rename section class to ``w-canvas`` for proper tagging
+- Add extension "sphinxcontrib.plantuml"
 
 
 2021/03/18 0.14.0

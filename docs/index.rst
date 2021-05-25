@@ -45,6 +45,7 @@ How to improve this documentation:
     lists
     links
     images
+    diagrams
 
     subpage
     glossary

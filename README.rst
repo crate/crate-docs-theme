@@ -15,6 +15,16 @@ For help making changes to the theme, see the `developer docs`_.
 Using the theme
 ===============
 
+Prerequisites
+-------------
+
+The documentation can include UML diagrams which will be rendered using
+`sphinxcontrib-plantuml`_. In order to satisfy its requirements, run::
+
+    brew install plantuml
+
+.. _sphinxcontrib-plantuml: https://pypi.org/project/sphinxcontrib-plantuml/
+
 Installation
 ------------
 
@@ -26,8 +36,8 @@ it automatically.
 Configuration
 -------------
 
-The Crate documentation is composed of multiple separate documentation
-projects, seemlessly interlinked via the Crate docs theme.
+The Crate.io documentation is composed of multiple separate documentation
+projects, seamlessly interlinked via the Crate docs theme.
 
 To use the theme, add this line to your Sphinx ``conf.py`` file::
 

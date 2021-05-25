@@ -24,6 +24,14 @@ jobs:
         with:
           python-version: 3.7
 
+      - name: Install PlantUML on Linux
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get install plantuml
+
+      - name: Install PlantUML on macOS
+        if: matrix.os == 'macos-latest'
+        run: brew install plantuml
+
       - name: Build docs
         run: |
           cd docs && make check

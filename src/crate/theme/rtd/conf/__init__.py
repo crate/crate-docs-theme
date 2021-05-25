@@ -32,6 +32,7 @@ exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 extensions = [
     "sphinx_sitemap",
     "sphinx.ext.intersphinx",
+    "sphinxcontrib.plantuml",
 ]
 
 # Configure the theme
