@@ -235,11 +235,6 @@ header .brand {
   float: left;
 }
 
-.section {
-  margin-top: 64px;
-  margin-bottom: 64px;
-}
-
 .section.t-plain {
   padding: 64px 160px;
 }
