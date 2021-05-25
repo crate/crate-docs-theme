@@ -8,6 +8,12 @@
   margin-bottom: 64px;
 }
 
+a.copybtn {
+  width: 2em;
+  height: 2em;
+  top: .5em;
+}
+
 /**
 * Bootstrap components (removed bootstrap)
 */

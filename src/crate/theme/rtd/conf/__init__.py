@@ -34,6 +34,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinxcontrib.plantuml",
     "sphinxext.opengraph",
+    "sphinx_copybutton",
 ]
 
 # Configure the theme
@@ -108,6 +109,10 @@ ogp_image_alt = False
 ogp_use_first_image = True
 ogp_type = "website"
 
+# Configure Sphinx-copybutton
+copybutton_remove_prompts = True
+copybutton_prompt_text = r">>> |\.\.\. |\$ |sh\$ |cr> |mysql> |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_is_regexp = True
 
 def setup(app):
     # Force the canonical URL in multiple ways
