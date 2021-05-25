@@ -1,10 +1,21 @@
-=============================
-Linking to other repositories
-=============================
+========================
+Different kinds of links
+========================
 
+Glossary links
+==============
+
+This paragraph contains a link to the :ref:`foo <gloss-foo>` glossary entry
+that should be styled black with a dotted underline to make it less prominent
+and distinguish it from normal internal links.
+
+Intersphinx links
+=================
+
+Those links reference documentation sections within other repositories.
 
 CrateDB core
-============
+------------
 
 - :ref:`crate-reference:index`
 - :ref:`crate-tutorials:index`
@@ -12,7 +23,7 @@ CrateDB core
 
 
 CrateDB clients
-===============
+---------------
 
 - :ref:`crate-admin-ui:index`
 - :ref:`crate-crash:index`
@@ -25,7 +36,7 @@ CrateDB clients
 
 
 CrateDB Cloud
-=============
+-------------
 
 - :ref:`cloud-reference:index`
 - :ref:`cloud-tutorials:index`
@@ -34,13 +45,13 @@ CrateDB Cloud
 
 
 Misc
-====
+----
 
 - :ref:`sql-99:index`
 
 
 CrateDB Docs
-============
+------------
 
 - :ref:`crate-docs:index`
 - :ref:`crate-docs-theme:index`
