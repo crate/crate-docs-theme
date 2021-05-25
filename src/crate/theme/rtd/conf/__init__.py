@@ -33,6 +33,7 @@ extensions = [
     "sphinx_sitemap",
     "sphinx.ext.intersphinx",
     "sphinxcontrib.plantuml",
+    "sphinxext.opengraph",
 ]
 
 # Configure the theme
@@ -97,6 +98,15 @@ intersphinx_mapping = {
     'crate-docs': ('https://crate-docs.readthedocs.io/en/latest/', None),
     'crate-docs-theme': ('https://crate-docs-theme.readthedocs.io/en/latest/', None),
 }
+
+# Configure OpenGraph extension
+ogp_site_url = "https://crate.io/"
+ogp_description_length = 300
+ogp_site_name = "CrateDB documentation"
+ogp_image = "https://user-images.githubusercontent.com/453543/119536319-3c9ca480-bd89-11eb-908d-3da78e55f17b.png"
+ogp_image_alt = False
+ogp_use_first_image = True
+ogp_type = "website"
 
 
 def setup(app):

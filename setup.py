@@ -60,6 +60,7 @@ setup(
         "Sphinx>=1.8.5,<5",
         "sphinxcontrib-plantuml==0.21",
         "sphinx_sitemap==2.2.0",
+        "sphinxext.opengraph==0.4.1",
     ],
     python_requires=">=3.7",
 )
