@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Fix some client docs intersphinx URLs
+- Adjust style of highlighted codeblocks: Border, border radius and shadow
 
 
 2021/05/26 0.15.0
