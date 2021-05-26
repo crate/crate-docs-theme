@@ -92,25 +92,53 @@ Prepare a release
 
 To create a new release from the ``master`` branch:
 
-- Update ``__version__`` in ``src/crate/theme/rtd/__init__.py``
+- Add a new version section to the ``CHANGES.txt`` file
 
-- Add a section for the new version in the ``CHANGES.rst`` file
+  - Please honor `SemVer`_ when choosing the new version number. If this
+    release includes breaking changes, please add the boilerplate notice to the
+    top of the changelog entry.
+
+  - Please separate out the changes into sections where it makes sense. Consult
+    previous releases for an idea of how to do this.
+
+- Update ``__version__`` in ``src/crate/theme/rtd/__init__.py``
 
 - Commit your changes with a message like "Prepare release x.y.z"
 
-- Push to origin
+- Push to ``origin``
 
-- Create a tag by running ``./devtools/create_tag.sh``
+- Run ``./devstools/create_tag.sh``
+
+- Visit the `releases page`_ and select the version you just released
+
+- Select *Edit tag*
+
+- Copy and paste the changelog notes for this release (be sure to remove the
+  hard line breaks)
+
+- Check the *Preview* tab for display errors and fix if necessary
+
+- Select *Publish release*
 
 
 Upload to PyPI
 --------------
 
-You must switch to the project root directory for the following commands.
+To build and upload the package, you must have `Yarn`_ (the package manager)
+installed on your system. The `Makefile`_ uses Yarn to install the dependencies
+necessary to compile the JavaScript and CSS assets.
+
+Switch to the project root directory for the following commands.
 
 Build the package::
 
     $ make build
+
+**TIP**
+  If you encounter a Ruby error when running `make`, it is likely because you
+  have the `yarn gem`_ installed and its executable appears first your
+  ``PATH``. To fix this issue, uninstall the yarn gem, or reconfigure your
+  ``PATH``.
 
 Upload the package to `PyPI`_::
 
@@ -207,12 +235,15 @@ Also, `Read the Docs`_ automatically rebuilds the documentation whenever an
 active docs branch is updated.
 
 To make changes to the RTD configuration (e.g., to activate or deactivate a
-release version), please contact the `@crate/tech-writing`_ team.
+release version), please contact an admin.
 
 
-.. _@crate/tech-writing: https://github.com/orgs/crate/teams/tech-writing
+.. _Makefile: https://github.com/crate/crate-docs-theme/blob/master/Makefile
 .. _PyPI: https://pypi.python.org/pypi
 .. _Read the Docs: http://readthedocs.org
 .. _rebuilding the docs: https://github.com/crate/distribute/blob/master/REBUILD_DOCS.rst
+.. _releases page: https://github.com/crate/crate-docs-theme/releases
 .. _ReStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Sphinx: http://sphinx-doc.org/
+.. _yarn gem: https://rubygems.org/gems/yarn
+.. _Yarn: https://yarnpkg.com/
