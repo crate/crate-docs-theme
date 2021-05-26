@@ -138,5 +138,12 @@
   </li>
   {% endif %}
 
+  {% if project == 'Doing Docs' %}
+  <li class="current">
+    <a class="current-active" href="{{ pathto(master_doc) }}">Doing Docs at Crate.io</a>
+    {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+  </li>
+  {% endif %}
+
   <li class="navleft-item"><a href="/support/">Support</a></li>
 </ul>
