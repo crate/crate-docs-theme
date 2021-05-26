@@ -12,6 +12,7 @@ a.copybtn {
   width: 2em;
   height: 2em;
   top: .5em;
+  opacity: .6;
 }
 
 /**

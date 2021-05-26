@@ -21,7 +21,7 @@ a.current, a.current-active {
     margin: 1em 0px;
     border: 1px solid #ccc;
     border-radius: 2px;
-    background: #f0f0f0 none repeat scroll 0 0;
+    background: inherit none repeat scroll 0 0;
 }
 
 blockquote {
