@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Fix some client docs intersphinx URLs
+
 
 2021/05/26 0.15.0
 -----------------
