@@ -114,6 +114,13 @@ copybutton_remove_prompts = True
 copybutton_prompt_text = r">>> |\.\.\. |\$ |sh\$ |cr> |mysql> |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
 
+# Configure linkchecker
+linkcheck_ignore = [
+    # Breaks accessibility via JS ¯\_(ツ)_/¯
+    "https://www.iso.org/obp/ui/.*"
+]
+linkcheck_retries = 3
+
 def setup(app):
     # Force the canonical URL in multiple ways
     #
