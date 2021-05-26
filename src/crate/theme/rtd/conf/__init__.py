@@ -80,11 +80,11 @@ intersphinx_mapping = {
     'crate-admin-ui': ('https://crate.io/docs/crate/admin-ui/en/latest/', None),
     'crate-crash': ('https://crate.io/docs/crate/crash/en/latest/', None),
     'crate-clients-tools': ('https://crate.io/docs/crate/clients-tools/en/latest/', None),
-    'crate-jdbc': ('https://crate.io/docs/clients/jdbc/en/latest/', None),
-    'crate-npgsql': ('https://crate.io/docs/clients/npgsql/en/latest/', None),
-    'crate-dbal': ('https://crate.io/docs/clients/dbal/en/latest/', None),
-    'crate-pdo': ('https://crate.io/docs/clients/pdo/en/latest/', None),
-    'crate-python': ('https://crate.io/docs/clients/python/en/latest/', None),
+    'crate-jdbc': ('https://crate.io/docs/jdbc/en/latest/', None),
+    'crate-npgsql': ('https://crate.io/docs/npgsql/en/latest/', None),
+    'crate-dbal': ('https://crate.io/docs/dbal/en/latest/', None),
+    'crate-pdo': ('https://crate.io/docs/pdo/en/latest/', None),
+    'crate-python': ('https://crate.io/docs/python/en/latest/', None),
 
     # CrateDB Cloud
     'cloud-reference': ('https://crate.io/docs/cloud/reference/en/latest/', None),
