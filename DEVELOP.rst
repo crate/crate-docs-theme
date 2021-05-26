@@ -137,7 +137,7 @@ Build the package::
 **TIP**
   If you encounter a Ruby error when running `make`, it is likely because you
   have the `yarn gem`_ installed and its executable appears first your
-  ``PATH``. To fix this issue, uninstall the yarn gem, or reconfigure your
+  ``PATH``. To fix this issue, uninstall the yarn gem or reconfigure your
   ``PATH``.
 
 Upload the package to `PyPI`_::
