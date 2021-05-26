@@ -18,6 +18,7 @@ Unreleased
 - Add extension "sphinxcontrib.plantuml"
 - Add extension "sphinxext.opengraph"
 - Add "sphinx-copybutton" extension
+- Use Pygments style "material" for code highlighting
 
 
 2021/03/18 0.14.0
