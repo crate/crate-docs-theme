@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2021/05/26 0.15.0
+-----------------
+
 - Minor CSS fixup for glossary link
 - Upgrade to crate-docs 2.0.0
 - Permit installation on Sphinx 4
@@ -19,6 +23,7 @@ Unreleased
 - Add extension "sphinxext.opengraph"
 - Add "sphinx-copybutton" extension
 - Use Pygments style "material" for code highlighting
+- Add `doing_docs` config module (hidden menu item)
 
 
 2021/03/18 0.14.0
