@@ -8,7 +8,7 @@ Introduction
 
 To make changes to this theme, follow this process:
 
-1. `Make changes`_
+1. `Making changes to the theme`_
 2. `Prepare a release`_
 3. `Upload to PyPI`_
 4. `Rebuild all Crate docs`_
