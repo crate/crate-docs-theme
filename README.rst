@@ -21,6 +21,10 @@ Prerequisites
 The documentation can include UML diagrams which will be rendered using
 `sphinxcontrib-plantuml`_. In order to satisfy its requirements, run::
 
+    # On Linux
+    apt-get install plantuml
+
+    # On macOS
     brew install plantuml
 
 .. _sphinxcontrib-plantuml: https://pypi.org/project/sphinxcontrib-plantuml/
