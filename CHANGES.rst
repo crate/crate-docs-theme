@@ -6,6 +6,9 @@ CHANGES
 Unreleased
 ----------
 
+- Improve sphinx-copybutton: Also handle ``PS>`` prompt for Powershell
+
+
 2021/05/27 0.15.1
 -----------------
 
