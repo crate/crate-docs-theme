@@ -8,6 +8,7 @@ Unreleased
 
 - Fix some client docs intersphinx URLs
 - Adjust style of highlighted codeblocks: Border, border radius and shadow
+- Improve OpenGraph `og:url` computation
 
 
 2021/05/26 0.15.0
