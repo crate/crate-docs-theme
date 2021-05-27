@@ -10,6 +10,7 @@ Unreleased
 - Adjust style of highlighted codeblocks: Border, border radius and shadow
 - Improve OpenGraph `og:url` computation
 - Fix ``Uncaught TypeError: $.cookie is not a function``
+- Fix version dropdown by re-adding Bootstrap v4.5.3
 
 
 2021/05/26 0.15.0

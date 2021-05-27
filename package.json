@@ -1,10 +1,12 @@
 {
   "devDependencies": {
+    "bootstrap": "4.5.3",
     "css-loader": "^5.2.1",
     "expose-loader": "^2.0.0",
     "jquery": "^3.6.0",
     "jquery.cookie": "^1.4.1",
     "normalize.css": "^8.0.1",
+    "popper.js": "^1.16.1",
     "sticky-sidebar": "^3.3.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.31.2",
