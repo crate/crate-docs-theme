@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Switch sphinx-copybutton cursor to pointer
+- Improve sphinx-copybutton: Enable copying empty lines
 
 
 2021/06/07 0.15.3
