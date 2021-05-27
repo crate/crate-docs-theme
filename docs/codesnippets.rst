@@ -75,3 +75,22 @@ Terminal commands
 .. code-block:: sh
 
     sh$ csvsql --db crate://localhost:4200 --insert /tmp/dump.csv
+
+
+Code blocks
+===========
+
+With prompts and empty lines
+----------------------------
+
+This snippet can be used to verify that ``sphinx-copybutton`` works
+appropriately by also honoring empty lines.
+
+.. code-block:: python
+
+    >>> from sqlalchemy.ext import declarative
+    >>> from crate.client.sqlalchemy import types
+    >>> from uuid import uuid4
+
+    >>> def gen_key():
+    ...     return str(uuid4())

@@ -62,7 +62,7 @@ setup(
         "sphinxcontrib-plantuml==0.21",
         "sphinx_sitemap==2.2.0",
         "sphinxext.opengraph==0.4.1",
-        "sphinx-copybutton==0.3.1",
+        "sphinx-copybutton>=0.3.1,<1",
     ],
     python_requires=">=3.7",
 )
