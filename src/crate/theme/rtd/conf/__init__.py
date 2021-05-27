@@ -111,7 +111,7 @@ ogp_type = "website"
 
 # Configure Sphinx-copybutton
 copybutton_remove_prompts = True
-copybutton_prompt_text = r">>> |\.\.\. |\$ |sh\$ |cr> |mysql> |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_text = r">>> |\.\.\. |\$ |sh\$ |PS> |cr> |mysql> |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
 
 # Configure linkchecker
