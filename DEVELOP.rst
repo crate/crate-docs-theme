@@ -101,13 +101,13 @@ To create a new release from the ``master`` branch:
   - Please separate out the changes into sections where it makes sense. Consult
     previous releases for an idea of how to do this.
 
-- Update ``__version__`` in ``src/crate/theme/rtd/__init__.py``
+- Update ``VERSION`` in ``src/crate/theme/rtd/__init__.py``
 
 - Commit your changes with a message like "Prepare release x.y.z"
 
 - Push to ``origin``
 
-- Run ``./devstools/create_tag.sh``
+- Run ``./devtools/create_tag.sh``
 
 - Visit the `releases page`_ and select the version you just released
 
