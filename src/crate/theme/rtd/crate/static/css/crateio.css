@@ -57,8 +57,8 @@ h1 {
 }
 
 h2 {
-  margin-top: 0px;
-  margin-bottom: 16px;
+  margin-top: 30px;
+  margin-bottom: 15px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -66,8 +66,8 @@ h2 {
 }
 
 h3 {
-  margin-top: 0px;
-  margin-bottom: 16px;
+  margin-top: 36px;
+  margin-bottom: 12px;
   color: #000;
   font-size: 24px;
   line-height: 30px;
@@ -76,8 +76,8 @@ h3 {
 }
 
 h4 {
-  margin-top: 0px;
-  margin-bottom: 16px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   color: #b8b8b8;
   font-size: 20px;
   line-height: 26px;
@@ -85,8 +85,8 @@ h4 {
 }
 
 h5 {
-  margin-top: 0px;
-  margin-bottom: 16px;
+  margin-top: 24px;
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;

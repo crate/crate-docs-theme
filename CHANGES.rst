@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Improve sphinx-copybutton: Also handle ``PS>`` prompt for Powershell
+- Improve top and bottom margins for headings
 
 
 2021/05/27 0.15.1
