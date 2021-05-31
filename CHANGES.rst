@@ -6,6 +6,7 @@ CHANGES
 Unreleased
 ----------
 
+- added ``|striptags`` to the Segment titles for proper sanitizing
 
 2021/05/28 0.15.2
 -----------------
