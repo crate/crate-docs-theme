@@ -85,9 +85,9 @@ Looking for more help?
     :alt: Read the Docs status
     :target: https://readthedocs.org/projects/crate-docs-theme/
 
-.. |build| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmaster%2Fdocs%2Fbuild.json
+.. |build| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcrate-docs-theme%2Fmain%2Fdocs%2Fbuild.json
     :alt: crate-docs version
-    :target: https://github.com/crate/crate-docs-theme/blob/master/docs/build.json
+    :target: https://github.com/crate/crate-docs-theme/blob/main/docs/build.json
 
 .. |pypi| image:: https://badge.fury.io/py/crate-docs-theme.svg
     :alt: PyPI version
