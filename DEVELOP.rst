@@ -61,7 +61,7 @@ what you changed. (Be sure to add your change items to the *Unreleased*
 section.)
 
 Once an appropriate reviewer has approved the pull request, merge your
-changes to the ``master`` branch.
+changes to the ``main`` branch.
 
 A project admin should be asked to complete the remaining steps.
 
@@ -90,7 +90,7 @@ Release
 Prepare a release
 -----------------
 
-To create a new release from the ``master`` branch:
+To create a new release from the ``main`` branch:
 
 - Add a new version section to the ``CHANGES.txt`` file
 
@@ -238,7 +238,7 @@ To make changes to the RTD configuration (e.g., to activate or deactivate a
 release version), please contact an admin.
 
 
-.. _Makefile: https://github.com/crate/crate-docs-theme/blob/master/Makefile
+.. _Makefile: https://github.com/crate/crate-docs-theme/blob/main/Makefile
 .. _PyPI: https://pypi.python.org/pypi
 .. _Read the Docs: http://readthedocs.org
 .. _rebuilding the docs: https://github.com/crate/distribute/blob/master/REBUILD_DOCS.rst
