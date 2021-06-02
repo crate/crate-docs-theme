@@ -6,7 +6,13 @@ CHANGES
 Unreleased
 ----------
 
-- added ``|striptags`` to the Segment titles for proper sanitizing
+
+2021/06/07 0.15.3
+-----------------
+
+- Add ``|striptags`` to the Segment titles for proper sanitizing
+- Improve version pinning
+
 
 2021/05/28 0.15.2
 -----------------
