@@ -120,6 +120,7 @@ linkcheck_ignore = [
     "https://www.iso.org/obp/ui/.*"
 ]
 linkcheck_retries = 3
+linkcheck_timeout = 15
 
 def setup(app):
     # Force the canonical URL in multiple ways
