@@ -13,6 +13,7 @@ a.copybtn {
   height: 2em;
   top: .5em;
   opacity: .6;
+  cursor: pointer;
 }
 
 /**
