@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Switch sphinx-copybutton cursor to pointer
+
 
 2021/06/07 0.15.3
 -----------------
