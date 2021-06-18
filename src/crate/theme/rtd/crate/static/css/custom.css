@@ -16,6 +16,11 @@ a.copybtn {
   cursor: pointer;
 }
 
+.highlight .c1,
+.highlight .go {
+    color: #B7C6CD;
+}
+
 /**
 * Bootstrap components (removed bootstrap)
 */
