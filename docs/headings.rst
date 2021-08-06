@@ -2,6 +2,7 @@
 All levels of headings
 ======================
 
+
 .. _top-level-heading:
 
 Top-level heading
@@ -40,3 +41,11 @@ Fifth-level heading
 ...................
 
 This is the deepest heading level we support.
+
+
+.. _sixth-level-heading:
+
+Sixth-level heading
+```````````````````
+
+This is an even deeper heading level for corner cases.
