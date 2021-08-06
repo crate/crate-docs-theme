@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Improve contrast of highlighted code examples
+- Harmonize heading styles
 
 2021/06/18 0.15.4
 -----------------
