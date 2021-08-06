@@ -1426,7 +1426,7 @@ div.admonition ul.open p {
  */
 
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6, h7 {
     color: #000;
     font-weight: bold;
 }
@@ -1471,4 +1471,11 @@ h6 {
     line-height: 22px;    /* round(    this heading font-size * 1.2) */
     margin-top: 18px;     /*           this heading font-size        */
     margin-bottom: 9px;   /* round(    this heading font-size * 0.5) */
+}
+
+h7 {
+  font-size: 16px;      /* round(previous heading font-size * 0.9) */
+  line-height: 20px;    /* round(    this heading font-size * 1.2) */
+  margin-top: 16px;     /*           this heading font-size        */
+  margin-bottom: 8px;   /* round(    this heading font-size * 0.5) */
 }
