@@ -7,6 +7,13 @@ Unreleased
 ----------
 
 
+2021/08/26 0.16.1
+-----------------
+
+- Fix "align-left" and "align-right" directives: Don't use bold text on them.
+- Fix sphinx-copybutton appearance.
+
+
 2021/08/06 0.16.0
 -----------------
 
