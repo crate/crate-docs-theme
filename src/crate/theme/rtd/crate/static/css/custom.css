@@ -16,6 +16,11 @@ a.copybtn {
   cursor: pointer;
 }
 
+/* Make copy button image display on Firefox */
+button.copybtn img {
+  margin: 0 !important;
+}
+
 .highlight .c1,
 .highlight .go {
     color: #B7C6CD;
