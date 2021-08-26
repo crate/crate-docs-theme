@@ -558,8 +558,11 @@ pre code {
   background-color: #e9fbff;
 }
 
+.align-left {
+  text-align: left !important;
+}
 .align-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .link-blue {
@@ -1161,10 +1164,6 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
   display: none;
 }
 
-.align-left {
-  text-align: left !important;
-  font-weight: bold !important;
-}
   .pricing-table {
    width: 100%;
    margin-top: 35px;
@@ -1180,7 +1179,6 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 
 }
 .header-row td { background-color: #55d4f5 !important; }
-.align-left { padding-left: 12px !important; font-weight: bold; font-size: 15px !important; }
 
 .text-green {
   color: #44e3a6;
