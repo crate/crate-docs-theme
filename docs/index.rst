@@ -43,6 +43,7 @@ How to improve this documentation:
     headings
     admonitions
     lists
+    tables
     links
     images
     diagrams
