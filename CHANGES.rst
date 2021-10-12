@@ -7,6 +7,13 @@ Unreleased
 ----------
 
 
+2021/10/12 0.17.0
+-----------------
+
+- Updated fallback header and footer navi
+- Included a higher res ERDF image
+
+
 2021/08/26 0.16.1
 -----------------
 
