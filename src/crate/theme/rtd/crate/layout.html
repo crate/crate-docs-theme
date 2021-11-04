@@ -190,6 +190,13 @@
   </script>
   {% endif %}
 
+  {% if theme_tracking_hubspot_id %}
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/{{ theme_tracking_hubspot_id }}.js"></script>
+  <!-- End of HubSpot Embed Code -->
+  {% endif %}
+
+
   <!-- GitHub feedback section -->
   <script>
     var feedbackLoaded = false;
