@@ -57,6 +57,7 @@ html_theme_options = {
     "canonical_url": "https://crate.io/",
     # segment analytics configuration
     "tracking_segment_id": environ.get("TRACKING_SEGMENT_ID", ""),
+    "tracking_hubspot_id": environ.get("TRACKING_HUBSPOT_ID", ""),
     "tracking_project": "",
     # Can be used the query string of a resource URL for HTTP cache busting
     "ver": theme.get_version(),
