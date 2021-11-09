@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2021/11/09 0.18.0
+-----------------
+
 - Updated/added ESI links/css for navi-header/footer to include HubSpot pages
 - Added ``theme_tracking_hubspot_id`` and ``TRACKING_HUBSPOT_ID`` to 
   ``init.py`` and ``theme.conf``
