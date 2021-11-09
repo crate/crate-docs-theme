@@ -33,6 +33,7 @@ ACTIVATE := $(ENV_BIN)/activate
 PYTHON   := python3
 PIP      := $(ENV_BIN)/pip3
 TWINE    := $(ENV_BIN)/twine
+NODEENV  := $(ENV_BIN)/nodeenv
 DIST_DIR := .dist
 PYPIRC   := ~/.pypirc
 
@@ -66,10 +67,17 @@ build: $(TWINE)
 	. $(ACTIVATE) && \
 	    $(TWINE) check $(DIST_DIR)/*
 
+.PHONY: nodejs-lts
+nodejs-lts:
+	$(PIP) install nodeenv
+	$(NODEENV) --python-virtualenv --node=14.18.1
+
 .PHONY: bundle-assets
-bundle-assets:
-	yarn install
-	npx webpack --mode=production
+bundle-assets: nodejs-lts
+	. $(ACTIVATE) && \
+		printf "Node.js version: "; node --version && \
+		yarn install && \
+		npx webpack --mode=production
 
 .PHONY: upload
 upload: $(TWINE)
