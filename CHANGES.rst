@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+- Updated logo, favicon, icons, fonts and colors for design refresh
+- Added promo header (``notif-include``) in ``navbar.html``
+- Readded newsletter in ``footer.html`` placeholder for testing
+
 
 2021/11/09 0.18.0
 -----------------

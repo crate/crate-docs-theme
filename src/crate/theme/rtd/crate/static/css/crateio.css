@@ -49,10 +49,10 @@ body {
 h1 {
   margin-top: 0px;
   margin-bottom: 16px;
-  font-family: 'Blender Pro', sans-serif;
-  font-size: 48px;
-  line-height: 44px;
-  font-weight: 700;
+  font-family: Arial, 'Blender Pro', sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -61,7 +61,7 @@ h2 {
   margin-bottom: 15px;
   font-size: 30px;
   line-height: 36px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0px;
 }
 
@@ -71,7 +71,7 @@ h3 {
   color: #000;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0px;
 }
 
@@ -89,7 +89,7 @@ h5 {
   margin-bottom: 8px;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0px;
 }
 
@@ -99,13 +99,13 @@ p {
 }
 
 a {
-  color: #00a6d1;
+  color: #009DC7;
   text-decoration: none;
 }
 
 a:hover {
   opacity: 0.7;
-  color: #55d4f5;
+  color: #009DC7;
 }
 
 ul {
@@ -254,7 +254,7 @@ header .brand {
   margin-bottom: 0px;
   padding-top: 64px;
   padding-bottom: 64px;
-  background-color: #55d4f5;
+  background-color: #009DC7;
 }
 
 .section.bg-grey {
@@ -280,7 +280,7 @@ header .brand {
 }
 
 .section.bar.bg-blue {
-  background-color: #55d4f5;
+  background-color: #009DC7;
 }
 
 .section.narrow {
@@ -304,28 +304,28 @@ header .brand {
   padding: 8px 16px;
   clear: right;
   border: 2px solid transparent;
-  background-color: #55d4f5;
+  background-color: #009DC7;
   color: #fff;
   text-align: center;
 }
 
 .button:hover {
   border-style: solid;
-  border-color: #55d4f5;
+  border-color: #009DC7;
   background-color: #fff;
   opacity: 1;
-  color: #1cc8f3;
+  color: #009DC7;
 }
 
 .button.bordered-blue {
   margin-top: 8px;
-  border: 2px solid #55d4f5;
+  border: 2px solid #009DC7;
   background-color: #fff;
-  color: #1cc8f3;
+  color: #009DC7;
 }
 
 .button.bordered-blue:hover {
-  background-color: #55d4f5;
+  background-color: #009DC7;
   opacity: 1;
   color: #fff;
 }
@@ -352,7 +352,7 @@ header .brand {
 }
 
 .button.small-bold-upper {
-  background-color: #55d4f5;
+  background-color: #009DC7;
   color: #000;
   font-size: 14px;
   font-weight: 700;
@@ -360,7 +360,7 @@ header .brand {
 }
 
 .button.small-bold-upper:hover {
-  background-color: #1cc8f3;
+  background-color: #009DC7;
 }
 
 .button.big-button {
@@ -371,14 +371,14 @@ header .brand {
 .button.button-deep {
   width: 100%;
   margin-top: 0px;
-  border-color: #55d4f5 #fff #55d4f5 #55d4f5;
+  border-color: #009DC7 #fff #009DC7 #009DC7;
   background-color: #fff;
-  color: #1cc8f3;
+  color: #009DC7;
 }
 
 .button.button-deep:hover {
   border-color: #fff;
-  background-color: #55d4f5;
+  background-color: #009DC7;
   color: #fff;
 }
 
@@ -406,7 +406,7 @@ header .brand {
 .text-link {
   display: block;
   margin-top: 16px;
-  color: #00a6d1;
+  color: #009DC7;
 }
 
 .teaser-img {
@@ -500,7 +500,7 @@ header .brand {
 }
 
 .link-inline {
-  color: #00a6d1;
+  color: #009DC7;
 }
 
 code {
@@ -554,7 +554,7 @@ pre code {
 .note {
   margin-bottom: 16px;
   padding: 16px;
-  border-left: 4px solid #55d4f5;
+  border-left: 4px solid #009DC7;
   background-color: #e9fbff;
 }
 
@@ -579,7 +579,7 @@ pre code {
 }
 
 .font-blender {
-  font-family: 'Blender Pro', sans-serif;
+  font-family: Arial, 'Blender Pro', sans-serif;
   font-size: 28px;
   text-transform: uppercase;
 }
@@ -596,7 +596,7 @@ pre code {
 }
 
 .small-blue {
-  color: #00a6d1;
+  color: #009DC7;
   font-size: 12px;
   line-height: 16px;
 }
@@ -664,7 +664,7 @@ pre code {
 }
 
 .font-bold {
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0px;
 }
 
@@ -712,7 +712,7 @@ a.learn-more-link, .wrapper-teaser-img p {
 }
 
 .text-blue {
-  color: #55d4f5;
+  color: #009DC7;
 }
 
 .image.search {
@@ -797,7 +797,7 @@ a.learn-more-link, .wrapper-teaser-img p {
 }
 
 .bg-blue {
-  background-color: #55d4f5;
+  background-color: #009DC7;
 }
 
 .cta {
@@ -810,7 +810,7 @@ a.learn-more-link, .wrapper-teaser-img p {
 }
 
 .cta.border-blue {
-  border: 2px solid #55d4f5;
+  border: 2px solid #009DC7;
 }
 
 .bg-white {
@@ -966,7 +966,7 @@ a.learn-more-link, .wrapper-teaser-img p {
   margin-left: 16px;
   padding: 16px;
   float: right;
-  background-color: #55d4f5;
+  background-color: #009DC7;
   font-size: 14px;
 }
 
@@ -1178,13 +1178,13 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
 
 
 }
-.header-row td { background-color: #55d4f5 !important; }
+.header-row td { background-color: #009DC7 !important; }
 
 .text-green {
   color: #44e3a6;
 }
 .text-blue {
-  color: #55d4f5;
+  color: #009DC7;
 }
 .text-darkblue {
   color: #115097;
@@ -1232,7 +1232,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
   margin-bottom: 8px;
 }
 .option-text-link {
-  color: #55d4f5;
+  color: #009DC7;
 }
 
 .option-text-link.text-link-options {
@@ -1248,46 +1248,46 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
   opacity: 1;
 }
 
-
 .wrapper-option-text {
   padding-left: 72px;
 }
 
-
 .download-half {
-    padding-right: 25px;
-    }
+  padding-right: 25px;
+}
 
 .footer-listitem-new {
-    display: block;
-    }
+  display: block;
+}
 
 .footer-listitem-new a {
-    color: #000;
-    }
+  color: #000;
+}
 
 .vertical-menu {
-    list-style-type: none;
-    padding-left: 0;
-    }
+  list-style-type: none;
+  padding-left: 0;
+}
 
 .menu-Label {
-    font-weight: bold;
-    }
+  font-weight: 600;
+}
 
 
 @media (max-width: 991px) {
 
-    .mobileHorizontalMenu {
-        margin-top: 10px;
-        }
-    .mobileHorizontalMenu li {
-        display: inline-block !important;
+  .mobileHorizontalMenu {
+    margin-top: 10px;
+  }
 
-        }
-    .mobileAlign {
-        text-align: center;
-        }
+  .mobileHorizontalMenu li {
+    display: inline-block !important;
+  }
+
+  .mobileAlign {
+    text-align: center;
+  }
+
   .wrapper-search {
     margin-left: 6px;
   }
@@ -1323,12 +1323,12 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
     width: 100%;
     margin-top: 32px;
     margin-bottom: 32px;
-    border: 2px solid #55d4f5;
+    border: 2px solid #009DC7;
     background-color: #fff;
-    color: #1cc8f3;
+    color: #009DC7;
   }
   .button.button-navleft:hover {
-    background-color: #55d4f5;
+    background-color: #009DC7;
     color: #fff;
   }
   .textfield {

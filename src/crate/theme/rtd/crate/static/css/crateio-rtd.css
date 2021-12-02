@@ -9,7 +9,7 @@
 }
 
 a.current, a.current-active {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .highlight {
@@ -53,7 +53,7 @@ div.admonition ul {
 div.note {
     background: url(../images/admonition/icon-docs-note.svg) no-repeat;
     background-color: #eefafe;
-    border-left: 4px solid #55d4f5;
+    border-left: 4px solid #009DC7;
 }
 
 div.seealso {
@@ -65,7 +65,7 @@ div.seealso {
 div.tip {
     background: url(../images/admonition/icon-docs-tip.svg) no-repeat;
     background-color: #eefafe;
-    border-left: 4px solid #55d4f5;
+    border-left: 4px solid #009DC7;
 }
 
 div.caution {
@@ -93,7 +93,7 @@ div.danger {
 .warning .admonition-title,
 .danger .admonition-title {
     padding: 10px 0 0 0;
-    font-weight: bold;
+    font-weight: 600;
     color: #000000;
     text-transform: capitalize
 }
@@ -126,7 +126,7 @@ div.danger {
 .bs-docs-sidenav .toctree li.active > a,
 .bs-docs-sidenav .toctree li.current > a code,
 .bs-docs-sidenav .toctree li.active > a code {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .bs-docs-sidenav ul {
