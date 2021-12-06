@@ -6,18 +6,23 @@ CHANGES
 Unreleased
 ----------
 
+
+2021/12/06 0.19.0
+-----------------
+
 - Updated logo, favicon, icons, fonts and colors for design refresh
 - Added promo header (``notif-include``) in ``navbar.html``
-- Readded newsletter in ``footer.html`` placeholder for testing
+- Re-added newsletter in ``footer.html`` placeholder for testing
 
 
 2021/11/09 0.18.0
 -----------------
 
 - Updated/added ESI links/css for navi-header/footer to include HubSpot pages
-- Added ``theme_tracking_hubspot_id`` and ``TRACKING_HUBSPOT_ID`` to 
+- Added ``theme_tracking_hubspot_id`` and ``TRACKING_HUBSPOT_ID`` to
   ``init.py`` and ``theme.conf``
 - Footer now includes GitHub stars
+
 
 2021/10/12 0.17.0
 -----------------
