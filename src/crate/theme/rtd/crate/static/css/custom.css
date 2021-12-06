@@ -1777,12 +1777,23 @@ b, strong {
 
 
 @media all and (max-width: 991px) {
+
+  .notif-bar-enabled header.header-nav {
+      margin-top: 0 !important;
+  }
+
+  #hs_cos_wrapper_Header_Notif_Bar .notification-banner {
+    width: 100%;
+    position: fixed;
+    top: unset;
+    bottom: 0;
+  }
+
   .notif-bar-enabled {
     margin-bottom: 180px;
   }
 
-  #hs_cos_wrapper_Header_Notif_Bar {
-      position: fixed;
+  .notification-banner.new {
       top: unset;
       bottom: 0;
   }
