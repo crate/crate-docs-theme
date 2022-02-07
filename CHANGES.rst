@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+- Added ``google_search_api``, ``google_search_cx`` and the corresponding
+to environment variables to ``init.py`` and ``theme.conf`` to improve search
+- Added HubSpot newsletter footer include
+
 2021/12/07 0.19.1
 -----------------
 
