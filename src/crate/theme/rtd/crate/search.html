@@ -11,9 +11,7 @@
 {% set title = _('Search') %}
 
 {% block extra_head %}
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
-  </script>
+  <script type="text/javascript" src="{{ pathto('_static/js/search.js', 1) }}?ver={{ theme_ver }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -33,30 +31,12 @@
     containing fewer words won't appear in the result list.{% endtrans %}
   </p>
 
-  <form class="form-search" action="" method="get">
-    <input type="text" name="q" class="input-medium search-query" placeholder="Search documentation...">
-    <button type="submit" class="btn btn-primary">{{ _('search') }}</button>
+  <form onsubmit="return search()" class="form-search" action="" method="">
+    <input id="cr-search-query" type="text" name="q" class="input-medium search-query" placeholder="Enter keywords...">
+    <button type="submit" class="btn btn-primary">{{ _('Search') }}</button>
     <!-- <span id="search-progress" style="padding-left: 10px"></span> -->
   </form>
 
-  {% if search_performed %}
-    <h2>{{ _('Search Results') }}</h2>
-    {% if not search_results %}
-      <p>{{ _('Your search did not match any results.') }}</p>
-    {% endif %}
-  {% endif %}
-  <div id="search-results">
-  {% if search_results %}
-    <ul>
-    {% for href, caption, context in search_results %}
-      <li class="card">
-        <div class="card-block">
-          <h3 class="card-title"><a href="{{ pathto(item.href) }}">{{ caption }}</a></h3>
-          <div class="context">{{ context|e }}</div>
-        </div>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-  </div>
+  <ul id="cr-search-results" class="search"></ul>
+
 {% endblock %}
