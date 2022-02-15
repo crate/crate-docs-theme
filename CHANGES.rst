@@ -6,7 +6,7 @@ CHANGES
 Unreleased
 ----------
 
-- Added ``google_search_api``, ``google_search_cx`` and the corresponding
+- Added ``google_search_api_key``, ``google_search_cx_id`` and the corresponding
 to environment variables to ``init.py`` and ``theme.conf`` to improve search
 - Added HubSpot newsletter footer include
 
