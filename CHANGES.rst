@@ -6,9 +6,14 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/02/15 0.20.0
+-----------------
+
 - Added ``google_search_api_key``, ``google_search_cx_id`` and the corresponding
 to environment variables to ``init.py`` and ``theme.conf`` to improve search
 - Added HubSpot newsletter footer include
+
 
 2021/12/07 0.19.1
 -----------------
