@@ -15,8 +15,8 @@ $(document).ready(function () {
 
 // google search
 function search(firstLaunch) {
-  const apikey = "{{ theme_google_search_api }}"; // your api key
-  const cx = "{{ theme_google_search_cx }}"; // your search engine id
+  const apikey = "{{ theme_google_search_api_key }}"; // your api key
+  const cx = "{{ theme_google_search_cx_id }}"; // your search engine id
 
   let firstLaunchTrigger = firstLaunch;
   let queryString = window.location.search;
