@@ -60,8 +60,8 @@ html_theme_options = {
     "tracking_hubspot_id": environ.get("TRACKING_HUBSPOT_ID", ""),
     "tracking_project": "",
     # Google custom search engine
-    "google_search_api": environ.get("GOOGLE_SEARCH_API_KEY", ""),
-    "google_search_cx": environ.get("GOOGLE_SEARCH_CX_ID", ""),
+    "google_search_api_key": environ.get("GOOGLE_SEARCH_API_KEY", ""),
+    "google_search_cx_id": environ.get("GOOGLE_SEARCH_CX_ID", ""),
 
     # Can be used the query string of a resource URL for HTTP cache busting
     "ver": theme.get_version(),
