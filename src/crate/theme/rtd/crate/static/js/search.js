@@ -15,8 +15,6 @@ $(document).ready(function () {
 
 // google search
 function search(firstLaunch) {
-  const apikey = "{{ theme_google_search_api_key }}"; // your api key
-  const cx = "{{ theme_google_search_cx_id }}"; // your search engine id
 
   let firstLaunchTrigger = firstLaunch;
   let queryString = window.location.search;
@@ -34,7 +32,7 @@ function search(firstLaunch) {
 
   /* fetch the following URL that includes apikey, cx and the value of input */
   fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${apikey}&cx=${cx}&q=${input}`
+    `https://www.googleapis.com/customsearch/v1?key=${google_search_api_key}&cx=${google_search_cx_id}&q=${input}`
   )
     .then((response) => response.text())
     .then((text) => {
