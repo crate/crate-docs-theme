@@ -15,7 +15,6 @@
     const google_search_api_key = "{{ theme_google_search_api_key }}";
     const google_search_cx_id = "{{ theme_google_search_cx_id }}";
   </script>
-  <script type="text/javascript" src="{{ pathto('_static/js/search.js', 1) }}?ver={{ theme_ver }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -35,12 +34,14 @@
     containing fewer words won't appear in the result list.{% endtrans %}
   </p>
 
-  <form onsubmit="return search()" class="form-search" action="" method="">
-    <input id="cr-search-query" type="text" name="q" class="input-medium search-query" placeholder="Enter keywords...">
+  <form action="search.html" id="cr-search-box" class="form-search" action="" method="">
+    <input id="cr-search-query" class="input-medium search-query" name="q" type="text" placeholder="Enter keywords..."> 
     <button type="submit" class="btn btn-primary">{{ _('Search') }}</button>
-    <!-- <span id="search-progress" style="padding-left: 10px"></span> -->
   </form>
 
-  <ul id="cr-search-results" class="search"></ul>
+  <div id="cr-search-result-info"></div>
 
+  <hr />
+
+  <ul id="cr-search-results" class="search"></ul>
 {% endblock %}
