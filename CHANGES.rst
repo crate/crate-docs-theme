@@ -6,6 +6,9 @@ CHANGES
 Unreleased
 ----------
 
+- New header (hides when scrolling down, comes back when scrolling up)
+- Revamped search (added pagination, number of results, source)
+
 
 2022/02/15 0.20.1
 -----------------

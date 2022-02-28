@@ -339,4 +339,9 @@
         });
     }
   </script>
+
+  {% if theme_google_search_api_key %}
+  <script type="text/javascript" src="{{ pathto('_static/js/search.js', 1) }}?ver={{ theme_ver }}"></script>
+  {% endif %}
+  
 {%- endblock %}

@@ -366,6 +366,19 @@ a:focus {
 
 header.header-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  position: fixed;
+  z-index: 901;
+  width: 100%;
+  transition: all 0.3s ease;
+  will-change: transform;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+
+.notif-bar-enabled #sidebar.is-affixed aside {
+  margin-top: 60px !important;
 }
 
 aside .nav {
@@ -644,18 +657,6 @@ body .mm-menu .navbar-nav {
     display: block;
   }
 
-  body {
-    padding-top: 56px;
-  }
-
-  header.header-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  }
-
   div.section {
     padding-left: 0;
     padding-right: 0;
@@ -920,6 +921,26 @@ ul#cr-search-results {
   margin-bottom: 20px;
   background: none;
   padding: 0;
+}
+
+.cr-search-url {
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+.cr-search-pagination {
+  display: flex;
+  margin-top: 20px;
+}
+
+.cr-search-page {
+  padding-right: 10px;
+}
+
+.cr-search-page a {
+}
+.cr-search-current-page a {
+  color: #000;
 }
 
 /**
@@ -1904,6 +1925,10 @@ strong {
 @media all and (max-width: 991px) {
   .notif-bar-enabled header.header-nav {
     margin-top: 0 !important;
+  }
+
+  .notif-bar-enabled .w-canvas {
+    padding-top: 61px !important;
   }
 
   #hs_cos_wrapper_Header_Notif_Bar .notification-banner {
