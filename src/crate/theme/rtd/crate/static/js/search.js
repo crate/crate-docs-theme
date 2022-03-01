@@ -73,22 +73,22 @@ var query = urlParams.get("q");
 if (query && query.length != 0) {
   var searchBox = document.getElementById("cr-search-query");
   searchBox.value = query;
+
+  var start = document.URL.substr(document.URL.indexOf("start=") + 6, 2);
+  if (start === "1&" || document.URL.indexOf("start=") === -1) start = 1;
+
+  //Load the script src dynamically to load script with query to call.
+  // DOM: Create the script element
+  var jsElm = document.createElement("script");
+  // set the type attribute
+  jsElm.type = "application/javascript";
+  // make the script element load file
+  jsElm.src =
+    `https://www.googleapis.com/customsearch/v1/siterestrict?key=${google_search_api_key}&cx=${google_search_cx_id}&start=` +
+    start +
+    "&q=" +
+    query +
+    "&callback=hndlr";
+  // finally insert the element to the body element in order to load the script
+  document.body.appendChild(jsElm);
 }
-
-var start = document.URL.substr(document.URL.indexOf("start=") + 6, 2);
-if (start === "1&" || document.URL.indexOf("start=") === -1) start = 1;
-
-//Load the script src dynamically to load script with query to call.
-// DOM: Create the script element
-var jsElm = document.createElement("script");
-// set the type attribute
-jsElm.type = "application/javascript";
-// make the script element load file
-jsElm.src =
-  `https://www.googleapis.com/customsearch/v1/siterestrict?key=${google_search_api_key}&cx=${google_search_cx_id}&start=` +
-  start +
-  "&q=" +
-  query +
-  "&callback=hndlr";
-// finally insert the element to the body element in order to load the script
-document.body.appendChild(jsElm);

@@ -1,6 +1,10 @@
 <div role="complementary" class="bs-docs-sidebar hidden-print">
   <div class="search-link">
+    {% if pagename == "search" %}
+    <a href="search.html" class="btn btn-primary">Search</a>
+    {% else %}
     <a href="{{ pathto('search') }}" class="btn btn-primary">Search</a>
+    {% endif %}
   </div>
   <ul class="bs-docs-sidenav bs-sidenav nav" role="complementary">
 
