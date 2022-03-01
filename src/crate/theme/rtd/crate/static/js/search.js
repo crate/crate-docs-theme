@@ -85,7 +85,7 @@ var jsElm = document.createElement("script");
 jsElm.type = "application/javascript";
 // make the script element load file
 jsElm.src =
-  "https://www.googleapis.com/customsearch/v1/siterestrict?key=${google_search_api_key}&cx=${google_search_cx_id}&start=" +
+  `https://www.googleapis.com/customsearch/v1/siterestrict?key=${google_search_api_key}&cx=${google_search_cx_id}&start=` +
   start +
   "&q=" +
   query +
