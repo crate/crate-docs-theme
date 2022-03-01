@@ -7,6 +7,15 @@ Unreleased
 ----------
 
 
+2022/03/01 0.21.2
+-----------------
+
+- Search: Don't trigger search without expression
+- Search: Make navigation work even on ``search.html``
+- Search: Only load ``search.js`` when actually visiting the search page
+- Adjust background color of version chooser
+
+
 2022/03/01 0.21.1
 -----------------
 
