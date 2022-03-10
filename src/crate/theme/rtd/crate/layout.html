@@ -48,6 +48,16 @@
             {% endblock %}
           </aside>
         </div>
+        {# Admonition box for display on documentation of older releases. #}
+        {%- if current_version is defined and versions is defined and old_versions is defined %}
+        <script type="text/javascript">
+            const rtd_versioning = {
+                current_version: "{{ current_version }}",
+                versions: "{{ versions }}",
+                old_versions: "{{ old_versions }}",
+            };
+        </script>
+        {%- endif %}
         <div class="col-md-8 col-lg-9" role="main">
           <div class="wrapper-content-right">
             {%- if current_version %}

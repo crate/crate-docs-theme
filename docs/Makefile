@@ -155,6 +155,7 @@ bundle-assets:
 dev: $(CLONE_DIR)
 	@ $(MAKE) version-warn
 	@ $(MAKE) bundle-assets
+	@ touch index.rst
 	@ $(SRC_MAKE) $@
 
 .PHONY: html

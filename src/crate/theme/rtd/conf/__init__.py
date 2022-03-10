@@ -154,4 +154,73 @@ def setup(app):
             app_inited.env.config.html_context["canonical_url"] = canonical_url
             app_inited.builder.config.html_context["canonical_url"] = canonical_url
 
+    def compute_older_versions(app_inited):
+        """
+        Admonition box for display on documentation of older releases.
+
+        Compute list of older, non-current documentation versions. Store the
+        result into the `old_versions` variable of Sphinx's `html_context`,
+        right next to RTD's `current_version` and `versions`.
+
+        The list of older versions is computed heuristically by looking at all
+        numeric-looking version labels and omitting the highest version.
+
+        Then, this list will be used to conditionally display an admonition box to
+        signal to the user that she is currently viewing a documentation version
+        which does not reflect the most recent release. That will be handled within
+        the JavaScript domain.
+        """
+
+        old_versions = []
+
+        try:
+            html_context = app_inited.env.config.html_context
+
+            # Get current version and list of version labels (slugs) from
+            # `html_context` populated by readthedocs.
+            current_version = html_context["current_version"]
+            versions = [slug for slug, url in html_context["versions"]]
+
+            # Only look at numeric version labels.
+            numeric_versions = [version for version in versions if str(version).replace(".", "").isnumeric()]
+
+            # Compute list of "older" versions by omitting the highest available version.
+            if numeric_versions:
+                highest_version = versorted(numeric_versions)[-1]
+                old_versions = numeric_versions
+                old_versions.remove(highest_version)
+
+        except Exception as ex:
+            print(f"WARNING: Computing list of `old_versions failed. Reason: {ex}")
+
+        # Propagate `old_versions` variable into `html_context`.
+        app_inited.env.config.html_context["old_versions"] = old_versions
+        app_inited.builder.config.html_context["old_versions"] = old_versions
+
     app.connect("builder-inited", force_canonical_url)
+    app.connect("builder-inited", compute_older_versions)
+
+
+def versorted(versions_list):
+    """
+    Standalone implementation of `versorted`, to sort a list of software versions appropriately.
+
+    https://pypi.org/project/natsort/
+
+    References:
+    - https://zxq9.com/archives/797
+    - https://docs.python.org/3/library/functools.html#functools.cmp_to_key
+    - https://stackoverflow.com/questions/22490366/how-to-use-cmp-in-python-3/22490617#22490617
+    """
+    import functools
+
+    def ver_tuple(z):
+        return tuple([int(x) for x in z.split('.') if x.isdigit()])
+
+    def cmp(a, b):
+        return (a > b) - (a < b)
+
+    def ver_cmp(a, b):
+        return cmp(ver_tuple(a), ver_tuple(b))
+
+    return sorted(versions_list, key=functools.cmp_to_key(ver_cmp))

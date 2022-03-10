@@ -163,3 +163,38 @@
     headerSize();
   });
 })(jQuery);
+
+
+// Admonition box for display on documentation of older releases.
+$(document).ready(function () {
+
+  // Guard against non-availability of relevant information, injected from `layout.html`.
+  if (typeof(rtd_versioning) == "undefined") {
+    console.warn("Disabling `old_versions` admonitions, no `rtd_versioning` information found.");
+    return;
+  }
+
+  // Display `rtd_versioning` information.
+  console.info(`current_version: ${rtd_versioning.current_version}`);
+  console.info(`versions: ${rtd_versioning.versions}`);
+  console.info(`old_versions: ${rtd_versioning.old_versions}`);
+
+  // Only display the box on documentation pages for older releases.
+  if (!rtd_versioning.old_versions.includes(rtd_versioning.current_version)) {
+    return;
+  }
+
+  // Find page header element of content area.
+  const header = $(".wrapper-content-right").find("h1");
+
+  // Add admonition box.
+  const admonition = $(`
+    <div class="admonition caution">
+      <p class="admonition-title">Note</p>
+      You are reading the documentation for software release version ${rtd_versioning.current_version},
+      while a newer release is already available.
+      If you are using a different release, please make sure to select the corresponding documentation version.
+    </div>
+  `);
+  admonition.insertAfter(header);
+});
