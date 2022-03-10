@@ -175,9 +175,9 @@ $(document).ready(function () {
   }
 
   // Display `rtd_versioning` information.
-  console.info(`current_version: ${rtd_versioning.current_version}`);
-  console.info(`versions: ${rtd_versioning.versions}`);
-  console.info(`old_versions: ${rtd_versioning.old_versions}`);
+  console.debug(`current_version: ${rtd_versioning.current_version}`);
+  console.debug(`versions: ${rtd_versioning.versions}`);
+  console.debug(`old_versions: ${rtd_versioning.old_versions}`);
 
   // Only display the box on documentation pages for older releases.
   if (!rtd_versioning.old_versions.includes(rtd_versioning.current_version)) {
@@ -193,7 +193,6 @@ $(document).ready(function () {
       <p class="admonition-title">Note</p>
       You are reading the documentation for software release version ${rtd_versioning.current_version},
       while a newer release is already available.
-      If you are using a different release, please make sure to select the corresponding documentation version.
     </div>
   `);
   admonition.insertAfter(header);
