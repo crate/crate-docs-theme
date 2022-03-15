@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Mitigate double include of ``pygments.css``
+
 
 2022/03/01 0.21.2
 -----------------
