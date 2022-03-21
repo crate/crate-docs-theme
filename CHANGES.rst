@@ -7,6 +7,11 @@ Unreleased
 ----------
 
 - Add ``html_context`` variable to main configuration blueprint
+- Fixed mobile view on ``search.html``
+- Added new look for SQL-99 repository (brought back legacy search)
+- Changed primary font to ``Inter`` and secondary to ``Poppins``,
+  removed Blender
+- Small fix to prevent console errors when no navbar is available
 
 
 2022/03/25 0.21.4
