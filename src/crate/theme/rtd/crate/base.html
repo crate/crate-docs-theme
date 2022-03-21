@@ -167,7 +167,12 @@
 {%- endblock %}
 {%- block extra_head %} {% endblock %}
   </head>
+  {% if project == 'SQL 99' %}
+  <body class="cr-docs-sql-99">
+  {% else %}
   <body>
+  {% endif %}
+    
 {%- block header %}{% endblock %}
 
 {%- block relbar1 %}{{ relbar() }}{% endblock %}
