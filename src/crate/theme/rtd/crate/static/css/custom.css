@@ -921,7 +921,7 @@ div.sidebar {
 .form-search {
   border: 2px solid #009dc7;
   display: inline-flex;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .form-search .search-query {
@@ -973,8 +973,15 @@ ul#cr-search-results {
 
 .cr-search-page a {
 }
+
 .cr-search-current-page a {
   color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  .form-search .search-query {
+    width: 200px;
+  }
 }
 
 /**
