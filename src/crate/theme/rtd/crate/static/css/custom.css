@@ -3,6 +3,40 @@
 * ...so as to avoid breaking anything unexpectedly
 */
 
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("../fonts/Inter-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff") format("woff");
+}
+
 .w-canvas {
   margin-top: 64px;
   margin-bottom: 64px;
@@ -1145,8 +1179,6 @@ ul#cr-search-results {
 
 .cr-docs-feedback-container {
   font-size: 15px;
-  font-family: Arial, sans-serif;
-  letter-spacing: 0.1px;
   line-height: 1.5em;
   color: #000;
   margin: 0 auto 30px;
@@ -1221,7 +1253,6 @@ ul#cr-search-results {
   font-size: 24px;
   line-height: 30px;
   font-weight: 600;
-  letter-spacing: 0px;
   margin-bottom: 0;
 }
 
@@ -1663,12 +1694,10 @@ h7 {
   margin-bottom: 18px !important;
   color: #000;
   font-size: 14px !important;
-  font-family: Arial;
   text-decoration: none;
   font-weight: 600;
   font-style: normal;
   line-height: 120%;
-  letter-spacing: 0;
 }
 
 .footer-widget-content ul {
@@ -1679,7 +1708,6 @@ h7 {
 
 .footer-widget-content ul li {
   margin-bottom: 15px;
-  letter-spacing: 0.3px;
 }
 
 .footer-widget-content ul li a,
@@ -1687,7 +1715,6 @@ h7 {
 .footer__copyright span {
   color: #000;
   font-size: 14px !important;
-  font-family: Arial;
   text-decoration: none;
 }
 
@@ -1696,7 +1723,6 @@ h7 {
 .footer__copyright span {
   color: #000;
   font-size: 14px !important;
-  font-family: Arial;
   text-decoration: none;
 }
 
@@ -1865,7 +1891,6 @@ strong {
   vertical-align: middle;
   box-sizing: border-box;
   cursor: pointer;
-  letter-spacing: 0;
   text-align: center;
   text-decoration: none;
   position: relative;
@@ -2007,7 +2032,6 @@ strong {
 
 .footer-subscription p {
   font-size: 14px;
-  font-family: Poppins, Arial;
   line-height: 1.5;
   margin-bottom: 0;
 }
