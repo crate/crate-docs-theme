@@ -2137,3 +2137,195 @@ ul.search li {
     align-items: center;
   }
 }
+
+/* SQL-99 */
+.cr-docs-sql-99 #mobile-menu-toggler.w-button,
+.cr-docs-sql-99 .btn-primary,
+.cr-docs-sql-99 .btn-link a,
+.cr-docs-sql-99 .hs-button {
+  background-color: #ed8826;
+  border: 2px solid #ed8826;
+  color: #fff;
+}
+
+.cr-docs-sql-99 .btn-primary.btn-cr-sql-99 {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #009dc7;
+  font-size: 18px;
+}
+
+.cr-docs-sql-99 #mobile-menu-toggler.w-button:hover,
+.cr-docs-sql-99 .btn-primary:hover,
+.cr-docs-sql-99 .btn-link a:hover,
+.cr-docs-sql-99 .hs-button:hover {
+  color: #ed8826;
+  background-color: white;
+  border-color: #ed8826;
+}
+
+.cr-docs-sql-99 .btn-primary.btn-cr-sql-99:hover {
+  color: #fff;
+  background-color: #009dc7;
+  border-color: #fff;
+}
+
+.cr-docs-sql-99 .wrapper-content-right a,
+.cr-docs-sql-99 .footer-subscription a {
+  color: #ed8826;
+}
+
+.cr-docs-sql-99 .wrapper-content-right div.note {
+  background: url("../images/admonition/note-sql-99.svg") no-repeat;
+  background-color: #fff9e9;
+  border-left: 4px solid #ed8826;
+}
+
+.cr-sql-99-header {
+  display: flex;
+}
+
+.cr-docs-sql-99 .w-canvas {
+  margin-top: 32px;
+}
+
+.cr-sql-99-headline p {
+  font-family: Poppins, Arial;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  max-width: 355px;
+  margin-bottom: 0;
+}
+
+.cr-sql-99-headline {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.cr-sql-99-logo {
+  margin: 10px 20px;
+}
+
+.cr-sql-99-bg-color {
+  background-color: #009dc7;
+}
+
+.cr-sql-99-cta {
+  background: url("../images/bg-banner-sql99.png") no-repeat;
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  min-width: 275px;
+}
+
+.cr-sql-99-cta p a {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+}
+
+.cr-sql-99-cta p,
+.btn-cr-sql-99 {
+  z-index: 2;
+}
+
+.cr-sql-99-cta p {
+  margin-bottom: 0;
+}
+
+@media all and (max-width: 992px) {
+  .cr-sql-99-headline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cr-sql-99-logo {
+    margin: 20px 20px 10px 0;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .cr-docs-sql-99 .w-canvas {
+    margin-top: 15px;
+  }
+
+  .cr-sql-99-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cr-sql-99-cta {
+    min-height: 120px;
+  }
+
+  .cr-sql-99-headline {
+    padding: 20px;
+  }
+
+  .cr-sql-99-logo {
+    margin: 20px 20px 0px 0;
+  }
+}
+
+.cr-docs-footer-menu ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.cr-docs-footer-menu ul li a {
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+}
+
+.cr-docs-footer-menu {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.cr-docs-align-right {
+  text-align: right;
+}
+
+.cr-docs-footer-social {
+  display: inline-block;
+  position: relative;
+  padding-top: 6px;
+}
+
+.social-label {
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  left: 0;
+  top: 8px;
+  line-height: 1.5;
+  display: inline-block;
+  position: absolute;
+}
+
+.cr-docs-footer-social .cr-docs-social-icons {
+  padding-left: 90px;
+}
+
+/* external links indicator sql-99 */
+.cr-docs-sql-99 #main-content .col-md-8 [href^="http"]:not([href*="https://crate.io"]):not([href*="go.cratedb.com"]):not([href*="cdn.crate.io"]):not([href*="wpengine.com"]):not([href^="#"]):not([href^="/"]):not(.image-reference):not(.cr-docs-link):not(.internal)
+{
+  background: url(../images/icon_link_external-sql-99.svg) center left no-repeat;
+  padding-left: 20px;
+  margin-left: 2px;
+}
+
+@media all and (max-width: 992px) {
+  .text-md-center {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}

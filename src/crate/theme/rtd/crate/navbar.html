@@ -4,6 +4,16 @@
 
 <input type="checkbox" id="mobile-nav-new">
 
+{% if project == 'SQL 99' %}
+
+<header id="cr-sql-99" class="header-nav">
+  <div class="container">
+    <!-- empty -->
+  </div>
+</header>
+
+{% else %}
+
 <header id="top" class="header-nav">
   <div class="container">
     <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
@@ -75,3 +85,5 @@
     </div>
   </div>
 </header>
+
+{% endif %}

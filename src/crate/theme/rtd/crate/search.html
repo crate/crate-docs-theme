@@ -21,6 +21,13 @@
     const google_search_cx_id = "{{ theme_google_search_cx_id }}";
   </script>
   {% endif %}
+
+  {% if project == 'SQL 99' %}
+  <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
+  </script>
+  {% endif %}
+
 {% endblock %}
 
 {% block body %}
@@ -39,6 +46,36 @@
     function will automatically search for all of the words. Pages
     containing fewer words won't appear in the result list.{% endtrans %}
   </p>
+
+  {% if project == 'SQL 99' %}
+
+  <form class="form-search" action="" method="get">
+    <input type="text" name="q" class="input-medium search-query" placeholder="Search documentation...">
+    <button type="submit" class="btn btn-primary">{{ _('search') }}</button>
+    <!-- <span id="search-progress" style="padding-left: 10px"></span> -->
+  </form>
+  {% if search_performed %}
+    <h2>{{ _('Search Results') }}</h2>
+    {% if not search_results %}
+      <p>{{ _('Your search did not match any results.') }}</p>
+    {% endif %}
+  {% endif %}
+  <div id="search-results">
+  {% if search_results %}
+    <ul>
+    {% for href, caption, context in search_results %}
+      <li class="card">
+        <div class="card-block">
+          <h3 class="card-title"><a href="{{ pathto(item.href) }}">{{ caption }}</a></h3>
+          <div class="context">{{ context|e }}</div>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  </div>
+
+  {% else %}
 
   <form action="search.html" id="cr-search-box" class="form-search" action="" method="">
     <input id="cr-search-query" class="input-medium search-query" name="q" type="text" placeholder="Enter keywords..."> 

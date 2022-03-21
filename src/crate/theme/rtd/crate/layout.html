@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 
+
+  {% if project == 'SQL 99' %}
+  {% set extra_script_files = [
+    '_static/language_data.js',
+    '_static/searchtools.js',
+    ]
+  %}
+  {% else %}
   {% set extra_script_files = [
     '_static/language_data.js',
     ]
   %}
+  {% endif %}
+
 
   {% if page_source_suffix %}
   {% set suffix = page_source_suffix %}
@@ -32,6 +42,27 @@
   {% include "navbar.html" %}
 
   <div class="w-canvas">
+    {% if project == 'SQL 99' %}
+    <div class="container margin-bottom-32">
+      <div class="section cr-sql-99-bg-color" style="margin: 0px;">
+        <div class="cr-sql-99-header">
+          <div class="cr-sql-99-headline">
+            <p>The book <span style="font-weight: 600;">SQL99 Complete, Really</span> is brought to you by</p>
+            <a href="https://crate.io" title="Crate.io">
+              <img class="cr-sql-99-logo" src="{{ pathto('_static', 1) }}/images/crate-logo-white.svg" width="150" alt="Crate.io Logo White">
+            </a>
+          </div>
+
+          <div class="cr-sql-99-cta">
+            <a href="https://crate.io/lp-free-trial" target="_blank" class="btn btn-primary btn-cr-sql-99">Try CrateDB Cloud for free</a>
+            <p><a href="https://crate.io/products/cratedb/" target="_blank" class="cr-sql-99-link">Learn more about CrateDB</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+
     <div class="w-container w-hidden-main margin-bottom-32">
       <div class="section" style="margin: 0px">
         <a href="#" id="mobile-menu-toggler" class="w-button">Toggle Doc Menu</a>
@@ -69,6 +100,9 @@
             {%- endif %}
             {% block body %}{% endblock %}
           </div>
+
+          {% if project != 'SQL 99' %}
+
           {% if display_github %}
             <div class="view-on-github">
               <div id="cr-docs-feedback" class="cr-docs-feedback-container">
@@ -128,6 +162,8 @@
                 </div>
               </div>
             </div>
+          {% endif %}
+
           {% endif %}
         </div>
       </div>
@@ -195,7 +231,7 @@
   <!-- End of HubSpot Embed Code -->
   {% endif %}
 
-
+  {% if project != 'SQL 99' %}
   <!-- GitHub feedback section -->
   <script>
     var feedbackLoaded = false;
@@ -339,6 +375,7 @@
         });
     }
   </script>
+  {% endif %}
 
   {% if pagename == "search" %}
   {% if theme_google_search_api_key %}
