@@ -11,10 +11,16 @@
 {% set title = _('Search') %}
 
 {% block extra_head %}
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  {% if theme_google_search_api_key %}
   <script type="text/javascript">
     const google_search_api_key = "{{ theme_google_search_api_key }}";
     const google_search_cx_id = "{{ theme_google_search_cx_id }}";
   </script>
+  {% endif %}
 {% endblock %}
 
 {% block body %}
@@ -44,4 +50,7 @@
   <hr />
 
   <ul id="cr-search-results" class="search"></ul>
+
+  {% endif %}
+
 {% endblock %}
