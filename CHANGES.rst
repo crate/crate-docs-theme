@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Mitigate double include of ``pygments.css``
+- Attempt to make RTD footer and version data injection work in reverse proxy scenarios
 
 
 2022/03/01 0.21.2

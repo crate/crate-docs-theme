@@ -154,4 +154,15 @@ def setup(app):
             app_inited.env.config.html_context["canonical_url"] = canonical_url
             app_inited.builder.config.html_context["canonical_url"] = canonical_url
 
+    # Dynamically set the `proxied_api_host` context variable on a per-project level.
+    def set_proxied_api_host(app_inited):
+        try:
+            html_context = app_inited.env.config.html_context
+            proxied_api_host = html_context["html_baseurl"] + "/_"
+            app_inited.env.config.html_context["proxied_api_host"] = proxied_api_host
+            app_inited.builder.config.html_context["proxied_api_host"] = proxied_api_host
+        except Exception as ex:
+            print(f"ERROR: Unable to adjust `proxied_api_host`. Reason: {ex}")
+
     app.connect("builder-inited", force_canonical_url)
+    app.connect("builder-inited", set_proxied_api_host)
