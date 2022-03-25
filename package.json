@@ -10,5 +10,9 @@
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
     "webpack-modernizr-loader": "^5.0.0"
+  },
+  "resolutions": {
+    "markdown-it": "^12.3.2",
+    "minimist": "^1.2.6"
   }
 }
