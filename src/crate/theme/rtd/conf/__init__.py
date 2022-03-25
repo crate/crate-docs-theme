@@ -157,10 +157,18 @@ def setup(app):
     # Dynamically set the `proxied_api_host` context variable on a per-project level.
     def set_proxied_api_host(app_inited):
         try:
-            html_context = app_inited.env.config.html_context
-            proxied_api_host = html_context["html_baseurl"] + "/_"
+
+            # Compute appropriate per-project `proxied_api_host`.
+            html_baseurl = app_inited.env.config.html_baseurl.strip("/")
+            proxied_api_host = html_baseurl + "/_"
+
+            # Propagate the `proxied_api_host` to different contexts by trial-and-error.
+            app_inited.env.config.proxied_api_host = proxied_api_host
+            app_inited.builder.config.proxied_api_host = proxied_api_host
             app_inited.env.config.html_context["proxied_api_host"] = proxied_api_host
             app_inited.builder.config.html_context["proxied_api_host"] = proxied_api_host
+            print(f"INFO: Adjusted `proxied_api_host` to {proxied_api_host}")
+
         except Exception as ex:
             print(f"ERROR: Unable to adjust `proxied_api_host`. Reason: {ex}")
 

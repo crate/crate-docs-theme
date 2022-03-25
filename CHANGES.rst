@@ -7,11 +7,19 @@ Unreleased
 ----------
 
 
+2022/03/25 0.21.4
+-----------------
+
+- Adjust ``proxied_api_host`` once more to fix RTD API access in reverse proxy
+  scenarios
+
+
 2022/03/25 0.21.3
 -----------------
 
 - Mitigate double include of ``pygments.css``
-- Attempt to make RTD footer and version data injection work in reverse proxy scenarios
+- Adjust ``proxied_api_host`` to make RTD footer and version data injection work
+  in reverse proxy scenarios
 - Adjust dependencies to use Sphinx<4 and Jinja2<3.1
 
 
