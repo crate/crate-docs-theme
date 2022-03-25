@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/03/25 0.21.3
+-----------------
+
 - Mitigate double include of ``pygments.css``
 - Attempt to make RTD footer and version data injection work in reverse proxy scenarios
 - Adjust dependencies to use Sphinx<4 and Jinja2<3.1
