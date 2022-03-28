@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Add ``html_context`` variable to main configuration blueprint
+
 
 2022/03/25 0.21.4
 -----------------
