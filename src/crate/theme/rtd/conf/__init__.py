@@ -37,6 +37,10 @@ extensions = [
     "sphinx_copybutton",
 ]
 
+# When not run on RTD, "html_context" is missing as a global variable
+if "html_context" not in globals():
+    html_context = {}
+
 # Configure the theme
 html_theme = "crate"
 html_theme_path = theme.get_html_theme_path()
