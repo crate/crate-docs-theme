@@ -141,12 +141,17 @@
 
     var toggleHeader = function () {
       toggled = true;
+      promobar = document.getElementById("top");
       if (curDirection === 2 && curScroll > threshold) {
         //header.classList.add('disappear');
-        document.getElementById("top").style.top = "-" + menuHeight + "px";
+        if (promobar) {
+          promobar.style.top = "-" + menuHeight + "px";
+        }
       } else if (curDirection === 1) {
         //header.classList.remove('disappear');
-        document.getElementById("top").style.top = "0px";
+        if (promobar) {
+          document.getElementById("top").style.top = "0px";
+        }
       } else {
         toggled = false;
       }
