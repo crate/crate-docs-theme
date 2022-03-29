@@ -41,3 +41,9 @@ html_theme_options.update(
 )
 
 ogp_site_url = html_baseurl
+
+html_context.update(
+    {
+        "display_github": False
+    }
+)
