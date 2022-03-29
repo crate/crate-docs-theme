@@ -2329,3 +2329,8 @@ ul.search li {
     margin-bottom: 25px;
   }
 }
+
+/* hide RTD injected footer */
+.injected {
+  display: none;
+}
