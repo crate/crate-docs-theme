@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/03/29 0.22.0
+-----------------
+
 - Add ``html_context`` variable to main configuration blueprint
 - Fixed mobile view on ``search.html``
 - Provide different design for "SQL99 Complete, Really" in order to more clearly
