@@ -6,15 +6,17 @@ CHANGES
 Unreleased
 ----------
 
+- Fix typo within "SQL-99 Complete, Really"
+
 
 2022/03/29 0.22.0
 -----------------
 
 - Add ``html_context`` variable to main configuration blueprint
 - Fixed mobile view on ``search.html``
-- Provide different design for "SQL99 Complete, Really" in order to more clearly
+- Provide different design for "SQL-99 Complete, Really" in order to more clearly
   separate it from the other documentation projects
-- Use Sphinx-native search for "SQL99 Complete, Really"
+- Use Sphinx-native search for "SQL-99 Complete, Really"
 - Change primary font to ``Inter`` and secondary to ``Poppins``, remove ``Blender``
 - Prevent console errors when no navbar is available
 - Disable GitHub feedback box on the SQL-99 project
