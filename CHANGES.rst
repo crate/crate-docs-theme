@@ -8,10 +8,14 @@ Unreleased
 
 - Add ``html_context`` variable to main configuration blueprint
 - Fixed mobile view on ``search.html``
-- Added new look for SQL-99 repository (brought back legacy search)
-- Changed primary font to ``Inter`` and secondary to ``Poppins``,
-  removed Blender
-- Small fix to prevent console errors when no navbar is available
+- Provide different design for "SQL99 Complete, Really" in order to more clearly
+  separate it from the other documentation projects
+- Use Sphinx-native search for "SQL99 Complete, Really"
+- Change primary font to ``Inter`` and secondary to ``Poppins``, remove ``Blender``
+- Prevent console errors when no navbar is available
+- Disable GitHub feedback box on the SQL-99 project
+- Fix regression: Bring back ``pygments.css`` in ``base.html``
+- Visually hide injected footer (RTD-native version chooser) after enabling RTD API access
 
 
 2022/03/25 0.21.4
