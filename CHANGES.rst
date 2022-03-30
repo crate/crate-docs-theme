@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/03/30 0.22.1
+-----------------
+
 - Fix typo within "SQL-99 Complete, Really"
 - Add an option to adjust the ``html_context`` of individual projects,
   for disabling the GitHub feedback box on the SQL-99 project.
