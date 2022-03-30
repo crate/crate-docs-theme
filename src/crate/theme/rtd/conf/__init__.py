@@ -40,6 +40,8 @@ extensions = [
 # When not run on RTD, "html_context" is missing as a global variable
 if "html_context" not in globals():
     html_context = {}
+if "html_context_custom" not in globals():
+    html_context_custom = {}
 
 # Configure the theme
 html_theme = "crate"
@@ -176,5 +178,19 @@ def setup(app):
         except Exception as ex:
             print(f"ERROR: Unable to adjust `proxied_api_host`. Reason: {ex}")
 
+    # Apply all attributes from `html_context_custom` to `html_context`.
+    def apply_html_context_custom(app_inited):
+        try:
+            if html_context_custom:
+                app_inited.env.config.html_context.update(html_context_custom)
+                app_inited.builder.config.html_context.update(html_context_custom)
+                print(f"INFO: Adjusted `html_context` with {html_context_custom}")
+            else:
+                print(f"INFO: No adjustments to `html_context`")
+
+        except Exception as ex:
+            print(f"ERROR: Unable to adjust `html_context`. Reason: {ex}")
+
     app.connect("builder-inited", force_canonical_url)
     app.connect("builder-inited", set_proxied_api_host)
+    app.connect("builder-inited", apply_html_context_custom)

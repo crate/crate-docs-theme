@@ -42,8 +42,8 @@ html_theme_options.update(
 
 ogp_site_url = html_baseurl
 
-html_context.update(
-    {
-        "display_github": False
-    }
-)
+
+# Disable the GitHub feedback area.
+html_context_custom.update({
+    "display_github": False,
+})
