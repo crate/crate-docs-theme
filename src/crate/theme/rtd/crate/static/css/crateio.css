@@ -51,7 +51,6 @@ h1 {
   font-size: 40px;
   line-height: 1.2;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 h2 {
@@ -351,7 +350,6 @@ header .brand {
   color: #000;
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .button.small-bold-upper:hover {
