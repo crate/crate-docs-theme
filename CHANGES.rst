@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/03/30 0.22.2
+-----------------
+
 - Style: Don't uppercase text, it doesn't look good with the new font
 
 
