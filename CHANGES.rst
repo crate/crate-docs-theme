@@ -7,6 +7,12 @@ Unreleased
 ----------
 
 
+2022/03/31 0.22.3
+-----------------
+
+- SQL-99: Fix hover and active states of search button and search input field
+
+
 2022/03/30 0.22.2
 -----------------
 
