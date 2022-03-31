@@ -2148,11 +2148,29 @@ ul.search li {
   color: #fff;
 }
 
+.cr-docs-sql-99 .form-search {
+  border: 2px solid #ed8826;
+}
+
+.cr-docs-sql-99 .form-search .btn {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
 .cr-docs-sql-99 .btn-primary.btn-cr-sql-99 {
   background-color: #fff;
   border: 2px solid #fff;
   color: #009dc7;
   font-size: 18px;
+}
+
+.cr-docs-sql-99 .btn-primary:active,
+.cr-docs-sql-99 .btn-primary:focus {
+  background-color: #fffdf7 !important;
+  color: #ed8826 !important;
+  border-color: #ed8826 !important;
+  outline: none !important;
 }
 
 .cr-docs-sql-99 #mobile-menu-toggler.w-button:hover,
