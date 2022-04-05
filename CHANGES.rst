@@ -7,6 +7,14 @@ Unreleased
 ----------
 
 
+2022/04/05 0.23.0
+-----------------
+
+- Fix path to ERDF footer logo
+- Avoid reflow on content div element when loading the page
+- Disable smooth scrolling
+
+
 2022/03/31 0.22.3
 -----------------
 
