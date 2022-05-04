@@ -7,6 +7,14 @@ Unreleased
 ----------
 
 
+2022/05/04 0.24.0
+-----------------
+
+- Fix padding-top for SQL-99 documentation. Thanks, @msbt!
+- Update Open Graph image. Thanks, @msbt!
+- Improve menu structure of left-hand sidebar. Thanks, @jayeff!
+
+
 2022/04/05 0.23.0
 -----------------
 
