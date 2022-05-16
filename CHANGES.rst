@@ -6,6 +6,12 @@ CHANGES
 Unreleased
 ----------
 
+2022/05/04 0.24.3
+-----------------
+
+- Fix dropdown menu overlap
+- Hide navbar when opening anchor links fix
+
 
 2022/05/04 0.24.2
 -----------------
