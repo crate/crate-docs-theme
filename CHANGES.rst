@@ -7,6 +7,13 @@ Unreleased
 ----------
 
 
+2022/05/04 0.24.2
+-----------------
+
+- Add height attribute to crate.io logo to avoid CLS
+- Hide navbar when opening anchor links
+
+
 2022/05/04 0.24.1
 -----------------
 
