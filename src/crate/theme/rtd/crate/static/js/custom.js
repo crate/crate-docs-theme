@@ -149,7 +149,7 @@
         }
       } else if (curDirection === 1) {
         //header.classList.remove('disappear');
-        if ((promobar) && (!window.location.hash)) {
+        if (promobar) {
           document.getElementById("top").style.top = "0px";
         }
       } else {
@@ -168,12 +168,11 @@
     headerSize();
   });
 
-  document.addEventListener("load", checkHash, false);
-  function checkHash() {
-    if (window.location.hash) {
-      var menuHeight = $("#top").outerHeight();
+  $(document).ready(function () {
+    setTimeout(function checkHash() {
+      var menuHeight = document.querySelector('#top').offsetHeight;
       document.getElementById("top").style.top = "-" + menuHeight + "px";
-    }
-  }
+    }, 1000);
+  });
 
 })(jQuery);
