@@ -573,6 +573,10 @@ body .main-nav .sub-menu li a {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
+.dropdownBackground:not(.open) {
+  height: 0 !important;
+}
+
 .dropdownBackground.open {
   opacity: 1;
   -webkit-transform: translateY(65px);
