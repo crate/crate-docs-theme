@@ -149,7 +149,7 @@
         }
       } else if (curDirection === 1) {
         //header.classList.remove('disappear');
-        if (promobar) {
+        if ((promobar) && (!window.location.hash)) {
           document.getElementById("top").style.top = "0px";
         }
       } else {
@@ -167,4 +167,13 @@
     // Do initial resize
     headerSize();
   });
+
+  document.addEventListener("load", checkHash, false);
+  function checkHash() {
+    if (window.location.hash) {
+      var menuHeight = $("#top").outerHeight();
+      document.getElementById("top").style.top = "-" + menuHeight + "px";
+    }
+  }
+
 })(jQuery);
