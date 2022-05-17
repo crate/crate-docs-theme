@@ -169,10 +169,12 @@
   });
 
   $(document).ready(function () {
-    setTimeout(function checkHash() {
-      var menuHeight = document.querySelector('#top').offsetHeight;
-      document.getElementById("top").style.top = "-" + menuHeight + "px";
-    }, 1000);
+    if (window.location.hash) {
+      setTimeout(function checkHash() {
+        var menuHeight = document.querySelector("#top").offsetHeight;
+        document.getElementById("top").style.top = "-" + menuHeight + "px";
+      }, 1000);
+    }
   });
 
 })(jQuery);
