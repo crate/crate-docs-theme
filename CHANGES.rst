@@ -6,14 +6,20 @@ CHANGES
 Unreleased
 ----------
 
-2022/05/04 0.24.3
+2022/05/17 0.24.4
+-----------------
+
+- Another hide navbar when opening anchor links fix
+
+
+2022/05/16 0.24.3
 -----------------
 
 - Fix dropdown menu overlap
 - Hide navbar when opening anchor links fix
 
 
-2022/05/04 0.24.2
+2022/05/16 0.24.2
 -----------------
 
 - Add height attribute to crate.io logo to avoid CLS
