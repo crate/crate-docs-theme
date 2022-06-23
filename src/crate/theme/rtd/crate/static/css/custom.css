@@ -2277,6 +2277,10 @@ ul.search li {
   .cr-sql-99-logo {
     margin: 20px 20px 10px 0;
   }
+
+  .cr-docs-sql-99.notif-bar-enabled .w-canvas {
+    padding-top: 0px !important;
+  }
 }
 
 @media all and (max-width: 560px) {
