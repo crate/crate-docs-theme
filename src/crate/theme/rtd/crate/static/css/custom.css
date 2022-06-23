@@ -1987,6 +1987,10 @@ strong {
   .notification-banner p {
     padding-right: 30px;
   }
+
+  .wy-table-responsive {
+    overflow-x: auto;
+  }
 }
 
 @media all and (max-width: 560px) {
