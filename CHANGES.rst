@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/06/23 0.24.5
+-----------------
+
 - Fix ``proxied_static_path`` context variable following an RTD update
 
 
