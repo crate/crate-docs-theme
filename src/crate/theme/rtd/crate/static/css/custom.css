@@ -1997,6 +1997,14 @@ strong {
   .notif-bar-enabled {
     margin-bottom: 180px;
   }
+
+  dl.field-list {
+    grid-template-columns: none;
+  }
+
+  dl.field-list > dt {
+    margin: 10px 0 5px;
+  }
 }
 
 /* newsletter footer */
