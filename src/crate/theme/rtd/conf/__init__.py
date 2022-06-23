@@ -178,6 +178,25 @@ def setup(app):
         except Exception as ex:
             print(f"ERROR: Unable to adjust `proxied_api_host`. Reason: {ex}")
 
+    # Dynamically adjust the `proxied_static_path` context variable on a per-project level.
+    # https://github.com/crate/crate-docs-theme/issues/342
+    def set_proxied_static_path(app_inited):
+        try:
+
+            # The default is `'proxied_static_path': "/_/static/"`.
+            # However, we want it to be, e.g., https://crate.io/docs/crate/howtos/_/static/
+            html_baseurl = app_inited.env.config.html_baseurl.strip("/")
+            proxied_static_path = f"{html_baseurl}/_/static/"
+
+            # Propagate the `proxied_api_host` to different contexts by trial-and-error.
+            app_inited.env.config.html_context["proxied_static_path"] = proxied_static_path
+            app_inited.builder.config.html_context["proxied_static_path"] = proxied_static_path
+
+            print(f"INFO: Adjusted `proxied_static_path` to {proxied_static_path}")
+
+        except Exception as ex:
+            print(f"ERROR: Unable to adjust `proxied_static_path`. Reason: {ex}")
+
     # Apply all attributes from `html_context_custom` to `html_context`.
     def apply_html_context_custom(app_inited):
         try:
@@ -193,4 +212,5 @@ def setup(app):
 
     app.connect("builder-inited", force_canonical_url)
     app.connect("builder-inited", set_proxied_api_host)
+    app.connect("builder-inited", set_proxied_static_path)
     app.connect("builder-inited", apply_html_context_custom)
