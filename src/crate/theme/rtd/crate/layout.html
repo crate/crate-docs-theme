@@ -30,6 +30,13 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <noscript>
+      <style>
+          .cr-nojs-hide { display: none; }
+      </style>
+  </noscript>
+
   {% endblock %}
 
   {# Silence the sidebar's, relbar's #}
@@ -110,7 +117,7 @@
                 </div>
               </div>
 
-               <div id="cr-docs-rating" class="cr-docs-rating-container">
+               <div id="cr-docs-rating" class="cr-docs-rating-container cr-nojs-hide">
                   <div class="cr-rating-content">
                       <div class="cr-rating">
                         <form id="ratingForm">
