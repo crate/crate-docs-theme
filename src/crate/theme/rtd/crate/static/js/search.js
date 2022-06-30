@@ -1,5 +1,10 @@
 //Handler for response from google.
 function hndlr(response) {
+  //No results message
+  if (response.searchInformation.totalResults == "0") {
+    document.getElementById("cr-search-results").innerHTML += "<li>Your search did not match any results, please try different keywords.</li>";
+  }
+
   if (response.items == null) {
     //Sometimes there is a strange thing with the results where it says there are 34 results/4 pages, but when you click through to 3 then there is only 30, so page 4 is invalid now.
     //So if we get to the invalid one, send them back a page.
