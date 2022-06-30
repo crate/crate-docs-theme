@@ -113,7 +113,7 @@ intersphinx_mapping = {
 
 # Configure OpenGraph extension
 ogp_site_url = "https://crate.io/"
-ogp_description_length = 300
+ogp_description_length = 150
 ogp_site_name = "CrateDB documentation"
 ogp_image = "https://crate.io/hubfs/static/og_crateio.png"
 ogp_image_alt = False
