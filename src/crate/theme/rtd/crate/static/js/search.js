@@ -96,4 +96,15 @@ if (query && query.length != 0) {
     "&callback=hndlr";
   // finally insert the element to the body element in order to load the script
   document.body.appendChild(jsElm);
+
+  //check if a query can actually be made
+  var request = new XMLHttpRequest();
+  request.open("GET", jsElm.src, true);
+    request.onreadystatechange = function(){
+      if (request.status != 200) {  
+          document.getElementById("cr-search-results").innerHTML = "<li>It seems you're blocking some required scripts, please enable them to use the search function.</li>";
+          document.getElementById("cr-search-submit").disabled = true;
+      }
+  };
+  request.send();
 }

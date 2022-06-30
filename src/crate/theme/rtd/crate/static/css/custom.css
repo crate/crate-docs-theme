@@ -983,6 +983,19 @@ ul#cr-search-results {
   color: #000;
 }
 
+#cr-search-box button:disabled, 
+#cr-search-box button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+#cr-search-box button:disabled:hover, 
+#cr-search-box button[disabled]:hover {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
 @media screen and (max-width: 480px) {
   .form-search .search-query {
     width: 200px;
