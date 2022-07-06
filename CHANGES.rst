@@ -6,6 +6,7 @@ CHANGES
 Unreleased
 ----------
 
+- Bump runtime dependency versions
 
 2022/06/23 0.24.5
 -----------------
