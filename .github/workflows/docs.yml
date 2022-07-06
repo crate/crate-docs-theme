@@ -9,20 +9,21 @@ jobs:
 
   documentation:
 
-    name: Build docs on ${{ matrix.os }}
+    name: Build docs with Python ${{ matrix.python-version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: ['ubuntu-latest', 'macos-latest']
+        python-version: ['3.9', '3.10']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: ${{ matrix.python-version }}
 
       - name: Install PlantUML on Linux
         if: matrix.os == 'ubuntu-latest'
