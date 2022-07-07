@@ -23,9 +23,10 @@
 
 import os
 
-VERSION = (0, 24, 5)
+VERSION = (0, 25, 0)
+VERSION_SUFFIX = "rc1"
 
-__version__ = ".".join(str(v) for v in VERSION)
+__version__ = ".".join(str(v) for v in VERSION) + VERSION_SUFFIX
 __version_full__ = __version__
 
 

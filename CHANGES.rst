@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/07/07 0.25.0rc1
+--------------------
+
 - Bump runtime dependency versions
 - Bring CI setup up to speed
 - Upgrade to Sphinx 5
