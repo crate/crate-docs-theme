@@ -9,6 +9,12 @@ Unreleased
 - Bump runtime dependency versions
 - Bring CI setup up to speed
 - Upgrade to Sphinx 5
+- Search: Add message if no results were found
+- Search: Don't show if `googleapis.com` doesn't respond
+- SEO: Change opengraph description length from 300 to 150 characters
+- UI: Make tables scroll horizontally on devices with <991px width
+- UI: Remove whitespace at the top on SQL-99 on devices <991px width
+- UI: Remove column layout from field lists on devices <560px width
 
 
 2022/06/23 0.24.5
