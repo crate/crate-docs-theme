@@ -6,6 +6,14 @@ CHANGES
 Unreleased
 ----------
 
+- Bump runtime dependency versions
+- Bring CI setup up to speed
+- Upgrade to Sphinx 5
+
+
+2022/06/23 0.24.5
+-----------------
+
 - Fix ``proxied_static_path`` context variable following an RTD update
 
 
