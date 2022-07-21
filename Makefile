@@ -70,7 +70,7 @@ build: $(TWINE)
 .PHONY: nodejs-lts
 nodejs-lts:
 	$(PIP) install nodeenv
-	$(NODEENV) --python-virtualenv --node=14.19.1
+	$(NODEENV) --python-virtualenv --node=16.16.0
 
 .PHONY: bundle-assets
 bundle-assets: nodejs-lts
