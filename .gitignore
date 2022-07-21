@@ -4,7 +4,7 @@
 .crate-docs
 .dist
 .DS_Store
-.env
+.env*
 .installed.cfg
 .style
 .utils
@@ -16,5 +16,5 @@ build
 develop-eggs
 dist
 eggs
-node_modules
+node_modules*
 yarn-error.log
