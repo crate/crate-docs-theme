@@ -1,5 +1,5 @@
 import "jquery";
-import "jquery.cookie";
+import Cookies from "js-cookie";
 import "sticky-sidebar";
 
 import "./webflow";
