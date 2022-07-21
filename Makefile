@@ -79,6 +79,13 @@ bundle-assets: nodejs-lts
 		yarn install && \
 		npx webpack --mode=production
 
+.PHONY: develop
+develop: setup-virtualenv nodejs-lts
+	. $(ACTIVATE) && \
+		printf "Node.js version: "; node --version && \
+		yarn install && \
+		npx webpack --mode=development
+
 .PHONY: upload
 upload: $(TWINE)
 	@ if test ! -d $(DIST_DIR); then \
@@ -99,3 +106,6 @@ clean:
 reset:
 	rm -rf $(ENV_DIR)
 	rm -rf $(DIST_DIR)
+
+setup-virtualenv:
+	@test -e $(PYTHON) || python3 -m venv $(ENV_DIR)
