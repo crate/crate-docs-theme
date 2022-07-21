@@ -72,9 +72,31 @@ Configuration files
 Terminal commands
 =================
 
+Single-line
+-----------
+
 .. code-block:: sh
 
     sh$ csvsql --db crate://localhost:4200 --insert /tmp/dump.csv
+
+.. code-block:: sh
+
+    $ sh iss-position.sh
+
+    CONNECT OK
+    INSERT OK, 1 row affected  (0.029 sec)
+    Sleeping for 10 seconds...
+
+Multi-line
+----------
+
+.. code-block:: sh
+
+    sh$ crash --hosts localhost:4200 \
+            --command "INSERT INTO iss (position) VALUES ('$(wkt_position)')"
+
+    CONNECT OK
+    INSERT OK, 1 row affected  (0.037 sec)
 
 
 Code blocks

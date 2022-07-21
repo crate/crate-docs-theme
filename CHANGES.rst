@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Fix copying multi-line console snippets with ``sphinx-copybutton``
+
 
 2022/07/13 0.25.0
 -----------------
