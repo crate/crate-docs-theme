@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/07/22 0.26.0
+-----------------
+
 - Fix copying multi-line console snippets with ``sphinx-copybutton``
 - Update JavaScript dependencies across the board
 - Replace ``jquery-cookie`` with ``js-cookie``
