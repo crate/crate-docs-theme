@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/07/25 0.26.1
+-----------------
+
 - Fix webpack expose configuration for ``js-cookie`` library
 
 
