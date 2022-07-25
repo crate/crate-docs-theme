@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/07/25 0.26.2
+-----------------
+
 - Fix ``js-cookie`` library import
 
 
