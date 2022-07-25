@@ -25,6 +25,14 @@ module.exports = {
                     exposes: ["$", "jquery", "jQuery"],
                 },
             },
+            {
+                // Expose `js-cookie` for use outside Webpack build.
+                test: require.resolve('js-cookie'),
+                loader: "expose-loader",
+                options: {
+                    exposes: ["Cookies"],
+                },
+            },
         ],
     },
     resolve: {
