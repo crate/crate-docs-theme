@@ -178,3 +178,5 @@
   });
 
 })(jQuery);
+
+var Cookies = require('js-cookie');
