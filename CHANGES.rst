@@ -7,6 +7,13 @@ Unreleased
 ----------
 
 
+2022/09/05 0.26.3
+-----------------
+
+- SQL-99: Replace regular buttons with HubSpot CTAs
+- Fix error with switchover to ``js-cookie`` library
+
+
 2022/07/25 0.26.2
 -----------------
 
