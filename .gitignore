@@ -5,6 +5,7 @@
 .dist
 .DS_Store
 .env*
+.venv*
 .installed.cfg
 .style
 .utils

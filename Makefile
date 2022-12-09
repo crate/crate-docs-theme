@@ -27,7 +27,7 @@
 
 .EXPORT_ALL_VARIABLES:
 
-ENV_DIR  := .env
+ENV_DIR  := .venv
 ENV_BIN  := $(ENV_DIR)/bin
 ACTIVATE := $(ENV_BIN)/activate
 PYTHON   := python3
