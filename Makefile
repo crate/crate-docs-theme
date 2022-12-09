@@ -68,11 +68,9 @@ build: $(TWINE)
 	@ $(MAKE) clean
 	@ $(MAKE) bundle-assets
 	. $(ACTIVATE) && \
-	    $(PYTHON) setup.py sdist --dist-dir $(DIST_DIR)
+	    $(PYTHON) -m build --outdir $(DIST_DIR)
 	. $(ACTIVATE) && \
-	    $(PYTHON) setup.py bdist_wheel --dist-dir $(DIST_DIR)
-	. $(ACTIVATE) && \
-	    $(TWINE) check $(DIST_DIR)/*
+	    $(TWINE) check $(DIST_DIR)/*.{tar.gz,whl}
 
 .PHONY: nodejs-lts
 nodejs-lts: $(NODE)
@@ -101,7 +99,7 @@ upload: $(TWINE)
 	    exit 1; \
 	fi
 	. $(ACTIVATE) && \
-	    $(TWINE) upload $(DIST_DIR)/*
+	    $(TWINE) upload $(DIST_DIR)/*.{tar.gz,whl}
 
 .PHONY: clean
 clean:
