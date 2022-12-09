@@ -70,7 +70,7 @@ build: $(TWINE)
 	. $(ACTIVATE) && \
 	    $(PYTHON) -m build --outdir $(DIST_DIR)
 	. $(ACTIVATE) && \
-	    $(TWINE) check $(DIST_DIR)/*.{tar.gz,whl}
+	    $(TWINE) check $(DIST_DIR)/*
 
 .PHONY: nodejs-lts
 nodejs-lts: $(NODE)
@@ -99,7 +99,7 @@ upload: $(TWINE)
 	    exit 1; \
 	fi
 	. $(ACTIVATE) && \
-	    $(TWINE) upload $(DIST_DIR)/*.{tar.gz,whl}
+	    $(TWINE) upload $(DIST_DIR)/*
 
 .PHONY: clean
 clean:
