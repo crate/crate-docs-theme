@@ -1,4 +1,5 @@
 {
+  "license": "Apache-2.0",
   "devDependencies": {
     "css-loader": "^5.2.7",
     "expose-loader": "^4.0.0",
