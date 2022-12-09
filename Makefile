@@ -33,9 +33,12 @@ ACTIVATE := $(ENV_BIN)/activate
 PYTHON   := python3
 PIP      := $(ENV_BIN)/pip3
 TWINE    := $(ENV_BIN)/twine
+NODE     := $(ENV_BIN)/node
 NODEENV  := $(ENV_BIN)/nodeenv
 DIST_DIR := .dist
 PYPIRC   := ~/.pypirc
+
+NODEJS_VERSION := 16.18.1
 
 # Default target
 .PHONY: help
@@ -50,6 +53,10 @@ help:
 	@ printf                           ' files)\n'
 	@ echo
 	@ printf '\033[36m  reset   \033[00m Reset the build system\n'
+
+$(NODE):
+	$(PIP) install nodeenv
+	$(NODEENV) --python-virtualenv --node=$(NODEJS_VERSION)
 
 $(TWINE):
 	$(PYTHON) -m venv $(ENV_DIR)
@@ -68,9 +75,7 @@ build: $(TWINE)
 	    $(TWINE) check $(DIST_DIR)/*
 
 .PHONY: nodejs-lts
-nodejs-lts:
-	$(PIP) install nodeenv
-	$(NODEENV) --python-virtualenv --node=16.16.0
+nodejs-lts: $(NODE)
 
 .PHONY: bundle-assets
 bundle-assets: nodejs-lts
