@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2022/12/29 0.26.4
+-----------------
+
 - Fix visual appearance of Intersphinx references per ``xref`` CSS.
   Don't render links in bold text when using custom label. Happens,
   for example, with ``:class:dictionaries <py:dict>``.
