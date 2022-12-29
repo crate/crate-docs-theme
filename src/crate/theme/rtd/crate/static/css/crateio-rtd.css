@@ -185,6 +185,10 @@ a code {
     font-weight: normal;
 }
 
+code.xref, a code {
+  font-weight: normal !important;
+}
+
 div.topic {
     border: 0;
 }
