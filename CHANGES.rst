@@ -6,6 +6,14 @@ CHANGES
 Unreleased
 ----------
 
+- Change Crate.io logo to CrateDB
+- Remove Crate.io footer logo
+- Update Favicons
+- Update the ESI fallback links in case we disable it at some point
+- Use relative links to pages
+- Update opengraph image
+- Enable meta description via ``ogp_enable_meta_description = True``
+
 
 2022/12/29 0.26.5
 -----------------
