@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2023/04/18 0.27.0
+-----------------
+
 - Change Crate.io logo to CrateDB
 - Remove Crate.io footer logo
 - Update Favicons
