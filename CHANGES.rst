@@ -7,6 +7,12 @@ Unreleased
 ----------
 
 
+2023/05/15 0.27.1
+-----------------
+
+- Removed ``code``-tag from a mobile media query to fix headlines font-sizes
+
+
 2023/04/18 0.27.0
 -----------------
 
@@ -17,7 +23,6 @@ Unreleased
 - Use relative links to pages
 - Update opengraph image
 - Enable meta description via ``ogp_enable_meta_description = True``
-- Removed ``code``-tag from a mobile media query to fix headlines font-sizes
 
 
 2022/12/29 0.26.5
