@@ -1,8 +1,60 @@
 .. _index:
 
-==========
-Page Title
-==========
+###########################
+CrateDB documentation theme
+###########################
+
+*****
+About
+*****
+
+A theme component for the `Sphinx static documentation generator`_.
+
+Example documentation sections:
+
+- https://crate.io/docs/crate/reference/
+- https://crate.io/docs/python/en/latest/
+
+********
+Overview
+********
+
+This section outlines a few features, elements, and style-guides by example.
+
+Classic Sphinx / reStructuredText
+=================================
+
+.. toctree::
+    :maxdepth: 1
+
+    headings
+    admonitions
+    lists
+    tables
+    links
+    images
+    diagrams
+    codesnippets
+    subpage
+    glossary
+
+
+Modern components
+=================
+
+.. toctree::
+    :maxdepth: 1
+
+    myst-overview
+    design-markdown
+    design-restructuredtext
+    mermaid-diagrams-markdown
+    mermaid-diagrams-restructuredtext
+
+
+*******
+Details
+*******
 
 .. meta::
     :description lang=en:
@@ -28,42 +80,10 @@ How to improve this documentation:
 
 .. NOTE::
 
-    For help building this documentation as a part of your testing and *Quality
+    To learn how to run sandbox or CI builds as a part of your testing and *Quality
     Assurance* (QA) workflow, see the `developer guide`_.
-
-.. rubric:: Table of Contents
-
-.. contents::
-   :local:
-
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Classic Sphinx / reStructuredText
-
-    headings
-    admonitions
-    lists
-    tables
-    links
-    images
-    diagrams
-    codesnippets
-    subpage
-    glossary
-
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Modern components
-
-    myst-overview
-    design-markdown
-    design-restructuredtext
-    mermaid-diagrams-markdown
-    mermaid-diagrams-restructuredtext
-
 
 
 .. _developer guide: https://github.com/crate/crate-docs-theme/blob/main/DEVELOP.rst
 .. _report an issue: https://github.com/crate/crate-docs-theme/issues/new
+.. _Sphinx static documentation generator: https://www.sphinx-doc.org/
