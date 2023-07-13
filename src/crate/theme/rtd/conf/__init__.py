@@ -30,12 +30,24 @@ exclude_patterns = [".*", "*.lint", "README.rst", "requirements.txt"]
 exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
 extensions = [
+    "myst_parser",
+    "sphinx_copybutton",
+    "sphinx_design",
+    "sphinx_inline_tabs",
     "sphinx_sitemap",
+    "sphinx_subfigure",
+    "sphinx_togglebutton",
     "sphinx.ext.intersphinx",
+    "sphinx.ext.todo",
+    "sphinx.ext.ifconfig",
+    "sphinx.ext.graphviz",
+    "sphinxcontrib.mermaid",
     "sphinxcontrib.plantuml",
     "sphinxext.opengraph",
-    "sphinx_copybutton",
 ]
+
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
 
 # When not run on RTD, "html_context" is missing as a global variable
 if "html_context" not in globals():
@@ -72,6 +84,11 @@ html_theme_options = {
     # Can be used the query string of a resource URL for HTTP cache busting
     "ver": theme.get_version(),
 }
+# https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#fontawesome-icons
+html_css_files = [
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+]
+
 html_extra_path = ["_extra"]
 sitemap_filename = "site.xml"
 # These variables are overridden by Read The Docs
@@ -134,6 +151,20 @@ linkcheck_ignore = [
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 15
+
+# -- Options for MyST -------------------------------------------------
+myst_heading_anchors = 3
+myst_enable_extensions = [
+    "attrs_block",
+    "attrs_inline",
+    "colon_fence",
+    "deflist",
+    "fieldlist",
+    "html_admonition",
+    "linkify",
+    "strikethrough",
+    "tasklist",
+]
 
 def setup(app):
     # Force the canonical URL in multiple ways
