@@ -53,5 +53,5 @@ How to improve this documentation:
     glossary
 
 
-.. _developer guide: https://github.com/crate/crate-docs-theme/blob/main/DEVELOP.rst#user-content-making-changes-to-the-theme
+.. _developer guide: https://github.com/crate/crate-docs-theme/blob/main/DEVELOP.rst
 .. _report an issue: https://github.com/crate/crate-docs-theme/issues/new
