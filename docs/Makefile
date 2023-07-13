@@ -84,6 +84,10 @@ SELF_SRC      := $(TOP_DIR)/common-build
 SELF_MAKEFILE := $(SELF_SRC)/rules.mk
 SRC_MAKE      := $(MAKE) -f $(SRC_DIR)/rules.mk
 
+ENV_DIR       := ../.venv
+ENV_BIN       := $(ENV_DIR)/bin
+ACTIVATE      := $(ENV_BIN)/activate
+
 # Parse the JSON file
 BUILD_VERSION := $(shell cat $(BUILD_JSON) | \
     python -c 'import json, sys; print(json.load(sys.stdin)["message"])')
@@ -148,8 +152,12 @@ Makefile:
 
 .PHONY: bundle-assets
 bundle-assets:
-	cd .. && yarn install
-	cd .. && npx webpack --mode=development
+	. $(ACTIVATE) \
+		&& printf "Node.js version: "; node --version \
+		&& printf "Yarn version: "; yarn --version \
+		&& cd .. \
+		&& yarn install \
+		&& yarn webpack --mode=development
 
 .PHONY: dev
 dev: $(CLONE_DIR)
