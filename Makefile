@@ -34,6 +34,7 @@ PYTHON   := python3
 PIP      := $(ENV_BIN)/pip3
 TWINE    := $(ENV_BIN)/twine
 NODE     := $(ENV_BIN)/node
+NPM      := $(ENV_BIN)/npm
 NODEENV  := $(ENV_BIN)/nodeenv
 DIST_DIR := .dist
 PYPIRC   := ~/.pypirc
@@ -57,6 +58,8 @@ help:
 $(NODE):
 	$(PIP) install nodeenv
 	$(NODEENV) --python-virtualenv --node=$(NODEJS_VERSION)
+	. $(ACTIVATE) && \
+		npm install --global yarn
 
 $(TWINE):
 	$(PYTHON) -m venv $(ENV_DIR)
@@ -79,6 +82,7 @@ nodejs-lts: $(NODE)
 bundle-assets: nodejs-lts
 	. $(ACTIVATE) && \
 		printf "Node.js version: "; node --version && \
+		printf "Yarn version: "; yarn --version && \
 		yarn install && \
 		npx webpack --mode=production
 
@@ -86,6 +90,7 @@ bundle-assets: nodejs-lts
 develop: setup-virtualenv nodejs-lts
 	. $(ACTIVATE) && \
 		printf "Node.js version: "; node --version && \
+		printf "Yarn version: "; yarn --version && \
 		yarn install && \
 		npx webpack --mode=development
 
