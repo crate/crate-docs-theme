@@ -39,6 +39,7 @@ How to improve this documentation:
 
 .. toctree::
     :maxdepth: 1
+    :caption: Classic Sphinx / reStructuredText
 
     headings
     admonitions
@@ -48,9 +49,20 @@ How to improve this documentation:
     images
     diagrams
     codesnippets
-
     subpage
     glossary
+
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Modern components
+
+    myst-overview
+    design-markdown
+    design-restructuredtext
+    mermaid-diagrams-markdown
+    mermaid-diagrams-restructuredtext
+
 
 
 .. _developer guide: https://github.com/crate/crate-docs-theme/blob/main/DEVELOP.rst

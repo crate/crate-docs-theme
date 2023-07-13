@@ -20,3 +20,7 @@ html_context.update({
 html_context_custom.update({
     #"display_github": False,
 })
+
+
+intersphinx_mapping["design"] = ("https://sphinx-design.readthedocs.io/en/latest/", None)
+intersphinx_mapping["myst"] = ("https://myst-parser.readthedocs.io/en/latest/", None)
