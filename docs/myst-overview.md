@@ -7,27 +7,12 @@
 >
 > -- https://myst-parser.readthedocs.io/
 
-## Details
-
-### The great dilemma
-
-For a long time, the power of the Sphinx documentation generator was only available
-to people writing documentation in reStructuredText. Because Markdown gained
-significant popularity in recent years, the community was in a big dilemma, and I
-am sure there have been endless Programming Language Wars-style discussions about
-using reStructuredText vs. Markdown for documentation authoring.
-
-This dilemma has come to an end with MyST now, aiming to follow up on the success 
-of MySQL and mypy – naming-wise.
-
-
-### Enter MyST
-
 [MyST](https://myst-parser.readthedocs.io/) is a strict superset of the 
 [CommonMark syntax specification](https://spec.commonmark.org/).
-It adds features focussed on scientific and technical documentation authoring.
+It adds features focussed on scientific and technical documentation authoring. {fas}`star2`
 
-Effectively, it brings Markdown to Sphinx in full swing – finally. {fas}`star2`
+
+### Details
 
 Roles and directives provide a way to extend the syntax of MyST in an unbound 
 manner, by interpreting a chunk of text as a specific type of markup, according
@@ -37,46 +22,50 @@ a Markdown code fence.
 
 -– [Roles and Directives](https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html)
 
-#### Example
+**Example**
 
 > ![image|297x168](https://global.discourse-cdn.com/business7/uploads/crate/original/1X/d61bae27e7ce2ca04ab7ba78954153b885f2548e.png)
 
 
-## Inline quotes / citations
+## Overview
+
+### Inline quotes / citations
 
 > This text should be quoted.
 
-## Cross-references
+### Cross-references
 
 Being able to use cross-references appropriately, i.e. optimally linking between
 documentation resources, even across projects, is important for documentation
-authoring. Please refer to [MyST cross-references], in order to learn about how
-this works using the Markdown markup language.
+authoring. Please refer to [MyST cross-references](inv:myst#syntax/referencing),
+in order to learn about how this works using the Markdown markup language.
 
 By using cross-references properly, maintenance efforts regarding broken links will
 be greatly reduced, because all target references will be validated at build time.
 See also [How to use cross-references with Sphinx].
 
+[How to use cross-references with Sphinx]: https://docs.readthedocs.io/en/stable/guides/cross-referencing-with-sphinx.html
 
-## Images and figures
 
-### Documentation
+### Images and figures
+
+#### Documentation
 - [sphinx{design} » Images and figures](inv:myst#syntax/images_and_figures)
 - {doc}`sphinx{design} » Images and figures <myst:syntax/images_and_figures>`
 
-### Standard
+#### Standard
 
 The standard Markdown syntax for images.
 
 ![MyST logo](_static/myst-logo-wide.svg)
 
-### Adjusting attributes
+#### Adjusting attributes
 The `attrs_inline` extension can be used to add attributes to an inline image,
 for example, to resize/scale it.
 
 ![MyST logo](_static/myst-logo-wide.svg){.bg-warning w=100px align=center}
 
-### Block level
+#### Block level
 To create a block image, use the `image` directive.
 ```{image} https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg
 :alt: fishy
@@ -86,7 +75,7 @@ To create a block image, use the `image` directive.
 ```
 
 
-### Figures (images with captions)
+#### Figures (images with captions)
 
 To create a figure, use the `figure` directive.
 
@@ -132,7 +121,16 @@ Documentation: https://sphinx-subfigure.readthedocs.io/
 :alt: Image C
 ```
 
+:::
 
-[How to use cross-references with Sphinx]: https://docs.readthedocs.io/en/stable/guides/cross-referencing-with-sphinx.html
-[MyST cross-references]: inv:myst#syntax/referencing
-[myst-logo]: https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg
+
+## History - The great dilemma
+
+For a long time, the power of the Sphinx documentation generator was only available
+to people writing documentation in reStructuredText. Because Markdown gained
+significant popularity in recent years, the community was in a big dilemma, and
+surely there have been endless Programming Language Wars-style discussions about
+using reStructuredText vs. Markdown for documentation authoring.
+
+This dilemma has come to an end with MyST now, aiming to follow up on the success 
+of MySQL and mypy – naming-wise.
