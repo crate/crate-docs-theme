@@ -4,12 +4,22 @@ Crate Docs Theme
 
 |tests| |rtd| |build| |pypi|
 
+
+About
+=====
+
 A `Sphinx`_ theme for the `Crate documentation`_.
 
 *Note: This theme is tightly integrated into the Crate.io website and is
 not intended for general use.*
 
-For help making changes to the theme, see the `developer docs`_.
+For making changes to the theme, see the `developer docs`_.
+
+
+Preview
+=======
+
+The demo/preview project is rendered and published to https://crate-docs-theme.readthedocs.io/.
 
 
 Using the theme
