@@ -33,6 +33,7 @@ extensions = [
     "myst_parser",
     "sphinx_copybutton",
     "sphinx_design",
+    "sphinx_design_elements",
     "sphinx_inline_tabs",
     "sphinx_sitemap",
     "sphinx_subfigure",
