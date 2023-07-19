@@ -24,10 +24,8 @@ a.current, a.current-active {
     background: inherit none repeat scroll 0 0;
 }
 
-blockquote {
-    font-size: 20px;
-    border-left: 0px;
-    padding: 0px 0px;
+blockquote p:last-child {
+    margin-bottom: 0;
 }
 
 /** admonitions **/
