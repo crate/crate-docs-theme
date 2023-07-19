@@ -1,6 +1,6 @@
-##################################
-Mermaid diagrams: reStructuredText
-##################################
+################
+Mermaid diagrams
+################
 
 
 *****
@@ -39,4 +39,4 @@ Sequence diagram
 Flowchart diagram
 =================
 
-.. mermaid:: _static/mermaid-example.mmd
+.. mermaid:: ../_static/mermaid-example.mmd

@@ -1,4 +1,4 @@
-# Mermaid diagrams: Markdown
+# Mermaid diagrams
 
 
 ## About
@@ -29,5 +29,5 @@ sequenceDiagram
 ```
 
 ### Flowchart diagram
-```{mermaid} _static/mermaid-example.mmd
+```{mermaid} ../_static/mermaid-example.mmd
 ```
