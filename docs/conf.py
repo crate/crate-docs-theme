@@ -22,5 +22,6 @@ html_context_custom.update({
 })
 
 
-intersphinx_mapping["design"] = ("https://sphinx-design.readthedocs.io/en/latest/", None)
 intersphinx_mapping["myst"] = ("https://myst-parser.readthedocs.io/en/latest/", None)
+intersphinx_mapping["sd"] = ("https://sphinx-design.readthedocs.io/en/latest/", None)
+intersphinx_mapping["sde"] = ("https://sphinx-design-elements.readthedocs.io/en/latest/", None)

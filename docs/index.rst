@@ -4,16 +4,17 @@
 CrateDB documentation theme
 ###########################
 
+
 *****
 About
 *****
 
-A theme component for the `Sphinx static documentation generator`_.
+A theme component for the `Sphinx static documentation generator`_ used by
+all the Crate.io documentation projects. Examples:
 
-Example documentation sections:
+- `CrateDB Reference`_
+- `CrateDB Python Client`_
 
-- https://crate.io/docs/crate/reference/
-- https://crate.io/docs/python/en/latest/
 
 ********
 Overview
@@ -21,8 +22,36 @@ Overview
 
 This section outlines a few features, elements, and style-guides by example.
 
-Classic Sphinx / reStructuredText
-=================================
+
+Modernized
+==========
+
+A side-by-side gallery demonstrating both reStructuredText and Markedly
+Structured Text syntax.
+
+.. grid::
+
+    .. grid-item::
+        :columns: 6
+
+        .. toctree::
+            :titlesonly:
+
+            rst/index
+
+    .. grid-item::
+        :columns: 6
+
+        .. toctree::
+            :titlesonly:
+
+            myst/index
+
+
+Legacy
+======
+
+The legacy feature gallery exclusively uses reStructuredText.
 
 .. toctree::
     :maxdepth: 1
@@ -38,18 +67,6 @@ Classic Sphinx / reStructuredText
     subpage
     glossary
 
-
-Modern components
-=================
-
-.. toctree::
-    :maxdepth: 1
-
-    myst-overview
-    design-markdown
-    design-restructuredtext
-    mermaid-diagrams-markdown
-    mermaid-diagrams-restructuredtext
 
 
 *******
@@ -84,6 +101,8 @@ How to improve this documentation:
     Assurance* (QA) workflow, see the `developer guide`_.
 
 
+.. _CrateDB Python Client: https://crate.io/docs/python/
+.. _CrateDB Reference: https://crate.io/docs/crate/reference/
 .. _developer guide: https://github.com/crate/crate-docs-theme/blob/main/DEVELOP.rst
 .. _report an issue: https://github.com/crate/crate-docs-theme/issues/new
 .. _Sphinx static documentation generator: https://www.sphinx-doc.org/
