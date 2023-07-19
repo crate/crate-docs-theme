@@ -65,6 +65,7 @@ setup(
         "myst-parser[linkify]<2",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design<1",
+        "sphinx-design-elements==0.1.0",
         "sphinx-inline-tabs",
         "sphinx-sitemap>=2,<3",
         "sphinx-subfigure<1",
