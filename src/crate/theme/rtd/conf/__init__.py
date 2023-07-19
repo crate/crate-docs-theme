@@ -162,8 +162,11 @@ myst_enable_extensions = [
     "deflist",
     "fieldlist",
     "html_admonition",
+    "html_image",
     "linkify",
+    "replacements",
     "strikethrough",
+    "substitution",
     "tasklist",
 ]
 

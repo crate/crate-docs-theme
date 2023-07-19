@@ -62,6 +62,7 @@ setup(
         "Sphinx>=3.5,<6",
         "Jinja2>=3,<3.1",
         "docutils==0.16",
+        "docutils-stubs==0.0.22",
         "myst-parser[linkify]<2",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design<1",
