@@ -148,7 +148,8 @@ copybutton_prompt_is_regexp = True
 # Configure linkchecker
 linkcheck_ignore = [
     # Breaks accessibility via JS ¯\_(ツ)_/¯
-    "https://www.iso.org/obp/ui/.*"
+    "https://www.iso.org/obp/ui/.*",
+    "https://example.org/.*",
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 15
