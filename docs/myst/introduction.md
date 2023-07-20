@@ -8,14 +8,14 @@
 >
 > -- https://myst-parser.readthedocs.io/
 
-[MyST](https://myst-parser.readthedocs.io/) is a strict superset of the 
+[MyST](https://myst-parser.readthedocs.io/) is a strict superset of the
 [CommonMark syntax specification](https://spec.commonmark.org/).
 It adds features focussed on scientific and technical documentation authoring. {fas}`star2`
 
 
 ## Details
 
-Roles and directives provide a way to extend the syntax of MyST in an unbound 
+Roles and directives provide a way to extend the syntax of MyST in an unbound
 manner, by interpreting a chunk of text as a specific type of markup, according
 to its name.
 Directives syntax is defined with triple-backticks and curly-brackets, effectively
@@ -36,5 +36,5 @@ significant popularity in recent years, the community was in a big dilemma, and
 surely there have been endless Programming Language Wars-style discussions about
 using reStructuredText vs. Markdown for documentation authoring.
 
-This dilemma has come to an end with MyST now, aiming to follow up on the success 
+This dilemma has come to an end with MyST now, aiming to follow up on the success
 of MySQL and mypy – naming-wise.

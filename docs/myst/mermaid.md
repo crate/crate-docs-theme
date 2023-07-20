@@ -25,7 +25,7 @@ for an introduction.
 sequenceDiagram
   participant Alice
   participant Bob
-  Alice->John: Hello John, how are you?    
+  Alice->John: Hello John, how are you?
 ```
 
 ### Flowchart diagram
