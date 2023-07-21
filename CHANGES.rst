@@ -11,6 +11,7 @@ Unreleased
 - Refactor GitHub feedback component to separate files
 - Migrate version chooser component to sphinx-design dropdown
 - Use compact variant of GitHub feedback component at the top of the page
+- Remove external links indicator
 
 
 2023/05/15 0.27.1
