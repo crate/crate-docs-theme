@@ -8,6 +8,11 @@ html_context.update({
     "conf_py_path": "/docs/",
     "source_suffix": source_suffix,
 
+    # Enable version chooser.
+    "display_version": True,
+    "current_version": "foobar",
+    "versions": [("foobar", None), ("bazqux", None)],
+
     # Enable feedback widget and source/edit links.
     "display_github": True,
     "github_user": "crate",
