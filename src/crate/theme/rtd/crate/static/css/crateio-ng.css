@@ -1,0 +1,24 @@
+/* Version chooser component */
+
+.version-chooser-content {
+  position: absolute;
+}
+.version-chooser-content div.sd-summary-content {
+  position: fixed;
+  z-index: 150;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.version-chooser-container {
+  float: right;
+}
+.version-chooser-content {
+  position: absolute;
+}
+.version-chooser-title {
+  font-weight: unset !important;
+}
+.version-chooser-link {
+  color: #222222;
+}

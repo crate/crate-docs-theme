@@ -855,10 +855,6 @@ a.learn-more-link,
   padding: 10px 20px;
 }
 
-.version-select-container {
-  float: right;
-  text-align: right;
-}
 .view-on-github {
 }
 .view-on-github .fa-github:before {
