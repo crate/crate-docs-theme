@@ -1,3 +1,10 @@
+/* Locate feedback and version chooser components on the top right of the page */
+.page-tools {
+  float: right;
+  display: flex;
+  gap: 0.3em;
+}
+
 /* Version chooser component */
 
 .version-chooser-content {
@@ -11,7 +18,6 @@
 }
 
 .version-chooser-container {
-  float: right;
 }
 .version-chooser-content {
   position: absolute;
@@ -20,5 +26,27 @@
   font-weight: unset !important;
 }
 .version-chooser-link {
+  color: #222222;
+}
+
+/* GitHub feedback component */
+.feedback-compact-container {
+}
+.feedback-compact-content {
+  position: absolute;
+}
+.feedback-compact-content div.sd-summary-content {
+  position: fixed;
+  z-index: 150;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.feedback-compact-title {
+}
+details.feedback-compact-content:not([open]) .feedback-compact-title {
+    display: none;
+}
+.feedback-compact-link {
   color: #222222;
 }
