@@ -1,14 +1,18 @@
 from crate.theme.rtd.conf.fake import *
 
-# Mimic some bits of the RTD context to be propagated to its Sphinx builder.
+# Mimic some bits of the RTD context being propagated to its Sphinx builder.
 # https://github.com/readthedocs/readthedocs.org/blob/main/readthedocs/doc_builder/backends/sphinx.py
 html_context.update({
+
+    # Generic settings.
+    "conf_py_path": "/docs/",
+    "source_suffix": source_suffix,
+
+    # Enable feedback widget and source/edit links.
     "display_github": True,
     "github_user": "crate",
     "github_repo": "crate-docs-theme",
     "github_version": "main",
-    "conf_py_path": "/docs/",
-    "source_suffix": source_suffix,
 })
 
 
