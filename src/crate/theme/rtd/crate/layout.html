@@ -90,23 +90,11 @@
         </div>
         <div class="col-md-8 col-lg-9" role="main">
           <div class="wrapper-content-right">
+
             {%- if display_version %}
-            <div class="version-select-container">
-              <div data-delay="0" class="w-dropdown">
-                <div class="w-dropdown-toggle toggle">
-                  <div><a href="{{ pathto(master_doc) }}">v:{{ current_version }}</a></div>
-                  <div class="w-icon-dropdown-toggle toggle-icon"></div>
-                </div>
-                {%- if versions %}
-                <nav class="w-dropdown-list dropdown-list">
-                  {% for slug, url in versions %}
-                  <a href="https://crate.io/{{ theme_canonical_url_path|replace('en/latest/', '') }}{{ rtd_language }}/{{ slug }}/" class="w-dropdown-link">{{ slug }}</a>
-                  {% endfor %}
-                </nav>
-                {%- endif %}
-              </div>
-            </div>
+            {% include "version_chooser.html" %}
             {%- endif %}
+
             {% block body %}{% endblock %}
           </div>
 
