@@ -1,0 +1,87 @@
+<!-- GitHub feedback component: Rating, issues, and links to files -->
+
+<div class="view-on-github">
+  <div id="cr-docs-feedback" class="cr-docs-feedback-container">
+    <div class="cr-docs-feedback-header">
+      <div class="cr-docs-feedback-headline">
+          <h2>Feedback</h2>
+      </div>
+    </div>
+
+     <div id="cr-docs-rating" class="cr-docs-rating-container cr-nojs-hide">
+        <div class="cr-rating-content">
+            <div class="cr-rating">
+              <form id="ratingForm">
+                <span class="cr-ratingtext">How helpful was this page?</span>
+                <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Great!"><span class="cr-stars-label">5 stars</span></label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good"><span class="cr-stars-label">4 stars</span></label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh"><span class="cr-stars-label">3 stars</span></span></label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Bad"><span class="cr-stars-label">2 stars</span></label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Ugh..."><span class="cr-stars-label">1 star</span></label>
+                </fieldset>
+                <div id="ratingStatus"></div>
+                <button id="ratingVote" class="submit">Submit</button>
+              </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="cr-feedback-content">
+
+      </div>
+
+      <div class="cr-docs-feedback-meta">
+        <a id="docs-feedback-open-issue" rel="noopener" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/issues/new?labels=team:%20tech%20writing,triage&body={{
+          '###  Documentation feedback'|urlencode }}{{ '%0A'
+        }}{{ '%0A'
+        }}{{
+          '<!--Please do not edit or remove the following information -->'|urlencode }}{{ '%0A '
+        }}{{ '%0A'
+        }}{{
+          '- Page title: '|urlencode }}{{ title|striptags|urlencode }}{{ '%0A'
+        }}{{
+          '- Page URL: https://crate.io/'|urlencode }}{{ theme_canonical_url_path|urlencode }}{{ pagename|urlencode }}.html{{ '%0A'
+        }}{{
+          '- Source: https://'|urlencode }}{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path|urlencode }}{{ pagename|urlencode }}{{ suffix }}{{ '%0A'
+        }}{{ '%0A'
+        }}---{{ '%0A'
+        }}{{ '%0A'
+        }}{{
+          '<!-- Please add your comments here -->'|urlencode }}{{ '%0A'
+        }}{{ '%0A'
+        }}" target="_blank" title="New issue">New&nbsp;issue</a>
+        <a id="docs-feedback-edit-document" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('edit') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" rel="noopener" target="_blank" title="Edit on GitHub">Edit&nbsp;on&nbsp;GitHub</a>
+
+        <a id="docs-feedback-open-github" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" rel="noopener" target="_blank" title="View on GitHub">View&nbsp;on&nbsp;GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+{% include "github_feedback_full.js" %}
+
+function main() {
+  var feedbackLoaded = false;
+
+  // Check if feedback section is in viewport.
+  var feedbackbox = document.querySelector('#cr-docs-feedback');
+  if (isInViewport(feedbackbox)) {
+    renderIssues();
+    feedbackLoaded = true;
+  }
+
+  $(window).scroll(function () {
+    if (!feedbackLoaded ){
+      if (isInViewport(feedbackbox)) {
+        renderIssues();
+        feedbackLoaded = true;
+      }
+    }
+  });
+}
+
+main();
+</script>

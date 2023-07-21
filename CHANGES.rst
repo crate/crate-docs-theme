@@ -8,6 +8,7 @@ Unreleased
 
 - Add modern components from the Sphinx ecosystem: myst-parser, sphinx-design,
   sphinx-inline-tabs, sphinx-subfigure, sphinx-togglebutton, sphinxcontrib-mermaid.
+- Refactor GitHub feedback component to separate files
 
 
 2023/05/15 0.27.1
