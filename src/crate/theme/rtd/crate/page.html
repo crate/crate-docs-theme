@@ -77,7 +77,11 @@
 {% block footer %}
 <footer class="sb-footer">
   <div class="sb-footer__inner sb-page-width">
+    {% if project == 'SQL 99' %}
+    {% include "sections/footer_sql99.html" %}
+    {% else %}
     {% include "sections/footer.html" %}
+    {% endif %}
   </div>
 </footer>
 {% endblock footer %}
