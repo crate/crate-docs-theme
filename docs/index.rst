@@ -23,11 +23,12 @@ Overview
 This section outlines a few features, elements, and style-guides by example.
 
 
-Modernized
+Gallery NG
 ==========
 
 A side-by-side gallery demonstrating both reStructuredText and Markedly
 Structured Text syntax.
+
 
 .. grid::
 
@@ -48,24 +49,25 @@ Structured Text syntax.
             myst/index
 
 
-Legacy
-======
+Legacy gallery
+==============
 
 The legacy feature gallery exclusively uses reStructuredText.
 
 .. toctree::
-    :maxdepth: 1
+    :titlesonly:
+    :caption: Elements
 
-    headings
     admonitions
-    lists
-    tables
-    links
-    images
-    diagrams
     codesnippets
-    subpage
+    diagrams
     glossary
+    headings
+    images
+    links
+    lists
+    subpage
+    tables
 
 
 

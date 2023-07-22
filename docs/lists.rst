@@ -1,6 +1,6 @@
-========================
-Different kinds of lists
-========================
+=====
+Lists
+=====
 
 .. contents::
    :local:

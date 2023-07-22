@@ -1,6 +1,6 @@
-=========================
-Different kinds of images
-=========================
+==================
+Images and figures
+==================
 
 .. highlight:: rst
 
