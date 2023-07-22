@@ -64,6 +64,7 @@ setup(
         "docutils==0.16",
         "docutils-stubs==0.0.22",
         "myst-parser[linkify]<3",
+        "sphinx-basic-ng==1.0.0b2",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design<1",
         "sphinx-design-elements==0.1.0",
