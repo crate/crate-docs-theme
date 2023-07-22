@@ -17,7 +17,7 @@ build:
   # Bundle assets, because `pip install --editable=.` does not do it.
   jobs:
     pre_build:
-      - make develop
+      - make bundle-develop
       - cd docs; make bundle-assets
 
 # Build documentation in the docs/ directory with Sphinx

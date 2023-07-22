@@ -69,7 +69,7 @@ $(TWINE):
 .PHONY: build
 build: $(TWINE)
 	@ $(MAKE) clean
-	@ $(MAKE) bundle-assets
+	@ $(MAKE) bundle-release
 	. $(ACTIVATE) && \
 	    $(PYTHON) -m build --outdir $(DIST_DIR)
 	. $(ACTIVATE) && \
@@ -78,21 +78,25 @@ build: $(TWINE)
 .PHONY: nodejs-lts
 nodejs-lts: $(NODE)
 
-.PHONY: bundle-assets
-bundle-assets: nodejs-lts
+.PHONY: bundle-release
+bundle-release: nodejs-lts
 	. $(ACTIVATE) && \
 		printf "Node.js version: "; node --version && \
 		printf "Yarn version: "; yarn --version && \
 		yarn install && \
 		npx webpack --mode=production
 
-.PHONY: develop
-develop: setup-virtualenv nodejs-lts
+.PHONY: bundle-develop
+bundle-develop: setup-virtualenv nodejs-lts
 	. $(ACTIVATE) && \
 		printf "Node.js version: "; node --version && \
 		printf "Yarn version: "; yarn --version && \
 		yarn install && \
-		npx webpack --mode=development
+		npx webpack --mode=development $(OPTIONS)
+
+.PHONY: bundle-watch
+bundle-watch:
+	$(MAKE) bundle-develop OPTIONS=--watch
 
 .PHONY: upload
 upload: $(TWINE)
