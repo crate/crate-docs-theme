@@ -85,7 +85,7 @@ How to use this documentation:
 
 - Verify that each page element displays correctly. Some page elements identify
   themselves (e.g., the :ref:`index`) and some elements describe how they ought
-  to appear (e.g., the :ref:`first admonition <first-admonition>`).
+  to appear (e.g., the :ref:`admonition gallery <admonition-gallery>`).
 
 How to improve this documentation:
 
