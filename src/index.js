@@ -13,3 +13,4 @@
  **/
 import "./crate/theme/rtd/crate/static/css/index.css";
 import "./crate/theme/rtd/crate/static/js/index";
+import "./crate/theme/rtd/crate/static/vendor/furo/index";
