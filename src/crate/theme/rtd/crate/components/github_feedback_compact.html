@@ -1,5 +1,10 @@
 <!-- GitHub feedback component: Links to report issue, and source/edit links -->
 
+{% import "settings.html" as settings with context %}
+
+{%
+set suffix = settings.suffix
+%}
 {%
 set source_path = conf_py_path + pagename + suffix
 %}
