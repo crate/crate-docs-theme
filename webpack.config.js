@@ -5,8 +5,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                test: [
+                    /\.css$/i,
+                    /\.s[ac]ss$/i,
+                ],
+                use: [
+                  { loader: "style-loader" },
+                  { loader: "css-loader", options: { sourceMap: true } },
+                  { loader: "postcss-loader", options: { sourceMap: true } },
+                  { loader: "sass-loader", options: { sourceMap: true } },
+                ],
             },
             {
                 test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf|otf)$/i,

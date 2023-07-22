@@ -67,7 +67,9 @@ The legacy feature gallery exclusively uses reStructuredText.
     links
     lists
     subpage
+    projects
     tables
+    typography
 
 
 
