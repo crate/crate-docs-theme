@@ -1,13 +1,10 @@
 <!-- GitHub feedback component: Links to report issue, and source/edit links -->
 
+
 {% import "settings.html" as settings with context %}
 
-{%
-set suffix = settings.suffix
-%}
-{%
-set source_path = conf_py_path + pagename + suffix
-%}
+{% set suffix = settings.suffix %}
+{% set source_path = conf_py_path + pagename + suffix %}
 
 <div class="feedback-compact-container">
   <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-0 sd-fade-in feedback-compact-content">  <!-- open="" -->
