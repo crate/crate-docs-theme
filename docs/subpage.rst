@@ -1,6 +1,6 @@
-=========
-A subpage
-=========
+====================
+Sections and rubrics
+====================
 
 This is a subpage.
 

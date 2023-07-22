@@ -1,6 +1,6 @@
-======================
-All levels of headings
-======================
+========
+Headings
+========
 
 
 .. _top-level-heading:
