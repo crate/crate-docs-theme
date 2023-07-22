@@ -838,22 +838,6 @@ a.learn-more-link,
   margin: 0px;
 }
 
-.admonition {
-  margin-top: 16px !important;
-  margin-bottom: 16px !important;
-  padding: 7px;
-}
-
-.admonition p {
-  margin-bottom: 0px;
-  padding: 10px 20px;
-}
-
-.admonition-title {
-  display: block;
-  margin: 0px;
-  padding: 10px 20px;
-}
 
 .view-on-github {
 }

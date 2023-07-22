@@ -786,11 +786,6 @@ body .mm-menu .navbar-nav {
   margin-left: 0.3em;
 }
 
-.admonition a {
-  color: black;
-  text-decoration: underline;
-}
-
 table.docutils {
   margin-bottom: 16px;
 }
@@ -1610,14 +1605,6 @@ footer .footer-listitem-new:first-child a {
   .cr-navtoggle.cr-navtoggle-mid {
     margin: 8px 0;
   }
-}
-
-div.admonition ul.simple p {
-  padding: 0;
-}
-
-div.admonition ul.open p {
-  padding: 0 0 10px 0;
 }
 
 /**

@@ -28,60 +28,90 @@ blockquote p:last-child {
     margin-bottom: 0;
 }
 
-/** admonitions **/
 
-div.admonition p {
+
+/** Admonitions: Regular style **/
+div.admonition:not(.hero) p {
+    padding: unset;
+    margin: unset;
+}
+div.admonition:not(.hero) {
+    padding-left: 3em;
+    font-size: smaller;
+    background-position: top 0.75em left 1em;
+    background-size: 1.25em;
+    border-left-width: 2px;
+}
+
+
+/** Admonitions: Hero style **/
+div.admonition.hero {
+    padding: 15px 15px 15px 95px;
+    margin: 20px 0;
+    background-position: top 25px left 25px;
+    background-size: 3em;
+    border-left-width: 4px;
+}
+div.admonition.hero p {
     padding: 10px 0;
     margin: 0;
 }
-
-div.admonition {
-    padding: 15px 15px 15px 95px;
-    margin: 20px 0;
-    border-left: 0;
-    background-position: top 25px left 25px !important;
+div.admonition.hero a {
+  color: black;
+  text-decoration: underline;
 }
-
-div.admonition ul {
+div.admonition.hero ul {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0;
+}
+div.admonition.hero ul.simple p {
+  padding: 0;
+}
+div.admonition.hero ul.open p {
+  padding: 0 0 10px 0;
+}
+
+
+/** Admonitions: General **/
+div.admonition {
+    border-left-style: solid;
 }
 
 div.note {
     background: url(../images/admonition/icon-docs-note.svg) no-repeat;
     background-color: #eefafe;
-    border-left: 4px solid #009DC7;
+    border-color: #009DC7;
 }
 
 div.seealso {
     background: url(../images/admonition/icon-docs-seealso.svg) no-repeat;
     background-color: #f4f4f4;
-    border-left: 4px solid #999999;
+    border-color: #999999;
 }
 
 div.tip {
     background: url(../images/admonition/icon-docs-tip.svg) no-repeat;
     background-color: #eefafe;
-    border-left: 4px solid #009DC7;
+    border-color: #009DC7;
 }
 
 div.caution {
     background: url(../images/admonition/icon-docs-caution.svg) no-repeat;
     background-color: #fff2ed;
-    border-left: 4px solid #ff814d;
+    border-color: #ff814d;
 }
 
 div.warning {
     background: url(../images/admonition/icon-docs-warning.svg) no-repeat;
     background-color: #fdeeee;
-    border-left: 4px solid #ec4d4d;
+    border-color: #ec4d4d;
 }
 
 div.danger {
     background: url(../images/admonition/icon-docs-danger.svg) no-repeat;
     background-color: #fdeeee;
-    border-left: 4px solid #ec4d4d;
+    border-color: #ec4d4d;
 }
 
 .note .admonition-title,
