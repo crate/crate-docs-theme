@@ -59,8 +59,10 @@ setup(
     install_requires=[
         "Jinja2>=3,<3.2",
         "docutils==0.16",
+        "docutils-stubs==0.0.22",
         "myst-parser[linkify]<4",
         "sphinx>=4.6,<7",
+        "sphinx-basic-ng==1.0.0b2",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design-elements==0.4.0",
         "sphinx-inline-tabs",
