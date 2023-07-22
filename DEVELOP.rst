@@ -34,43 +34,51 @@ Once you have a branch, the basic workflow goes like this:
    and go back to step one
 
 The best way to test your changes is to build the sample docs for this
-project. See the `Documentation`_ section below for details. The command
-to use for this is ``make dev``.
+project in a continuous manner, i.e. to be able to inspect changes in
+near real-time when editing files and resources.
+
+The optimal workflow is to invoke ``make bundle-watch`` within the
+top-level directory, and, in another terminal session, change to the
+``docs`` directory ``cd docs``, and invoke ``make dev``.
+
+See the `Documentation`_ section below for more details.
 
 Once the webserver is running, you can view your local copy of the docs
 by visiting http://127.0.0.1:8000 in a web browser.
 
-For all other Crate projects, ``make dev`` fetches a released version of
-the theme from `PyPI`_. However, this project is different. When you run
-``make dev``, the build system creates a mock release of the theme using
-your local files and installs it into the Python virtual environment
-used by the build system. This trick allows you to preview what the theme
-would look like if it were released.
-
-The Python virtual environment caches packages, including the mock one
-you use for testing. Accordingly, you must reset the cache every time
-you make a change to the theme that you want to preview. You can do that
-like so::
-
-    $ make reset
-
-When you're ready, create a pull request.
-
-*Note*: Be sure to update the ``CHANGES.rst`` file with a description of
-what you changed. (Be sure to add your change items to the *Unreleased*
-section.)
-
-Once an appropriate reviewer has approved the pull request, merge your
-changes to the ``main`` branch.
-
+When you are ready, create a pull request. Once an appropriate reviewer has
+approved the pull request, merge your changes to the ``main`` branch.
 A project admin should be asked to complete the remaining steps.
+
+.. attention::
+
+    Make sure to update the ``CHANGES.rst`` file with a description of
+    what you changed. (Be sure to add your change items to the *Unreleased*
+    section.)
+
+.. note::
+
+    For all other Crate projects, ``make dev`` fetches a released version of
+    the theme from `PyPI`_. However, this project is different. When you run
+    ``make dev``, the build system creates a mock release of the theme using
+    your local files and installs it into the Python virtual environment
+    used by the build system. This trick allows you to preview what the theme
+    would look like if it were released.
+
+    The Python virtual environment caches packages, including the mock one
+    you use for testing. Accordingly, you must reset the cache every time
+    you make a change to the theme that you want to preview. You can do that
+    like so::
+
+        $ make reset
 
 
 JavaScript, CSS and asset files
 -------------------------------
 
 Add new JavaScript and CSS to ``custom.css`` and ``custom.js`` respectively.
-In order to run the bundling process, invoke those commands::
+In order to run the bundling process, invoke the shortcut command
+``make bundle-develop``, which in turn invokes those commands::
 
     yarn install
     npx webpack --mode=development
@@ -184,7 +192,7 @@ We write the documentation with `Sphinx`_ and `ReStructuredText`_.
 Working on the documentation
 ----------------------------
 
-Python >= 3.7 is required.
+Python >= 3.7 or higher is required.
 
 Change into the ``docs`` directory:
 
