@@ -397,14 +397,12 @@ a:focus {
 
 header.header-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  position: fixed;
   z-index: 901;
   width: 100%;
   transition: all 0.3s ease;
   will-change: transform;
   right: 0;
   left: 0;
-  top: 0;
   background: #fff;
 }
 
