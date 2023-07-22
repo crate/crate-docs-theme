@@ -1,0 +1,15 @@
+// Sidebar fix: Unset `position: fixed`, otherwise drawers will not be visible.
+
+@media (max-width: $full-width - $sidebar-width)
+  // Collapse "navigation".
+  .sidebar-drawer
+    position: unset
+
+
+// Sidebar drawer icon positioning.
+
+.sidebar-primary-container
+  float: left
+  i
+    height: 1.75em
+    width: 1.75em
