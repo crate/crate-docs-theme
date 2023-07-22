@@ -20,6 +20,8 @@
 # software solely pursuant to the terms of the relevant commercial agreement.
 
 from crate.theme import rtd as theme
+from crate.theme.rtd import __version__
+from crate.theme.rtd.conf.furo import _html_page_context
 from os import environ
 
 source_suffix = ".rst"
@@ -281,7 +283,19 @@ def setup(app):
         except Exception as ex:
             print(f"ERROR: Unable to adjust `html_context`. Reason: {ex}")
 
+    # Modern / NG / Furo.
+    app.require_sphinx("3.0")
+    app.connect("html-page-context", _html_page_context)
+
+    # Customizations.
     app.connect("builder-inited", configure_self_hosted_on_path)
     app.connect("builder-inited", set_proxied_api_host)
     app.connect("builder-inited", set_proxied_static_path)
     app.connect("builder-inited", apply_html_context_custom)
+
+    return {
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
+        "version": __version__,
+    }
+

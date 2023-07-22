@@ -57,9 +57,10 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "Jinja2>=3,<3.2",
         "docutils==0.16",
         "docutils-stubs==0.0.22",
+        "furo==2023.05.20",
+        "jinja2>=3.2,<4",
         "myst-parser[linkify]<4",
         "sphinx>=4.6,<7",
         "sphinx-basic-ng==1.0.0b2",
