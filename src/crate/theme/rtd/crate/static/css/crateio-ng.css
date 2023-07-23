@@ -25,6 +25,8 @@ details.sd-dropdown summary.sd-summary-title {
 
 /* Version chooser component */
 
+.version-chooser-container {
+}
 .version-chooser-content {
   position: absolute;
 }
@@ -33,14 +35,8 @@ details.sd-dropdown summary.sd-summary-title {
   z-index: 150;
   background: #fff;
   border: 1px solid #ccc;
-  width: max-content;
 }
 
-.version-chooser-container {
-}
-.version-chooser-content {
-  position: absolute;
-}
 .version-chooser-title {
   font-weight: unset !important;
 }
@@ -56,7 +52,7 @@ details.sd-dropdown summary.sd-summary-title {
 }
 .feedback-compact-content div.sd-summary-content {
   position: absolute;
-  z-index: 175;
+  z-index: 150;
   background: #fff;
   border: 1px solid #ccc;
   width: max-content;
@@ -71,7 +67,6 @@ details.feedback-compact-content:not([open]) .feedback-compact-title {
   color: #222222;
 }
 
-
 /* Fix text alignment with sphinx-togglebutton */
 button.toggle-button {
   display: inline-flex;
@@ -85,6 +80,10 @@ button.toggle-button {
   }
 }
 
+/* Attempt to fix jumping border */
+details.sd-dropdown:not([open]).sd-card {
+  border: 1px solid transparent;
+}
 
 /* Visually disable annoying "notificatio-pro" component */
 .notificatio-pro {
