@@ -1,0 +1,8 @@
+// Adjust secondary sidebar / right navigation.
+// Larger font sizes than Furo.
+@mixin settings {
+    // Table of Contents
+  --toc-font-size: var(--font-size--small);
+  --toc-font-size--mobile: var(--font-size--normal);
+  --toc-title-font-size: var(--font-size--small--2);
+}
