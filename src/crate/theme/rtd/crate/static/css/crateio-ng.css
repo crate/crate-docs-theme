@@ -19,21 +19,18 @@ https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-
 
 /* Version chooser component */
 
-.version-chooser-content {
-  position: absolute;
-}
-.version-chooser-content div.sd-summary-content {
-  position: fixed;
-  z-index: 150;
-  background: #fff;
-  border: 1px solid #ccc;
-}
-
 .version-chooser-container {
 }
 .version-chooser-content {
   position: absolute;
 }
+.version-chooser-content div.sd-summary-content {
+  position: fixed;
+  z-index: 500;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
 .version-chooser-title {
   font-weight: unset !important;
 }
@@ -49,7 +46,7 @@ https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-
 }
 .feedback-compact-content div.sd-summary-content {
   position: fixed;
-  z-index: 150;
+  z-index: 500;
   background: #fff;
   border: 1px solid #ccc;
 }
@@ -61,4 +58,9 @@ details.feedback-compact-content:not([open]) .feedback-compact-title {
 }
 .feedback-compact-link {
   color: #222222;
+}
+
+/* Attempt to fix jumping border */
+details.sd-dropdown:not([open]).sd-card {
+  border: 1px solid transparent;
 }
