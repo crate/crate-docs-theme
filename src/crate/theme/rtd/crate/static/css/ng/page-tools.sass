@@ -1,20 +1,23 @@
-/* Locate feedback and version chooser components on the top right of the page */
+/**
+  Page tools: GitHub feedback and version chooser.
+
+  Two self-contained components on the top right of the page.
+
+  - GitHub feedback: Similar to the GitHub icon overlay menu of the Executable Books theme.
+  - Version chooser: Similar to RTD's version chooser overlay, but a bit more focused.
+
+
+// Locate components on the right side of the section,
+// and display them in a Flexbox.
 .page-tools
   float: right
   display: flex
   gap: 0.3em
 
-
-/* Version chooser and GitHub feedback components */
-// .version-chooser-container,
-// .feedback-compact-container
-
+// Decouple from page flow, to not push around other downstream elements.
 .version-chooser-content,
 .feedback-compact-content
   position: absolute
-
-.version-chooser-content,
-.feedback-compact-content
   div.sd-summary-content
     position: absolute
     z-index: 150
@@ -22,14 +25,21 @@
     border: 1px solid #ccc
     width: max-content
 
+// Titles: Do not use bold font.
+.feedback-compact-title,
 .version-chooser-title
-  font-weight: unset !important
+  font-weight: normal !important
 
-// .feedback-compact-title
+// Feedback title: Do not display when collapsed.
+/*
+  details.feedback-compact-content:not([open])
+    .feedback-compact-title
+      display: none
 
+// Set link text color.
 .version-chooser-link,
 .feedback-compact-link
-  color: #222222
+  color: $pagetools-text-color
 
 /* Fix text alignment with sphinx-togglebutton */
 button.toggle-button
@@ -42,6 +52,7 @@ button.toggle-button
     right: 0
 
 /* Attempt to fix jumping border */
+// FIXME: Will cause other kinds of wobbles.
 /*
  details.sd-dropdown:not([open]).sd-card
   border: 1px solid transparent
