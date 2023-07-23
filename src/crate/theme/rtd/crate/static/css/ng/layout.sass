@@ -1,0 +1,17 @@
+/* Page layout, based on sphinx-basic-ng */
+
+/*
+ Use sticky instead of fixed header.
+ https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-1k30
+ */
+
+.sb-header
+  position: sticky
+  top: 0
+
+
+// Sidebar: Make drawers sticky, to prevent scrolling out of the view port.
+.sidebar-drawer,
+.toc-drawer
+  position: sticky
+  top: 3em
