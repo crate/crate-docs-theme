@@ -1,23 +1,14 @@
-@import "../styles/variables/layout"
-
-
-/**
- * Adjust secondary sidebar / right navigation.
- *
- * - Font sizes
- * - Sticky positioning
- */
+@import "../../vendor/furo/styles/variables/layout"
 
 // Apply defined settings to body element.
 body
   @include settings
 
 
-// Sidebar: Make drawers sticky, to prevent scrolling out of the view port.
-.sidebar-drawer,
-.toc-drawer
-  position: sticky
-  top: 3em
+// Sidebar: When primary sidebar is not collapsed, show its
+// content above all others.
+.sb-sidebar-primary
+  z-index: 50
 
 
 // Sidebar: Unset `position: fixed`, otherwise content

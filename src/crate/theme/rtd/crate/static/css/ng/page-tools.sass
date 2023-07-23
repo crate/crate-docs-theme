@@ -1,0 +1,37 @@
+/* Locate feedback and version chooser components on the top right of the page */
+.page-tools
+  float: right
+  display: flex
+  gap: 0.3em
+
+
+/* Version chooser and GitHub feedback components */
+// .version-chooser-container,
+// .feedback-compact-container
+
+.version-chooser-content,
+.feedback-compact-content
+  position: absolute
+
+.version-chooser-content,
+.feedback-compact-content
+  div.sd-summary-content
+    position: fixed
+    z-index: 150
+    background: #fff
+    border: 1px solid #ccc
+
+.version-chooser-title
+  font-weight: unset !important
+
+// .feedback-compact-title
+
+.version-chooser-link,
+.feedback-compact-link
+  color: #222222
+
+/* Attempt to fix jumping border */
+/*
+ details.sd-dropdown:not([open]).sd-card
+  border: 1px solid transparent
+ */
