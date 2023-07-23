@@ -1,3 +1,6 @@
+/**
+  Custom settings to adjust the style.
+
 // Adjust secondary sidebar / right navigation.
 // Larger font sizes than Furo.
 @mixin settings
@@ -8,3 +11,9 @@
 
 // Define size of the icons used for expanding/collapsing sidebar drawers.
 $sidebar-drawer-icon-size: 1.75em
+$pagetools-text-color: #222222
+
+
+// Apply defined settings to body element.
+body
+  @include settings
