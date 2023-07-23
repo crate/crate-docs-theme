@@ -1,8 +1,14 @@
-@import "../../vendor/furo/styles/variables/layout"
+/**
+  A few adjustments to Furo's styles.
 
-// Apply defined settings to body element.
-body
-  @include settings
+  Either they need fixes, or the adjustments are needed because of side
+  effects coming from the other styles of the theme, which is more probable.
+
+  TODO: Progressively get rid of all legacy styles.
+
+
+// Import Furo's variables.
+@import "../../vendor/furo/styles/variables/layout"
 
 
 // Sidebar: When primary sidebar is not collapsed, show its
@@ -24,18 +30,3 @@ body
   // Collapse "toc" into the icon.
   .toc-drawer
     position: unset
-
-
-// Sidebar: Adjust drawer icon positioning and size.
-
-.sidebar-container-primary
-  float: left
-  i
-    height: $sidebar-drawer-icon-size
-    width: $sidebar-drawer-icon-size
-
-.sidebar-container-secondary
-  float: right
-  i
-    height: $sidebar-drawer-icon-size
-    width: $sidebar-drawer-icon-size
