@@ -7,8 +7,9 @@ body
 
 // Sidebar: When primary sidebar is not collapsed, show its
 // content above all others.
-.sb-sidebar-primary
-  z-index: 50
+@media (max-width: $full-width - $sidebar-width)
+  .sb-sidebar-primary
+    z-index: 50
 
 
 // Sidebar: Unset `position: fixed`, otherwise content
