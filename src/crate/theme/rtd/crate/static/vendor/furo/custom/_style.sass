@@ -1,3 +1,23 @@
+@import "../styles/variables/layout"
+
+
+/**
+ * Adjust secondary sidebar / right navigation.
+ *
+ * - Font sizes
+ * - Sticky positioning
+ */
+
+// Apply defined settings to body element.
+body
+  @include settings
+
+// Account for higher top header.
+.sidebar-sticky,
+.toc-sticky
+  top: 3em
+
+
 // Sidebar fix: Unset `position: fixed`, otherwise drawers will not be visible.
 
 @media (max-width: $full-width - $sidebar-width)
@@ -5,11 +25,22 @@
   .sidebar-drawer
     position: unset
 
+@media (max-width: $full-width)
+  // Collapse "toc" into the icon.
+  .toc-drawer
+    position: unset
+
 
 // Sidebar drawer icon positioning.
 
 .sidebar-primary-container
   float: left
+  i
+    height: 1.75em
+    width: 1.75em
+
+.sidebar-secondary-container
+  float: right
   i
     height: 1.75em
     width: 1.75em
