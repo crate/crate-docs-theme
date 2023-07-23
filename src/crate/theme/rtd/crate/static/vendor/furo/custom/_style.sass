@@ -12,13 +12,16 @@
 body
   @include settings
 
-// Account for higher top header.
-.sidebar-sticky,
-.toc-sticky
+
+// Sidebar: Make drawers sticky, to prevent scrolling out of the view port.
+.sidebar-drawer,
+.toc-drawer
+  position: sticky
   top: 3em
 
 
-// Sidebar fix: Unset `position: fixed`, otherwise drawers will not be visible.
+// Sidebar: Unset `position: fixed`, otherwise content
+// will not be visible on drawers when not collapsed.
 
 @media (max-width: $full-width - $sidebar-width)
   // Collapse "navigation".
@@ -31,16 +34,16 @@ body
     position: unset
 
 
-// Sidebar drawer icon positioning.
+// Sidebar: Adjust drawer icon positioning and size.
 
-.sidebar-primary-container
+.sidebar-container-primary
   float: left
   i
-    height: 1.75em
-    width: 1.75em
+    height: $sidebar-drawer-icon-size
+    width: $sidebar-drawer-icon-size
 
-.sidebar-secondary-container
+.sidebar-container-secondary
   float: right
   i
-    height: 1.75em
-    width: 1.75em
+    height: $sidebar-drawer-icon-size
+    width: $sidebar-drawer-icon-size
