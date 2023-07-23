@@ -1,6 +1,6 @@
 @import "~normalize.css";
 @import "components.css";
 @import "crateio.css";
-@import "crateio-ng.css";
+@import "./ng/index.sass";
 @import "crateio-rtd.css";
 @import "custom.css";
