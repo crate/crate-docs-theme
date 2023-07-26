@@ -37,6 +37,7 @@ Unreleased
 
   - "CrateDB Cloud" documentation has been bundled into a single repository, now
     located at ``/docs/cloud``.
+  - Two more links to "Examples and stacks" and "Community", have been added.
 
 
 2023/05/15 0.27.1
