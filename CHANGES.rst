@@ -33,6 +33,11 @@ Unreleased
 - Improve visual appearance of admonition components
 - Add new ``cloud-docs`` documentation project
 
+- Edit primary navigation in left sidebar.
+
+  - "CrateDB Cloud" documentation has been bundled into a single repository, now
+    located at ``/docs/cloud``.
+
 
 2023/05/15 0.27.1
 -----------------

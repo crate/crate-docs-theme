@@ -33,13 +33,21 @@
   {% else %}
     <li class="navleft-item"><a href="/docs/crate/reference/">Reference</a></li>
   {% endif %}
-  {% if project == 'CrateDB: Clients and Tools' %}
+  {% if project == 'CrateDB Cloud' %}
     <li class="current">
+      <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Cloud</a>
+      {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
+  {% else %}
+    <li class="navleft-item"><a href="/docs/cloud/">CrateDB Cloud</a></li>
+  {% endif %}
+  {% if project == 'CrateDB: Clients and Tools' %}
+    <li class="current border-top">
       <a class="current-active" href="{{ pathto(master_doc) }}">Clients and Tools</a>
       {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
   {% else %}
-    <li class="navleft-item"><a href="/docs/crate/clients-tools/">Clients and Tools</a></li>
+    <li class="navleft-item border-top"><a href="/docs/crate/clients-tools/">Clients and Tools</a></li>
   {% endif %}
 
   {% if project == 'CrateDB: Admin UI' %}
@@ -58,42 +66,6 @@
   {% else %}
   <li class="navleft-item"><a href="/docs/crate/crash/">Crash CLI</a></li>
   {% endif %}
-
-  <li class="navleft-item">CrateDB Cloud</li>
-  <ul>
-    {% if project == 'CrateDB Cloud: Tutorials' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}">Tutorials</a>
-        {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
-    {% else %}
-      <li class="navleft-item"><a href="/docs/cloud/tutorials/">Tutorials</a></li>
-    {% endif %}
-    {% if project == 'CrateDB Cloud: How-Tos' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}">How-To Guides</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
-    {% else %}
-      <li class="navleft-item"><a href="/docs/cloud/howtos/">How-To Guides</a></li>
-    {% endif %}
-    {% if project == 'CrateDB Cloud: Reference' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}">Reference</a>
-        {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
-    {% else %}
-      <li class="navleft-item"><a href="/docs/cloud/reference/">Reference</a></li>
-    {% endif %}
-    {% if project == 'CrateDB Cloud: Croud CLI' %}
-      <li class="current">
-        <a class="current-active" href="{{ pathto(master_doc) }}">Croud CLI</a>
-        {{ toctree(maxdepth=2|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-      </li>
-    {% else %}
-      <li class="navleft-item"><a href="/docs/cloud/cli/">Croud CLI</a></li>
-    {% endif %}
-  </ul>
 
   {% if project == 'CrateDB JDBC' %}
   <li class="current border-top">
