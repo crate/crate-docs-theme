@@ -11,11 +11,11 @@
 
   {% if project == 'CrateDB: Tutorials' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">Install CrateDB</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Install</a>
       {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
   {% else %}
-    <li class="navleft-item"><a href="/docs/crate/tutorials/">Install CrateDB</a></li>
+    <li class="navleft-item"><a href="/docs/crate/tutorials/">Install</a></li>
   {% endif %}
   {% if project == 'CrateDB: How-Tos' %}
     <li class="current">
@@ -27,11 +27,11 @@
   {% endif %}
   {% if project == 'CrateDB: Reference' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">Reference</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Reference</a>
       {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
   {% else %}
-    <li class="navleft-item"><a href="/docs/crate/reference/">Reference</a></li>
+    <li class="navleft-item"><a href="/docs/crate/reference/">CrateDB Reference</a></li>
   {% endif %}
   {% if project == 'CrateDB Cloud' %}
     <li class="current">
@@ -107,8 +107,6 @@
   {% else %}
   <li class="navleft-item"><a href="/docs/npgsql/">.NET Npgsql</a></li>
   {% endif %}
-
-  <li class="navleft-item border-top"><a href="https://github.com/crate/cratedb-examples">Examples and stacks</a></li>
 
   <li class="navleft-item"><a href="https://github.com/crate/crate-sample-apps">Sample applications</a></li>
 

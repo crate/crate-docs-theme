@@ -36,8 +36,9 @@ Unreleased
 - Edit primary navigation in left sidebar.
 
   - "CrateDB Cloud" documentation has been bundled into a single repository, now
-    located at ``/docs/cloud``.
-  - Two more links to "Examples and stacks" and "Community", have been added.
+    located at ``/docs/cloud``
+  - Add link to "Community"
+  - Rename ``Install CrateDB`` to ``Install``, and ``Reference`` to ``CrateDB Reference``
 
 
 2023/05/15 0.27.1
