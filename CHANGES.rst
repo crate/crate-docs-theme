@@ -13,6 +13,7 @@ Unreleased
 - Use compact variant of GitHub feedback component at the top of the page
 - Remove external links indicator
 - Improve visual appearance of admonition components
+- Add new ``cloud-docs`` documentation project
 
 
 2023/05/15 0.27.1
