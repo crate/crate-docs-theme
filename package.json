@@ -1,14 +1,14 @@
 {
   "license": "Apache-2.0",
   "devDependencies": {
-    "css-loader": "^6.7",
-    "expose-loader": "^4.0.0",
+    "css-loader": "^6.8",
+    "expose-loader": "^4.1",
     "jquery": "^3.6.1",
     "js-cookie": "^3.0.1",
     "normalize.css": "^8.0.1",
     "sticky-sidebar": "^3.3.1",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.76",
+    "style-loader": "^3.3",
+    "webpack": "^5.88",
     "webpack-cli": "^4.10",
     "webpack-modernizr-loader": "^5.0.0"
   },
