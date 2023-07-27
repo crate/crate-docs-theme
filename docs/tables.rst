@@ -1,6 +1,6 @@
-=========================
-Different kinds of tables
-=========================
+======
+Tables
+======
 
 A simple ``list-table`` with header.
 

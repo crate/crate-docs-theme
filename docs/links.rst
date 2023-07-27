@@ -1,6 +1,6 @@
-========================
-Different kinds of links
-========================
+================
+Cross references
+================
 
 Glossary links
 ==============

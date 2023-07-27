@@ -2,6 +2,11 @@
  * Keyboard navigation for GitHub. CTRL+G will navigate to
  * the edit page on GitHub for the corresponding document.
 **/
+
+{% import "settings.html" as settings with context %}
+
+{% set suffix = settings.suffix %}
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'g' && event.ctrlKey) {
     {% if check_meta and 'github_url' in meta %}

@@ -1,0 +1,13 @@
+{# Layout: This is used by _every_ Sphinx content page #}
+{% extends "basic-ng/page.html" %}
+
+{# Include main JavaScript/CSS assets #}
+{% block head_extra %}
+  <script src="{{ pathto('_static/bundle/main.js', 1) }}?ver={{ theme_ver }}"></script>
+{% endblock %}
+
+{# Include Furo icons as first body element #}
+{% block body -%}
+{% include "partials/icons.html" %}
+{{ super() }}
+{% endblock %}
