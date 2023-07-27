@@ -59,7 +59,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "Sphinx>=3.5,<6",
+        "Sphinx>=3.5,<8",
         "Jinja2>=3,<3.1",
         "docutils==0.16",
         "docutils-stubs==0.0.22",
