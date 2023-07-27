@@ -32,13 +32,13 @@ Unreleased
 - Remove external links indicator
 - Improve visual appearance of admonition components
 - Add new ``cloud-docs`` documentation project
-
-- Edit primary navigation in left sidebar.
+- Edit primary navigation in left sidebar
 
   - "CrateDB Cloud" documentation has been bundled into a single repository, now
     located at ``/docs/cloud``
-  - Add link to "Community"
+  - Add link to "Community" and "Integration tutorials"
   - Rename ``Install CrateDB`` to ``Install``, and ``Reference`` to ``CrateDB Reference``
+  - Improve appearance of bottom section
 
 
 2023/05/15 0.27.1
