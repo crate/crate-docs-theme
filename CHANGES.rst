@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Fix admonition content styles for links and item lists
+- Fix version chooser enablement
 
 
 2023/07/27 0.28.0
