@@ -169,7 +169,7 @@ div.hero.danger {
 }
 .bs-docs-sidebar {
   padding: 0px 20px 8px 16px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .affix {
