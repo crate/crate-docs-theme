@@ -32,13 +32,13 @@ blockquote p:last-child {
 
 /** Admonitions: Regular style **/
 div.admonition:not(.hero) p {
-    padding: unset;
-    margin: unset;
+    padding: 0.5em 0;
+    margin: 0;
 }
 div.admonition:not(.hero) {
     padding-left: 3em;
     font-size: smaller;
-    background-position: top 0.75em left 1em;
+    background-position: top 1.1em left 1em;
     background-size: 1.25em;
     border-left-width: 2px;
 }
@@ -56,26 +56,25 @@ div.admonition.hero p {
     padding: 10px 0;
     margin: 0;
 }
-div.admonition.hero a {
-  color: black;
-  text-decoration: underline;
-}
-div.admonition.hero ul {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0;
-}
-div.admonition.hero ul.simple p {
-  padding: 0;
-}
-div.admonition.hero ul.open p {
-  padding: 0 0 10px 0;
-}
 
 
 /** Admonitions: General **/
 div.admonition {
     border-left-style: solid;
+}
+div.admonition a {
+  color: black;
+  text-decoration: underline;
+}
+
+div.admonition ul {
+    margin: 0;
+}
+div.admonition ul.simple p {
+  padding: 0;
+}
+div.admonition ul.open p {
+  padding: 0 0 10px 0;
 }
 
 div.note {
@@ -193,10 +192,6 @@ div.danger {
 }
 .wrapper-navleft .bs-docs-sidebar {
     border: 1px solid #e7e7e7;
-}
-.wrapper-content-right li {
-    font-size: 16px;
-    line-height: 1.5em;
 }
 
 h1 code,
