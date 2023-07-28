@@ -16,6 +16,8 @@ Unreleased
 - Add new ``cloud-docs`` documentation project
 - Switch to modern responsive 3-column layout theme ``sphinx-basic-ng``.
   Thanks, @pradyunsg.
+- Use Furo's navigation component through ``sphinx-design-elements``'
+  ``linktree``. Thanks, @pradyunsg.
 
 
 2023/05/15 0.27.1
