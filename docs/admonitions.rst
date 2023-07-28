@@ -120,4 +120,36 @@ Hero
     This is the first paragraph of a *danger* admonition.
 
 
+With links
+==========
+
+.. NOTE::
+
+    `Link to example.com <https://example.com>`_.
+
+.. NOTE::
+    :class: hero
+
+    `Link to example.com <https://example.com>`_.
+
+
+With item lists
+===============
+
+.. NOTE::
+
+    - First
+    - Second
+
+      - Nested
+
+.. NOTE::
+    :class: hero
+
+    - First
+    - Second
+
+      - Nested
+
+
 .. _hero-/jumbotron-style: https://getbootstrap.com/docs/4.1/components/jumbotron/

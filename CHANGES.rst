@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Fix admonition content styles for links and item lists
+
 
 2023/07/27 0.28.0
 -----------------
