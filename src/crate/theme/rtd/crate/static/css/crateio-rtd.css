@@ -174,7 +174,7 @@ div.danger {
 }
 .bs-docs-sidebar {
     padding: 8px 16px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .affix {
