@@ -52,11 +52,11 @@ These are lists within admonitions.
 
     This is an open list:
 
-     .. rst-class:: open
+    .. rst-class:: open
 
-     - This list looks the same as the :ref:`open list <closed-list>` above
+        - This list looks the same as the :ref:`open list <closed-list>` above
 
-     - The list items are separated as if they were separate paragraphs
+        - The list items are separated as if they were separate paragraphs
 
 
 Enumerated lists
@@ -66,10 +66,10 @@ This demonstrates an auto-enumerated list with a nested bullet-list.
 
 #. Item 1
 
-    - Sub item 1
-    - Sub item 2
+   - Sub item 1
+   - Sub item 2
 
 #. Item 2
 
-    - Sub item 1
-    - Sub item 2
+   - Sub item 1
+   - Sub item 2
