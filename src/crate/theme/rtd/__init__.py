@@ -19,7 +19,7 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
-"""Crate Sphix Theme for ReadTheDocs"""
+"""CrateDB Sphinx theme for Read the Docs"""
 
 import os
 
