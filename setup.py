@@ -63,7 +63,7 @@ setup(
         "docutils==0.16",
         "docutils-stubs==0.0.22",
         "myst-parser[linkify]<3",
-        "sphinx>=4.6,<7",
+        "sphinx>=4.6,<8",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design<1",
         "sphinx-design-elements==0.1.0",
