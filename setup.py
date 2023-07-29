@@ -59,7 +59,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "Jinja2>=3,<3.1",
+        "Jinja2>=3,<3.2",
         "docutils==0.16",
         "docutils-stubs==0.0.22",
         "myst-parser[linkify]<3",
