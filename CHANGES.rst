@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2023/07/29 0.28.1
+-----------------
+
 - Fix admonition content styles for links and item lists
 - Fix version chooser enablement
 - Update to Sphinx ``sphinx>=4.6,<7``
