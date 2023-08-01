@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2023/08/01 0.28.2
+-----------------
+
 - Adjust footer navigation after web site update. Thanks, @msbt.
 
 
