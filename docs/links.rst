@@ -38,9 +38,9 @@ CrateDB clients
 CrateDB Cloud
 -------------
 
-- :ref:`cloud-reference:index`
-- :ref:`cloud-tutorials:index`
-- :ref:`cloud-howtos:index`
+- :ref:`cloud:cloud-reference-index`
+- :ref:`cloud:cloud-tutorials-index`
+- :ref:`cloud:cloud-howtos-index`
 - :ref:`cloud-cli:index`
 
 
