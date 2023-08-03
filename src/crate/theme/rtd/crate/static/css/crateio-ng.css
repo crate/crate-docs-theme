@@ -37,7 +37,7 @@
 }
 .feedback-compact-content div.sd-summary-content {
   position: fixed;
-  z-index: 150;
+  z-index: 175;
   background: #fff;
   border: 1px solid #ccc;
 }
