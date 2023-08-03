@@ -14,6 +14,12 @@ Unreleased
   - Rename ``Install CrateDB`` to ``Install``, and ``Reference`` to ``CrateDB Reference``
   - Improve appearance of bottom section
 
+- Consolidated Cloud Docs: Adjust intersphinx root references
+
+  - Those project references have been dissolved:
+    ``cloud-reference``, ``cloud-tutorials``, and ``cloud-howtos``
+  - The new canonical intersphinx project reference is just ``cloud``
+
 
 2023/08/01 0.28.2
 -----------------

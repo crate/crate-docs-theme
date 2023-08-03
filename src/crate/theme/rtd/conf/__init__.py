@@ -116,9 +116,7 @@ intersphinx_mapping = {
     'crate-python': ('https://crate.io/docs/python/en/latest/', None),
 
     # CrateDB Cloud
-    'cloud-reference': ('https://crate.io/docs/cloud/reference/en/latest/', None),
-    'cloud-tutorials': ('https://crate.io/docs/cloud/tutorials/en/latest/', None),
-    'cloud-howtos': ('https://crate.io/docs/cloud/howtos/en/latest/', None),
+    'cloud': ('https://crate.io/docs/cloud/en/latest/', None),
     'cloud-cli': ('https://crate.io/docs/cloud/cli/en/latest/', None),
 
     # Misc
