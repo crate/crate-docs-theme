@@ -3,7 +3,7 @@
   "devDependencies": {
     "css-loader": "^6.8",
     "expose-loader": "^4.1",
-    "jquery": "^3.6.1",
+    "jquery": "^3.7.0",
     "js-cookie": "^3.0.5",
     "normalize.css": "^8.0.1",
     "sticky-sidebar": "^3.3.1",
