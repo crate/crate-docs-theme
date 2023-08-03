@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2023/08/03 0.29.0
+-----------------
+
 - Edit primary navigation in left sidebar
 
   - "CrateDB Cloud" documentation has been bundled into a single repository, now
@@ -19,6 +23,10 @@ Unreleased
   - Those project references have been dissolved:
     ``cloud-reference``, ``cloud-tutorials``, and ``cloud-howtos``
   - The new canonical intersphinx project reference is just ``cloud``
+
+- UI: Increase z-index of feedback chooser content
+- Update jquery to 3.7.0
+- Update jinja2 to <3.2
 
 
 2023/08/01 0.28.2
