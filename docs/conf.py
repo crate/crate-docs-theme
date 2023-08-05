@@ -1,4 +1,4 @@
-from crate.theme.rtd.conf.fake import *
+from crate.theme.rtd.conf.theme import *
 
 # Mimic some bits of the RTD context being propagated to its Sphinx builder.
 # https://github.com/readthedocs/readthedocs.org/blob/main/readthedocs/doc_builder/backends/sphinx.py
