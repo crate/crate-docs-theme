@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Fix margin on page tools element
+
 
 2023/08/03 0.29.0
 -----------------
