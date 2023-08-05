@@ -81,6 +81,14 @@
   <li class="navleft-item"><a href="https://community.crate.io/t/overview-of-cratedb-integration-tutorials/1015">Integration Tutorials</a></li>
   <li class="navleft-item"><a href="https://github.com/crate/crate-sample-apps">Sample Applications</a></li>
 
+  <!-- Section E. -->
+  {% if project == 'CrateDB Fake Docs' %}
+    <li class="current border-top">
+      <a class="current-active" href="{{ pathto(master_doc) }}">Documentation theme</a>
+      {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
+  {% endif %}
+
   {% if project == 'Doing Docs' %}
   <li class="current">
     <a class="current-active" href="{{ pathto(master_doc) }}">Doing Docs at Crate.io</a>
