@@ -64,6 +64,7 @@ The legacy feature gallery exclusively uses reStructuredText.
     images
     diagrams
     codesnippets
+    typography
     subpage
     glossary
 
