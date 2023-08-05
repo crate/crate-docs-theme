@@ -25,10 +25,10 @@ from crate.theme.rtd.conf import *
 # You can change the `project` value to anything you want because
 # `src/crate/theme/rtd/crate/sidebartoc.html` does not have a menu item for
 # this project.
-project = u"CrateDB Fake Docs"
+project = "CrateDB documentation theme"
 html_title = project
 
-url_path = "docs/fake"
+url_path = "docs/theme"
 
 # For sitemap extension
 html_baseurl = "https://crate.io/%s/" % url_path
