@@ -39,6 +39,10 @@
 
   {% endblock %}
 
+  {%- block scripts %}
+    {{ super() }}
+  {%- endblock %}
+
   {# Silence the sidebar's, relbar's #}
   {% block header %}{% endblock %}
   {% block relbar1 %}{% endblock %}

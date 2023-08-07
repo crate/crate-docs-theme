@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Fix margin on page tools element
+- Modernize and fix JS and CSS includes
 
 
 2023/08/03 0.29.0
