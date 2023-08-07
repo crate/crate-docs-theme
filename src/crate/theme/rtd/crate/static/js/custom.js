@@ -4,6 +4,24 @@
  */
 (function ($) {
   $(document).ready(function () {
+
+    // close non-active summary on feedback/version selector
+    // select all detail elements
+    const cr_docs_details = document.querySelectorAll("details");
+
+    // add event listeners for toggling
+    cr_docs_details.forEach((crdet) => {
+      crdet.addEventListener("toggle", toggleOpenOneOnly);
+    });
+
+    function toggleOpenOneOnly(e) {
+      if (this.open) {
+        cr_docs_details.forEach((crdet) => {
+          if (crdet != this && crdet.open) crdet.open = false;
+        });
+      }
+    }
+
     /**
      * Dropdown menu
      */
@@ -179,20 +197,3 @@
 })(jQuery);
 
 var Cookies = require("js-cookie");
-
-// close non-active summary on feedback/version selector
-// select all detail elements
-const cr_docs_details = document.querySelectorAll("details");
-
-// add event listeners for toggling
-cr_docs_details.forEach((crdet) => {
-  crdet.addEventListener("toggle", toggleOpenOneOnly);
-});
-
-function toggleOpenOneOnly(e) {
-  if (this.open) {
-    cr_docs_details.forEach((crdet) => {
-      if (crdet != this && crdet.open) crdet.open = false;
-    });
-  }
-}
