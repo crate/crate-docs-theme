@@ -10,6 +10,8 @@ Unreleased
 - Modernize and fix JS and CSS includes
 - Fix pagetools dropdown: Group elements to define mutual toggle-opening.
   Thanks, @kojinkai and @msbt.
+- Improve version chooser to use the same page when switching versions.
+  Thanks, @hlcianfagna.
 
 
 2023/08/03 0.29.0
