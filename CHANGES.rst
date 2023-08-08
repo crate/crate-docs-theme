@@ -12,6 +12,7 @@ Unreleased
   Thanks, @kojinkai and @msbt.
 - Improve version chooser to use the same page when switching versions.
   Thanks, @hlcianfagna.
+- Fix text alignment with sphinx-togglebutton. Thanks, @msbt.
 
 
 2023/08/03 0.29.0
