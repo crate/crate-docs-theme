@@ -50,3 +50,10 @@ details.feedback-compact-content:not([open]) .feedback-compact-title {
 .feedback-compact-link {
   color: #222222;
 }
+
+
+/* Fix text alignment with sphinx-togglebutton */
+button.toggle-button {
+  display: inline-flex;
+  align-items: center;
+}
