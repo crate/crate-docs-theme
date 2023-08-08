@@ -8,6 +8,8 @@ Unreleased
 
 - Fix margin on page tools element
 - Modernize and fix JS and CSS includes
+- Fix pagetools dropdown: Group elements to define mutual toggle-opening.
+  Thanks, @kojinkai and @msbt.
 
 
 2023/08/03 0.29.0
