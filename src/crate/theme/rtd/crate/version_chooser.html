@@ -15,7 +15,7 @@
     <div class="sd-summary-content sd-card-body docutils">
       {% for slug, url in versions %}
       <p class="sd-card-text">
-        <a href="https://crate.io/{{ theme_canonical_url_path|replace('en/latest/', '') }}{{ rtd_language }}/{{ slug }}/" class="version-chooser-link">{{ slug }}</a>
+        <a href="https://crate.io/{{ theme_canonical_url_path|replace('en/latest/', '') }}{{ rtd_language }}/{{ slug }}/{{ pagename }}.html" class="version-chooser-link">{{ slug }}</a>
       </p>
       {% endfor %}
     </div>
