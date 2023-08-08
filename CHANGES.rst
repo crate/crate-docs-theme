@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2023/08/08 0.29.1
+-----------------
+
 - Fix margin on page tools element
 - Modernize and fix JS and CSS includes
 - Fix pagetools dropdown: Group elements to define mutual toggle-opening.
