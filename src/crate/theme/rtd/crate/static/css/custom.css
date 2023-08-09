@@ -2205,6 +2205,8 @@ ul.search li {
   background: url("../images/admonition/note-sql-99.svg") no-repeat;
   background-color: #fff9e9;
   border-left: 4px solid #ed8826;
+  background-size: 1.25em;
+  background-position: top 1.1em left 1em;
 }
 
 .cr-sql-99-header {
