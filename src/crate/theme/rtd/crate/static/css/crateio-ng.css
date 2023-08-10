@@ -11,10 +11,11 @@
   position: absolute;
 }
 .version-chooser-content div.sd-summary-content {
-  position: fixed;
+  position: absolute;
   z-index: 150;
   background: #fff;
   border: 1px solid #ccc;
+  width: max-content;
 }
 
 .version-chooser-container {
@@ -36,10 +37,11 @@
   position: absolute;
 }
 .feedback-compact-content div.sd-summary-content {
-  position: fixed;
+  position: absolute;
   z-index: 175;
   background: #fff;
   border: 1px solid #ccc;
+  width: max-content;
 }
 
 .feedback-compact-title {
