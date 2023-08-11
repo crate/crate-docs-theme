@@ -7,6 +7,13 @@ Unreleased
 ----------
 
 
+2023/08/11 0.29.2
+-----------------
+
+- Fix minor regression on admonitions
+- Fix page tools positioning
+
+
 2023/08/08 0.29.1
 -----------------
 
