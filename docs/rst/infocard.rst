@@ -88,8 +88,7 @@ Example 3
 
         .. div:: text-small
 
-            | **Author:** Jaromír Kalina, `@jkalinaofficial <https://unsplash.com/@jkalinaofficial>`_
-            | **Contact:** Czech Republic, https://jkalina.carrd.co/
+            | **Author:** Jaromír Kalina, Czech Republic, `@jkalinaofficial <https://unsplash.com/@jkalinaofficial>`_
             | **Exposé:** https://unsplash.com/photos/spdQ1dVuIHw
             | **Source:** `Unsplash -- The internet’s source for visuals <https://unsplash.com/>`_
 
