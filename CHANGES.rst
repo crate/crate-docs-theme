@@ -7,6 +7,7 @@ Unreleased
 ----------
 
 - Fix CSS: Remove font size of blockquote override
+- Improve version chooser: Remove ambiguous link to master doc.
 
 
 2023/08/11 0.29.2
