@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2023/08/30 0.29.4
+-----------------
+
 - Improve primary navigation on the database driver section once more
 
 
