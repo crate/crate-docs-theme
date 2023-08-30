@@ -6,8 +6,12 @@ CHANGES
 Unreleased
 ----------
 
-- Fix CSS: Remove font size of blockquote override
-- Improve version chooser: Remove ambiguous link to master doc.
+
+2023/08/30 0.29.3
+-----------------
+
+- Fix CSS: Remove font size of blockquote override. Thanks, @msbt.
+- Improve version chooser: Remove ambiguous link to root document
 - Bring back lost navigation items to database drivers
 
 
