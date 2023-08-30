@@ -73,55 +73,61 @@
   ]
   %}
   {% if project in driver_projects %}
-    <li class="current">
+  <li class="current">
+    {% if project == 'CrateDB: Clients and Tools' %}
       <a class="current-active" href="{{ pathto(master_doc) }}">Drivers and Integrations</a>
       {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-
-    <!-- Section C. -->
-    {% if project == 'CrateDB JDBC' %}
-    <li class="current border-top">
-      <a class="current-active" href="{{ pathto(master_doc) }}">JDBC</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
     {% else %}
-    <li class="navleft-item border-top"><a href="/docs/jdbc/">JDBC</a></li>
+      <a class="current-active" href="/docs/crate/clients-tools/">Drivers and Integrations</a>
     {% endif %}
-    {% if project == 'CrateDB DBAL' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">PHP DBAL</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-    {% else %}
-    <li class="navleft-item"><a href="/docs/dbal/">PHP DBAL</a></li>
-    {% endif %}
-    {% if project == 'CrateDB PDO' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">PHP PDO</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-    {% else %}
-    <li class="navleft-item"><a href="/docs/pdo/">PHP PDO</a></li>
-    {% endif %}
-    {% if project == 'CrateDB Python' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">Python</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-    {% else %}
-    <li class="navleft-item"><a href="/docs/python/">Python</a></li>
-    {% endif %}
-    {% if project == 'CrateDB Npgsql' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">.NET Npgsql</a>
-      {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-    {% else %}
-    <li class="navleft-item"><a href="/docs/npgsql/">.NET Npgsql</a></li>
-    {% endif %}
-
+    <ul>
+      <!-- Section C. -->
+      {% if project == 'CrateDB JDBC' %}
+      <li class="current">
+        <a class="current-active" href="{{ pathto(master_doc) }}">JDBC</a>
+        {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      </li>
+      {% else %}
+      <li class="navleft-item"><a href="/docs/jdbc/">JDBC</a></li>
+      {% endif %}
+      {% if project == 'CrateDB DBAL' %}
+      <li class="current">
+        <a class="current-active" href="{{ pathto(master_doc) }}">PHP DBAL</a>
+        {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      </li>
+      {% else %}
+      <li class="navleft-item"><a href="/docs/dbal/">PHP DBAL</a></li>
+      {% endif %}
+      {% if project == 'CrateDB PDO' %}
+      <li class="current">
+        <a class="current-active" href="{{ pathto(master_doc) }}">PHP PDO</a>
+        {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      </li>
+      {% else %}
+      <li class="navleft-item"><a href="/docs/pdo/">PHP PDO</a></li>
+      {% endif %}
+      {% if project == 'CrateDB Python' %}
+      <li class="current">
+        <a class="current-active" href="{{ pathto(master_doc) }}">Python</a>
+        {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      </li>
+      {% else %}
+      <li class="navleft-item"><a href="/docs/python/">Python</a></li>
+      {% endif %}
+      {% if project == 'CrateDB Npgsql' %}
+      <li class="current">
+        <a class="current-active" href="{{ pathto(master_doc) }}">.NET Npgsql</a>
+        {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      </li>
+      {% else %}
+      <li class="navleft-item"><a href="/docs/npgsql/">.NET Npgsql</a></li>
+      {% endif %}
+    </ul>
+  </li>
   {% else %}
-    <li class="navleft-item"><a href="/docs/crate/clients-tools/">Drivers and Integrations</a></li>
+  <li class="navleft-item">
+    <a href="/docs/crate/clients-tools/">Drivers and Integrations</a>
+  </li>
   {% endif %}
 
   <!-- Section D. -->
