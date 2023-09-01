@@ -6,7 +6,12 @@ CHANGES
 Unreleased
 ----------
 
-- Adjust OpenGraph settings: Logo image, description length, "first image" use
+
+2023/09/01 0.29.5
+-----------------
+
+- Adjust OpenGraph settings: Logo image, description length, "first image" use.
+  Thanks, @proddata and @msbt.
 
 
 2023/08/30 0.29.4
