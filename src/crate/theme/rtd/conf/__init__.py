@@ -100,18 +100,19 @@ sitemap_url_scheme = "{lang}{version}{link}"
 # Configure intersphinx mapping
 intersphinx_mapping = {
 
-    # CrateDB core
+    # CrateDB Core
     'crate-reference': ('https://crate.io/docs/crate/reference/en/latest/', None),
     'crate-tutorials': ('https://crate.io/docs/crate/tutorials/en/latest/', None),
     'crate-howtos': ('https://crate.io/docs/crate/howtos/en/latest/', None),
 
-    # CrateDB clients
+    # CrateDB Clients and Integrations
     'crate-admin-ui': ('https://crate.io/docs/crate/admin-ui/en/latest/', None),
-    'crate-crash': ('https://crate.io/docs/crate/crash/en/latest/', None),
     'crate-clients-tools': ('https://crate.io/docs/crate/clients-tools/en/latest/', None),
+    'crate-crash': ('https://crate.io/docs/crate/crash/en/latest/', None),
+    'crate-dbal': ('https://crate.io/docs/dbal/en/latest/', None),
     'crate-jdbc': ('https://crate.io/docs/jdbc/en/latest/', None),
     'crate-npgsql': ('https://crate.io/docs/npgsql/en/latest/', None),
-    'crate-dbal': ('https://crate.io/docs/dbal/en/latest/', None),
+    'crate-operator': ('https://crate-operator.readthedocs.io/en/latest/', None),
     'crate-pdo': ('https://crate.io/docs/pdo/en/latest/', None),
     'crate-python': ('https://crate.io/docs/python/en/latest/', None),
 
