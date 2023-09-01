@@ -21,7 +21,7 @@
 
 import os
 from importlib import machinery
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 
 pwd = os.path.join(os.path.dirname(__file__))
 filepath = os.path.join(pwd, "src", "crate", "theme", "rtd", "__init__.py")
@@ -53,9 +53,8 @@ setup(
     url="https://github.com/crate/crate-docs-theme",
     keywords="crate docs sphinx readthedocs",
     license="Apache License 2.0",
-    packages=find_packages("src"),
+    packages=find_namespace_packages(where="src"),
     package_dir={"": "src"},
-    namespace_packages=["crate"],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
