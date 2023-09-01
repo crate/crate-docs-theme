@@ -130,7 +130,9 @@ intersphinx_mapping = {
 
 # Configure OpenGraph extension
 #
-# About text lengths.
+# When making changes, check them using the RTD PR preview URL on https://www.opengraph.xyz/.
+#
+# About text lengths
 #
 # Original documentation says:
 # - ogp_description_length
@@ -148,7 +150,7 @@ intersphinx_mapping = {
 ogp_site_url = "https://crate.io/docs/"
 ogp_description_length = 300
 ogp_site_name = "CrateDB Documentation"
-ogp_image = "https://crate-docs-theme.readthedocs.io/en/latest/_static/images/cratedb-logo-h400.png"
+ogp_image = "https://crate-docs-theme.readthedocs.io/en/latest/_static/images/cratedb-logo-h630.png"
 ogp_image_alt = False
 ogp_use_first_image = False
 ogp_type = "website"
