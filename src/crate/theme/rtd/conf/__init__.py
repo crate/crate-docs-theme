@@ -128,12 +128,28 @@ intersphinx_mapping = {
 }
 
 # Configure OpenGraph extension
-ogp_site_url = "https://crate.io/"
-ogp_description_length = 150
-ogp_site_name = "CrateDB documentation"
-ogp_image = "https://crate.io/hubfs/static/og_crateio.jpg"
+#
+# About text lengths.
+#
+# Original documentation says:
+# - ogp_description_length
+#   Configure the amount of characters taken from a page. The default of 200 is probably good
+#   for most people. If something other than a number is used, it defaults back to 200.
+#   -- https://sphinxext-opengraph.readthedocs.io/en/latest/#options
+#
+# Other people say:
+# - og:title 40 chars
+# - og:description has 2 max lengths:
+#   When the link is used in a Post, it's 300 chars. When a link is used in a Comment, it's 110 chars.
+#   So you can either treat it as 110, or, write your Descriptions to 300 but make sure the first 110
+#   is the critical part and still makes sense when it gets cut off.
+#   -- https://stackoverflow.com/questions/8914476/facebook-open-graph-meta-tags-maximum-content-length
+ogp_site_url = "https://crate.io/docs/"
+ogp_description_length = 300
+ogp_site_name = "CrateDB Documentation"
+ogp_image = "https://crate-docs-theme.readthedocs.io/en/latest/_static/images/cratedb-logo-h400.png"
 ogp_image_alt = False
-ogp_use_first_image = True
+ogp_use_first_image = False
 ogp_type = "website"
 ogp_enable_meta_description = True
 
