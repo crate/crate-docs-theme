@@ -1,6 +1,58 @@
 <!-- Version chooser component -->
 
 <div class="version-chooser-container">
+
+  {% set url_path = theme_canonical_url_path.replace('en/latest/', '') %}
+  <script>
+    // Sphinx version chooser JavaScript helpers by Daniel McCloy, derived from pydata-sphinx-theme.
+    // BSD 3-Clause License; Copyright (c) 2018, pandas; All rights reserved.
+    // See `version-switcher.html` and `pydata-sphinx-theme.js`.
+
+    function checkPageExistsAndRedirect(event) {
+      const currentFilePath = `{{ pagename }}.html`,
+        tryUrl = event.target.getAttribute("href");
+      let otherDocsHomepage = tryUrl.replace(currentFilePath, "");
+
+      fetch(tryUrl, { method: "HEAD" })
+        .then(() => {
+          location.href = tryUrl;
+        }) // if the page exists, go there
+        .catch((error) => {
+          location.href = otherDocsHomepage;
+        });
+
+      // Cancel browser's native event handling.
+      // Prevent the browser from following the href of the clicked node,
+      // which is fine because this function takes care of redirecting.
+      return false;
+    }
+
+    function versionChooserAppendItem(slug, url) {
+      // Create the link node.
+      const node = document.createElement("a");
+      node.setAttribute(
+        "class",
+        "version-chooser-link"
+      );
+      node.setAttribute("href", `https://crate.io/{{ url_path }}{{ rtd_language }}/${slug}/{{ pagename }}.html`);
+      node.textContent = slug;
+
+      // On navigation, AJAX calls will check if the linked page exists before
+      // trying to redirect, and if not, will redirect to the homepage
+      // for that version of the docs.
+      node.onclick = checkPageExistsAndRedirect;
+
+      // Wrap link element into container node.
+      const container = document.createElement("p");
+      container.setAttribute("class", "sd-card-text");
+      container.appendChild(node);
+
+      // Populate HTML DOM.
+      document.querySelector(".version-chooser__menu").append(container);
+
+    }
+  </script>
+
   <details class="sd-sphinx-override sd-dropdown sd-card version-chooser-content">  <!-- open="" -->
     <summary class="sd-summary-title sd-card-header version-chooser-title">
       <span>{{ current_version }}</span>
@@ -11,11 +63,11 @@
         <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg>
       </div>
     </summary>
-    <div class="sd-summary-content sd-card-body docutils">
+    <div class="sd-summary-content sd-card-body docutils version-chooser__menu">
       {% for slug, url in versions %}
-      <p class="sd-card-text">
-        <a href="https://crate.io/{{ theme_canonical_url_path|replace('en/latest/', '') }}{{ rtd_language }}/{{ slug }}/{{ pagename }}.html" class="version-chooser-link">{{ slug }}</a>
-      </p>
+      <script>
+        versionChooserAppendItem('{{ slug }}', '{{ url }}');
+      </script>
       {% endfor %}
     </div>
   </details>
