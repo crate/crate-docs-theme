@@ -8,23 +8,24 @@
     // BSD 3-Clause License; Copyright (c) 2018, pandas; All rights reserved.
     // See `version-switcher.html` and `pydata-sphinx-theme.js`.
 
-    function checkPageExistsAndRedirect(event) {
+    async function checkPageExistsAndRedirect(event) {
+      // Make sure not to follow the original link.
+      event.preventDefault();
       const currentFilePath = `{{ pagename }}.html`,
-        tryUrl = event.target.getAttribute("href");
+        tryUrl = event.currentTarget.getAttribute("href");
       let otherDocsHomepage = tryUrl.replace(currentFilePath, "");
 
-      fetch(tryUrl, { method: "HEAD" })
-        .then(() => {
-          location.href = tryUrl;
-        }) // if the page exists, go there
-        .catch((error) => {
+      try {
+        let head = await fetch(tryUrl, { method: "HEAD" });
+        if (head.ok) {
+          location.href = tryUrl; // the page exists, go there
+        } else {
           location.href = otherDocsHomepage;
-        });
-
-      // Cancel browser's native event handling.
-      // Prevent the browser from following the href of the clicked node,
-      // which is fine because this function takes care of redirecting.
-      return false;
+        }
+      } catch (err) {
+        // something went wrong, probably CORS restriction, fallback to other docs homepage
+        location.href = otherDocsHomepage;
+      }
     }
 
     function versionChooserAppendItem(slug, url) {
