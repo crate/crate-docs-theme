@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2023/09/06 0.29.6
+-----------------
+
 - Add version chooser JavaScript helpers derived from ``pydata-sphinx-theme``.
   Thanks, @drammock.
 
