@@ -6,6 +6,9 @@ CHANGES
 Unreleased
 ----------
 
+- Stop displaying the edit/view source link on synthetic pages, for example,
+  the ``search.html`` page. Thanks, @msbt.
+
 
 2023/09/06 0.29.6
 -----------------
