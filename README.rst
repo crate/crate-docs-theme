@@ -79,12 +79,12 @@ Looking for more help?
 
 
 .. _contribution docs: CONTRIBUTING.rst
-.. _Crate.io: https://crate.io
-.. _Crate documentation: https://crate.io/docs/
+.. _Crate.io: https://cratedb.com
+.. _Crate documentation: https://cratedb.com/docs/
 .. _developer docs: DEVELOP.rst
 .. _PyPI: https://pypi.python.org/
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
-.. _support channels: https://crate.io/support/
+.. _support channels: https://cratedb.com/support/
 
 
 .. |tests| image:: https://github.com/crate/crate-docs-theme/workflows/docs/badge.svg

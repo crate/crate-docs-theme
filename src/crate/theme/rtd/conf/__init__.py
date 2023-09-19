@@ -73,7 +73,7 @@ html_theme_options = {
     # The URL path is required because RTD does only allow root as a canonical
     # url
     "canonical_url_path": "",
-    "canonical_url": "https://crate.io/",
+    "canonical_url": "https://cratedb.com/",
     # segment analytics configuration
     "tracking_segment_id": environ.get("TRACKING_SEGMENT_ID", ""),
     "tracking_hubspot_id": environ.get("TRACKING_HUBSPOT_ID", ""),
@@ -101,27 +101,27 @@ sitemap_url_scheme = "{lang}{version}{link}"
 intersphinx_mapping = {
 
     # CrateDB Core
-    'crate-reference': ('https://crate.io/docs/crate/reference/en/latest/', None),
-    'crate-tutorials': ('https://crate.io/docs/crate/tutorials/en/latest/', None),
-    'crate-howtos': ('https://crate.io/docs/crate/howtos/en/latest/', None),
+    'crate-reference': ('https://cratedb.com/docs/crate/reference/en/latest/', None),
+    'crate-tutorials': ('https://cratedb.com/docs/crate/tutorials/en/latest/', None),
+    'crate-howtos': ('https://cratedb.com/docs/crate/howtos/en/latest/', None),
 
     # CrateDB Clients and Integrations
-    'crate-admin-ui': ('https://crate.io/docs/crate/admin-ui/en/latest/', None),
-    'crate-clients-tools': ('https://crate.io/docs/crate/clients-tools/en/latest/', None),
-    'crate-crash': ('https://crate.io/docs/crate/crash/en/latest/', None),
-    'crate-dbal': ('https://crate.io/docs/dbal/en/latest/', None),
-    'crate-jdbc': ('https://crate.io/docs/jdbc/en/latest/', None),
-    'crate-npgsql': ('https://crate.io/docs/npgsql/en/latest/', None),
+    'crate-admin-ui': ('https://cratedb.com/docs/crate/admin-ui/en/latest/', None),
+    'crate-clients-tools': ('https://cratedb.com/docs/crate/clients-tools/en/latest/', None),
+    'crate-crash': ('https://cratedb.com/docs/crate/crash/en/latest/', None),
+    'crate-dbal': ('https://cratedb.com/docs/dbal/en/latest/', None),
+    'crate-jdbc': ('https://cratedb.com/docs/jdbc/en/latest/', None),
+    'crate-npgsql': ('https://cratedb.com/docs/npgsql/en/latest/', None),
     'crate-operator': ('https://crate-operator.readthedocs.io/en/latest/', None),
-    'crate-pdo': ('https://crate.io/docs/pdo/en/latest/', None),
-    'crate-python': ('https://crate.io/docs/python/en/latest/', None),
+    'crate-pdo': ('https://cratedb.com/docs/pdo/en/latest/', None),
+    'crate-python': ('https://cratedb.com/docs/python/en/latest/', None),
 
     # CrateDB Cloud
-    'cloud': ('https://crate.io/docs/cloud/en/latest/', None),
-    'cloud-cli': ('https://crate.io/docs/cloud/cli/en/latest/', None),
+    'cloud': ('https://cratedb.com/docs/cloud/en/latest/', None),
+    'cloud-cli': ('https://cratedb.com/docs/cloud/cli/en/latest/', None),
 
     # Misc
-    'sql-99': ('https://crate.io/docs/sql-99/en/latest/', None),
+    'sql-99': ('https://cratedb.com/docs/sql-99/en/latest/', None),
 
     # CrateDB Docs
     'crate-docs': ('https://crate-docs.readthedocs.io/en/latest/', None),
@@ -147,7 +147,7 @@ intersphinx_mapping = {
 #   So you can either treat it as 110, or, write your Descriptions to 300 but make sure the first 110
 #   is the critical part and still makes sense when it gets cut off.
 #   -- https://stackoverflow.com/questions/8914476/facebook-open-graph-meta-tags-maximum-content-length
-ogp_site_url = "https://crate.io/docs/"
+ogp_site_url = "https://cratedb.com/docs/"
 ogp_description_length = 300
 ogp_site_name = "CrateDB Documentation"
 ogp_image = "https://crate-docs-theme.readthedocs.io/en/latest/_static/images/cratedb-logo-h630.png"
@@ -239,7 +239,7 @@ def setup(app):
         try:
 
             # The default is `'proxied_static_path': "/_/static/"`.
-            # However, we want it to be, e.g., https://crate.io/docs/crate/howtos/_/static/
+            # However, we want it to be, e.g., https://cratedb.com/docs/crate/howtos/_/static/
             html_baseurl = app_inited.env.config.html_baseurl.strip("/")
             proxied_static_path = f"{html_baseurl}/_/static/"
 

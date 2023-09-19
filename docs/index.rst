@@ -102,8 +102,8 @@ How to improve this documentation:
     Assurance* (QA) workflow, see the `developer guide`_.
 
 
-.. _CrateDB Python Client: https://crate.io/docs/python/
-.. _CrateDB Reference: https://crate.io/docs/crate/reference/
+.. _CrateDB Python Client: https://cratedb.com/docs/python/
+.. _CrateDB Reference: https://cratedb.com/docs/crate/reference/
 .. _developer guide: https://github.com/crate/crate-docs-theme/blob/main/DEVELOP.rst
 .. _report an issue: https://github.com/crate/crate-docs-theme/issues/new
 .. _Sphinx static documentation generator: https://www.sphinx-doc.org/
