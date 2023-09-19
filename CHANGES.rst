@@ -6,6 +6,9 @@ CHANGES
 Unreleased
 ----------
 
+2023/09/19 0.29.7
+-----------------
+
 - Stop displaying the edit/view source link on synthetic pages, for example,
   the ``search.html`` page. Thanks, @msbt.
 - Changed domain from ``crate.io`` to `` cratedb.com``
