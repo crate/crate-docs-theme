@@ -6,9 +6,15 @@ CHANGES
 Unreleased
 ----------
 
+
+2023/09/28 0.29.8
+-----------------
+
 - Primary navigation: Use ``maxdepth=2`` for serving "CrateDB Cloud"
   That means, only pull headings up to the second level into the menu.
-- Search: Added ``autofocus`` to search input for better usability
+  Thanks, @proddata.
+- Search: Added ``autofocus`` to search input for better usability.
+  Thanks, @msbt.
 
 
 2023/09/19 0.29.7
