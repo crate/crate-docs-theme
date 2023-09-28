@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+- Primary navigation: Use ``maxdepth=2`` for serving "CrateDB Cloud"
+  That means, only pull headings up to the second level into the menu.
+
+
 2023/09/19 0.29.7
 -----------------
 
