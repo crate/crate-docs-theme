@@ -2253,20 +2253,19 @@ ul.search li {
   min-width: 275px;
 }
 
-.cr-sql-99-cta p a {
+.cr-sql-99-cta a {
   color: #fff;
   font-size: 16px;
-  margin-top: 10px;
   display: block;
+}
+
+.cr-sql-99-cta a.cta_bottom {
+  margin-top: 10px;
 }
 
 .cr-sql-99-cta p,
 .btn-cr-sql-99 {
   z-index: 2;
-}
-
-.cr-sql-99-cta p {
-  margin-bottom: 0;
 }
 
 @media all and (max-width: 992px) {
