@@ -84,7 +84,7 @@ A mountain goat with long horns standing on a grassy hill.
 
 :::{div} text-small
 
-**Author:** Jaromír Kalina, Czech Republic, [@jkalinaofficial](https://unsplash.com/@jkalinaofficial) \
+**Author:** Jaromír Kalina, Czech Republic, [@jkalina](https://unsplash.com/@jkalina) \
 **Exposé:** https://unsplash.com/photos/spdQ1dVuIHw \
 **Source:** [Unsplash -- The internet’s source for visuals](https://unsplash.com/)
 :::
