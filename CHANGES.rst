@@ -12,6 +12,7 @@ Unreleased
   and ``canonical_url_path``)
 - Removed ``webflow.js``, artifacts from the abandoned 
   feedback box and rating system, removed unused css
+- Added "Guides and Tutorials" section
 
 
 2024/01/25 0.29.10

@@ -99,7 +99,8 @@ sitemap_url_scheme = "{lang}{version}{link}"
 # Configure intersphinx mapping
 intersphinx_mapping = {
 
-    # CrateDB Core
+    # CrateDB General
+    'guide': ('https://cratedb.com/docs/guide/', None),
     'crate-reference': ('https://cratedb.com/docs/crate/reference/en/latest/', None),
     'crate-tutorials': ('https://cratedb.com/docs/crate/tutorials/en/latest/', None),
     'crate-howtos': ('https://cratedb.com/docs/crate/howtos/en/latest/', None),
