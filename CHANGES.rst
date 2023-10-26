@@ -25,7 +25,7 @@ Unreleased
 
 - Stop displaying the edit/view source link on synthetic pages, for example,
   the ``search.html`` page. Thanks, @msbt.
-- Changed domain from ``crate.io`` to `` cratedb.com``
+- Changed domain from ``crate.io`` to ``cratedb.com``
 
 
 2023/09/06 0.29.6
