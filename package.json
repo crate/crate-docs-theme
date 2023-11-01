@@ -8,7 +8,7 @@
     "normalize.css": "^8.0.1",
     "sticky-sidebar": "^3.3.1",
     "style-loader": "^3.3",
-    "webpack": "^5.88",
+    "webpack": "^5.89",
     "webpack-cli": "^4.10",
     "webpack-modernizr-loader": "^5.0.0"
   },
