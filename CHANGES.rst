@@ -8,6 +8,7 @@ Unreleased
 
 - Updated SQL-99 CTAs
 - Updated unsplash profile URL to fix 404
+- Removed Segment and replaced it with Google Tagmanager
 
 
 2023/09/28 0.29.8

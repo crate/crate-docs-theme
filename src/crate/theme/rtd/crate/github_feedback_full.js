@@ -96,21 +96,8 @@ function renderIssues() {
               openList.style.display = 'none';
               closedList.style.display = 'block';
             });
-
-          {% if theme_tracking_segment_id %}
-          analytics.track('Feedback Opened');
-          {% endif %}
           }).catch(function() {
           // if rate limit exceeded, throw this error
           content.innerHTML = '<p>Error loading data, limit exceeded. Please try again later.</p>';
-          {% if theme_tracking_segment_id %}
-          analytics.track('DOCS RATE LIMIT', {
-            location: 'Center',
-            text: 'Error loading data, limit exceeded. Please try again later.',
-            category: 'Docs',
-            type: 'Text',
-            pageTitle: document.title
-         });
-         {% endif %}
     });
 }

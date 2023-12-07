@@ -74,8 +74,7 @@ html_theme_options = {
     # url
     "canonical_url_path": "",
     "canonical_url": "https://cratedb.com/",
-    # segment analytics configuration
-    "tracking_segment_id": environ.get("TRACKING_SEGMENT_ID", ""),
+    # HubSpot analytics configuration
     "tracking_hubspot_id": environ.get("TRACKING_HUBSPOT_ID", ""),
     "tracking_project": "",
     # Google custom search engine
