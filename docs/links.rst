@@ -42,12 +42,6 @@ CrateDB Cloud
 - :ref:`cloud-cli:index`
 
 
-Misc
-----
-
-- :ref:`sql-99:index`
-
-
 CrateDB Docs
 ------------
 
