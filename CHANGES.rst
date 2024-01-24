@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+- Removed reference to "SQL-99 Complete, Really", and
+  prepare phasing it out from the cratedb.com domain.
+  It will be published to https://sql-99.readthedocs.io/ instead.
+
 
 2023/12/07 0.29.9
 -----------------
