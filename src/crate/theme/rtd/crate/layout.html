@@ -73,15 +73,7 @@
           </div>
 
           <div class="cr-sql-99-cta">
-            <!--HubSpot Call-to-Action Code -->
-            <div class="hs-web-interactive-inline" style="" data-hubspot-wrapper-cta-id="140735725967"> 
-              <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLLharZC4ceYsVjRl9IWsAT27QtUM8Wi0cs1TsK%2F5FGk636csgWkYbMbl%2Bv5kxXe5MRcygIC%2Bb3nky0wZqmZe8jwxjePxxuSsMePkQ0uIz7eoBcc1q7MfUZtzrcj2QvE7TZh%2FcEzwsAKfU13XiDxH%2BYwSt9ZcYD0zjIfdEhy9b98&amp;portalId=19927462" class="hs-inline-web-interactive-140735725967 cr-sql-99-link cta_button btn btn-primary btn-cr-sql-99  " data-hubspot-cta-id="140735725967"> Get started for free </a> 
-            </div>
-
-            <div class="hs-web-interactive-inline" style="" data-hubspot-wrapper-cta-id="140735725954"> 
-              <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLKx5sGPjF%2FU%2FCs4r5IjUmVj8fwV3pIEiEpPtHNMrjpjS9EdG%2BybzJg%2BKbDOAWhp2dlAOIYFL9ydBj6DkpZz%2FnbgeGiZsUeCwBg3WCWxuKzIrbFIv9f5aV7xH2u9Fuh1FNBdeBIO1DB1KL9%2FzD8F642MoGN4GcdgVVN6q6pYZw%3D%3D&amp;portalId=19927462" class="hs-inline-web-interactive-140735725954 cta_button cta_bottom cr-sql-99-link  " data-hubspot-cta-id="140735725954"> Learn more about CrateDB </a> 
-            </div>
-            <!-- end HubSpot Call-to-Action Code -->
+            <a href="https://cratedb.com/product?utm_source=sql-99-docs" class="btn cta_button hs-button cr-sql-99-link"> Learn more about CrateDB</a> 
           </div>
         </div>
       </div>
@@ -125,7 +117,9 @@
       </div>
     </div>
   </div>
-  {% if project != 'SQL 99' %}
+  {% if project == 'SQL 99' %}
+  {%- include "footer_sql99.html" %}
+  {% else %}
   {%- include "footer.html" %}
   {% endif %}
 

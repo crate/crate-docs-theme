@@ -9,6 +9,8 @@ Unreleased
 - Removed reference to "SQL-99 Complete, Really", and
   prepare phasing it out from the cratedb.com domain.
   It will be published to https://sql-99.readthedocs.io/ instead.
+- Removed HubSpot CTA from SQL-99 header
+- Decluttered/separated SQL-99 footer
 
 
 2023/12/07 0.29.9
