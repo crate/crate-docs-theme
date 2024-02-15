@@ -6,6 +6,9 @@ CHANGES
 Unreleased
 ----------
 
+- Replaced ``Poppins`` font with ``Montserrat`` for H1
+- Removed legacy ``.woff`` font-files
+
 
 2024/01/25 0.29.10
 ------------------
