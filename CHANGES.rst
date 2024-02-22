@@ -8,6 +8,8 @@ Unreleased
 
 - Replaced ``Poppins`` font with ``Montserrat`` for H1
 - Removed legacy ``.woff`` font-files
+- Update SQL-99 config (``html_baseurl``, ``url_path``
+  and ``canonical_url_path``)
 
 
 2024/01/25 0.29.10
