@@ -36,6 +36,7 @@ html_baseurl = "https://sql-99.readthedocs.io"
 # For rel="canonical" links
 html_theme_options.update(
     {
+        "canonical_url": "https://sql-99.readthedocs.io",
         "canonical_url_path": "/en/latest/",
     }
 )
