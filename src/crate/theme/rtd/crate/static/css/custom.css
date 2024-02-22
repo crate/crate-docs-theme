@@ -2355,3 +2355,7 @@ ul.search li {
 .injected {
   display: none;
 }
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
