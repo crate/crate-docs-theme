@@ -28,15 +28,15 @@ from crate.theme.rtd.conf import *
 project = u"SQL 99"
 html_title = project
 
-url_path = "docs/sql-99"
+url_path = ""
 
 # For sitemap extension
-html_baseurl = "https://cratedb.com/%s/" % url_path
+html_baseurl = "https://sql-99.readthedocs.io"
 
 # For rel="canonical" links
 html_theme_options.update(
     {
-        "canonical_url_path": "%s/en/latest/" % url_path,
+        "canonical_url_path": "/en/latest/",
     }
 )
 
