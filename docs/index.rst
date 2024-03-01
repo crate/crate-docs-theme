@@ -1,26 +1,32 @@
 .. _index:
 
 ###########################
-CrateDB documentation theme
+CrateDB Documentation Theme
 ###########################
 
+    Sphinx makes it easy to create intelligent and beautiful documentation.
 
-*****
-About
-*****
-
-A theme component for the `Sphinx static documentation generator`_ used by
-all the Crate.io documentation projects. Examples:
-
-- `CrateDB Reference`_
-- `CrateDB Python Client`_
+A theme component for the `Sphinx`_ static documentation generator used by
+the `CrateDB Documentation`_ across the board.
 
 
 ********
-Overview
+Features
 ********
 
-This section outlines a few features, elements, and style-guides by example.
+Specific features and elements.
+
+.. toctree::
+    :maxdepth: 1
+
+    links
+
+
+************
+Style Guides
+************
+
+Style-guides by example.
 
 
 Modernized
@@ -60,13 +66,13 @@ The legacy feature gallery exclusively uses reStructuredText.
     admonitions
     lists
     tables
-    links
     images
     diagrams
     codesnippets
     typography
     subpage
     glossary
+    projects
 
 
 
@@ -102,8 +108,7 @@ How to improve this documentation:
     Assurance* (QA) workflow, see the `developer guide`_.
 
 
-.. _CrateDB Python Client: https://cratedb.com/docs/python/
-.. _CrateDB Reference: https://cratedb.com/docs/crate/reference/
+.. _CrateDB Documentation: https://cratedb.com/docs/
 .. _developer guide: https://github.com/crate/crate-docs-theme/blob/main/DEVELOP.rst
 .. _report an issue: https://github.com/crate/crate-docs-theme/issues/new
-.. _Sphinx static documentation generator: https://www.sphinx-doc.org/
+.. _Sphinx: https://www.sphinx-doc.org/

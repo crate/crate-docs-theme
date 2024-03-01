@@ -1,6 +1,8 @@
-========================
-Different kinds of links
-========================
+.. _cratedb-projects:
+
+===========================
+All the projects of CrateDB
+===========================
 
 Glossary links
 ==============
