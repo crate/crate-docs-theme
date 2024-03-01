@@ -85,7 +85,7 @@ to the terms and jargon of Sphinx and its supported markup languages.
 
 :Linking to HTTP:
 
-  Other than Sphinx references, you can also use arbitrary HTTP or other links
+  Other than Sphinx references, you can also use arbitrary HTTP or other URLs
   as link targets.
 
 :Linking to other documentations:
