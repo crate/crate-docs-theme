@@ -10,6 +10,19 @@ your technical writing.
 :::
 
 
+## What's Inside
+
+- Documentation is written in [Markdown], more specifically
+  the [MyST] CommonMark dialect, or [reStructuredText].
+
+- The documentation system is based on [Sphinx], [MyST], [sphinx-design],
+  [sphinx-design-elements], and many other Sphinx addons and plugins.
+
+- The documentation theme is [crate-docs-theme].
+
+- The documentation projects use [Read the Docs] for publishing.
+
+
 ## Prerequisites
 
 For running the documentation build and sandbox, you will need an installation
@@ -73,20 +86,30 @@ make reset
 ```
 
 
-## Publishing
-
-This project uses [Read the Docs] for publishing, thanks to their team for
-the excellent service.
+## Contributions
 
 If you submit a pull request to the project on GitHub, a corresponding CI job
 will provide you a rendered preview version to inspect your changes like they
 would be published after integrating your patch.
 
 
+## Acknowledgements
+
+Thanks to the team at [Read the Docs] for providing the excellent service.
+
+
+
 [crate-docs]: https://github.com/crate/crate-docs
+[crate-docs-theme]: https://crate-docs-theme.readthedocs.io/
+[Markdown]: https://daringfireball.net/projects/markdown/
+[MyST]: https://myst-parser.readthedocs.io/
 [Pandoc]: https://pandoc.org/
 [Read the Docs]: https://about.readthedocs.com/
+[reStructuredText]: https://docutils.sourceforge.io/rst.html
 [ripgrep]: https://github.com/burntsushi/ripgrep
 [rst-to-myst]: https://github.com/executablebooks/rst-to-myst
+[Sphinx]: https://www.sphinx-doc.org/
 [sphinx-autobuild]: https://pypi.org/project/sphinx-autobuild/
+[sphinx-design]: https://sphinx-design.readthedocs.io/
+[sphinx-design-elements]: https://sphinx-design-elements.readthedocs.io/
 [The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
