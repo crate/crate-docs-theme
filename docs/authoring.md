@@ -34,6 +34,12 @@ git clone https://github.com/crate/cratedb-guide
 cd cratedb-guide/docs
 ```
 
+:::{note}
+Please adjust the repository URL when targeting other documentation projects.
+Note that you may not have `make dev` available on non-CrateDB projects, so
+you will need to invoke [sphinx-autobuild] on your own behalf.
+:::
+
 
 ## Operations
 
