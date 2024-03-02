@@ -9,24 +9,18 @@ CrateDB Documentation Theme
 A theme component for the `Sphinx`_ static documentation generator used by
 the `CrateDB Documentation`_ across the board.
 
-
-********
-Features
-********
-
-Specific features and elements.
+.. rubric:: Introduction
 
 .. toctree::
     :maxdepth: 1
 
+    authoring
     links
 
 
-************
-Style Guides
-************
+.. rubric:: Style Guides
 
-Style-guides by example.
+A few markup snippets by example.
 
 
 Modernized
