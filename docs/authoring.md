@@ -15,9 +15,12 @@ your technical writing.
 For running the documentation build and sandbox, you will need an installation
 of Python on your workstation.
 
-For conveniently searching within the content of the working tree from the
+For convenient ad hoc searching within the content of the working tree from the
 command line, the authors also recommend to install the [ripgrep] or [The
 Silver Searcher] program.
+
+For converting reStructuredText to Markdown, please have a look at the [Pandoc]
+universal document converter, and the [rst-to-myst] program.
 
 
 ## Setup
@@ -75,7 +78,9 @@ would be published after integrating your patch.
 
 
 [crate-docs]: https://github.com/crate/crate-docs
+[Pandoc]: https://pandoc.org/
 [Read the Docs]: https://about.readthedocs.com/
 [ripgrep]: https://github.com/burntsushi/ripgrep
+[rst-to-myst]: https://github.com/executablebooks/rst-to-myst
 [sphinx-autobuild]: https://pypi.org/project/sphinx-autobuild/
 [The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
