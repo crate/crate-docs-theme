@@ -86,11 +86,23 @@ make reset
 ```
 
 
-## Contributions
+## Previews
 
 If you submit a pull request to the project on GitHub, a corresponding CI job
 will provide you a rendered preview version to inspect your changes like they
 would be published after integrating your patch.
+
+
+## Contributing
+
+Interested in contributing to this or any other documentation project?
+Thank you so much!
+
+As an open-source project, we are always looking for improvements in form of
+contributions, whether it be in the form of a new feature, improved
+infrastructure, or better documentation.
+
+Your bug reports, feature requests, and patches are highly appreciated.
 
 
 ## Acknowledgements
