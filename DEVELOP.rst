@@ -1,6 +1,6 @@
-===============
-Developer Guide
-===============
+=====================
+Theme Developer Guide
+=====================
 
 
 Introduction
