@@ -10,6 +10,8 @@ Unreleased
 - Removed legacy ``.woff`` font-files
 - Update SQL-99 config (``html_baseurl``, ``url_path``
   and ``canonical_url_path``)
+- Removed ``webflow.js``, artifacts from the abandoned 
+  feedback box and rating system, removed unused css
 
 
 2024/01/25 0.29.10
