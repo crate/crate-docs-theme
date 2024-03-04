@@ -36,59 +36,91 @@
   display: block;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  margin-bottom: 0px;
+  font-family: Inter, Arial, sans-serif;
+  min-height: 100%;
+  background-color: #fff;
+  margin: 0;
   padding-bottom: 0px;
   color: #000;
   font-size: 16px;
   line-height: 24px;
 }
 
+/**
+ * Consistent and harmonious heading styles for all main text headers. The page
+ * title is visually distinct and so is not included here. We do not support
+ * headings below `<h6>`.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  color: #000;
+  font-weight: 600;
+}
+
 h1 {
+  font-family: Montserrat, Inter, Arial, sans-serif;
   margin-top: 0px;
   margin-bottom: 16px;
-  font-family: Montserrat, Inter, Arial, sans-serif;
   font-size: 40px;
   line-height: 1.2;
-  font-weight: 600;
   letter-spacing: -0.4px;
 }
 
 h2 {
-  margin-top: 64px;
-  margin-bottom: 15px;
-  font-size: 32px;
-  line-height: 36px;
-  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px; /*           this heading font-size * 1.2  */
+  margin-top: 30px; /*           this heading font-size        */
+  margin-bottom: 15px; /*           this heading font-size * 0.5  */
 }
 
 h3 {
-  margin-top: 32px;
-  margin-bottom: 12px;
-  color: #000;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 600;
+  font-size: 27px; /* round(previous heading font-size * 0.9) */
+  line-height: 32px; /* round(    this heading font-size * 1.2) */
+  margin-top: 27px; /*           this heading font-size        */
+  margin-bottom: 14px; /* round(    this heading font-size * 0.5) */
 }
 
 h4 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: #b8b8b8;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 400;
+  font-size: 24px; /* round(previous heading font-size * 0.9) */
+  line-height: 29px; /* round(    this heading font-size * 1.2) */
+  margin-top: 24px; /*           this heading font-size        */
+  margin-bottom: 12px; /* round(    this heading font-size * 0.5) */
 }
 
 h5 {
-  margin-top: 24px;
-  margin-bottom: 8px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
+  font-size: 22px; /* round(previous heading font-size * 0.9) */
+  line-height: 26px; /* round(    this heading font-size * 1.2) */
+  margin-top: 22px; /*           this heading font-size        */
+  margin-bottom: 11px; /* round(    this heading font-size * 0.5) */
+}
+
+h5 {
+  font-size: 20px; /* round(previous heading font-size * 0.9) */
+  line-height: 24px; /* round(    this heading font-size * 1.2) */
+  margin-top: 20px; /*           this heading font-size        */
+  margin-bottom: 10px; /* round(    this heading font-size * 0.5) */
+}
+
+h6 {
+  font-size: 18px; /* round(previous heading font-size * 0.9) */
+  line-height: 22px; /* round(    this heading font-size * 1.2) */
+  margin-top: 18px; /*           this heading font-size        */
+  margin-bottom: 9px; /* round(    this heading font-size * 0.5) */
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.5em;
 }
