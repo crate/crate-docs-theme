@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+
+2024/03/05 0.30.0
+-----------------
+
 - Replaced ``Poppins`` font with ``Montserrat`` for H1
 - Removed legacy ``.woff`` font-files
 - Update SQL-99 config (``html_baseurl``, ``url_path``
