@@ -126,13 +126,13 @@ p {
 }
 
 a {
-  color: #009dc7;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 a:hover {
   opacity: 0.7;
-  color: #009dc7;
+  color: var(--primary-color);
 }
 
 ul {
@@ -280,7 +280,7 @@ header .brand {
   margin-bottom: 0px;
   padding-top: 64px;
   padding-bottom: 64px;
-  background-color: #009dc7;
+  background-color: var(--primary-color);
 }
 
 .section.bg-grey {
@@ -306,7 +306,7 @@ header .brand {
 }
 
 .section.bar.bg-blue {
-  background-color: #009dc7;
+  background-color: var(--primary-color);
 }
 
 .section.narrow {
@@ -330,28 +330,28 @@ header .brand {
   padding: 8px 16px;
   clear: right;
   border: 2px solid transparent;
-  background-color: #009dc7;
+  background-color: var(--primary-color);
   color: #fff;
   text-align: center;
 }
 
 .button:hover {
   border-style: solid;
-  border-color: #009dc7;
+  border-color: var(--primary-color);
   background-color: #fff;
   opacity: 1;
-  color: #009dc7;
+  color: var(--primary-color);
 }
 
 .button.bordered-blue {
   margin-top: 8px;
-  border: 2px solid #009dc7;
+  border: 2px solid var(--primary-color);
   background-color: #fff;
-  color: #009dc7;
+  color: var(--primary-color);
 }
 
 .button.bordered-blue:hover {
-  background-color: #009dc7;
+  background-color: var(--primary-color);
   opacity: 1;
   color: #fff;
 }
@@ -378,14 +378,14 @@ header .brand {
 }
 
 .button.small-bold-upper {
-  background-color: #009dc7;
+  background-color: var(--primary-color);
   color: #000;
   font-size: 14px;
   font-weight: 700;
 }
 
 .button.small-bold-upper:hover {
-  background-color: #009dc7;
+  background-color: var(--primary-color);
 }
 
 .button.big-button {
@@ -396,14 +396,14 @@ header .brand {
 .button.button-deep {
   width: 100%;
   margin-top: 0px;
-  border-color: #009dc7 #fff #009dc7 #009dc7;
+  border-color: var(--primary-color) #fff var(--primary-color) var(--primary-color);
   background-color: #fff;
-  color: #009dc7;
+  color: var(--primary-color);
 }
 
 .button.button-deep:hover {
   border-color: #fff;
-  background-color: #009dc7;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -431,7 +431,7 @@ header .brand {
 .text-link {
   display: block;
   margin-top: 16px;
-  color: #009dc7;
+  color: var(--primary-color);
 }
 
 .teaser-img {
@@ -525,7 +525,7 @@ header .brand {
 }
 
 .link-inline {
-  color: #009dc7;
+  color: var(--primary-color);
 }
 
 code {
@@ -578,7 +578,7 @@ pre code {
 .note {
   margin-bottom: 16px;
   padding: 16px;
-  border-left: 4px solid #009dc7;
+  border-left: 4px solid var(--primary-color);
   background-color: #e9fbff;
 }
 
@@ -614,7 +614,7 @@ pre code {
 }
 
 .small-blue {
-  color: #009dc7;
+  color: var(--primary-color);
   font-size: 12px;
   line-height: 16px;
 }
@@ -728,7 +728,7 @@ a.learn-more-link,
 }
 
 .text-blue {
-  color: #009dc7;
+  color: var(--primary-color);
 }
 
 .image.search {
@@ -813,7 +813,7 @@ a.learn-more-link,
 }
 
 .bg-blue {
-  background-color: #009dc7;
+  background-color: var(--primary-color);
 }
 
 .cta {
@@ -826,7 +826,7 @@ a.learn-more-link,
 }
 
 .cta.border-blue {
-  border: 2px solid #009dc7;
+  border: 2px solid var(--primary-color);
 }
 
 .bg-white {
@@ -961,7 +961,7 @@ a.learn-more-link,
   margin-left: 16px;
   padding: 16px;
   float: right;
-  background-color: #009dc7;
+  background-color: var(--primary-color);
   font-size: 14px;
 }
 
@@ -1168,14 +1168,14 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
   vertical-align: middle;
 }
 .header-row td {
-  background-color: #009dc7 !important;
+  background-color: var(--primary-color) !important;
 }
 
 .text-green {
   color: #44e3a6;
 }
 .text-blue {
-  color: #009dc7;
+  color: var(--primary-color);
 }
 .text-darkblue {
   color: #115097;
@@ -1223,7 +1223,7 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
   margin-bottom: 8px;
 }
 .option-text-link {
-  color: #009dc7;
+  color: var(--primary-color);
 }
 
 .option-text-link.text-link-options {
@@ -1312,12 +1312,12 @@ html.w-mod-js *[data-ix="hide-color-logo"] {
     width: 100%;
     margin-top: 32px;
     margin-bottom: 32px;
-    border: 2px solid #009dc7;
+    border: 2px solid var(--primary-color);
     background-color: #fff;
-    color: #009dc7;
+    color: var(--primary-color);
   }
   .button.button-navleft:hover {
-    background-color: #009dc7;
+    background-color: var(--primary-color);
     color: #fff;
   }
   .textfield {
