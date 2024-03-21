@@ -59,3 +59,10 @@ button.toggle-button {
   display: inline-flex;
   align-items: center;
 }
+
+@media all and (max-width: 980px) {
+  .version-chooser-content div.sd-summary-content,
+  .feedback-compact-content div.sd-summary-content {
+    right: 0;
+  }
+}
