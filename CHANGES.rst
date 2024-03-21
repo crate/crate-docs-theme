@@ -6,6 +6,11 @@ CHANGES
 Unreleased
 ----------
 
+- Fix missing CI colors to align with the main website
+- Update icons with the corresponding colors
+- Introduce a secondary color for improved accessibilty
+- Small improvement for the version/feedback dropdown on mobile
+
 
 2024/03/05 0.30.0
 -----------------
