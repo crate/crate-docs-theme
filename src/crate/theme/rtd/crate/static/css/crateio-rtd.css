@@ -80,7 +80,7 @@ div.admonition ul.open p {
 div.note {
     background: url(../images/admonition/icon-docs-note.svg) no-repeat;
     background-color: #eefafe;
-    border-color: #009DC7;
+    border-color: var(--primary-color);
 }
 
 div.seealso {
@@ -92,7 +92,7 @@ div.seealso {
 div.tip {
     background: url(../images/admonition/icon-docs-tip.svg) no-repeat;
     background-color: #eefafe;
-    border-color: #009DC7;
+    border-color: var(--primary-color);
 }
 
 div.caution {

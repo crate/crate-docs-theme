@@ -126,13 +126,13 @@ p {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
 a:hover {
   opacity: 0.7;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 ul {
