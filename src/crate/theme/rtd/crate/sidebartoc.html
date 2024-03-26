@@ -68,10 +68,10 @@
   {% if project in driver_projects %}
   <li class="current">
     {% if project == 'CrateDB: Clients and Tools' %}
-      <a class="current-active" href="{{ pathto(master_doc) }}">Drivers and Integrations</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Ecosystem Catalog</a>
       {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
     {% else %}
-      <a class="current-active" href="/docs/crate/clients-tools/">Drivers and Integrations</a>
+      <a class="current-active" href="/docs/crate/clients-tools/">Ecosystem Catalog</a>
     {% endif %}
     <ul>
       <!-- Section C. -->
@@ -119,7 +119,7 @@
   </li>
   {% else %}
   <li class="navleft-item">
-    <a href="/docs/crate/clients-tools/">Drivers and Integrations</a>
+    <a href="/docs/crate/clients-tools/">Ecosystem Catalog</a>
   </li>
   {% endif %}
 
