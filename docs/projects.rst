@@ -20,7 +20,7 @@ CrateDB core
 ------------
 
 - :ref:`crate-reference:index`
-- :ref:`cratedb-guide:index`
+- :ref:`guide:index`
 
 
 CrateDB clients
