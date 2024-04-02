@@ -102,8 +102,6 @@ intersphinx_mapping = {
     # CrateDB General
     'guide': ('https://cratedb.com/docs/guide/', None),
     'crate-reference': ('https://cratedb.com/docs/crate/reference/en/latest/', None),
-    'crate-tutorials': ('https://cratedb.com/docs/crate/tutorials/en/latest/', None),
-    'crate-howtos': ('https://cratedb.com/docs/crate/howtos/en/latest/', None),
 
     # CrateDB Clients and Integrations
     'crate-admin-ui': ('https://cratedb.com/docs/crate/admin-ui/en/latest/', None),
