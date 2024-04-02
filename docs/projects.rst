@@ -19,9 +19,8 @@ Those links reference documentation sections within other repositories.
 CrateDB core
 ------------
 
+- :ref:`guide:index`
 - :ref:`crate-reference:index`
-- :ref:`crate-tutorials:index`
-- :ref:`crate-howtos:index`
 
 
 CrateDB clients
