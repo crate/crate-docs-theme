@@ -6,10 +6,15 @@ CHANGES
 Unreleased
 ----------
 
+
+2024/04/06 0.31.0
+-----------------
 - Fix missing CI colors to align with the main website
 - Update icons with the corresponding colors
-- Introduce a secondary color for improved accessibilty
+- Introduce a secondary color for improved accessibility
 - Small improvement for the version/feedback dropdown on mobile
+- Remove intersphinx mappings to ``crate-howtos`` and ``crate-tutorials``,
+  they have been converged into ``cratedb-guide``.
 - Update to sphinx-design-elements 0.3.0
 
 
