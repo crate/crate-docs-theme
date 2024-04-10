@@ -5,7 +5,8 @@ CHANGES
 
 Unreleased
 ----------
-
+- Fix compatibility issue with Python 3.8, by updating to
+  sphinx-design-elements 0.3.1
 
 2024/04/06 0.31.0
 -----------------
