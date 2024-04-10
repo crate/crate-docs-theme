@@ -64,7 +64,7 @@ setup(
         "sphinx>=4.6,<7",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design<1",
-        "sphinx-design-elements==0.3.0",
+        "sphinx-design-elements<1",
         "sphinx-inline-tabs",
         "sphinx-sitemap>=2,<3",
         "sphinx-subfigure<1",
