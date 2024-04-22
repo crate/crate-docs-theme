@@ -114,11 +114,6 @@
       );
     }
 
-    if (!$("body").hasClass("notif-bar-enabled")) {
-      $(".body-container-wrapper").css("padding-top", menuHeight + "px");
-      $("body .w-canvas").css("padding-top", menuHeight + "px");
-    }
-
     var checkScroll = function () {
       curScroll = w.scrollY || doc.scrollTop;
       if (curScroll > prevScroll) {
