@@ -86,6 +86,8 @@
 
 {%- macro script() %}
 
+    <!-- Algolia DNS Prefetch -->
+    <link rel="preconnect" href="https://az1nev7cg0-dsn.algolia.net" crossorigin />
 
     {{ js_tag("_static/bundle/main.js") }}
 
@@ -145,6 +147,8 @@
     -->
     <link rel="canonical" href="{{ custom_baseurl|e }}{{ canonical_page }}" />
     {%- endif %}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
 
     <link rel="icon" type="image/png" href="{{ pathto('_static', 1) }}/images/favicon.png"/>
     {%- endif %}
@@ -231,8 +235,17 @@
     </div>
 {%- endblock %}
 
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    
+    {%- if project != 'SQL 99' %}
+    <!-- Algolia DocSearch  -->
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script type="text/javascript"> 
+      docsearch({
+        container: '#docsearch',
+        appId: 'AZ1NEV7CG0',
+        apiKey: '84b128d95218b1eddb2d4b82d25291fe',
+        indexName: 'cratedb',
+      });
+    </script>
+    {%- endif %}
   </body>
 </html>

@@ -81,14 +81,7 @@
 
   {% else %}
 
-  <form action="search.html" id="cr-search-box" class="form-search cr-nojs-hide" action="" method="">
-    <input id="cr-search-query" class="input-medium search-query" name="q" type="text" placeholder="Enter keywords..." autofocus> 
-    <button type="submit" id="cr-search-submit" class="btn btn-primary">{{ _('Search') }}</button>
-  </form>
-
-  <div id="cr-search-result-info"></div>
-
-  <hr />
+  <div id="docsearch"></div>
   
   <noscript>
     <div id="fallback" class="admonition warning">
@@ -98,8 +91,6 @@
     </p>
     </div>
   </noscript>
-
-  <ul id="cr-search-results" class="search"></ul>
 
   {% endif %}
 
