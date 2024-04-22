@@ -26,13 +26,6 @@
       </style>
   </noscript>
 
-  {% if theme_google_search_api_key %}
-  <script type="text/javascript">
-    const google_search_api_key = "{{ theme_google_search_api_key }}";
-    const google_search_cx_id = "{{ theme_google_search_cx_id }}";
-  </script>
-  {% endif %}
-
   {% if project == 'SQL 99' %}
   <script type="text/javascript">
     jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
