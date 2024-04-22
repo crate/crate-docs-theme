@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Remove Google Search and implement Algolia docsearch
 
 2024/05/06 0.31.2
 -----------------
