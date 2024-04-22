@@ -81,14 +81,23 @@
 
     {% endif %}
 
-    <div class="w-container w-hidden-main margin-bottom-32">
-      <div class="section" style="margin: 0px">
-        <a href="#" id="mobile-menu-toggler" class="w-button">Toggle Doc Menu</a>
-      </div>
-    </div>
     <div class="container" >
       <div class="row" id="main-content">
         <div class="col-md-4 col-lg-3" id="sidebar">
+          <div class="sidebar-head">
+            <div class="w-hidden-main">
+              <div class="section" style="margin: 0px">
+                <a href="#" id="mobile-menu-toggler" class="w-button">Toggle Doc Menu</a>
+              </div>
+            </div>
+            {%- if pagename != "search" %}
+            {%- if project != "SQL 99" %}
+            <div class="search-link">
+              <div id="docsearch"></div>
+            </div>
+            {%- endif %}
+            {%- endif %}
+         </div>
           <aside class="wrapper-navleft  sidebar__inner" >
             {%- block sidebar1 %}
             {%- for sidebartemplate in sidebars %}

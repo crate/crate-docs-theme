@@ -6,6 +6,7 @@
 :root {
     --primary-color: #19c0ea;
     --secondary-color: #009FC7;
+    --docsearch-primary-color: #009FC7 !important;
   }
 
 @font-face {
@@ -35,7 +36,7 @@
 .w-canvas {
   margin-top: 64px;
   margin-bottom: 64px;
-  padding-top: 64.6667px;
+  padding-top: 32px;
 }
 
 a.copybtn {
@@ -415,10 +416,6 @@ aside .nav {
   display: block;
 }
 
-.search-link a {
-  font-size: 14px;
-}
-
 /**
 * Navbar, dropdown menu
 */
@@ -480,10 +477,6 @@ header.header-nav {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.navlink.search {
-  margin-left: 10px;
 }
 
 .main-nav ul.menu > li.menu-item {
@@ -657,6 +650,10 @@ body .mm-menu .navbar-nav {
     font-size: 16px;
   }
 
+  #mobile-menu-toggler {
+    margin-bottom: 16px;
+  }
+
   .w-canvas {
     margin-top: 30px;
   }
@@ -671,15 +668,7 @@ body .mm-menu .navbar-nav {
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-  .margin-bottom-32 {
-    padding-left: 15px;
-  }
-
   .main-nav {
-    display: none;
-  }
-
-  .navbar > .navlink.search {
     display: none;
   }
 
@@ -978,6 +967,10 @@ ul#cr-search-results {
   color: #666666;
 }
 
+.DocSearch.DocSearch-Container {
+  margin-top: 60px;
+}
+
 #cr-search-box button:disabled:hover, 
 #cr-search-box button[disabled]:hover {
   background-color: #cccccc;
@@ -985,9 +978,44 @@ ul#cr-search-results {
   cursor: default;
 }
 
+.search-link .DocSearch-Button {
+  margin: 0px 0 20px 0;
+  width: 200px;
+}
+
+@media all and (min-width: 1200px) {
+  .search-link .DocSearch-Button {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .sidebar-head {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .search-link .DocSearch-Button-Placeholder {
+    display: block;
+  }
+
+  .search-link .DocSearch-Button {
+    margin: 0px 0 16px 0;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .form-search .search-query {
     width: 200px;
+  }
+ 
+  .search-link .DocSearch-Button {
+    margin: 0px 0 20px 0;
+    width: auto;
   }
 }
 
@@ -1805,6 +1833,7 @@ ul.search li {
 
 .cr-sql-99-bg-color {
   background-color: var(--primary-color);
+  margin-bottom: 32px !important;
 }
 
 .cr-sql-99-cta {
@@ -1835,6 +1864,10 @@ ul.search li {
 }
 
 @media all and (max-width: 992px) {
+  .w-canvas {
+    padding-top: 64px;
+  }
+
   .cr-sql-99-headline {
     align-items: flex-start;
     flex-direction: column;

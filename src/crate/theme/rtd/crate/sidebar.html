@@ -1,4 +1,5 @@
 <div role="complementary" class="bs-docs-sidebar hidden-print">
+  {% if project == 'SQL 99' %}
   <div class="search-link">
     {% if pagename == "search" %}
     <a href="search.html" class="btn btn-primary">Search</a>
@@ -6,6 +7,7 @@
     <a href="{{ pathto('search') }}" class="btn btn-primary">Search</a>
     {% endif %}
   </div>
+  {% endif %}
   <ul class="bs-docs-sidenav bs-sidenav nav" role="complementary">
 
     {% if theme_navbar_links %}
