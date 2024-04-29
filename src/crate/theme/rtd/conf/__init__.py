@@ -89,6 +89,11 @@ language = "en"
 version = "latest"
 sitemap_url_scheme = "{lang}{version}{link}"
 
+sitemap_excludes = [
+   "search.html",
+   "genindex.html",
+]
+
 # Configure intersphinx mapping
 intersphinx_mapping = {
 
