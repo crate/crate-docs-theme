@@ -60,7 +60,7 @@ setup(
     install_requires=[
         "Jinja2>=3,<3.2",
         "docutils==0.16",
-        "myst-parser[linkify]<3",
+        "myst-parser[linkify]<4",
         "sphinx>=4.6,<7",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design<1",
