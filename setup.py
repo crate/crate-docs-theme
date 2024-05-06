@@ -59,7 +59,7 @@ setup(
     zip_safe=False,
     install_requires=[
         "Jinja2>=3,<3.2",
-        "docutils==0.16",
+        "docutils==0.21.2",
         "myst-parser[linkify]<4",
         "sphinx>=4.6,<7",
         "sphinx-copybutton>=0.3.1,<1",
