@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Cleanups: Remove configurations for ``cloud_{howtos,reference,tutorials}``
 
 2024/04/10 0.31.1
 -----------------
