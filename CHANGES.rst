@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/05/06 0.32.0
+-----------------
 - Remove Google Search and implement Algolia docsearch
 - Remove `search.html` and `genindex.html` from `site.xml`
 
