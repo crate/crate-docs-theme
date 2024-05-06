@@ -29,15 +29,4 @@ project = u"CrateDB: Crash CLI"
 html_title = project
 
 url_path = "docs/crate/crash"
-
-# For sitemap extension
 html_baseurl = "https://cratedb.com/%s/" % url_path
-
-# For rel="canonical" links
-html_theme_options.update(
-    {
-        "canonical_url_path": "%s/en/latest/" % url_path,
-    }
-)
-
-ogp_site_url = html_baseurl
