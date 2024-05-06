@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/05/06 0.31.2
+-----------------
 - Cleanups: Remove configurations for ``cloud_{howtos,reference,tutorials}``
 - Fix computing URLs for rel="canonical"
 
