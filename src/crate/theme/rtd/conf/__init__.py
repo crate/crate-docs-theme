@@ -70,10 +70,6 @@ html_theme_options = {
     # Values: "true" (default) or "false"
     "navbar_fixed_top": "false",
     "globaltoc_includehidden": "true",
-    # The URL path is required because RTD does only allow root as a canonical
-    # url
-    "canonical_url_path": "",
-    "canonical_url": "https://cratedb.com/",
     # HubSpot analytics configuration
     "tracking_hubspot_id": environ.get("TRACKING_HUBSPOT_ID", ""),
     "tracking_project": "",
@@ -186,32 +182,48 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
-def setup(app):
-    # Force the canonical URL in multiple ways
-    #
-    # This gets around several points where the canonical_url override might be
-    # disregarded or performed out of order.
-    #
-    # This module should be star imported into `create_*.py`, and thus star
-    # imported into the base `conf.py`. Sphinx will automatically use a `setup()`
-    # in `conf.py` as an extension.
-    def force_canonical_url(app_inited):
-        from sphinx.builders.html import StandaloneHTMLBuilder
-        from sphinx.builders.epub3 import Epub3Builder
 
-        if isinstance(app_inited.builder, StandaloneHTMLBuilder) and not isinstance(
-            app_inited.builder, Epub3Builder
-        ):
-            try:
-                canonical_url = app_inited.builder.theme_options["canonical_url"]
-                canonical_url_path = app_inited.builder.theme_options[
-                    "canonical_url_path"
-                ]
-            except KeyError:
-                return
-            canonical_url = canonical_url + canonical_url_path
-            app_inited.env.config.html_context["canonical_url"] = canonical_url
-            app_inited.builder.config.html_context["canonical_url"] = canonical_url
+def setup(app):
+
+    # Configure Sphinx/RTD to host projects on a custom domain, but also on a non-root resource.
+    def configure_self_hosted_on_path(app_inited):
+        """
+        By default, Sphinx is agnostic, and RTD only supports custom domains,
+        without support for hosting on non-root resources.
+
+        In order to get things in order, this routine configures:
+
+        - `ogp_site_url` Sphinx setting
+          Configures the `sphinxext.opengraph` Sphinx addon.
+
+        - `custom_baseurl` HTML context variable
+          Configures the version chooser defined in `version_chooser.html`.
+        """
+
+        config = app_inited.env.config
+        html_baseurl = config["html_baseurl"]
+
+        if html_baseurl is None:
+            return
+
+        rtd_language = config["language"]
+        rtd_version = config["version"]
+        if rtd_version:
+            rtd_lang_slug = f"{rtd_language}/{rtd_version}/"
+        else:
+            rtd_lang_slug = ""
+
+        # Resolve an intertwingulation between vanilla Sphinx and RTD.
+        # CrateDB docs are hosted on a custom domain behind Nginx.
+        html_baseurl_real = html_baseurl + rtd_lang_slug
+
+        # Configure `sphinxext.opengraph`.
+        config.ogp_site_url = html_baseurl_real
+
+        # Properly render rel="canonical" links.
+        # Because RTD does something silly with `index` page names,
+        # render it in `base.html` manually.
+        config.html_context["custom_baseurl"] = html_baseurl_real
 
     # Dynamically set the `proxied_api_host` context variable on a per-project level.
     def set_proxied_api_host(app_inited):
@@ -263,7 +275,7 @@ def setup(app):
         except Exception as ex:
             print(f"ERROR: Unable to adjust `html_context`. Reason: {ex}")
 
-    app.connect("builder-inited", force_canonical_url)
+    app.connect("builder-inited", configure_self_hosted_on_path)
     app.connect("builder-inited", set_proxied_api_host)
     app.connect("builder-inited", set_proxied_static_path)
     app.connect("builder-inited", apply_html_context_custom)

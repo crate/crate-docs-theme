@@ -28,16 +28,5 @@ from crate.theme.rtd.conf import *
 project = u"CrateDB JDBC"
 html_title = project
 
-url_path = "docs/jdbc"
-
-# For sitemap extension
-html_baseurl = "https://cratedb.com/%s/" % url_path
-
-# For rel="canonical" links
-html_theme_options.update(
-    {
-        "canonical_url_path": "%s/en/latest/" % url_path,
-    }
-)
-
-ogp_site_url = html_baseurl
+# Vanilla Sphinx/RTD `html_baseurl`.
+html_baseurl = "https://cratedb.com/docs/jdbc/"

@@ -2,7 +2,7 @@
 
 <div class="version-chooser-container">
 
-  {% set url_path = theme_canonical_url_path.replace('en/latest/', '') %}
+  {% set baseurl = custom_baseurl.replace('en/latest/', '') %}
   <script>
     // Sphinx version chooser JavaScript helpers by Daniel McCloy, derived from pydata-sphinx-theme.
     // BSD 3-Clause License; Copyright (c) 2018, pandas; All rights reserved.
@@ -35,7 +35,7 @@
         "class",
         "version-chooser-link"
       );
-      node.setAttribute("href", `https://cratedb.com/{{ url_path }}{{ rtd_language }}/${slug}/{{ pagename }}.html`);
+      node.setAttribute("href", `{{ baseurl }}{{ rtd_language }}/${slug}/{{ pagename }}.html`);
       node.textContent = slug;
 
       // On navigation, AJAX calls will check if the linked page exists before

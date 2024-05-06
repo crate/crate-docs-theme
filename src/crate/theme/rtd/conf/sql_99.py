@@ -28,21 +28,7 @@ from crate.theme.rtd.conf import *
 project = u"SQL 99"
 html_title = project
 
-url_path = ""
-
-# For sitemap extension
-html_baseurl = "https://sql-99.readthedocs.io"
-
-# For rel="canonical" links
-html_theme_options.update(
-    {
-        "canonical_url": "https://sql-99.readthedocs.io",
-        "canonical_url_path": "/en/latest/",
-    }
-)
-
-ogp_site_url = html_baseurl
-
+html_baseurl = "https://sql-99.readthedocs.io/"
 
 # Disable the GitHub feedback area.
 html_context_custom.update({
