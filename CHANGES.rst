@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/05/07 0.32.1
+-----------------
 - Fix downstream behavior on "not versioned" projects like CrateDB Guide.
 
 2024/05/06 0.32.0
