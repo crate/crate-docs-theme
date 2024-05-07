@@ -66,3 +66,9 @@ button.toggle-button {
     right: 0;
   }
 }
+
+
+/* Visually disable annoying "notificatio-pro" component */
+.notificatio-pro {
+  display: none;
+}
