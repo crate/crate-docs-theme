@@ -32,5 +32,4 @@ url_path = "docs/guide"
 html_baseurl = "https://cratedb.com/%s/" % url_path
 
 # This is a project which is not versioned.
-language = ""
 version = ""

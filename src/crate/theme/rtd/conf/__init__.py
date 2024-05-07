@@ -208,6 +208,9 @@ def setup(app):
         if html_baseurl is None:
             return
 
+        # A little heuristic to consider a project as "not versioned",
+        # and process it accordingly, when the value of the "version"
+        # setting is empty.
         rtd_language = config["language"]
         rtd_version = config["version"]
         if rtd_version:
