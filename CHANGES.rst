@@ -6,7 +6,9 @@ CHANGES
 Unreleased
 ----------
 
-- Fix URLs to GitHub feedback (removed hardcoded `https://cratedb.com/`)
+2024/05/08 0.32.2
+-----------------
+- Fix URLs to GitHub feedback, removed hard-coded ``https://cratedb.com/``
 
 2024/05/07 0.32.1
 -----------------
