@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Fix URLs to GitHub feedback (removed hardcoded `https://cratedb.com/`)
+
 2024/05/07 0.32.1
 -----------------
 - Fix downstream behavior on "not versioned" projects like CrateDB Guide.

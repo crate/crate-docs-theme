@@ -28,9 +28,9 @@ set source_path = conf_py_path + pagename + suffix
           '<!-- Please do not edit or remove the following information -->'|urlencode }}{{ '%0A '
         }}{{ '%0A'
         }}{{
-          '- Page title: '|urlencode }}{{ title|striptags|urlencode }}{{ '%0A'
+          '- Page title: ' }}{{ title|striptags|urlencode }}{{ '%0A'
         }}{{
-          '- Page URL: https://cratedb.com/'|urlencode }}{{ custom_baseurl|urlencode }}{{ pagename|urlencode }}.html{{ '%0A'
+          '- Page URL: ' }}{{ custom_baseurl|urlencode }}{{ pagename|urlencode }}.html{{ '%0A'
         }}{{
           '- Source: https://'|urlencode }}{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path|urlencode }}{{ pagename|urlencode }}{{ suffix }}{{ '%0A'
         }}{{ '%0A'
