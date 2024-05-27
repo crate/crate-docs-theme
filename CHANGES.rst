@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+2024/05/28 0.32.3
+-----------------
+- Removed separate "Install" menu item
+
 2024/05/08 0.32.2
 -----------------
 - Fix URLs to GitHub feedback, removed hard-coded ``https://cratedb.com/``
