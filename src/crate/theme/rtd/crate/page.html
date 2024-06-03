@@ -4,6 +4,15 @@
 {# Include main JavaScript/CSS assets #}
 {% block head_extra %}
   <script src="{{ pathto('_static/bundle/main.js', 1) }}?ver={{ theme_ver }}"></script>
+  {%- if custom_baseurl %}
+  {%- set canonical_page = pagename + ".html" %}
+  <!--
+  Always link to the latest version, as canonical.
+  https://docs.readthedocs.io/en/stable/canonical-urls.html
+  -->
+  <link rel="canonical" href="{{ custom_baseurl|e }}{{ canonical_page }}" />
+  {%- endif %}
+
 {% endblock %}
 
 {# Include Furo icons as first body element #}
