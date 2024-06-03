@@ -23,12 +23,11 @@ the `CrateDB Documentation`_ across the board.
 A few markup snippets by example.
 
 
-Gallery NG
+Modernized
 ==========
 
 A side-by-side gallery demonstrating both reStructuredText and Markedly
 Structured Text syntax.
-
 
 .. grid::
 
@@ -49,27 +48,29 @@ Structured Text syntax.
             myst/index
 
 
-Legacy gallery
-==============
+Legacy
+======
 
 The legacy feature gallery exclusively uses reStructuredText.
 
 .. toctree::
-    :titlesonly:
-    :caption: Elements
+    :maxdepth: 1
 
-    admonitions
-    codesnippets
-    diagrams
-    glossary
     headings
-    images
-    links
+    admonitions
     lists
     subpage
     projects
     tables
     typography
+    tables
+    images
+    diagrams
+    codesnippets
+    typography
+    subpage
+    glossary
+    projects
 
 
 
