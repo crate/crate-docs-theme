@@ -47,12 +47,13 @@
   color: $pagetools-text-color;
 }
 
-// Attempt to fix jumping border.
-// FIXME: Will cause other kinds of wobbles.
-/*
- details.sd-dropdown:not([open]).sd-card
-  border: 1px solid transparent
-*/
+// Fix jumping border.
+details.sd-dropdown:not([open]).sd-card {
+  border: none;
+}
+.sd-card-header {
+  border-bottom: none;
+}
 
 /* Fix text alignment with sphinx-togglebutton */
 button.toggle-button {
