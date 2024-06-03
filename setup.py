@@ -53,6 +53,7 @@ setup(
     keywords="crate docs sphinx readthedocs",
     license="Apache License 2.0",
     packages=find_namespace_packages(where="src"),
+    namespace_packages=["crate"],
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
