@@ -111,6 +111,7 @@ intersphinx_mapping = {
     'crate-operator': ('https://crate-operator.readthedocs.io/en/latest/', None),
     'crate-pdo': ('https://cratedb.com/docs/pdo/en/latest/', None),
     'crate-python': ('https://cratedb.com/docs/python/en/latest/', None),
+    'sqlalchemy-cratedb': ('https://cratedb.com/docs/sqlalchemy-cratedb/', None),
 
     # CrateDB Cloud
     'cloud': ('https://cratedb.com/docs/cloud/en/latest/', None),
