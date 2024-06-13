@@ -60,7 +60,7 @@
   {%
   set driver_projects = [
     'CrateDB: Clients and Tools',
-    'CrateDB JDBC', 'CrateDB DBAL', 'CrateDB PDO', 'CrateDB Python', 'CrateDB Npgsql'
+    'CrateDB JDBC', 'CrateDB DBAL', 'CrateDB PDO', 'CrateDB Python', 'SQLAlchemy Dialect', 'CrateDB Npgsql'
   ]
   %}
   {% if project in driver_projects %}
@@ -104,6 +104,14 @@
       </li>
       {% else %}
       <li class="navleft-item"><a href="/docs/python/">Python</a></li>
+      {% endif %}
+      {% if project == 'SQLAlchemy Dialect' %}
+      <li class="current">
+        <a class="current-active" href="{{ pathto(master_doc) }}">SQLAlchemy</a>
+        {{ toctree(maxdepth=3|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      </li>
+      {% else %}
+      <li class="navleft-item"><a href="/docs/sqlalchemy-cratedb/">SQLAlchemy</a></li>
       {% endif %}
       {% if project == 'CrateDB Npgsql' %}
       <li class="current">
