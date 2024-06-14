@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/06/14 0.32.4
+-----------------
 - Added documentation project ``sqlalchemy-cratedb``
 
 2024/05/28 0.32.3
