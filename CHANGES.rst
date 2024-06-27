@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- CSS: Adjusted inner alignment being off for cards with links
 
 2024/06/27 0.33.0
 -----------------

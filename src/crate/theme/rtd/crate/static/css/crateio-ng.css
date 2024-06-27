@@ -78,3 +78,9 @@ button.toggle-button {
 .notificatio-pro {
   display: none;
 }
+
+
+/* Cards with Links */
+.sd-hide-link-text {
+  height: 0;
+}
