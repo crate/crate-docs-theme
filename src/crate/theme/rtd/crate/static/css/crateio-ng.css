@@ -5,6 +5,12 @@
   gap: 0.3em;
 }
 
+/* All choosers */
+details.sd-dropdown summary.sd-summary-title {
+  align-items: center !important;
+  padding: 1em !important;
+}
+
 /* Version chooser component */
 
 .version-chooser-content {
