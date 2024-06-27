@@ -6,6 +6,7 @@ CHANGES
 Unreleased
 ----------
 - Updated to ``sphinx-design-elements==0.4.0`` and ``sphinx-design==0.6.0``
+- Removed support for Python 3.7 and 3.8
 
 2024/06/14 0.32.4
 -----------------
