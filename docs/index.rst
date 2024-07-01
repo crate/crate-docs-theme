@@ -56,21 +56,17 @@ The legacy feature gallery exclusively uses reStructuredText.
 .. toctree::
     :maxdepth: 1
 
-    headings
     admonitions
-    lists
-    subpage
-    projects
-    tables
-    typography
-    tables
-    images
-    diagrams
     codesnippets
-    typography
-    subpage
+    diagrams
     glossary
+    headings
+    images
+    lists
     projects
+    subpage
+    tables
+    typography
 
 
 
