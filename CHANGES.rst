@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/07/04 0.33.1
+-----------------
 - CSS: Adjusted inner alignment being off for cards with links
 - Home: Added new top-level landing page, indexing the main docs entrypoints
 
