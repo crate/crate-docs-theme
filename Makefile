@@ -108,7 +108,7 @@ upload: $(TWINE)
 	    exit 1; \
 	fi
 	. $(ACTIVATE) && \
-	    $(TWINE) upload $(DIST_DIR)/*
+	    $(TWINE) upload --skip-existing $(DIST_DIR)/*
 
 .PHONY: clean
 clean:
