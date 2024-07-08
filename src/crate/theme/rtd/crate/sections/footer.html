@@ -22,8 +22,8 @@
     </div>
   </div>
 </div>
-<footer class="footer">
-  <div class="container">
+<div class="footer">
+  <div class="container-fluid">
     <div class="w-clearfix">
       <div class="w-row mobileAlign">
         <div class="row">
@@ -73,17 +73,40 @@
       </div>
     </div>
   </div>
-</footer>
+</div>
 
 {%- if project != 'SQL 99' %}
+
+{% block footer_algolia %}
 <!-- Algolia DocSearch  -->
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+{% endblock footer_algolia %}
+
 <script type="text/javascript">
+
+  // Init DocSearch (from https://github.com/algolia/docsearch/issues/1368#issuecomment-1428085393)
+  const appId = "AZ1NEV7CG0";
+  const apiKey = "84b128d95218b1eddb2d4b82d25291fe";
+
   docsearch({
-    container: '#docsearch',
-    appId: 'AZ1NEV7CG0',
-    apiKey: '84b128d95218b1eddb2d4b82d25291fe',
-    indexName: 'cratedb',
+    container: "#docsearch",
+    appId,
+    indexName: "cratedb",
+    apiKey,
+    resultsFooterComponent({ state }) {
+      return {
+        type: "a",
+        ref: undefined,
+        constructor: undefined,
+        key: state.query,
+        props: {
+          href: `/search.html?q=${state.query}`,
+          children: `See all ${state.context.nbHits} results`
+        },
+        __v: null
+      };
+    }
   });
 </script>
+
 {%- endif %}

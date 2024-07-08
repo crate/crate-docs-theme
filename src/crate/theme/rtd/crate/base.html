@@ -235,17 +235,5 @@
     </div>
 {%- endblock %}
 
-    {%- if project != 'SQL 99' %}
-    <!-- Algolia DocSearch  -->
-    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
-    <script type="text/javascript"> 
-      docsearch({
-        container: '#docsearch',
-        appId: 'AZ1NEV7CG0',
-        apiKey: '84b128d95218b1eddb2d4b82d25291fe',
-        indexName: 'cratedb',
-      });
-    </script>
-    {%- endif %}
   </body>
 </html>

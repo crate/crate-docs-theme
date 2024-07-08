@@ -7,91 +7,89 @@
     :copyright: Copyright 2007-2013 by the Sphinx team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 #}
-{%- extends "layout.html" %}
+{% extends "page.html" %}
+
 
 {# On synthetic pages, do not display Edit/View page source #}
 {% set synthetic_page = true %}
 
 {% set title = _('Search') %}
 
-{% block extra_head %}
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name="apple-mobile-web-app-capable" content="yes">
+{%- block head_extra -%}
+{{ super() }}
+<!-- Algolia instansearch stylesheet -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.2.0/themes/satellite-min.css">
+{%- endblock head_extra -%}
 
-  <noscript>
-      <style>
-          .cr-nojs-hide { display: none; }
-      </style>
-  </noscript>
+{% if project == 'SQL 99' %}
+<script type="text/javascript">
+  jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
+</script>
+{% endif %}
 
-  {% if project == 'SQL 99' %}
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
-  </script>
-  {% endif %}
 
-{% endblock %}
+{% block content %}
+  <div class="container">
+    <h1 id="search-documentation">{{ _('Search') }}</h1>
+    <p>
+      {% trans %}From here you can search these documents. Enter your search
+      words into the box below and click "search". Note that the search
+      function will automatically search for all of the words. Pages
+      containing fewer words won't appear in the result list.{% endtrans %}
+    </p>
 
-{% block body %}
-  <h1 id="search-documentation">{{ _('Search') }}</h1>
-  <p>
-    {% trans %}From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.{% endtrans %}
-  </p>
+    {% if project == 'SQL 99' %}
 
-  {% if project == 'SQL 99' %}
-
-  <form class="form-search" action="" method="get" class="cr-nojs-hide">
-    <input type="text" name="q" class="input-medium search-query" placeholder="Search documentation..." autofocus>
-    <button type="submit" class="btn btn-primary">{{ _('search') }}</button>
-    <!-- <span id="search-progress" style="padding-left: 10px"></span> -->
-  </form>
-  {% if search_performed %}
-    <h2>{{ _('Search Results') }}</h2>
-    {% if not search_results %}
-      <p>{{ _('Your search did not match any results.') }}</p>
+    <form class="form-search" action="" method="get" class="cr-nojs-hide">
+      <input type="text" name="q" class="input-medium search-query" placeholder="Search documentation..." autofocus>
+      <button type="submit" class="btn btn-primary">{{ _('search') }}</button>
+      <!-- <span id="search-progress" style="padding-left: 10px"></span> -->
+    </form>
+    {% if search_performed %}
+      <h2>{{ _('Search Results') }}</h2>
+      {% if not search_results %}
+        <p>{{ _('Your search did not match any results.') }}</p>
+      {% endif %}
     {% endif %}
-  {% endif %}
-  <noscript>
-    <div id="fallback" class="admonition warning">
-    <p>
-      {% trans %}Please activate JavaScript to enable the search
-      functionality.{% endtrans %}
-    </p>
+    <noscript>
+      <div id="fallback" class="admonition warning">
+      <p>
+        {% trans %}Please activate JavaScript to enable the search
+        functionality.{% endtrans %}
+      </p>
+      </div>
+    </noscript>
+    {% if search_results %}
+    <div id="search-results">
+      <ul>
+      {% for href, caption, context in search_results %}
+        <li class="card">
+          <div class="card-block">
+            <h3 class="card-title"><a href="{{ pathto(item.href) }}">{{ caption }}</a></h3>
+            <div class="context">{{ context|e }}</div>
+          </div>
+        </li>
+      {% endfor %}
+      </ul>
     </div>
-  </noscript>
-  <div id="search-results">
-  {% if search_results %}
-    <ul>
-    {% for href, caption, context in search_results %}
-      <li class="card">
-        <div class="card-block">
-          <h3 class="card-title"><a href="{{ pathto(item.href) }}">{{ caption }}</a></h3>
-          <div class="context">{{ context|e }}</div>
-        </div>
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
+    {% endif %}
+
+    {% else %}
+
+    <div class="ais-InstantSearch">
+      <div class="right-panel">
+        <div id="searchbox"></div>
+        <div id="hits"></div>
+        <div id="pagination"></div>
+      </div>
+    </div>
+    {% endif %}
   </div>
+{% endblock content %}
 
-  {% else %}
+{% block extra_footer %}
+<!-- Algolia Instantsearch  -->
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.23.3/dist/algoliasearch-lite.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.69.0/dist/instantsearch.production.min.js"></script>
+{% endblock extra_footer %}
 
-  <div id="docsearch"></div>
-  
-  <noscript>
-    <div id="fallback" class="admonition warning">
-    <p>
-      {% trans %}Please activate JavaScript to enable the search
-      functionality.{% endtrans %}
-    </p>
-    </div>
-  </noscript>
-
-  {% endif %}
-
-{% endblock %}

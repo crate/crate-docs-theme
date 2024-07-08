@@ -30,7 +30,6 @@
 }
 
 // Sidebar: Adjust drawer icon positioning and size.
-
 .sidebar-container-primary {
   float: left;
 
@@ -47,4 +46,22 @@
     height: $sidebar-drawer-icon-size;
     width: $sidebar-drawer-icon-size;
   }
+}
+
+// Searchbox and feedback/versionchooser in same row
+.sb-header-content__inner .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
+// Center header and footer
+.sb-header .sb-header__inner.sb-page-width,
+.sb-footer .sb-footer__inner.sb-page-width {
+  margin: 0 auto;
+}
+
+// Fix sidebar z-index
+.sb-sidebar-primary {
+  z-index: 50;
 }
