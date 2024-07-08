@@ -72,6 +72,13 @@ button.toggle-button {
   }
 }
 
+@media all and (max-width: 540px) {
+  /* hide feedback title on mobile */
+  details.feedback-compact-content .feedback-compact-title {
+    display: none;
+  }
+}
+
 /* Visually disable annoying "notificatio-pro" component */
 .notificatio-pro {
   display: none
