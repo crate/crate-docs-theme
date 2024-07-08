@@ -8,11 +8,18 @@
  * https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-1k30
 **/
 
-// Make header sticky.
+// Make header sticky and only show on desktop devices
 .sb-header {
   position: sticky;
   top: 0;
   z-index: 200;
+  display: none;
+}
+
+@media all and (min-width: 76rem) {
+  header.sb-header {
+    display: block;
+  }
 }
 
 // Make sidebars sticky.
