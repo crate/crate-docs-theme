@@ -20,3 +20,11 @@ $pagetools-text-color: #222222;
 body {
   @include settings;
 }
+
+@media all and (max-width: 540px) {
+
+  /* Change body size so everything gets smaller on mobile */
+  body {
+    font-size: 15px;
+  }
+}
