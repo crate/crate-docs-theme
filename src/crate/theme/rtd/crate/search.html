@@ -87,9 +87,11 @@
   </div>
 {% endblock content %}
 
-{% block extra_footer %}
+{% block footer_content %}
+{{ super() }}
 <!-- Algolia Instantsearch  -->
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.23.3/dist/algoliasearch-lite.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.69.0/dist/instantsearch.production.min.js"></script>
-{% endblock extra_footer %}
+{% endblock footer_content %}
+
 

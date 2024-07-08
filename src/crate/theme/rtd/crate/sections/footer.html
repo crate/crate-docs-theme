@@ -8,7 +8,7 @@
         <div class="footer-subs-form">
           <!--[if lte IE 8]>
           <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-        <![endif]-->
+          <![endif]-->
           <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
           <script>
             hbspt.forms.create({
@@ -107,6 +107,64 @@
       };
     }
   });
+
+  // Also init Algolia InstantSearch, if available (for search results page)
+  if (typeof algoliasearch != "undefined" && typeof instantsearch != "undefined") {
+    const { algoliasearch, instantsearch } = window;
+    
+    const searchClient = algoliasearch(appId, apiKey);
+    const indexName = "cratedb";
+    
+    const search = instantsearch({
+      searchClient,
+      indexName,
+      routing: {
+        stateMapping: {
+          stateToRoute(uiState) {
+            const indexUiState = uiState[indexName];
+            return {
+              q: indexUiState.query,
+            }
+          },
+          routeToState({q}) {
+            return {
+              [indexName]: {
+                query: q,
+              },
+            };
+          },
+        },
+      }
+    });
+
+    search.addWidgets([
+    instantsearch.widgets.searchBox({
+      container: '#searchbox',
+    }),
+    instantsearch.widgets.hits({
+      container: '#hits',
+      templates: {
+        item(hit, { html, components, sendEvent }) {
+          return html`
+            <div>
+                <p class="ais-Heading"><a href="${hit.url}">${hit.hierarchy.lvl2 ? hit.hierarchy.lvl2 : hit.hierarchy.lvl1}</a></p>
+                <p>${components.Highlight({ hit, attribute: 'content' })}</p>
+                <p class="ais-Breadcrumbs">${hit.hierarchy.lvl0}: ${hit.hierarchy.lvl1} ${hit.hierarchy.lvl2 ? "> " + hit.hierarchy.lvl2 : ""}</p>
+            </div>
+            `;
+        },
+      },
+    }),
+    instantsearch.widgets.configure({
+      hitsPerPage: 8
+    }),
+    instantsearch.widgets.pagination({
+      container: '#pagination',
+    }),
+    ]);
+    
+    search.start();
+  }
 </script>
 
 {%- endif %}
