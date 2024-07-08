@@ -977,8 +977,7 @@ ul#cr-search-results {
 }
 
 .search-link .DocSearch-Button {
-  margin: 0px 0 20px 0;
-  width: 200px;
+  margin: 0px;
   border-radius: 0;
 }
 
@@ -995,20 +994,15 @@ ul#cr-search-results {
   .search-link .DocSearch-Button-Placeholder {
     display: block;
   }
-
-  .search-link .DocSearch-Button {
-    margin: 0px 0 16px 0;
-  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 540px) {
+  details.sd-dropdown summary.sd-summary-title,
+  .DocSearch-Button-Placeholder {
+    font-size: var(--font-size--small);
+  }
   .form-search .search-query {
     width: 200px;
-  }
- 
-  .search-link .DocSearch-Button {
-    margin: 0px 0 20px 0;
-    width: auto;
   }
 }
 
