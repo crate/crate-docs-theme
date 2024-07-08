@@ -1,16 +1,18 @@
-<div class="page-tools">
+<div class="container-fluid">
   <div class="search-link">
     <div id="docsearch"></div>
   </div>
 
-{% if display_github %}
-{% include "components/github_feedback_compact.html" %}
-<script>
-{% include "components/github_keynav.js" %}
-</script>
-{%- endif %}
 
-{%- if display_version %}
-{% include "components/version_chooser.html" %}
-{%- endif %}
+  {% if display_github %}
+  {% include "components/github_feedback_compact.html" %}
+  <script>
+  {% include "components/github_keynav.js" %}
+  </script>
+  {%- endif %}
+
+  {%- if display_version %}
+  {% include "components/version_chooser.html" %}
+  {%- endif %}
+  </div>
 </div>
