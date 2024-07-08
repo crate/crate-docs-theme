@@ -51,6 +51,7 @@ details.sd-dropdown:not([open]).sd-card {
 }
 .sd-card-header {
   border-bottom: none;
+  border-radius: 0 !important;
 }
 
 /* Fix text alignment with sphinx-togglebutton */
