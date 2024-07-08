@@ -26,8 +26,57 @@
 
 {% endblock %}
 
+{% block container %}
+<div class="sb-container">
+  <div class="sb-container__inner sb-page-width">
+    {% block sidebar_primary %}
+    <aside class="sb-sidebar-primary">
+      {% include "sections/sidebar-primary.html" %}
+    </aside>
+    {% endblock sidebar_primary %}
+    <main class="sb-main">
+      {% block header_content %}
+      <header class="sb-header-content">
+        <div class="sb-header-content__inner">
+          {% include "sections/header-content.html" %}
+        </div>
+      </header>
+      {% endblock header_content %}
+      <div class="sb-content">
+        {% block content %}
+        <div class="sb-article-container">
+          <header class="sb-header-article">
+            {% include "sections/header-article.html" %}
+          </header>
+          <article class="sb-article" role="main">
+            {% include "sections/article.html" %}
+          </article>
+          <footer class="sb-footer-article">
+            {% include "sections/footer-article.html" %}
+          </footer>
+        </div>
+        {% endblock content %}
+        {% block sidebar_secondary %}
+        <aside class="sb-sidebar-secondary">
+          {% include "sections/sidebar-secondary.html" %}
+        </aside>
+        {% endblock sidebar_secondary %}
+      </div>
+      {% block footer_content %}
+      <footer class="sb-footer-content">
+        <div class="sb-footer-content__inner">
+          {% include "sections/footer-content.html" %}
+        </div>
+      </footer>
+      {% endblock footer_content %}
+    </main>
+  </div>
+</div>
+{% endblock container %}
+
 {# Include Furo icons as first body element #}
 {% block body -%}
 {% include "partials/icons.html" %}
 {{ super() }}
 {% endblock %}
+
