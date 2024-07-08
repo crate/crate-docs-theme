@@ -1,7 +1,6 @@
 {# Layout: This is used by _every_ Sphinx content page #}
 {% extends "basic-ng/page.html" %}
 
-{# Include main JavaScript/CSS assets #}
 {% block head_extra %}
   <script src="{{ pathto('_static/bundle/main.js', 1) }}?ver={{ theme_ver }}"></script>
 
@@ -9,6 +8,12 @@
   <link rel="preconnect" href="https://az1nev7cg0-dsn.algolia.net" crossorigin />
   <!-- Algolia stylesheet -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+
+  <noscript>
+      <style>
+          .cr-nojs-hide { display: none; }
+      </style>
+  </noscript>
 
   {%- if custom_baseurl %}
   {%- set canonical_page = pagename + ".html" %}

@@ -475,6 +475,7 @@ header.header-nav {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 10px;
 }
 
 .main-nav ul.menu > li.menu-item {
@@ -485,7 +486,6 @@ header.header-nav {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 0;
-  margin: 0 5px;
 }
 
 .menu-item-has-children {
@@ -979,12 +979,6 @@ ul#cr-search-results {
 .search-link .DocSearch-Button {
   margin: 0px 0 20px 0;
   width: 200px;
-}
-
-@media all and (min-width: 1200px) {
-  .search-link .DocSearch-Button {
-    width: 100%;
-  }
 }
 
 @media all and (max-width: 991px) {
