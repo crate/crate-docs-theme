@@ -35,11 +35,9 @@
 }
 
 // Feedback title: Do not display when collapsed.
-/*
-  details.feedback-compact-content:not([open])
-    .feedback-compact-title
-      display: none
-*/
+details.feedback-compact-content:not([open]) .feedback-compact-title {
+    display: none
+}
 
 // Set link text color.
 .version-chooser-link,
@@ -59,6 +57,11 @@ details.sd-dropdown:not([open]).sd-card {
 button.toggle-button {
   display: inline-flex;
   align-items: center;
+}
+
+/* Fix fontawesome icon alignment */
+.sd-summary-title .fa-gear {
+  line-height: inherit;
 }
 
 @media all and (max-width: 980px) {
