@@ -56,6 +56,7 @@ footer {
 // Next/Prev page information
   }
 }
+
 .related-pages {
   a {
     display: flex;
@@ -96,6 +97,7 @@ footer {
     }
   }
 }
+
 .page-info {
   display: flex;
   flex-direction: column;
@@ -119,4 +121,8 @@ footer {
     color: darkgray;
     font-size: var(--font-size--small);
   }
+}
+
+.cr-docs-footer-menu ul {
+  padding-left: 0;
 }
