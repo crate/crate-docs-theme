@@ -979,6 +979,7 @@ ul#cr-search-results {
 .search-link .DocSearch-Button {
   margin: 0px 0 20px 0;
   width: 200px;
+  border-radius: 0;
 }
 
 @media all and (max-width: 991px) {
