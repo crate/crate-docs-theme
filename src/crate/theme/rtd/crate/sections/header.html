@@ -1,105 +1,94 @@
-<!--esi
-  <esi:include src="https://cratedb.com/_hcms/api/notif-include" />
--->
-
-<input type="checkbox" id="mobile-nav-new">
-
 {% if project == 'SQL 99' %}
-
-<header id="top" class="header-nav">
-  <div class="container">
-    <!-- empty -->
-  </div>
-</header>
-
+<div class="container">
+  <!-- empty -->
+</div>
 {% else %}
 
-<header id="top" class="header-nav">
-  <div class="container-fluid">
-    <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
-      <a class="brand w-nav-brand" href="/" title="cratedb.com">
-        <img src="{{ pathto('_static', 1) }}/images/cratedb-logo.svg" alt="CrateDB Logo" width="218" height="36">
-      </a>
-      <nav class="w-nav-menu main-nav" role="navigation">
-        <div class="dropdownBackground">
-          <span class="arrow"></span>
-        </div>
-        <esi:remove>
-          <ul id="menu-main-navigation" class="menu">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children navlink w-nav-link">
-              <a class="menu-link" href="javascript:;">Products</a>
-              <ul class="sub-menu">
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/products/cratedb">CrateDB Overview</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/products/cratedb-cloud">CrateDB Cloud</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/products/cratedb-edge">CrateDB Edge</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/download#cratedb">CrateDB On-Premises</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/pricing">Pricing</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/download">Get CrateDB</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children navlink w-nav-link">
-              <a class="menu-link" href="javascript:;">Customers</a>
-              <ul class="sub-menu">
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/customers">Success Stories</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/use-cases">Use Cases</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/industries">Industries</a>
-                </li>
-              </ul>
+<div class="container-fluid">
+  <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
+    <a class="brand w-nav-brand" href="/" title="cratedb.com">
+      <img src="{{ pathto('_static', 1) }}/images/cratedb-logo.svg" alt="CrateDB Logo" width="218" height="36">
+    </a>
+    <nav class="w-nav-menu main-nav" role="navigation">
+      <div class="dropdownBackground">
+        <span class="arrow"></span>
+      </div>
+      <esi:remove>
+      <ul id="menu-main-navigation" class="menu">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children navlink w-nav-link">
+          <a class="menu-link" href="javascript:;">Products</a>
+          <ul class="sub-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/products/cratedb">CrateDB Overview</a>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-              <a class="menu-link" href="/docs/crate/reference/en/latest/">Docs</a>
-            </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children navlink w-nav-link">
-              <a class="menu-link" href="javascript:;">Resources</a>
-              <ul class="sub-menu">
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/blog">Blog</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/event">Events</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/newsletter">Newsletter</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/resources/videos">Videos</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/resources/webinars">Webinars</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-                  <a class="menu-link" href="/resources/white-papers">White Papers</a>
-                </li>
-              </ul>
+              <a class="menu-link" href="/products/cratedb-cloud">CrateDB Cloud</a>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-              <a class="menu-link" href="/community">Community</a>
+              <a class="menu-link" href="/products/cratedb-edge">CrateDB Edge</a>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
-              <a class="menu-link" target="_blank" rel="noreferrer" href="https://console.cratedb.cloud/?utm_source=website&amp;utm_medium=mainnav&amp;utm_campaign=cratedbcloud">Login</a>
+              <a class="menu-link" href="/download#cratedb">CrateDB On-Premises</a>
             </li>
-            <li class="nav-highlight cr-menu-btn menu-item navlink w-nav-link">
-              <a class="menu-link" href="/download/">Get CrateDB</a>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/pricing">Pricing</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/download">Get CrateDB</a>
             </li>
           </ul>
-        </esi:remove>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children navlink w-nav-link">
+          <a class="menu-link" href="javascript:;">Customers</a>
+          <ul class="sub-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/customers">Success Stories</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/use-cases">Use Cases</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/industries">Industries</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+          <a class="menu-link" href="/docs/crate/reference/en/latest/">Docs</a>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children navlink w-nav-link">
+          <a class="menu-link" href="javascript:;">Resources</a>
+          <ul class="sub-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/blog">Blog</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/event">Events</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/newsletter">Newsletter</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/resources/videos">Videos</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/resources/webinars">Webinars</a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+              <a class="menu-link" href="/resources/white-papers">White Papers</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+          <a class="menu-link" href="/community">Community</a>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page navlink w-nav-link">
+          <a class="menu-link" target="_blank" rel="noreferrer" href="https://console.cratedb.cloud/?utm_source=website&amp;utm_medium=mainnav&amp;utm_campaign=cratedbcloud">Login</a>
+        </li>
+        <li class="nav-highlight cr-menu-btn menu-item navlink w-nav-link">
+          <a class="menu-link" href="/download/">Get CrateDB</a>
+        </li>
+      </ul>
+      </esi:remove>
       <!--esi
         <esi:include src="https://cratedb.com/_hcms/api/navi-header" />
       -->
@@ -112,6 +101,4 @@
     </label>
   </div>
 </div>
-</header>
-
 {% endif %}
