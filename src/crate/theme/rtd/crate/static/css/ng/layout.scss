@@ -30,21 +30,28 @@
 }
 
 // Sidebar: Adjust drawer icon positioning and size.
-.sidebar-container-primary {
-  float: left;
+.sb-sidebar-primary {
+  background: #fff;
+  z-index: 50;
+  .sidebar-container-primary {
+    float: left;
 
-  i {
-    height: $sidebar-drawer-icon-size;
-    width: $sidebar-drawer-icon-size;
+    i {
+      height: $sidebar-drawer-icon-size;
+      width: $sidebar-drawer-icon-size;
+    }
   }
 }
+.sb-sidebar-secondary {
+  background: #fff;
+  z-index: 50;
+  .sidebar-container-secondary {
+    float: right;
 
-.sidebar-container-secondary {
-  float: right;
-
-  i {
-    height: $sidebar-drawer-icon-size;
-    width: $sidebar-drawer-icon-size;
+    i {
+      height: $sidebar-drawer-icon-size;
+      width: $sidebar-drawer-icon-size;
+    }
   }
 }
 
@@ -63,11 +70,6 @@
   margin: 0 auto;
 }
 
-// Fix sidebar z-index
-.sb-sidebar-primary {
-  z-index: 50;
-}
-
 // Skeleton override for fluid layout
 .sb-content article.sb-article {
   padding: 0;
@@ -76,6 +78,11 @@
 // Override for mobile header
 .mobile-header {
   width: auto !important;
+}
+
+// More footer spacing
+footer {
+  margin-top: 4rem !important;
 }
 
 @media all and (max-width: 767px) {
@@ -96,10 +103,5 @@
 
   .brand.w-nav-brand img {
     max-width: 150px;
-  }
-
-  // Position sidebar over logo 
-  .sb-sidebar-secondary {
-    z-index: 11;
   }
 }
