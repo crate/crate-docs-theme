@@ -67,3 +67,21 @@
 .sb-sidebar-primary {
   z-index: 50;
 }
+
+// Skeleton override for fluid layout
+.sb-content article.sb-article {
+  padding: 0;
+}
+
+@media all and (max-width: 767px) {
+  .sb-article-container.container-fluid {
+    width: 100vw !important;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .sb-header-content__inner .container-fluid {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
