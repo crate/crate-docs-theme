@@ -1032,6 +1032,8 @@ ul#cr-search-results {
     transition: transform 0.3s ease-in-out;
     border-left: 2px solid var(--primary-color);
     height: calc(100vh - 65px);
+    background: #fff !important;
+    gap: 0;
   }
 
   header.header-nav {
