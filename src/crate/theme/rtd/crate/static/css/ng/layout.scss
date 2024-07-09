@@ -30,30 +30,28 @@
 }
 
 // Sidebar: Adjust drawer icon positioning and size.
-.sb-sidebar-primary {
-  background: #fff;
-  z-index: 50;
-  .sidebar-container-primary {
-    float: left;
-
-    i {
-      height: $sidebar-drawer-icon-size;
-      width: $sidebar-drawer-icon-size;
-    }
-  }
-}
+.sb-sidebar-primary,
 .sb-sidebar-secondary {
   background: #fff;
   z-index: 50;
-  .sidebar-container-secondary {
-    float: right;
+}
 
-    i {
-      height: $sidebar-drawer-icon-size;
-      width: $sidebar-drawer-icon-size;
-    }
+.sidebar-container-primary {
+  float: left;
+  i {
+    height: $sidebar-drawer-icon-size;
+    width: $sidebar-drawer-icon-size;
   }
 }
+
+.sidebar-container-secondary {
+  float: right;
+  i {
+    height: $sidebar-drawer-icon-size;
+    width: $sidebar-drawer-icon-size;
+  }
+}
+
 
 // Searchbox and feedback/versionchooser in same row
 .sb-header-content__inner .container-fluid {
