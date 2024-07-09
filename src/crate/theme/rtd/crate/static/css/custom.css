@@ -70,11 +70,7 @@ button.copybtn img {
 }
 
 .container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl {
+.container-fluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -124,76 +120,13 @@ button.copybtn img {
   border-color: #0a87a7;
 }
 
-.col,
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12,
-.col-auto,
-.col-lg,
-.col-lg-1,
-.col-lg-2,
 .col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12,
-.col-lg-auto,
-.col-md,
-.col-md-1,
-.col-md-2,
+.col-lg-9
 .col-md-3,
 .col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
 .col-md-8,
 .col-md-9,
-.col-md-10,
-.col-md-11,
-.col-md-12,
-.col-md-auto,
-.col-sm,
-.col-sm-1,
-.col-sm-2,
-.col-sm-3,
-.col-sm-4,
-.col-sm-5,
-.col-sm-6,
-.col-sm-7,
-.col-sm-8,
-.col-sm-9,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
-.col-sm-auto,
-.col-xl,
-.col-xl-1,
-.col-xl-2,
-.col-xl-3,
-.col-xl-4,
-.col-xl-5,
-.col-xl-6,
-.col-xl-7,
-.col-xl-8,
-.col-xl-9,
-.col-xl-10,
-.col-xl-11,
-.col-xl-12,
-.col-xl-auto {
+.col-md-12 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -201,32 +134,20 @@ button.copybtn img {
 }
 
 @media (min-width: 768px) {
-  .container,
-  .container-md,
-  .container-sm {
+  .container {
     max-width: 750px;
   }
 }
 
 @media all and (min-width: 992px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm {
+  .container {
     max-width: 970px;
   }
 
-  .col-md-1,
-  .col-md-2,
   .col-md-3,
   .col-md-4,
-  .col-md-5,
-  .col-md-6,
-  .col-md-7,
   .col-md-8,
   .col-md-9,
-  .col-md-10,
-  .col-md-11,
   .col-md-12 {
     float: left;
   }
@@ -243,13 +164,6 @@ button.copybtn img {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
-  }
-
-  .col-md-5 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 41.666667%;
-    flex: 0 0 41.666667%;
-    max-width: 41.666667%;
   }
 
   .col-md-8 {
@@ -275,26 +189,12 @@ button.copybtn img {
 }
 
 @media all and (min-width: 1200px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl {
+  .container {
     max-width: 1140px;
   }
 
-  .col-lg-1,
-  .col-lg-2,
   .col-lg-3,
-  .col-lg-4,
-  .col-lg-5,
-  .col-lg-6,
-  .col-lg-7,
-  .col-lg-8,
-  .col-lg-9,
-  .col-lg-10,
-  .col-lg-11,
-  .col-lg-12 {
+  .col-lg-9 {
     float: left;
   }
 
@@ -303,18 +203,6 @@ button.copybtn img {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
-  }
-
-  .col-lg-4 {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-
-  .col-lg-8 {
-    -ms-flex: 0 0 66.666667%;
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
   }
 
   .col-lg-9 {
@@ -404,6 +292,7 @@ header.header-nav {
   right: 0;
   left: 0;
   background: #fff;
+  position: relative;
 }
 
 .notif-bar-enabled #sidebar.is-affixed aside {
@@ -952,9 +841,6 @@ ul#cr-search-results {
   padding-right: 10px;
 }
 
-.cr-search-page a {
-}
-
 .cr-search-current-page a {
   color: #000;
 }
@@ -979,6 +865,11 @@ ul#cr-search-results {
 .search-link .DocSearch-Button {
   margin: 0px;
   border-radius: 0;
+}
+
+#searchbox .ais-SearchBox-form::before {
+  height: 17px;
+  width: 17px;
 }
 
 @media all and (max-width: 991px) {
