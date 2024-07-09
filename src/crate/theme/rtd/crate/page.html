@@ -26,6 +26,17 @@
 
 {% endblock %}
 
+{% block header %}
+<header class="sb-header header-nav" id="top">
+  <div class="sb-header__inner sb-page-width">
+    {% include "sections/header.html" %}
+  </div>
+</header>
+{% endblock header %}
+
+{% block header_secondary %}
+{% endblock header_secondary %}
+
 {% block container %}
 <div class="sb-container">
   <div class="sb-container__inner sb-page-width">
@@ -63,11 +74,6 @@
         {% endblock sidebar_secondary %}
       </div>
       {% block footer_content %}
-      <footer class="sb-footer-content">
-        <div class="sb-footer-content__inner">
-          {% include "sections/footer-content.html" %}
-        </div>
-      </footer>
       {% endblock footer_content %}
     </main>
   </div>

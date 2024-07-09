@@ -16,7 +16,7 @@
   display: none;
 }
 
-@media all and (min-width: 76rem) {
+@media all and (min-width: 67rem) {
   header.sb-header {
     display: block;
   }
@@ -73,6 +73,11 @@
   padding: 0;
 }
 
+// Override for mobile header
+.mobile-header {
+  width: auto !important;
+}
+
 @media all and (max-width: 767px) {
   .sb-article-container.container-fluid {
     width: 100vw !important;
@@ -85,3 +90,16 @@
     gap: 6px;
   }
 
+  .mobile-header {
+    width: 100% !important;
+  }
+
+  .brand.w-nav-brand img {
+    max-width: 150px;
+  }
+
+  // Position sidebar over logo 
+  .sb-sidebar-secondary {
+    z-index: 11;
+  }
+}
