@@ -1854,3 +1854,14 @@ ul.search li {
 dl.field-list > dt {
   word-break: normal !important;
 }
+
+/* override the ToC error message */
+.contents:not(.this-will-duplicate-information-and-it-is-still-useful-here)::before {
+  content: "";
+  display: none;
+}
+
+.contents:not(.this-will-duplicate-information-and-it-is-still-useful-here) {
+  background: transparent;
+  color: #000;
+}
