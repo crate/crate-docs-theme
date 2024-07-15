@@ -28,17 +28,6 @@
   }
 }
 
-@media all and (min-width: 67rem) {
-  header.sb-header {
-    display: block;
-  }
-
-  .sb-container {
-    top: 4em;
-    position: relative;
-  }
-}
-
 // Make sidebars sticky.
 .sidebar-drawer,
 .toc-drawer {
@@ -89,13 +78,34 @@
   }
 }
 
+.mobile-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (min-width: 76rem) {
+  header.sb-header {
+    display: block;
+  }
+
   .sb-sidebar-secondary {
     position: static !important;
   }
 
   .hide-when-secondary-sidebar-shown {
     display: none !important;
+  }
+  
+  .sb-container {
+    top: 4em;
+    position: relative;
+  }
+
+  .mobile-header {
+    display: none;
   }
 }
 
