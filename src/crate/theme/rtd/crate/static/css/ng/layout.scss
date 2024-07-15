@@ -73,6 +73,24 @@
 
 @media (min-width: 67rem) {
   .sb-sidebar-secondary {
+    position: fixed !important;
+  }
+
+  .hide-when-secondary-sidebar-shown {
+    display: block !important;
+  }
+
+  .sb-page-width {
+    width: 100% !important;
+  }
+
+  .sb-main {
+    max-width: calc(96rem - 17rem + 15px) !important; /* = main width - left sidebar + padding of header */
+  }
+}
+
+@media (min-width: 76rem) {
+  .sb-sidebar-secondary {
     position: static !important;
   }
 
@@ -80,7 +98,6 @@
     display: none !important;
   }
 }
-
 
 // Sidebar: Adjust drawer icon positioning and size.
 .sb-sidebar-primary,
@@ -216,10 +233,6 @@ footer {
   top: 0em;
 }
 
-.sb-container__inner.sb-page-width {
-  width: 100%;
-}
-
 .sb-main {
   max-width: 80em;
 }
@@ -233,6 +246,23 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
-  flex: 1; /* this fixed container width when the content is wider than the parent */
-  min-width: 0; /* this fixed container width when the content is wider than the parent */
+}
+
+// additions for wide layout
+@media (min-width: 84rem) {
+  .sb-article, .match-content-width {
+    width: 50rem;
+  }
+}
+
+@media (min-width: 88rem) {
+  .sb-article, .match-content-width {
+    width: 54rem;
+  }
+}
+
+@media (min-width: 92rem) {
+  .sb-article, .match-content-width {
+    width: 58rem;
+  }
 }
