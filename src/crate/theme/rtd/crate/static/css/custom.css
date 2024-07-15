@@ -7,6 +7,11 @@
     --primary-color: #19c0ea;
     --secondary-color: #009FC7;
     --docsearch-primary-color: #009FC7 !important;
+    --color-sidebar-item-background: var(--color-sidebar-background);
+    --color-sidebar-background: var(--color-background-secondary);
+    --color-sidebar-background-border: var(--color-background-border);
+    --color-background-secondary: #f8f9fb;
+    --color-background-border: #eeebee;
   }
 
 @font-face {
@@ -285,14 +290,14 @@ a:focus {
 
 header.header-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  z-index: 901;
+  z-index: 60;
   width: 100%;
   transition: all 0.3s ease;
   will-change: transform;
   right: 0;
   left: 0;
   background: #fff;
-  position: relative;
+  position: absolute;
 }
 
 .notif-bar-enabled #sidebar.is-affixed aside {
@@ -641,11 +646,6 @@ body .mm-menu .navbar-nav {
   max-width: 100%;
   width: 100%;
   padding: 12px;
-}
-
-.bs-docs-sidebar {
-  /*overflow-y: scroll;*/
-  max-height: initial !important;
 }
 
 .toc-backref {
@@ -1459,7 +1459,7 @@ strong {
   }
 }
 
-@media all and (max-width: 560px) {
+@media all and (max-width: 540px) {
   .notif-bar-enabled {
     margin-bottom: 180px;
   }
@@ -1762,7 +1762,7 @@ ul.search li {
   }
 }
 
-@media all and (max-width: 560px) {
+@media all and (max-width: 540px) {
   .cr-docs-sql-99 .w-canvas {
     margin-top: 15px;
   }
