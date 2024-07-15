@@ -24,6 +24,10 @@ a.current, a.current-active {
     background: inherit none repeat scroll 0 0;
 }
 
+.highlight pre {
+    overflow: auto;
+}
+
 blockquote p:last-child {
     margin-bottom: 0;
 }
@@ -132,7 +136,7 @@ div.danger {
 /** MENUE **/
 
 .bs-docs-sidenav .toctree li {
-    padding: 3px 0px;
+    padding: 4px 0px;
     line-height: 16px;
 }
 
@@ -156,6 +160,11 @@ div.danger {
     font-weight: 600;
 }
 
+.bs-docs-sidenav .toctree ul > li.current > a {
+    margin-bottom: 3px !important;
+    display: block;
+}
+
 .bs-docs-sidenav ul {
     margin-bottom: 0px;
 }
@@ -172,7 +181,7 @@ div.danger {
     padding-left: 0px;
 }
 .bs-docs-sidebar {
-    padding: 8px 16px;
+    padding: 8px 20px 8px 16px;
     margin-bottom: 20px;
 }
 
