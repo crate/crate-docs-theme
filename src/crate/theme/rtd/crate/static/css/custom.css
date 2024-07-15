@@ -1089,11 +1089,6 @@ ul#cr-search-results {
   border: 2px solid var(--primary-color);
 }
 
-/* fix current menu padding */
-.current ul {
-  padding-top: 5px;
-}
-
 /* glossary links indicator */
 a[href*="#gloss-"].internal {
   /* workaround as text-decoration cannot be overridden on child elements */
