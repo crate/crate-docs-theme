@@ -8,17 +8,34 @@
  * https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-1k30
 **/
 
-// Make header sticky and only show on desktop devices
+// Make header only show on desktop devices
 .sb-header {
-  position: sticky;
-  top: 0;
   z-index: 200;
   display: none;
+}
+
+// undo font resize
+@media all and (min-width: 97em) {
+  html {
+    font-size: 100% !important;
+  }
+}
+
+@media all and (min-width: 88rem) {
+  header .sb-page-width {
+    width: 100%;
+    max-width: 96rem;
+  }
 }
 
 @media all and (min-width: 67rem) {
   header.sb-header {
     display: block;
+  }
+
+  .sb-container {
+    top: 4em;
+    position: relative;
   }
 }
 
@@ -29,13 +46,59 @@
   top: 3em;
 }
 
+// invert behavior (let right sidebar collapse first)
+@media (max-width: 82em) {
+  .toc-drawer {
+    position: sticky;
+  }
+}
+
+@media (min-width: 59rem) {
+  .sb-sidebar-primary {
+    position: static !important;
+  }
+
+  .sb-sidebar-secondary {
+    position: fixed !important;
+  }
+
+  .hide-when-primary-sidebar-shown {
+    display: none !important;
+  }
+
+  .hide-when-secondary-sidebar-shown {
+    display: block !important;
+  }
+}
+
+@media (min-width: 67rem) {
+  .sb-sidebar-secondary {
+    position: static !important;
+  }
+
+  .hide-when-secondary-sidebar-shown {
+    display: none !important;
+  }
+}
+
+
 // Sidebar: Adjust drawer icon positioning and size.
 .sb-sidebar-primary,
 .sb-sidebar-secondary {
-  background: #fff;
   z-index: 50;
 }
 
+// fix togglers (weren't accessible on some screensizes)
+#sb-sidebar-toggle--primary:checked ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--primary"], 
+#sb-sidebar-toggle--secondary:checked ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--secondary"] {
+  z-index: 5;
+}
+
+#sb-sidebar-toggle--secondary:checked ~ .sb-container .sb-sidebar-secondary {
+  background: #fff;
+}
+
+// fix sidebar icon size
 .sidebar-container-primary {
   float: left;
   i {
@@ -52,14 +115,15 @@
   }
 }
 
-
 // Searchbox and feedback/versionchooser in same row
-.sb-header-content__inner .container-fluid {
+.sb-header-content__inner .container-header {
   display: flex;
   justify-content: space-between;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
   align-items: center;
+  gap: 20px;
+  padding-right: 15px !important;
 }
 
 // Center header and footer
@@ -81,16 +145,37 @@
 // More footer spacing
 footer {
   margin-top: 4rem !important;
+  margin-bottom: 2em;
+}
+
+.sb-content article.sb-article,
+.sb-content header.sb-header-article,
+.sb-header-content__inner .container-header {
+  padding: 0 2em;
+}
+
+// width override for left sidebar to make the background continue to the border of the page
+.sb-sidebar-primary {
+  min-width: 17em;
+  width: calc(50% - 32em);
+}
+
+.sidebar-container, 
+.toc-drawer {
+  width: 16em;
+}
+
+// make it possible to scroll sidebar if higher than screen
+.sidebar-sticky, .toc-sticky {
+  overflow-y: scroll;
 }
 
 @media all and (max-width: 767px) {
   .sb-article-container.container-fluid {
     width: 100vw !important;
   }
-}
 
-@media all and (max-width: 560px) {
-  .sb-header-content__inner .container-fluid {
+  .sb-header-content__inner .container-header {
     flex-wrap: wrap;
     gap: 6px;
   }
@@ -102,4 +187,52 @@ footer {
   .brand.w-nav-brand img {
     max-width: 150px;
   }
+
+  .sb-content article.sb-article,
+  .sb-content header.sb-header-article,
+  .sb-header-content__inner .container-header {
+    padding: 0 1em;
+  }
+
+  .sb-header-content__inner .container-header {
+    padding: 0 1em 1em 1em;
+  }
+}
+
+@media all and (max-width: 540px) {
+  .sidebar-container, 
+  .toc-drawer {
+    width: 100%;
+  }
+
+  .sb-sidebar-primary {
+    min-width: 18em;
+  }
+}
+
+// custom layout overrides
+.sidebar-drawer, 
+.toc-drawer {
+  top: 0em;
+}
+
+.sb-container__inner.sb-page-width {
+  width: 100%;
+}
+
+.sb-main {
+  max-width: 80em;
+}
+
+.sidebar-drawer {
+  width: 100%;
+}
+
+.sb-article-container.container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  flex: 1; /* this fixed container width when the content is wider than the parent */
+  min-width: 0; /* this fixed container width when the content is wider than the parent */
 }
