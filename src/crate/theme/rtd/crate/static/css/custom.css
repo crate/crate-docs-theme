@@ -1849,3 +1849,14 @@ ul.search li {
 .mb-0 {
   margin-bottom: 0 !important;
 }
+
+/* override the ToC error message */
+.contents:not(.this-will-duplicate-information-and-it-is-still-useful-here)::before {
+  content: "";
+  display: none;
+}
+
+.contents:not(.this-will-duplicate-information-and-it-is-still-useful-here) {
+  background: transparent;
+  color: #000;
+}
