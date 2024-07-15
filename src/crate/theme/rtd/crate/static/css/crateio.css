@@ -70,53 +70,60 @@ h7 {
 
 h1 {
   font-family: Montserrat, Inter, Arial, sans-serif;
-  margin-top: 0px;
   margin-bottom: 16px;
   font-size: 40px;
   line-height: 1.2;
   letter-spacing: -0.4px;
+  margin-top: -20px; /* add negative margin-top and padding-top to make it less "sticky" when clicking the anchor */
+  padding-top: 20px;
 }
 
 h2 {
   font-size: 30px;
   line-height: 36px; /*           this heading font-size * 1.2  */
-  margin-top: 30px; /*           this heading font-size        */
+  margin-top: 0px; /*           this heading font-size        */
   margin-bottom: 15px; /*           this heading font-size * 0.5  */
+  padding-top: 30px;
 }
 
 h3 {
   font-size: 27px; /* round(previous heading font-size * 0.9) */
   line-height: 32px; /* round(    this heading font-size * 1.2) */
-  margin-top: 27px; /*           this heading font-size        */
+  margin-top: 0px; /*           this heading font-size        */
   margin-bottom: 14px; /* round(    this heading font-size * 0.5) */
+  padding-top: 27px;
 }
 
 h4 {
   font-size: 24px; /* round(previous heading font-size * 0.9) */
   line-height: 29px; /* round(    this heading font-size * 1.2) */
-  margin-top: 24px; /*           this heading font-size        */
+  margin-top: 0; /*           this heading font-size        */
   margin-bottom: 12px; /* round(    this heading font-size * 0.5) */
+  padding-top: 24px;
 }
 
 h5 {
   font-size: 22px; /* round(previous heading font-size * 0.9) */
   line-height: 26px; /* round(    this heading font-size * 1.2) */
-  margin-top: 22px; /*           this heading font-size        */
+  margin-top: 0; /*           this heading font-size        */
   margin-bottom: 11px; /* round(    this heading font-size * 0.5) */
+  padding-top: 22px;
 }
 
 h5 {
   font-size: 20px; /* round(previous heading font-size * 0.9) */
   line-height: 24px; /* round(    this heading font-size * 1.2) */
-  margin-top: 20px; /*           this heading font-size        */
+  margin-top: 0; /*           this heading font-size        */
   margin-bottom: 10px; /* round(    this heading font-size * 0.5) */
+  padding-top: 20px;
 }
 
 h6 {
   font-size: 18px; /* round(previous heading font-size * 0.9) */
   line-height: 22px; /* round(    this heading font-size * 1.2) */
-  margin-top: 18px; /*           this heading font-size        */
+  margin-top: 0; /*           this heading font-size        */
   margin-bottom: 9px; /* round(    this heading font-size * 0.5) */
+  padding-top: 18px;
 }
 
 p {
