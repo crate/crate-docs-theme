@@ -8,7 +8,7 @@
     {% endif %}
   </div>
   {% endif %}
-  <ul class="bs-docs-sidenav bs-sidenav nav" role="complementary">
+  <nav class="bs-docs-sidenav bs-sidenav nav" role="complementary">
 
     {% if theme_navbar_links %}
       {%- for link in theme_navbar_links %}
@@ -29,8 +29,10 @@
     {% endblock %}
 
     {% if theme_source_link_position == "nav" %}
+    <ul class="toctree">
       <li>{% include "sourcelink.html" %}</li>
+    </ul>
     {% endif %}
 
-  </ul>
+  </nav>
 </div>
