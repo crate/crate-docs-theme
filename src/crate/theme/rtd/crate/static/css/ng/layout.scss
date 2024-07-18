@@ -28,20 +28,19 @@
   }
 }
 
-// Make sidebars sticky.
+// Make sidebars sticky, required because our layout defers from the original with extra containers.
 .sidebar-drawer,
 .toc-drawer {
   position: sticky;
-  top: 3em;
+  padding-top: 20px;
+}
+
+// make right sidebar wider to fit the feedback box when expanded
+.toc-drawer {
+  width: 17em !important;
 }
 
 // invert behavior (let right sidebar collapse first)
-@media (max-width: 82em) {
-  .toc-drawer {
-    position: sticky;
-  }
-}
-
 @media (min-width: 59rem) {
   .sb-sidebar-primary {
     position: static !important;
@@ -86,6 +85,10 @@
   align-items: center;
 }
 
+.sb-header-content {
+  display: block;
+}
+
 @media (min-width: 76rem) {
   header.sb-header {
     display: block;
@@ -104,8 +107,15 @@
     position: relative;
   }
 
-  .mobile-header {
+  .mobile-header,
+  .sb-header-content {
     display: none;
+  }
+}
+
+@media all and (max-width: 82em) {
+  .toc-drawer {
+    right: -18em;
   }
 }
 
@@ -211,10 +221,6 @@ footer {
     width: 100% !important;
   }
 
-  .brand.w-nav-brand img {
-    max-width: 150px;
-  }
-
   .sb-content article.sb-article,
   .sb-content header.sb-header-article,
   .sb-header-content__inner .container-header {
@@ -222,7 +228,7 @@ footer {
   }
 
   .sb-header-content__inner .container-header {
-    padding: 0 1em 1em 1em;
+    padding: 1em 1em 0 1em !important;
   }
 }
 
@@ -256,6 +262,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
+  margin-top: 20px;
 }
 
 // additions for wide layout
@@ -276,3 +283,4 @@ footer {
     width: 58rem;
   }
 }
+
