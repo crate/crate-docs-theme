@@ -1,5 +1,20 @@
 <div class="toc-drawer">
   <div class="toc-sticky toc-scroll">
+
+    <div class="page-tools dropdown-group">
+
+      {% if display_github %}
+      {% include "components/github_feedback_compact.html" %}
+      <script>
+      {% include "components/github_keynav.js" %}
+      </script>
+      {%- endif %}
+    
+      {%- if display_version %}
+      {% include "components/version_chooser.html" %}
+      {%- endif %}
+    </div>
+
     <div class="toc-title-container">
       <span class="toc-title">
         {{ _("On this page") }}
