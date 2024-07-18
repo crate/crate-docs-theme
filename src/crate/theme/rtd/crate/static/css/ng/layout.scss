@@ -22,7 +22,8 @@
 }
 
 @media all and (min-width: 88rem) {
-  header .sb-page-width {
+  header .sb-page-width,
+  footer .sb-page-width {
     width: 100%;
     max-width: 96rem;
   }
@@ -284,4 +285,3 @@ footer {
     width: 58rem;
   }
 }
-
