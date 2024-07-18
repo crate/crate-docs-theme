@@ -13,6 +13,13 @@
   float: right;
   display: flex;
   gap: 0.3em;
+  margin-left: 20px;
+}
+
+@media (min-width: 76rem) {
+  .page-tools {
+    margin-left: 0;
+  }
 }
 
 // Decouple from page flow, to not push around other downstream elements.
@@ -71,17 +78,13 @@ button.toggle-button {
   line-height: inherit;
 }
 
-@media all and (max-width: 980px) {
-  .version-chooser-content div.sd-summary-content,
-  .feedback-compact-content div.sd-summary-content {
-    right: 0;
-  }
-}
-
 @media all and (max-width: 540px) {
-  /* hide feedback title on mobile */
-  details.feedback-compact-content .feedback-compact-title {
-    display: none;
+  .feedback-compact-title {
+    margin-right: 3px;
+  }
+  
+  details.sd-dropdown {
+    font-size: var(--font-size--small) !important;
   }
 }
 
