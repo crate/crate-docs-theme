@@ -829,8 +829,9 @@ ul#cr-search-results {
 }
 
 .search-link .DocSearch-Button {
-  margin: 0px;
+  margin: 0 0 20px;
   border-radius: 0;
+  width: 100%;
 }
 
 #searchbox .ais-SearchBox-form::before {
@@ -853,7 +854,7 @@ ul#cr-search-results {
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 76rem) {
   details.sd-dropdown summary.sd-summary-title,
   .DocSearch-Button-Placeholder {
     font-size: var(--font-size--small);
@@ -861,6 +862,10 @@ ul#cr-search-results {
   .form-search .search-query {
     width: 200px;
   }
+}
+
+details.sd-dropdown summary.sd-summary-title {
+  padding: .5em !important;
 }
 
 /**
