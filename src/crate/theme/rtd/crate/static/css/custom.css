@@ -429,40 +429,6 @@ body .main-nav .sub-menu li a {
   transform: translateY(94px);
 }
 
-.dropdownBackground {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  -webkit-transform: translate(270px, 65px);
-  transform: translate(270px, 65px);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  -webkit-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  opacity: 0;
-  background: #fff;
-  border: 1px solid #cfd7db;
-  border-top: 2px solid var(--primary-color);
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-}
-
-.dropdownBackground:not(.open) {
-  height: 0 !important;
-}
-
-.dropdownBackground.open {
-  opacity: 1;
-  -webkit-transform: translateY(65px);
-  transform: translateY(65px);
-}
-
 .arrow {
   position: absolute;
   width: 20px;
@@ -1030,10 +996,6 @@ ul#cr-search-results {
 
   .main-nav .menu-item {
     border-top: 1px solid #e7e7e7;
-  }
-
-  .dropdownBackground {
-    display: none !important;
   }
 }
 
