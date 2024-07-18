@@ -76,7 +76,7 @@
         constructor: undefined,
         key: state.query,
         props: {
-          href: `/search.html?q=${state.query}`,
+          href: `{{ pathto('search') }}?q=${state.query}`,
           children: `See all ${state.context.nbHits} results`
         },
         __v: null
