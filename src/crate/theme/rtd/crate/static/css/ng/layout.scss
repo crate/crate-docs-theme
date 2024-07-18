@@ -204,7 +204,8 @@ footer {
 
 // make it possible to scroll sidebar if higher than screen
 .sidebar-sticky, .toc-sticky {
-  overflow-y: scroll;
+  overflow-y: auto !important;
+  scrollbar-width: thin;
 }
 
 @media all and (max-width: 767px) {
