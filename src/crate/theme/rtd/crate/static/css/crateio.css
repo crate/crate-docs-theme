@@ -81,15 +81,15 @@ h1 {
 h2 {
   font-size: 30px;
   line-height: 36px; /*           this heading font-size * 1.2  */
-  margin-top: 0px; /*           this heading font-size        */
+  margin-top: -18px;
   margin-bottom: 15px; /*           this heading font-size * 0.5  */
   padding-top: 30px;
 }
 
 h3 {
-  font-size: 27px; /* round(previous heading font-size * 0.9) */
+  font-size: 26px; /* round(previous heading font-size * 0.9) */
   line-height: 32px; /* round(    this heading font-size * 1.2) */
-  margin-top: 0px; /*           this heading font-size        */
+  margin-top: -14px;
   margin-bottom: 14px; /* round(    this heading font-size * 0.5) */
   padding-top: 27px;
 }
@@ -97,23 +97,15 @@ h3 {
 h4 {
   font-size: 24px; /* round(previous heading font-size * 0.9) */
   line-height: 29px; /* round(    this heading font-size * 1.2) */
-  margin-top: 0; /*           this heading font-size        */
+  margin-top: -12px;
   margin-bottom: 12px; /* round(    this heading font-size * 0.5) */
   padding-top: 24px;
 }
 
 h5 {
-  font-size: 22px; /* round(previous heading font-size * 0.9) */
-  line-height: 26px; /* round(    this heading font-size * 1.2) */
-  margin-top: 0; /*           this heading font-size        */
-  margin-bottom: 11px; /* round(    this heading font-size * 0.5) */
-  padding-top: 22px;
-}
-
-h5 {
   font-size: 20px; /* round(previous heading font-size * 0.9) */
   line-height: 24px; /* round(    this heading font-size * 1.2) */
-  margin-top: 0; /*           this heading font-size        */
+  margin-top: -10px;
   margin-bottom: 10px; /* round(    this heading font-size * 0.5) */
   padding-top: 20px;
 }
@@ -121,7 +113,7 @@ h5 {
 h6 {
   font-size: 18px; /* round(previous heading font-size * 0.9) */
   line-height: 22px; /* round(    this heading font-size * 1.2) */
-  margin-top: 0; /*           this heading font-size        */
+  margin-top: -9px;
   margin-bottom: 9px; /* round(    this heading font-size * 0.5) */
   padding-top: 18px;
 }
