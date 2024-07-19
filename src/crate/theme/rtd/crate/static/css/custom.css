@@ -1638,13 +1638,7 @@ ul.search li {
   color: #ed8826;
 }
 
-.cr-docs-sql-99 .wrapper-content-right div.note {
-  background: url("../images/admonition/note-sql-99.svg") no-repeat;
-  background-color: #fff9e9;
-  border-left: 4px solid #ed8826;
-  background-size: 1.25em;
-  background-position: top 1.1em left 1em;
-}
+
 
 .cr-sql-99-header {
   display: flex;
