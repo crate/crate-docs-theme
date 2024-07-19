@@ -572,13 +572,6 @@ pre code {
   font-size: 14px !important;
 }
 
-.note {
-  margin-bottom: 16px;
-  padding: 16px;
-  border-left: 4px solid var(--primary-color);
-  background-color: #e9fbff;
-}
-
 .align-left {
   text-align: left !important;
 }
