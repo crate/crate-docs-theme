@@ -1845,3 +1845,9 @@ p.caption:hover > a.headerlink,
 div.code-block-caption:hover > a.headerlink {
   visibility: visible;
 }
+
+/* remove margin from paragraphs in ul & ol li's */
+main ul li p,
+main ol li p {
+  margin: 0;
+}
