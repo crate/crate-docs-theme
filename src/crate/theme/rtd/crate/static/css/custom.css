@@ -1969,3 +1969,8 @@ ul.search li {
 .mb-0 {
   margin-bottom: 0 !important;
 }
+
+/* field-list fix */
+dl.field-list > dt {
+  word-break: normal !important;
+}
