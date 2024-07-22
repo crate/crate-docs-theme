@@ -1853,6 +1853,74 @@ main ul li > p:first-child {
   margin-top: .25rem;
 }
 
+main ol li > p:last-child, 
+main ul li > p:last-child {
+  margin-top: .25rem;
+}
+
 article {
   line-height: 1.5;
+}
+
+/* migrate field-list styling */
+dl.footnote > dt,
+dl.citation > dt {
+    float: left;
+    margin-right: 0.5em;
+}
+
+dl.footnote > dd,
+dl.citation > dd {
+    margin-bottom: 0em;
+}
+
+dl.footnote > dd:after,
+dl.citation > dd:after {
+    content: "";
+    clear: both;
+}
+
+dl.field-list {
+    display: grid;
+    grid-template-columns: fit-content(30%) auto;
+}
+
+dl.field-list > dt {
+    font-weight: bold;
+    padding-left: 0.5em;
+    padding-right: 5px;
+}
+
+dl.field-list > dd {
+    padding-left: 0.5em;
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+}
+
+dl {
+    margin-bottom: 15px;
+}
+
+dd > :first-child {
+    margin-top: 0px;
+}
+
+dd ul, dd table {
+    margin-bottom: 10px;
+}
+
+dd {
+    margin-top: 3px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+dl > dd:last-child,
+dl > dd:last-child > :last-child {
+    margin-bottom: 0;
+}
+
+dt:target, span.highlighted {
+  background-color: #fbe54e;
 }
