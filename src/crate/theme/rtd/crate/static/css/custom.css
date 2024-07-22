@@ -1835,8 +1835,19 @@ div.code-block-caption:hover > a.headerlink {
   visibility: visible;
 }
 
-/* remove margin from paragraphs in ul & ol li's */
-main ul li p,
-main ol li p {
-  margin: 0;
+/* adjust margin from paragraphs in ul & ol li's */
+ol, ul {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+main ol li > p:first-child, 
+main ul li > p:first-child {
+  margin-bottom: .25rem;
+  margin-top: .25rem;
+}
+
+article {
+  line-height: 1.5;
 }
