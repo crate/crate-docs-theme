@@ -39,3 +39,56 @@
     position: unset;
   }
 }
+
+// Migrate new converted ul/ol styles from _lists.sass
+ul,
+ol {
+  padding-left: 1.2rem;
+
+  // Space lists out like paragraphs
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  // reduce margins within li.
+  li {
+    > p:first-child {
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+    > p:last-child {
+      margin-top: 0.25rem;
+    }
+    > ul,
+    > ol {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+ol {
+  &.arabic {
+    list-style: decimal;
+  }
+  &.loweralpha {
+    list-style: lower-alpha;
+  }
+  &.upperalpha {
+    list-style: upper-alpha;
+  }
+  &.lowerroman {
+    list-style: lower-roman;
+  }
+  &.upperroman {
+    list-style: upper-roman;
+  }
+// Don't space lists out when they're "simple" or in a `.. toctree::`
+}
+.simple,
+.toctree-wrapper {
+  li {
+    > ul,
+    > ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
