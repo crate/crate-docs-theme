@@ -158,7 +158,7 @@ div.danger {
 .bs-docs-sidenav .toctree li a {
     text-decoration: none;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.3;
     color: black;
     padding: 4px 0px;
     display: block;
