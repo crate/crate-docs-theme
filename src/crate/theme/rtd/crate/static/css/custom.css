@@ -291,7 +291,7 @@ header.header-nav {
   right: 0;
   left: 0;
   background: #fff;
-  position: absolute;
+  position: relative;
 }
 
 .notif-bar-enabled #sidebar.is-affixed aside {
@@ -342,10 +342,6 @@ header .navbar {
 .cr-menu-btn a,
 .main-nav .btn-link a {
   padding: 8px 16px !important;
-}
-
-header.header-nav {
-  background-color: white;
 }
 
 .main-nav ul.menu {
@@ -1048,18 +1044,13 @@ strong {
 }
 
 #hs_cos_wrapper_Header_Notif_Bar {
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1001;
+  position: relative;
   display: none;
 }
 
 .notif-bar-enabled #hs_cos_wrapper_Header_Notif_Bar {
   display: block;
+  width: 100%;
 }
 
 .notification-banner {
@@ -1069,11 +1060,9 @@ strong {
   color: #ffffff;
 }
 
-.notification-banner.new {
+.sb-announcement .notification-banner.new {
   position: relative;
-  top: 0;
   padding: 8px 0;
-  z-index: 9;
 }
 
 .notification-banner.new .page-center {
@@ -1143,10 +1132,6 @@ strong {
 @media all and (max-width: 991px) {
   .notif-bar-enabled header.header-nav {
     margin-top: 0 !important;
-  }
-
-  .notif-bar-enabled .w-canvas {
-    padding-top: 61px !important;
   }
 
   #hs_cos_wrapper_Header_Notif_Bar .notification-banner {
@@ -1641,4 +1626,9 @@ dl > dd:last-child > :last-child {
 
 dt:target, span.highlighted {
   background-color: #fbe54e;
+}
+
+/* fix ul in header nav */
+header#top #menu-main-navigation {
+  margin: 0;
 }
