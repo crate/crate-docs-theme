@@ -534,11 +534,6 @@ div.sidebar {
   background-color: white;
 }
 
-.contents ul ul,
-.contents ul ol {
-  margin-bottom: 0;
-}
-
 .wrapper-content-right ul,
 .wrapper-content-right ol {
   margin-bottom: 16px;
@@ -1579,24 +1574,6 @@ caption:hover > a.headerlink,
 p.caption:hover > a.headerlink, 
 div.code-block-caption:hover > a.headerlink {
   visibility: visible;
-}
-
-/* adjust margin from paragraphs in ul & ol li's */
-ol, ul {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  padding-left: 1.2rem;
-}
-
-main ol li > p:first-child, 
-main ul li > p:first-child {
-  margin-bottom: .25rem;
-  margin-top: .25rem;
-}
-
-main ol li > p:last-child, 
-main ul li > p:last-child {
-  margin-top: .25rem;
 }
 
 article {
