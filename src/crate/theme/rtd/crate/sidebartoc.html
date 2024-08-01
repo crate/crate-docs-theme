@@ -27,7 +27,7 @@
   {% if project == 'CrateDB Cloud' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Cloud</a>
-      {{ toctree(maxdepth=2|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+      {{ toctree(maxdepth=4|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
   {% else %}
     <li class="navleft-item"><a href="/docs/cloud/">CrateDB Cloud</a></li>
@@ -36,7 +36,7 @@
   {% if project == 'CrateDB: Guide' and pagename != 'home/index' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">Guides and Tutorials</a>
-      {{ toctree(maxdepth=3|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+      {{ toctree(maxdepth=4|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
   {% else %}
     <li class="navleft-item"><a href="/docs/guide/">Guides and Tutorials</a></li>
