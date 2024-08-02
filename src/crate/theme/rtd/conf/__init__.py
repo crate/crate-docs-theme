@@ -163,9 +163,12 @@ copybutton_prompt_is_regexp = True
 
 # Configure linkchecker
 linkcheck_ignore = [
+    # Well.
+    "https://example.org/.*",
     # Breaks accessibility via JS ¯\_(ツ)_/¯
     "https://www.iso.org/obp/ui/.*",
-    "https://example.org/.*",
+    # 403 Client Error: Forbidden for url
+    "https://unsplash.com/.*",
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 15
