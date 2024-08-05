@@ -92,3 +92,14 @@ ol {
     }
   }
 }
+
+//remove spacing when ul before p
+article p + ul,
+article p + ol {
+  margin-top: 0;
+}
+
+article p:has(+ ul),
+article p:has(+ ol) {
+  margin-bottom: 4px;
+}
