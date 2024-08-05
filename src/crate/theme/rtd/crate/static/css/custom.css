@@ -480,8 +480,10 @@ body .mm-menu .navbar-nav {
 /**
 * General
 */
-.bs-docs-sidenav .toctree li {
-  margin-bottom: 3px;
+@media all and (max-width: 540px) {
+  .bs-docs-sidenav .toctree li {
+    margin-bottom: 3px;
+  }
 }
 
 .wrapper-navleft,
