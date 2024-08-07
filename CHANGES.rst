@@ -5,8 +5,11 @@ CHANGES
 
 Unreleased
 ----------
-- Switch to modern responsive 3-column layout theme ``sphinx-basic-ng``.
-  Thanks, @pradyunsg.
+
+2024/08/07 0.34.0
+-----------------
+- Switch to modern responsive 3-column layout theme ``sphinx-basic-ng``,
+  spiced by by elements and styles from Furo. Thanks, @pradyunsg.
 
 2024/07/25 0.33.2
 -----------------
