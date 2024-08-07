@@ -63,7 +63,7 @@ setup(
         "furo==2024.05.06",
         "jinja2>=3,<4",
         "myst-parser[linkify]<4",
-        "sphinx>=4.6,<7",
+        "sphinx>=4.6,<9",
         "sphinx-basic-ng==1.0.0b2",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design-elements==0.4.0",
