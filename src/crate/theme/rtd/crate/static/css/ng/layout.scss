@@ -181,7 +181,7 @@
 
 // More footer spacing
 footer {
-  margin-top: 4rem !important;
+  margin-top: 0rem !important;
   margin-bottom: 2em;
 }
 
@@ -206,6 +206,12 @@ footer {
 .sidebar-sticky, .toc-sticky {
   overflow-y: auto !important;
   scrollbar-width: thin;
+}
+
+@media all and (max-width: 59em) {
+  .sb-article-container.container-fluid {
+    margin-top: 0px !important;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -250,12 +256,18 @@ footer {
   top: 0em;
 }
 
+.sidebar-sticky {
+  padding-top: 20px;
+}
+
 .sb-main {
   max-width: 80em;
 }
 
 .sidebar-drawer {
   width: 100%;
+  height: 100%;
+  padding-top: 0;
 }
 
 .sb-article-container.container-fluid {
