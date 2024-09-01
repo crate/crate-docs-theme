@@ -62,7 +62,7 @@ setup(
         "docutils-stubs==0.0.22",
         "furo==2024.05.06",
         "jinja2>=3,<4",
-        "myst-parser[linkify]<4",
+        "myst-parser[linkify]<5",
         "sphinx>=4.6,<7",
         "sphinx-basic-ng==1.0.0b2",
         "sphinx-copybutton>=0.3.1,<1",
