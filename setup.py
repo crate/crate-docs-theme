@@ -60,7 +60,7 @@ setup(
     install_requires=[
         "docutils",
         "docutils-stubs==0.0.22",
-        "furo==2024.05.06",
+        "furo==2024.8.6",
         "jinja2>=3,<4",
         "myst-parser[linkify]<5",
         "sphinx>=4.6,<7",
