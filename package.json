@@ -8,7 +8,7 @@
     "normalize.css": "^8.0.1",
     "postcss-loader": "^8.1",
     "sass": "^1.77.8",
-    "sass-loader": "^13.2",
+    "sass-loader": "^16.0",
     "sticky-sidebar": "^3.3.1",
     "style-loader": "^4.0",
     "webpack": "^5.94",
