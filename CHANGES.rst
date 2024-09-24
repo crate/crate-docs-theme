@@ -6,6 +6,11 @@ CHANGES
 Unreleased
 ----------
 
+2024/09/24 0.34.1
+-----------------
+- Added a "Academy" menu item
+- Applied spacing to article footer
+
 2024/08/07 0.34.0
 -----------------
 - Switch to modern responsive 3-column layout theme ``sphinx-basic-ng``,
