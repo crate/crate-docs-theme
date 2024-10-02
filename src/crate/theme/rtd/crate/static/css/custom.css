@@ -1633,6 +1633,7 @@ dt:target, span.highlighted {
 /* fix ul in header nav */
 header#top #menu-main-navigation {
   margin: 0;
+  list-style-type: none;
 }
 
 /* -- tables ---------------------------------------------------------------- */
@@ -1688,4 +1689,94 @@ td > :first-child {
 th > :last-child,
 td > :last-child {
   margin-bottom: 0px;
+}
+
+/* Main menu styling */
+.main-site-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-site-menu-link {
+  text-decoration: none;
+  color: #333; 
+  padding: 10px 15px;
+  display: block;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.main-site-sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 0; 
+  background-color: #fff; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd; 
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.main-site-menu-item:hover > .main-site-sub-menu {
+  display: block;
+}
+
+.main-site-menu-item-product .main-site-sub-menu {
+  display: flex; 
+  gap: 20px;
+  padding: 10px;
+}
+
+.main-site-menu-item-product .main-site-menu-item-has-children .main-site-sub-menu {
+  display: none;
+  position: absolute;
+  top: 0; 
+  left: 100%;
+}
+
+.main-site-menu-item-product .main-site-menu-item-has-children:hover > .main-site-sub-menu {
+  display: block; 
+}
+
+.main-site-menu-item-has-children .main-site-sub-menu {
+  top: 100%; 
+  left: 0; 
+  position: absolute;
+  display: none;
+}
+
+.main-site-menu-item-has-children:hover > .main-site-sub-menu {
+  display: block;
+}
+
+.main-site-sub-menu li {
+  display: block;
+  width: 200px;
+}
+
+.main-site-sub-menu a {
+  padding: 10px;
+  display: block;
+  color: #000;
+}
+
+.main-site-menu-link:hover, .main-site-sub-menu a:hover {
+  color: #111;
+}
+
+.main-site-menu-item {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .main-site-menu {
+    display: none;
+  }
 }
