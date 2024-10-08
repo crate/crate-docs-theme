@@ -18,6 +18,7 @@
 # However, if you have executed another commercial license agreement
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
+import os
 
 from crate.theme import rtd as theme
 from crate.theme.rtd import __version__
@@ -33,7 +34,6 @@ exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
 extensions = [
     "myst_parser",
-    "sphinx_build_compatibility.extension",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_design_elements",
@@ -194,6 +194,34 @@ myst_enable_extensions = [
 
 def setup(app):
 
+    def setup_sphinx_compatibility():
+        """
+        Resolve problem with `sphinx_build_compatibility` extension.
+
+        Add Sphinx extension at runtime, in order to be able to configure it previously.
+        This is needed because it has some quirks that reveal themselves when invoked in
+        non-RTD environments.
+
+        - https://github.com/crate/crate-docs-theme/issues/536
+        - https://about.readthedocs.com/blog/2024/07/addons-by-default/
+        - https://github.com/readthedocs/sphinx-build-compatibility
+        """
+
+        # Extension error (sphinx_build_compatibility.extension):
+        # Handler <function manipulate_config at 0x10a4289a0> for event 'config-inited' threw an exception
+        # (exception: argument of type 'NoneType' is not iterable)
+        os.environ.setdefault("READTHEDOCS_GIT_CLONE_URL", "")
+
+        # IndexError: list index out of range
+        # project_id = response_project["results"][0]["id"]
+        # Currently needs a valid project on PyPI. Long-term fix should go into upstream code.
+        os.environ.setdefault("READTHEDOCS_PROJECT", "crate-docs-theme")
+
+        # Exception: 'NoneType' object is not subscriptable
+        os.environ.setdefault("READTHEDOCS_GIT_COMMIT_HASH", "")
+
+        app.setup_extension("sphinx_build_compatibility.extension")
+
     # Configure Sphinx/RTD to host projects on a custom domain, but also on a non-root resource.
     def configure_self_hosted_on_path(app_inited):
         """
@@ -286,6 +314,9 @@ def setup(app):
 
         except Exception as ex:
             print(f"ERROR: Unable to adjust `html_context`. Reason: {ex}")
+
+    # Read The Docs compatibility issues.
+    setup_sphinx_compatibility()
 
     # Modern / NG / Furo.
     app.require_sphinx("3.0")
