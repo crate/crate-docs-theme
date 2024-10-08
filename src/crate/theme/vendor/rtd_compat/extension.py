@@ -56,12 +56,25 @@ def manipulate_config(app, config):
     # We are using APIv2 to pull active versions, downloads and subprojects
     # because APIv3 requires a token.
     try:
+        response_project = requests.get(
+            f"{scheme}://{production_domain}/api/v3/projects/{project_slug}/",
+            timeout=2,
+        ).json()
+        language = response_project["language"]["code"]
+    except Exception:
+        logger.warning(
+            "An error ocurred when hitting API to fetch project language. Defaulting to 'en'.",
+            exc_info=True,
+        )
+        language = "en"
+
+    try:
         response_versions = requests.get(
-            f"{scheme}://{production_domain}/api/v2/version/?project__slug={project_slug}&active=true",
+            f"{scheme}://{production_domain}/api/v3/projects/{project_slug}/versions/?active=true",
             timeout=2,
         ).json()
         versions = [
-            (version["slug"], f"/{version['project']['language']}/{version['slug']}/")
+            (version["slug"], f"/{language}/{version['slug']}/")
             for version in response_versions["results"]
         ]
     except Exception:
