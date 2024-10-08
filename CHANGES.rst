@@ -11,6 +11,8 @@ Unreleased
 - RTD: Vendorize ``sphinx-build-compatibility`` to permit publishing
   ``crate-docs-theme`` to PyPI.
 - RTD: Hide RTD-injected elements: Ads, fly-out, and footer.
+- Linkchecker: Ignore HTML anchor references on GitHub after switching
+  to new GitHub Issues.
 
 2024/09/24 0.34.1
 -----------------
