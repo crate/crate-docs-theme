@@ -1521,7 +1521,7 @@ ul.search li {
 }
 
 /* hide RTD injected footer */
-.injected {
+readthedocs-flyout, .injected {
   display: none;
 }
 
