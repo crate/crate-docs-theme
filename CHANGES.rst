@@ -13,6 +13,9 @@ Unreleased
 - RTD: Hide RTD-injected elements: Ads, fly-out, and footer.
 - Linkchecker: Ignore HTML anchor references on GitHub after switching
   to new GitHub Issues.
+- Sphinx: Update to ``sphinx>=7.1,<9``, to respect
+  ``linkcheck_anchors_ignore_for_url`` configuration setting, needed
+  for handling new GitHub Issues.
 
 2024/09/24 0.34.1
 -----------------
