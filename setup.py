@@ -65,7 +65,6 @@ setup(
         "myst-parser[linkify]<5",
         "sphinx>=4.6,<7",
         "sphinx-basic-ng==1.0.0b2",
-        "sphinx-build-compatibility @ git+https://github.com/readthedocs/sphinx-build-compatibility",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design-elements==0.4.0",
         "sphinx-inline-tabs",

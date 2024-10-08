@@ -220,7 +220,8 @@ def setup(app):
         # Exception: 'NoneType' object is not subscriptable
         os.environ.setdefault("READTHEDOCS_GIT_COMMIT_HASH", "")
 
-        app.setup_extension("sphinx_build_compatibility.extension")
+        # Register vendorized Sphinx plugin.
+        app.setup_extension("crate.theme.vendor.rtd_compat.extension")
 
     # Configure Sphinx/RTD to host projects on a custom domain, but also on a non-root resource.
     def configure_self_hosted_on_path(app_inited):
