@@ -5,6 +5,8 @@ CHANGES
 
 Unreleased
 ----------
+- RTD: Add compatibility fixes for upstream changes at Read The Docs
+  https://about.readthedocs.com/blog/2024/07/addons-by-default/
 
 2024/09/24 0.34.1
 -----------------
