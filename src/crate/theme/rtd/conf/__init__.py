@@ -171,6 +171,11 @@ linkcheck_ignore = [
     # 403 Client Error: Forbidden for url
     "https://unsplash.com/.*",
 ]
+linkcheck_anchors_ignore_for_url = [
+    # Requires JavaScript.
+    # After opting-in to new GitHub issues, Sphinx can no longer grok the HTML anchor references.
+    r"https://github.com",
+]
 linkcheck_retries = 3
 linkcheck_timeout = 15
 
