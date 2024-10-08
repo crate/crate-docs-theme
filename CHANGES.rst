@@ -8,6 +8,8 @@ Unreleased
 - RTD: Add compatibility fixes for upstream changes at Read The Docs
   https://about.readthedocs.com/blog/2024/07/addons-by-default/
 - RTD: Fix CSS to hide the RTD project flyout menu
+- RTD: Vendorize ``sphinx-build-compatibility`` to permit publishing
+  ``crate-docs-theme`` to PyPI.
 
 2024/09/24 0.34.1
 -----------------
