@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/10/08 0.35.0
+-----------------
 - RTD: Add compatibility fixes for upstream changes at Read The Docs,
   `enabling Read the Docs Addons by default`_.
 - RTD: Fix CSS to hide RTD-injected elements: Ads, fly-out, and footer.
