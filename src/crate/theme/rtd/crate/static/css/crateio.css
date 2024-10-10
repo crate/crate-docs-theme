@@ -155,11 +155,6 @@ blockquote {
   box-shadow: 0 0 18px -4px #000;
 }
 
-.navlink {
-  padding-right: 12px;
-  padding-left: 12px;
-}
-
 .navlink:hover {
   color: #111;
 }
