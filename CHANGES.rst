@@ -6,6 +6,25 @@ CHANGES
 Unreleased
 ----------
 
+2024/10/08 0.35.0
+-----------------
+- RTD: Add compatibility fixes for upstream changes at Read The Docs,
+  `enabling Read the Docs Addons by default`_.
+- RTD: Fix CSS to hide RTD-injected elements: Ads, fly-out, and footer.
+- RTD: Vendorize ``sphinx-build-compatibility`` to permit publishing
+  ``crate-docs-theme`` to PyPI.
+- RTD: Fix inquiring active project versions.
+  The v2 API returns or started returning inactive builds (PR numbers) in
+  inquiries to active project versions. The v3 API works better, so the
+  code in ``sphinx-build-compatibility`` has been adjusted correspondingly.
+- `New GitHub Issues`_: Make link checker ignore HTML anchor references
+  on GitHub after switching to the evolved GitHub Issues. This includes an
+  update to ``sphinx>=7.1,<9``, to respect the
+  ``linkcheck_anchors_ignore_for_url`` configuration setting.
+
+.. _enabling Read the Docs Addons by default: https://about.readthedocs.com/blog/2024/07/addons-by-default/
+.. _New GitHub Issues: https://github.blog/changelog/2024-10-01-evolving-github-issues-public-beta/
+
 2024/09/24 0.34.1
 -----------------
 - Added a "Academy" menu item

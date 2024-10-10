@@ -1520,9 +1520,9 @@ ul.search li {
   }
 }
 
-/* hide RTD injected footer */
-.injected {
-  display: none;
+/* Hide RTD-injected elements: Ads, fly-out, and footer. */
+#readthedocs-ea, readthedocs-flyout, .injected {
+  display: none !important;
 }
 
 .mb-0 {
