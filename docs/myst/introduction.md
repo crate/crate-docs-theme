@@ -23,10 +23,6 @@ a Markdown code fence.
 
 -– [Roles and Directives](https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html)
 
-**Example**
-
-> ![image|297x168](https://global.discourse-cdn.com/business7/uploads/crate/original/1X/d61bae27e7ce2ca04ab7ba78954153b885f2548e.png)
-
 
 ## History - The great dilemma
 
