@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Webpack: Use legacy configuration options with Sass 16
 
 2024/09/24 0.34.1
 -----------------
