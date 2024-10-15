@@ -5,7 +5,14 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/10/15 0.36.0
+-----------------
+- Webpack: Update sass-loader from 13.3.3 to 16.0.2
 - Webpack: Use legacy configuration options with Sass 16
+- Bring back ESI
+- Navigation: Add items from website
+- Cleanup styles
 
 2024/10/08 0.35.0
 -----------------
