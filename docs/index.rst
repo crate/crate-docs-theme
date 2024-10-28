@@ -8,6 +8,7 @@ CrateDB Documentation Theme
 
 A theme component for the `Sphinx`_ static documentation generator used by
 the `CrateDB Documentation`_ across the board.
+It derives from and builds upon the excellent `sphinx-basic-ng`_ and `Furo`_.
 
 .. rubric:: Introduction
 
@@ -104,5 +105,7 @@ How to improve this documentation:
 
 .. _CrateDB Documentation: https://cratedb.com/docs/
 .. _developer guide: https://github.com/crate/crate-docs-theme/blob/main/DEVELOP.rst
+.. _Furo: https://github.com/pradyunsg/furo
 .. _report an issue: https://github.com/crate/crate-docs-theme/issues/new
 .. _Sphinx: https://www.sphinx-doc.org/
+.. _sphinx-basic-ng: https://github.com/pradyunsg/sphinx-basic-ng
