@@ -72,7 +72,7 @@ setup(
         "sphinx-subfigure<1",
         "sphinx-togglebutton<1",
         "sphinxext.opengraph>=0.4,<1",
-        "sphinxcontrib-mermaid<1",
+        "sphinxcontrib-mermaid<2",
         "sphinxcontrib-plantuml>=0.21,<1",
     ],
     python_requires=">=3.7",
