@@ -11,7 +11,7 @@
     "sass-loader": "^16.0",
     "sticky-sidebar": "^3.3.1",
     "style-loader": "^4.0",
-    "webpack": "^5.95",
+    "webpack": "^5.96",
     "webpack-cli": "^4.10",
     "webpack-modernizr-loader": "^5.0.0"
   },
