@@ -5,11 +5,13 @@ CHANGES
 
 Unreleased
 ----------
+- Re-added menu item about Cloud CLI (croud)
 
-2024/11/06 0.35.1
+2024/10/10 0.36.0
 -----------------
 - Webpack: Use legacy configuration options with Sass 16
-- Re-added menu item about Cloud CLI (croud)
+- Navigation: Brought back ESI
+- Chore: Cleaned up styles
 
 2024/10/08 0.35.0
 -----------------
