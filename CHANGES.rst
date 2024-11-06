@@ -6,6 +6,7 @@ CHANGES
 Unreleased
 ----------
 - Webpack: Use legacy configuration options with Sass 16
+- Re-added menu item about Cloud CLI (croud)
 
 2024/10/08 0.35.0
 -----------------

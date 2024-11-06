@@ -64,11 +64,20 @@
 
   {% if project == 'CrateDB: Crash CLI' %}
   <li class="current">
-    <a class="current-active" href="{{ pathto(master_doc) }}">Crash CLI</a>
+    <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB CLI</a>
     {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
   </li>
   {% else %}
-  <li class="navleft-item"><a href="/docs/crate/crash/">Crash CLI</a></li>
+  <li class="navleft-item"><a href="/docs/crate/crash/">CrateDB CLI</a></li>
+  {% endif %}
+
+  {% if project == 'CrateDB Cloud: Croud CLI' %}
+  <li class="current">
+    <a class="current-active" href="{{ pathto(master_doc) }}">Cloud CLI</a>
+    {{ toctree(maxdepth=1|toint, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+  </li>
+  {% else %}
+  <li class="navleft-item"><a href="/docs/cloud/cli/">Cloud CLI</a></li>
   {% endif %}
 
   {%
