@@ -32,7 +32,7 @@ README = open(os.path.join(pwd, 'README.rst')).read()
 setup(
     name="crate-docs-theme",
     version=version,
-    description="Crate Docs Theme",
+    description="CrateDB Documentation Theme",
     long_description=README,
     long_description_content_type="text/x-rst",
     classifiers=[
@@ -50,7 +50,7 @@ setup(
     author="Crate.IO GmbH",
     author_email="office@crate.io",
     url="https://github.com/crate/crate-docs-theme",
-    keywords="crate docs sphinx readthedocs",
+    keywords="cratedb docs sphinx readthedocs",
     license="Apache License 2.0",
     packages=find_namespace_packages(where="src"),
     namespace_packages=["crate"],
