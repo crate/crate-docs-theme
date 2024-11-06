@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/11/06 0.36.1
+-----------------
 - Re-added menu item about Cloud CLI (croud)
 
 2024/10/10 0.36.0
