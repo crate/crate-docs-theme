@@ -1,16 +1,16 @@
-================
-Crate Docs Theme
-================
+===========================
+CrateDB Documentation Theme
+===========================
 
-|tests| |rtd| |build| |pypi| |python-versions|
+|tests| |rtd| |pypi| |build| |python-versions|
 
 
 About
 =====
 
-A `Sphinx`_ theme for the `Crate documentation`_.
+A `Sphinx`_ theme for the `CrateDB documentation`_.
 
-*Note: This theme is tightly integrated into the Crate.io website and is
+*Note: This theme is tightly integrated into the cratedb.com website and is
 not intended for general use.*
 
 For making changes to the theme, see the `developer docs`_.
@@ -42,16 +42,16 @@ The documentation can include UML diagrams which will be rendered using
 Installation
 ------------
 
-The Crate docs theme is available as a package on `PyPI`_. However, there is no
-need to install it yourself. Crate projects that use the theme should install
+The CrateDB Documentation Theme is available as a package on `PyPI`_. However, there is no
+need to install it yourself. CrateDB projects that use the theme should install
 it automatically.
 
 
 Configuration
 -------------
 
-The Crate.io documentation is composed of multiple separate documentation
-projects, seamlessly interlinked via the Crate docs theme.
+The documentation is composed of multiple separate documentation
+projects, seamlessly interlinked via the CrateDB Documentation Theme.
 
 To use the theme, add this line to your Sphinx ``conf.py`` file::
 
@@ -80,7 +80,7 @@ Looking for more help?
 
 .. _contribution docs: CONTRIBUTING.rst
 .. _Crate.io: https://cratedb.com
-.. _Crate documentation: https://cratedb.com/docs/
+.. _CrateDB documentation: https://cratedb.com/docs/
 .. _developer docs: DEVELOP.rst
 .. _PyPI: https://pypi.python.org/
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
