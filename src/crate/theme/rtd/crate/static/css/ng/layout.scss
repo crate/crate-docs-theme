@@ -74,7 +74,9 @@
   }
 
   .sb-main {
-    max-width: calc(96rem - 17rem + 15px) !important; /* = main width - left sidebar + padding of header */
+    max-width: calc(
+      96rem - 17rem + 15px
+    ) !important; /* = main width - left sidebar + padding of header */
   }
 }
 
@@ -102,7 +104,7 @@
   .hide-when-secondary-sidebar-shown {
     display: none !important;
   }
-  
+
   .sb-container {
     position: relative;
   }
@@ -126,8 +128,10 @@
 }
 
 // fix togglers (weren't accessible on some screensizes)
-#sb-sidebar-toggle--primary:checked ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--primary"], 
-#sb-sidebar-toggle--secondary:checked ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--secondary"] {
+#sb-sidebar-toggle--primary:checked
+  ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--primary"],
+#sb-sidebar-toggle--secondary:checked
+  ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--secondary"] {
   z-index: 5;
 }
 
@@ -201,13 +205,14 @@ footer.sb-footer-article {
   width: calc(50% - 32em);
 }
 
-.sidebar-container, 
+.sidebar-container,
 .toc-drawer {
   width: 16em;
 }
 
 // make it possible to scroll sidebar if higher than screen
-.sidebar-sticky, .toc-sticky {
+.sidebar-sticky,
+.toc-sticky {
   overflow-y: auto !important;
   scrollbar-width: thin;
 }
@@ -244,7 +249,7 @@ footer.sb-footer-article {
 }
 
 @media all and (max-width: 540px) {
-  .sidebar-container, 
+  .sidebar-container,
   .toc-drawer {
     width: 100%;
   }
@@ -255,7 +260,7 @@ footer.sb-footer-article {
 }
 
 // custom layout overrides
-.sidebar-drawer, 
+.sidebar-drawer,
 .toc-drawer {
   top: 0em;
 }
@@ -284,19 +289,22 @@ footer.sb-footer-article {
 
 // additions for wide layout
 @media (min-width: 84rem) {
-  .sb-article, .match-content-width {
+  .sb-article,
+  .match-content-width {
     width: 50rem;
   }
 }
 
 @media (min-width: 88rem) {
-  .sb-article, .match-content-width {
+  .sb-article,
+  .match-content-width {
     width: 54rem;
   }
 }
 
 @media (min-width: 92rem) {
-  .sb-article, .match-content-width {
+  .sb-article,
+  .match-content-width {
     width: 58rem;
   }
 }

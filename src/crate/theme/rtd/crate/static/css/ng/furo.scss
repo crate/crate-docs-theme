@@ -13,7 +13,6 @@
 // Import Furo's components.
 @import "../../vendor/furo/styles/components/footer";
 
-
 // Sidebar: When primary sidebar is not collapsed, show its
 // content above all others.
 @media (max-width: $full-width - $sidebar-width) {
@@ -21,7 +20,6 @@
     z-index: 50;
   }
 }
-
 
 // Sidebar: Unset `position: fixed`, otherwise content
 // will not be visible on drawers when not collapsed.
@@ -80,7 +78,7 @@ ol {
   &.upperroman {
     list-style: upper-roman;
   }
-// Don't space lists out when they're "simple" or in a `.. toctree::`
+  // Don't space lists out when they're "simple" or in a `.. toctree::`
 }
 .simple,
 .toctree-wrapper {

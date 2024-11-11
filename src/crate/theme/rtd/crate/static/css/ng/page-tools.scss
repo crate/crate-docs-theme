@@ -49,7 +49,7 @@ details.sd-dropdown {
 
 // Feedback title: Do not display when collapsed.
 details.feedback-compact-content:not([open]) .feedback-compact-title {
-    display: none
+  display: none;
 }
 
 // Set link text color.
@@ -82,7 +82,7 @@ button.toggle-button {
   .feedback-compact-title {
     margin-right: 3px;
   }
-  
+
   details.sd-dropdown {
     font-size: var(--font-size--small) !important;
   }
@@ -90,15 +90,9 @@ button.toggle-button {
 
 /* Visually disable annoying "notificatio-pro" component */
 .notificatio-pro {
-  display: none
+  display: none;
 }
 
 .related-pages {
   line-height: 1.2;
-
-  .page-info {
-    .context {
-      color: #484848 !important;
-    }
-  }
 }

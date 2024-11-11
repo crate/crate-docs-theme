@@ -13,6 +13,17 @@
       {%- if display_version %}
       {% include "components/version_chooser.html" %}
       {%- endif %}
+
+      {% include "partials/icons.html" %}
+
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark color theme</div>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+
     </div>
 
     <div class="toc-title-container">

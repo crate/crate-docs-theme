@@ -1,10 +1,11 @@
 .navlink a {
   font-size: 16px;
-  color: #222;
+  color: var(--color-toc-item-text);
 }
 
 .navlink a:hover {
-  color: #111;
+  color: var(--color-toc-item-text);
+  opacity: 0.7;
 }
 
 html {
@@ -14,10 +15,8 @@ html {
 body {
   font-family: Inter, Arial, sans-serif;
   min-height: 100%;
-  background-color: #fff;
   margin: 0;
   padding-bottom: 0px;
-  color: #000;
   font-size: 16px;
   line-height: 24px;
 }
@@ -33,9 +32,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-h7 {
-  color: #000;
+h6 {
   font-weight: 600;
 }
 
@@ -90,18 +87,18 @@ h6 {
 }
 
 p {
-  margin-bottom: .75rem;
-  margin-top: .5rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 a {
-  color: var(--secondary-color);
+  color: var(--color-link);
   text-decoration: none;
 }
 
 a:hover {
   opacity: 0.7;
-  color: var(--secondary-color);
+  color: var(--color-link);
 }
 
 blockquote {
@@ -354,7 +351,8 @@ header .brand {
 .button.button-deep {
   width: 100%;
   margin-top: 0px;
-  border-color: var(--primary-color) #fff var(--primary-color) var(--primary-color);
+  border-color: var(--primary-color) #fff var(--primary-color)
+    var(--primary-color);
   background-color: #fff;
   color: var(--primary-color);
 }
@@ -818,7 +816,6 @@ a.learn-more-link,
 .no-spacing {
   margin: 0px;
 }
-
 
 .view-on-github {
 }

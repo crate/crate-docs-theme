@@ -71,14 +71,12 @@ function scrollHandler(positionY) {
 // Theme Toggle
 ////////////////////////////////////////////////////////////////////////////////
 function setTheme(mode) {
-  if (mode !== "light" && mode !== "dark" && mode !== "auto") {
-    console.error(`Got invalid theme mode: ${mode}. Resetting to auto.`);
-    mode = "auto";
+  if (mode !== "light" && mode !== "dark") {
+    mode = "light";
   }
 
   document.body.dataset.theme = mode;
   localStorage.setItem("theme", mode);
-  console.log(`Changed to ${mode} mode.`);
 }
 
 function cycleThemeOnce() {
@@ -92,7 +90,7 @@ function cycleThemeOnce() {
     } else if (currentTheme == "light") {
       setTheme("dark");
     } else {
-      setTheme("auto");
+      setTheme("light");
     }
   } else {
     // Auto (light) -> Dark -> Light
@@ -101,7 +99,7 @@ function cycleThemeOnce() {
     } else if (currentTheme == "dark") {
       setTheme("light");
     } else {
-      setTheme("auto");
+      setTheme("dark");
     }
   }
 }
