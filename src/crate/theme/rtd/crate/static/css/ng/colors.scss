@@ -140,9 +140,9 @@ body[data-theme="light"] {
   --color-announcement-text: #eeebee;
 
   // Brand colors
-  --color-brand-primary: #0a4bff;
+  --color-brand-primary: #19c0ea;
   --color-brand-content: #2757dd;
-  --color-brand-visited: #872ee0;
+  --color-brand-visited: #19c0ea;
 
   // Highlighted text
   --color-highlighted-background: #ddeeff;
@@ -287,16 +287,16 @@ body[data-theme="light"] {
   // Sidebar (left)
   --color-sidebar-background: #1a1c1e;
   --color-sidebar-background-border: #303335;
-  --color-sidebar-left-link: var(--primary-color);
+  --color-sidebar-left-link: var(--color-foreground-primary);
 
   // Announcements
   --color-announcement-background: #000000dd;
   --color-announcement-text: #eeebee;
 
   // Brand colors
-  --color-brand-primary: #3d94ff;
+  --color-brand-primary: #19c0ea;
   --color-brand-content: #5ca5ff;
-  --color-brand-visited: #b27aeb;
+  --color-brand-visited: #19c0ea;
 
   // Highlighted text (search)
   --color-highlighted-background: #083563;

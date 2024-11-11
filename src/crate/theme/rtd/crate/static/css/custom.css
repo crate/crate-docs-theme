@@ -505,7 +505,7 @@ body .mm-menu .navbar-nav {
 }
 
 .toc-backref {
-  color: var(--link-toc);
+  color: var(--color-content-foreground);
   opacity: 1 !important;
 }
 
@@ -745,10 +745,6 @@ ul#cr-search-results {
   }
 }
 
-details.sd-dropdown summary.sd-summary-title {
-  padding: 0.5em !important;
-}
-
 /**
 * MOBILE Nav
 */
@@ -984,7 +980,7 @@ a.social-links__link:first-child .social-links__icon {
 }
 
 .social-links__icon svg {
-  fill: #000 !important;
+  fill: var(--color-content-foreground) !important;
   height: 20px !important;
   left: 50%;
   position: absolute;
@@ -1463,7 +1459,7 @@ ul.search li {
 
 .cr-docs-footer-menu ul li a {
   font-size: 14px;
-  color: var(--color-sidebar-left-link);
+  color: var(--color-sidebar-link-text);
 }
 
 .cr-docs-footer-menu {
@@ -1483,7 +1479,6 @@ ul.search li {
 
 .social-label {
   font-size: 14px;
-  color: #000;
   font-weight: 400;
   left: 0;
   top: 8px;
@@ -1537,7 +1532,7 @@ dl.field-list > dt {
 
 .contents:not(.this-will-duplicate-information-and-it-is-still-useful-here) {
   background: transparent;
-  color: #000;
+  color: var(--color-content-foreground);
 }
 
 /* hide/show headerlinks */
@@ -1699,10 +1694,10 @@ td > :last-child {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: var(--color-sidebar-background);
   padding: 10px;
   margin: 0;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-sidebar-background-border);
   z-index: 999;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -1752,6 +1747,42 @@ td > :last-child {
 
 .theme-toggle {
   margin-left: 6px;
+}
+
+/* mermaid color fix */
+.mermaid .messageText {
+  fill: var(--color-content-foreground) !important;
+}
+
+.mermaid .flowchart-link {
+  stroke: var(--color-content-foreground) !important;
+}
+
+/* adjust font-size and padding of feedback toggler */
+details.sd-dropdown summary.sd-summary-title {
+  font-size: 14px;
+  padding: 0.5em 0.4em !important;
+}
+
+/* togglebutton text */
+@media all and (min-width: 768px) {
+  button.toggle-button.toggle-button-hidden::before {
+    color: var(--color-content-foreground) !important;
+  }
+}
+
+.toggle svg.toggle-chevron-right polyline {
+  stroke: var(--color-content-foreground) !important;
+}
+
+/* sd color override */
+.sd-tab-set > input:checked + label {
+  border-color: var(--color-link) !important;
+  color: var(--color-link) !important;
+}
+
+html .sd-tab-set > label:hover {
+  color: var(--color-link) !important;
 }
 
 @media (max-width: 768px) {

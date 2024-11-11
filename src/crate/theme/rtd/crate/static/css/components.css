@@ -35,7 +35,7 @@ html.w-mod-touch * {
 .w-button {
   display: inline-block;
   padding: 9px 15px;
-  background-color: #3898EC;
+  background-color: #3898ec;
   color: white;
   border: 0;
   line-height: inherit;
@@ -45,10 +45,6 @@ html.w-mod-touch * {
 }
 a:focus {
   outline: 0;
-}
-blockquote {
-  margin: 0 0 10px 0;
-  border-left: 5px solid #E2E2E2;
 }
 figure {
   margin: 0;
@@ -113,9 +109,6 @@ label {
 }
 .w-nav-brand {
   position: relative;
-  float: left;
-  text-decoration: none;
-  color: #333333;
 }
 .w-nav-link {
   position: relative;
