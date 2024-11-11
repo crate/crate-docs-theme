@@ -1,81 +1,65 @@
 .toctree {
-    padding-left: 0;
-    list-style: none;
-    padding-bottom: 0px;
+  padding-left: 0;
+  list-style: none;
+  padding-bottom: 0px;
 }
 
 .toctree li {
-    list-style: none;
+  list-style: none;
 }
 
-a.current, a.current-active {
-    font-weight: 600;
+a.current,
+a.current-active {
+  font-weight: 600;
 }
 
 .highlight {
-    font-size: 14px;
-    border-radius: 5px;
-    box-shadow: 2px 5px 10px silver;
+  font-size: 14px;
+  border-radius: 5px;
+  /*box-shadow: 2px 5px 10px silver;*/
+  box-shadow: 1px 3px 4px var(--color-sidebar-background-border);
 }
 
 .highlight pre {
-    padding: 15px;
-    margin: 1em 0px;
-    background: inherit none repeat scroll 0 0;
+  padding: 15px;
+  margin: 1em 0px;
+  background: inherit none repeat scroll 0 0;
 }
 
 .highlight pre {
-    overflow: auto;
+  overflow: auto;
 }
 
 blockquote p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /** Admonitions: Regular style **/
-div.admonition:not(.hero) p {
-    padding: 0.5em 0;
-    margin: 0;
-}
-
 div.admonition:not(.hero) {
-    padding: .8em .8em .8em 3em;
-    font-size: smaller;
-    background-position: top 1.1em left 1em;
-    background-size: 1.25em;
-    border-left-width: 2px;
+  background-position: top 8px left 9px;
+  background-size: 1.25em;
 }
 
 /** Admonitions: Hero style **/
 div.admonition.hero {
-    padding: 15px 15px 15px 95px;
-    margin: 20px 0;
-    background-position: top 20px left 25px;
-    background-size: 3em;
-    border-left-width: 4px;
+  padding: 15px 15px 15px 95px;
+  margin: 20px 0;
+  background-position: top 20px left 25px;
+  background-size: 3em;
+  border-left-width: 4px;
 }
 div.admonition.hero p {
-    padding: 10px 0;
-    margin: 0;
+  padding: 10px 0;
+  margin: 0;
 }
 
 /** Admonitions: General **/
-div.admonition {
-    border-left-style: solid;
-    margin-bottom: 1.2em;
-}
-
-div.admonition p.admonition-title {
-    padding-top: 0 !important;
-}
-
 div.admonition a {
-  color: black;
   text-decoration: underline;
 }
 
 div.admonition ul {
-    margin: 0;
+  margin: 0;
 }
 div.admonition ul.simple p {
   padding: 0;
@@ -85,47 +69,39 @@ div.admonition ul.open p {
 }
 
 div.note {
-    background: url(../images/admonition/icon-docs-note.svg) no-repeat;
-    background-color: #eefafe;
-    border-color: var(--primary-color);
+  background: url(../images/admonition/icon-docs-note.svg) no-repeat;
 }
 
 .cr-docs-sql-99 div.note {
-    background: url("../images/admonition/note-sql-99.svg") no-repeat;
-    background-color: #fff9e9;
-    border-left: 4px solid #ed8826;
-    background-size: 1.25em;
-    background-position: top 1.1em left 1em;
-  }
+  background: url("../images/admonition/note-sql-99.svg") no-repeat;
+  background-color: #fff9e9;
+  border-left: 4px solid #ed8826;
+  background-size: 1.25em;
+  background-position: top 1.1em left 1em;
+}
 
 div.seealso {
-    background: url(../images/admonition/icon-docs-seealso.svg) no-repeat;
-    background-color: #f4f4f4;
-    border-color: #999999;
+  background: url(../images/admonition/icon-docs-seealso.svg) no-repeat;
 }
 
 div.tip {
-    background: url(../images/admonition/icon-docs-tip.svg) no-repeat;
-    background-color: #eefafe;
-    border-color: var(--primary-color);
+  background: url(../images/admonition/icon-docs-tip.svg) no-repeat;
+  background-position: top 3px left 9px !important;
 }
 
 div.caution {
-    background: url(../images/admonition/icon-docs-caution.svg) no-repeat;
-    background-color: #fff2ed;
-    border-color: #ff814d;
+  background: url(../images/admonition/icon-docs-caution.svg) no-repeat;
+  background-position: top 6px left 9px !important;
 }
 
 div.warning {
-    background: url(../images/admonition/icon-docs-warning.svg) no-repeat;
-    background-color: #fdeeee;
-    border-color: #ec4d4d;
+  background: url(../images/admonition/icon-docs-warning.svg) no-repeat;
+  background-position: top 5px left 9px !important;
 }
 
 div.danger {
-    background: url(../images/admonition/icon-docs-danger.svg) no-repeat;
-    background-color: #fdeeee;
-    border-color: #ec4d4d;
+  background: url(../images/admonition/icon-docs-danger.svg) no-repeat;
+  background-position: top 4px left 8px !important;
 }
 
 .note .admonition-title,
@@ -134,90 +110,89 @@ div.danger {
 .caution .admonition-title,
 .warning .admonition-title,
 .danger .admonition-title {
-    padding: 10px 0 0 0;
-    font-weight: 600;
-    color: #000000;
-    text-transform: capitalize
+  padding: 10px 0 0 0;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .bs-docs-sidenav > li {
-    display: none;
+  display: none;
 }
 
 /** MENUE **/
 .bs-docs-sidenav .toctree li.border-top {
-    border-top: 1px solid #e7e7e7;
-    padding-top: 16px;
-    margin-top: 16px;
+  border-top: 1px solid #e7e7e7;
+  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .bs-docs-sidenav .toctree li a {
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 1.2;
-    color: black;
-    padding: 4px 0px;
-    display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-sidebar-left-link);
+  padding: 4px 0px;
+  display: block;
 }
 
 @media all and (max-width: 540px) {
-    .bs-docs-sidenav .toctree li a {
-        line-height: 1.3;
-    }
+  .bs-docs-sidenav .toctree li a {
+    line-height: 1.3;
+  }
 }
 
 .bs-docs-sidenav .toctree li.current > a,
 .bs-docs-sidenav .toctree li.active > a,
 .bs-docs-sidenav .toctree li.current > a code,
 .bs-docs-sidenav .toctree li.active > a code {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .bs-docs-sidenav .toctree ul > li.current > a {
-    margin-bottom: 3px !important;
-    display: block;
+  margin-bottom: 3px !important;
+  display: block;
 }
 
 @media all and (min-width: 768px) {
-    .bs-docs-sidenav ol, 
-    .bs-docs-sidenav ul {
-        margin-top: 1px !important;
-        margin-bottom: 2px;
-    }
+  .bs-docs-sidenav ol,
+  .bs-docs-sidenav ul {
+    margin-top: 1px !important;
+    margin-bottom: 2px;
+  }
 }
 
 .bs-docs-sidenav .toctree ul ul ul {
-    display: none;
+  display: none;
 }
 
 .bs-docs-sidenav .toctree li.current > ul,
 .bs-docs-sidenav .toctree ul li.active > ul {
-    display: block !important;
+  display: block !important;
 }
 .bs-docs-sidenav {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 .bs-docs-sidebar {
-    padding: 0px 20px 8px 16px;
-    margin-bottom: 20px;
+  padding: 0px 20px 8px 16px;
+  margin-bottom: 20px;
 }
 
 .affix {
-    position: fixed !important;
-    top: 20px;
+  position: fixed !important;
+  top: 20px;
 }
 
 #nav-affix {
-    overflow-y: auto;
-    width: 240px;
+  overflow-y: auto;
+  width: 240px;
 }
 
 .wrapper-navleft {
-    padding: 0px;
-    border: 0px;
+  padding: 0px;
+  border: 0px;
 }
 .wrapper-navleft .bs-docs-sidebar {
-    border: 1px solid #e7e7e7;
+  border: 1px solid #e7e7e7;
 }
 
 h1 code,
@@ -226,18 +201,19 @@ h3 code,
 h4 code,
 h5 code,
 h6 code {
-    border: 0;
+  border: 0;
 }
 
 a code {
-    border: 0;
-    font-weight: normal;
+  border: 0;
+  font-weight: normal;
 }
 
-code.xref, a code {
+code.xref,
+a code {
   font-weight: normal !important;
 }
 
 div.topic {
-    border: 0;
+  border: 0;
 }
