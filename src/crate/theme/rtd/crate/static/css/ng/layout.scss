@@ -142,11 +142,11 @@ footer .sb-page-width {
   ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--primary"],
 #sb-sidebar-toggle--secondary:checked
   ~ .sb-sidebar-overlay[for="sb-sidebar-toggle--secondary"] {
-  z-index: 5;
+  z-index: 12;
 }
 
 #sb-sidebar-toggle--secondary:checked ~ .sb-container .sb-sidebar-secondary {
-  background: #fff;
+  background: var(--color-toc-background);
 }
 
 // fix sidebar icon size

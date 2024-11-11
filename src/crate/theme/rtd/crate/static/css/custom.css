@@ -1764,6 +1764,11 @@ details.sd-dropdown summary.sd-summary-title {
   padding: 0.5em 0.4em !important;
 }
 
+/* remove border from mobile nav */
+.mobile-header {
+  border-bottom: none !important;
+}
+
 /* togglebutton text */
 @media all and (min-width: 768px) {
   button.toggle-button.toggle-button-hidden::before {
