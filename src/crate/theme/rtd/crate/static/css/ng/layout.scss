@@ -22,10 +22,20 @@
 }
 
 @media all and (min-width: 88rem) {
-  header .sb-page-width,
-  footer .sb-page-width {
+  header .sb-page-width {
     width: 100%;
     max-width: 96rem;
+  }
+}
+
+footer .sb-page-width {
+  border-top: 1px solid var(--color-sidebar-background-border);
+}
+
+@media all and (min-width: 88rem) {
+  footer .sb-page-width .footer {
+    max-width: 96rem;
+    margin: 0 auto;
   }
 }
 
