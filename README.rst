@@ -2,7 +2,7 @@
 Crate Docs Theme
 ================
 
-|tests| |rtd| |build| |pypi|
+|tests| |rtd| |build| |pypi| |python-versions|
 
 
 About
@@ -102,3 +102,7 @@ Looking for more help?
 .. |pypi| image:: https://badge.fury.io/py/crate-docs-theme.svg
     :alt: PyPI version
     :target: https://badge.fury.io/py/crate-docs-theme
+
+.. |python-versions| image:: https://img.shields.io/pypi/pyversions/crate-docs-theme.svg
+    :alt: Python Versions
+    :target: https://pypi.org/project/crate-docs-theme/
