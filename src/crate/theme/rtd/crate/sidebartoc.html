@@ -23,6 +23,13 @@
     <li class="navleft-item"><a href="/docs/guide/home/">Docs Home</a></li>
   {% endif %}
 
+  <!-- Features. -->
+  {% if project == 'CrateDB: Guide' and pagename == 'feature/index' %}
+    <li class="navleft-item current"><a class="current-active" href="/docs/guide/feature/">Features</a></li>
+  {% else %}
+    <li class="navleft-item"><a href="/docs/guide/feature/">Features</a></li>
+  {% endif %}
+
   <!-- Section A. -->
   {% if project == 'CrateDB Cloud' %}
     <li class="current">

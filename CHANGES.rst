@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Added reference to "All Features" page to primary navigation
 
 2024/11/06 0.36.1
 -----------------
