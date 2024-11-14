@@ -801,7 +801,7 @@ ul#cr-search-results {
 a[href*="#gloss-"].internal {
   /* workaround as text-decoration cannot be overridden on child elements */
   border-bottom: 1px dotted;
-  color: black;
+  color: var(--color-content-foreground);
 }
 
 /* hide menuitem in docs */
