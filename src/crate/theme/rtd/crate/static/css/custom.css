@@ -1790,6 +1790,17 @@ html .sd-tab-set > label:hover {
   color: var(--color-link) !important;
 }
 
+/* algolia */
+#hits .ais-Hits-item {
+  background: var(--color-background-primary);
+  box-shadow: 0 0 0 1px var(--color-sidebar-background-border);
+}
+
+#searchbox .ais-SearchBox-input {
+  background-color: var(--docsearch-searchbox-background);
+  color: var(--docsearch-muted-color);
+}
+
 @media (max-width: 768px) {
   #menu-main-navigation {
     display: none;
