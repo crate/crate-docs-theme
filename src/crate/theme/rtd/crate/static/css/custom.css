@@ -1801,6 +1801,12 @@ html .sd-tab-set > label:hover {
   color: var(--docsearch-muted-color);
 }
 
+#pagination .ais-Pagination-link {
+  background-color: var(--color-background-primary);
+  background-image: none;
+  color: var(--color-foreground-primary);
+}
+
 @media (max-width: 768px) {
   #menu-main-navigation {
     display: none;
