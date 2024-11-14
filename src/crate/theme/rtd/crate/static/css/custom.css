@@ -1811,4 +1811,8 @@ html .sd-tab-set > label:hover {
   #menu-main-navigation {
     display: none;
   }
+
+  .ais-InstantSearch #pagination {
+    overflow-y: scroll;
+  }
 }

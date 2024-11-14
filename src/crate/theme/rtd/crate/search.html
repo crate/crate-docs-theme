@@ -31,7 +31,12 @@
 
 
 {% block content %}
-  <div class="container">
+<div class="sb-article-container container-fluid">
+  <header class="sb-header-article">
+    {% include "sections/header-article.html" %}
+  </header>
+  <article class="sb-article" role="main">
+
     <h1 id="search-documentation">{{ _('Search') }}</h1>
     <p>
       {% trans %}From here you can search these documents. Enter your search
@@ -86,7 +91,12 @@
       </div>
     </div>
     {% endif %}
-  </div>
+
+  </article>
+  <footer class="sb-footer-article">
+    {% include "sections/footer-article.html" %}
+  </footer>
+</div>
 {% endblock content %}
 
 {% block footer_content %}
