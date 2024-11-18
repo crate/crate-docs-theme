@@ -88,6 +88,12 @@
 </div>
 {% endblock container %}
 
+{# Include Furo icons as first body element #}
+{% block body -%}
+{% include "partials/icons.html" %}
+{{ super() }}
+{% endblock %}
+
 {% block footer %}
 <footer class="sb-footer">
   <div class="footer-subscription cr-nojs-hide">
