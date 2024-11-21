@@ -58,8 +58,6 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "docutils",
-        "docutils-stubs==0.0.22",
         "furo==2024.8.6",
         "jinja2>=3,<4",
         "myst-parser[linkify]<5",
