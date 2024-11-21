@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/11/21 0.37.0
+-----------------
 - Updated to most recent Furo
 - Added dark theme mode from Furo
 
