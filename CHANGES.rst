@@ -5,6 +5,10 @@ CHANGES
 
 Unreleased
 ----------
+- Updated to most recent Furo
+- Added dark theme mode from Furo
+
+Thanks, @msbt.
 
 2024/11/06 0.36.1
 -----------------
