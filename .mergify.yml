@@ -1,20 +1,19 @@
----
 queue_rules:
   - name: default
-    conditions:
-      - check-success~=Build docs
-      - check-success~=Build package
-      - check-success~=docs/readthedocs.org
-
-pull_request_rules:
-  - name: default
-    conditions:
+    queue_conditions:
       - label=ready-to-merge
       - '#approved-reviews-by>=1'
       - status-success~=Build docs
       - status-success~=Build package
       - status-success~=docs/readthedocs.org
+    merge_conditions:
+      - check-success~=Build docs
+      - check-success~=Build package
+      - check-success~=docs/readthedocs.org
+    merge_method: rebase
+
+pull_request_rules:
+  - name: refactored queue action rule
+    conditions: []
     actions:
       queue:
-        method: rebase
-        name: default
