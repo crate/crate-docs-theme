@@ -1,38 +1,21 @@
 {# Layout: This is used by _every_ Sphinx content page #}
-{% extends "basic-ng/page.html" %}
+{% extends "base.html" %}
 
-{% block head_extra %}
-  <script src="{{ pathto('_static/bundle/main.js', 1) }}?ver={{ theme_ver }}"></script>
+{% block body -%}
+{{ super() }}
+{% include "partials/icons.html" %}
 
-  <!-- Algolia DNS Prefetch -->
-  <link rel="preconnect" href="https://az1nev7cg0-dsn.algolia.net" crossorigin />
-  <!-- Algolia stylesheet -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<a class="skip-to-content muted-link" href="#main-content">
+  {%- trans -%}
+  Skip to content
+  {%- endtrans -%}
+</a>
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WHMDSK');</script>
-    <!-- End Google Tag Manager -->
-
-  <noscript>
-      <style>
-          .cr-nojs-hide { display: none; }
-      </style>
-  </noscript>
-
-  {%- if custom_baseurl %}
-  {%- set canonical_page = pagename + ".html" %}
-  <!--
-  Always link to the latest version, as canonical.
-  https://docs.readthedocs.io/en/stable/canonical-urls.html
-  -->
-  <link rel="canonical" href="{{ custom_baseurl|e }}{{ canonical_page }}" />
-  {%- endif %}
-
-{% endblock %}
+{% block announcement %}
+<div class="sb-announcement">
+  {% include "sections/announcement.html" %}
+</div>
+{% endblock announcement %}
 
 {% block header %}
 <header class="sb-header header-nav" id="top">
@@ -44,6 +27,11 @@
 
 {% block header_secondary %}
 {% endblock header_secondary %}
+
+<input type="checkbox" class="sb-sidebar-toggle" name="sb-sidebar-toggle--primary" id="sb-sidebar-toggle--primary">
+<input type="checkbox" class="sb-sidebar-toggle" name="sb-sidebar-toggle--secondary" id="sb-sidebar-toggle--secondary">
+<label class="sb-sidebar-overlay" for="sb-sidebar-toggle--primary"></label>
+<label class="sb-sidebar-overlay" for="sb-sidebar-toggle--secondary"></label>
 
 {% block container %}
 <div class="sb-container">
@@ -67,7 +55,7 @@
           <header class="sb-header-article">
             {% include "sections/header-article.html" %}
           </header>
-          <article class="sb-article" role="main">
+          <article class="sb-article" role="main" id="main-content">
             {% include "sections/article.html" %}
           </article>
           <footer class="sb-footer-article">
@@ -88,40 +76,4 @@
 </div>
 {% endblock container %}
 
-{# Include Furo icons as first body element #}
-{% block body -%}
-{% include "partials/icons.html" %}
-{{ super() }}
-{% endblock %}
-
-{% block footer %}
-<footer class="sb-footer">
-  <div class="footer-subscription cr-nojs-hide">
-    <div class="content-wrapper container">
-      <div class="row">
-        <div class="col-md-3">
-          <h4>Subscribe to the CrateDB Newsletter now</h4>
-        </div>
-        <div class="col-md-9">
-          <div class="footer-subs-form">
-            <!--[if lte IE 8]>
-            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-            <![endif]-->
-            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-            <script>
-              hbspt.forms.create({
-                region: "na1",
-                portalId: "19927462",
-                formId: "76d1441f-eef8-4e8e-950d-9b66bf24bd8e"
-              });
-            </script>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="sb-footer__inner sb-page-width">
-    {% include "sections/footer.html" %}
-  </div>
-</footer>
-{% endblock footer %}
+{%- endblock %}

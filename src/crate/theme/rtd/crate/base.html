@@ -1,144 +1,63 @@
-{#
-    basic/layout.html
-    ~~~~~~~~~~~~~~~~~
+<!doctype html>
+<html class="no-js"{% if language is not none %} lang="{{ language }}"{% endif %} data-content_root="{{ content_root }}">
+  <head>
+    {%- block site_meta -%}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark">
 
-    Master layout template for Sphinx themes.
+    {%- if metatags %}{{ metatags }}{% endif -%}
 
-    :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
-#}
-{%- block doctype -%}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-{%- endblock %}
-{%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
-{%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
-{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and
-                         (sidebars != []) %}
-{%- set url_root = pathto('', 1) %}
-{# XXX necessary? #}
-{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
-{%- if not embedded and docstitle %}
-  {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
-{%- else %}
-  {%- set titlesuffix = "" %}
-{%- endif %}
+    {%- block linktags %}
+        {%- if hasdoc('about') -%}
+          <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
+        {%- endif -%}
+        {#%- if hasdoc('genindex') -%}
+          <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
+        {%- endif -%#}
+        {%- if hasdoc('search') -%}
+          <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
+        {%- endif -%}
+        {#%- if hasdoc('copyright') -%}
+          <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
+        {%- endif -%#}
+        {%- if next -%}
+          <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+        {%- endif -%}
+        {%- if prev -%}
+          <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+        {%- endif -%}
+        {#- rel="canonical" (set by html_baseurl) -#}
+        {#%- if pageurl %}
+        <link rel="canonical" href="{{ pageurl|e }}" />
+        {%- endif %#}
+    {%- endblock linktags %}
 
-{%- macro relbar() %}
-    <div class="related">
-      <h3>{{ _('Navigation') }}</h3>
-      <ul>
-        {%- for rellink in rellinks %}
-        <li class="right" {% if loop.first %} style="margin-right: 10px"{% endif %}>
-          <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
-             {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
-          {%- if not loop.first %}{{ reldelim2 }}{% endif %}</li>
-        {%- endfor %}
-        {%- block rootrellink %}
-        <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
-        {%- endblock %}
-        {%- for parent in parents %}
-          <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
-        {%- endfor %}
-        {%- block relbaritems %} {% endblock %}
-      </ul>
-    </div>
-{%- endmacro %}
+    {# Favicon #}
+    <link rel="shortcut icon" type="image/png" href="{{ pathto('_static', 1) }}/images/favicon.png"/>
+   
+    {%- endblock site_meta -%}
 
-{%- macro sidebar() %}
-      {%- if render_sidebar %}
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-          {%- block sidebarlogo %}
-          {%- if logo %}
-            <p class="logo"><a href="{{ pathto(master_doc) }}">
-              <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-            </a></p>
-          {%- endif %}
-          {%- endblock %}
-          {%- if sidebars != None %}
-            {#- new style sidebar: explicitly include/exclude templates #}
-            {%- for sidebartemplate in sidebars %}
-            {%- include sidebartemplate %}
-            {%- endfor %}
-          {%- else %}
-            {#- old style sidebars: using blocks -- should be deprecated #}
-            {%- block sidebartoc %}
-            {%- include "localtoc.html" %}
-            {%- endblock %}
-            {%- block sidebarrel %}
-            {%- include "relations.html" %}
-            {%- endblock %}
-            {%- block sidebarsourcelink %}
-            {%- include "sourcelink.html" %}
-            {%- endblock %}
-            {%- if customsidebar %}
-            {%- include customsidebar %}
-            {%- endif %}
-            {%- block sidebarsearch %}
-            {%- include "searchbox.html" %}
-            {%- endblock %}
-          {%- endif %}
-        </div>
-      </div>
-      {%- endif %}
-{%- endmacro %}
-
-{%- macro script() %}
-
+    {% block head_extra %}
     <!-- Algolia DNS Prefetch -->
     <link rel="preconnect" href="https://az1nev7cg0-dsn.algolia.net" crossorigin />
-
-    {{ js_tag("_static/bundle/main.js") }}
-
-    {%- for js in script_files %}
-    {{ js_tag(js) }}
-    {%- endfor %}
-
-    {%- for js in extra_script_files %}
-    {{ js_tag(js) }}
-    {%- endfor %}
-
-{%- endmacro %}
-
-{%- macro css() %}
-
-    {%- for css in css_files %}
-      {%- if css|attr("filename") %}
-    {{ css_tag(css) }}
-      {%- else %}
-    <link rel="stylesheet" href="{{ pathto(css, 1)|e }}" type="text/css" />
-      {%- endif %}
-    {%- endfor %}
-
-    {%- for css in extra_css_files %}
-      {%- if css|attr("filename") %}
-    {{ css_tag(css) }}
-      {%- else %}
-    <link rel="stylesheet" href="{{ pathto(css, 1)|e }}" type="text/css" />
-      {%- endif %}
-    {%- endfor %}
-
-{%- endmacro %}
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
-    {{ metatags }}
-    {%- block htmltitle %}
-    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
-    {%- endblock %}
-    {{ css() }}
-    {%- if not embedded %}
-    {%- block scripts %}
-    {{- script() }}
-    {%- endblock %}
-    {%- if use_opensearch %}
-    <link rel="search" type="application/opensearchdescription+xml"
-          title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
-          href="{{ pathto('_static/opensearch.xml', 1) }}"/>
-    {%- endif %}
-
+    <!-- Algolia stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+  
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WHMDSK');</script>
+      <!-- End Google Tag Manager -->
+  
+    <noscript>
+        <style>
+            .cr-nojs-hide { display: none; }
+        </style>
+    </noscript>
+  
     {%- if custom_baseurl %}
     {%- set canonical_page = pagename + ".html" %}
     <!--
@@ -147,93 +66,102 @@
     -->
     <link rel="canonical" href="{{ custom_baseurl|e }}{{ canonical_page }}" />
     {%- endif %}
+    {% endblock %}
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    {#- Site title -#}
+    {%- block htmltitle -%}
+      {% if not docstitle %}
+        <title>{{ title|striptags|e }}</title>
+      {% elif pagename == master_doc %}
+        <title>{{ docstitle|striptags|e }}</title>
+      {% else %}
+        <title>{{ title|striptags|e }} - {{ docstitle|striptags|e }}</title>
+      {% endif %}
+    {%- endblock -%}
 
-    <link rel="icon" type="image/png" href="{{ pathto('_static', 1) }}/images/favicon.png"/>
-    {%- endif %}
-{%- block linktags %}
-    {%- if hasdoc('about') %}
-    <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
-    {%- endif %}
-    {%- if hasdoc('genindex') %}
-    <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
-    {%- endif %}
-    {%- if hasdoc('search') %}
-    <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
-    {%- endif %}
-    {%- if hasdoc('copyright') %}
-    <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
-    {%- endif %}
-    <link rel="top" title="{{ docstitle|e }}" href="{{ pathto('index') }}" />
-    {%- if parents %}
-    <link rel="up" title="{{ parents[-1].title|striptags|e }}" href="{{ parents[-1].link|e }}" />
-    {%- endif %}
-    {%- if next %}
-    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
-    {%- endif %}
-    {%- if prev %}
-    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
-    {%- endif %}
-{%- endblock %}
-{%- block extra_head %} {% endblock %}
+    {%- block styles -%}
+
+    {# Custom stylesheets #}
+    {%- block regular_styles -%}
+    {% if not omit_skeleton_css -%}
+    <link rel="stylesheet" href="{{ pathto('_static/skeleton.css', 1) }}" type="text/css" />
+    {%- endif -%}
+
+    {%- for css in css_files -%}
+      {% if css|attr("filename") -%}
+        {{ css_tag(css) }}
+      {%- else -%}
+        <link rel="stylesheet" href="{{ pathto(css, 1)|e }}" type="text/css" />
+      {%- endif %}
+    {% endfor -%}
+    {%- endblock regular_styles -%}
+
+    {#- Theme-related stylesheets -#}
+    {%- block theme_styles %}
+    {% include "partials/_head_css_variables.html" with context %}
+    {%- endblock -%}
+
+    {%- block extra_styles %}
+    {%- endblock -%}
+
+    {%- endblock styles -%}
+
+    <script src="{{ pathto('_static/bundle/main.js', 1) }}?ver={{ theme_ver }}"></script>
+    {#- Custom front matter #}
+    {%- block extrahead -%}{%- endblock -%}
   </head>
-  {% if project == 'SQL 99' %}
-  <body class="cr-docs-sql-99">
-  {% else %}
   <body>
-  {% endif %}
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHMDSK"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-    
-{%- block header %}{% endblock %}
+    {% block body %}
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    {% endblock %}
 
-{%- block relbar1 %}{{ relbar() }}{% endblock %}
+    {%- block scripts -%}
 
-{%- block content %}
-  {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+    {# Custom JS #}
+    {%- block regular_scripts -%}
+    {% for path in script_files -%}
+      {{ js_tag(path) }}
+    {% endfor -%}
+    {%- endblock regular_scripts -%}
 
-    <div class="document">
-  {%- block document %}
-      <div class="documentwrapper">
-      {%- if render_sidebar %}
-        <div class="bodywrapper">
-      {%- endif %}
-          <div class="body" role="main">
-            {% block body %} {% endblock %}
+    {# Theme-related JavaScript code #}
+    {%- block theme_scripts -%}
+    {%- endblock -%}
+
+    {%- endblock scripts -%}
+
+    {% block footer %}
+    <footer class="sb-footer">
+      <div class="footer-subscription cr-nojs-hide">
+        <div class="content-wrapper container">
+          <div class="row">
+            <div class="col-md-3">
+              <h4>Subscribe to the CrateDB Newsletter now</h4>
+            </div>
+            <div class="col-md-9">
+              <div class="footer-subs-form">
+                <!--[if lte IE 8]>
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                <![endif]-->
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    region: "na1",
+                    portalId: "19927462",
+                    formId: "76d1441f-eef8-4e8e-950d-9b66bf24bd8e"
+                  });
+                </script>
+              </div>
+            </div>
           </div>
-      {%- if render_sidebar %}
         </div>
-      {%- endif %}
       </div>
-  {%- endblock %}
-
-  {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
-      <div class="clearer"></div>
-    </div>
-{%- endblock %}
-
-{%- block relbar2 %}{{ relbar() }}{% endblock %}
-
-{%- block custom_footer %}
-    <div class="footer">
-    {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-      {%- else %}
-        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
-      {%- endif %}
-    {%- endif %}
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-    {%- endif %}
-    {%- if show_sphinx %}
-      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-    {%- endif %}
-    </div>
-{%- endblock %}
-
+      <div class="sb-footer__inner sb-page-width">
+        {% include "sections/footer.html" %}
+      </div>
+    </footer>
+    {% endblock footer %}
   </body>
 </html>
