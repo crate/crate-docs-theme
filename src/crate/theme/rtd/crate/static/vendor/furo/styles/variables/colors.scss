@@ -21,7 +21,7 @@ body[data-theme="light"] {
   }
 }
 
-[data-theme="light"] {
+@mixin colors {
   // API documentation
   --color-api-background: var(--color-background-hover--transparent);
   --color-api-background-hover: var(--color-background-hover);
@@ -175,7 +175,7 @@ body[data-theme="light"] {
   --link-toc: #000;
 }
 
-[data-theme="dark"] {
+@mixin colors-dark {
   // API documentation
   --color-api-background: var(--color-background-hover--transparent);
   --color-api-background-hover: var(--color-background-hover);
