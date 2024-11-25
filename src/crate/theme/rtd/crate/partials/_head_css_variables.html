@@ -13,16 +13,21 @@
 
 <style>
   body {
-    {{ declare_css_variables(theme_light_css_variables, furo_pygments.light) }}
+    --color-code-background: #f8f8f8;
+    --color-code-foreground: black;
   }
+
   @media not print {
     body[data-theme="dark"] {
-      {{ declare_css_variables(theme_dark_css_variables, furo_pygments.dark) }}
+      --color-code-background: #202020;
+      --color-code-foreground: #d0d0d0;
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        {{ declare_css_variables(theme_dark_css_variables, furo_pygments.dark) }}
+        --color-code-background: #202020;
+        --color-code-foreground: #d0d0d0;
       }
     }
   }
+
 </style>
