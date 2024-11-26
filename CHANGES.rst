@@ -6,6 +6,13 @@ CHANGES
 Unreleased
 ----------
 
+2024/11/26 0.37.1
+-----------------
+- Fixed building docs at ``crate/crate`` by removing stray ``README.md``
+- Furo: Started using vendorized colors to make mixins work
+- Furo: Started using non-vendorized head variables
+- Templates: Use proper ``base.html`` and clean up ``page.html``
+
 2024/11/21 0.37.0
 -----------------
 - Updated to most recent Furo
