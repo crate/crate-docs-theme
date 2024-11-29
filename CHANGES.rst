@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- CrateDB Cloud: Collapse navigation items on ``feature/index`` page
 
 2024/11/26 0.37.1
 -----------------
