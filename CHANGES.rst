@@ -5,6 +5,8 @@ CHANGES
 
 Unreleased
 ----------
+- Use Furo's navigation component through ``sphinx-design-elements``'
+  ``linktree``. Thanks, @pradyunsg.
 
 2024/11/26 0.37.1
 -----------------
