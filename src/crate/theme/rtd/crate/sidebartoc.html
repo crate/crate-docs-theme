@@ -27,7 +27,11 @@
   {% if project == 'CrateDB Cloud' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Cloud</a>
+      {% if pagename == 'feature/index' %}
+      {{ toctree(maxdepth=0|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+      {% else %}
       {{ toctree(maxdepth=4|toint, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+      {% endif %}
     </li>
   {% else %}
     <li class="navleft-item"><a href="/docs/cloud/">CrateDB Cloud</a></li>
