@@ -1776,6 +1776,15 @@ html .sd-tab-set > label:hover {
   color: var(--color-link) !important;
 }
 
+/* tables on mobile */
+@media (max-width: 768px) {
+  #main-content section table {
+    max-width: 100vw;
+    overflow-y: scroll;
+    display: block;
+  }
+}
+
 /* algolia */
 #hits .ais-Hits-item {
   background: var(--color-background-primary);
