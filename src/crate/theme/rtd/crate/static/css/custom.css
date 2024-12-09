@@ -1830,4 +1830,8 @@ html .sd-tab-set > label:hover {
   dl.field-list > dt {
     margin: 10px 0 5px;
   }
+
+  #main-content section iframe {
+    max-width: 100%;
+  }
 }
