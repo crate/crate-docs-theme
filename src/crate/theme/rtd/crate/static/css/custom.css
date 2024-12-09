@@ -1807,6 +1807,10 @@ html .sd-tab-set > label:hover {
   color: var(--color-foreground-primary);
 }
 
+.DocSearch-SearchBar :focus-visible {
+  outline: none;
+}
+
 @media (max-width: 768px) {
   #menu-main-navigation {
     display: none;
