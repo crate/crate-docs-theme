@@ -9,6 +9,14 @@
   --docsearch-primary-color: #009fc7 !important;
 }
 
+body[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body[data-theme="light"] {
+  color-scheme: light;
+}
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
