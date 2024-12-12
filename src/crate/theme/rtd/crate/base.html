@@ -113,7 +113,7 @@
   <body>
     {% block body %}
     <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+      document.documentElement.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     {% endblock %}
 

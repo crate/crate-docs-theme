@@ -9,11 +9,11 @@
   --docsearch-primary-color: #009fc7 !important;
 }
 
-body[data-theme="dark"] {
+html[data-theme="dark"] {
   color-scheme: dark;
 }
 
-body[data-theme="light"] {
+html[data-theme="light"] {
   color-scheme: light;
 }
 
