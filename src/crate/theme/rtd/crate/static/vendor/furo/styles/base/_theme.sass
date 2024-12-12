@@ -21,8 +21,9 @@ html body .only-dark
 // Ignore dark-mode hints if print media.
 @media not print
   // Enable dark-mode, if requested.
-  body[data-theme="dark"]
-    @include colors-dark
+  html[data-theme="dark"]
+    body
+      @include colors-dark
 
     html & .only-light
       display: none !important
@@ -31,8 +32,9 @@ html body .only-dark
 
   // Enable dark mode, unless explicitly told to avoid.
   @media (prefers-color-scheme: dark)
-    body:not([data-theme="light"])
-      @include colors-dark
+    html:not([data-theme="light"])
+      body
+        @include colors-dark
 
       html & .only-light
         display: none !important
@@ -42,7 +44,7 @@ html body .only-dark
 //
 // Theme toggle presentation
 //
-body[data-theme="auto"]
+html[data-theme="auto"]
   .theme-toggle svg.theme-icon-when-auto-light
     display: block
 
@@ -52,10 +54,10 @@ body[data-theme="auto"]
     .theme-toggle svg.theme-icon-when-auto-light
       display: none
 
-body[data-theme="dark"]
+html[data-theme="dark"]
   .theme-toggle svg.theme-icon-when-dark
     display: block
 
-body[data-theme="light"]
+html[data-theme="light"]
   .theme-toggle svg.theme-icon-when-light
     display: block

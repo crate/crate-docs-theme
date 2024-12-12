@@ -8,7 +8,7 @@ var Cookies = require('js-cookie');
 document.addEventListener('DOMContentLoaded', () => {
     // Function to set the theme
     function setTheme(theme) {
-        document.body.setAttribute('data-theme', theme);
+        document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
     }
 
