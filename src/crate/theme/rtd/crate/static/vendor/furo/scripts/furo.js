@@ -75,7 +75,7 @@ function setTheme(mode) {
     mode = "light";
   }
 
-  document.body.dataset.theme = mode;
+  document.documentElement.dataset.theme = mode;
   localStorage.setItem("theme", mode);
 }
 
