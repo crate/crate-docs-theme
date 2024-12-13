@@ -5,7 +5,19 @@ CHANGES
 
 Unreleased
 ----------
+
+2024/12/13 0.37.2
+-----------------
 - CrateDB Cloud: Collapse navigation items on ``feature/index`` page
+- Fix some regressions from Furo (Algolia focus)
+- Remove input focus (inherited from Furo)
+- CLS fix from Algolia implementation
+- Reposition code block (didn't cascade right)
+- Add horizontal scrolling to tables on mobile to avoid having layouts wider than the screen
+- Keep iframe embeds from having a layout wider than the screen by adding ``max-width``
+- Fix scrollbar light-colors on Chromium browsers and different modes
+- Use ``<html>`` instead of ``<body>`` as target for dark/light mode ``data-theme`` attributes
+- Update sass from 1.80.5 to 1.81.0
 
 2024/11/26 0.37.1
 -----------------
