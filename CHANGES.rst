@@ -6,7 +6,9 @@ CHANGES
 Unreleased
 ----------
 - Added `MyST-NB`_, for rendering Jupyter notebooks
+- Added `JupySQL`_, for running SQL in Jupyter/IPython
 
+.. _JupySQL: https://jupysql.ploomber.io/
 .. _MyST-NB: https://myst-nb.readthedocs.io/
 
 2024/12/13 0.37.2

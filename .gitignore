@@ -9,6 +9,8 @@
 .installed.cfg
 .style
 .utils
+*.csv
+*.db
 *.egg-info
 *.lint
 *.pyc
