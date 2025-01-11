@@ -33,7 +33,7 @@ exclude_patterns = [".*", "*.lint", "README.rst", "requirements.txt"]
 exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
 extensions = [
-    "myst_parser",
+    "myst_nb",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_design_elements",

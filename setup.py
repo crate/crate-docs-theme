@@ -60,6 +60,7 @@ setup(
     install_requires=[
         "furo==2024.8.6",
         "jinja2>=3,<4",
+        "myst-nb<1.2",
         "myst-parser[linkify]<5",
         "sphinx>=7.1,<9",
         "sphinx-basic-ng==1.0.0b2",
