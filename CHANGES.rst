@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+- Added `MyST-NB`_, for rendering Jupyter notebooks
+
+.. _MyST-NB: https://myst-nb.readthedocs.io/
 
 2024/12/13 0.37.2
 -----------------
