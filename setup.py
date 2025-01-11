@@ -60,6 +60,7 @@ setup(
     install_requires=[
         "furo==2024.8.6",
         "jinja2>=3,<4",
+        "jupysql<0.11",
         "myst-nb<1.2",
         "myst-parser[linkify]<5",
         "sphinx>=7.1,<9",

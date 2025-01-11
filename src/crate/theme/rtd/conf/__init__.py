@@ -196,6 +196,9 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
+# -- Options for MyST-NB ----------------------------------------------
+nb_execution_raise_on_error = True
+
 
 def setup(app):
 
