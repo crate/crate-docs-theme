@@ -1843,3 +1843,14 @@ html .sd-tab-set > label:hover {
     max-width: 100%;
   }
 }
+
+/*
+Fix dark mode for tables in Jupyter Notebooks rendered by MyST-NB.
+https://github.com/crate/crate-docs-theme/pull/566
+*/
+div.cell_output table {
+  color: var(--color-content-foreground);
+}
+div.cell_output tbody tr:nth-child(2n+1) {
+  background: var(--color-background-hover);
+}
