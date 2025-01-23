@@ -1,21 +1,21 @@
-# Licensed to Crate (https://crate.io) under one or more contributor license
-# agreements.  See the NOTICE file distributed with this work for additional
-# information regarding copyright ownership.  Crate licenses this file to you
-# under the Apache License, Version 2.0 (the "License"); you may not use this
-# file except in compliance with the License.  You may obtain a copy of the
-# License at
+# Licensed to Crate.io GmbH ("Crate") under one or more contributor
+# license agreements.  See the NOTICE file distributed with this work for
+# additional information regarding copyright ownership.  Crate licenses
+# this file to you under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.  You may
+# obtain a copy of the License at
 #
 #   http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-# License for the specific language governing permissions and limitations under
-# the License.
+# License for the specific language governing permissions and limitations
+# under the License.
 #
-# However, if you have executed another commercial license agreement with Crate
-# these terms will supersede the license and you may use the software solely
-# pursuant to the terms of the relevant commercial agreement.
+# However, if you have executed another commercial license agreement
+# with Crate these terms will supersede the license and you may use the
+# software solely pursuant to the terms of the relevant commercial agreement.
 
 
 # =============================================================================
@@ -84,13 +84,9 @@ SELF_SRC      := $(TOP_DIR)/common-build
 SELF_MAKEFILE := $(SELF_SRC)/rules.mk
 SRC_MAKE      := $(MAKE) -f $(SRC_DIR)/rules.mk
 
-ENV_DIR       := ../.venv
-ENV_BIN       := $(ENV_DIR)/bin
-ACTIVATE      := $(ENV_BIN)/activate
-
 # Parse the JSON file
 BUILD_VERSION := $(shell cat $(BUILD_JSON) | \
-    python -c 'import json, sys; print(json.load(sys.stdin)["message"])')
+    python3 -c 'import json, sys; print(json.load(sys.stdin)["message"])')
 
 ifeq ($(BUILD_VERSION),)
 $(error No build version specified in `$(BUILD_JSON)`.)
@@ -150,6 +146,29 @@ endif
 .PHONY: Makefile
 Makefile:
 
+# By default, pass targets through to the core build rules
+.PHONY:
+%: $(CLONE_DIR)
+	@ $(MAKE) version-warn
+	@ $(SRC_MAKE) $@
+
+.PHONY: reset
+reset:
+	@ printf '\033[1mResetting the build system...\033[00m\n'
+	@ rm -rf $(CLONE_DIR)
+	@ printf 'Removed: $(CLONE_DIR)\n'
+
+
+# The following special extensions are only present in the root
+# `crate-docs-theme` project. They are not present in the Makefile that is used
+# across **all** child projects, which is [1].
+#
+# [1] https://github.com/crate/crate-docs/blob/main/docs/Makefile
+
+ENV_DIR       := ../.venv
+ENV_BIN       := $(ENV_DIR)/bin
+ACTIVATE      := $(ENV_BIN)/activate
+
 .PHONY: bundle-assets
 bundle-assets:
 	. $(ACTIVATE) \
@@ -170,15 +189,3 @@ html: $(CLONE_DIR)
 	@ $(MAKE) version-warn
 	@ $(MAKE) bundle-assets
 	@ $(SRC_MAKE) $@
-
-# By default, pass targets through to the core build rules
-.PHONY:
-%: $(CLONE_DIR)
-	@ $(MAKE) version-warn
-	@ $(SRC_MAKE) $@
-
-.PHONY: reset
-reset:
-	@ printf '\033[1mResetting the build system...\033[00m\n'
-	@ rm -rf $(CLONE_DIR)
-	@ printf 'Removed: $(CLONE_DIR)\n'
