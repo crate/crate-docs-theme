@@ -18,11 +18,13 @@ into the Markdown file. Voilà.
 sphinxcontrib-youtube
 =====================
 
-This uses the ``youtube`` directive provided by ``sphinxcontrib-youtube``.
+This uses the ``youtube`` and ``vimeo`` directives provided by ``sphinxcontrib-youtube``.
 
+.. rubric:: YouTube
 .. youtube:: YE7VzlLtp-4
-    :width: 480
-    :height: 320
+
+.. rubric:: Vimeo
+.. vimeo:: 1084537
 
 oembedpy
 ========
@@ -35,12 +37,8 @@ This uses the ``oembed`` directive provided by ``oembedpy``.
 
 .. tip::
 
-    `oEmbedPy`_, as the name suggests, can render `oEmbed`_ information provided
-    by any HTML page, for example Bluesky, Reddit, Twitter/X, and many more.
-    Registered oEmbed providers can be explored per `providers.json`_.
+    See :ref:`oembed-rst` to learn about all capabilities of the ``oembed`` directive.
 
 
-.. _oEmbed: https://oembed.com/
-.. _oembedpy: https://oembedpy.readthedocs.io/
-.. _providers.json: https://oembed.com/providers.json
+.. _oEmbedPy: https://oembedpy.readthedocs.io/
 .. _sphinxcontrib-youtube: https://sphinxcontrib-youtube.readthedocs.io/

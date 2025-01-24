@@ -1,7 +1,7 @@
 # Videos
 
 Videos, for example from YouTube or Vimeo, can be embedded using inline
-HTML, [sphinxcontrib-youtube], or [oembedpy].
+HTML, [sphinxcontrib-youtube], or [oEmbedPy].
 
 ## Inline HTML
 
@@ -12,11 +12,16 @@ into the Markdown file. Voilà.
 
 ## sphinxcontrib-youtube
 
-This uses the `youtube` directive provided by `sphinxcontrib-youtube`.
+This uses the `youtube` and `vimeo` directives provided by `sphinxcontrib-youtube`.
 
+:::{rubric} YouTube
+:::
 :::{youtube} YE7VzlLtp-4
-:width: 480
-:height: 320
+:::
+
+:::{rubric} Vimeo
+:::
+:::{vimeo} 1084537
 :::
 
 ## oembedpy
@@ -29,13 +34,9 @@ This uses the `oembed` directive provided by `oembedpy`.
 :::
 
 :::{tip}
-[oEmbedPy], as the name suggests, can render [oEmbed] information provided
-by any HTML page, for example Bluesky, Reddit, Twitter/X, and many more.
-Registered oEmbed providers can be explored per [providers.json].
+See {ref}`oembed-md` to learn about all capabilities of the `oembed` directive.
 :::
 
 
-[oEmbed]: https://oembed.com/
-[oembedpy]: https://oembedpy.readthedocs.io/
-[providers.json]: https://oembed.com/providers.json
+[oEmbedPy]: https://oembedpy.readthedocs.io/
 [sphinxcontrib-youtube]: https://sphinxcontrib-youtube.readthedocs.io/
