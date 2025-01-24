@@ -34,6 +34,15 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          cache-dependency-glob: |
+            setup.py
+          cache-suffix: ${{ matrix.python-version }}
+          enable-cache: true
+          version: "latest"
+
       - name: Install PlantUML on Linux
         if: matrix.os == 'ubuntu-latest'
         run: |
@@ -46,4 +55,5 @@ jobs:
 
       - name: Build docs
         run: |
+          alias pip="uv pip"
           cd docs && make check

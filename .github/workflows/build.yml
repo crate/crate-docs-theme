@@ -31,8 +31,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.13'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          cache-dependency-glob: |
+            setup.py
+          enable-cache: true
+          version: "latest"
 
       - name: Build package
         run: |
+          alias pip="uv pip"
           make build
