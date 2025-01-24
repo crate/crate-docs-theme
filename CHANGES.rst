@@ -11,6 +11,7 @@ Unreleased
   Thank you, @surister and @msbt.
 - Added `oEmbedPy`_ and `sphinxcontrib-youtube`_ for embedding
   videos from YouTube, Vimeo, and more
+- Sandbox: Updated build environment to use Node.js 22
 
 .. _JupySQL: https://jupysql.ploomber.io/
 .. _MyST-NB: https://myst-nb.readthedocs.io/
