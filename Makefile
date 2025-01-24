@@ -39,7 +39,7 @@ NODEENV  := $(ENV_BIN)/nodeenv
 DIST_DIR := .dist
 PYPIRC   := ~/.pypirc
 
-NODEJS_VERSION := 18.17.0
+NODEJS_VERSION := 22.13.1
 
 # Default target
 .PHONY: help
