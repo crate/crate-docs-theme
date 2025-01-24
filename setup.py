@@ -63,6 +63,7 @@ setup(
         "jupysql<0.11",
         "myst-nb<1.2",
         "myst-parser[linkify]<5",
+        "oembedpy<0.8",
         "sphinx>=7.1,<9",
         "sphinx-basic-ng==1.0.0b2",
         "sphinx-copybutton>=0.3.1,<1",
@@ -74,6 +75,7 @@ setup(
         "sphinxext.opengraph>=0.4,<1",
         "sphinxcontrib-mermaid<2",
         "sphinxcontrib-plantuml>=0.21,<1",
+        "sphinxcontrib-youtube<2",
     ],
     python_requires=">=3.9",
 )

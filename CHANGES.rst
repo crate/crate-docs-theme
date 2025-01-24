@@ -9,9 +9,13 @@ Unreleased
 - Added `JupySQL`_, for running SQL in Jupyter/IPython
 - MyST-NB: Fixed dark mode for tables in Jupyter Notebooks.
   Thank you, @surister and @msbt.
+- Added `oEmbedPy`_ and `sphinxcontrib-youtube`_ for embedding
+  videos from YouTube, Vimeo, and more
 
 .. _JupySQL: https://jupysql.ploomber.io/
 .. _MyST-NB: https://myst-nb.readthedocs.io/
+.. _oembedpy: https://oembedpy.readthedocs.io/
+.. _sphinxcontrib-youtube: https://sphinxcontrib-youtube.readthedocs.io/
 
 2024/12/13 0.37.2
 -----------------

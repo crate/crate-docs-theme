@@ -53,6 +53,16 @@ Rendering the result table has unfortunate output when using dark mode.
 Please switch to light mode instead.
 :::
 
+## Video embeds
+
+Sometimes it is needed for optimal information conveyance, or just for
+entertainment purposes: Notebooks can have video embeds, too.
+
+:::{youtube} YE7VzlLtp-4
+:width: 480
+:height: 320
+:::
+
 
 [CrateDB Examples: notebook/jupyter]: https://github.com/crate/cratedb-examples/tree/main/notebook/jupyter
 [ipython-sql]: https://github.com/catherinedevlin/ipython-sql
