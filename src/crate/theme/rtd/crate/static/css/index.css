@@ -1,6 +1,8 @@
 @import "~normalize.css";
 @import "crateio.css";
 @import "ng/index.scss";
+@import "index_rtd.css";
+
 /* Fontawesome for https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#fontawesome-icons */
 @import "fontawesome.css";
 

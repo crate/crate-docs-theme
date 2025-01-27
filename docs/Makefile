@@ -83,6 +83,7 @@ SRC_DIR       := $(CLONE_DIR)/common-build
 SELF_SRC      := $(TOP_DIR)/common-build
 SELF_MAKEFILE := $(SELF_SRC)/rules.mk
 SRC_MAKE      := $(MAKE) -f $(SRC_DIR)/rules.mk
+SRC_MAKE_AUTO      := $(MAKE) -f $(SRC_DIR)/rules_auto.mk
 
 # Parse the JSON file
 BUILD_VERSION := $(shell cat $(BUILD_JSON) | \
@@ -181,8 +182,12 @@ bundle-assets:
 .PHONY: dev
 dev: $(CLONE_DIR)
 	@ $(MAKE) version-warn
-	@ $(MAKE) bundle-assets
 	@ $(SRC_MAKE) $@
+	@ mkdir -p $(TOP_DIR)/src/crate/theme/temp/
+	@ rsync -av --exclude="debug.css" --include='*.css' ./$(CLONE_DIR)/.build/_static/*.css $(TOP_DIR)/src/crate/theme/rtd/crate/static/css/temp/
+	@ $(MAKE) bundle-assets
+	@ rm -rf $(TOP_DIR)/src/crate/theme/rtd/crate/static/css/temp/
+	@ $(SRC_MAKE_AUTO) $@
 
 .PHONY: html
 html: $(CLONE_DIR)
