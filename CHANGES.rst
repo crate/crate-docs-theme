@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2025/01/27 0.38.0
+-----------------
 - Added `MyST-NB`_, for rendering Jupyter notebooks
 - Added `JupySQL`_, for running SQL in Jupyter/IPython
 - MyST-NB: Fixed dark mode for tables in Jupyter Notebooks.
@@ -12,6 +15,7 @@ Unreleased
 - Added `oEmbedPy`_ and `sphinxcontrib-youtube`_ for embedding
   videos from YouTube, Vimeo, and more
 - Sandbox: Updated build environment to use Node.js 22
+- CSS: Added hover color for ``tr`` overrides. Thanks, @msbt.
 
 .. _JupySQL: https://jupysql.ploomber.io/
 .. _MyST-NB: https://myst-nb.readthedocs.io/
