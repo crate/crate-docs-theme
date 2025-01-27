@@ -201,6 +201,9 @@ myst_enable_extensions = [
 # -- Options for MyST-NB ----------------------------------------------
 nb_execution_raise_on_error = True
 
+# -- Options for oEmbedPy ---------------------------------------------
+oembed_fallback_type = True
+
 
 def setup(app):
 

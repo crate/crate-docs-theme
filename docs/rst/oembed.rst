@@ -26,6 +26,10 @@ Bluesky
 =======
 .. oembed:: https://bsky.app/profile/simonprickett.dev/post/3lgizsidy722u
 
+Reddit
+=======
+.. oembed:: https://www.reddit.com/r/Database/comments/1i6umke/comment/m8pptia/
+
 Twitter/X
 =========
 .. oembed:: https://x.com/simon_prickett/status/1882858717571641581
