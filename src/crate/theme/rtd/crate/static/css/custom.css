@@ -1851,6 +1851,11 @@ https://github.com/crate/crate-docs-theme/pull/566
 div.cell_output table {
   color: var(--color-content-foreground);
 }
-div.cell_output tbody tr:nth-child(2n+1) {
+div.cell_output tbody tr:nth-child(odd) {
   background: var(--color-background-hover);
+}
+
+div.cell_output tbody tr:nth-child(odd):hover,
+div.cell_output tbody tr:nth-child(even):hover {
+  background: rgba(66, 165, 245, 0.2);
 }
