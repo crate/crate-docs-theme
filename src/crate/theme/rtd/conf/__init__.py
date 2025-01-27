@@ -82,10 +82,6 @@ html_theme_options = {
     # Can be used the query string of a resource URL for HTTP cache busting
     "ver": theme.get_version(),
 }
-# https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#fontawesome-icons
-html_css_files = [
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-]
 
 html_extra_path = ["_extra"]
 sitemap_filename = "site.xml"
