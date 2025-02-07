@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Adjusted configuration for oEmbedPy Sphinx plugin after updating to 0.8
 
 2025/01/27 0.38.0
 -----------------
