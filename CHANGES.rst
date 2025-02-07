@@ -6,6 +6,7 @@ CHANGES
 Unreleased
 ----------
 - Improved vendorised ``sphinx-build-compatibility`` to make less requests to RTD's API
+- Dependencies: Updated to oEmbedPy Sphinx plugin 0.8.1. Thanks, @attakei.
 
 2025/03/20 0.38.3
 -----------------
