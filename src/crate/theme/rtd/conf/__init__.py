@@ -172,6 +172,8 @@ linkcheck_ignore = [
     "https://www.iso.org/obp/ui/.*",
     # 403 Client Error: Forbidden for url
     "https://unsplash.com/.*",
+    # [Errno 101] Network is unreachable
+    "https://www.gnu.org/.*",
 ]
 linkcheck_anchors_ignore_for_url = [
     # Requires JavaScript.
