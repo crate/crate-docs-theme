@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+- Downgraded oEmbedPy Sphinx plugin to version 0.7, because of `THEME-586`_
+
+.. _THEME-586: https://github.com/crate/crate-docs-theme/issues/586
 
 2025/03/07 0.38.1
 -----------------
