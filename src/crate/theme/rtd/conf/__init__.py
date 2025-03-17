@@ -34,7 +34,7 @@ exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
 extensions = [
     "myst_nb",
-    "oembedpy.adapters.sphinx",
+    "oembedpy.ext.sphinx",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_design_elements",
