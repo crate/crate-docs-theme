@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Disabled RTD's EthicalAds by honouring new container id ``#readthedocs-ea-text-footer``
 
 2025/03/17 0.38.2
 -----------------

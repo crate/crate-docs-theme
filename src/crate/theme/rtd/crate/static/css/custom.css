@@ -1502,6 +1502,7 @@ ul.search li {
 
 /* Hide RTD-injected elements: Ads, fly-out, and footer. */
 #readthedocs-ea,
+#readthedocs-ea-text-footer,
 readthedocs-flyout,
 .injected {
   display: none !important;
