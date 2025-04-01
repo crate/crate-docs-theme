@@ -60,7 +60,7 @@ setup(
     install_requires=[
         "furo==2024.8.6",
         "jinja2>=3,<4",
-        "jupysql<0.11",
+        "jupysql<0.12",
         "myst-nb<1.3",
         "myst-parser[linkify]<5",
         "oembedpy<0.8",
