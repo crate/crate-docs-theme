@@ -12,7 +12,7 @@
     "sticky-sidebar": "^3.3.1",
     "style-loader": "^4.0",
     "webpack": "^5.98",
-    "webpack-cli": "^4.10",
+    "webpack-cli": "^6.0",
     "webpack-modernizr-loader": "^5.0.0"
   },
   "resolutions": {
