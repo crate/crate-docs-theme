@@ -1,4 +1,5 @@
 import os
+import sys
 
 from sphinx import version_info
 from sphinx.util import logging
@@ -61,21 +62,25 @@ def manipulate_config(app, config):
     language = "en"
 
     # Project versions. Acquire them from RTD's API.
-    try:
-        response_versions = requests.get(
-            f"{scheme}://{production_domain}/api/v3/projects/{project_slug}/versions/?active=true",
-            timeout=2,
-        ).json()
-        versions = [
-            (version["slug"], f"/{language}/{version['slug']}/")
-            for version in response_versions["results"]
-        ]
-    except Exception:
-        logger.warning(
-            "An error ocurred when hitting API to fetch active versions. Defaulting to an empty list.",
-            exc_info=True,
-        )
-        versions = []
+    # Note this skips acquiring project versions when running the link checker.
+    # This avoids hammering the RTD API when rebuilding _all_ docs.
+    versions = []
+    if "linkcheck" not in sys.argv:
+        try:
+            response_versions = requests.get(
+                f"{scheme}://{production_domain}/api/v3/projects/{project_slug}/versions/?active=true",
+                timeout=2,
+            ).json()
+            versions = [
+                (version["slug"], f"/{language}/{version['slug']}/")
+                for version in response_versions["results"]
+            ]
+        except Exception:
+            logger.warning(
+                "An error occurred when hitting API to fetch active versions. Defaulting to an empty list.",
+                exc_info=True,
+            )
+            versions = []
 
     # Project downloads. What are they?
     downloads = []
