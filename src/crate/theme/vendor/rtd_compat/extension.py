@@ -55,19 +55,12 @@ def manipulate_config(app, config):
 
     # We are using APIv2 to pull active versions, downloads and subprojects
     # because APIv3 requires a token.
-    try:
-        response_project = requests.get(
-            f"{scheme}://{production_domain}/api/v3/projects/{project_slug}/",
-            timeout=2,
-        ).json()
-        language = response_project["language"]["code"]
-    except Exception:
-        logger.warning(
-            "An error ocurred when hitting API to fetch project language. Defaulting to 'en'.",
-            exc_info=True,
-        )
-        language = "en"
 
+    # Project language.
+    # Do not inquire the RTD API for the project language. We can safely just use English.
+    language = "en"
+
+    # Project versions. Acquire them from RTD's API.
     try:
         response_versions = requests.get(
             f"{scheme}://{production_domain}/api/v3/projects/{project_slug}/versions/?active=true",
@@ -84,51 +77,11 @@ def manipulate_config(app, config):
         )
         versions = []
 
-    try:
-        downloads = []
-        for version in response_versions["results"]:
-            if version["slug"] != version_slug:
-                continue
+    # Project downloads. What are they?
+    downloads = []
 
-            for key, value in version["downloads"]:
-                downloads.append(
-                    (
-                        key,
-                        value,
-                    ),
-                )
-    except Exception:
-        logger.warning(
-            "An error ocurred when generating the list of downloads. Defaulting to an empty list.",
-            exc_info=True,
-        )
-        downloads = []
-
-    try:
-        subprojects = []
-        response_project = requests.get(
-            f"{scheme}://{production_domain}/api/v2/project/?slug={project_slug}",
-            timeout=2,
-        ).json()
-        project_id = response_project["results"][0]["id"]
-
-        response_subprojects = requests.get(
-            f"{scheme}://readthedocs.org/api/v2/project/{project_id}/subprojects/",
-            timeout=2,
-        ).json()
-        for subproject in response_subprojects["subprojects"]:
-            subprojects.append(
-                (
-                    subproject["slug"],
-                    subproject["canonical_url"],
-                ),
-            )
-    except Exception:
-        logger.warning(
-            "An error ocurred when hitting API to fetch project/subprojects. Defaulting to an empty list.",
-            exc_info=True,
-        )
-        subprojects = []
+    # Subprojects. We don't use them.
+    subprojects = []
 
     # Add project information to the template context.
     context = {

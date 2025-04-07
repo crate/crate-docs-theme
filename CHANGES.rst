@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Improved vendorised ``sphinx-build-compatibility`` to make less requests to RTD's API
 
 2025/03/20 0.38.3
 -----------------
