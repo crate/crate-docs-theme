@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Dependencies: Downgraded to snowballstemmer v2 because v3 release is bogus
 
 2025/04/07 0.38.4
 -----------------
