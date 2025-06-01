@@ -64,7 +64,7 @@ setup(
         "myst-nb<1.3",
         "myst-parser[linkify]<5",
         "oembedpy>=0.8.1,<0.9",
-        "snowballstemmer<3",
+        "snowballstemmer<4",
         "sphinx>=7.1,<9",
         "sphinx-basic-ng==1.0.0b2",
         "sphinx-copybutton>=0.3.1,<1",
