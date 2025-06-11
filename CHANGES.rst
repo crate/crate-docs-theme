@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2025/06/11 0.38.6
+-----------------
 - Fixed favicon HTML. Thanks, @michaelkremmel.
 
 2025/05/08 0.38.5
