@@ -6,6 +6,11 @@ CHANGES
 Unreleased
 ----------
 
+- CrateDB Cloud: Removed special handling for the ``feature/index`` page as it
+no longer exists.
+- Updated left navbar TOC to only show titles of pages, but not "subsections" or
+headings within the page itself. That is already done by the right-hand TOC sidebar.
+
 2025/06/11 0.38.6
 -----------------
 - Fixed favicon HTML. Thanks, @michaelkremmel.
@@ -178,7 +183,7 @@ Thanks, @msbt.
 - Removed legacy ``.woff`` font-files
 - Update SQL-99 config (``html_baseurl``, ``url_path``
   and ``canonical_url_path``)
-- Removed ``webflow.js``, artifacts from the abandoned 
+- Removed ``webflow.js``, artifacts from the abandoned
   feedback box and rating system, removed unused css
 - Added "Guides and Tutorials" section
 
