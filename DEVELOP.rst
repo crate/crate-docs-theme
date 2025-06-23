@@ -92,6 +92,13 @@ order to run the setup on, e.g., Linux, invoke those commands - YMMV::
     sudo npm install --global yarn
 
 
+Testing changes
+===============
+If you want to see the effect of theme changes beyond the docs included in this project,
+you can use the theme locally with any other docs project, by changing the projects
+requirements.txt file to include the full path to local version of this project.
+
+
 Release
 =======
 
