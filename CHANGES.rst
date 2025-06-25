@@ -5,7 +5,7 @@ CHANGES
 
 Unreleased
 ----------
-- Pin ``sphinx-sitemap`` extension to <2.7.0 temporarily as that introduce build
+- Pinned ``sphinx-sitemap`` extension to <2.7.0 temporarily as that introduce build
 warnings (see https://github.com/crate/crate-docs/pull/115).
 - CrateDB Cloud: Removed special handling for the ``feature/index`` page as it
 no longer exists.
