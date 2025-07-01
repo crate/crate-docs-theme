@@ -70,7 +70,7 @@ setup(
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design-elements==0.4.0",
         "sphinx-inline-tabs",
-        "sphinx-sitemap<2.7.0", #temporarily pinned due to build warnings with 2.7.0
+        "sphinx-sitemap<2.8.0", #temporarily pinned due to build warnings with 2.7.0
         "sphinx-subfigure<1",
         "sphinx-togglebutton<1",
         "sphinxext.opengraph>=0.4,<1",
