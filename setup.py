@@ -61,7 +61,7 @@ setup(
         "furo==2024.8.6",
         "jinja2>=3,<4",
         "jupysql<0.12",
-        "myst-nb<1.3",
+        "myst-nb<1.4",
         "myst-parser[linkify]<5",
         "oembedpy>=0.8.1,<0.9",
         "snowballstemmer<4",
