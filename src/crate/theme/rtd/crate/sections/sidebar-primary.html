@@ -2,13 +2,23 @@
   <div class="sidebar-container">
     <div class="sidebar-sticky">
 
-      <!-- Section 1 
+      <!-- Section 1
       <div class="sidebar-tree">
         {# {- ng_navigation_tree } #}
       </div> -->
 
-      <!-- Section 2 -->
+      {#
+      {% if project == 'CrateDB Docs Theme' %}
+
+      <!-- Static HTML -->
+      <span class="sd-text-center sd-fs-5 sd-font-weight-bold sd-text-uppercase sd-text-secondary">
+        Legacy navigation
+      </span>
       {% include "sidebar.html" %}
+
+      {% endif %}
+      #}
+
     </div>
   </div>
 </div>
