@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Phased out ``crate-clients-tools``
 
 2025/06/25 0.39.0
 -----------------

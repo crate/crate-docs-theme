@@ -108,7 +108,6 @@ intersphinx_mapping = {
 
     # CrateDB Clients and Integrations
     'crate-admin-ui': ('https://cratedb.com/docs/crate/admin-ui/en/latest/', None),
-    'crate-clients-tools': ('https://cratedb.com/docs/crate/clients-tools/en/latest/', None),
     'crate-crash': ('https://cratedb.com/docs/crate/crash/en/latest/', None),
     'crate-dbal': ('https://cratedb.com/docs/dbal/en/latest/', None),
     'crate-jdbc': ('https://cratedb.com/docs/jdbc/en/latest/', None),
