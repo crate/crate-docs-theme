@@ -80,20 +80,16 @@
   <li class="navleft-item"><a href="/docs/cloud/cli/">Cloud CLI</a></li>
   {% endif %}
 
+  <li class="navleft-item">
+    <a href="/docs/guide/connect/drivers.html">Database Drivers</a>
+  </li>
   {%
   set driver_projects = [
-    'CrateDB: Clients and Tools',
     'CrateDB JDBC', 'CrateDB DBAL', 'CrateDB PDO', 'CrateDB Python', 'SQLAlchemy Dialect', 'CrateDB Npgsql'
   ]
   %}
-  {% if project in driver_projects %}
-  <li class="current">
-    {% if project == 'CrateDB: Clients and Tools' %}
-      <a class="current-active" href="{{ pathto(master_doc) }}">Drivers and Integrations</a>
-      {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
-    {% else %}
-      <a class="current-active" href="/docs/crate/clients-tools/">Drivers and Integrations</a>
-    {% endif %}
+  {% if project in driver_projects or (project == 'CrateDB: Guide' and pagename.startswith('connect')) %}
+  <li>
     <ul>
       <!-- Section C. -->
       {% if project == 'CrateDB JDBC' %}
@@ -145,10 +141,6 @@
       <li class="navleft-item"><a href="/docs/npgsql/">.NET Npgsql</a></li>
       {% endif %}
     </ul>
-  </li>
-  {% else %}
-  <li class="navleft-item">
-    <a href="/docs/crate/clients-tools/">Drivers and Integrations</a>
   </li>
   {% endif %}
 
