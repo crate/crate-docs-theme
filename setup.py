@@ -58,7 +58,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "furo==2024.8.6",
+        "furo==2025.7.19",
         "jinja2>=3,<4",
         "jupysql<0.12",
         "myst-nb<1.4",
