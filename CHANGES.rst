@@ -6,6 +6,7 @@ CHANGES
 Unreleased
 ----------
 - Phased out ``crate-clients-tools``
+- Changed link to "Sample Applications", now part of the new "Getting Started" section
 
 2025/06/25 0.39.0
 -----------------
