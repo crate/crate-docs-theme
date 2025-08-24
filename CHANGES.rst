@@ -7,6 +7,9 @@ Unreleased
 ----------
 - Phased out ``crate-clients-tools``
 - Changed link to "Sample Applications", now part of the new "Getting Started" section
+- Started ignoring RTD API errors in compatibility layer. It behaves flaky again,
+  possibly by becoming increasingly overloaded. The "ignore" fallback did not work
+  because, well, in this environment, warnings become errors.
 
 2025/06/25 0.39.0
 -----------------

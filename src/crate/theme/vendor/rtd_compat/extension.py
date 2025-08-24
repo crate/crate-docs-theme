@@ -76,7 +76,7 @@ def manipulate_config(app, config):
                 for version in response_versions["results"]
             ]
         except Exception:
-            logger.warning(
+            logger.info(
                 "An error occurred when hitting API to fetch active versions. Defaulting to an empty list.",
                 exc_info=True,
             )
