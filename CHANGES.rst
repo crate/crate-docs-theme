@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2025/09/18 0.40.0
+-----------------
 - Phased out ``crate-clients-tools``
 - Changed link to "Sample Applications", now part of the new "Getting Started" section
 - Started ignoring RTD API errors in compatibility layer. It behaves flaky again,
