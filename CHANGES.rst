@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Renamed "Guides and Tutorials" section name to just "Guides"
+
 2025/09/18 0.40.0
 -----------------
 - Phased out ``crate-clients-tools``
