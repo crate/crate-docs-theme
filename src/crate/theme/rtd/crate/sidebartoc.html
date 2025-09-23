@@ -16,14 +16,31 @@
     </div>
   </li>
 
-  <!-- Home. -->
+  <!-- Home.
   {% if project == 'CrateDB: Guide' and pagename == 'home/index' %}
     <li class="navleft-item current"><a class="current-active" href="/docs/guide/home/">Overview</a></li>
   {% else %}
     <li class="navleft-item"><a href="/docs/guide/home/">Overview</a></li>
   {% endif %}
+ -->
 
   <!-- Section A. -->
+
+  <!-- Getting Started.
+  {% if project == 'CrateDB: Guide' and pagename.startswith('start/') %}
+    <li class="navleft-item current"><a class="current-active" href="{{ pathto('start/index') }}">Getting Started</a></li>
+  {% else %}
+    <li class="navleft-item"><a href="{{ pathto('start/index') }}">Getting Started</a></li>
+  {% endif %}
+-->
+
+  {% if project == 'CrateDB: Guide' %} <!-- and pagename != 'home/index' %} -->
+    <!-- Flatten the Guide's TOC - show sections at root level without parent heading -->
+    {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+  {% else %}
+    <li class="navleft-item"><a href="/docs/guide/">Guides and Tutorials</a></li>
+  {% endif %}
+
   {% if project == 'CrateDB Cloud' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Cloud</a>
@@ -31,15 +48,6 @@
     </li>
   {% else %}
     <li class="navleft-item"><a href="/docs/cloud/">CrateDB Cloud</a></li>
-  {% endif %}
-
-  {% if project == 'CrateDB: Guide' and pagename != 'home/index' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">Guides and Tutorials</a>
-      {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-  {% else %}
-    <li class="navleft-item"><a href="/docs/guide/">Guides and Tutorials</a></li>
   {% endif %}
 
   {% if project == 'CrateDB: Reference' %}
