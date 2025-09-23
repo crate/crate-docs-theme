@@ -6,6 +6,9 @@ CHANGES
 Unreleased
 ----------
 
+2025/09/23 0.40.1
+-----------------
+
 - Renamed "Guides and Tutorials" section name to just "Guides"
 
 2025/09/18 0.40.0
