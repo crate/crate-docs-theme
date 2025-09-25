@@ -92,11 +92,21 @@ order to run the setup on, e.g., Linux, invoke those commands - YMMV::
     sudo npm install --global yarn
 
 
+Updating sidebar toc
+--------------------
+The sidebar table of contents is defined in the
+``src/crate/theme/rtd/crate/sidebartoc.html`` file. The sidebar TOC is
+dynamically generated using the ``toctree`` directive, but you can also add
+static links to the sidebar TOC by editing the HTML file directly. This is where
+you add entries to the top level sections in the sidebar TOC.
+
+
 Testing changes
 ===============
 If you want to see the effect of theme changes beyond the docs included in this project,
 you can use the theme locally with any other docs project, by changing the projects
 requirements.txt file to include the full path to local version of this project.
+requirements.txt file to include the full path to the local version of this project.
 
 
 Release
