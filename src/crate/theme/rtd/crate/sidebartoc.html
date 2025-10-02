@@ -35,11 +35,11 @@
 
   {% if project == 'CrateDB: Guide' and pagename != 'home/index' %}
     <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">Guides</a>
+      <a class="current-active" href="{{ pathto(master_doc) }}">Handbook</a>
       {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
   {% else %}
-    <li class="navleft-item"><a href="/docs/guide/">Guides</a></li>
+    <li class="navleft-item"><a href="/docs/guide/">Handbook</a></li>
   {% endif %}
 
   {% if project == 'CrateDB: Reference' %}
