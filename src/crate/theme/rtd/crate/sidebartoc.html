@@ -16,18 +16,17 @@
     </div>
   </li>
 
-  <!-- Home. -->
-  {% if project == 'CrateDB: Guide' and pagename == 'home/index' %}
-    <li class="navleft-item current"><a class="current-active" href="/docs/guide/home/">Overview</a></li>
+  <!-- Section A: -->
+  {% if project == 'CrateDB: Guide' %}
+    <!-- Show all TOC entries without the Guide heading -->
+    <li class="current toctree-l0">
+      {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
   {% else %}
+    <!-- Show Guide sections as links in other projects -->
     <li class="navleft-item"><a href="/docs/guide/home/">Overview</a></li>
-  {% endif %}
-
-  <!-- Section A. -->
-  {% if project == 'CrateDB: Guide' and pagename != 'home/index' %}
-    {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
-  {% else %}
-    <li class="navleft-item"><a href="/docs/guide/">Guides</a></li>
+    <li class="navleft-item"><a href="/docs/guide/start/">Getting Started</a></li>
+    <li class="navleft-item"><a href="/docs/guide/guides/">Guides</a></li>
   {% endif %}
 
   {% if project == 'CrateDB Cloud' %}
