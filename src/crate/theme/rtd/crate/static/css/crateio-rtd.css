@@ -8,6 +8,18 @@
   list-style: none;
 }
 
+/* Remove indentation for toctree-l0 - used to unindent TOC level-1 to level-0 */
+.toctree-l0 {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.toctree-l0 > ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+
 a.current,
 a.current-active {
   font-weight: 600;
