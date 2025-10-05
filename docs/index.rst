@@ -15,8 +15,8 @@ It derives from and builds upon the excellent `sphinx-basic-ng`_ and `Furo`_.
 .. toctree::
     :maxdepth: 1
 
-    authoring
-    links
+    authoring/index
+    authoring/links
 
 
 .. rubric:: Style Guides
