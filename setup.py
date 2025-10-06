@@ -58,7 +58,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "furo==2025.7.19",
+        "furo==2025.9.25",
         "jinja2>=3,<4",
         "jupysql<0.12",
         "myst-nb<1.4",
@@ -70,7 +70,7 @@ setup(
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design-elements==0.4.0",
         "sphinx-inline-tabs",
-        "sphinx-sitemap<2.8.0", #temporarily pinned due to build warnings with 2.7.0
+        "sphinx-sitemap<2.9.0",
         "sphinx-subfigure<1",
         "sphinx-togglebutton<1",
         "sphinxext.opengraph>=0.4,<1",
