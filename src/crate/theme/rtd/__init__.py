@@ -23,9 +23,9 @@
 
 import os
 
-VERSION = (0, 40, 1)
+VERSION = (0, 41, 0)
 
-__version__ = ".".join(str(v) for v in VERSION)
+__version__ = ".".join(str(v) for v in VERSION) + ".dev1"
 __version_full__ = __version__
 
 
