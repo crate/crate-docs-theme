@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2025/10/08 0.41.0
+-----------------
 - Added support for including the entire level0 entries in the sidebar TOC for a
 project. See the "CreateDB: Guide" project in the ``sidebartoc.html`` file for
 how to do that.
@@ -12,7 +15,6 @@ how to do that.
 
 2025/09/23 0.40.1
 -----------------
-
 - Renamed "Guides and Tutorials" section name to just "Guides"
 
 2025/09/18 0.40.0
