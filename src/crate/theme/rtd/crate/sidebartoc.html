@@ -18,13 +18,21 @@
 
   <!-- Section A: -->
   {% if project == 'CrateDB: Guide' %}
-    <!-- Show all TOC entries without the Guide heading -->
+    <!-- Show root index page in the Guide project selected -->
+    {% if pagename == 'index' %}
+      <li class="current">
+        <a class="current-active" href="{{ pathto(master_doc) }}">Overview</a>
+      </li>
+    {% else %}
+      <li class="navleft-item"><a href="{{ pathto(master_doc) }}">Overview</a></li>
+    {% endif %}
+    <!-- Show all remaining TOC entries in the root -->
     <li class="current toctree-l0">
       {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
     </li>
   {% else %}
     <!-- Show Guide sections as links in other projects -->
-    <li class="navleft-item"><a href="/docs/guide/home/">Overview</a></li>
+    <li class="navleft-item"><a href="/docs/guide/">Overview</a></li>
     <li class="navleft-item"><a href="/docs/guide/start/">Getting Started</a></li>
     <li class="navleft-item"><a href="/docs/guide/handbook/">Handbook</a></li>
   {% endif %}
