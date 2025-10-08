@@ -157,6 +157,13 @@ div.hero.danger {
 .bs-docs-sidenav .toctree ul li.active > ul {
   display: block !important;
 }
+
+/* Remove indentation for toctree-l0 wrapper - used to display TOC entries at top level */
+.bs-docs-sidenav .toctree li.toctree-l0 > ul,
+.bs-docs-sidenav .toctree li.toctree-l0 > ul > li {
+  padding-left: 0 !important;
+}
+
 .bs-docs-sidenav {
   padding-left: 0px;
 }

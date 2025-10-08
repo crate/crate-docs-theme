@@ -51,7 +51,10 @@ Configuration
 -------------
 
 The documentation is composed of multiple separate documentation
-projects, seamlessly interlinked via the CrateDB Documentation Theme.
+projects, interlinked via the CrateDB Documentation Theme.
+
+To update the root of the TOC sidebar for the entire documentation, update the
+`sidebartoc.html`` file.
 
 To use the theme, add this line to your Sphinx ``conf.py`` file::
 
@@ -77,7 +80,7 @@ Looking for more help?
 
 - Check out our `support channels`_
 
-
+.. _sidebartoc.html: src/crate/theme/rtd/crate/templates/crate/sidebartoc.html
 .. _contribution docs: CONTRIBUTING.rst
 .. _Crate.io: https://cratedb.com
 .. _CrateDB documentation: https://cratedb.com/docs/

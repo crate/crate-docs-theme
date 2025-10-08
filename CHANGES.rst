@@ -5,6 +5,10 @@ CHANGES
 
 Unreleased
 ----------
+- Added support for including the entire level0 entries in the sidebar TOC for a
+project. See the "CreateDB: Guide" project in the ``sidebartoc.html`` file for
+how to do that.
+- The Guide project is now utilizing this to show 3 top-level entries in the TOC.
 
 2025/09/23 0.40.1
 -----------------

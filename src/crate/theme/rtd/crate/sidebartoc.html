@@ -16,14 +16,27 @@
     </div>
   </li>
 
-  <!-- Home. -->
-  {% if project == 'CrateDB: Guide' and pagename == 'home/index' %}
-    <li class="navleft-item current"><a class="current-active" href="/docs/guide/home/">Overview</a></li>
+  <!-- Section A: -->
+  {% if project == 'CrateDB: Guide' %}
+    <!-- Show root index page in the Guide project selected if needed -->
+    {% if pagename == 'index' %}
+      <li class="current">
+        <a class="current-active" href="{{ pathto(master_doc) }}">Overview</a>
+      </li>
+    {% else %}
+      <li class="navleft-item"><a href="{{ pathto(master_doc) }}">Overview</a></li>
+    {% endif %}
+    <!-- Show all remaining TOC entries in the root -->
+    <li class="current toctree-l0">
+      {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+    </li>
   {% else %}
-    <li class="navleft-item"><a href="/docs/guide/home/">Overview</a></li>
+    <!-- Show Guide sections as links in other projects -->
+    <li class="navleft-item"><a href="/docs/guide/">Overview</a></li>
+    <li class="navleft-item"><a href="/docs/guide/start/">Getting Started</a></li>
+    <li class="navleft-item"><a href="/docs/guide/handbook/">Handbook</a></li>
   {% endif %}
 
-  <!-- Section A. -->
   {% if project == 'CrateDB Cloud' %}
     <li class="current">
       <a class="current-active" href="{{ pathto(master_doc) }}">CrateDB Cloud</a>
@@ -31,15 +44,6 @@
     </li>
   {% else %}
     <li class="navleft-item"><a href="/docs/cloud/">CrateDB Cloud</a></li>
-  {% endif %}
-
-  {% if project == 'CrateDB: Guide' and pagename != 'home/index' %}
-    <li class="current">
-      <a class="current-active" href="{{ pathto(master_doc) }}">Guides</a>
-      {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
-    </li>
-  {% else %}
-    <li class="navleft-item"><a href="/docs/guide/">Guides</a></li>
   {% endif %}
 
   {% if project == 'CrateDB: Reference' %}
@@ -50,7 +54,6 @@
   {% else %}
     <li class="navleft-item"><a href="/docs/crate/reference/">Reference Manual</a></li>
   {% endif %}
-
 
   <!-- Section B. -->
   {% if project == 'CrateDB: Admin UI' %}

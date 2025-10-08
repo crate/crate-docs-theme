@@ -100,13 +100,27 @@ dynamically generated using the ``toctree`` directive, but you can also add
 static links to the sidebar TOC by editing the HTML file directly. This is where
 you add entries to the top level sections in the sidebar TOC.
 
-
 Testing changes
-===============
-If you want to see the effect of theme changes beyond the docs included in this project,
-you can use the theme locally with any other docs project, by changing the projects
-requirements.txt file to include the full path to local version of this project.
-requirements.txt file to include the full path to the local version of this project.
+---------------
+If you want to see the effect of theme changes beyond the docs included in this
+project, you can use the theme locally with any other docs project by changing
+the project's requirements.txt file to include the full path to the local
+version of this project like this::
+
+    -e /full/path/to/crate-docs-theme
+
+Then, run ``make reset`` and ``make dev`` in the other project's ``docs``
+directory.
+
+.. note::
+
+    Since changes to CSS is packed into a bundle, you must run
+    ``make bundle-develop`` in the top-level directory of this project
+    whenever you make changes to CSS files. Or use ``make bundle-watch``
+    to have the bundling process run continuously in the background.
+
+    IF you are only changing .html files, you do not need to run the
+    bundling process.
 
 
 Release
