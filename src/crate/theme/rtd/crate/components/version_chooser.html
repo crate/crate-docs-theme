@@ -65,9 +65,11 @@
     </summary>
     <div class="sd-summary-content sd-card-body docutils version-chooser__menu">
       {% for slug, url in versions %}
+      {% if not ("master" in github_version and slug == "latest" and pagename.startswith("appendices/release-notes")) %}
       <script>
         versionChooserAppendItem('{{ slug }}', '{{ url }}');
       </script>
+      {% endif %}
       {% endfor %}
     </div>
   </details>
