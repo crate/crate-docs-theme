@@ -5,6 +5,8 @@ CHANGES
 
 Unreleased
 ----------
+- Stopped version chooser navigation path from ``master`` to ``latest`` in
+  the ``appendices/release-notes`` section of the reference documentation.
 
 2025/10/08 0.41.0
 -----------------
