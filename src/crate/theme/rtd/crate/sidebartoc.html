@@ -28,7 +28,11 @@
     {% endif %}
     <!-- Show all remaining TOC entries in the root -->
     <li class="current toctree-l0">
-      {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=True, includehidden=theme_globaltoc_includehidden|tobool) }}
+      {% if pagename.startswith('integrate') %}
+      {{ toctree(maxdepth=2|toint, titles_only=True, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      {% else %}
+      {{ toctree(maxdepth=-1|toint, titles_only=True, collapse=False, includehidden=theme_globaltoc_includehidden|tobool) }}
+      {% endif %}
     </li>
   {% else %}
     <!-- Show Guide sections as links in other projects -->

@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Primary navigation: Stopped expanding "integrations" section
 
 2025/10/08 0.41.0
 -----------------
