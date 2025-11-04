@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Removed the ``sphinx-subfigure`` extension.
+
 2025/10/08 0.41.0
 -----------------
 - Added support for including the entire level0 entries in the sidebar TOC for a

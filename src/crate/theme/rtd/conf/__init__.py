@@ -40,7 +40,6 @@ extensions = [
     "sphinx_design_elements",
     "sphinx_inline_tabs",
     "sphinx_sitemap",
-    "sphinx_subfigure",
     "sphinx_togglebutton",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
