@@ -44,32 +44,3 @@ table:
 | ------ | ------- |
 | :logo: | MyST    |
 ```
-
-
-## Subfigures
-
-Documentation: https://sphinx-subfigure.readthedocs.io/
-
-:::{subfigure} AA|BC
-:layout-sm: A|B|C
-:gap: 8px
-:subcaptions: above
-:name: myfigure
-:class-grid: outline
-
-```{image} https://sphinx-subfigure.readthedocs.io/en/latest/_images/A.png
-:height: 100px
-:alt: Image A
-```
-
-```{image} https://sphinx-subfigure.readthedocs.io/en/latest/_images/B.png
-:height: 100px
-:alt: Image B
-```
-
-```{image} https://sphinx-subfigure.readthedocs.io/en/latest/_images/C.png
-:height: 100px
-:alt: Image C
-```
-
-:::

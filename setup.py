@@ -71,7 +71,6 @@ setup(
         "sphinx-design-elements==0.4.0",
         "sphinx-inline-tabs",
         "sphinx-sitemap<2.9.0",
-        "sphinx-subfigure<1",
         "sphinx-togglebutton<1",
         "sphinxext.opengraph>=0.4,<1",
         "sphinxcontrib-mermaid<2",
