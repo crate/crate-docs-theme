@@ -70,7 +70,7 @@ setup(
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design-elements==0.4.0",
         "sphinx-inline-tabs",
-        "sphinx-sitemap<2.9.0",
+        "sphinx-sitemap<2.10.0",
         "sphinx-togglebutton<1",
         "sphinxext.opengraph>=0.4,<1",
         "sphinxcontrib-mermaid<2",
