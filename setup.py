@@ -63,7 +63,6 @@ setup(
         "jupysql<0.12",
         "myst-nb<1.4",
         "myst-parser[linkify]<5",
-        "oembedpy>=0.8.1,<0.9",
         "snowballstemmer<4",
         "sphinx>=7.1,<9",
         "sphinx-basic-ng==1.0.0b2",

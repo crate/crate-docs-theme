@@ -34,7 +34,6 @@ exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
 extensions = [
     "myst_nb",
-    "oembedpy.adapters.sphinx",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_design_elements",
@@ -200,9 +199,6 @@ myst_enable_extensions = [
 
 # -- Options for MyST-NB ----------------------------------------------
 nb_execution_raise_on_error = True
-
-# -- Options for oEmbedPy ---------------------------------------------
-oembed_fallback_type = True
 
 
 def setup(app):
