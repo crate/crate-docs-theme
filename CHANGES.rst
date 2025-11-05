@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+2025/11/05 0.42.0
+-----------------
 - Removed the ``sphinx-subfigure`` extension.
 - Removed the ``oembedpy`` extension.
 
