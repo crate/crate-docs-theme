@@ -50,11 +50,6 @@
         &nbsp;
         <a id="docs-feedback-edit-document" class="feedback-compact-link" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('edit') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" rel="noopener" target="_blank" title="Edit on GitHub">Edit&nbsp;page</a>
       </p>
-      <p class="sd-card-text">
-        <span class="fa fa-code fa-fw"></span>
-        &nbsp;
-        <a id="docs-feedback-open-github" class="feedback-compact-link" href="https://{{ github_host|default('github.com') }}/{{ github_user }}/{{ github_repo }}/{{ theme_vcs_pageview_mode|default('blob') }}/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}?plain=1" rel="noopener" target="_blank" title="View page source on GitHub">View&nbsp;page source</a>
-      </p>
       {% endif %}
 
     </div>
