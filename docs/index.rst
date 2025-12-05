@@ -47,6 +47,7 @@ Structured Text syntax.
             :titlesonly:
 
             myst/index
+            stepper-test
 
 
 Legacy
