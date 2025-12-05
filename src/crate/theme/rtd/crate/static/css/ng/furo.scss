@@ -8,10 +8,10 @@
 **/
 
 // Import Furo's variables.
-@use "../../vendor/furo/styles/variables/layout" as *;
+@import "../../vendor/furo/styles/variables/layout";
 
 // Import Furo's components.
-@use "../../vendor/furo/styles/components/footer";
+@import "../../vendor/furo/styles/components/footer";
 
 // Sidebar: When primary sidebar is not collapsed, show its
 // content above all others.
