@@ -13,7 +13,17 @@ module.exports = {
                   { loader: "style-loader" },
                   { loader: "css-loader", options: { sourceMap: true } },
                   { loader: "postcss-loader", options: { sourceMap: true } },
-                  { loader: "sass-loader", options: { api: "legacy", sourceMap: true } },
+                  {
+                    loader: "sass-loader",
+                    options: {
+                      api: "modern-compiler",
+                      sourceMap: true,
+                      sassOptions: {
+                        // TODO: Remove this again when Furo theme has been fixed
+                        silenceDeprecations: ['import', 'global-builtin']
+                      }
+                    }
+                  },
                 ],
             },
             {
