@@ -338,6 +338,10 @@ def setup(app):
     app.connect("builder-inited", set_proxied_static_path)
     app.connect("builder-inited", apply_html_context_custom)
 
+    # Register stepper directive
+    from crate.theme.rtd.crate.directives import stepper
+    stepper.setup(app)
+
     return {
         "parallel_read_safe": True,
         "parallel_write_safe": True,

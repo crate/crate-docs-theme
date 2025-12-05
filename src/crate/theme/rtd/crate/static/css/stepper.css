@@ -1,0 +1,78 @@
+/* Stepper component styling */
+
+:root {
+  --stepper-number-bg: var(--primary-color);
+  --stepper-number-color: #ffffff;
+  --stepper-line-color: #dee2e6;
+  --stepper-spacing: 2rem;
+  --stepper-number-size: 2rem;
+}
+
+html[data-theme="dark"] {
+  --stepper-line-color: #495057;
+}
+
+.stepper {
+  margin: 2rem 0;
+}
+
+.stepper-step {
+  position: relative;
+  padding-left: 3rem; /* Space for number + line */
+  padding-bottom: var(--stepper-spacing);
+}
+
+.stepper-step:last-child {
+  padding-bottom: 0;
+}
+
+/* Number badge */
+.stepper-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--stepper-number-size);
+  height: var(--stepper-number-size);
+  border-radius: 50%;
+  background-color: var(--stepper-number-bg);
+  color: var(--stepper-number-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+/* Connecting line */
+.stepper-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--stepper-number-size) / 2 - 1px);
+  top: var(--stepper-number-size);
+  bottom: 0;
+  width: 2px;
+  background-color: var(--stepper-line-color);
+  z-index: 1;
+}
+
+/* Header (number + title on same line) */
+.stepper-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.stepper-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Content */
+.stepper-content > *:first-child {
+  margin-top: 0;
+}
+
+.stepper-content > *:last-child {
+  margin-bottom: 0;
+}
