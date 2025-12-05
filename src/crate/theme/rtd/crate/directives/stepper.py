@@ -1,88 +1,104 @@
 # -*- coding: utf-8; -*-
 """
 Stepper directive for step-by-step documentation.
-
-Step 2: Detect nested step directives and count them
 """
 
 from docutils import nodes
 from sphinx.util.docutils import SphinxDirective
 
 
+# Define custom nodes
+class stepper_node(nodes.General, nodes.Element):
+    pass
+
+class step_node(nodes.General, nodes.Element):
+    pass
+
 class StepperDirective(SphinxDirective):
     """Container for step-by-step instructions."""
 
     has_content = True
+    option_spec = {
+        'class': str, # directives.class_option is for multiple classes
+    }
 
     def run(self):
-        # Create a container to hold the content
-        container = nodes.container()
-        container['classes'].append('stepper')
+        stepper = stepper_node()
+        stepper['classes'] = self.options.get('class', '').split() # Add custom classes if provided
+        self_content = nodes.paragraph()
+        self.state.nested_parse(self.content, self.content_offset, self_content)
 
-        # Parse nested content (this will process :::{step} directives)
-        self.state.nested_parse(
-            self.content,
-            self.content_offset,
-            container
-        )
+        step_number = 1
+        for child in self_content.children:
+            if isinstance(child, step_node):
+                child['step-number'] = step_number
+                step_number += 1
+            stepper += child # Add all children from self_content to stepper
 
-        # Count how many steps we detected
-        step_count = 0
-        for child in container.children:
-            if 'stepper-step' in child.get('classes', []):
-                step_count += 1
-
-        # For Step 2, add a debug message showing step count
-        debug_msg = nodes.paragraph(
-            text=f"Detected {step_count} steps"
-        )
-        debug_msg['classes'].append('stepper-debug')
-
-        # Return debug message first, then the container
-        return [debug_msg, container]
+        return [stepper]
 
 
 class StepDirective(SphinxDirective):
     """Individual step in a stepper."""
 
     has_content = True
-    required_arguments = 0
-    optional_arguments = 1
+    required_arguments = 1  # Step title
+    optional_arguments = 0
     final_argument_whitespace = True  # Allow spaces in title
+    option_spec = {
+        'class': str,
+    }
 
     def run(self):
-        # Create step container
-        step = nodes.container()
-        step['classes'].append('stepper-step')
+        step = step_node()
+        step['classes'] = ['stepper-step']
+        step['classes'].extend(self.options.get('class', '').split())
 
-        # Get the title (all arguments combined into one)
-        if self.arguments:
-            title = self.arguments[0]
-        else:
-            title = "Untitled"
+        # Set title
+        step['step-title'] = self.arguments[0]
 
-        # Create a paragraph with the title
-        title_para = nodes.paragraph(text=f"Step: {title}")
-        title_para['classes'].append('step-title')
-        step += title_para
-
-        # Parse step content
+        # Parse content
         self.state.nested_parse(
             self.content,
             self.content_offset,
             step
         )
-
         return [step]
+
+# HTML Translator functions
+def html_visit_stepper_node(self, node):
+    self.context.append('')
+    self.body.append(self.starttag(node, 'div', CLASS='stepper'))
+
+def html_depart_stepper_node(self, node):
+    self.body.append('</div>\n')
+    self.context.pop()
+
+def html_visit_step_node(self, node):
+    self.context.append('')
+    self.body.append(self.starttag(node, 'div', CLASS='stepper-step'))
+    self.body.append(f'<div class="stepper-header">')
+    self.body.append(f'<div class="stepper-number">{node.get("step-number", "")}</div>')
+    self.body.append(f'<div class="stepper-title">{node.get("step-title", "")}</div>')
+    self.body.append(f'</div>')
+    self.body.append(f'<div class="stepper-content">')
+
+def html_depart_step_node(self, node):
+    self.body.append('</div>\n') # Close stepper-content
+    self.body.append('</div>\n') # Close stepper-step
+    self.context.pop()
 
 
 def setup(app):
-    """Register the stepper directives."""
+    """Register the stepper directives and nodes."""
+    app.add_node(stepper_node, html=(html_visit_stepper_node, html_depart_stepper_node))
+    app.add_node(step_node, html=(html_visit_step_node, html_depart_step_node))
+
     app.add_directive('stepper', StepperDirective)
     app.add_directive('step', StepDirective)
 
     return {
-        'version': '0.2',
+        'version': '0.1',
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }
