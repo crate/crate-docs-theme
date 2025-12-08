@@ -104,7 +104,7 @@ div.hero.danger {
 }
 
 .bs-docs-sidenav > li {
-  display: block;
+  display: none;
 }
 
 /** MENUE **/
@@ -208,7 +208,7 @@ div.topic {
 /* TOC Toggle Icons for Navigation                                           */
 /* ========================================================================== */
 /* Enable by adding class "toc-toggle-icons-enabled" to sidebar container    */
-/* Configuration: Set html_theme_options['toc_toggle_icons'] = True          */
+/* Configuration: Set html_theme_options['toc_toggle_icons'] = true          */
 /* ========================================================================== */
 
 /* Add expand/collapse icon to items that have children */

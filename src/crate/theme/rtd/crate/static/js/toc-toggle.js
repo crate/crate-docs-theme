@@ -51,16 +51,13 @@ function initTocToggle() {
     // Link was already found above, skip if not found
     if (!link) return;
 
-    // Determine initial state
+    // Mark as expanded if in current path
     const isCurrentPath = item.classList.contains('current') ||
                           item.classList.contains('active');
-
-    // Mark as expanded if in current path, otherwise collapsed
     if (isCurrentPath) {
       item.classList.add('expanded');
     }
 
-    // Initialize ARIA attribute
     link.setAttribute('aria-expanded', item.classList.contains('expanded').toString());
 
     // Add click handler to toggle expansion (only if item has direct children to toggle)
@@ -90,8 +87,6 @@ function initTocToggle() {
  */
 function toggleItem(item, link) {
   const isExpanded = item.classList.toggle('expanded');
-  // Force a reflow to ensure the browser applies the new CSS rules immediately.
-  void item.offsetHeight;
   link.setAttribute('aria-expanded', isExpanded.toString());
 }
 
