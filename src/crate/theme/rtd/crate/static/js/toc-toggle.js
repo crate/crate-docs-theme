@@ -24,7 +24,6 @@ function initTocToggle() {
 
   const tocItems = sidebar.querySelectorAll('.toctree li');
 
-  let itemsWithChildren = 0;
   tocItems.forEach(item => {
     // Check if item has direct ul children (already rendered)
     const hasDirectChildren = item.querySelector(':scope > ul');
@@ -44,10 +43,7 @@ function initTocToggle() {
     // - Has direct children already rendered, OR
     // - Links to index.html AND is alone in its <ul> (likely a section with children)
     const hasChildren = hasDirectChildren || (linksToIndex && isAloneInUl);
-
     if (!hasChildren) return;
-
-    itemsWithChildren++;
 
     // Add .has-children class for browsers without :has() support
     item.classList.add('has-children');
