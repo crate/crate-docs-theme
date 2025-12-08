@@ -104,7 +104,7 @@ div.hero.danger {
 }
 
 .bs-docs-sidenav > li {
-  display: none;
+  display: block;
 }
 
 /** MENUE **/
@@ -202,4 +202,71 @@ a code {
 
 div.topic {
   border: 0;
+}
+
+/* ========================================================================== */
+/* TOC Toggle Icons for Navigation                                           */
+/* ========================================================================== */
+/* Enable by adding class "toc-toggle-icons-enabled" to sidebar container    */
+/* Configuration: Set html_theme_options['toc_toggle_icons'] = True          */
+/* ========================================================================== */
+
+/* Add expand/collapse icon to items that have children */
+/* Modern browsers: Use :has() selector */
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li:has(> ul) > a::after,
+/* Fallback: Use .has-children class added by JavaScript */
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li.has-children > a::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  padding-left: 8px;
+  background-color: var(--color-sidebar-left-link);
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.707 12l-5.647-5.646a.5.5 0 01.708-.708l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L15.707 12z"/></svg>');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transform: rotate(0deg);
+  /* transition: transform 0.3s ease-in-out, opacity 0.2s ease; */
+  /* Animation disabled - pages reload on navigation, causing animation to play on every page load */
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* Rotate icon when parent is expanded (current/active or manually expanded) */
+/* Modern browsers: Use :has() selector */
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li.expanded:has(> ul) > a::after,
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li.has-children.expanded > a::after {
+  transform: rotate(90deg);
+}
+
+/* Hover effect on icon */
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li:has(> ul) > a:hover::after,
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li.has-children > a:hover::after {
+  opacity: 1;
+}
+
+/* Make link a flex container to position icon at the right */
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li:has(> ul) > a,
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li.has-children > a {
+  display: flex;
+  align-items: center;
+}
+
+/* Make cursor indicate clickable area for items with children */
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li:has(> ul) > a,
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li.has-children > a {
+  cursor: pointer;
+}
+
+/* JavaScript-driven expand/collapse behavior */
+/* Hide all children by default when JS is enabled */
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li.has-children > ul {
+  display: none !important;
+}
+
+/* Show children when parent is marked as expanded */
+.toc-toggle-icons-enabled .bs-docs-sidenav .toctree li.has-children.expanded > ul {
+  display: block !important;
 }

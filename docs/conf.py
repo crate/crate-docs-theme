@@ -1,5 +1,8 @@
 from crate.theme.rtd.conf.theme import *
 
+# Note: TOC toggle icons are enabled by default in the theme.
+# To disable: html_theme_options["toc_toggle_icons"] = "false"
+
 # Mimic some bits of the RTD context being propagated to its Sphinx builder.
 # https://github.com/readthedocs/readthedocs.org/blob/main/readthedocs/doc_builder/backends/sphinx.py
 html_context.update({

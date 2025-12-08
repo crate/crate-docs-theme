@@ -1,4 +1,8 @@
+{% if theme_toc_toggle_icons == 'true' %}
+<div role="complementary" class="bs-docs-sidebar hidden-print toc-toggle-icons-enabled">
+{% else %}
 <div role="complementary" class="bs-docs-sidebar hidden-print">
+{% endif %}
   {% if project == 'SQL 99' %}
   <div class="search-link">
     {% if pagename == "search" %}
