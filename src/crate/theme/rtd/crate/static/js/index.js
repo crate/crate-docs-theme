@@ -5,3 +5,4 @@ import "sticky-sidebar";
 import "./util";
 import "./crate";
 import "./custom";
+import "./toc-toggle";
