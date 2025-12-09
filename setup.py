@@ -67,7 +67,7 @@ setup(
         "sphinx>=7.1,<9",
         "sphinx-basic-ng==1.0.0b2",
         "sphinx-copybutton>=0.3.1,<1",
-        "sphinx-design-elements==0.4.0",
+        "sphinx-design-elements @ git+https://github.com/tech-writing/sphinx-design-elements@linktree",
         "sphinx-inline-tabs",
         "sphinx-sitemap<2.10.0",
         "sphinx-togglebutton<1",
