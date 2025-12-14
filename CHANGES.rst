@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Updated to ``sphinx-design-elements`` v0.4.1
 
 2025/11/05 0.42.0
 -----------------
