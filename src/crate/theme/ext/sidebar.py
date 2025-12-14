@@ -63,12 +63,17 @@ def make_primary_tree(builder: StandaloneHTMLBuilder, context: t.Dict[str, t.Any
         .title("CrateDB Database") \
         .add(
             ref(target="crate-reference:index", label="CrateDB Reference"),
+            ref(target="guide:index", label="CrateDB Handbook"),
+            ref(target="guide:start", label="Getting started"),
+            ref(target="crate-admin-ui:index", label="Admin UI"),
+            ref(target="ctk:index", label="CrateDB Toolkit"),
         )
 
     # CrateDB Cloud.
     linktree \
         .title("CrateDB Cloud") \
         .add(
+            ref("cloud:index"),
             ref("cloud-cli:index"),
         )
 
