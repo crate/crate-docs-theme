@@ -73,18 +73,17 @@ def make_primary_tree(builder: StandaloneHTMLBuilder, context: t.Dict[str, t.Any
     linktree \
         .title("CrateDB Database") \
         .add(
+            ref(target="guide:getting-started", label="Getting started"),
+            ref(target="guide:index", label="CrateDB Handbook"),
             ref(target="crate-reference:index", label="CrateDB Reference"),
-            ref(target="crate-tutorials:index", label="Install CrateDB"),
-            ref(target="crate-howtos:index", label="Getting started"),
+            ref(target="ctk:index", label="CrateDB Toolkit"),
         )
 
     # CrateDB Cloud.
     linktree \
         .title("CrateDB Cloud") \
         .add(
-            ref("cloud-reference:index"),
-            ref("cloud-tutorials:index"),
-            ref("cloud-howtos:index"),
+            ref("cloud:index"),
             ref("cloud-cli:index"),
         )
 
@@ -94,8 +93,8 @@ def make_primary_tree(builder: StandaloneHTMLBuilder, context: t.Dict[str, t.Any
         .add(
             ref("crate-admin-ui:index"),
             ref("crate-crash:index"),
-            ref("crate-clients-tools:index"),
-            ref("crate-jdbc:index"),
+            ref("guide:connect"),
+            ref("connect-java"),
             ref("crate-npgsql:index"),
             ref("crate-dbal:index"),
             ref("crate-pdo:index"),
@@ -109,7 +108,7 @@ def make_primary_tree(builder: StandaloneHTMLBuilder, context: t.Dict[str, t.Any
             link(uri="https://crate.io/support/", label="Support"),
             link(uri="https://community.crate.io/", label="Community"),
             link(uri="https://community.crate.io/t/overview-of-cratedb-integration-tutorials/1015", label="Integration tutorials"),
-            link(uri="https://github.com/crate/cratedb-examples", label="Stacks and examples"),
+            link(uri="https://github.com/crate/cratedb-examples", label="Integration examples"),
             link(uri="https://github.com/crate/crate-sample-apps", label="Sample applications"),
             ref("sql-99:index"),
             # ref("crate-docs-theme:index"),
