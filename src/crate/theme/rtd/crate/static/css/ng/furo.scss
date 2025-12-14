@@ -101,3 +101,8 @@ article p:has(+ ul),
 article p:has(+ ol) {
   margin-bottom: 4px;
 }
+
+// Sidebar NG: Adjust margins.
+.sidebar-tree {
+  margin-top: unset;
+}
