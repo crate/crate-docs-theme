@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+- Added Stepper directive
+- Removed bottom three links in primary navigation:
+  Academy, Integration Tutorials, Sample Applications
 - Updated to ``sphinx-design-elements`` v0.4.1
 
 2025/11/05 0.42.0
