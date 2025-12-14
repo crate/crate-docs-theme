@@ -21,8 +21,8 @@
 import os
 
 from crate.theme import rtd as theme
+from crate.theme.ext import navigation
 from crate.theme.rtd import __version__
-from crate.theme.rtd.conf.furo import _html_page_context
 from os import environ
 
 source_suffix = ".rst"
@@ -103,6 +103,7 @@ intersphinx_mapping = {
     # CrateDB General
     'guide': ('https://cratedb.com/docs/guide/', None),
     'crate-reference': ('https://cratedb.com/docs/crate/reference/en/latest/', None),
+    'ctk': ('https://cratedb-toolkit.readthedocs.io/', None),
 
     # CrateDB Clients and Integrations
     'crate-admin-ui': ('https://cratedb.com/docs/crate/admin-ui/en/latest/', None),
@@ -330,7 +331,7 @@ def setup(app):
 
     # Modern / NG / Furo.
     app.require_sphinx("3.0")
-    app.connect("html-page-context", _html_page_context)
+    app.connect("html-page-context", navigation.html_page_context)
 
     # Customizations.
     app.connect("builder-inited", configure_self_hosted_on_path)
@@ -347,4 +348,3 @@ def setup(app):
         "parallel_write_safe": True,
         "version": __version__,
     }
-
