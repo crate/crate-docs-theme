@@ -171,6 +171,8 @@ linkcheck_ignore = [
     "https://unsplash.com/.*",
     # [Errno 101] Network is unreachable
     "https://www.gnu.org/.*",
+    # Temporary failure in name resolution
+    "https://jupysql.ploomber.io/.*",
 ]
 linkcheck_anchors_ignore_for_url = [
     # Requires JavaScript.
