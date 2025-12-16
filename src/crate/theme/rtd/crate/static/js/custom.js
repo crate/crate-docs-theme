@@ -59,7 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function restoreNavState() {
         const savedStates = localStorage.getItem('navState');
         if (savedStates) {
-            const states = JSON.parse(savedStates);
+            let states;
+            try {
+                states = JSON.parse(savedStates);
+            } catch (e) {
+                // If parsing fails, clear the corrupted data and do not restore state
+                localStorage.removeItem('navState');
+                return;
+            }
             Object.keys(states).forEach((id) => {
                 const checkbox = document.getElementById(id);
                 if (checkbox) {
