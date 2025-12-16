@@ -48,7 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 states[checkbox.id] = checkbox.checked;
             }
         });
-        localStorage.setItem('navState', JSON.stringify(states));
+        try {
+            localStorage.setItem('navState', JSON.stringify(states));
+        } catch (e) {
+            // Could be QuotaExceededError or other storage error
+            console.warn('Could not save navigation state to localStorage:', e);
+        }
     }
 
     function restoreNavState() {
