@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Added TOC expand/collapse icons and more advanced navigation
 
 2025/12/19 0.45.0
 -----------------
