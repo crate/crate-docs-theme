@@ -10,6 +10,18 @@ Unreleased
   Academy, Integration Tutorials, Sample Applications
 - Updated to ``sphinx-design-elements`` v0.4.1
 
+2025/12/17 0.44.0
+-----------------
+- Reverted last release 0.43.0
+
+2025/12/17 0.43.0
+-----------------
+- Added TOC expand/collapse icons and more advanced navigation
+- Added Stepper directive
+- Removed bottom three links in primary navigation:
+  Academy, Integration Tutorials, Sample Applications
+- Updated to ``sphinx-design-elements`` v0.4.1
+
 2025/11/05 0.42.0
 -----------------
 - Removed the ``sphinx-subfigure`` extension.
