@@ -1,0 +1,34 @@
+/*
+ * Furo-Compatible Collapsible Navigation styling for CrateDB Theme
+ */
+
+.bs-docs-sidenav.sidebar-tree {
+  /* Match label height to our link height */
+  li.has-children > label {
+    margin-top: inherit;
+    /* Calculate height: 8px total vertical padding + (14px font-size * 1.2 line-height) */
+    height: calc(8px + 14px * 1.2);
+  }
+
+  /* Override Furo's colors to match our theme */
+  .reference,
+  a,
+  li label .icon
+  {
+    color: var(--color-sidebar-left-link);
+  }
+
+  /* Add hover background to links */
+  .reference:hover,
+  a:hover {
+    background: var(--color-sidebar-item-background--hover);
+  }
+
+  /* Adjust indentation for nested items */
+  ul {
+    margin-left: 0;
+    li {
+      padding-left: var(--sidebar-item-spacing-horizontal);
+    }
+  }
+}
