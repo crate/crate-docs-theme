@@ -5,6 +5,10 @@ CHANGES
 
 Unreleased
 ----------
+
+
+2025/11/05 0.43.0
+-----------------
 - Added TOC expand/collapse icons and more advanced navigation
 - Added Stepper directive
 - Removed bottom three links in primary navigation:

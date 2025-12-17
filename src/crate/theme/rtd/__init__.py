@@ -24,7 +24,7 @@
 import os
 from .sidebartoc import generate_crate_navigation_html
 
-VERSION = (0, 42, 0)
+VERSION = (0, 43, 0)
 
 __version__ = ".".join(str(v) for v in VERSION) # + ".dev0"
 __version_full__ = __version__
