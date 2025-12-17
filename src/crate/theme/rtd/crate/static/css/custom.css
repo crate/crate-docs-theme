@@ -1500,6 +1500,11 @@ ul.search li {
   }
 }
 
+/* Hide HubSpot-injected elements. */
+#hubspot-messages-iframe-container {
+  display: none !important;
+}
+
 /* Hide RTD-injected elements: Ads, fly-out, and footer. */
 #readthedocs-ea,
 #readthedocs-ea-text-footer,
