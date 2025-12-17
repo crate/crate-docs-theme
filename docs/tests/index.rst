@@ -1,8 +1,8 @@
 .. _tests:
 
-###########################
+#########################
 Navigation bar test pages
-###########################
+#########################
 
 1. Clicking the title should expand the section and navigate to the section page
 2. Clicking just the icon should expand but not navigate to the section
