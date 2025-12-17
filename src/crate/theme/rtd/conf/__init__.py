@@ -33,7 +33,6 @@ exclude_patterns = [".*", "*.lint", "README.rst", "requirements.txt"]
 exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
 extensions = [
-    "crate.theme.rtd",  # CrateDB theme extension with Furo navigation integration
     "myst_nb",
     "sphinx_copybutton",
     "sphinx_design",
@@ -83,8 +82,7 @@ html_theme_options = {
 }
 # https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#fontawesome-icons
 html_css_files = [
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css",
-    # Note: furo-collapsible-toc.scss is bundled via index.css import
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 ]
 
 html_extra_path = ["_extra"]
