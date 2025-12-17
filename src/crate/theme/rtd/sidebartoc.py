@@ -117,7 +117,6 @@ def generate_crate_navigation_html(context):
         ('CrateDB PDO', 'PHP PDO', '/docs/pdo/'),
         ('CrateDB Python', 'Python', '/docs/python/'),
         ('SQLAlchemy Dialect', 'SQLAlchemy', '/docs/sqlalchemy-cratedb/'),
-        ('CrateDB Npgsql', '.NET Npgsql', '/docs/npgsql/')
     ]
     driver_projects = [config[0] for config in _DRIVER_CONFIGS]
     if project in driver_projects or (project == 'CrateDB: Guide' and pagename.startswith('connect')):
