@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Added TOC expand/collapse icons and more advanced navigation
 - Added Stepper directive
 - Removed bottom three links in primary navigation:
   Academy, Integration Tutorials, Sample Applications
