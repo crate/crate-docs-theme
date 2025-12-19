@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+- Breaking change: Started providing CrateDB reference documentation per
+  ``cratedb`` intersphinx domain. The label is much shorter than
+  ``crate-reference``, so it saves keystrokes and uses less screen space.
 
 2025/12/17 0.44.0
 -----------------
