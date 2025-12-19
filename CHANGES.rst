@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Dependencies: Permitted installation of Sphinx 9.x
 
 2025/12/17 0.44.0
 -----------------
