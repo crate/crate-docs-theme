@@ -6,6 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+2025/12/19 0.45.0
+-----------------
+- Reverted silencing build warnings, because it made the navigation bar look odd.
+
 2025/12/17 0.44.0
 -----------------
 - Reverted enhanced navigation, because it was broken.
