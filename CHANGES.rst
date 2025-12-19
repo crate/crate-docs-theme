@@ -8,6 +8,7 @@ Unreleased
 - Made driver projects use a standalone primary navigation
 - Removed outmoded database drivers section
 - Added external-link icon to Support and Community TOC entries.
+- Dependencies: Permitted installation of Sphinx 9.x
 
 2026/01/14 0.47.0
 -----------------
