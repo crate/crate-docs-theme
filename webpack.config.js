@@ -13,7 +13,7 @@ module.exports = {
                   { loader: "style-loader" },
                   { loader: "css-loader", options: { sourceMap: true } },
                   { loader: "postcss-loader", options: { sourceMap: true } },
-                  { loader: "sass-loader", options: { api: "legacy", sourceMap: true } },
+                  { loader: "sass-loader", options: { api: "modern", sourceMap: true } },
                 ],
             },
             {

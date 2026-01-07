@@ -1,3 +1,5 @@
+@use "../variables/layout"
+
 // This file contains the styles used for stylizing the footer that's shown
 // below the content.
 
@@ -23,7 +25,7 @@ footer
 
   line-height: 1.5
 
-  @media (max-width: $content-width)
+  @media (max-width: layout.$content-width)
     text-align: center
     flex-direction: column-reverse
     gap: 0.25rem

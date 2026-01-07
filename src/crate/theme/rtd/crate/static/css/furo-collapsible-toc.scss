@@ -2,7 +2,7 @@
  * Furo-Compatible Collapsible Navigation styling for CrateDB Theme
  */
 
-@import "../vendor/furo/styles/variables/layout";
+@use "../vendor/furo/styles/variables/layout";
 
 .bs-docs-sidenav.sidebar-tree {
   /* Match label height to our link height */

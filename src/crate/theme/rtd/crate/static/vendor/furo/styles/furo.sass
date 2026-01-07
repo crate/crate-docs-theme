@@ -1,9 +1,11 @@
+@use "sass:meta"
+@use "variables"
+
 @import "~normalize.css"
 
-@import "variables"
-@import "base"
-@import "scaffold"
-@import "content"
-@import "components"
+@include meta.load-css("base")
+@include meta.load-css("scaffold")
+@include meta.load-css("content")
+@include meta.load-css("components")
 
-@import "shame"
+@include meta.load-css("shame")

@@ -1,3 +1,5 @@
+@use "settings";
+
 /**
  * Page layout, based on sphinx-basic-ng.
  *
@@ -153,16 +155,16 @@ footer .sb-page-width {
 .sidebar-container-primary {
   float: left;
   i {
-    height: $sidebar-drawer-icon-size;
-    width: $sidebar-drawer-icon-size;
+    height: settings.$sidebar-drawer-icon-size;
+    width: settings.$sidebar-drawer-icon-size;
   }
 }
 
 .sidebar-container-secondary {
   float: right;
   i {
-    height: $sidebar-drawer-icon-size;
-    width: $sidebar-drawer-icon-size;
+    height: settings.$sidebar-drawer-icon-size;
+    width: settings.$sidebar-drawer-icon-size;
   }
 }
 
