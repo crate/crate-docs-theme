@@ -82,7 +82,8 @@ html_theme_options = {
 }
 # https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html#fontawesome-icons
 html_css_files = [
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css",
+    # Note: furo-collapsible-toc.scss is bundled via index.css import
 ]
 
 html_extra_path = ["_extra"]
@@ -344,9 +345,12 @@ def setup(app):
     from crate.theme.rtd.crate.directives import stepper
     stepper.setup(app)
 
+    # Use icons for navigation using Furo
+    from crate.theme.rtd.sidebartoc import add_crate_navigation
+    app.connect("html-page-context", add_crate_navigation)
+
     return {
         "parallel_read_safe": True,
         "parallel_write_safe": True,
         "version": __version__,
     }
-
