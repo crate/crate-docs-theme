@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2026/01/08 0.46.0
+-----------------
 - Re-added TOC expand/collapse icons with improved navigation behavior: TOC
   state is now persisted across page navigation and reloads, allowing multiple
   sections to remain expanded simultaneously. Changed sidebar TOC generation
