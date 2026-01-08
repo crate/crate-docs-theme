@@ -22,7 +22,6 @@
 """CrateDB Sphinx theme for Read the Docs"""
 
 import os
-from .sidebartoc import generate_crate_navigation_html
 
 VERSION = (0, 45, 0)
 
@@ -47,33 +46,3 @@ def get_html_static_path():
 def get_html_template_path():
     """Return list of HTML template paths."""
     return [os.path.join(current_dir(), "crate")]
-
-
-def _add_crate_navigation(app, pagename, templatename, context, doctree):
-    """
-    Sphinx event handler: Add enhanced navigation to template context.
-
-    Generates multi-project navigation HTML and processes it through
-    Furo's navigation enhancer to add collapsible icons and checkboxes.
-    """
-
-    from furo.navigation import get_navigation_tree
-
-    navigation_html = generate_crate_navigation_html(context)
-
-    # Process through Furo's navigation enhancer
-    enhanced_navigation = get_navigation_tree(navigation_html)
-
-    # Add to context for use in templates
-    context["crate_navigation_tree"] = enhanced_navigation
-
-def setup(app):
-    """
-    Registers event handlers to setup navigation.
-    """
-    app.connect("html-page-context", _add_crate_navigation)
-    return {
-        "version": __version__,
-        "parallel_read_safe": True,
-        "parallel_write_safe": True,
-    }

@@ -33,7 +33,6 @@ exclude_patterns = [".*", "*.lint", "README.rst", "requirements.txt"]
 exclude_trees = ["pyenv", "tmp", "out", "parts", "clients", "eggs"]
 
 extensions = [
-    "crate.theme.rtd",  # CrateDB theme extension with Furo navigation integration
     "myst_nb",
     "sphinx_copybutton",
     "sphinx_design",
@@ -346,9 +345,12 @@ def setup(app):
     from crate.theme.rtd.crate.directives import stepper
     stepper.setup(app)
 
+    # Use icons for navigation using Furo
+    from crate.theme.rtd.sidebartoc import add_crate_navigation
+    app.connect("html-page-context", add_crate_navigation)
+
     return {
         "parallel_read_safe": True,
         "parallel_write_safe": True,
         "version": __version__,
     }
-

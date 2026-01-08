@@ -19,7 +19,10 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
-def generate_crate_navigation_html(context):
+from furo.navigation import get_navigation_tree
+
+
+def _generate_crate_navigation_html(context):
     """
     Generate multi-project navigation HTML structure, so we can process it
     through Furo's navigation enhancer.
@@ -138,3 +141,24 @@ def generate_crate_navigation_html(context):
 
     parts.append('</ul>')
     return ''.join(parts)
+
+
+def add_crate_navigation(app, pagename, templatename, context, doctree):
+    """
+    Sphinx event handler: Add enhanced navigation to template context.
+
+    Generates multi-project navigation HTML and processes it through
+    Furo's navigation enhancer to add collapsible icons and checkboxes.
+
+    Note: Signature matches Sphinx's html-page-context event handler requirements.
+    """
+    # Unused parameters required by Sphinx event signature
+    _ = app, pagename, templatename, doctree
+
+    navigation_html = _generate_crate_navigation_html(context)
+
+    # Process through Furo's navigation enhancer
+    enhanced_navigation = get_navigation_tree(navigation_html)
+
+    # Add to context for use in templates
+    context["crate_navigation_tree"] = enhanced_navigation
