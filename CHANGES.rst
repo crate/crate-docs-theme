@@ -5,6 +5,15 @@ CHANGES
 
 Unreleased
 ----------
+- (re)Added TOC expand/collapse icons and more advanced navigation. The expanded
+  or collapsed state of individual TOC entries is now persisted and you can
+  therefore keep multiple sections expanded at the same time while navigating
+  pages. A sideeffect is that the TOC state is now also persisted across page
+  reloads.
+  Not mentioned previously, it also introduce a significant change to how the
+  sidebartoc is defined. Previously it was defined in HTML/Jinja templates,
+  now it is generated in Python code.
+  This was first introduced in 0.43.0, but reverted in 0.44.0.
 
 2025/12/19 0.45.0
 -----------------
