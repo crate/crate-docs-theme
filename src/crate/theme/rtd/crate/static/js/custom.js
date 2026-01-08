@@ -84,13 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
         checkbox.addEventListener('change', saveNavState);
     });
 
-    // Make clicking the link text expand the section if collapsed
+    // Make clicking the link text expand the section if collapsed, then navigate
+    // Design: Click expands collapsed sections AND navigates to the page.
+    // Already-expanded sections just navigate (no toggle). This allows users to
+    // expand nested navigation while browsing, without collapsing sections they
+    // want to keep visible.
     document.querySelectorAll('.bs-docs-sidenav li.has-children > a, .bs-docs-sidenav li.has-children > .reference').forEach((link) => {
         link.addEventListener('click', () => {
             const li = link.parentElement;
             const checkbox = li.querySelector('.toctree-checkbox');
             if (checkbox && !checkbox.checked) {
-                // Only expand if collapsed
+                // Only expand if collapsed - navigation proceeds regardless
                 checkbox.checked = true;
                 saveNavState();
             }

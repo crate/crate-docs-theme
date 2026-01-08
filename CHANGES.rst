@@ -10,6 +10,7 @@ Unreleased
   sections to remain expanded simultaneously. Changed sidebar TOC generation
   from HTML/Jinja templates to Python (``sidebartoc.py``) to enable Furo's
   navigation enhancements. Originally introduced in 0.43.0, reverted in 0.44.0.
+- CrateDB Npgsql docs were removed.
 
 2025/12/19 0.45.0
 -----------------
