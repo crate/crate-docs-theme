@@ -1,17 +1,23 @@
+@use "../variables/admonitions"
+@use "../variables/colors"
+@use "../variables/fonts"
+@use "../variables/icons"
+@use "../variables/spacing"
+
 // This file serves as the "skeleton" of the theming logic.
 //
 // This contains the bulk of the logic for handling dark mode, color scheme
 // toggling and the handling of color-scheme-specific hiding of elements.
 
 body
-  @include fonts
-  @include spacing
-  @include icons
-  @include admonitions
-  @include default-admonition(#651fff, "abstract")
-  @include default-topic(#14B8A6, "pencil")
+  @include fonts.fonts
+  @include spacing.spacing
+  @include icons.icons
+  @include admonitions.admonitions
+  @include admonitions.default-admonition(#651fff, "abstract")
+  @include admonitions.default-topic(#14B8A6, "pencil")
 
-  @include colors
+  @include colors.colors
 
 .only-light
   display: block !important
@@ -23,7 +29,7 @@ html body .only-dark
   // Enable dark-mode, if requested.
   html[data-theme="dark"]
     body
-      @include colors-dark
+      @include colors.colors-dark
 
     html & .only-light
       display: none !important
@@ -34,7 +40,7 @@ html body .only-dark
   @media (prefers-color-scheme: dark)
     html:not([data-theme="light"])
       body
-        @include colors-dark
+        @include colors.colors-dark
 
       html & .only-light
         display: none !important

@@ -8,14 +8,14 @@
 **/
 
 // Import Furo's variables.
-@import "../../vendor/furo/styles/variables/layout";
+@use "../../vendor/furo/styles/variables/layout";
 
 // Import Furo's components.
-@import "../../vendor/furo/styles/components/footer";
+@use "../../vendor/furo/styles/components/footer";
 
 // Sidebar: When primary sidebar is not collapsed, show its
 // content above all others.
-@media (max-width: $full-width - $sidebar-width) {
+@media (max-width: layout.$full-width - layout.$sidebar-width) {
   .sb-sidebar-primary {
     z-index: 50;
   }
@@ -24,14 +24,14 @@
 // Sidebar: Unset `position: fixed`, otherwise content
 // will not be visible on drawers when not collapsed.
 
-@media (max-width: $full-width - $sidebar-width) {
+@media (max-width: layout.$full-width - layout.$sidebar-width) {
   // Collapse "navigation".
   .sidebar-drawer {
     position: unset;
   }
 }
 
-@media (max-width: $full-width) {
+@media (max-width: layout.$full-width) {
   // Collapse "toc" into the icon.
   .toc-drawer {
     position: unset;

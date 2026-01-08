@@ -21,3 +21,4 @@ dist
 eggs
 node_modules*
 yarn-error.log
+_*
