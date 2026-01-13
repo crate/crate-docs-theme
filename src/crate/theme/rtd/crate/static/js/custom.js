@@ -79,25 +79,85 @@ document.addEventListener('DOMContentLoaded', () => {
     // Restore state on page load
     restoreNavState();
 
+    // Auto-expand sections marked with data-auto-expand="true"
+    // Used for Database Drivers when viewing a driver project.
+    // Only auto-expand if user hasn't explicitly set a preference for this checkbox.
+    const savedStates = localStorage.getItem('navState');
+    let userPreferences = {};
+    if (savedStates) {
+        try {
+            userPreferences = JSON.parse(savedStates);
+        } catch (e) {
+            // Ignore parse errors, treat as no preferences
+        }
+    }
+    let autoExpandStateChanged = false;
+
+    document.querySelectorAll('[data-auto-expand="true"]').forEach((li) => {
+        const checkbox = li.querySelector('.toctree-checkbox');
+        if (checkbox && checkbox.id) {
+            // Only auto-expand if user has no saved preference for this checkbox
+            if (!(checkbox.id in userPreferences)) {
+                checkbox.checked = true;
+                autoExpandStateChanged = true;
+            }
+        }
+    });
+
+    // Save the auto-expanded state so it persists
+    if (autoExpandStateChanged) {
+        saveNavState();
+    }
+
     // Save state when checkboxes change
     document.querySelectorAll('.toctree-checkbox').forEach((checkbox) => {
         checkbox.addEventListener('change', saveNavState);
     });
 
-    // Make clicking the link text expand the section if collapsed, then navigate
-    // Design: Click expands collapsed sections AND navigates to the page.
-    // Already-expanded sections just navigate (no toggle). This allows users to
-    // expand nested navigation while browsing, without collapsing sections they
-    // want to keep visible.
+    // Make clicking the link text expand the section and collapse siblings.
+    // This provides consistent UX: clicking any title shows only that section's
+    // children, matching what happens with cross-project navigation.
     document.querySelectorAll('.bs-docs-sidenav li.has-children > a, .bs-docs-sidenav li.has-children > .reference').forEach((link) => {
         link.addEventListener('click', () => {
             const li = link.parentElement;
             const checkbox = li.querySelector('.toctree-checkbox');
-            if (checkbox && !checkbox.checked) {
-                // Only expand if collapsed - navigation proceeds regardless
-                checkbox.checked = true;
-                saveNavState();
+
+            // Collapse sibling sections at the same level
+            const parent = li.parentElement;
+            if (parent) {
+                parent.querySelectorAll(':scope > li.has-children > .toctree-checkbox').forEach((siblingCheckbox) => {
+                    if (siblingCheckbox !== checkbox && siblingCheckbox.checked) {
+                        siblingCheckbox.checked = false;
+                    }
+                });
             }
+
+            // Expand this section
+            if (checkbox) {
+                checkbox.checked = true;
+            }
+
+            saveNavState();
+        });
+    });
+
+    // Cross-project navigation: clicking expand icon on entries with empty <ul>
+    // should navigate to that project instead of just toggling the checkbox.
+    // It's ok UX, but also just plain needed as we can't expand the TOC of another project :-(
+    document.querySelectorAll('.bs-docs-sidenav li.has-children > label').forEach((label) => {
+        label.addEventListener('click', (e) => {
+            const li = label.parentElement;
+            const ul = li.querySelector(':scope > ul');
+            // Check if <ul> is empty (cross-project entry)
+            if (ul && ul.children.length === 0) {
+                const link = li.querySelector(':scope > a');
+                if (link && link.href) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.location.href = link.href;
+                }
+            }
+            // If <ul> has children, default behavior (toggle checkbox) applies
         });
     });
 });

@@ -4,12 +4,31 @@
 Navigation bar test pages
 #########################
 
-1. Clicking the title should expand the section and navigate to the section page
-2. Clicking just the icon should expand but not navigate to the section
-3. Clicking just the icon for an expanded section should collapse that section and leave other expanded sections expanded
-4. Hovering the mouse over an icon should show a fade background behind the icon
-5. Hovering the mouse over the title should show a fade background behind the title and the icon
-6. The current page should be highlighted in the navigation bar as the user navigates through the pages below.
+**Same-project entries (entries with actual TOC content):**
+
+1. Clicking the title expands the section, collapses sibling sections at the
+   same level, and navigates to the section page
+2. Clicking just the icon expands/collapses that section without navigating
+3. Clicking the icon for an expanded section collapses it, leaving other
+   expanded sections unchanged
+
+**Cross-project entries (entries linking to other projects):**
+
+4. Clicking the title navigates to that project
+5. Clicking just the icon also navigates to that project (since the TOC
+   content from another project isn't available to expand)
+
+**Visual feedback:**
+
+6. Hovering the mouse over an icon shows a fade background behind the icon
+7. Hovering the mouse over the title shows a fade background behind the title
+   and the icon
+8. The current page is highlighted in the navigation bar
+
+**Auto-expansion:**
+
+9. The Database Drivers section auto-expands when viewing a driver project
+   (only on first visit; user preference is respected thereafter)
 
 
 **Pages:**
