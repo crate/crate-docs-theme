@@ -164,8 +164,11 @@ def _generate_crate_navigation_html(context):
 
     # Use data attribute to mark Database Drivers for auto-expansion
     driver_marker = ' data-auto-expand="true"' if show_drivers else ''
-    parts.append(f'<li class="navleft-item"{driver_marker}>')
-    parts.append('<a href="/docs/guide/connect/drivers.html">Database Drivers</a>')
+    # Add current class when viewing a driver page to make it bold
+    driver_class = 'current' if show_drivers else 'navleft-item'
+    driver_link_class = ' class="current-active"' if show_drivers else ''
+    parts.append(f'<li class="{driver_class}"{driver_marker}>')
+    parts.append(f'<a{driver_link_class} href="/docs/guide/connect/drivers.html">Database Drivers</a>')
     # Furo will add has-children class and icon structure when it detects the <ul>
     parts.append('<ul>')
     if show_drivers:
