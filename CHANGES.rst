@@ -6,6 +6,7 @@ CHANGES
 Unreleased
 ----------
 - Bugfix for TOC expand/collapse not working well across projects.
+- Removed outmoded database drivers section
 
 2026/01/08 0.46.0
 -----------------
