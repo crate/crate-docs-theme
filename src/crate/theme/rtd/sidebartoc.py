@@ -20,6 +20,62 @@
 # software solely pursuant to the terms of the relevant commercial agreement.
 
 from furo.navigation import get_navigation_tree
+from datetime import datetime
+import os
+import re
+
+
+def _slugify_id(text):
+    """Normalize text to a safe HTML ID: alphanumerics and hyphens only."""
+    s = re.sub(r'[^a-z0-9-]', '-', text.lower())
+    s = re.sub(r'-{2,}', '-', s)  # collapse multiple hyphens
+    return s.strip('-')
+
+
+class _NavBuilder:
+    """Helper to build navigation HTML."""
+
+    def __init__(self, parts, project, master_path, toctree_fn):
+        self.parts = parts
+        self.project = project
+        self.master_path = master_path
+        self.toctree = toctree_fn
+
+    def add_nav_link(self, entry_name, entry_url, li_base_class='toctree-l1', border_top=False):
+        """Add a cross-project navigation link with expand icon.
+
+        Includes an empty <ul> so Furo's get_navigation_tree() adds the
+        checkbox/icon structure. Since cross-project TOC content isn't
+        available, clicking the icon navigates to that project instead
+        of expanding (handled by JS in custom.js).
+        """
+        border = " border-top" if border_top else ""
+        li_class = f'{li_base_class}{border}'
+        self.parts.append(f'<li class="{li_class}">')
+        self.parts.append(f'<a href="{entry_url}">{entry_name}</a>')
+        # Empty <ul> triggers Furo to add has-children class and icon structure
+        self.parts.append('<ul></ul>')
+        self.parts.append('</li>')
+
+    def add_project_nav_item(
+        self,
+        project_name,
+        display_name,
+        url_if_not_current,
+        border_top=False,
+        public_docs=True
+    ):
+        """Add a navigation item in left navbar for a project."""
+        border = " border-top" if border_top else ""
+        if self.project == project_name:
+            self.parts.append(f'<li class="current{border}">')
+            self.parts.append(f'<a class="current-active" href="{self.master_path}">{display_name}</a>')
+            self.parts.append(self.toctree())
+            self.parts.append('</li>')
+            return
+
+        if public_docs:
+            self.add_nav_link(display_name, url_if_not_current, 'navleft-item', border_top)
 
 
 def _generate_crate_navigation_html(context):
@@ -32,7 +88,7 @@ def _generate_crate_navigation_html(context):
         return ""
 
     theme_globaltoc_includehidden = context.get("theme_globaltoc_includehidden", True)
-    def get_toctree(maxdepth=-1, titles_only=True, collapse=False):
+    def _get_toctree(maxdepth=-1, titles_only=True, collapse=False):
         return toctree(
             maxdepth=maxdepth,
             titles_only=titles_only,
@@ -46,27 +102,7 @@ def _generate_crate_navigation_html(context):
     master_path = context["pathto"](master_doc)
 
     parts = ['<ul class="toctree nav nav-list">']
-
-    def _add_project_nav_item(
-        project_name,
-        display_name,
-        url_if_not_current,
-        border_top=False,
-        include_toctree=True,
-        only_if_current_project=False
-    ):
-        """Add a navigation item in left navbar for a specific project."""
-        border = " border-top" if border_top else ""
-        if project == project_name:
-            parts.append(f'<li class="current{border}">')
-            parts.append(f'<a class="current-active" href="{master_path}">{display_name}</a>')
-            if include_toctree:
-                parts.append(get_toctree())
-            parts.append('</li>')
-        else:
-            if only_if_current_project:
-                return
-            parts.append(f'<li class="navleft-item{border}"><a href="{url_if_not_current}">{display_name}</a></li>')
+    builder = _NavBuilder(parts, project, master_path, _get_toctree)
 
 
     # Special project used standalone
@@ -74,7 +110,7 @@ def _generate_crate_navigation_html(context):
         current_class = ' class="current"' if pagename == master_doc else ''
         parts.append(f'<li{current_class}>')
         parts.append(f'<a class="current-active" href="{master_path}">SQL-99 Complete, Really</a>')
-        parts.append(get_toctree(maxdepth=2))
+        parts.append(_get_toctree(maxdepth=2))
         parts.append('</li>')
         return ''.join(parts)
 
@@ -86,7 +122,8 @@ def _generate_crate_navigation_html(context):
     parts.append('</div>')
     parts.append('</li>')
 
-    # Add Overview and top level entries defined in the Guide's toctree
+    # Add Overview and top level entries defined in the Guide's toctree.
+    # The Guide project is the only one that has multiple top-level entries.
     if project == 'CrateDB: Guide':
         if pagename == 'index':
             parts.append('<li class="current">')
@@ -96,24 +133,25 @@ def _generate_crate_navigation_html(context):
             parts.append('<li class="navleft-item">')
             parts.append(f'<a href="{master_path}">Overview</a>')
             parts.append('</li>')
-        parts.append(get_toctree())
+        parts.append(_get_toctree())
     else:
-        parts.append('<li class="current"><a class="current-active" href="#">Overview</a></li>')
+        # Show Overview link to Guide's index (no icon - it's just an index page)
+        parts.append('<li class="navleft-item"><a href="/docs/guide/">Overview</a></li>')
+        # Add Guide's level 1 entries with icons
+        builder.add_nav_link('Getting Started','/docs/guide/start/')
+        builder.add_nav_link('Handbook', '/docs/guide/handbook/')
 
     # Add individual projects
-    _add_project_nav_item('CrateDB Cloud', 'CrateDB Cloud', '/docs/cloud/')
-    _add_project_nav_item('CrateDB: Reference', 'Reference Manual', '/docs/crate/reference/')
+    builder.add_project_nav_item('CrateDB Cloud', 'CrateDB Cloud', '/docs/cloud/')
+    builder.add_project_nav_item('CrateDB: Reference', 'Reference Manual', '/docs/crate/reference/')
 
     # Start new section with a border
-    _add_project_nav_item('CrateDB: Admin UI', 'Admin UI', '/docs/crate/admin-ui/', border_top=True)
-    _add_project_nav_item('CrateDB: Crash CLI', 'CrateDB CLI', '/docs/crate/crash/')
-    _add_project_nav_item('CrateDB Cloud: Croud CLI', 'Cloud CLI', '/docs/cloud/cli/')
+    builder.add_project_nav_item('CrateDB: Admin UI', 'Admin UI', '/docs/crate/admin-ui/', border_top=True)
+    builder.add_project_nav_item('CrateDB: Crash CLI', 'CrateDB CLI', '/docs/crate/crash/')
+    builder.add_project_nav_item('CrateDB Cloud: Croud CLI', 'Cloud CLI', '/docs/cloud/cli/')
 
     # Add all Driver projects
-    parts.append('<li class="navleft-item">')
-    parts.append('<a href="/docs/guide/connect/drivers.html">Database Drivers</a>')
-    parts.append('</li>')
-
+    # The <ul> must be inside the same <li> for CSS sibling selectors to work
     _DRIVER_CONFIGS = [
         ('CrateDB JDBC', 'JDBC', '/docs/jdbc/'),
         ('CrateDB DBAL', 'PHP DBAL', '/docs/dbal/'),
@@ -122,11 +160,20 @@ def _generate_crate_navigation_html(context):
         ('SQLAlchemy Dialect', 'SQLAlchemy', '/docs/sqlalchemy-cratedb/'),
     ]
     driver_projects = [config[0] for config in _DRIVER_CONFIGS]
-    if project in driver_projects or (project == 'CrateDB: Guide' and pagename.startswith('connect')):
-        parts.append('<li><ul>')
+    show_drivers = project in driver_projects or (project == 'CrateDB: Guide' and pagename.startswith('connect'))
+
+    # Use data attribute to mark Database Drivers for auto-expansion
+    driver_marker = ' data-auto-expand="true"' if show_drivers else ''
+    parts.append(f'<li class="navleft-item"{driver_marker}>')
+    parts.append('<a href="/docs/guide/connect/drivers.html">Database Drivers</a>')
+    # Furo will add has-children class and icon structure when it detects the <ul>
+    parts.append('<ul>')
+    if show_drivers:
         for proj_name, display_name, url in _DRIVER_CONFIGS:
-            _add_project_nav_item(proj_name, display_name, url)
-        parts.append('</ul></li>')
+            builder.add_project_nav_item(proj_name, display_name, url)
+    parts.append('</ul>')
+    parts.append('</li>')
+
 
     # Add Support and Community links section after a border
     parts.append('<li class="navleft-item border-top"><a target="_blank" href="/support/">Support</a></li>')
@@ -134,10 +181,15 @@ def _generate_crate_navigation_html(context):
 
 
     # Other internal docs projects only included in special builds
-    _add_project_nav_item('CrateDB documentation theme', 'Documentation theme', '',
-                          border_top=True, only_if_current_project=True)
-    _add_project_nav_item('Doing Docs', 'Doing Docs at CrateDB', '',
-                          only_if_current_project=True)
+    builder.add_project_nav_item('CrateDB documentation theme', 'Documentation theme', '', border_top=True, public_docs=False)
+    builder.add_project_nav_item('Doing Docs', 'Doing Docs at CrateDB', '', public_docs=False)
+
+    # Show build timestamp for local development (not on Read the Docs)
+    if not os.environ.get('READTHEDOCS'):
+        build_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        parts.append(f'<li class="navleft-item border-top" style="font-size: 0.75em; color: #888; padding-top: 1em;">')
+        parts.append(f'Built: {build_time}')
+        parts.append('</li>')
 
     parts.append('</ul>')
     return ''.join(parts)
@@ -159,6 +211,17 @@ def add_crate_navigation(app, pagename, templatename, context, doctree):
 
     # Process through Furo's navigation enhancer
     enhanced_navigation = get_navigation_tree(navigation_html)
+
+    # Make checkbox IDs unique per project to prevent localStorage state collision.
+    # Furo generates sequential IDs (toctree-checkbox-1, toctree-checkbox-2, etc.)
+    # which collide across projects. Add project slug prefix to make them unique.
+    project_slug = _slugify_id(context.get("project", ""))
+    if project_slug:
+        enhanced_navigation = re.sub(
+            r'toctree-checkbox-(\d+)',
+            f'toctree-checkbox-{project_slug}-\\1',
+            enhanced_navigation
+        )
 
     # Add to context for use in templates
     context["crate_navigation_tree"] = enhanced_navigation

@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Bugfix for TOC expand/collapse not working well across projects.
 
 2026/01/08 0.46.0
 -----------------
@@ -14,6 +15,9 @@ Unreleased
   from HTML/Jinja templates to Python (``sidebartoc.py``) to enable Furo's
   navigation enhancements. Originally introduced in 0.43.0, reverted in 0.44.0.
 - CrateDB Npgsql docs were removed.
+
+This release was yanked, because the navigation didn't work across projects and
+couldn't be tested locally.
 
 2025/12/19 0.45.0
 -----------------
