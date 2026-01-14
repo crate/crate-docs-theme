@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2026/01/14 0.47.0
+-----------------
 - Bugfix for TOC expand/collapse not working well across projects.
 
 2026/01/08 0.46.0
