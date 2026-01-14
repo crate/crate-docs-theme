@@ -159,38 +159,9 @@ def _generate_crate_navigation_html(context):
     builder.add_project_nav_item('CrateDB: Crash CLI', 'CrateDB CLI', '/docs/crate/crash/')
     builder.add_project_nav_item('CrateDB Cloud: Croud CLI', 'Cloud CLI', '/docs/cloud/cli/')
 
-    # Add all Driver projects
-    # The <ul> must be inside the same <li> for CSS sibling selectors to work
-    _DRIVER_CONFIGS = [
-        ('CrateDB JDBC', 'JDBC', '/docs/jdbc/'),
-        ('CrateDB DBAL', 'PHP DBAL', '/docs/dbal/'),
-        ('CrateDB PDO', 'PHP PDO', '/docs/pdo/'),
-        ('CrateDB Python', 'Python', '/docs/python/'),
-        ('SQLAlchemy Dialect', 'SQLAlchemy', '/docs/sqlalchemy-cratedb/'),
-    ]
-    driver_projects = [config[0] for config in _DRIVER_CONFIGS]
-    show_drivers = project in driver_projects or (project == 'CrateDB: Guide' and pagename.startswith('connect'))
-
-    # Use data attribute to mark Database Drivers for auto-expansion
-    driver_marker = ' data-auto-expand="true"' if show_drivers else ''
-    # Add current class when viewing a driver page to make it bold
-    driver_class = 'current' if show_drivers else 'navleft-item'
-    driver_link_class = ' class="current-active"' if show_drivers else ''
-    parts.append(f'<li class="{driver_class}"{driver_marker}>')
-    parts.append(f'<a{driver_link_class} href="/docs/guide/connect/drivers.html">Database Drivers</a>')
-    # Furo will add has-children class and icon structure when it detects the <ul>
-    parts.append('<ul>')
-    if show_drivers:
-        for proj_name, display_name, url in _DRIVER_CONFIGS:
-            builder.add_project_nav_item(proj_name, display_name, url)
-    parts.append('</ul>')
-    parts.append('</li>')
-
-
     # Add Support and Community links section after a border
     parts.append('<li class="navleft-item border-top"><a target="_blank" href="/support/">Support</a></li>')
     parts.append('<li class="navleft-item"><a target="_blank" href="https://community.cratedb.com/">Community</a></li>')
-
 
     # Other internal docs projects only included in special builds
     builder.add_project_nav_item('CrateDB documentation theme', 'Documentation theme', '', border_top=True, public_docs=False)
