@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Made driver projects use a standalone primary navigation
 
 2026/01/14 0.47.0
 -----------------
