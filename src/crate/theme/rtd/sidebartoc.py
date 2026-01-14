@@ -114,6 +114,15 @@ def _generate_crate_navigation_html(context):
         parts.append('</li>')
         return ''.join(parts)
 
+    # Driver projects use a standalone primary navigation
+    if project in ['CrateDB JDBC', 'CrateDB Npgsql', 'CrateDB DBAL', 'CrateDB PDO', 'CrateDB Python', 'SQLAlchemy Dialect']:
+        current_class = ' class="current"' if pagename == master_doc else ''
+        parts.append(f'<li{current_class}>')
+        parts.append(f'<a class="current-active" href="{master_path}">Documentation</a>')
+        parts.append(_get_toctree())
+        parts.append('</li>')
+        parts.append('<li class="navleft-item border-top"><a href="https://cratedb.com/docs/guide/connect/">All database drivers</a></li>')
+        return ''.join(parts)
 
     # Start CrateDB docs TOC with a Search box
     parts.append('<li>')
