@@ -194,3 +194,17 @@ a code {
 div.topic {
   border: 0;
 }
+
+/* External link icon for sidebar TOC links */
+.toctree a.external-link::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  background: url(../images/icon_link_external.svg) no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}

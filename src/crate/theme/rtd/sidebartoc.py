@@ -179,8 +179,8 @@ def _generate_crate_navigation_html(context):
 
 
     # Add Support and Community links section after a border
-    parts.append('<li class="navleft-item border-top"><a target="_blank" href="/support/">Support</a></li>')
-    parts.append('<li class="navleft-item"><a target="_blank" href="https://community.cratedb.com/">Community</a></li>')
+    parts.append('<li class="navleft-item border-top"><a class="external-link" target="_blank" href="/support/">Support</a></li>')
+    parts.append('<li class="navleft-item"><a class="external-link" target="_blank" href="https://community.cratedb.com/">Community</a></li>')
 
 
     # Other internal docs projects only included in special builds
