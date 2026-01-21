@@ -6,10 +6,10 @@ with anchors for [deep linking](#step-two).
 
 ## h2 header before stepper
 
-Perhaps some into text before stepper directive "::::::{stepper}"
+Perhaps some intro text before stepper directive "::::::{stepper}"
 
 :::::{stepper}
-Or is can be after the directive.
+Or it can be after the directive.
 The steps are defined by the first header. And only that level defines steps
 afterward.
 
