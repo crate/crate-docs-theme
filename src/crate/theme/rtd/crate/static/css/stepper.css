@@ -56,19 +56,21 @@ html[data-theme="dark"] {
   z-index: 1;
 }
 
-/* Header (number + title on same line) */
-.stepper-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
-.stepper-title {
+/* Step title - first heading aligned with the number badge */
+.stepper-step > .stepper-content > h1:first-child,
+.stepper-step > .stepper-content > h2:first-child,
+.stepper-step > .stepper-content > h3:first-child,
+.stepper-step > .stepper-content > h4:first-child,
+.stepper-step > .stepper-content > h5:first-child,
+.stepper-step > .stepper-content > h6:first-child {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  margin: 0 0 0.75rem 0 !important;
+  padding: 0 !important;
+  line-height: var(--stepper-number-size) !important;
 }
 
-/* Content */
+/* Content spacing */
 .stepper-content > *:first-child {
   margin-top: 0;
 }
