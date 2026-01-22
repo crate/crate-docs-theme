@@ -81,6 +81,8 @@ class StepperDirective(SphinxDirective):
         intro_content = []
 
         for child in container.children:
+            # MyST parser uses rubric nodes for headings when they appear inside
+            # a directive/container.
             if isinstance(child, nodes.rubric):
                 # Get heading info
                 heading_id = child.get('ids', [''])[0] if child.get('ids') else ''
