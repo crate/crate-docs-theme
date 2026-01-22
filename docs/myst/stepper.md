@@ -11,7 +11,7 @@ Perhaps some intro text before stepper directive "::::::{stepper}"
 :::::{stepper}
 Or it can be after the directive.
 The steps are defined by the first header. And only that level defines steps
-afterward.
+afterwards.
 
 ### Step one defined with a h3 "###"
 
