@@ -83,49 +83,59 @@ class StepperDirective(SphinxDirective):
         for child in container.children:
             # MyST parser uses rubric nodes for headings when they appear inside
             # a directive/container.
+            is_markdown_heading = False
+
             if isinstance(child, nodes.rubric):
                 # Get heading info
                 heading_id = child.get('ids', [''])[0] if child.get('ids') else ''
                 heading_text = child.astext()
-                heading_level = heading_levels.get(heading_id, 3)
 
-                # Only treat as new step if at the step level
-                if heading_level == step_level:
-                    # Close previous step if any
-                    if current_step is not None:
-                        stepper += current_step
+                # Only process as a heading if this rubric corresponds to a
+                # markdown heading (found in pre-scan). Explicit rubric directives
+                # won't be in heading_levels and should be treated as regular content.
+                if heading_id in heading_levels:
+                    is_markdown_heading = True
+                    heading_level = heading_levels[heading_id]
 
-                    # Add intro content before first step
-                    if intro_content:
-                        for item in intro_content:
-                            stepper += item
-                        intro_content = []
+                    # Only treat as new step if at the step level
+                    if heading_level == step_level:
+                        # Close previous step if any
+                        if current_step is not None:
+                            stepper += current_step
 
-                    # Create new step
-                    current_step = step_node()
-                    current_step['step-number'] = step_number
-                    current_step['classes'] = ['stepper-step']
+                        # Add intro content before first step
+                        if intro_content:
+                            for item in intro_content:
+                                stepper += item
+                            intro_content = []
 
-                    # Create step title node
-                    title_node = step_title_node()
-                    title_node['ids'] = child.get('ids', [])
-                    title_node['level'] = heading_level
-                    title_node['text'] = heading_text
-                    current_step += title_node
+                        # Create new step
+                        current_step = step_node()
+                        current_step['step-number'] = step_number
+                        current_step['classes'] = ['stepper-step']
 
-                    step_number += 1
-                else:
-                    # Nested heading - add as content within current step
-                    if current_step is not None:
-                        # Convert rubric to a proper heading node for nested headings
+                        # Create step title node
                         title_node = step_title_node()
                         title_node['ids'] = child.get('ids', [])
                         title_node['level'] = heading_level
                         title_node['text'] = heading_text
                         current_step += title_node
+
+                        step_number += 1
                     else:
-                        intro_content.append(child)
-            else:
+                        # Nested heading - add as content within current step
+                        if current_step is not None:
+                            # Convert rubric to a proper heading node for nested headings
+                            title_node = step_title_node()
+                            title_node['ids'] = child.get('ids', [])
+                            title_node['level'] = heading_level
+                            title_node['text'] = heading_text
+                            current_step += title_node
+                        else:
+                            intro_content.append(child)
+
+            # Handle regular content (non-heading rubrics and all other nodes)
+            if not is_markdown_heading:
                 if current_step is not None:
                     current_step += child
                 else:
