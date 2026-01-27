@@ -32,6 +32,11 @@ Steps can contain lists and admonitions:
 Example admonition.
 :::
 
+You can also use ":::{rubric}":
+
+:::{rubric} Rubric text
+:::
+
 ### Step three (a h3 header)
 
 Steps can contain nested headings. You just have to make them one level smaller.
