@@ -5,6 +5,10 @@ CHANGES
 
 Unreleased
 ----------
+
+
+2026/01/27 0.48.0
+-----------------
 - Made driver projects use a standalone primary navigation
 - Removed outmoded database drivers section
 - Added external-link icon to Support and Community TOC entries
