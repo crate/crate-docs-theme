@@ -7,7 +7,7 @@
     "js-cookie": "^3.0.5",
     "normalize.css": "^8.0.1",
     "postcss-loader": "^8.2",
-    "sass": "^1.97.1",
+    "sass": "^1.97.3",
     "sass-loader": "^16.0",
     "sticky-sidebar": "^3.3.1",
     "style-loader": "^4.0",
