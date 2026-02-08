@@ -37,5 +37,6 @@ intersphinx_mapping["sde"] = ("https://sphinx-design-elements.readthedocs.io/en/
 
 
 linkcheck_ignore += [
+    "https://docutils.sourceforge.io/",
     "https://github.com/",
 ]
