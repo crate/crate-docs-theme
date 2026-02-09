@@ -2,6 +2,14 @@
  * Furo-Compatible Collapsible Navigation styling for CrateDB Theme
  */
 
+/* Reduce spacing around TOC section captions */
+ul.toctree.nav p.caption {
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .bs-docs-sidenav.sidebar-tree {
   /* Match label height to our link height */
   li.has-children > label {
