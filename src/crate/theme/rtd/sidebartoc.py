@@ -24,6 +24,8 @@ from datetime import datetime
 import os
 import re
 
+from crate.theme.rtd.icons import ICON_BUILD, ICON_OPERATIONS, ICON_REFERENCE, ICON_TOOLS
+
 
 def _slugify_id(text):
     """Normalize text to a safe HTML ID: alphanumerics and hyphens only."""
@@ -133,7 +135,17 @@ def _generate_crate_navigation_html(context):
 
     # Add Guide's toctree entries (Overview, Getting Started, captions, etc.)
     if project == 'CrateDB: Guide':
-        parts.append(_get_toctree())
+        toctree_html = _get_toctree()
+        # Add icons to captions
+        toctree_html = toctree_html.replace(
+            '<span class="caption-text">Build</span>',
+            f'{ICON_BUILD}<span class="caption-text">Build</span>'
+        )
+        toctree_html = toctree_html.replace(
+            '<span class="caption-text">Operations</span>',
+            f'{ICON_OPERATIONS}<span class="caption-text">Operations</span>'
+        )
+        parts.append(toctree_html)
     else:
         # Show Guide's navigation structure when viewing other projects
         # This must be kept in sync with the Guide's index.md toctree
@@ -141,25 +153,25 @@ def _generate_crate_navigation_html(context):
         builder.add_nav_link('Getting Started', '/docs/guide/start/')
 
         # BUILD section
-        parts.append('<p class="caption" role="heading"><span class="caption-text">Build</span></p>')
+        parts.append(f'<p class="caption" role="heading">{ICON_BUILD}<span class="caption-text">Build</span></p>')
         builder.add_nav_link('Load data into CrateDB', '/docs/guide/ingest/')
         builder.add_nav_link('Connect / Drivers', '/docs/guide/connect/')
         builder.add_nav_link('Integrations', '/docs/guide/integrate/')
         builder.add_nav_link('All Features', '/docs/guide/feature/')
 
         # OPERATIONS section
-        parts.append('<p class="caption" role="heading"><span class="caption-text">Operations</span></p>')
+        parts.append(f'<p class="caption" role="heading">{ICON_OPERATIONS}<span class="caption-text">Operations</span></p>')
         builder.add_nav_link('Install', '/docs/guide/install/')
         builder.add_nav_link('Administration', '/docs/guide/admin/')
         builder.add_nav_link('Performance guides', '/docs/guide/performance/')
 
     # Add Reference section with caption
-    parts.append('<p class="caption" role="heading"><span class="caption-text">Reference</span></p>')
+    parts.append(f'<p class="caption" role="heading">{ICON_REFERENCE}<span class="caption-text">Reference</span></p>')
     builder.add_project_nav_item('CrateDB Cloud', 'CrateDB Cloud', '/docs/cloud/')
     builder.add_project_nav_item('CrateDB: Reference', 'Reference Manual', '/docs/crate/reference/')
 
     # Add Tools section with caption
-    parts.append('<p class="caption" role="heading"><span class="caption-text">Tools</span></p>')
+    parts.append(f'<p class="caption" role="heading">{ICON_TOOLS}<span class="caption-text">Tools</span></p>')
     builder.add_project_nav_item('CrateDB: Admin UI', 'Admin UI', '/docs/crate/admin-ui/')
     builder.add_project_nav_item('CrateDB: Crash CLI', 'CrateDB CLI', '/docs/crate/crash/')
     builder.add_project_nav_item('CrateDB Cloud: Croud CLI', 'Cloud CLI', '/docs/cloud/cli/')
