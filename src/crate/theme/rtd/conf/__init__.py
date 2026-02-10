@@ -182,6 +182,9 @@ linkcheck_anchors_ignore_for_url = [
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 15
+linkcheck_request_headers = {
+    "User-Agent": "CrateDB docs linkcheck"
+}
 
 # -- Options for MyST -------------------------------------------------
 myst_heading_anchors = 3

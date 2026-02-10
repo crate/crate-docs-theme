@@ -5,7 +5,7 @@ CHANGES
 
 Unreleased
 ----------
-
+- Configured HTTP user agent per ``linkcheck_request_headers`` setting
 
 2026/01/27 0.48.0
 -----------------
