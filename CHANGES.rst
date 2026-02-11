@@ -5,7 +5,7 @@ CHANGES
 
 Unreleased
 ----------
-
+- Restructure top-level TOC by unfolding Handbook into groups with captions.
 
 2026/01/27 0.48.0
 -----------------
