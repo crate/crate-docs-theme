@@ -126,6 +126,7 @@ def _generate_crate_navigation_html(context):
         parts.append('<li class="navleft-item border-top"><a href="https://cratedb.com/docs/guide/connect/">All database drivers</a></li>')
         return ''.join(parts)
 
+
     # Start CrateDB docs TOC with a Search box
     parts.append('<li>')
     parts.append('<div class="search-link">')
@@ -136,6 +137,14 @@ def _generate_crate_navigation_html(context):
     # Add Guide's toctree entries (Overview, Getting Started, captions, etc.)
     if project == 'CrateDB: Guide':
         toctree_html = _get_toctree()
+        # Rewrite the Overview sidebar link to point to root (index.md)
+        # instead of overview/. The overview content lives in index.md;
+        # overview/index.md is only kept for toctree structure.
+        toctree_html = re.sub(
+            r'href="([^"]*overview/(?:index\.html)?)"',
+            f'href="{master_path}"',
+            toctree_html
+        )
         # Add icons to captions
         toctree_html = toctree_html.replace(
             '<span class="caption-text">Build</span>',
@@ -149,7 +158,7 @@ def _generate_crate_navigation_html(context):
     else:
         # Show Guide's navigation structure when viewing other projects
         # This must be kept in sync with the Guide's index.md toctree
-        builder.add_nav_link('Overview', '/docs/guide/overview/')
+        builder.add_nav_link('Overview', '/docs/guide/')
         builder.add_nav_link('Getting Started', '/docs/guide/start/')
 
         # BUILD section
@@ -161,14 +170,14 @@ def _generate_crate_navigation_html(context):
 
         # OPERATIONS section
         parts.append(f'<p class="caption" role="heading">{ICON_OPERATIONS}<span class="caption-text">Operations</span></p>')
-        builder.add_nav_link('Install', '/docs/guide/install/')
+        builder.add_nav_link('Installation', '/docs/guide/install/')
         builder.add_nav_link('Administration', '/docs/guide/admin/')
         builder.add_nav_link('Performance guides', '/docs/guide/performance/')
 
     # Add Reference section with caption
-    parts.append(f'<p class="caption" role="heading">{ICON_REFERENCE}<span class="caption-text">Reference</span></p>')
+    parts.append(f'<p class="caption" role="heading">{ICON_REFERENCE}<span class="caption-text">References</span></p>')
     builder.add_project_nav_item('CrateDB Cloud', 'CrateDB Cloud', '/docs/cloud/')
-    builder.add_project_nav_item('CrateDB: Reference', 'Reference Manual', '/docs/crate/reference/')
+    builder.add_project_nav_item('CrateDB: Reference', 'CrateDB', '/docs/crate/reference/')
 
     # Add Tools section with caption
     parts.append(f'<p class="caption" role="heading">{ICON_TOOLS}<span class="caption-text">Tools</span></p>')

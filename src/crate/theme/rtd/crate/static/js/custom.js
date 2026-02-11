@@ -160,4 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // If <ul> has children, default behavior (toggle checkbox) applies
         });
     });
+
+    // Mark Overview as current on root page. The overview content lives in
+    // index.md but Sphinx only marks toctree entries as "current" when the
+    // pagename matches. Since the Overview href is rewritten to "#" (self)
+    // on the root page, we detect that and add the current class.
+    document.querySelectorAll('.sidebar-tree .toctree-l1 > a[href="#"]').forEach((a) => {
+        a.classList.add('current');
+        a.closest('li').classList.add('current');
+    });
 });
