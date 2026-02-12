@@ -19,6 +19,7 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 import os
+import warnings
 
 from crate.theme import rtd as theme
 from crate.theme.rtd import __version__
@@ -182,6 +183,14 @@ linkcheck_anchors_ignore_for_url = [
 ]
 linkcheck_retries = 3
 linkcheck_timeout = 15
+
+# Suppress myst-nb deprecation warnings until fixed upstream.
+# https://github.com/executablebooks/MyST-NB/issues/645
+warnings.filterwarnings(
+    "ignore",
+    message=r".*myst_nb\.sphinx_\.Parser\.env.*",
+    category=DeprecationWarning,
+)
 
 # -- Options for MyST -------------------------------------------------
 myst_heading_anchors = 3
