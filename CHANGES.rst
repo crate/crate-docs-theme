@@ -6,7 +6,10 @@ CHANGES
 Unreleased
 ----------
 
+2026/02/12 0.49.1
+-----------------
 - Fixed TOC expansion for direct links.
+- Fixed some build warnings and timeouts for link-checks
 
 2026/02/12 0.49.0
 -----------------
