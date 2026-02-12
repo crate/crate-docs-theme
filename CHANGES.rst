@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 
+- Fixed TOC expansion for direct links.
+
 2026/02/12 0.49.0
 -----------------
 - Restructure top-level TOC by unfolding Handbook into groups with captions.
