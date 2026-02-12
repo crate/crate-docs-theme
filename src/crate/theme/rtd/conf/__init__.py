@@ -185,7 +185,7 @@ linkcheck_retries = 3
 linkcheck_timeout = 15
 
 # Suppress myst-nb deprecation warnings until fixed upstream.
-# https://github.com/executablebooks/MyST-NB/issues/645
+# https://github.com/executablebooks/MyST-Parser/pull/1079
 warnings.filterwarnings(
     "ignore",
     message=r".*myst_nb\.sphinx_\.Parser\.env.*",
