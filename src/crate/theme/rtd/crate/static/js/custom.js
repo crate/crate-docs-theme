@@ -79,6 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Restore state on page load
     restoreNavState();
 
+    let stateChanged = false;
+
+    // Ensure the path to the current page is always expanded in the TOC.
+    // When opening a page directly via URL (not by navigating within the
+    // site), restoreNavState() may set checkboxes to a previously saved
+    // state that doesn't include the current page's ancestors as expanded.
+    // Furo marks these ancestors with the "current" class, so we force
+    // their checkboxes open.
+    document.querySelectorAll('.sidebar-tree li.current > .toctree-checkbox').forEach((checkbox) => {
+        if (!checkbox.checked) {
+            checkbox.checked = true;
+            stateChanged = true;
+        }
+    });
+
     // Auto-expand sections marked with data-auto-expand="true"
     // Used for Database Drivers when viewing a driver project.
     // Only auto-expand if user hasn't explicitly set a preference for this checkbox.
@@ -91,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Ignore parse errors, treat as no preferences
         }
     }
-    let autoExpandStateChanged = false;
 
     document.querySelectorAll('[data-auto-expand="true"]').forEach((li) => {
         const checkbox = li.querySelector('.toctree-checkbox');
@@ -99,13 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Only auto-expand if user has no saved preference for this checkbox
             if (!(checkbox.id in userPreferences)) {
                 checkbox.checked = true;
-                autoExpandStateChanged = true;
+                stateChanged = true;
             }
         }
     });
 
-    // Save the auto-expanded state so it persists
-    if (autoExpandStateChanged) {
+    // Save state if initialization expanded any sections
+    if (stateChanged) {
         saveNavState();
     }
 
