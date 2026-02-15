@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Navigation: Added references to CrateDB MCP and CrateDB Toolkit
 
 2026/02/12 0.49.1
 -----------------
