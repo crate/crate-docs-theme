@@ -175,10 +175,6 @@ linkcheck_ignore = [
     "https://www.gnu.org/.*",
     # Temporary failure in name resolution
     "https://jupysql.ploomber.io/.*",
-    # Sporadic CERTIFICATE_VERIFY_FAILED errors.
-    # https://github.com/crate/crate-docs-theme/issues/706
-    r"https://example.com.*",
-    r"https://www.example.com.*",
 ]
 linkcheck_anchors_ignore_for_url = [
     # Requires JavaScript.
