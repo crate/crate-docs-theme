@@ -64,7 +64,7 @@ setup(
         "myst-nb<1.4",
         "myst-parser[linkify]<6",
         "snowballstemmer<4",
-        "sphinx>=7.1,<10",
+        "sphinx @ git+https://github.com/jayaddison/sphinx@issue-14307/linkcheck-netiquette-autoignore-reserved-domain-names",
         "sphinx-basic-ng==1.0.0b2",
         "sphinx-copybutton>=0.3.1,<1",
         "sphinx-design-elements<0.5",
