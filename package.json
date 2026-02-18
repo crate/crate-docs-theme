@@ -19,5 +19,9 @@
     "loader-utils": "^1.4.2",
     "markdown-it": "^13.0.1",
     "minimist": "^1.2.7"
+  },
+  "dependencies": {
+    "swup": "^4.8.2",
+    "swup-morph-plugin": "^1.3.0"
   }
 }
