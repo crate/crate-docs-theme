@@ -125,9 +125,15 @@ function syncClassesByIndex(liveSidebar, liveAnchors, fetchedAnchors) {
     liveAnchors.forEach((liveAnchor, index) => {
         const fetchedAnchor = fetchedAnchors[index];
 
-        // Sync hrefs from fetched sidebar (fixes self-referencing "#" links).
+        // Sync hrefs from fetched sidebar to correct relative paths.
+        // Skip non-navigable values (e.g. '#') that Sphinx renders for the
+        // current page's own toctree entry: syncing '#' would overwrite the
+        // live absolute path and cause the next click on that link to fall
+        // through to a full-page reload via ignoreVisit.
         const fetchedHref = fetchedAnchor.getAttribute('href') || '';
-        liveAnchor.setAttribute('href', resolveLocalHref(fetchedHref, baseUrl));
+        if (!isNonNavigableHref(fetchedHref)) {
+            liveAnchor.setAttribute('href', resolveLocalHref(fetchedHref, baseUrl));
+        }
 
         liveAnchor.classList.toggle('current', fetchedAnchor.classList.contains('current'));
 
