@@ -121,6 +121,8 @@ div.hero.danger {
   color: var(--color-sidebar-left-link);
   padding: 4px 0px;
   display: block;
+  /* Fix: reserve bold-width space so font-weight changes don't shift layout */
+  min-height: calc(4px * 2 + 14px * 1.2);
 }
 
 @media all and (max-width: 540px) {
@@ -136,10 +138,7 @@ div.hero.danger {
   font-weight: 600;
 }
 
-.bs-docs-sidenav .toctree ul > li.current > a {
-  margin-bottom: 3px !important;
-  display: block;
-}
+/* margin-bottom removed: it caused extra space under the selected TOC entry. */
 
 @media all and (min-width: 768px) {
   .bs-docs-sidenav ol,

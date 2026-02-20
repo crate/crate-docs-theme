@@ -6,6 +6,8 @@ CHANGES
 Unreleased
 ----------
 - Navigation: Added references to CrateDB MCP and CrateDB Toolkit
+- Silky smooth navigation in TOC - gone are the flickering.
+- Above enables animated expand/collapse icons.
 
 2026/02/12 0.49.1
 -----------------
