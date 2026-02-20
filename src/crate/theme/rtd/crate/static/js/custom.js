@@ -118,6 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Enable icon rotation animations after initial state is restored.
+    // Using double-rAF to ensure the browser has painted the initial state
+    // before we add the transition, avoiding an animated jump on page load.
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            document.querySelector('.sidebar-tree')?.classList.add('toc-animations-ready');
+        });
+    });
+
     // Make clicking the link text expand the section and collapse siblings.
     // This provides consistent UX: clicking any title shows only that section's
     // children, matching what happens with cross-project navigation.

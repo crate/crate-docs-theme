@@ -20,6 +20,16 @@ ul.toctree.nav p.caption {
   display: inline-block;
 }
 
+/*
+ * Animate the expand/collapse icon rotation when a section is toggled.
+ * Gated on .toc-animations-ready so the transition does not fire during the
+ * initial page-load state restoration (where JS sets checkbox.checked
+ * synchronously before the first paint).
+ */
+.toc-animations-ready .toctree-checkbox ~ label .icon svg {
+  transition: transform 200ms ease;
+}
+
 .bs-docs-sidenav.sidebar-tree {
   /* Match label height to our link height */
   li.has-children > label {
