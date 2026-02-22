@@ -6,6 +6,12 @@ CHANGES
 Unreleased
 ----------
 
+2026/02/22 0.50.1
+-----------------
+- Fix: CSS now loads independently of JavaScript, reducing load time and
+preventing unstyled pages on slow connections.
+- Navigation: Preload pages on hover so first-visit TOC clicks feel instant.
+
 2026/02/20 0.50.0
 -----------------
 - Navigation: Added references to CrateDB MCP and CrateDB Toolkit
