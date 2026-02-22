@@ -17,6 +17,7 @@
 
 import Swup from 'swup';
 import SwupMorphPlugin from 'swup-morph-plugin';
+import SwupPreloadPlugin from '@swup/preload-plugin';
 
 const SIDEBAR_SELECTOR = '.sidebar-tree';
 const MAIN_CONTAINER_SELECTOR = 'main.sb-main';
@@ -340,7 +341,7 @@ export function initSwup() {
 
             // Morph main content in-place rather than replacing it wholesale,
             // which avoids layout thrash and preserves focus/scroll in the content area.
-            plugins: [new SwupMorphPlugin()],
+            plugins: [new SwupMorphPlugin(), new SwupPreloadPlugin()],
 
             // Disable animation detection warnings when no transition-* classes exist
             animationSelector: false,
