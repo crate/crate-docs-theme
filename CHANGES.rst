@@ -6,6 +6,12 @@ CHANGES
 Unreleased
 ----------
 
+
+2026/02/22 0.50.2
+-----------------
+- Fix: "Overview" TOC entry wasn't bolded when it's subpage had been visited and
+Overview was selected again.
+
 2026/02/22 0.50.1
 -----------------
 - Fix: CSS now loads independently of JavaScript, reducing load time and

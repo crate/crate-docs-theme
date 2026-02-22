@@ -136,13 +136,18 @@ function syncClassesByIndex(liveSidebar, liveAnchors, fetchedAnchors) {
             liveAnchor.setAttribute('href', resolveLocalHref(fetchedHref, baseUrl));
         }
 
-        liveAnchor.classList.toggle('current', fetchedAnchor.classList.contains('current'));
+        // '#' href means this is the current page's own toctree entry (Sphinx
+        // self-reference, or our Overview link rewritten to master_path="#" on
+        // the root page by sidebartoc.py). Sphinx doesn't add 'current' to the
+        // Overview entry in that case, so we infer it from the href instead.
+        const isSelfRef = fetchedHref === '#';
+        liveAnchor.classList.toggle('current', fetchedAnchor.classList.contains('current') || isSelfRef);
 
         const liveItem = liveAnchor.closest('li');
         const fetchedItem = fetchedAnchor.closest('li');
         if (liveItem && fetchedItem) {
-            liveItem.classList.toggle('current', fetchedItem.classList.contains('current'));
-            liveItem.classList.toggle('current-page', fetchedItem.classList.contains('current-page'));
+            liveItem.classList.toggle('current', fetchedItem.classList.contains('current') || isSelfRef);
+            liveItem.classList.toggle('current-page', fetchedItem.classList.contains('current-page') || isSelfRef);
         }
     });
 
