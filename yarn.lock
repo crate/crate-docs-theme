@@ -1417,10 +1417,10 @@ swup-morph-plugin@^1.3.0:
     "@swup/plugin" "^4.0.0"
     morphdom "^2.7.0"
 
-swup@^4.0.0, swup@^4.8.2:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/swup/-/swup-4.8.2.tgz#51e12dad05eb7ea8f0ffb3d60ebff9f545643d48"
-  integrity sha512-Art2vB4idZ7EFZQhhA47ZifkmZMPgcAwE6z28BhorbTYCO8jcovcc5MasX49GGdXYJWO43DTut7iZb5yrQdEfA==
+swup@^4.0.0, swup@^4.8.3:
+  version "4.8.3"
+  resolved "https://registry.yarnpkg.com/swup/-/swup-4.8.3.tgz#ea2f0600f20eff69225fcf4f0c581304a9c4ee94"
+  integrity sha512-2U+mE7SnU4Jm+H82C2FChML04v5kb+fnf+2aYP2e0MX7vWOnmd6SHvjSBF8MH3HOrwalaXnynQVImgCaxGZxtA==
   dependencies:
     delegate-it "^6.0.0"
     opencollective-postinstall "^2.0.2"
