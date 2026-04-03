@@ -7,3 +7,14 @@
 - [sphinx{design} » Grids](inv:sd#sd-grids)
 - [sphinx{design} » Cards](inv:sd#sd-cards)
 - [sphinx{design} » Badges](inv:sd#badges)
+
+### Examples
+
+:::{card} Card Title
+:class-footer: text-smaller
+Header
+^^^
+Card content
++++
+Footer
+:::

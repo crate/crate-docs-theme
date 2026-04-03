@@ -15,3 +15,15 @@ Documentation
 - :ref:`sphinx{design} » Grids <sd:sd-grids>`
 - :ref:`sphinx{design} » Cards <sd:sd-cards>`
 - :ref:`sphinx{design} » Badges <sd:badges>`
+
+Examples
+========
+
+.. card:: Card Title
+    :class-footer: text-smaller
+
+    Header
+    ^^^
+    Card content
+    +++
+    Footer
