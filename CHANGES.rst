@@ -5,6 +5,9 @@ CHANGES
 
 Unreleased
 ----------
+
+2026/03/23 0.50.3
+-----------------
 - Fix: Auxiliary projects lost the search box
 
 2026/02/22 0.50.2
