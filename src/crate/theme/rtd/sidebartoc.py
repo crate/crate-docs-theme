@@ -106,7 +106,6 @@ def _generate_crate_navigation_html(context):
     parts = ['<ul class="toctree nav nav-list">']
     builder = _NavBuilder(parts, project, master_path, _get_toctree)
 
-
     # Special project used standalone
     if project == 'SQL 99':
         current_class = ' class="current"' if pagename == master_doc else ''
@@ -115,6 +114,13 @@ def _generate_crate_navigation_html(context):
         parts.append(_get_toctree(maxdepth=2))
         parts.append('</li>')
         return ''.join(parts)
+
+    # Start CrateDB docs TOC with a Search box
+    parts.append('<li>')
+    parts.append('<div class="search-link">')
+    parts.append('<div id="docsearch" style="min-height: 36px; margin-bottom: 20px;"></div>')
+    parts.append('</div>')
+    parts.append('</li>')
 
     # Driver projects use a standalone primary navigation
     if project in ['CrateDB JDBC', 'CrateDB Npgsql', 'CrateDB DBAL', 'CrateDB PDO', 'CrateDB Python', 'SQLAlchemy Dialect']:
@@ -125,14 +131,6 @@ def _generate_crate_navigation_html(context):
         parts.append('</li>')
         parts.append('<li class="navleft-item border-top"><a href="https://cratedb.com/docs/guide/connect/">All database drivers</a></li>')
         return ''.join(parts)
-
-
-    # Start CrateDB docs TOC with a Search box
-    parts.append('<li>')
-    parts.append('<div class="search-link">')
-    parts.append('<div id="docsearch" style="min-height: 36px; margin-bottom: 20px;"></div>')
-    parts.append('</div>')
-    parts.append('</li>')
 
     # Add Guide's toctree entries (Overview, Getting Started, captions, etc.)
     if project == 'CrateDB: Guide':
