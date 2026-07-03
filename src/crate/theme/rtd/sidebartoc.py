@@ -183,6 +183,7 @@ def _generate_crate_navigation_html(context):
     builder.add_project_nav_item('CrateDB: Crash CLI', 'CrateDB CLI', '/docs/crate/crash/')
     builder.add_project_nav_item('CrateDB Cloud: Croud CLI', 'Cloud CLI', '/docs/cloud/cli/')
     parts.append('<li class="navleft-item"><a class="external-link" target="_blank" href="https://cratedb-mcp.readthedocs.io/">CrateDB MCP</a></li>')
+    parts.append('<li class="navleft-item"><a class="external-link" target="_blank" href="https://github.com/crate/agent-skills/">CrateDB Agent Skills</a></li>')
     parts.append('<li class="navleft-item"><a class="external-link" target="_blank" href="https://cratedb-toolkit.readthedocs.io/">CrateDB Toolkit</a></li>')
 
     # Add Support and Community links section after a border
