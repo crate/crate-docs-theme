@@ -1040,11 +1040,6 @@ normalize.css@^8.0.1:
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
   integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
-opencollective-postinstall@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
-  integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
-
 p-limit@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
@@ -1370,13 +1365,12 @@ swup-morph-plugin@^1.3.0:
     "@swup/plugin" "^4.0.0"
     morphdom "^2.7.0"
 
-swup@^4.0.0, swup@^4.8.3:
-  version "4.8.3"
-  resolved "https://registry.yarnpkg.com/swup/-/swup-4.8.3.tgz#ea2f0600f20eff69225fcf4f0c581304a9c4ee94"
-  integrity sha512-2U+mE7SnU4Jm+H82C2FChML04v5kb+fnf+2aYP2e0MX7vWOnmd6SHvjSBF8MH3HOrwalaXnynQVImgCaxGZxtA==
+swup@^4.0.0, swup@^4.9.2:
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/swup/-/swup-4.9.2.tgz#a4f479e0505d220a8cca1e93b305ccaa459ca216"
+  integrity sha512-AKpBpgsc+MGllKWDGidzPoKxpkE338FnMjCetqynx+gQPA2Jd7QqcwlHxd82USB9RQsn9LbXhwsME6b/WlQRng==
   dependencies:
     delegate-it "^6.0.0"
-    opencollective-postinstall "^2.0.2"
     path-to-regexp "^6.2.1"
 
 tapable@^2.2.1, tapable@^2.3.0:
