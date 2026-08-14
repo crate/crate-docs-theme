@@ -61,7 +61,7 @@ setup(
         "furo==2025.12.19",
         "jinja2>=3,<4",
         "jupysql<0.12",
-        "myst-nb<1.4",
+        "myst-nb<1.5",
         "myst-parser[linkify]<6",
         "snowballstemmer<4",
         "sphinx>=7.1,<10",
