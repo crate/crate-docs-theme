@@ -5,6 +5,37 @@ CHANGES
 
 Unreleased
 ----------
+- Point ``html_baseurl`` of all projects at ``docs.cratedb.com``, keeping the
+  static form the modules already used. ``theme.py`` keeps its own base URL.
+- Add ``crate.theme.rtd.conf.crate_docs`` configuration for ``crate-docs``,
+  the root project of the documentation site
+- Remove the Edge Side Includes navigation from ``sections/header.html``,
+  together with its inline fallback menu. Only the "Login" and "Get Started"
+  buttons remain
+- Remove ``sections/announcement.html`` and its ``page.html`` block, which
+  contained nothing but an ESI include
+- Remove the orphaned ``.esi-mobile`` rules from ``custom.css``
+- Remove ``set_proxied_api_host()`` and ``set_proxied_static_path()``. Both
+  were dead code and they are unnecessary when Read the Docs serves the 
+  documentation from the web root of its own domain
+- Migrate ``url_path`` of all projects to the ``projects/<slug>`` prefix used
+  for Read the Docs subprojects. Slugs are flat, because a Read the Docs
+  subproject alias is a single path segment: ``crate/reference`` becomes
+  ``crate-reference``, ``cloud/cli`` becomes ``cloud-cli``, and so on. The
+  slugs now match the ``intersphinx_mapping`` keys
+- Make links to ``cratedb.com`` absolute, so they no longer resolve
+  against the documentation domain
+- Update ``ogp_site_url`` and the cross-project links in ``sidebartoc.py``
+- Update the "Get Started" link to ``https://cratedb.com/start-free``
+- Fix: SQL 99 search was non-functional. The snippet loading the search index
+  sat outside any Jinja block in ``search.html``, so it was silently discarded
+  when the template was rendered, and the page pulled in neither
+  ``searchtools.js`` nor a results container. It now loads Sphinx's search
+  machinery and renders into ``#search-results``
+- Remove the ``crate-docs`` entry from ``intersphinx_mapping``, and the
+  matching ``:ref:`` in ``docs/projects.rst``. It pointed at ``/en/latest/``,
+  which breaks when that project switches to a single-version URL scheme
+
 
 2026/03/23 0.50.3
 -----------------

@@ -100,6 +100,23 @@ sitemap_excludes = [
 ]
 
 # Configure intersphinx mapping
+#
+# TODO: Flip these to https://docs.cratedb.com/projects/... as part of the
+#       migration, but only *after* that domain actually serves content.
+#
+#       New URLs, for reference when the time comes:
+#         guide               -> https://docs.cratedb.com/projects/guide/
+#         crate-reference     -> https://docs.cratedb.com/projects/crate-reference/en/latest/
+#         crate-admin-ui      -> https://docs.cratedb.com/projects/crate-admin-ui/en/latest/
+#         crate-crash         -> https://docs.cratedb.com/projects/crate-crash/en/latest/
+#         crate-dbal          -> https://docs.cratedb.com/projects/dbal/en/latest/
+#         crate-jdbc          -> https://docs.cratedb.com/projects/jdbc/en/latest/
+#         crate-npgsql        -> https://docs.cratedb.com/projects/npgsql/en/latest/
+#         crate-pdo           -> https://docs.cratedb.com/projects/pdo/en/latest/
+#         crate-python        -> https://docs.cratedb.com/projects/python/en/latest/
+#         sqlalchemy-cratedb  -> https://docs.cratedb.com/projects/sqlalchemy-cratedb/
+#         cloud               -> https://docs.cratedb.com/projects/cloud/en/latest/
+#         cloud-cli           -> https://docs.cratedb.com/projects/cloud-cli/en/latest/
 intersphinx_mapping = {
 
     # CrateDB General
