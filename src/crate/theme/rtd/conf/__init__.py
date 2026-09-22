@@ -147,7 +147,7 @@ intersphinx_mapping = {
 #   So you can either treat it as 110, or, write your Descriptions to 300 but make sure the first 110
 #   is the critical part and still makes sense when it gets cut off.
 #   -- https://stackoverflow.com/questions/8914476/facebook-open-graph-meta-tags-maximum-content-length
-ogp_site_url = "https://cratedb.com/docs/"
+ogp_site_url = "https://docs.cratedb.com/"
 ogp_description_length = 300
 ogp_site_name = "CrateDB Documentation"
 ogp_image = "https://crate-docs-theme.readthedocs.io/en/latest/_static/images/cratedb-logo-h630.png"
