@@ -23,10 +23,12 @@
 from crate.theme.rtd.conf import *
 
 # You can change the `project` value to anything you want because
-# `src/crate/theme/rtd/crate/sidebartoc.html` does not have a menu item for
+# `src/crate/theme/rtd/sidebartoc.py` does not have a menu item for
 # this project.
 project = "CrateDB documentation theme"
 html_title = project
 
-url_path = "docs/theme"
-html_baseurl = "https://cratedb.com/%s/" % url_path
+# The theme's own documentation is served from its own Read the Docs
+# domain, not as a subproject of `crate-docs`, so it carries no
+# `projects/` path and needs its own base URL.
+html_baseurl = "https://crate-docs-theme.readthedocs.io/"

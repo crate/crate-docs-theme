@@ -22,13 +22,22 @@
 
 from crate.theme.rtd.conf import *
 
-# If you update the `project` value here, you must update it in the
-# `src/crate/theme/rtd/crate/sidebartoc.html` file or else Sphinx will not
-# expand the sidebar TOC for this project.
+# If you update the `project` value here, you must update it in
+# `src/crate/theme/rtd/sidebartoc.py` as well, or else the sidebar TOC will
+# not be expanded for this project.
 project = u"SQL 99"
 html_title = project
 
-html_baseurl = "https://sql-99.readthedocs.io/"
+# TEMPORARY, for the docs.cratedb.com migration PoC.
+#
+# This project is normally standalone, hosted at https://sql-99.readthedocs.io/,
+# and therefore has no `url_path`. For the proof of concept, it is wired up as a
+# Read the Docs subproject of `crate-docs`, so it needs one.
+#
+# Revert both lines back to `html_baseurl = "https://sql-99.readthedocs.io/"`
+# once the setup has been proven.
+url_path = "projects/sql-99"
+html_baseurl = "https://docs.cratedb.com/%s/" % url_path
 
 # Disable the GitHub feedback area.
 html_context_custom.update({
