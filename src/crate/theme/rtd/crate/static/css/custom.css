@@ -835,7 +835,6 @@ footer .footer-list a {
   }
 }
 
-/* fallback fix when esi is not loaded */
 footer .footer-listitem-new a {
   padding: 0.5rem 0;
   display: block;
@@ -999,10 +998,6 @@ a.social-links__link:first-child .social-links__icon {
   width: auto;
 }
 
-.esi-mobile {
-  display: none;
-}
-
 @media (min-width: 768px) and (max-width: 1139px) {
   .row-fluid .span2 {
     width: 14.364640883%;
@@ -1018,9 +1013,6 @@ a.social-links__link:first-child .social-links__icon {
 @media (max-width: 767px) {
   .footer-widget {
     display: none;
-  }
-  .esi-mobile {
-    display: block;
   }
 }
 
