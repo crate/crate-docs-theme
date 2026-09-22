@@ -125,7 +125,6 @@ intersphinx_mapping = {
     'sql-99': ('https://sql-99.readthedocs.io/en/latest/', None),
 
     # CrateDB Docs
-    'crate-docs': ('https://crate-docs.readthedocs.io/en/latest/', None),
     'crate-docs-theme': ('https://crate-docs-theme.readthedocs.io/en/latest/', None),
 }
 
