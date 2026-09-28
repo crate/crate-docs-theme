@@ -355,7 +355,7 @@ header .navbar {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .main-nav ul.menu > li.menu-item {
@@ -1857,4 +1857,3 @@ div.cell_output tbody tr:nth-child(odd):hover,
 div.cell_output tbody tr:nth-child(even):hover {
   background: rgba(66, 165, 245, 0.2);
 }
-
