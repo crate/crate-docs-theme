@@ -45,5 +45,4 @@ CrateDB Cloud
 CrateDB Docs
 ------------
 
-- :ref:`crate-docs:index`
 - :ref:`crate-docs-theme:index`

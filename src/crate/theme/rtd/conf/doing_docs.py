@@ -22,11 +22,15 @@
 
 from crate.theme.rtd.conf import *
 
-# If you update the `project` value here, you must update it in the
-# `src/crate/theme/rtd/crate/sidebartoc.html` file or else Sphinx will not
-# expand the sidebar TOC for this project.
+# If you update the `project` value here, you must update it in
+# `src/crate/theme/rtd/sidebartoc.py` as well, or else the sidebar TOC will
+# not be expanded for this project.
 project = u"Doing Docs"
 html_title = project
 
-url_path = "docs/meta"
-html_baseurl = "https://cratedb.com/%s/" % url_path
+# NOTE: this project is not published anywhere at the moment -
+# `cratedb.com/docs/meta` returns 404 and there is no Read the Docs
+# project for it. The URL below is provisional, for if it is ever
+# added as a subproject.
+url_path = "projects/meta"
+html_baseurl = "https://docs.cratedb.com/%s/" % url_path

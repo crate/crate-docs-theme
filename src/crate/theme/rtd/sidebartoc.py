@@ -129,7 +129,7 @@ def _generate_crate_navigation_html(context):
         parts.append(f'<a class="current-active" href="{master_path}">Documentation</a>')
         parts.append(_get_toctree())
         parts.append('</li>')
-        parts.append('<li class="navleft-item border-top"><a href="https://cratedb.com/docs/guide/connect/">All database drivers</a></li>')
+        parts.append('<li class="navleft-item border-top"><a href="/projects/guide/connect/">All database drivers</a></li>')
         return ''.join(parts)
 
     # Add Guide's toctree entries (Overview, Getting Started, captions, etc.)
@@ -156,38 +156,38 @@ def _generate_crate_navigation_html(context):
     else:
         # Show Guide's navigation structure when viewing other projects
         # This must be kept in sync with the Guide's index.md toctree
-        builder.add_nav_link('Overview', '/docs/guide/')
-        builder.add_nav_link('Getting Started', '/docs/guide/start/')
+        builder.add_nav_link('Overview', '/projects/guide/')
+        builder.add_nav_link('Getting Started', '/projects/guide/start/')
 
         # BUILD section
         parts.append(f'<p class="caption" role="heading">{ICON_BUILD}<span class="caption-text">Build</span></p>')
-        builder.add_nav_link('Load data into CrateDB', '/docs/guide/ingest/')
-        builder.add_nav_link('Connect / Drivers', '/docs/guide/connect/')
-        builder.add_nav_link('Integrations', '/docs/guide/integrate/')
-        builder.add_nav_link('All Features', '/docs/guide/feature/')
+        builder.add_nav_link('Load data into CrateDB', '/projects/guide/ingest/')
+        builder.add_nav_link('Connect / Drivers', '/projects/guide/connect/')
+        builder.add_nav_link('Integrations', '/projects/guide/integrate/')
+        builder.add_nav_link('All Features', '/projects/guide/feature/')
 
         # OPERATIONS section
         parts.append(f'<p class="caption" role="heading">{ICON_OPERATIONS}<span class="caption-text">Operations</span></p>')
-        builder.add_nav_link('Installation', '/docs/guide/install/')
-        builder.add_nav_link('Administration', '/docs/guide/admin/')
-        builder.add_nav_link('Performance guides', '/docs/guide/performance/')
+        builder.add_nav_link('Installation', '/projects/guide/install/')
+        builder.add_nav_link('Administration', '/projects/guide/admin/')
+        builder.add_nav_link('Performance guides', '/projects/guide/performance/')
 
     # Add Reference section with caption
     parts.append(f'<p class="caption" role="heading">{ICON_REFERENCE}<span class="caption-text">References</span></p>')
-    builder.add_project_nav_item('CrateDB Cloud', 'CrateDB Cloud', '/docs/cloud/')
-    builder.add_project_nav_item('CrateDB: Reference', 'CrateDB', '/docs/crate/reference/')
+    builder.add_project_nav_item('CrateDB Cloud', 'CrateDB Cloud', '/projects/cloud/')
+    builder.add_project_nav_item('CrateDB: Reference', 'CrateDB', '/projects/crate-reference/')
 
     # Add Tools section with caption
     parts.append(f'<p class="caption" role="heading">{ICON_TOOLS}<span class="caption-text">Tools</span></p>')
-    builder.add_project_nav_item('CrateDB: Admin UI', 'Admin UI', '/docs/crate/admin-ui/')
-    builder.add_project_nav_item('CrateDB: Crash CLI', 'CrateDB CLI', '/docs/crate/crash/')
-    builder.add_project_nav_item('CrateDB Cloud: Croud CLI', 'Cloud CLI', '/docs/cloud/cli/')
+    builder.add_project_nav_item('CrateDB: Admin UI', 'Admin UI', '/projects/crate-admin-ui/')
+    builder.add_project_nav_item('CrateDB: Crash CLI', 'CrateDB CLI', '/projects/crate-crash/')
+    builder.add_project_nav_item('CrateDB Cloud: Croud CLI', 'Cloud CLI', '/projects/cloud-cli/')
     parts.append('<li class="navleft-item"><a class="external-link" target="_blank" href="https://cratedb-mcp.readthedocs.io/">CrateDB MCP</a></li>')
     parts.append('<li class="navleft-item"><a class="external-link" target="_blank" href="https://github.com/crate/agent-skills/">CrateDB Agent Skills</a></li>')
     parts.append('<li class="navleft-item"><a class="external-link" target="_blank" href="https://cratedb-toolkit.readthedocs.io/">CrateDB Toolkit</a></li>')
 
     # Add Support and Community links section after a border
-    parts.append('<li class="navleft-item border-top"><a class="external-link" target="_blank" href="/support/">Support</a></li>')
+    parts.append('<li class="navleft-item border-top"><a class="external-link" target="_blank" href="https://cratedb.com/support/">Support</a></li>')
     parts.append('<li class="navleft-item"><a class="external-link" target="_blank" href="https://community.cratedb.com/">Community</a></li>')
 
     # Other internal docs projects only included in special builds

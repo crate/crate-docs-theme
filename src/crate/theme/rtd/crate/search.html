@@ -19,15 +19,23 @@
 {{ super() }}
 <meta name="robots" content="noindex" />
 
+{%- if project == 'SQL 99' %}
+{# Sphinx's built-in search. `searchindex.js` calls Search.setIndex() itself, so
+   it only has to be loaded; `searchtools.js` then renders into #search-results. #}
+<script src="{{ pathto('searchindex.js', 1) }}" defer="defer"></script>
+{%- else %}
 <!-- Algolia instansearch stylesheet -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.2.0/themes/satellite-min.css">
+{%- endif %}
 {%- endblock head_extra -%}
 
-{% if project == 'SQL 99' %}
-<script type="text/javascript">
-  jQuery(function() { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
-</script>
-{% endif %}
+{%- block scripts -%}
+{{ super() }}
+{%- if project == 'SQL 99' %}
+<script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+<script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+{%- endif %}
+{%- endblock scripts -%}
 
 
 {% block content %}
@@ -47,17 +55,17 @@
 
     {% if project == 'SQL 99' %}
 
-    <form class="form-search" action="" method="get" class="cr-nojs-hide">
-      <input type="text" name="q" class="input-medium search-query" placeholder="Search documentation..." autofocus>
+    <form class="form-search cr-nojs-hide" action="" method="get">
+      <input type="text" name="q" class="input-medium search-query"
+             placeholder="Search documentation..."
+             aria-labelledby="search-documentation"
+             autocomplete="off" autocorrect="off" autocapitalize="off"
+             spellcheck="false" autofocus>
       <button type="submit" class="btn btn-primary">{{ _('search') }}</button>
-      <!-- <span id="search-progress" style="padding-left: 10px"></span> -->
+      {# No #search-progress node on purpose: it is empty except for a brief
+         "Preparing search..." and would otherwise leave a permanent gap next
+         to the button. searchtools.js checks for it and skips it if absent. #}
     </form>
-    {% if search_performed %}
-      <h2>{{ _('Search Results') }}</h2>
-      {% if not search_results %}
-        <p>{{ _('Your search did not match any results.') }}</p>
-      {% endif %}
-    {% endif %}
     <noscript>
       <div id="fallback" class="admonition warning">
       <p>
@@ -66,20 +74,8 @@
       </p>
       </div>
     </noscript>
-    {% if search_results %}
-    <div id="search-results">
-      <ul>
-      {% for href, caption, context in search_results %}
-        <li class="card">
-          <div class="card-block">
-            <h3 class="card-title"><a href="{{ pathto(item.href) }}">{{ caption }}</a></h3>
-            <div class="context">{{ context|e }}</div>
-          </div>
-        </li>
-      {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
+    {# searchtools.js reads ?q= and renders the results in here. #}
+    <div id="search-results"></div>
 
     {% else %}
 
@@ -101,9 +97,11 @@
 
 {% block footer_content %}
 {{ super() }}
+{%- if project != 'SQL 99' %}
 <!-- Algolia Instantsearch  -->
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.23.3/dist/algoliasearch-lite.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.69.0/dist/instantsearch.production.min.js"></script>
+{%- endif %}
 {% endblock footer_content %}
 
 

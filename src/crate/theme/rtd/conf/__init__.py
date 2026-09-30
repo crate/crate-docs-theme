@@ -100,6 +100,23 @@ sitemap_excludes = [
 ]
 
 # Configure intersphinx mapping
+#
+# TODO: Flip these to https://docs.cratedb.com/projects/... as part of the
+#       migration, but only *after* that domain actually serves content.
+#
+#       New URLs, for reference when the time comes:
+#         guide               -> https://docs.cratedb.com/projects/guide/
+#         crate-reference     -> https://docs.cratedb.com/projects/crate-reference/en/latest/
+#         crate-admin-ui      -> https://docs.cratedb.com/projects/crate-admin-ui/en/latest/
+#         crate-crash         -> https://docs.cratedb.com/projects/crate-crash/en/latest/
+#         crate-dbal          -> https://docs.cratedb.com/projects/dbal/en/latest/
+#         crate-jdbc          -> https://docs.cratedb.com/projects/jdbc/en/latest/
+#         crate-npgsql        -> https://docs.cratedb.com/projects/npgsql/en/latest/
+#         crate-pdo           -> https://docs.cratedb.com/projects/pdo/en/latest/
+#         crate-python        -> https://docs.cratedb.com/projects/python/en/latest/
+#         sqlalchemy-cratedb  -> https://docs.cratedb.com/projects/sqlalchemy-cratedb/
+#         cloud               -> https://docs.cratedb.com/projects/cloud/en/latest/
+#         cloud-cli           -> https://docs.cratedb.com/projects/cloud-cli/en/latest/
 intersphinx_mapping = {
 
     # CrateDB General
@@ -125,7 +142,6 @@ intersphinx_mapping = {
     'sql-99': ('https://sql-99.readthedocs.io/en/latest/', None),
 
     # CrateDB Docs
-    'crate-docs': ('https://crate-docs.readthedocs.io/en/latest/', None),
     'crate-docs-theme': ('https://crate-docs-theme.readthedocs.io/en/latest/', None),
 }
 
@@ -148,7 +164,7 @@ intersphinx_mapping = {
 #   So you can either treat it as 110, or, write your Descriptions to 300 but make sure the first 110
 #   is the critical part and still makes sense when it gets cut off.
 #   -- https://stackoverflow.com/questions/8914476/facebook-open-graph-meta-tags-maximum-content-length
-ogp_site_url = "https://cratedb.com/docs/"
+ogp_site_url = "https://docs.cratedb.com/"
 ogp_description_length = 300
 ogp_site_name = "CrateDB Documentation"
 ogp_image = "https://crate-docs-theme.readthedocs.io/en/latest/_static/images/cratedb-logo-h630.png"
@@ -291,43 +307,6 @@ def setup(app):
         # render it in `base.html` manually.
         config.html_context["custom_baseurl"] = html_baseurl_real
 
-    # Dynamically set the `proxied_api_host` context variable on a per-project level.
-    def set_proxied_api_host(app_inited):
-        try:
-
-            # Compute appropriate per-project `proxied_api_host`.
-            html_baseurl = app_inited.env.config.html_baseurl.strip("/")
-            proxied_api_host = html_baseurl + "/_"
-
-            # Propagate the `proxied_api_host` to different contexts by trial-and-error.
-            app_inited.env.config.proxied_api_host = proxied_api_host
-            app_inited.builder.config.proxied_api_host = proxied_api_host
-            app_inited.env.config.html_context["proxied_api_host"] = proxied_api_host
-            app_inited.builder.config.html_context["proxied_api_host"] = proxied_api_host
-            print(f"INFO: Adjusted `proxied_api_host` to {proxied_api_host}")
-
-        except Exception as ex:
-            print(f"ERROR: Unable to adjust `proxied_api_host`. Reason: {ex}")
-
-    # Dynamically adjust the `proxied_static_path` context variable on a per-project level.
-    # https://github.com/crate/crate-docs-theme/issues/342
-    def set_proxied_static_path(app_inited):
-        try:
-
-            # The default is `'proxied_static_path': "/_/static/"`.
-            # However, we want it to be, e.g., https://cratedb.com/docs/crate/howtos/_/static/
-            html_baseurl = app_inited.env.config.html_baseurl.strip("/")
-            proxied_static_path = f"{html_baseurl}/_/static/"
-
-            # Propagate the `proxied_api_host` to different contexts by trial-and-error.
-            app_inited.env.config.html_context["proxied_static_path"] = proxied_static_path
-            app_inited.builder.config.html_context["proxied_static_path"] = proxied_static_path
-
-            print(f"INFO: Adjusted `proxied_static_path` to {proxied_static_path}")
-
-        except Exception as ex:
-            print(f"ERROR: Unable to adjust `proxied_static_path`. Reason: {ex}")
-
     # Apply all attributes from `html_context_custom` to `html_context`.
     def apply_html_context_custom(app_inited):
         try:
@@ -350,8 +329,6 @@ def setup(app):
 
     # Customizations.
     app.connect("builder-inited", configure_self_hosted_on_path)
-    app.connect("builder-inited", set_proxied_api_host)
-    app.connect("builder-inited", set_proxied_static_path)
     app.connect("builder-inited", apply_html_context_custom)
 
     # Register stepper directive
