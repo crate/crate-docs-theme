@@ -175,6 +175,7 @@ def _generate_crate_navigation_html(context):
     # Add Reference section with caption
     parts.append(f'<p class="caption" role="heading">{ICON_REFERENCE}<span class="caption-text">References</span></p>')
     builder.add_project_nav_item('CrateDB Cloud', 'CrateDB Cloud', '/projects/cloud/')
+    builder.add_project_nav_item('CrateDB Enterprise Edition', 'CrateDB Enterprise Edition', '/projects/cratedb-ee/')
     builder.add_project_nav_item('CrateDB: Reference', 'CrateDB', '/projects/crate-reference/')
 
     # Add Tools section with caption
