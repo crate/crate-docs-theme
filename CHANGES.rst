@@ -5,6 +5,7 @@ CHANGES
 
 Unreleased
 ----------
+- Navigation: Added reference to CrateDB Enterprise Edition
 
 2026/03/23 0.50.3
 -----------------
