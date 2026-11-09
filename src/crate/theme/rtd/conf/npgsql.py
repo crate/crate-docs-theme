@@ -28,7 +28,6 @@ from crate.theme.rtd.conf import *
 project = u"CrateDB Npgsql"
 html_title = project
 
-# ARCHIVED: the crate-npgsql repository is archived and is not part of the
-# docs.cratedb.com migration.
-url_path = "projects/npgsql"
-html_baseurl = "https://docs.cratedb.com/%s/" % url_path
+# Archived project: the `crate-npgsql` repository is archived and is not part
+# of the docs.cratedb.com migration
+html_baseurl = "https://crate-npgsql.readthedocs.io/"
