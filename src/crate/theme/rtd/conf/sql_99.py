@@ -28,16 +28,9 @@ from crate.theme.rtd.conf import *
 project = u"SQL 99"
 html_title = project
 
-# TEMPORARY, for the docs.cratedb.com migration PoC.
-#
-# This project is normally standalone, hosted at https://sql-99.readthedocs.io/,
-# and therefore has no `url_path`. For the proof of concept, it is wired up as a
-# Read the Docs subproject of `crate-docs`, so it needs one.
-#
-# Revert both lines back to `html_baseurl = "https://sql-99.readthedocs.io/"`
-# once the setup has been proven.
-url_path = "projects/sql-99"
-html_baseurl = "https://docs.cratedb.com/%s/" % url_path
+# Standalone project: served from its own Read the Docs domain rather than as a
+# subproject of `crate-docs`, so it has no `projects/` path.
+html_baseurl = "https://sql-99.readthedocs.io/"
 
 # Disable the GitHub feedback area.
 html_context_custom.update({

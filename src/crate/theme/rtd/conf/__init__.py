@@ -139,7 +139,7 @@ intersphinx_mapping = {
     'cloud-cli': ('https://cratedb.com/docs/cloud/cli/en/latest/', None),
 
     # Misc
-    'sql-99': ('https://sql-99.readthedocs.io/en/latest/', None),
+    'sql-99': ('https://sql-99.readthedocs.io/', None),
 
     # CrateDB Docs
     'crate-docs-theme': ('https://crate-docs-theme.readthedocs.io/en/latest/', None),
