@@ -6,6 +6,9 @@ CHANGES
 Unreleased
 ----------
 
+
+2026/11/09 0.51.1
+-----------------
 - Point ``intersphinx_mapping`` at ``docs.cratedb.com/projects/``
 - Change opengraph image URL to the docs root project
 - Return ``sql-99`` to its standalone URL ``sql-99.readthedocs.io``, and
