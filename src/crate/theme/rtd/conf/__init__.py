@@ -128,7 +128,6 @@ intersphinx_mapping = {
     'crate-crash': ('https://cratedb.com/docs/crate/crash/en/latest/', None),
     'crate-dbal': ('https://cratedb.com/docs/dbal/en/latest/', None),
     'crate-jdbc': ('https://cratedb.com/docs/jdbc/en/latest/', None),
-    'crate-npgsql': ('https://cratedb.com/docs/npgsql/en/latest/', None),
     'crate-operator': ('https://crate-operator.readthedocs.io/en/latest/', None),
     'crate-pdo': ('https://cratedb.com/docs/pdo/en/latest/', None),
     'crate-python': ('https://cratedb.com/docs/python/en/latest/', None),

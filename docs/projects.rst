@@ -29,7 +29,6 @@ CrateDB clients
 - :ref:`crate-admin-ui:index`
 - :ref:`crate-crash:index`
 - :ref:`crate-jdbc:index`
-- :ref:`crate-npgsql:index`
 - :ref:`crate-dbal:index`
 - :ref:`crate-pdo:index`
 - :ref:`crate-python:index`
