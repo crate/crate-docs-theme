@@ -101,41 +101,30 @@ sitemap_excludes = [
 
 # Configure intersphinx mapping
 #
-# TODO: Flip these to https://docs.cratedb.com/projects/... as part of the
-#       migration, but only *after* that domain actually serves content.
-#
-#       New URLs, for reference when the time comes:
-#         guide               -> https://docs.cratedb.com/projects/guide/
-#         crate-reference     -> https://docs.cratedb.com/projects/crate-reference/en/latest/
-#         crate-admin-ui      -> https://docs.cratedb.com/projects/crate-admin-ui/en/latest/
-#         crate-crash         -> https://docs.cratedb.com/projects/crate-crash/en/latest/
-#         crate-dbal          -> https://docs.cratedb.com/projects/dbal/en/latest/
-#         crate-jdbc          -> https://docs.cratedb.com/projects/jdbc/en/latest/
-#         crate-npgsql        -> https://docs.cratedb.com/projects/npgsql/en/latest/
-#         crate-pdo           -> https://docs.cratedb.com/projects/pdo/en/latest/
-#         crate-python        -> https://docs.cratedb.com/projects/python/en/latest/
-#         sqlalchemy-cratedb  -> https://docs.cratedb.com/projects/sqlalchemy-cratedb/
-#         cloud               -> https://docs.cratedb.com/projects/cloud/en/latest/
-#         cloud-cli           -> https://docs.cratedb.com/projects/cloud-cli/en/latest/
+# Every CrateDB project is served from docs.cratedb.com as a Read the Docs
+# subproject, so the inventories live under /projects/<alias>/. Versioned
+# projects carry an /en/latest/ segment; `guide` and `sqlalchemy-cratedb` are
+# single version and therefore have none.
+
 intersphinx_mapping = {
 
     # CrateDB General
-    'guide': ('https://cratedb.com/docs/guide/', None),
-    'crate-reference': ('https://cratedb.com/docs/crate/reference/en/latest/', None),
+    'guide': ('https://docs.cratedb.com/projects/guide/', None),
+    'crate-reference': ('https://docs.cratedb.com/projects/crate-reference/en/latest/', None),
 
     # CrateDB Clients and Integrations
-    'crate-admin-ui': ('https://cratedb.com/docs/crate/admin-ui/en/latest/', None),
-    'crate-crash': ('https://cratedb.com/docs/crate/crash/en/latest/', None),
-    'crate-dbal': ('https://cratedb.com/docs/dbal/en/latest/', None),
-    'crate-jdbc': ('https://cratedb.com/docs/jdbc/en/latest/', None),
+    'crate-admin-ui': ('https://docs.cratedb.com/projects/crate-admin-ui/en/latest/', None),
+    'crate-crash': ('https://docs.cratedb.com/projects/crate-crash/en/latest/', None),
+    'crate-dbal': ('https://docs.cratedb.com/projects/dbal/en/latest/', None),
+    'crate-jdbc': ('https://docs.cratedb.com/projects/jdbc/en/latest/', None),
     'crate-operator': ('https://crate-operator.readthedocs.io/en/latest/', None),
-    'crate-pdo': ('https://cratedb.com/docs/pdo/en/latest/', None),
-    'crate-python': ('https://cratedb.com/docs/python/en/latest/', None),
-    'sqlalchemy-cratedb': ('https://cratedb.com/docs/sqlalchemy-cratedb/', None),
+    'crate-pdo': ('https://docs.cratedb.com/projects/pdo/en/latest/', None),
+    'crate-python': ('https://docs.cratedb.com/projects/python/en/latest/', None),
+    'sqlalchemy-cratedb': ('https://docs.cratedb.com/projects/sqlalchemy-cratedb/', None),
 
     # CrateDB Cloud
-    'cloud': ('https://cratedb.com/docs/cloud/en/latest/', None),
-    'cloud-cli': ('https://cratedb.com/docs/cloud/cli/en/latest/', None),
+    'cloud': ('https://docs.cratedb.com/projects/cloud/en/latest/', None),
+    'cloud-cli': ('https://docs.cratedb.com/projects/cloud-cli/en/latest/', None),
 
     # Misc
     'sql-99': ('https://sql-99.readthedocs.io/', None),
