@@ -5,6 +5,10 @@ CHANGES
 
 Unreleased
 ----------
+
+
+2026/11/09 0.51.0
+-----------------
 - Point ``html_baseurl`` of all projects at ``docs.cratedb.com``, keeping the
   static form the modules already used. ``theme.py`` keeps its own base URL.
 - Add ``crate.theme.rtd.conf.crate_docs`` configuration for ``crate-docs``,
