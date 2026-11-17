@@ -126,6 +126,9 @@ intersphinx_mapping = {
     'cloud': ('https://docs.cratedb.com/projects/cloud/en/latest/', None),
     'cloud-cli': ('https://docs.cratedb.com/projects/cloud-cli/en/latest/', None),
 
+    # CrateDB EE
+    'cratedb-ee': ('https://docs.cratedb.com/projects/cratedb-ee/en/latest/', None),
+
     # Misc
     'sql-99': ('https://sql-99.readthedocs.io/', None),
 
