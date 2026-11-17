@@ -9,7 +9,7 @@ set -e
 # navigation (sidebar TOC links) in a production-like URL structure.
 #
 # PROBLEM: When developing locally with `make dev`, each project runs in
-# isolation. Links to other projects (e.g., /docs/cloud/ from guide) don't
+# isolation. Links to other projects (e.g., /projects/cloud/ from guide) don't
 # work. This script builds all projects statically and serves them together.
 #
 # USAGE:
@@ -22,7 +22,7 @@ set -e
 #
 # OUTPUT:
 #   Builds to devtools/_multi-project-build/ and serves at
-#   http://localhost:8000/docs/guide
+#   http://localhost:8000/projects/guide
 #
 # NOTES:
 #   - No live-reload: re-run script after editing docs
@@ -33,14 +33,15 @@ set -e
 
 # Project definitions: "directory:url-path"
 # Paths are relative to the root of this project folder.
-ROOT="../../"
+ROOT="../"
 PROJECTS=(
     "cratedb-guide:guide"
-    "cloud-docs:cloud"
+    "../cloud-docs:cloud"
+    "../cloud-docs/cratedb-ee-docs:cratedb-ee"
     #"crate:crate-reference"
-    "../crate-admin:crate/admin-ui"
-    "../croud:cloud/cli"
-    "../crash:crate/crash"
+    "../crate-admin:crate-admin-ui"
+    "../croud:cloud-cli"
+    "../crash:crate-crash"
     "../crate-python:python"
     "../crate-jdbc:jdbc"
     "../crate-pdo:pdo"
@@ -66,7 +67,7 @@ Multi-Project Documentation Testing
 
 Builds (make html) multiple doc projects and serves them together to test
 cross-project navigation in a production-like URL structure. Serves at
-http://localhost:8000/docs/guide.
+http://localhost:8000/projects/guide.
 
 USAGE:
     ./test-multi-project.sh [options]
@@ -135,6 +136,18 @@ THEME_PATH="$(cd "$SCRIPT_DIR/.." && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/$ROOT" && pwd)"
 COMBINED_DIR="$SCRIPT_DIR/_multi-project-build"
 
+# Resolves the docs path of each project
+# - <dir>/docs if exists
+# - Otherwise <dir> itself
+# Required for cloud-docs/cratedb-ee-docs
+docs_path() {
+    if [ -d "$ROOT/$1/docs" ]; then
+        echo "$ROOT/$1/docs"
+    else
+        echo "$ROOT/$1"
+    fi
+}
+
 echo -e "${BLUE}=== Multi-Project Testing ===${NC}"
 echo "Theme: $THEME_PATH"
 echo "Root: $ROOT"
@@ -153,7 +166,7 @@ echo -e "${BLUE}Validating project paths...${NC}"
 MISSING_PROJECTS=()
 for project in "${PROJECTS[@]}"; do
     IFS=':' read -r dir path <<< "$project"
-    PROJECT_PATH="$ROOT/$dir/docs"
+    PROJECT_PATH="$(docs_path "$dir")"
     if [ ! -d "$PROJECT_PATH" ]; then
         MISSING_PROJECTS+=("$dir -> $PROJECT_PATH")
     fi
@@ -174,7 +187,7 @@ echo ""
 
 # Clean previous build
 rm -rf "$COMBINED_DIR"
-mkdir -p "$COMBINED_DIR/docs"
+mkdir -p "$COMBINED_DIR/projects"
 
 # Setup local theme in requirements.txt
 setup_local_theme() {
@@ -209,7 +222,7 @@ build_project() {
     local project=$1
     IFS=':' read -r dir path <<< "$project"
 
-    local PROJECT_PATH="$ROOT/$dir/docs"
+    local PROJECT_PATH="$(docs_path "$dir")"
 
     if [ ! -d "$PROJECT_PATH" ]; then
         echo -e "${RED}Project not found: $PROJECT_PATH${NC}"
@@ -301,15 +314,15 @@ echo -e "${BLUE}Copying to combined structure...${NC}"
 for project in "${PROJECTS[@]}"; do
     IFS=':' read -r dir path <<< "$project"
 
-    PROJECT_PATH="$ROOT/$dir/docs"
+    PROJECT_PATH="$(docs_path "$dir")"
     BUILD_DIR="$PROJECT_PATH/.crate-docs/.build"
-    TARGET_DIR="$COMBINED_DIR/docs/$path"
+    TARGET_DIR="$COMBINED_DIR/projects/$path"
 
     [ ! -d "$BUILD_DIR" ] && continue
 
     mkdir -p "$(dirname "$TARGET_DIR")"
     cp -r "$BUILD_DIR" "$TARGET_DIR"
-    echo -e "${GREEN}Copied $dir -> /docs/$path${NC}"
+    echo -e "${GREEN}Copied $dir -> /projects/$path${NC}"
 done
 
 echo ""
@@ -321,7 +334,7 @@ if [ "$LOCAL_THEME" = true ]; then
     echo ""
 fi
 
-echo -e "${BLUE}Server: http://localhost:8000/docs/guide/${NC}"
+echo -e "${BLUE}Server: http://localhost:8000/projects/guide/${NC}"
 echo "Press Ctrl+C to stop"
 echo ""
 
