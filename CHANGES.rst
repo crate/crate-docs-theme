@@ -5,6 +5,10 @@ CHANGES
 
 Unreleased
 ----------
+
+
+2026/11/18 0.51.2
+-----------------
 - Navigation: Added reference to CrateDB Enterprise Edition
 - Added ``cratedb-ee`` project configuration and intersphinx mapping
 
