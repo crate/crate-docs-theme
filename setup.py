@@ -72,7 +72,7 @@ setup(
         "sphinx-sitemap<2.10.0",
         "sphinx-togglebutton<1",
         "sphinxext.opengraph>=0.4,<1",
-        "sphinxcontrib-mermaid<2",
+        "sphinxcontrib-mermaid<3",
         "sphinxcontrib-plantuml>=0.21,<1",
         "sphinxcontrib-youtube<2",
     ],
